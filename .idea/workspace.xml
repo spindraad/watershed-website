@@ -4,18 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Set up project, added dev dependencies and configured them">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/git_toolbox_blame.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/prettier.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/watershed-website.iml" beforeDir="false" />
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Reset .idea folder and settings">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +78,7 @@
     "nodejs_package_manager_path": "npm",
     "prettierjs.PrettierConfiguration.Package": "/Users/lodyborgers/dev/other/watershed/watershed-website/node_modules/prettier",
     "settings.editor.selected.configurable": "settings.javascript.prettier",
-    "ts.external.directory.path": "/Applications/PhpStorm.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
+    "ts.external.directory.path": "/Users/lodyborgers/dev/other/watershed/watershed-website/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -113,8 +103,8 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Vitest.All Tests" />
       <item itemvalue="npm.Develop" />
+      <item itemvalue="Vitest.All Tests" />
     </list>
   </component>
   <component name="SharedIndexes">
@@ -134,7 +124,7 @@
       <option name="presentableId" value="Default" />
       <updated>1725347655792</updated>
       <workItem from="1729067684577" duration="3861000" />
-      <workItem from="1729071575602" duration="36000" />
+      <workItem from="1729071575602" duration="464000" />
     </task>
     <task id="LOCAL-00001" summary="Set up project, added dev dependencies and configured them">
       <option name="closed" value="true" />
@@ -144,7 +134,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729071133336</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Reset .idea folder and settings">
+      <option name="closed" value="true" />
+      <created>1729071628239</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1729071628239</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -166,7 +164,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Set up project, added dev dependencies and configured them" />
-    <option name="LAST_COMMIT_MESSAGE" value="Set up project, added dev dependencies and configured them" />
+    <MESSAGE value="Reset .idea folder and settings" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reset .idea folder and settings" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
