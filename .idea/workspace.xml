@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Set up Prisma, launched a local db and configured DataGrip and PhpStorm with it.">
-      <change afterPath="$PROJECT_DIR$/docs/Introduction.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Set up and configured Storybook">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/pr-lint-build.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/pr-lint-build.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +163,7 @@
       <updated>1725347655792</updated>
       <workItem from="1729067684577" duration="3861000" />
       <workItem from="1729071575602" duration="4244000" />
-      <workItem from="1729076289567" duration="7054000" />
+      <workItem from="1729076289567" duration="10153000" />
     </task>
     <task id="LOCAL-00001" summary="Set up project, added dev dependencies and configured them">
       <option name="closed" value="true" />
@@ -202,7 +197,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729078765387</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Set up and configured Storybook">
+      <option name="closed" value="true" />
+      <created>1729085210889</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1729085210889</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -227,7 +230,8 @@
     <MESSAGE value="Reset .idea folder and settings" />
     <MESSAGE value="Added a GitHub Actions workflow for pull requests" />
     <MESSAGE value="Set up Prisma, launched a local db and configured DataGrip and PhpStorm with it." />
-    <option name="LAST_COMMIT_MESSAGE" value="Set up Prisma, launched a local db and configured DataGrip and PhpStorm with it." />
+    <MESSAGE value="Set up and configured Storybook" />
+    <option name="LAST_COMMIT_MESSAGE" value="Set up and configured Storybook" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
