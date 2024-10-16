@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Reset .idea folder and settings">
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Added a GitHub Actions workflow for pull requests">
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prisma/seed.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,12 +38,20 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
+                    <option name="branchName" value="feature/wsh-10-set-up-databases" />
+                    <option name="lastUsedInstant" value="1729075136" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="dev" />
+                    <option name="lastUsedInstant" value="1729075076" />
+                  </RecentBranch>
+                  <RecentBranch>
                     <option name="branchName" value="feature/wsh-8-set-up-remix-scaffold-project" />
-                    <option name="lastUsedInstant" value="1729067725" />
+                    <option name="lastUsedInstant" value="1729072152" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="main" />
-                    <option name="lastUsedInstant" value="1729067724" />
+                    <option name="lastUsedInstant" value="1729072136" />
                   </RecentBranch>
                 </list>
               </option>
@@ -67,8 +80,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RunOnceActivity.OpenDatabaseViewOnStart": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "feature/wsh-8-set-up-remix-scaffold-project",
+    "Vitest.All Tests.executor": "Run",
+    "git-widget-placeholder": "feature/wsh-10-set-up-databases",
+    "last_opened_file_path": "/Users/lodyborgers",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -76,13 +93,24 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_interpreter_path": "node",
     "nodejs_package_manager_path": "npm",
+    "npm.docker:start.executor": "Run",
     "prettierjs.PrettierConfiguration.Package": "/Users/lodyborgers/dev/other/watershed/watershed-website/node_modules/prettier",
-    "settings.editor.selected.configurable": "settings.javascript.prettier",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Console Font",
     "ts.external.directory.path": "/Users/lodyborgers/dev/other/watershed/watershed-website/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
   }
 }]]></component>
-  <component name="RunManager" selected="Vitest.All Tests">
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="npm run docker:start" />
+    </option>
+  </component>
+  <component name="RunManager">
     <configuration name="All Tests" type="JavaScriptTestRunnerVitest" nameIsGenerated="true">
       <node-interpreter value="project" />
       <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
@@ -102,10 +130,16 @@
       <envs />
       <method v="2" />
     </configuration>
-    <list>
-      <item itemvalue="npm.Develop" />
-      <item itemvalue="Vitest.All Tests" />
-    </list>
+    <configuration name="docker:start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="docker:start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -124,7 +158,8 @@
       <option name="presentableId" value="Default" />
       <updated>1725347655792</updated>
       <workItem from="1729067684577" duration="3861000" />
-      <workItem from="1729071575602" duration="464000" />
+      <workItem from="1729071575602" duration="4244000" />
+      <workItem from="1729076289567" duration="1786000" />
     </task>
     <task id="LOCAL-00001" summary="Set up project, added dev dependencies and configured them">
       <option name="closed" value="true" />
@@ -142,7 +177,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729071628239</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added a GitHub Actions workflow for pull requests">
+      <option name="closed" value="true" />
+      <created>1729072120884</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1729072120884</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -165,7 +208,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Set up project, added dev dependencies and configured them" />
     <MESSAGE value="Reset .idea folder and settings" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reset .idea folder and settings" />
+    <MESSAGE value="Added a GitHub Actions workflow for pull requests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added a GitHub Actions workflow for pull requests" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

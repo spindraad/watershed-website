@@ -5,6 +5,8 @@
   "sideEffects": false,
   "type": "module",
   "scripts": {
+    "docker:start": "docker-compose up -d",
+    "docker:stop": "docker-compose down",
     "build": "remix vite:build",
     "dev": "remix vite:dev",
     "test": "vitest",
@@ -13,9 +15,17 @@
     "format": "prettier --write .",
     "start": "remix-serve ./build/server/index.js",
     "typecheck": "tsc",
-    "prepare": "husky"
+    "prepare": "husky",
+    "prisma": "prisma",
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate dev",
+    "db:push": "prisma db push && prisma generate",
+    "db:seed": "prisma db seed",
+    "db:reset": "prisma migrate reset",
+    "db:studio": "prisma studio --browser none"
   },
   "dependencies": {
+    "@prisma/client": "^5.21.0",
     "@remix-run/node": "^2.13.1",
     "@remix-run/react": "^2.13.1",
     "@remix-run/serve": "^2.13.1",
@@ -44,7 +54,9 @@
     "lint-staged": "^15.2.10",
     "postcss": "^8.4.47",
     "prettier": "^3.3.3",
+    "prisma": "^5.21.0",
     "tailwindcss": "^3.4.14",
+    "ts-node": "^10.9.2",
     "typescript": "^5.1.6",
     "vite": "^5.1.0",
     "vite-tsconfig-paths": "^5.0.1",
@@ -58,5 +70,8 @@
       "npm run lint -- --fix",
       "npm run format --"
     ]
+  },
+  "prisma": {
+    "seed": "node --loader ts-node/esm prisma/seed.ts"
   }
 }
