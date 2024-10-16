@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Added a GitHub Actions workflow for pull requests">
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prisma/seed.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Set up and configured Storybook">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/pr-lint-build.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/pr-lint-build.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,12 +34,12 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="feature/wsh-10-set-up-databases" />
-                    <option name="lastUsedInstant" value="1729075136" />
+                    <option name="branchName" value="feature/wsh-11-setup-and-configure-storybook" />
+                    <option name="lastUsedInstant" value="1729079030" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="dev" />
-                    <option name="lastUsedInstant" value="1729075076" />
+                    <option name="lastUsedInstant" value="1729078975" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="feature/wsh-8-set-up-remix-scaffold-project" />
@@ -68,6 +64,9 @@
     &quot;accountId&quot;: &quot;18703f32-ec78-4ae3-9f70-7591ebbe3f98&quot;
   }
 }</component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/package.json" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -84,7 +83,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Vitest.All Tests.executor": "Run",
-    "git-widget-placeholder": "feature/wsh-10-set-up-databases",
+    "git-widget-placeholder": "feature/wsh-11-setup-and-configure-storybook",
     "last_opened_file_path": "/Users/lodyborgers",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
@@ -110,7 +109,7 @@
       <command value="npm run docker:start" />
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="npm.Develop">
     <configuration name="All Tests" type="JavaScriptTestRunnerVitest" nameIsGenerated="true">
       <node-interpreter value="project" />
       <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
@@ -140,6 +139,11 @@
       <envs />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="npm.Develop" />
+      <item itemvalue="npm.docker:start" />
+      <item itemvalue="Vitest.All Tests" />
+    </list>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -159,7 +163,7 @@
       <updated>1725347655792</updated>
       <workItem from="1729067684577" duration="3861000" />
       <workItem from="1729071575602" duration="4244000" />
-      <workItem from="1729076289567" duration="1786000" />
+      <workItem from="1729076289567" duration="11704000" />
     </task>
     <task id="LOCAL-00001" summary="Set up project, added dev dependencies and configured them">
       <option name="closed" value="true" />
@@ -185,7 +189,23 @@
       <option name="project" value="LOCAL" />
       <updated>1729072120884</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Set up Prisma, launched a local db and configured DataGrip and PhpStorm with it.">
+      <option name="closed" value="true" />
+      <created>1729078765387</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1729078765387</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Set up and configured Storybook">
+      <option name="closed" value="true" />
+      <created>1729085210889</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1729085210889</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -209,7 +229,9 @@
     <MESSAGE value="Set up project, added dev dependencies and configured them" />
     <MESSAGE value="Reset .idea folder and settings" />
     <MESSAGE value="Added a GitHub Actions workflow for pull requests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a GitHub Actions workflow for pull requests" />
+    <MESSAGE value="Set up Prisma, launched a local db and configured DataGrip and PhpStorm with it." />
+    <MESSAGE value="Set up and configured Storybook" />
+    <option name="LAST_COMMIT_MESSAGE" value="Set up and configured Storybook" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
