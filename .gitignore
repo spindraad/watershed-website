@@ -5,3 +5,7 @@ node_modules
 .env
 
 postgres-data
+
+*storybook.log
+
+storybook-static
