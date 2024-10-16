@@ -1,0 +1,5 @@
+{
+  "singleQuote": true,
+  "experimentalTernaries": true,
+  "bracketSameLine": false
+}
