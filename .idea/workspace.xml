@@ -4,23 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Set up and configured Storybook">
-      <change afterPath="$PROJECT_DIR$/app/components/shoelace.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/utils/errors.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/Brand.mdx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/postinstall.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/prettier.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/watershed-website.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/watershed-website.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webResources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webResources.xml" afterDir="false" />
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Installed Puck editor">
+      <change afterPath="$PROJECT_DIR$/app/mail.server.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environmend.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.storybook/preview.ts" beforeDir="false" afterPath="$PROJECT_DIR$/.storybook/preview.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/root.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/root.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/_index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/_index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/tailwind.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/tailwind.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,12 +37,12 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="feature/wsh-13-setup-and-configure-shoelace" />
-                    <option name="lastUsedInstant" value="1729152043" />
+                    <option name="branchName" value="feature/wsh-25-configure-sendgrid" />
+                    <option name="lastUsedInstant" value="1729171927" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="dev" />
-                    <option name="lastUsedInstant" value="1729090760" />
+                    <option name="lastUsedInstant" value="1729171910" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="feature/wsh-8-set-up-remix-scaffold-project" />
@@ -97,7 +86,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Vitest.All Tests.executor": "Run",
-    "git-widget-placeholder": "feature/wsh-13-setup-and-configure-shoelace",
+    "git-widget-placeholder": "feature/wsh-25-configure-sendgrid",
     "javascript.nodejs.core.library.configured.version": "20.14.0",
     "javascript.nodejs.core.library.typings.version": "20.14.15",
     "last_opened_file_path": "/Users/lodyborgers",
