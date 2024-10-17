@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss';
+import { StatePlugin, PartPlugin } from 'tailwindcss-plugin-custom-elements';
 
 export default {
   content: ['./app/**/{**,.client,.server}/**/*.{js,jsx,ts,tsx}'],
@@ -9,9 +10,9 @@ export default {
         secondary: 'rgb(var(--secondary))',
       },
       fontFamily: {
-        arial: ['Arial', 'sans-serif'],
+        arial: ['var(--font-family-sans)'],
       },
     },
   },
-  plugins: [],
+  plugins: [StatePlugin(), PartPlugin()],
 } satisfies Config;

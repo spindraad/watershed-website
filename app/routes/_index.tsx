@@ -1,4 +1,6 @@
 import type { MetaFunction } from '@remix-run/node';
+import { useContext, useState } from 'react';
+import { ShoelaceContext } from '~/components/shoelace';
 
 export const meta: MetaFunction = () => {
   return [
@@ -15,5 +17,25 @@ export const meta: MetaFunction = () => {
 };
 
 export default function Index() {
-  return <h1>Hello World!</h1>;
+  const { SlAlert, SlIcon, SlButton } = useContext(ShoelaceContext);
+  const [open, setOpen] = useState(false);
+
+  return (
+    <>
+      <h1>Hello World!</h1>
+      <SlButton onClick={() => setOpen(true)}>Toggle Alert</SlButton>
+
+      <SlAlert
+        duration={10000}
+        countdown="rtl"
+        closable
+        open={open}
+        onSlAfterHide={() => setOpen(false)}
+      >
+        <SlIcon slot="icon" name="info-circle"></SlIcon>
+        This is a standard alert. You can customize its content and even the
+        icon.
+      </SlAlert>
+    </>
+  );
 }

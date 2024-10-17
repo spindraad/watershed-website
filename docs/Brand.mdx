@@ -1,0 +1,104 @@
+import { Meta, ColorPalette, ColorItem, Typeset } from '@storybook/blocks';
+
+<Meta title="Brand" />
+
+# Brand
+
+The Watershed brand is currently being redesigned. This page will be updated with the new brand guidelines once they are available.
+
+## Colors
+
+Watershed currently uses the following colors in its branding:
+
+<ColorPalette>
+  <ColorItem
+    title="Primary"
+    subtitle="Pink"
+    colors={{ Pink: 'rgb(var(--primary))' }}
+  />
+  <ColorItem
+    title="Secondary"
+    subtitle="Blue"
+    colors={{ Blue: 'rgb(var(--secondary))' }}
+  />
+</ColorPalette>
+
+The blue color is also being used as the primary color for all the Shoelace components.
+We've generated a color scheme based on the blue color that is used as custom properties.
+
+<ColorPalette>
+  <ColorItem
+    title="Primary"
+    subtitle="--sl-primary-50"
+    colors={['var(--sl-color-primary-50)']}
+  />
+  <ColorItem
+    title="Primary"
+    subtitle="--sl-primary-100"
+    colors={['var(--sl-color-primary-100)']}
+  />
+  <ColorItem
+    title="Primary"
+    subtitle="--sl-primary-200"
+    colors={['var(--sl-color-primary-200)']}
+  />
+  <ColorItem
+    title="Primary"
+    subtitle="--sl-primary-300"
+    colors={['var(--sl-color-primary-300)']}
+  />
+  <ColorItem
+    title="Primary"
+    subtitle="--sl-primary-400"
+    colors={['var(--sl-color-primary-400)']}
+  />
+  <ColorItem
+    title="Primary"
+    subtitle="--sl-primary-500"
+    colors={['var(--sl-color-primary-500)']}
+  />
+  <ColorItem
+    title="Primary"
+    subtitle="--sl-primary-600"
+    colors={['var(--sl-color-primary-600)']}
+  />
+  <ColorItem
+    title="Primary"
+    subtitle="--sl-primary-700"
+    colors={['var(--sl-color-primary-700)']}
+  />
+  <ColorItem
+    title="Primary"
+    subtitle="--sl-primary-800"
+    colors={['var(--sl-color-primary-800)']}
+  />
+  <ColorItem
+    title="Primary"
+    subtitle="--sl-primary-900"
+    colors={['var(--sl-color-primary-900)']}
+  />
+  <ColorItem
+    title="Primary"
+    subtitle="--sl-primary-950"
+    colors={['var(--sl-color-primary-950)']}
+  />
+</ColorPalette>
+
+## Fonts
+
+Currently, Arial and regular `sans-serif` are used as the font for the Watershed brand.
+
+<Typeset
+  fontFamily="var(--font-family-sans)"
+  fontSizes={[
+    'var(--sl-font-size-2x-small)',
+    'var(--sl-font-size-x-small)',
+    'var(--sl-font-size-small)',
+    'var(--sl-font-size-medium)',
+    'var(--sl-font-size-large)',
+    'var(--sl-font-size-x-large)',
+    'var(--sl-font-size-2x-large)',
+    'var(--sl-font-size-3x-large)',
+    'var(--sl-font-size-4x-large)',
+  ]}
+/>

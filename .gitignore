@@ -9,3 +9,4 @@ postgres-data
 *storybook.log
 
 storybook-static
+public/shoelace-assets

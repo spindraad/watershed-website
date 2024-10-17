@@ -5,8 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Set up and configured Storybook">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/pr-lint-build.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/pr-lint-build.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/shoelace.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/utils/errors.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Brand.mdx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/postinstall.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/prettier.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/watershed-website.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/watershed-website.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webResources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webResources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.storybook/preview.ts" beforeDir="false" afterPath="$PROJECT_DIR$/.storybook/preview.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/root.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/root.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/_index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/_index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/tailwind.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/tailwind.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,12 +48,12 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="feature/wsh-11-setup-and-configure-storybook" />
-                    <option name="lastUsedInstant" value="1729079030" />
+                    <option name="branchName" value="feature/wsh-13-setup-and-configure-shoelace" />
+                    <option name="lastUsedInstant" value="1729152043" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="dev" />
-                    <option name="lastUsedInstant" value="1729078975" />
+                    <option name="lastUsedInstant" value="1729090760" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="feature/wsh-8-set-up-remix-scaffold-project" />
@@ -83,7 +97,9 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Vitest.All Tests.executor": "Run",
-    "git-widget-placeholder": "feature/wsh-11-setup-and-configure-storybook",
+    "git-widget-placeholder": "feature/wsh-13-setup-and-configure-shoelace",
+    "javascript.nodejs.core.library.configured.version": "20.14.0",
+    "javascript.nodejs.core.library.typings.version": "20.14.15",
     "last_opened_file_path": "/Users/lodyborgers",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
@@ -92,9 +108,12 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_interpreter_path": "node",
     "nodejs_package_manager_path": "npm",
+    "npm.Develop.executor": "Run",
+    "npm.dev:remix.executor": "Run",
+    "npm.dev:storybook.executor": "Run",
     "npm.docker:start.executor": "Run",
     "prettierjs.PrettierConfiguration.Package": "/Users/lodyborgers/dev/other/watershed/watershed-website/node_modules/prettier",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Console Font",
+    "settings.editor.selected.configurable": "web-ide.project.structure",
     "ts.external.directory.path": "/Users/lodyborgers/dev/other/watershed/watershed-website/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   },
@@ -104,12 +123,25 @@
     ]
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/shoelace-assets/assets" />
+      <recent name="$PROJECT_DIR$/app/components" />
+    </key>
+  </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="npm run docker:start" />
+      <command value="npm run dev" />
+      <command value="Develop (npm)" />
     </option>
   </component>
-  <component name="RunManager" selected="npm.Develop">
+  <component name="RunManager" selected="npm.dev:storybook">
+    <configuration name="Develop" type="CompoundRunConfigurationType">
+      <toRun name="dev:remix" type="js.build_tools.npm" />
+      <toRun name="dev:storybook" type="js.build_tools.npm" />
+      <method v="2" />
+    </configuration>
     <configuration name="All Tests" type="JavaScriptTestRunnerVitest" nameIsGenerated="true">
       <node-interpreter value="project" />
       <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
@@ -119,29 +151,30 @@
       <scope-kind value="ALL" />
       <method v="2" />
     </configuration>
-    <configuration name="Develop" type="js.build_tools.npm">
+    <configuration name="dev:remix" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="dev" />
+        <script value="dev:remix" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="docker:start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="dev:storybook" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="docker:start" />
+        <script value="dev:storybook" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="npm.Develop" />
-      <item itemvalue="npm.docker:start" />
+      <item itemvalue="Compound.Develop" />
+      <item itemvalue="npm.dev:remix" />
+      <item itemvalue="npm.dev:storybook" />
       <item itemvalue="Vitest.All Tests" />
     </list>
   </component>
@@ -163,7 +196,9 @@
       <updated>1725347655792</updated>
       <workItem from="1729067684577" duration="3861000" />
       <workItem from="1729071575602" duration="4244000" />
-      <workItem from="1729076289567" duration="11704000" />
+      <workItem from="1729076289567" duration="16697000" />
+      <workItem from="1729154886708" duration="4482000" />
+      <workItem from="1729159458110" duration="3808000" />
     </task>
     <task id="LOCAL-00001" summary="Set up project, added dev dependencies and configured them">
       <option name="closed" value="true" />
