@@ -4,7 +4,71 @@
 
 @layer base {
   :root {
+    /* Colors */
     --primary: 224 166 166;
     --secondary: 35 71 186;
+    --white: rgb(255, 255, 255);
+    --black: rgb(0, 0, 0);
+
+    --sl-color-primary-50: color-mix(
+      in srgb,
+      rgb(var(--secondary)) 0%,
+      var(--white)
+    );
+    --sl-color-primary-100: color-mix(
+      in srgb,
+      rgb(var(--secondary)) 20%,
+      var(--white)
+    );
+    --sl-color-primary-200: color-mix(
+      in srgb,
+      rgb(var(--secondary)) 40%,
+      var(--white)
+    );
+    --sl-color-primary-300: color-mix(
+      in srgb,
+      rgb(var(--secondary)) 60%,
+      var(--white)
+    );
+    --sl-color-primary-400: color-mix(
+      in srgb,
+      rgb(var(--secondary)) 80%,
+      var(--white)
+    );
+    --sl-color-primary-500: color-mix(
+      in srgb,
+      rgb(var(--secondary)) 100%,
+      var(--black)
+    );
+    --sl-color-primary-600: color-mix(
+      in srgb,
+      rgb(var(--secondary)) 60%,
+      var(--black)
+    );
+    --sl-color-primary-700: color-mix(
+      in srgb,
+      rgb(var(--secondary)) 40%,
+      var(--black)
+    );
+    --sl-color-primary-800: color-mix(
+      in srgb,
+      rgb(var(--secondary)) 20%,
+      var(--black)
+    );
+    --sl-color-primary-900: color-mix(
+      in srgb,
+      rgb(var(--secondary)) 10%,
+      var(--black)
+    );
+    --sl-color-primary-950: color-mix(
+      in srgb,
+      rgb(var(--secondary)) 0%,
+      var(--black)
+    );
+
+    /* Fonts */
+    --font-family-sans: Arial, sans-serif;
+
+    --sl-font-sans: var(--font-family-sans);
   }
 }

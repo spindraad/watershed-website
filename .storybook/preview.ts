@@ -1,6 +1,7 @@
 import type { Preview } from '@storybook/react';
 import { MINIMAL_VIEWPORTS } from '@storybook/addon-viewport';
 
+import '@shoelace-style/shoelace/dist/themes/light.css';
 import '../app/tailwind.css';
 
 const preview: Preview = {
@@ -25,7 +26,7 @@ const preview: Preview = {
       },
     },
     storySort: {
-      order: ['Introduction', 'Components'],
+      order: ['Introduction', 'Brand', 'Components'],
     },
     viewport: {
       viewports: MINIMAL_VIEWPORTS,
