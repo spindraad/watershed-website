@@ -1,6 +1,8 @@
 import type { MetaFunction } from '@remix-run/node';
 import { useContext, useState } from 'react';
 import { ShoelaceContext } from '~/components/shoelace';
+import { Form } from '@remix-run/react';
+import { useTranslation } from 'react-i18next';
 
 export const meta: MetaFunction = () => {
   return [
@@ -20,10 +22,23 @@ export default function Index() {
   const { SlAlert, SlIcon, SlButton } = useContext(ShoelaceContext);
   const [open, setOpen] = useState(false);
 
+  const { t } = useTranslation();
+
   return (
     <>
-      <h1>Hello World!</h1>
+      <h1>{t('title')}</h1>
       <SlButton onClick={() => setOpen(true)}>Toggle Alert</SlButton>
+      <Form>
+        <SlButton type="submit" name="lng" value="nl">
+          Nederlands
+        </SlButton>
+        <SlButton type="submit" name="lng" value="en">
+          English
+        </SlButton>
+        <SlButton type="submit" name="lng" value="pap">
+          Papiamentu
+        </SlButton>
+      </Form>
 
       <SlAlert
         duration={10000}

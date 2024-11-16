@@ -4,12 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Installed Puck editor">
-      <change afterPath="$PROJECT_DIR$/app/mail.server.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/environmend.d.ts" afterDir="false" />
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Re-enabled the automatic PR close functionality with the spindraad-bot PAT">
+      <change afterPath="$PROJECT_DIR$/app/config/i18n.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/locales/en.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/locales/nl.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/locales/pap.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/modules/i18n.server.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/routes/api_.locales.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/entry.client.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/entry.client.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/entry.server.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/entry.server.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/root.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/root.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/_index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)._index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,12 +46,12 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="feature/wsh-25-configure-sendgrid" />
-                    <option name="lastUsedInstant" value="1729171927" />
+                    <option name="branchName" value="feature/wsh-32-internationalisation" />
+                    <option name="lastUsedInstant" value="1730801474" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="dev" />
-                    <option name="lastUsedInstant" value="1729171910" />
+                    <option name="lastUsedInstant" value="1729172594" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="feature/wsh-8-set-up-remix-scaffold-project" />
@@ -67,6 +76,10 @@
     &quot;accountId&quot;: &quot;18703f32-ec78-4ae3-9f70-7591ebbe3f98&quot;
   }
 }</component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
@@ -86,9 +99,9 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Vitest.All Tests.executor": "Run",
-    "git-widget-placeholder": "feature/wsh-25-configure-sendgrid",
+    "git-widget-placeholder": "feature/wsh-32-internationalisation",
     "javascript.nodejs.core.library.configured.version": "20.14.0",
-    "javascript.nodejs.core.library.typings.version": "20.14.15",
+    "javascript.nodejs.core.library.typings.version": "",
     "last_opened_file_path": "/Users/lodyborgers",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
@@ -170,8 +183,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-PS-242.21829.154" />
-        <option value="bundled-php-predefined-a98d8de5180a-4d9f4c849d09-com.jetbrains.php.sharedIndexes-PS-242.21829.154" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-PS-242.23726.107" />
+        <option value="bundled-php-predefined-a98d8de5180a-90914f2295cb-com.jetbrains.php.sharedIndexes-PS-242.23726.107" />
       </set>
     </attachedChunks>
   </component>
@@ -188,6 +201,10 @@
       <workItem from="1729076289567" duration="16697000" />
       <workItem from="1729154886708" duration="4482000" />
       <workItem from="1729159458110" duration="3808000" />
+      <workItem from="1730799528912" duration="73000" />
+      <workItem from="1730799683896" duration="2997000" />
+      <workItem from="1731404810290" duration="3723000" />
+      <workItem from="1731786852511" duration="7476000" />
     </task>
     <task id="LOCAL-00001" summary="Set up project, added dev dependencies and configured them">
       <option name="closed" value="true" />
@@ -229,7 +246,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729085210889</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Re-enabled the automatic PR close functionality with the spindraad-bot PAT">
+      <option name="closed" value="true" />
+      <created>1730801147602</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1730801147602</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -237,6 +262,28 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="javascript:npm:react" />
+    <option featureType="dependencySupport" implementationName="javascript:npm:prettier" />
+    <option featureType="dependencySupport" implementationName="executable:docker" />
+    <option featureType="dependencySupport" implementationName="javascript:npm:tailwindcss" />
+    <option featureType="dependencySupport" implementationName="javascript:npm:prisma" />
+    <option featureType="dependencySupport" implementationName="javascript:npm:vite" />
+    <option featureType="dependencySupport" implementationName="executable:kubectl" />
+    <option featureType="dependencySupport" implementationName="javascript:npm:postcss" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+        <option value="GitHub.CommitStatus" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -255,7 +302,8 @@
     <MESSAGE value="Added a GitHub Actions workflow for pull requests" />
     <MESSAGE value="Set up Prisma, launched a local db and configured DataGrip and PhpStorm with it." />
     <MESSAGE value="Set up and configured Storybook" />
-    <option name="LAST_COMMIT_MESSAGE" value="Set up and configured Storybook" />
+    <MESSAGE value="Re-enabled the automatic PR close functionality with the spindraad-bot PAT" />
+    <option name="LAST_COMMIT_MESSAGE" value="Re-enabled the automatic PR close functionality with the spindraad-bot PAT" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
