@@ -3,6 +3,7 @@ import {
   SlIcon,
   SlButton,
   SlInput,
+  SlCheckbox,
 } from '@shoelace-style/shoelace/dist/react';
 import { useEffect, useState, useRef, createContext } from 'react';
 
@@ -13,6 +14,7 @@ type Components = {
   SlIcon: typeof nullComponent | typeof SlIcon;
   SlButton: typeof nullComponent | typeof SlButton;
   SlInput: typeof nullComponent | typeof SlInput;
+  SlCheckbox: typeof nullComponent | typeof SlCheckbox;
 };
 
 const nullComponents: Components = {
@@ -20,6 +22,7 @@ const nullComponents: Components = {
   SlIcon: nullComponent,
   SlButton: nullComponent,
   SlInput: nullComponent,
+  SlCheckbox: nullComponent,
 };
 
 export const ShoelaceContext = createContext<Components>(nullComponents);
@@ -44,6 +47,7 @@ export function useShoelace({ URL }: { URL: string }) {
             SlIcon: components.SlIcon,
             SlButton: components.SlButton,
             SlInput: components.SlInput,
+            SlCheckbox: components.SlCheckbox,
           });
         });
       },

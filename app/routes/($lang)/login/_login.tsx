@@ -8,7 +8,9 @@ export default function LoginRoute() {
     <div className="content">
       <h1>{t('title')}</h1>
 
-      <LoginFormComponent />
+      <div className="w-full max-w-lg">
+        <LoginFormComponent />
+      </div>
     </div>
   );
 }

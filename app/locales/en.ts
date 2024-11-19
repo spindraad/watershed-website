@@ -7,3 +7,11 @@ export const login = {
   username: 'Username',
   password: 'Password',
 };
+
+export const LoginFormComponent = {
+  login: 'Login',
+  forgotPassword: 'Forgot password?',
+  Email: 'Email address',
+  Password: 'Password',
+  RememberMe: 'Remember me',
+};

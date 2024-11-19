@@ -7,6 +7,7 @@ import {
 
 import '@shoelace-style/shoelace/dist/themes/light.css';
 import '../app/tailwind.css';
+import { withShoelace } from '.storybook/withShoelace';
 
 const preview: Preview = {
   tags: ['autodocs'],
@@ -29,11 +30,11 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
-    // reactRouter: reactRouterParameters({
-    //   routing: {
-    //     path: '/:lang?',
-    //   },
-    // }),
+    reactRouter: reactRouterParameters({
+      routing: {
+        path: '/:lang?',
+      },
+    }),
     storySort: {
       order: ['Introduction', 'Brand', 'Components'],
     },
@@ -44,7 +45,7 @@ const preview: Preview = {
   initialGlobals: {
     background: { value: 'primary' },
   },
-  // decorators: [withRouter()],
+  decorators: [withRouter(), withShoelace()],
 };
 
 export default preview;
