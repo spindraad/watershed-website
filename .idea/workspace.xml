@@ -4,13 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Slightly improved route folder organisation">
-      <change afterPath="$PROJECT_DIR$/app/components/Header.tsx" afterDir="false" />
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Very quickly set up a global grid layout and a simple header">
+      <change afterPath="$PROJECT_DIR$/app/routes/($lang)/login/LoginFormComponent.stories.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/routes/($lang)/login/LoginFormComponent.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/root.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/root.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.storybook/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/.storybook/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.storybook/preview.ts" beforeDir="false" afterPath="$PROJECT_DIR$/.storybook/preview.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/shoelace.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/shoelace.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/routes/($lang)/_index/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/_index/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/routes/($lang)/login/_login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/login/_login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/tailwind.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/tailwind.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,7 +201,7 @@
       <workItem from="1731404810290" duration="3723000" />
       <workItem from="1731786852511" duration="7476000" />
       <workItem from="1732003571688" duration="3062000" />
-      <workItem from="1732007236510" duration="7173000" />
+      <workItem from="1732007236510" duration="10958000" />
     </task>
     <task id="LOCAL-00001" summary="Set up project, added dev dependencies and configured them">
       <option name="closed" value="true" />
@@ -263,7 +267,23 @@
       <option name="project" value="LOCAL" />
       <updated>1732013131740</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Very quickly set up a global grid layout and a simple header">
+      <option name="closed" value="true" />
+      <created>1732016433994</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1732016433994</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Very quickly set up a global grid layout and a simple header">
+      <option name="closed" value="true" />
+      <created>1732016454496</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1732016454496</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -315,7 +335,8 @@
     <MESSAGE value="Implemented cookie-based sessions for users" />
     <MESSAGE value="Set up route structure for login page" />
     <MESSAGE value="Slightly improved route folder organisation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Slightly improved route folder organisation" />
+    <MESSAGE value="Very quickly set up a global grid layout and a simple header" />
+    <option name="LAST_COMMIT_MESSAGE" value="Very quickly set up a global grid layout and a simple header" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import LoginFormComponent from './LoginFormComponent';
 
 export default function LoginRoute() {
   const { t } = useTranslation('login');
@@ -6,6 +7,8 @@ export default function LoginRoute() {
   return (
     <div className="content">
       <h1>{t('title')}</h1>
+
+      <LoginFormComponent />
     </div>
   );
 }

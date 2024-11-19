@@ -1,4 +1,9 @@
-import { SlAlert, SlIcon, SlButton } from '@shoelace-style/shoelace/dist/react';
+import {
+  SlAlert,
+  SlIcon,
+  SlButton,
+  SlInput,
+} from '@shoelace-style/shoelace/dist/react';
 import { useEffect, useState, useRef, createContext } from 'react';
 
 const nullComponent = () => null;
@@ -7,12 +12,14 @@ type Components = {
   SlAlert: typeof nullComponent | typeof SlAlert;
   SlIcon: typeof nullComponent | typeof SlIcon;
   SlButton: typeof nullComponent | typeof SlButton;
+  SlInput: typeof nullComponent | typeof SlInput;
 };
 
 const nullComponents: Components = {
   SlAlert: nullComponent,
   SlIcon: nullComponent,
   SlButton: nullComponent,
+  SlInput: nullComponent,
 };
 
 export const ShoelaceContext = createContext<Components>(nullComponents);
@@ -36,6 +43,7 @@ export function useShoelace({ URL }: { URL: string }) {
             SlAlert: components.SlAlert,
             SlIcon: components.SlIcon,
             SlButton: components.SlButton,
+            SlInput: components.SlInput,
           });
         });
       },

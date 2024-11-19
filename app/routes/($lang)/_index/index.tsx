@@ -19,7 +19,7 @@ export const meta: MetaFunction = () => {
 };
 
 export default function Index() {
-  const { SlAlert, SlIcon, SlButton } = useContext(ShoelaceContext);
+  const { SlAlert, SlIcon, SlButton, SlInput } = useContext(ShoelaceContext);
   const [open, setOpen] = useState(false);
 
   const { t } = useTranslation();

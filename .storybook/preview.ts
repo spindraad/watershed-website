@@ -1,5 +1,9 @@
 import type { Preview } from '@storybook/react';
 import { MINIMAL_VIEWPORTS } from '@storybook/addon-viewport';
+import {
+  withRouter,
+  reactRouterParameters,
+} from 'storybook-addon-remix-react-router';
 
 import '@shoelace-style/shoelace/dist/themes/light.css';
 import '../app/tailwind.css';
@@ -25,6 +29,11 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
+    // reactRouter: reactRouterParameters({
+    //   routing: {
+    //     path: '/:lang?',
+    //   },
+    // }),
     storySort: {
       order: ['Introduction', 'Brand', 'Components'],
     },
@@ -35,6 +44,7 @@ const preview: Preview = {
   initialGlobals: {
     background: { value: 'primary' },
   },
+  // decorators: [withRouter()],
 };
 
 export default preview;
