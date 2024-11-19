@@ -7,15 +7,16 @@ import {
   ScrollRestoration,
   useLoaderData,
   useRouteError,
+  useRouteLoaderData,
 } from '@remix-run/react';
 import { json, LinksFunction, LoaderFunctionArgs } from '@remix-run/node';
 import { useShoelace, ShoelaceContext } from '~/components/shoelace';
 import i18nServer from '~/modules/i18n.server';
+import { getErrorMessage } from '~/utils/errors';
 
 import '@shoelace-style/shoelace/dist/themes/light.css';
 import './tailwind.css';
-import { getErrorMessage } from '~/utils/errors';
-import { useRouteLoaderData } from 'react-router';
+import Header from '~/components/Header';
 
 export const links: LinksFunction = () => [];
 
@@ -41,7 +42,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body className="bg-primary text-black font-sans">
+      <body className="bg-primary text-black font-sans flex flex-col gap-4">
+        <Header />
         {children}
         <ScrollRestoration />
         <Scripts />
@@ -53,7 +55,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
 export default function App() {
   const { BASE_URL } = useLoaderData<typeof loader>();
   const shoelace = useShoelace({ URL: BASE_URL });
-  // useChangeLanguage(locale);
 
   return (
     <ShoelaceContext.Provider value={shoelace}>

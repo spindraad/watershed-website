@@ -4,16 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Implemented cookie-based sessions for users">
-      <change afterPath="$PROJECT_DIR$/app/routes/($lang).login+/index.tsx" afterDir="false" />
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Slightly improved route folder organisation">
+      <change afterPath="$PROJECT_DIR$/app/components/Header.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/locales/en.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/en.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/locales/nl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/nl.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/locales/pap.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/pap.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/root.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/root.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)._index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/$(lang)/_index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/postinstall.js" beforeDir="false" afterPath="$PROJECT_DIR$/postinstall.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/_index/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/_index/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/login/_login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/login/_login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/tailwind.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/tailwind.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,14 +107,17 @@
   "keyToStringList": {
     "DatabaseDriversLRU": [
       "postgresql"
+    ],
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "XML"
     ]
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/routes/($lang)" />
       <recent name="$PROJECT_DIR$/app/routes" />
       <recent name="$PROJECT_DIR$/app/routes/($lang)/_index" />
-      <recent name="$PROJECT_DIR$/app/routes/($lang)" />
       <recent name="$PROJECT_DIR$/app/routes/($lang)/index" />
       <recent name="$PROJECT_DIR$/app/routes/($lang)/login" />
     </key>
@@ -197,7 +197,7 @@
       <workItem from="1731404810290" duration="3723000" />
       <workItem from="1731786852511" duration="7476000" />
       <workItem from="1732003571688" duration="3062000" />
-      <workItem from="1732007236510" duration="5109000" />
+      <workItem from="1732007236510" duration="7173000" />
     </task>
     <task id="LOCAL-00001" summary="Set up project, added dev dependencies and configured them">
       <option name="closed" value="true" />
@@ -247,7 +247,23 @@
       <option name="project" value="LOCAL" />
       <updated>1730801147602</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Set up route structure for login page">
+      <option name="closed" value="true" />
+      <created>1732012890766</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1732012890766</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Slightly improved route folder organisation">
+      <option name="closed" value="true" />
+      <created>1732013131740</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1732013131740</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -297,7 +313,9 @@
     <MESSAGE value="Set up and configured Storybook" />
     <MESSAGE value="Re-enabled the automatic PR close functionality with the spindraad-bot PAT" />
     <MESSAGE value="Implemented cookie-based sessions for users" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented cookie-based sessions for users" />
+    <MESSAGE value="Set up route structure for login page" />
+    <MESSAGE value="Slightly improved route folder organisation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Slightly improved route folder organisation" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

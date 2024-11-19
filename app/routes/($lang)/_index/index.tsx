@@ -26,20 +26,21 @@ export default function Index() {
 
   return (
     <>
-      <h1>{t('title')}</h1>
-      <SlButton onClick={() => setOpen(true)}>Toggle Alert</SlButton>
-      <Form>
-        <SlButton type="submit" name="lng" value="nl">
-          Nederlands
-        </SlButton>
-        <SlButton type="submit" name="lng" value="en">
-          English
-        </SlButton>
-        <SlButton type="submit" name="lng" value="pap">
-          Papiamentu
-        </SlButton>
-      </Form>
-
+      <div className="content">
+        <h1>{t('title')}</h1>
+        <SlButton onClick={() => setOpen(true)}>Toggle Alert</SlButton>
+        <Form>
+          <SlButton type="submit" name="lng" value="nl">
+            Nederlands
+          </SlButton>
+          <SlButton type="submit" name="lng" value="en">
+            English
+          </SlButton>
+          <SlButton type="submit" name="lng" value="pap">
+            Papiamentu
+          </SlButton>
+        </Form>
+      </div>
       <SlAlert
         duration={10000}
         countdown="rtl"
