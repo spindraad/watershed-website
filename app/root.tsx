@@ -15,6 +15,7 @@ import i18nServer from '~/modules/i18n.server';
 import '@shoelace-style/shoelace/dist/themes/light.css';
 import './tailwind.css';
 import { getErrorMessage } from '~/utils/errors';
+import { useRouteLoaderData } from 'react-router';
 
 export const links: LinksFunction = () => [];
 
@@ -30,10 +31,10 @@ export async function loader({ request }: LoaderFunctionArgs) {
 }
 
 export function Layout({ children }: { children: React.ReactNode }) {
-  const { locale } = useLoaderData<typeof loader>();
+  const data = useRouteLoaderData('root') as { locale?: string };
 
   return (
-    <html lang={locale ?? 'nl'}>
+    <html lang={data?.locale ?? 'nl'}>
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />

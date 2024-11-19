@@ -5,6 +5,7 @@
   "sideEffects": false,
   "type": "module",
   "scripts": {
+    "postinstall": "node postinstall.js",
     "docker:start": "docker-compose up -d",
     "docker:stop": "docker-compose down",
     "build": "run-p build:*",
