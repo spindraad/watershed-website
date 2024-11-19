@@ -3,7 +3,7 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.53">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <IntrospectionStateNumber>753</IntrospectionStateNumber>
+      <IntrospectionStateNumber>793</IntrospectionStateNumber>
       <ServerVersion>17.0</ServerVersion>
       <StartupTime>1732005738</StartupTime>
       <TimeZones>true ACDT
@@ -1394,13 +1394,10 @@ false posixrules
       <Grants>11||10|C|G
 11||-9223372036854775808|U|G
 11||10|U|G
-2200||6171|C|G
-2200||-9223372036854775808|U|G
-2200||6171|U|G
 13219||10|C|G
 13219||-9223372036854775808|U|G
 13219||10|U|G</Grants>
-      <IntrospectionStateNumber>753</IntrospectionStateNumber>
+      <IntrospectionStateNumber>793</IntrospectionStateNumber>
       <ObjectId>5</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4820,69 +4817,189 @@ false posixrules
       <OwnerName>postgres</OwnerName>
     </schema>
     <schema id="264" parent="2" name="public">
-      <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>753</IntrospectionStateNumber>
-      <LastIntrospectionLocalTimestamp>2024-11-19.08:47:25</LastIntrospectionLocalTimestamp>
-      <ObjectId>2200</ObjectId>
-      <StateNumber>532</StateNumber>
-      <OwnerName>pg_database_owner</OwnerName>
+      <IntrospectionStateNumber>793</IntrospectionStateNumber>
+      <LastIntrospectionLocalTimestamp>2024-11-19.14:21:09</LastIntrospectionLocalTimestamp>
+      <ObjectId>16406</ObjectId>
+      <StateNumber>761</StateNumber>
+      <OwnerName>postgres</OwnerName>
     </schema>
-    <table id="265" parent="264" name="User">
-      <ObjectId>16388</ObjectId>
-      <StateNumber>751</StateNumber>
+    <table id="265" parent="264" name="Password">
+      <ObjectId>16442</ObjectId>
+      <StateNumber>774</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <column id="266" parent="265" name="id">
+    <table id="266" parent="264" name="User">
+      <ObjectId>16416</ObjectId>
+      <StateNumber>774</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <table id="267" parent="264" name="_prisma_migrations">
+      <ObjectId>16407</ObjectId>
+      <StateNumber>762</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <column id="268" parent="265" name="hash">
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>751</StateNumber>
+      <StateNumber>774</StateNumber>
       <StoredType>text|0s</StoredType>
       <TypeId>25</TypeId>
     </column>
-    <column id="267" parent="265" name="email">
+    <column id="269" parent="265" name="userId">
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>751</StateNumber>
+      <StateNumber>774</StateNumber>
       <StoredType>text|0s</StoredType>
       <TypeId>25</TypeId>
     </column>
-    <column id="268" parent="265" name="name">
+    <foreign-key id="270" parent="265" name="Password_userId_fkey">
+      <ColNames>userId</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16448</ObjectId>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+      <StateNumber>774</StateNumber>
+      <RefKeyColPositions>1</RefKeyColPositions>
+      <RefTableId>16416</RefTableId>
+    </foreign-key>
+    <index id="271" parent="265" name="Password_userId_key">
+      <ColNames>userId</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16447</ObjectId>
+      <StateNumber>774</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+      <CollationNames>default</CollationNames>
+      <CollationIds>100</CollationIds>
+      <CollationParentNames>pg_catalog</CollationParentNames>
+    </index>
+    <column id="272" parent="266" name="id">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>764</StateNumber>
+      <StoredType>text|0s</StoredType>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="273" parent="266" name="email">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StateNumber>764</StateNumber>
+      <StoredType>text|0s</StoredType>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="274" parent="266" name="name">
       <Position>3</Position>
-      <StateNumber>751</StateNumber>
+      <StateNumber>764</StateNumber>
       <StoredType>text|0s</StoredType>
       <TypeId>25</TypeId>
     </column>
-    <index id="269" parent="265" name="User_pkey">
+    <index id="275" parent="266" name="User_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16393</ObjectId>
+      <ObjectId>16421</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>751</StateNumber>
+      <StateNumber>764</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
       <CollationNames>default</CollationNames>
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <index id="270" parent="265" name="User_email_key">
+    <index id="276" parent="266" name="User_email_key">
       <ColNames>email</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16395</ObjectId>
-      <StateNumber>752</StateNumber>
+      <ObjectId>16423</ObjectId>
+      <StateNumber>764</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
       <CollationNames>default</CollationNames>
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="271" parent="265" name="User_pkey">
+    <key id="277" parent="266" name="User_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16394</ObjectId>
+      <ObjectId>16422</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>751</StateNumber>
-      <UnderlyingIndexId>16393</UnderlyingIndexId>
+      <StateNumber>764</StateNumber>
+      <UnderlyingIndexId>16421</UnderlyingIndexId>
+    </key>
+    <column id="278" parent="267" name="id">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>762</StateNumber>
+      <StoredType>varchar(36)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="279" parent="267" name="checksum">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StateNumber>762</StateNumber>
+      <StoredType>varchar(64)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="280" parent="267" name="finished_at">
+      <Position>3</Position>
+      <StateNumber>762</StateNumber>
+      <StoredType>timestamp with time zone|0s</StoredType>
+      <TypeId>1184</TypeId>
+    </column>
+    <column id="281" parent="267" name="migration_name">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StateNumber>762</StateNumber>
+      <StoredType>varchar(255)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="282" parent="267" name="logs">
+      <Position>5</Position>
+      <StateNumber>762</StateNumber>
+      <StoredType>text|0s</StoredType>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="283" parent="267" name="rolled_back_at">
+      <Position>6</Position>
+      <StateNumber>762</StateNumber>
+      <StoredType>timestamp with time zone|0s</StoredType>
+      <TypeId>1184</TypeId>
+    </column>
+    <column id="284" parent="267" name="started_at">
+      <DefaultExpression>now()</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+      <StateNumber>762</StateNumber>
+      <StoredType>timestamp with time zone|0s</StoredType>
+      <TypeId>1184</TypeId>
+    </column>
+    <column id="285" parent="267" name="applied_steps_count">
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+      <StateNumber>762</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="286" parent="267" name="_prisma_migrations_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16414</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>762</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+      <CollationNames>default</CollationNames>
+      <CollationIds>100</CollationIds>
+      <CollationParentNames>pg_catalog</CollationParentNames>
+    </index>
+    <key id="287" parent="267" name="_prisma_migrations_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16415</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>762</StateNumber>
+      <UnderlyingIndexId>16414</UnderlyingIndexId>
     </key>
   </database-model>
 </dataSource>

@@ -9,7 +9,7 @@ export default function LoginRoute() {
       <h1>{t('title')}</h1>
 
       <div className="w-full max-w-lg">
-        <LoginFormComponent />
+        <LoginFormComponent action="/login" />
       </div>
     </div>
   );
