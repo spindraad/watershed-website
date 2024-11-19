@@ -4,21 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Re-enabled the automatic PR close functionality with the spindraad-bot PAT">
-      <change afterPath="$PROJECT_DIR$/app/config/i18n.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/locales/en.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/locales/nl.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/locales/pap.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/modules/i18n.server.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routes/api_.locales.ts" afterDir="false" />
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Implemented cookie-based sessions for users">
+      <change afterPath="$PROJECT_DIR$/app/.server/db.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/.server/session.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/user.server.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.husky/pre-commit" beforeDir="false" afterPath="$PROJECT_DIR$/.husky/pre-commit" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f8f326ed-6bd3-472a-9a5c-e32229f833e4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f8f326ed-6bd3-472a-9a5c-e32229f833e4.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f8f326ed-6bd3-472a-9a5c-e32229f833e4/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f8f326ed-6bd3-472a-9a5c-e32229f833e4/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/entry.client.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/entry.client.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/entry.server.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/entry.server.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/root.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/root.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/_index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)._index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/mail.server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/.server/mail.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environmend.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/environmend.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,20 +43,12 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="feature/wsh-32-internationalisation" />
-                    <option name="lastUsedInstant" value="1730801474" />
+                    <option name="branchName" value="feature/wsh-14-session-management" />
+                    <option name="lastUsedInstant" value="1732003846" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="dev" />
                     <option name="lastUsedInstant" value="1729172594" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="feature/wsh-8-set-up-remix-scaffold-project" />
-                    <option name="lastUsedInstant" value="1729072152" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="main" />
-                    <option name="lastUsedInstant" value="1729072136" />
                   </RecentBranch>
                 </list>
               </option>
@@ -93,42 +82,46 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenDatabaseViewOnStart": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Vitest.All Tests.executor": "Run",
-    "git-widget-placeholder": "feature/wsh-32-internationalisation",
-    "javascript.nodejs.core.library.configured.version": "20.14.0",
-    "javascript.nodejs.core.library.typings.version": "",
-    "last_opened_file_path": "/Users/lodyborgers",
-    "node.js.detected.package.standard": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "node",
-    "nodejs_package_manager_path": "npm",
-    "npm.Develop.executor": "Run",
-    "npm.dev:remix.executor": "Run",
-    "npm.dev:storybook.executor": "Run",
-    "npm.docker:start.executor": "Run",
-    "prettierjs.PrettierConfiguration.Package": "/Users/lodyborgers/dev/other/watershed/watershed-website/node_modules/prettier",
-    "settings.editor.selected.configurable": "web-ide.project.structure",
-    "ts.external.directory.path": "/Users/lodyborgers/dev/other/watershed/watershed-website/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenDatabaseViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Vitest.All Tests.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/wsh-14-session-management&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;22.11.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;22.9.0&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/lody/dev/projects/watershed-website&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.Develop.executor&quot;: &quot;Run&quot;,
+    &quot;npm.dev:remix.executor&quot;: &quot;Run&quot;,
+    &quot;npm.dev:storybook.executor&quot;: &quot;Run&quot;,
+    &quot;npm.docker:start.executor&quot;: &quot;Run&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/lody/dev/projects/watershed-website/node_modules/prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.typescriptcompiler&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/lody/dev/projects/watershed-website/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/models" />
+      <recent name="$PROJECT_DIR$/app/.server" />
+      <recent name="$PROJECT_DIR$/app" />
+      <recent name="$PROJECT_DIR$/.server" />
       <recent name="$PROJECT_DIR$/public/shoelace-assets/assets" />
-      <recent name="$PROJECT_DIR$/app/components" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -183,8 +176,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-PS-242.23726.107" />
-        <option value="bundled-php-predefined-a98d8de5180a-90914f2295cb-com.jetbrains.php.sharedIndexes-PS-242.23726.107" />
+        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-PS-243.21565.202" />
+        <option value="bundled-php-predefined-a98d8de5180a-5fbe0c30323e-com.jetbrains.php.sharedIndexes-PS-243.21565.202" />
       </set>
     </attachedChunks>
   </component>
@@ -205,6 +198,7 @@
       <workItem from="1730799683896" duration="2997000" />
       <workItem from="1731404810290" duration="3723000" />
       <workItem from="1731786852511" duration="7476000" />
+      <workItem from="1732003571688" duration="3062000" />
     </task>
     <task id="LOCAL-00001" summary="Set up project, added dev dependencies and configured them">
       <option name="closed" value="true" />
@@ -303,7 +297,8 @@
     <MESSAGE value="Set up Prisma, launched a local db and configured DataGrip and PhpStorm with it." />
     <MESSAGE value="Set up and configured Storybook" />
     <MESSAGE value="Re-enabled the automatic PR close functionality with the spindraad-bot PAT" />
-    <option name="LAST_COMMIT_MESSAGE" value="Re-enabled the automatic PR close functionality with the spindraad-bot PAT" />
+    <MESSAGE value="Implemented cookie-based sessions for users" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented cookie-based sessions for users" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

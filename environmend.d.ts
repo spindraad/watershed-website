@@ -3,5 +3,6 @@ declare namespace NodeJS {
     NODE_ENV: 'development' | 'production';
     DATABASE_URL: string;
     SENDGRID_API_KEY: string;
+    SESSION_SECRET: string;
   }
 }
