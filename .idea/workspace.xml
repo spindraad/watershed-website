@@ -5,27 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Added validations for checking the login flow with Zod, and appended UI to accommodate for errors. Updated Dutch and English locale as well">
-      <change afterPath="$PROJECT_DIR$/.storybook/viewer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routes/($lang)/logout/_logout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/utils/matches.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/utils/user.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/validations/flows/login.test.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/validations/flows/login.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.storybook/preview.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/.storybook/preview.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/Anchor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Anchor.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/Header.stories.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Header.stories.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Input.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/locales/en.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/en.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/locales/nl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/nl.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/user.server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.server.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/root.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/root.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/login/LoginFormComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/login/LoginFormComponent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/login/_login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/login/_login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/tailwind.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/tailwind.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/pr-lint-build.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/pr-lint-build.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -268,7 +248,7 @@
       <workItem from="1732003571688" duration="3062000" />
       <workItem from="1732007236510" duration="23947000" />
       <workItem from="1732134752814" duration="7960000" />
-      <workItem from="1732444117390" duration="17728000" />
+      <workItem from="1732444117390" duration="17921000" />
     </task>
     <task id="LOCAL-00001" summary="Set up project, added dev dependencies and configured them">
       <option name="closed" value="true" />
@@ -382,7 +362,23 @@
       <option name="project" value="LOCAL" />
       <updated>1732447384881</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Added validations for checking the login flow with Zod, and appended UI to accommodate for errors. Updated Dutch and English locale as well">
+      <option name="closed" value="true" />
+      <created>1732462394318</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1732462394318</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Added validations for checking the login flow with Zod, and appended UI to accommodate for errors. Updated Dutch and English locale as well">
+      <option name="closed" value="true" />
+      <created>1732462401125</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1732462401125</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
