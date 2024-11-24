@@ -104,4 +104,9 @@
   .full {
     grid-column: full;
   }
+
+  .link,
+  a {
+    border-bottom: 2px solid rgb(var(--secondary));
+  }
 }

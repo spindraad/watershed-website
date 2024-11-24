@@ -4,10 +4,11 @@ import {
   withRouter,
   reactRouterParameters,
 } from 'storybook-addon-remix-react-router';
+import { withShoelace } from '.storybook/withShoelace';
 
 import '@shoelace-style/shoelace/dist/themes/light.css';
 import '../app/tailwind.css';
-import { withShoelace } from '.storybook/withShoelace';
+import './viewer.css';
 
 const preview: Preview = {
   tags: ['autodocs', 'autodocs'],

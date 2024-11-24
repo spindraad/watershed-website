@@ -9,7 +9,7 @@ type Props = ComponentProps<ReactWebComponent<SlInputComponent>> & {
 
 export default function Input({
   error,
-  id,
+  id = '',
   className = '',
   'aria-invalid': ariaInvalid = !!error,
   ...inputProps

@@ -1,4 +1,16 @@
-export default function Header() {
+import { useContext } from 'react';
+import { useTranslation } from 'react-i18next';
+import { User } from '~/models/user.server';
+import { ShoelaceContext } from '~/components/shoelace';
+
+type Props = {
+  user?: User;
+};
+
+export default function Header({ user }: Props) {
+  const { SlButton } = useContext(ShoelaceContext);
+  const { t } = useTranslation();
+
   return (
     <div className="h-24 border-b-4 border-b-secondary">
       <div className="container h-full flex items-center justify-between">
@@ -8,9 +20,16 @@ export default function Header() {
           </a>
         </div>
         <div className="flex items-center">
-          <a href="/login" className="text-secondary">
-            Login
-          </a>
+          {user ?
+            <form method="POST" action="/logout">
+              <SlButton variant="text" type="submit" size="large">
+                <span className="link">{t('logout')}</span>
+              </SlButton>
+            </form>
+          : <SlButton variant="text" href="/login" size="large">
+              <span className="link">{t('login')}</span>
+            </SlButton>
+          }
         </div>
       </div>
     </div>

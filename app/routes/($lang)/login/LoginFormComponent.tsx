@@ -1,9 +1,10 @@
 import { useContext } from 'react';
 import { Form, useNavigation, useSearchParams } from '@remix-run/react';
-import { ShoelaceContext } from '~/components/shoelace';
 import { useTranslation } from 'react-i18next';
+import { ShoelaceContext } from '~/components/shoelace';
 import Input from '~/components/Input';
 import Anchor from '~/components/Anchor';
+import { ValidationResult, ValidationErrors } from '~/validations/flows/login';
 
 type Props = {
   /**
@@ -14,23 +15,14 @@ type Props = {
   /**
    * The errors to display in the form.
    */
-  errors?: LoginFormErrors;
+  errors?: ValidationErrors & {
+    userNotFound?: string;
+  };
 
   /**
    * The possible values of the form.
    */
-  values?: LoginFormValues;
-};
-
-type LoginFormValues = {
-  emailaddress?: string;
-  password?: string;
-  remember?: boolean;
-};
-
-type LoginFormErrors = {
-  emailaddress?: string;
-  password?: string;
+  values?: ValidationResult;
 };
 
 export default function LoginFormComponent({ action, errors, values }: Props) {
@@ -38,34 +30,47 @@ export default function LoginFormComponent({ action, errors, values }: Props) {
   const redirectTo = searchParams.get('redirectTo') || '/admin';
   const navigation = useNavigation();
 
-  const { SlButton, SlCheckbox } = useContext(ShoelaceContext);
+  const { SlButton, SlCheckbox, SlAlert } = useContext(ShoelaceContext);
 
   const { t } = useTranslation('LoginFormComponent');
 
   const isPending = navigation.state !== 'idle';
 
   return (
-    <Form className="flex flex-col gap-4" action={action} method="POST">
+    <Form
+      noValidate
+      className="flex flex-col gap-4"
+      action={action}
+      method="POST"
+    >
       <input type="hidden" name="redirectTo" value={redirectTo} />
 
       <Input
-        name="email"
+        autocomplete="email"
+        name="emailaddress"
         type="email"
         label={t('Email')}
         value={values?.emailaddress ?? ''}
-        required
-        error={errors?.emailaddress}
+        error={errors?.emailaddress
+          ?.map((error) => t(`Errors.emailaddress.${error.errorCode}`))
+          .join(', ')}
       />
 
       <Input
+        autocomplete="current-password"
         name="password"
         type="password"
         label={t('Password')}
-        required
         passwordToggle
         value={values?.password ?? ''}
-        error={errors?.password}
+        error={errors?.password
+          ?.map((error) => t(`Errors.password.${error.errorCode}`))
+          .join(', ')}
       />
+
+      <SlAlert variant="danger" open={!!errors?.userNotFound}>
+        {t(`Errors.userNotFound.${errors?.userNotFound}`)}
+      </SlAlert>
 
       <div className="flex justify-between">
         <SlCheckbox name="remember">{t('Remember me')}</SlCheckbox>
