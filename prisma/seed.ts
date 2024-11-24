@@ -11,6 +11,7 @@ const createUsers = async () => {
         email: 'alice@wonderworld.net',
         password: {
           create: {
+            // eslint-disable-next-line import/no-named-as-default-member
             hash: await bcrypt.hash('password', 10),
           },
         },
@@ -22,6 +23,7 @@ const createUsers = async () => {
         email: 'bob@wonderworld.net',
         password: {
           create: {
+            // eslint-disable-next-line import/no-named-as-default-member
             hash: await bcrypt.hash('password', 10),
           },
         },

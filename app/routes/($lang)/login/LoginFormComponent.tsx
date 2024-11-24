@@ -1,7 +1,9 @@
 import { useContext } from 'react';
-import { Form, Link, useNavigation, useSearchParams } from '@remix-run/react';
+import { Form, useNavigation, useSearchParams } from '@remix-run/react';
 import { ShoelaceContext } from '~/components/shoelace';
 import { useTranslation } from 'react-i18next';
+import Input from '~/components/Input';
+import Anchor from '~/components/Anchor';
 
 type Props = {
   /**
@@ -36,8 +38,7 @@ export default function LoginFormComponent({ action, errors, values }: Props) {
   const redirectTo = searchParams.get('redirectTo') || '/admin';
   const navigation = useNavigation();
 
-  const { SlInput, SlButton, SlCheckbox, SlAlert } =
-    useContext(ShoelaceContext);
+  const { SlButton, SlCheckbox } = useContext(ShoelaceContext);
 
   const { t } = useTranslation('LoginFormComponent');
 
@@ -47,38 +48,24 @@ export default function LoginFormComponent({ action, errors, values }: Props) {
     <Form className="flex flex-col gap-4" action={action} method="POST">
       <input type="hidden" name="redirectTo" value={redirectTo} />
 
-      <SlInput
-        className={`${errors?.emailaddress ? 'part-[base]:border-red-300' : ''}`}
+      <Input
         name="email"
         type="email"
         label={t('Email')}
         value={values?.emailaddress ?? ''}
         required
-        aria-invalid={!!errors?.emailaddress}
-        aria-describedby="emailaddress-error"
+        error={errors?.emailaddress}
       />
-      <SlAlert
-        id="emailaddress-error"
-        open={!!errors?.emailaddress}
-        variant="danger"
-      >
-        {errors?.emailaddress}
-      </SlAlert>
 
-      <SlInput
-        className={`${errors?.emailaddress ? 'part-[base]:border-red-300' : ''}`}
+      <Input
         name="password"
         type="password"
-        value={values?.password ?? ''}
         label={t('Password')}
         required
         passwordToggle
-        aria-invalid={!!errors?.password}
-        aria-describedby="password-error"
+        value={values?.password ?? ''}
+        error={errors?.password}
       />
-      <SlAlert id="password-error" open={!!errors?.password} variant="danger">
-        {errors?.password}
-      </SlAlert>
 
       <div className="flex justify-between">
         <SlCheckbox name="remember">{t('Remember me')}</SlCheckbox>
@@ -93,9 +80,9 @@ export default function LoginFormComponent({ action, errors, values }: Props) {
             {t('Login')}
           </SlButton>
 
-          <Link to="/forgot-password" className="text-sm">
+          <Anchor to="/forgot-password" className="text-sm">
             {t('Forgot password?')}
-          </Link>
+          </Anchor>
         </div>
       </div>
     </Form>

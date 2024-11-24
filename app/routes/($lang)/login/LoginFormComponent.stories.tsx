@@ -3,11 +3,11 @@ import LoginFormComponent from './LoginFormComponent';
 import { reactRouterParameters } from 'storybook-addon-remix-react-router';
 
 export default {
-  title: 'Components/Login Form',
+  title: 'Forms/Login Form',
   component: LoginFormComponent,
   decorators: [
     (Story) => (
-      <div className="w-[25vw]">
+      <div className="w-full max-w-[35rem]">
         <Story />
       </div>
     ),

@@ -10,7 +10,7 @@ import '../app/tailwind.css';
 import { withShoelace } from '.storybook/withShoelace';
 
 const preview: Preview = {
-  tags: ['autodocs'],
+  tags: ['autodocs', 'autodocs'],
   parameters: {
     backgrounds: {
       options: {
@@ -40,6 +40,11 @@ const preview: Preview = {
     },
     viewport: {
       viewports: MINIMAL_VIEWPORTS,
+    },
+    options: {
+      storySort: {
+        order: ['Introduction', 'Brand', 'Components', 'Forms'],
+      },
     },
   },
   initialGlobals: {
