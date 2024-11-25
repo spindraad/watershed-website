@@ -45,8 +45,16 @@ export const FormWithErrors: Story = {
       password: 'DonaldDuck',
     },
     errors: {
-      emailaddress: 'Invalid email',
-      password: 'Invalid password',
+      emailaddress: [
+        {
+          errorCode: 'invalid_type',
+        },
+      ],
+      password: [
+        {
+          errorCode: 'invalid_type',
+        },
+      ],
     },
   },
 };

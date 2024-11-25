@@ -4,13 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="For now run only vitest in CI builds">
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Changed url for the login and logout pages to Dutch">
+      <change afterPath="$PROJECT_DIR$/.storybook/i18n-storybook.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/routes/wachtwoord-vergeten/ForgetPasswordConfirmation.stories.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/routes/wachtwoord-vergeten/ForgetPasswordConfirmation.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/routes/wachtwoord-vergeten/ForgetPasswordFormComponent.stories.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/routes/wachtwoord-vergeten/ForgetPasswordFormComponent.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/routes/wachtwoord-vergeten/_forgot-password.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/validations/flows/forget-password.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/validations/flows/forget-password.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/login/LoginFormComponent.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/inloggen/LoginFormComponent.stories.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/login/LoginFormComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/inloggen/LoginFormComponent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/login/_login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/inloggen/_login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/logout/_logout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/uitloggen/_logout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.storybook/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/.storybook/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.storybook/preview.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/.storybook/preview.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/locales/en.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/en.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/locales/nl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/nl.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/inloggen/LoginFormComponent.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/inloggen/LoginFormComponent.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/inloggen/LoginFormComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/inloggen/LoginFormComponent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/inloggen/_login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/inloggen/_login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/validations/flows/login.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/validations/flows/login.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -257,7 +270,7 @@
       <workItem from="1732003571688" duration="3062000" />
       <workItem from="1732007236510" duration="23947000" />
       <workItem from="1732134752814" duration="7960000" />
-      <workItem from="1732444117390" duration="20794000" />
+      <workItem from="1732444117390" duration="29828000" />
     </task>
     <task id="LOCAL-00001" summary="Set up project, added dev dependencies and configured them">
       <option name="closed" value="true" />
@@ -403,7 +416,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732463230392</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Changed url for the login and logout pages to Dutch">
+      <option name="closed" value="true" />
+      <created>1732525260765</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1732525260765</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -463,7 +484,8 @@
     <MESSAGE value="Added validations for checking the login flow with Zod, and appended UI to accommodate for errors. Updated Dutch and English locale as well" />
     <MESSAGE value="Adjusted GH Actions to also run tests" />
     <MESSAGE value="For now run only vitest in CI builds" />
-    <option name="LAST_COMMIT_MESSAGE" value="For now run only vitest in CI builds" />
+    <MESSAGE value="Changed url for the login and logout pages to Dutch" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed url for the login and logout pages to Dutch" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

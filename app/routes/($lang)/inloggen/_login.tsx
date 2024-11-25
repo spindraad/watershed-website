@@ -54,7 +54,6 @@ export const meta: MetaFunction = () => {
 export default function LoginRoute() {
   const { t } = useTranslation('login');
   const actionData = useActionData<ActionData>();
-  console.log(actionData);
 
   return (
     <div className="content space-y-4">

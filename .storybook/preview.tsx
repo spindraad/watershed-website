@@ -4,7 +4,8 @@ import {
   withRouter,
   reactRouterParameters,
 } from 'storybook-addon-remix-react-router';
-import { withShoelace } from '.storybook/withShoelace';
+import { withShoelace } from './withShoelace';
+import i18n from './i18n-storybook';
 
 import '@shoelace-style/shoelace/dist/themes/light.css';
 import '../app/tailwind.css';
@@ -13,6 +14,7 @@ import './viewer.css';
 const preview: Preview = {
   tags: ['autodocs', 'autodocs'],
   parameters: {
+    i18n,
     backgrounds: {
       options: {
         primary: {
@@ -50,6 +52,11 @@ const preview: Preview = {
   },
   initialGlobals: {
     background: { value: 'primary' },
+    locale: 'en',
+    locales: {
+      en: 'English',
+      nl: 'Nederlands',
+    },
   },
   decorators: [withRouter(), withShoelace()],
 };
