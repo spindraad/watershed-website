@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Adjusted GH Actions to also run tests">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/pr-lint-build.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/pr-lint-build.yml" afterDir="false" />
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="For now run only vitest in CI builds">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/login/LoginFormComponent.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/inloggen/LoginFormComponent.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/login/LoginFormComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/inloggen/LoginFormComponent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/login/_login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/inloggen/_login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/logout/_logout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/uitloggen/_logout.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +37,10 @@
             <RecentBranchesForRepo>
               <option name="branches">
                 <list>
+                  <RecentBranch>
+                    <option name="branchName" value="feature/wsh-21-forgot-password" />
+                    <option name="lastUsedInstant" value="1732463293" />
+                  </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="feature/wsh-14-session-management" />
                     <option name="lastUsedInstant" value="1732003846" />
@@ -72,45 +81,45 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenDatabaseViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;Vitest.All Tests.executor&quot;: &quot;Debug&quot;,
-    &quot;Vitest.validateLogin.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.validateLogin.should return success: false when emailaddress is invalid.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.validateLogin.should return success: false when emailaddress is missing.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/wsh-14-session-management&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;22.11.0&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;22.9.0&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/lody/dev/projects/watershed-website&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.Develop.executor&quot;: &quot;Run&quot;,
-    &quot;npm.dev:remix.executor&quot;: &quot;Debug&quot;,
-    &quot;npm.dev:storybook.executor&quot;: &quot;Debug&quot;,
-    &quot;npm.docker:start.executor&quot;: &quot;Run&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/lody/dev/projects/watershed-website/node_modules/prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/lody/dev/projects/watershed-website/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenDatabaseViewOnStart": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Vitest.All Tests.executor": "Debug",
+    "Vitest.validateLogin.executor": "Run",
+    "Vitest.validateLogin.should return success: false when emailaddress is invalid.executor": "Run",
+    "Vitest.validateLogin.should return success: false when emailaddress is missing.executor": "Run",
+    "git-widget-placeholder": "feature/wsh-21-forgot-password",
+    "javascript.nodejs.core.library.configured.version": "22.11.0",
+    "javascript.nodejs.core.library.typings.version": "22.9.0",
+    "last_opened_file_path": "/Users/lody/dev/projects/watershed-website",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "npm",
+    "npm.Develop.executor": "Run",
+    "npm.dev:remix.executor": "Debug",
+    "npm.dev:storybook.executor": "Debug",
+    "npm.docker:start.executor": "Run",
+    "prettierjs.PrettierConfiguration.Package": "/Users/lody/dev/projects/watershed-website/node_modules/prettier",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "ts.external.directory.path": "/Users/lody/dev/projects/watershed-website/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ],
-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
-      &quot;XML&quot;
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "XML"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/routes/($lang)" />
@@ -248,7 +257,7 @@
       <workItem from="1732003571688" duration="3062000" />
       <workItem from="1732007236510" duration="23947000" />
       <workItem from="1732134752814" duration="7960000" />
-      <workItem from="1732444117390" duration="18554000" />
+      <workItem from="1732444117390" duration="20794000" />
     </task>
     <task id="LOCAL-00001" summary="Set up project, added dev dependencies and configured them">
       <option name="closed" value="true" />
@@ -386,7 +395,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732462886826</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="For now run only vitest in CI builds">
+      <option name="closed" value="true" />
+      <created>1732463230392</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1732463230392</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -445,7 +462,8 @@
     <MESSAGE value="A lot of improvements to the current state of the login form, with some (extracted) components" />
     <MESSAGE value="Added validations for checking the login flow with Zod, and appended UI to accommodate for errors. Updated Dutch and English locale as well" />
     <MESSAGE value="Adjusted GH Actions to also run tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adjusted GH Actions to also run tests" />
+    <MESSAGE value="For now run only vitest in CI builds" />
+    <option name="LAST_COMMIT_MESSAGE" value="For now run only vitest in CI builds" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
