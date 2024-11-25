@@ -13,6 +13,16 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model PasswordResets {
+  id String @id @default(cuid())
+
+  email     String
+  token     String   @unique @default(uuid())
+  expiresAt DateTime
+
+  createdAt DateTime @default(now())
+}
+
 model Password {
   hash String
 

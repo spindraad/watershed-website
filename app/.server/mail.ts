@@ -8,11 +8,13 @@ const from = {
 };
 
 export type SendMailArguments = {
+  email: string;
   subject: string;
   html: string;
 };
 
-export async function sendMail({ subject, html }: SendMailArguments) {
+export async function sendMail({ email, subject, html }: SendMailArguments) {
+  console.log('Sending mail to', email);
   try {
     const res = await sgMail.send({
       to: 'lody@spindraad.nl',
@@ -26,4 +28,13 @@ export async function sendMail({ subject, html }: SendMailArguments) {
     console.error(err);
     throw err;
   }
+}
+
+export async function sendPasswordResetMail(email: string, token: string) {
+  const subject = 'Reset your password';
+  const html = `
+    <p>Click the link below to reset your password</p>
+    <a href="http://localhost:3000/wachtwoord-reset?token=${token}">Reset password</a>
+  `;
+  return sendMail({ email, subject, html });
 }

@@ -1,13 +1,15 @@
 import { useTranslation } from 'react-i18next';
 import { ActionFunctionArgs, json } from '@remix-run/node';
+import { useActionData } from '@remix-run/react';
 import Heading from '~/components/Heading';
-import ForgetPasswordFormComponent from '~/routes/wachtwoord-vergeten/ForgetPasswordFormComponent';
+import ForgetPasswordFormComponent from './ForgetPasswordFormComponent';
 import {
   validateForgetPassword,
   ValidationErrors,
 } from '~/validations/flows/forget-password';
-import { useActionData } from '@remix-run/react';
-import ForgetPasswordConfirmation from '~/routes/wachtwoord-vergeten/ForgetPasswordConfirmation';
+import ForgetPasswordConfirmation from './ForgetPasswordConfirmation';
+import { createPasswordResetSession } from '~/models/user.server';
+import { sendPasswordResetMail } from '~/.server/mail';
 
 type SuccessActionData = {
   success: true;
@@ -33,6 +35,14 @@ export async function action({ request }: ActionFunctionArgs) {
         { status: 400 },
       );
     }
+
+    const passwordResetSession = await createPasswordResetSession(
+      result.data.emailaddress,
+    );
+    await sendPasswordResetMail(
+      result.data.emailaddress,
+      passwordResetSession.token,
+    );
 
     return json<ActionData>({ success: true });
   } else {

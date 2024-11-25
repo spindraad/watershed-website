@@ -12,8 +12,7 @@ export const resources = {
 const ns = ['common'];
 const supportedLngs = ['en', 'nl'];
 
-// console.log('resources', resources);
-
+// eslint-disable-next-line import/no-named-as-default-member
 i18next
   .use(initReactI18next)
   .use(LanguageDetector)

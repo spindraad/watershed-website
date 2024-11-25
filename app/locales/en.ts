@@ -64,3 +64,30 @@ export const ForgetPasswordConfirmationComponent = {
   ConfirmationMessage:
     'An email has been sent to your email address with instructions to reset your password',
 };
+
+export const ResetPasswordRoute = {
+  Title: 'Reset password',
+  Explanation: 'Enter a new password for your account',
+  MissingToken: 'The token for resetting the password is missing',
+  ExpiredToken:
+    'The token for resetting the password has expired. Request a new password on the login page.',
+};
+
+export const ResetPasswordFormComponent = {
+  PasswordInputLabel: 'Password',
+  RepeatPasswordInputLabel: 'Repeat password',
+  SubmitButton: 'Submit',
+  Errors: {
+    password: {
+      ['invalid_type']: 'Invalid password',
+      ['too_small']: 'Password is too short',
+      ['too_large']: 'Password is too long',
+    },
+    confirmPassword: {
+      ['invalid_type']: 'Invalid password',
+      ['too_small']: 'Password is too short',
+      ['too_large']: 'Password is too long',
+      ['passwords_do_not_match']: 'Passwords do not match',
+    },
+  },
+};

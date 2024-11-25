@@ -64,3 +64,30 @@ export const ForgetPasswordConfirmationComponent = {
   ConfirmationMessage:
     'Er is een e-mail naar je e-mailadres gestuurd met instructies om je wachtwoord opnieuw in te stellen',
 };
+
+export const ResetPasswordRoute = {
+  Title: 'Wachtwoord resetten',
+  Explanation: 'Voer een nieuw wachtwoord in voor je account',
+  MissingToken: 'De token voor het resetten van het wachtwoord ontbreekt',
+  ExpiredToken:
+    'De token voor het resetten van het wachtwoord is verlopen. Vraag een nieuw aan wachtwoord aan op de inlogpagina.',
+};
+
+export const ResetPasswordFormComponent = {
+  PasswordInputLabel: 'Wachtwoord',
+  RepeatPasswordInputLabel: 'Herhaal wachtwoord',
+  SubmitButton: 'Verzenden',
+  Errors: {
+    password: {
+      ['invalid_type']: 'Ongeldig wachtwoord',
+      ['too_small']: 'Wachtwoord is te kort',
+      ['too_large']: 'Wachtwoord is te lang',
+    },
+    confirmPassword: {
+      ['invalid_type']: 'Ongeldig wachtwoord',
+      ['too_small']: 'Wachtwoord is te kort',
+      ['too_large']: 'Wachtwoord is te lang',
+      ['passwords_do_not_match']: 'Wachtwoorden komen niet overeen',
+    },
+  },
+};

@@ -19,7 +19,7 @@ export default {
 
 type Story = StoryObj<typeof LoginFormComponent>;
 
-export const Form: Story = {
+export const Default: Story = {
   args: {
     action: '/login',
   },
@@ -37,7 +37,7 @@ export const Form: Story = {
   },
 };
 
-export const FormWithErrors: Story = {
+export const WithErrors: Story = {
   args: {
     action: '/login',
     values: {

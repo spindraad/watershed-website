@@ -1,5 +1,6 @@
 import { PrismaClient } from '@prisma/client';
 import bcrypt from 'bcryptjs';
+import { faker } from '@faker-js/faker';
 
 const prisma = new PrismaClient();
 
@@ -32,8 +33,19 @@ const createUsers = async () => {
   ]);
 };
 
+const createPasswordResetSession = async () => {
+  return prisma.passwordResets.create({
+    data: {
+      token: faker.string.uuid(),
+      expiresAt: faker.date.future(),
+      email: 'alice@wonderworld.net',
+    },
+  });
+};
+
 async function seed() {
   await createUsers();
+  await createPasswordResetSession();
 }
 
 seed()

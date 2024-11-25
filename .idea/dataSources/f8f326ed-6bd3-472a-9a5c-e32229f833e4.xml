@@ -3,9 +3,17 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.53">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <IntrospectionStateNumber>793</IntrospectionStateNumber>
+      <Grants>1||-9223372036854775808|c|G
+1||10|c|G
+1||10|C|G
+1||10|T|G
+4||-9223372036854775808|c|G
+4||10|c|G
+4||10|C|G
+4||10|T|G</Grants>
+      <IntrospectionStateNumber>858</IntrospectionStateNumber>
       <ServerVersion>17.0</ServerVersion>
-      <StartupTime>1732005738</StartupTime>
+      <StartupTime>1732414289</StartupTime>
       <TimeZones>true ACDT
 true ACSST
 false ACST
@@ -1397,7 +1405,7 @@ false posixrules
 13219||10|C|G
 13219||-9223372036854775808|U|G
 13219||10|U|G</Grants>
-      <IntrospectionStateNumber>793</IntrospectionStateNumber>
+      <IntrospectionStateNumber>858</IntrospectionStateNumber>
       <ObjectId>5</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4818,45 +4826,51 @@ false posixrules
     </schema>
     <schema id="264" parent="2" name="public">
       <Current>1</Current>
-      <IntrospectionStateNumber>793</IntrospectionStateNumber>
-      <LastIntrospectionLocalTimestamp>2024-11-19.14:21:09</LastIntrospectionLocalTimestamp>
+      <IntrospectionStateNumber>858</IntrospectionStateNumber>
+      <LastIntrospectionLocalTimestamp>2024-11-25.19:27:20</LastIntrospectionLocalTimestamp>
       <ObjectId>16406</ObjectId>
       <StateNumber>761</StateNumber>
       <OwnerName>postgres</OwnerName>
     </schema>
     <table id="265" parent="264" name="Password">
       <ObjectId>16442</ObjectId>
-      <StateNumber>774</StateNumber>
+      <StateNumber>825</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="266" parent="264" name="User">
+    <table id="266" parent="264" name="PasswordResets">
+      <ObjectId>16784</ObjectId>
+      <StateNumber>849</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <table id="267" parent="264" name="User">
       <ObjectId>16416</ObjectId>
       <StateNumber>774</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="267" parent="264" name="_prisma_migrations">
+    <table id="268" parent="264" name="_prisma_migrations">
       <ObjectId>16407</ObjectId>
       <StateNumber>762</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <column id="268" parent="265" name="hash">
+    <column id="269" parent="265" name="hash">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>774</StateNumber>
       <StoredType>text|0s</StoredType>
       <TypeId>25</TypeId>
     </column>
-    <column id="269" parent="265" name="userId">
+    <column id="270" parent="265" name="userId">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>774</StateNumber>
       <StoredType>text|0s</StoredType>
       <TypeId>25</TypeId>
     </column>
-    <foreign-key id="270" parent="265" name="Password_userId_fkey">
+    <foreign-key id="271" parent="265" name="Password_userId_fkey">
       <ColNames>userId</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16448</ObjectId>
@@ -4866,7 +4880,7 @@ false posixrules
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>16416</RefTableId>
     </foreign-key>
-    <index id="271" parent="265" name="Password_userId_key">
+    <index id="272" parent="265" name="Password_userId_key">
       <ColNames>userId</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16447</ObjectId>
@@ -4877,27 +4891,75 @@ false posixrules
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <column id="272" parent="266" name="id">
+    <column id="273" parent="266" name="email">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StateNumber>849</StateNumber>
+      <StoredType>text|0s</StoredType>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="274" parent="266" name="token">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StateNumber>849</StateNumber>
+      <StoredType>text|0s</StoredType>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="275" parent="266" name="expiresAt">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StateNumber>849</StateNumber>
+      <StoredType>timestamp(3)|0s</StoredType>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="276" parent="266" name="createdAt">
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StateNumber>849</StateNumber>
+      <StoredType>timestamp(3)|0s</StoredType>
+      <TypeId>1114</TypeId>
+    </column>
+    <index id="277" parent="266" name="PasswordResets_pkey">
+      <ColNames>token</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16793</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>855</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+      <CollationNames>default</CollationNames>
+      <CollationIds>100</CollationIds>
+      <CollationParentNames>pg_catalog</CollationParentNames>
+    </index>
+    <key id="278" parent="266" name="PasswordResets_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16794</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>855</StateNumber>
+      <UnderlyingIndexId>16793</UnderlyingIndexId>
+    </key>
+    <column id="279" parent="267" name="id">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>764</StateNumber>
       <StoredType>text|0s</StoredType>
       <TypeId>25</TypeId>
     </column>
-    <column id="273" parent="266" name="email">
+    <column id="280" parent="267" name="email">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>764</StateNumber>
       <StoredType>text|0s</StoredType>
       <TypeId>25</TypeId>
     </column>
-    <column id="274" parent="266" name="name">
+    <column id="281" parent="267" name="name">
       <Position>3</Position>
       <StateNumber>764</StateNumber>
       <StoredType>text|0s</StoredType>
       <TypeId>25</TypeId>
     </column>
-    <index id="275" parent="266" name="User_pkey">
+    <index id="282" parent="267" name="User_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16421</ObjectId>
@@ -4909,7 +4971,7 @@ false posixrules
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <index id="276" parent="266" name="User_email_key">
+    <index id="283" parent="267" name="User_email_key">
       <ColNames>email</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16423</ObjectId>
@@ -4920,53 +4982,53 @@ false posixrules
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="277" parent="266" name="User_pkey">
+    <key id="284" parent="267" name="User_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16422</ObjectId>
       <Primary>1</Primary>
       <StateNumber>764</StateNumber>
       <UnderlyingIndexId>16421</UnderlyingIndexId>
     </key>
-    <column id="278" parent="267" name="id">
+    <column id="285" parent="268" name="id">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>762</StateNumber>
       <StoredType>varchar(36)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="279" parent="267" name="checksum">
+    <column id="286" parent="268" name="checksum">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>762</StateNumber>
       <StoredType>varchar(64)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="280" parent="267" name="finished_at">
+    <column id="287" parent="268" name="finished_at">
       <Position>3</Position>
       <StateNumber>762</StateNumber>
       <StoredType>timestamp with time zone|0s</StoredType>
       <TypeId>1184</TypeId>
     </column>
-    <column id="281" parent="267" name="migration_name">
+    <column id="288" parent="268" name="migration_name">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StateNumber>762</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="282" parent="267" name="logs">
+    <column id="289" parent="268" name="logs">
       <Position>5</Position>
       <StateNumber>762</StateNumber>
       <StoredType>text|0s</StoredType>
       <TypeId>25</TypeId>
     </column>
-    <column id="283" parent="267" name="rolled_back_at">
+    <column id="290" parent="268" name="rolled_back_at">
       <Position>6</Position>
       <StateNumber>762</StateNumber>
       <StoredType>timestamp with time zone|0s</StoredType>
       <TypeId>1184</TypeId>
     </column>
-    <column id="284" parent="267" name="started_at">
+    <column id="291" parent="268" name="started_at">
       <DefaultExpression>now()</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>7</Position>
@@ -4974,7 +5036,7 @@ false posixrules
       <StoredType>timestamp with time zone|0s</StoredType>
       <TypeId>1184</TypeId>
     </column>
-    <column id="285" parent="267" name="applied_steps_count">
+    <column id="292" parent="268" name="applied_steps_count">
       <DefaultExpression>0</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>8</Position>
@@ -4982,7 +5044,7 @@ false posixrules
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <index id="286" parent="267" name="_prisma_migrations_pkey">
+    <index id="293" parent="268" name="_prisma_migrations_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16414</ObjectId>
@@ -4994,7 +5056,7 @@ false posixrules
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="287" parent="267" name="_prisma_migrations_pkey">
+    <key id="294" parent="268" name="_prisma_migrations_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16415</ObjectId>
       <Primary>1</Primary>
