@@ -1,9 +1,13 @@
 import { describe, test, expect } from 'vitest';
-import { validateResetPassword, ResetPasswordResponse } from './reset-password';
+import {
+  validateChangePassword,
+  ChangePasswordResponse,
+} from 'app/validations/flows/change-password';
 
-describe('validate "Reset Password"', () => {
+describe('validate "Change Password"', () => {
   test('should return false if the main password is too small', async () => {
     const formData = new FormData();
+    formData.append('emailaddress', 'donald@duck.com');
     formData.append('new-password', 'asd');
     formData.append('new-password-confirm', 'asdxcvcvb');
 
@@ -12,9 +16,9 @@ describe('validate "Reset Password"', () => {
       body: formData,
     });
 
-    const result = await validateResetPassword(request);
+    const result = await validateChangePassword(request);
 
-    expect(result).toEqual<ResetPasswordResponse>({
+    expect(result).toEqual<ChangePasswordResponse>({
       success: false,
       errors: {
         password: [{ errorCode: 'too_small' }],
@@ -27,6 +31,7 @@ describe('validate "Reset Password"', () => {
 
   test('should return false if the confirmation password is too small', async () => {
     const formData = new FormData();
+    formData.append('emailaddress', 'donald@duck.com');
     formData.append('new-password', 'asdasdscjcx');
     formData.append('new-password-confirm', 'asd');
 
@@ -35,9 +40,9 @@ describe('validate "Reset Password"', () => {
       body: formData,
     });
 
-    const result = await validateResetPassword(request);
+    const result = await validateChangePassword(request);
 
-    expect(result).toEqual<ResetPasswordResponse>({
+    expect(result).toEqual<ChangePasswordResponse>({
       success: false,
       errors: {
         confirmPassword: [
@@ -50,6 +55,7 @@ describe('validate "Reset Password"', () => {
 
   test('should return false if the passwords do not match', async () => {
     const formData = new FormData();
+    formData.append('emailaddress', 'donald@duck.com');
     formData.append('new-password', 'asdasdscjcx');
     formData.append('new-password-confirm', 'asdasdasdscccc');
 
@@ -58,9 +64,9 @@ describe('validate "Reset Password"', () => {
       body: formData,
     });
 
-    const result = await validateResetPassword(request);
+    const result = await validateChangePassword(request);
 
-    expect(result).toEqual<ResetPasswordResponse>({
+    expect(result).toEqual<ChangePasswordResponse>({
       success: false,
       errors: {
         confirmPassword: [

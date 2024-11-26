@@ -3,7 +3,7 @@ import { Form } from '@remix-run/react';
 import Input from '~/components/Input';
 import { useContext } from 'react';
 import { ShoelaceContext } from '~/components/shoelace';
-import { ValidationErrors } from '~/validations/flows/reset-password';
+import { ValidationErrors } from '~/validations/flows/change-password';
 
 type Props = {
   /**
@@ -14,7 +14,12 @@ type Props = {
   /**
    * The reset token
    */
-  token: string;
+  token?: string;
+
+  /**
+   * The user's email address
+   */
+  emailAddress?: string;
 
   /**
    * Errors that occurred during the form submission
@@ -22,9 +27,14 @@ type Props = {
   errors?: ValidationErrors;
 };
 
-export default function ResetPasswordForm({ action, token, errors }: Props) {
+export default function ChangePasswordForm({
+  action,
+  emailAddress,
+  token,
+  errors,
+}: Props) {
   const { SlButton } = useContext(ShoelaceContext);
-  const { t } = useTranslation('ResetPasswordFormComponent');
+  const { t } = useTranslation('ChangePasswordFormComponent');
 
   const parseConfirmPasswordErrors = (errors?: ValidationErrors) => {
     return errors?.confirmPassword
@@ -45,7 +55,21 @@ export default function ResetPasswordForm({ action, token, errors }: Props) {
       method="post"
       noValidate
     >
-      <input type="hidden" name="token" value={token} />
+      {token ?
+        <input type="hidden" name="token" value={token} />
+      : null}
+
+      {emailAddress ?
+        <input type="hidden" name="emailaddress" value={emailAddress} />
+      : <Input
+          type="email"
+          name="emailaddress"
+          label={t('EmailInputLabel')}
+          error={errors?.emailaddress
+            ?.map((error) => t(`Errors.emailaddress.${error.errorCode}`))
+            .join(', ')}
+        />
+      }
 
       <Input
         type="password"

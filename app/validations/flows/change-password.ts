@@ -2,6 +2,7 @@ import { z, ZodIssueCode } from 'zod';
 
 const validator = z
   .object({
+    emailaddress: z.string().min(1).email(), // invalid_email, too_small
     password: z.string().min(8), // too_small
     confirmPassword: z.string().min(8), // too_small
   })
@@ -16,30 +17,33 @@ export type ValidationErrors = z.inferFlattenedErrors<
   { errorCode: ZodIssueCode; message?: string }
 >['fieldErrors'];
 
-interface ResetPasswordBaseResponse {
+interface ChangePasswordBaseResponse {
   success: boolean;
 }
 
-interface ResetPasswordErrorResponse extends ResetPasswordBaseResponse {
+export interface ChangePasswordErrorResponse
+  extends ChangePasswordBaseResponse {
   success: false;
   errors: ValidationErrors;
 }
 
-interface ResetPasswordSuccessResponse extends ResetPasswordBaseResponse {
+export interface ChangePasswordSuccessResponse
+  extends ChangePasswordBaseResponse {
   success: true;
   data: ValidationResult;
 }
 
-export type ResetPasswordResponse =
-  | ResetPasswordErrorResponse
-  | ResetPasswordSuccessResponse;
+export type ChangePasswordResponse =
+  | ChangePasswordErrorResponse
+  | ChangePasswordSuccessResponse;
 
-export async function validateResetPassword(
+export async function validateChangePassword(
   request: Request,
-): Promise<ResetPasswordResponse> {
+): Promise<ChangePasswordResponse> {
   const clonedRequest = request.clone();
   const formData = Object.fromEntries(await clonedRequest.formData());
   const payload = {
+    emailaddress: formData.emailaddress,
     password: formData['new-password'],
     confirmPassword: formData['new-password-confirm'],
   };

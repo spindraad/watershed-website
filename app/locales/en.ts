@@ -68,12 +68,14 @@ export const ForgetPasswordConfirmationComponent = {
 export const ResetPasswordRoute = {
   Title: 'Reset password',
   Explanation: 'Enter a new password for your account',
+  MissingEmail: 'The email address for resetting the password is missing',
   MissingToken: 'The token for resetting the password is missing',
   ExpiredToken:
     'The token for resetting the password has expired. Request a new password on the login page.',
 };
 
-export const ResetPasswordFormComponent = {
+export const ChangePasswordFormComponent = {
+  EmailInputLabel: 'Email address',
   PasswordInputLabel: 'Password',
   RepeatPasswordInputLabel: 'Repeat password',
   SubmitButton: 'Submit',
@@ -90,4 +92,14 @@ export const ResetPasswordFormComponent = {
       ['passwords_do_not_match']: 'Passwords do not match',
     },
   },
+};
+
+export const ResetPasswordConfirmationComponent = {
+  Title: 'Password changed',
+  ConfirmationMessage: 'Your password has been changed',
+};
+
+export const ChangePasswordRoute = {
+  Title: 'Change password',
+  Explanation: 'Enter a new password for your account',
 };

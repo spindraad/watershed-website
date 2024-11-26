@@ -5,13 +5,17 @@ import invariant from 'tiny-invariant';
 import { isAfter } from 'date-fns';
 import { Prisma } from '@prisma/client';
 import Heading from '~/components/Heading';
-import ResetPasswordForm from './ResetPasswordForm';
+import ChangePasswordForm from '~/components/ChangePasswordForm';
 import {
-  validateResetPassword,
-  ResetPasswordResponse,
+  validateChangePassword,
+  ChangePasswordResponse,
   ValidationErrors,
-} from '~/validations/flows/reset-password';
-import { getPasswordResetSession, updatePassword } from '~/models/user.server';
+} from '~/validations/flows/change-password';
+import {
+  deletePasswordResetSession,
+  getPasswordResetSession,
+  updatePassword,
+} from '~/models/user.server';
 
 type TokenErrorResponse = {
   success: false;
@@ -22,18 +26,17 @@ type TokenErrorResponse = {
   };
 };
 
-type ActionData = ResetPasswordResponse | TokenErrorResponse;
+type ActionData = ChangePasswordResponse | TokenErrorResponse;
 
 export async function action({ request }: ActionFunctionArgs) {
   if (request.method === 'POST') {
     const clonedRequest = request.clone();
     const formData = Object.fromEntries(await clonedRequest.formData());
     const token = formData.token as string | undefined;
-    console.log(formData);
 
     invariant(token, 'Token is required');
 
-    const results = await validateResetPassword(request);
+    const results = await validateChangePassword(request);
 
     if (!results.success) {
       return json<ActionData>(
@@ -53,17 +56,16 @@ export async function action({ request }: ActionFunctionArgs) {
         throw new Error('Expired token');
       }
 
-      await updatePassword(
-        resetSession.email,
-        results.data.password,
-        resetSession.token,
-      );
+      await updatePassword(resetSession.email, results.data.password);
+
+      await deletePasswordResetSession(token);
 
       return json<ActionData>({
         success: true,
         data: {
-          password: 'password',
-          confirmPassword: 'password',
+          emailaddress: resetSession.email,
+          password: '',
+          confirmPassword: '',
         },
       });
     } catch (error: unknown) {
@@ -92,9 +94,9 @@ export default function ResetPasswordRoute() {
   const [params] = useSearchParams();
   const { t } = useTranslation('ResetPasswordRoute');
   const actionData = useActionData<ActionData>();
-  console.log({ actionData });
 
   const token = params.get('token');
+  const email = params.get('email');
 
   if (actionData) {
     if (actionData.success) {
@@ -130,6 +132,16 @@ export default function ResetPasswordRoute() {
     );
   }
 
+  if (!email) {
+    return (
+      <div className="content space-y-4">
+        <Heading level={1}>{t('Title')}</Heading>
+
+        <p>{t('MissingEmail')}</p>
+      </div>
+    );
+  }
+
   const errors = actionData?.errors as ValidationErrors | undefined;
   return (
     <div className="content space-y-4">
@@ -137,8 +149,9 @@ export default function ResetPasswordRoute() {
 
       <p>{t('Explanation')}</p>
 
-      <ResetPasswordForm
+      <ChangePasswordForm
         action="/wachtwoord-reset"
+        emailAddress={email}
         token={token}
         errors={errors}
       />

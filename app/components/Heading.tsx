@@ -7,7 +7,7 @@ type Props = {
   /**
    * The text of the heading.
    */
-  children: string;
+  children: string | string[];
 };
 
 export default function Heading({ level, children }: Props) {

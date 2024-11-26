@@ -50,6 +50,8 @@ export async function createPasswordResetSession(email: User['email']) {
   // Create an expiry date for the token, set it to 36 hours from now
   const expiresAt = addHours(new Date(), 36);
 
+  await changeUserPasswordType(email, 'RESET');
+
   return prisma.passwordResets.create({
     data: {
       email,
@@ -58,15 +60,57 @@ export async function createPasswordResetSession(email: User['email']) {
   });
 }
 
-export async function updatePassword(
+export async function deletePasswordResetSession(token: string) {
+  return prisma.passwordResets.delete({
+    where: {
+      token,
+    },
+  });
+}
+
+export async function isUserPasswordActive(
   email: User['email'],
-  password: string,
-  token: string,
+): Promise<boolean> {
+  const user = await prisma.user.findUniqueOrThrow({
+    where: {
+      email,
+    },
+    include: {
+      password: true,
+    },
+  });
+
+  return user.password?.type === 'ACTIVE';
+}
+
+export async function changeUserPasswordType(
+  email: User['email'],
+  type: 'ACTIVE' | 'RESET',
 ) {
+  const user = await prisma.user.findUniqueOrThrow({
+    where: {
+      email,
+    },
+  });
+
+  return prisma.password.update({
+    where: {
+      userId: user.id,
+      type: {
+        not: type,
+      },
+    },
+    data: {
+      type,
+    },
+  });
+}
+
+export async function updatePassword(email: User['email'], password: string) {
   // eslint-disable-next-line import/no-named-as-default-member
   const hashedPassword = await bcrypt.hash(password, 10);
 
-  await prisma.user.update({
+  return prisma.user.update({
     where: {
       email,
     },
@@ -76,12 +120,6 @@ export async function updatePassword(
           hash: hashedPassword,
         },
       },
-    },
-  });
-
-  return prisma.passwordResets.delete({
-    where: {
-      token,
     },
   });
 }

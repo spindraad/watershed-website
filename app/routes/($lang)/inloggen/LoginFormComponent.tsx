@@ -27,7 +27,7 @@ type Props = {
 
 export default function LoginFormComponent({ action, errors, values }: Props) {
   const [searchParams] = useSearchParams();
-  const redirectTo = searchParams.get('redirectTo') || '/admin';
+  const redirectTo = searchParams.get('redirectTo') || '/account';
   const navigation = useNavigation();
 
   const { SlButton, SlCheckbox, SlAlert } = useContext(ShoelaceContext);

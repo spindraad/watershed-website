@@ -68,12 +68,15 @@ export const ForgetPasswordConfirmationComponent = {
 export const ResetPasswordRoute = {
   Title: 'Wachtwoord resetten',
   Explanation: 'Voer een nieuw wachtwoord in voor je account',
+  MissingEmail:
+    'Het e-mailadres voor het resetten van het wachtwoord ontbreekt',
   MissingToken: 'De token voor het resetten van het wachtwoord ontbreekt',
   ExpiredToken:
     'De token voor het resetten van het wachtwoord is verlopen. Vraag een nieuw aan wachtwoord aan op de inlogpagina.',
 };
 
-export const ResetPasswordFormComponent = {
+export const ChangePasswordFormComponent = {
+  EmailInputLabel: 'E-mailadres',
   PasswordInputLabel: 'Wachtwoord',
   RepeatPasswordInputLabel: 'Herhaal wachtwoord',
   SubmitButton: 'Verzenden',
@@ -90,4 +93,14 @@ export const ResetPasswordFormComponent = {
       ['passwords_do_not_match']: 'Wachtwoorden komen niet overeen',
     },
   },
+};
+
+export const ResetPasswordConfirmationComponent = {
+  Title: 'Wachtwoord gewijzigd',
+  ConfirmationMessage: 'Je wachtwoord is gewijzigd',
+};
+
+export const ChangePasswordRoute = {
+  Title: 'Wachtwoord wijzigen',
+  Explanation: 'Voer een nieuw wachtwoord in voor je account',
 };
