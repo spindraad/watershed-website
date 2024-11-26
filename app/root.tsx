@@ -5,43 +5,56 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
-  useLoaderData,
   useRouteError,
+  useRouteLoaderData,
 } from '@remix-run/react';
 import { json, LinksFunction, LoaderFunctionArgs } from '@remix-run/node';
 import { useShoelace, ShoelaceContext } from '~/components/shoelace';
 import i18nServer from '~/modules/i18n.server';
+import { getErrorMessage } from '~/utils/errors';
 
 import '@shoelace-style/shoelace/dist/themes/light.css';
 import './tailwind.css';
-import { getErrorMessage } from '~/utils/errors';
+import Header from '~/components/Header';
+import { useOptionalUser } from '~/utils/user';
+import { getUser } from '~/.server/session';
 
 export const links: LinksFunction = () => [];
 
 export const handle = { i18n: ['common'] };
 
 export async function loader({ request }: LoaderFunctionArgs) {
+  const user = await getUser(request);
   const locale = await i18nServer.getLocale(request);
   const url = new URL(request.url);
   return json({
+    user,
     BASE_URL: url.origin,
     locale,
   });
 }
 
 export function Layout({ children }: { children: React.ReactNode }) {
-  const { locale } = useLoaderData<typeof loader>();
+  const user = useOptionalUser();
+  const data = useRouteLoaderData('root') as {
+    locale?: string;
+    BASE_URL: string;
+  };
+  const shoelace = useShoelace({ URL: data.BASE_URL });
 
   return (
-    <html lang={locale ?? 'nl'}>
+    <html lang={data?.locale ?? 'nl'}>
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
         <Links />
       </head>
-      <body className="bg-primary text-black font-sans">
-        {children}
+      <body className="bg-primary text-black font-sans flex flex-col gap-4">
+        <ShoelaceContext.Provider value={shoelace}>
+          <Header user={user} />
+          {children}
+        </ShoelaceContext.Provider>
         <ScrollRestoration />
         <Scripts />
       </body>
@@ -50,15 +63,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  const { BASE_URL } = useLoaderData<typeof loader>();
-  const shoelace = useShoelace({ URL: BASE_URL });
-  // useChangeLanguage(locale);
-
-  return (
-    <ShoelaceContext.Provider value={shoelace}>
-      <Outlet />
-    </ShoelaceContext.Provider>
-  );
+  return <Outlet />;
 }
 
 export function ErrorBoundary() {
@@ -78,9 +83,9 @@ export function ErrorBoundary() {
   const message = getErrorMessage(error);
 
   return (
-    <>
+    <div className="content">
       <h1>Error!</h1>
       <p>{message ?? 'Unknown error'}</p>
-    </>
+    </div>
   );
 }

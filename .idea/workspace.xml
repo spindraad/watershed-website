@@ -4,21 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Re-enabled the automatic PR close functionality with the spindraad-bot PAT">
-      <change afterPath="$PROJECT_DIR$/app/config/i18n.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/locales/en.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/locales/nl.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/locales/pap.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/modules/i18n.server.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routes/api_.locales.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/entry.client.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/entry.client.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/entry.server.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/entry.server.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/root.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/root.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/_index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)._index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Small improvements to make sure everything is up, running and build">
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,20 +33,16 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="feature/wsh-32-internationalisation" />
-                    <option name="lastUsedInstant" value="1730801474" />
+                    <option name="branchName" value="feature/wsh-21-forgot-password" />
+                    <option name="lastUsedInstant" value="1732463293" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="feature/wsh-14-session-management" />
+                    <option name="lastUsedInstant" value="1732003846" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="dev" />
                     <option name="lastUsedInstant" value="1729172594" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="feature/wsh-8-set-up-remix-scaffold-project" />
-                    <option name="lastUsedInstant" value="1729072152" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="main" />
-                    <option name="lastUsedInstant" value="1729072136" />
                   </RecentBranch>
                 </list>
               </option>
@@ -98,11 +81,15 @@
     "RunOnceActivity.OpenDatabaseViewOnStart": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Vitest.All Tests.executor": "Run",
-    "git-widget-placeholder": "feature/wsh-32-internationalisation",
-    "javascript.nodejs.core.library.configured.version": "20.14.0",
-    "javascript.nodejs.core.library.typings.version": "",
-    "last_opened_file_path": "/Users/lodyborgers",
+    "RunOnceActivity.git.unshallow": "true",
+    "Vitest.All Tests.executor": "Debug",
+    "Vitest.validateLogin.executor": "Run",
+    "Vitest.validateLogin.should return success: false when emailaddress is invalid.executor": "Run",
+    "Vitest.validateLogin.should return success: false when emailaddress is missing.executor": "Run",
+    "git-widget-placeholder": "feature/wsh-21-forgot-password",
+    "javascript.nodejs.core.library.configured.version": "22.11.0",
+    "javascript.nodejs.core.library.typings.version": "22.9.0",
+    "last_opened_file_path": "/Users/lody/dev/projects/watershed-website",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -111,24 +98,31 @@
     "nodejs_interpreter_path": "node",
     "nodejs_package_manager_path": "npm",
     "npm.Develop.executor": "Run",
-    "npm.dev:remix.executor": "Run",
-    "npm.dev:storybook.executor": "Run",
+    "npm.dev:remix.executor": "Debug",
+    "npm.dev:storybook.executor": "Debug",
     "npm.docker:start.executor": "Run",
-    "prettierjs.PrettierConfiguration.Package": "/Users/lodyborgers/dev/other/watershed/watershed-website/node_modules/prettier",
-    "settings.editor.selected.configurable": "web-ide.project.structure",
-    "ts.external.directory.path": "/Users/lodyborgers/dev/other/watershed/watershed-website/node_modules/typescript/lib",
+    "prettierjs.PrettierConfiguration.Package": "/Users/lody/dev/projects/watershed-website/node_modules/prettier",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "ts.external.directory.path": "/Applications/PhpStorm.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
       "postgresql"
+    ],
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "TEXT",
+      "XML"
     ]
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public/shoelace-assets/assets" />
       <recent name="$PROJECT_DIR$/app/components" />
+      <recent name="$PROJECT_DIR$/app/routes/($lang)" />
+      <recent name="$PROJECT_DIR$/app/routes" />
+      <recent name="$PROJECT_DIR$/app/routes/($lang)/_index" />
+      <recent name="$PROJECT_DIR$/app/routes/($lang)/index" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -138,7 +132,7 @@
       <command value="Develop (npm)" />
     </option>
   </component>
-  <component name="RunManager" selected="npm.dev:storybook">
+  <component name="RunManager" selected="Vitest.All Tests">
     <configuration name="Develop" type="CompoundRunConfigurationType">
       <toRun name="dev:remix" type="js.build_tools.npm" />
       <toRun name="dev:storybook" type="js.build_tools.npm" />
@@ -151,6 +145,47 @@
       <vitest-options value="--watch" />
       <envs />
       <scope-kind value="ALL" />
+      <method v="2" />
+    </configuration>
+    <configuration name="validateLogin" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <vitest-options value="--run" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/app/validations/flows/login.test.ts" />
+      <test-names>
+        <test-name value="validateLogin" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="validateLogin.should return success: false when emailaddress is invalid" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <vitest-options value="--run" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/app/validations/flows/login.test.ts" />
+      <test-names>
+        <test-name value="validateLogin" />
+        <test-name value="should return success: false when emailaddress is invalid" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="validateLogin.should return success: false when emailaddress is missing" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <vitest-options value="--run" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/app/validations/flows/login.test.ts" />
+      <test-names>
+        <test-name value="validateLogin" />
+        <test-name value="should return success: false when emailaddress is missing" />
+      </test-names>
       <method v="2" />
     </configuration>
     <configuration name="dev:remix" type="js.build_tools.npm" nameIsGenerated="true">
@@ -178,13 +213,23 @@
       <item itemvalue="npm.dev:remix" />
       <item itemvalue="npm.dev:storybook" />
       <item itemvalue="Vitest.All Tests" />
+      <item itemvalue="Vitest.validateLogin" />
+      <item itemvalue="Vitest.validateLogin.should return success: false when emailaddress is invalid" />
+      <item itemvalue="Vitest.validateLogin.should return success: false when emailaddress is missing" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Vitest.validateLogin.should return success: false when emailaddress is missing" />
+        <item itemvalue="Vitest.validateLogin" />
+        <item itemvalue="Vitest.validateLogin.should return success: false when emailaddress is invalid" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-PS-242.23726.107" />
-        <option value="bundled-php-predefined-a98d8de5180a-90914f2295cb-com.jetbrains.php.sharedIndexes-PS-242.23726.107" />
+        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-PS-243.21565.202" />
+        <option value="bundled-php-predefined-a98d8de5180a-5fbe0c30323e-com.jetbrains.php.sharedIndexes-PS-243.21565.202" />
       </set>
     </attachedChunks>
   </component>
@@ -205,6 +250,11 @@
       <workItem from="1730799683896" duration="2997000" />
       <workItem from="1731404810290" duration="3723000" />
       <workItem from="1731786852511" duration="7476000" />
+      <workItem from="1732003571688" duration="3062000" />
+      <workItem from="1732007236510" duration="23947000" />
+      <workItem from="1732134752814" duration="7960000" />
+      <workItem from="1732444117390" duration="53353000" />
+      <workItem from="1732611753576" duration="9478000" />
     </task>
     <task id="LOCAL-00001" summary="Set up project, added dev dependencies and configured them">
       <option name="closed" value="true" />
@@ -254,7 +304,151 @@
       <option name="project" value="LOCAL" />
       <updated>1730801147602</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Set up route structure for login page">
+      <option name="closed" value="true" />
+      <created>1732012890766</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1732012890766</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Slightly improved route folder organisation">
+      <option name="closed" value="true" />
+      <created>1732013131740</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1732013131740</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Very quickly set up a global grid layout and a simple header">
+      <option name="closed" value="true" />
+      <created>1732016433994</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1732016433994</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Very quickly set up a global grid layout and a simple header">
+      <option name="closed" value="true" />
+      <created>1732016454496</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1732016454496</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Started work on the Login Form Component">
+      <option name="closed" value="true" />
+      <created>1732019852785</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1732019852785</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Finished login form">
+      <option name="closed" value="true" />
+      <created>1732024788607</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1732024788607</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Started incorporating login flow validation">
+      <option name="closed" value="true" />
+      <created>1732033711081</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1732033711081</updated>
+    </task>
+    <task id="LOCAL-00014" summary="A lot of improvements to the current state of the login form, with some (extracted) components">
+      <option name="closed" value="true" />
+      <created>1732447384881</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1732447384881</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Added validations for checking the login flow with Zod, and appended UI to accommodate for errors. Updated Dutch and English locale as well">
+      <option name="closed" value="true" />
+      <created>1732462394318</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1732462394318</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Added validations for checking the login flow with Zod, and appended UI to accommodate for errors. Updated Dutch and English locale as well">
+      <option name="closed" value="true" />
+      <created>1732462401125</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1732462401125</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Adjusted GH Actions to also run tests">
+      <option name="closed" value="true" />
+      <created>1732462886826</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1732462886826</updated>
+    </task>
+    <task id="LOCAL-00018" summary="For now run only vitest in CI builds">
+      <option name="closed" value="true" />
+      <created>1732463230392</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1732463230392</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Changed url for the login and logout pages to Dutch">
+      <option name="closed" value="true" />
+      <created>1732525260765</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1732525260765</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Created components for the forget password route">
+      <option name="closed" value="true" />
+      <created>1732546781309</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1732546781309</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Implemented reset password flow">
+      <option name="closed" value="true" />
+      <created>1732569819560</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1732569819560</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Finished password reset flow">
+      <option name="closed" value="true" />
+      <created>1732617421147</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1732617421147</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Updated GH action file to run both unit and component tests">
+      <option name="closed" value="true" />
+      <created>1732620491502</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1732620491502</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Small improvements to make sure everything is up, running and build">
+      <option name="closed" value="true" />
+      <created>1732620836000</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1732620836000</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -303,7 +497,24 @@
     <MESSAGE value="Set up Prisma, launched a local db and configured DataGrip and PhpStorm with it." />
     <MESSAGE value="Set up and configured Storybook" />
     <MESSAGE value="Re-enabled the automatic PR close functionality with the spindraad-bot PAT" />
-    <option name="LAST_COMMIT_MESSAGE" value="Re-enabled the automatic PR close functionality with the spindraad-bot PAT" />
+    <MESSAGE value="Implemented cookie-based sessions for users" />
+    <MESSAGE value="Set up route structure for login page" />
+    <MESSAGE value="Slightly improved route folder organisation" />
+    <MESSAGE value="Very quickly set up a global grid layout and a simple header" />
+    <MESSAGE value="Started work on the Login Form Component" />
+    <MESSAGE value="Finished login form" />
+    <MESSAGE value="Started incorporating login flow validation" />
+    <MESSAGE value="A lot of improvements to the current state of the login form, with some (extracted) components" />
+    <MESSAGE value="Added validations for checking the login flow with Zod, and appended UI to accommodate for errors. Updated Dutch and English locale as well" />
+    <MESSAGE value="Adjusted GH Actions to also run tests" />
+    <MESSAGE value="For now run only vitest in CI builds" />
+    <MESSAGE value="Changed url for the login and logout pages to Dutch" />
+    <MESSAGE value="Created components for the forget password route" />
+    <MESSAGE value="Implemented reset password flow" />
+    <MESSAGE value="Finished password reset flow" />
+    <MESSAGE value="Updated GH action file to run both unit and component tests" />
+    <MESSAGE value="Small improvements to make sure everything is up, running and build" />
+    <option name="LAST_COMMIT_MESSAGE" value="Small improvements to make sure everything is up, running and build" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

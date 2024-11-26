@@ -1,7 +1,7 @@
 import fse from 'fs-extra';
 import path from 'path';
 const topDir = import.meta.dirname;
-fse.emptyDirSync(path.join(topDir, 'public', 'shoelace-assets'));
+fse.emptyDirSync(path.join(topDir, 'public', 'shoelace-assets', 'assets'));
 fse.copySync(
   path.join(
     topDir,
@@ -10,6 +10,6 @@ fse.copySync(
     'dist',
     'assets',
   ),
-  path.join(topDir, 'public', 'shoelace-assets'),
+  path.join(topDir, 'public', 'shoelace-assets', 'assets'),
   { overwrite: true },
 );
