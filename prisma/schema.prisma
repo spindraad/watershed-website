@@ -13,8 +13,25 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+enum PasswordType {
+  ACTIVE
+  RESET
+}
+
+model PasswordResets {
+  id String @id @default(cuid())
+
+  email     String
+  token     String   @unique @default(uuid())
+  expiresAt DateTime
+
+  createdAt DateTime @default(now())
+}
+
 model Password {
   hash String
+
+  type PasswordType @default(ACTIVE)
 
   user   User   @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: Cascade)
   userId String @unique
@@ -23,8 +40,8 @@ model Password {
 model User {
   id String @id @default(cuid())
 
-  email String  @unique
-  name  String?
+  email String @unique
+  name  String
 
   password Password?
 }

@@ -1,7 +1,7 @@
 import { describe, test, expect } from 'vitest';
 import { validateLogin } from './login';
 
-describe('validateLogin', () => {
+describe('validate "Login"', () => {
   test('should return success: false when emailaddress is missing', async () => {
     const formData = new FormData();
     formData.append('password', 'password');

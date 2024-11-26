@@ -83,9 +83,9 @@ export function ErrorBoundary() {
   const message = getErrorMessage(error);
 
   return (
-    <>
+    <div className="content">
       <h1>Error!</h1>
       <p>{message ?? 'Unknown error'}</p>
-    </>
+    </div>
   );
 }

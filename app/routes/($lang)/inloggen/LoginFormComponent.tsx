@@ -27,7 +27,7 @@ type Props = {
 
 export default function LoginFormComponent({ action, errors, values }: Props) {
   const [searchParams] = useSearchParams();
-  const redirectTo = searchParams.get('redirectTo') || '/admin';
+  const redirectTo = searchParams.get('redirectTo') || '/account';
   const navigation = useNavigation();
 
   const { SlButton, SlCheckbox, SlAlert } = useContext(ShoelaceContext);
@@ -85,8 +85,8 @@ export default function LoginFormComponent({ action, errors, values }: Props) {
             {t('Login')}
           </SlButton>
 
-          <Anchor to="/forgot-password" className="text-sm">
-            {t('Forgot password?')}
+          <Anchor to="/wachtwoord-vergeten" className="text-sm">
+            {t('forgotPassword')}
           </Anchor>
         </div>
       </div>

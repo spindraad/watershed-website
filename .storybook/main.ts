@@ -26,6 +26,7 @@ const config: StorybookConfig = {
         },
       },
     },
+    'storybook-react-i18next',
   ],
 
   framework: {

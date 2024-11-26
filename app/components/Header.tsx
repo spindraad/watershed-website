@@ -21,12 +21,12 @@ export default function Header({ user }: Props) {
         </div>
         <div className="flex items-center">
           {user ?
-            <form method="POST" action="/logout">
+            <form method="POST" action="/uitloggen">
               <SlButton variant="text" type="submit" size="large">
                 <span className="link">{t('logout')}</span>
               </SlButton>
             </form>
-          : <SlButton variant="text" href="/login" size="large">
+          : <SlButton variant="text" href="/inloggen" size="large">
               <span className="link">{t('login')}</span>
             </SlButton>
           }
