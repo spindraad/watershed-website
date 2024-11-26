@@ -19,7 +19,18 @@ import Header from '~/components/Header';
 import { useOptionalUser } from '~/utils/user';
 import { getUser } from '~/.server/session';
 
-export const links: LinksFunction = () => [];
+export const links: LinksFunction = () => [
+  {
+    rel: 'icon',
+    href: '/favicon.png',
+    type: 'image/png',
+  },
+  {
+    rel: 'apple-touch-icon',
+    href: '/favicon.png',
+    type: 'image/png',
+  },
+];
 
 export const handle = { i18n: ['common'] };
 
