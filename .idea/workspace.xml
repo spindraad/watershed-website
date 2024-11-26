@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Finished password reset flow">
-      <change afterPath="$PROJECT_DIR$/playwright.config.ts" afterDir="false" />
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Updated GH action file to run both unit and component tests">
       <change beforePath="$PROJECT_DIR$/.github/workflows/pr-lint-build.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/pr-lint-build.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -258,7 +256,7 @@
       <workItem from="1732007236510" duration="23947000" />
       <workItem from="1732134752814" duration="7960000" />
       <workItem from="1732444117390" duration="53353000" />
-      <workItem from="1732611753576" duration="8709000" />
+      <workItem from="1732611753576" duration="8984000" />
     </task>
     <task id="LOCAL-00001" summary="Set up project, added dev dependencies and configured them">
       <option name="closed" value="true" />
@@ -436,7 +434,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732617421147</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Updated GH action file to run both unit and component tests">
+      <option name="closed" value="true" />
+      <created>1732620491502</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1732620491502</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -500,7 +506,8 @@
     <MESSAGE value="Created components for the forget password route" />
     <MESSAGE value="Implemented reset password flow" />
     <MESSAGE value="Finished password reset flow" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished password reset flow" />
+    <MESSAGE value="Updated GH action file to run both unit and component tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated GH action file to run both unit and component tests" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
