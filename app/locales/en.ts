@@ -103,3 +103,7 @@ export const ChangePasswordRoute = {
   Title: 'Change password',
   Explanation: 'Enter a new password for your account',
 };
+
+export const NewsOverviewRoute = {
+  Title: 'News',
+};

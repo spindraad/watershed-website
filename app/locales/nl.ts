@@ -104,3 +104,7 @@ export const ChangePasswordRoute = {
   Title: 'Wachtwoord wijzigen',
   Explanation: 'Voer een nieuw wachtwoord in voor je account',
 };
+
+export const NewsOverviewRoute = {
+  Title: 'Nieuws',
+};

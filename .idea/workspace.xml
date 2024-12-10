@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Improved the way the seeding command is run">
-      <change beforePath="$PROJECT_DIR$/prisma/seed/_content.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/seed/_content.ts" afterDir="false" />
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="DB is now seeded with localised values, where Papiamentu is replaced with Esperanto">
+      <change afterPath="$PROJECT_DIR$/app/routes/($lang)/nieuws/_nieuws.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/locales/en.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/en.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/locales/nl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/nl.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -255,7 +258,7 @@
       <workItem from="1732134752814" duration="7960000" />
       <workItem from="1732444117390" duration="53353000" />
       <workItem from="1732611753576" duration="9478000" />
-      <workItem from="1733828413609" duration="12478000" />
+      <workItem from="1733828413609" duration="13639000" />
     </task>
     <task id="LOCAL-00001" summary="Set up project, added dev dependencies and configured them">
       <option name="closed" value="true" />
@@ -473,7 +476,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733841302564</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="DB is now seeded with localised values, where Papiamentu is replaced with Esperanto">
+      <option name="closed" value="true" />
+      <created>1733842036173</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1733842036173</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -516,7 +527,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Reset .idea folder and settings" />
     <MESSAGE value="Added a GitHub Actions workflow for pull requests" />
     <MESSAGE value="Set up Prisma, launched a local db and configured DataGrip and PhpStorm with it." />
     <MESSAGE value="Set up and configured Storybook" />
@@ -541,7 +551,8 @@
     <MESSAGE value="Removed Remix assets, added Watershed favicon and logo and added it in the header" />
     <MESSAGE value="Added new models and updated seed command to fill DB" />
     <MESSAGE value="Improved the way the seeding command is run" />
-    <option name="LAST_COMMIT_MESSAGE" value="Improved the way the seeding command is run" />
+    <MESSAGE value="DB is now seeded with localised values, where Papiamentu is replaced with Esperanto" />
+    <option name="LAST_COMMIT_MESSAGE" value="DB is now seeded with localised values, where Papiamentu is replaced with Esperanto" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
