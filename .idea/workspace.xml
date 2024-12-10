@@ -4,15 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Small improvements to make sure everything is up, running and build">
-      <change afterPath="$PROJECT_DIR$/app/components/Logo.stories.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/Logo.tsx" afterDir="false" />
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Removed Remix assets, added Watershed favicon and logo and added it in the header">
+      <change afterPath="$PROJECT_DIR$/app/types/PrismaJson.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prisma/seed/_content.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prisma/seed/_users.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/root.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/root.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logo-dark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logo-light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/seed.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/seed/main.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +105,7 @@
     "npm.dev:storybook.executor": "Debug",
     "npm.docker:start.executor": "Run",
     "prettierjs.PrettierConfiguration.Package": "/Users/lody/dev/projects/watershed-website/node_modules/prettier",
-    "settings.editor.selected.configurable": "preferences.keymap",
+    "settings.editor.selected.configurable": "settings.javascript.prettier",
     "ts.external.directory.path": "/Users/lody/dev/projects/watershed-website/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   },
@@ -121,11 +121,15 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/prisma/seed" />
       <recent name="$PROJECT_DIR$/app/components" />
       <recent name="$PROJECT_DIR$/app/routes/($lang)" />
       <recent name="$PROJECT_DIR$/app/routes" />
       <recent name="$PROJECT_DIR$/app/routes/($lang)/_index" />
-      <recent name="$PROJECT_DIR$/app/routes/($lang)/index" />
+    </key>
+    <key name="es6.move.members.recent.items">
+      <recent name="$PROJECT_DIR$/prisma/seed/_content.ts" />
+      <recent name="$PROJECT_DIR$/prisma/seed/_users.ts" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -258,6 +262,7 @@
       <workItem from="1732134752814" duration="7960000" />
       <workItem from="1732444117390" duration="53353000" />
       <workItem from="1732611753576" duration="9478000" />
+      <workItem from="1733828413609" duration="10222000" />
     </task>
     <task id="LOCAL-00001" summary="Set up project, added dev dependencies and configured them">
       <option name="closed" value="true" />
@@ -451,7 +456,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732620836000</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Removed Remix assets, added Watershed favicon and logo and added it in the header">
+      <option name="closed" value="true" />
+      <created>1732629587264</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1732629587264</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -517,7 +530,8 @@
     <MESSAGE value="Finished password reset flow" />
     <MESSAGE value="Updated GH action file to run both unit and component tests" />
     <MESSAGE value="Small improvements to make sure everything is up, running and build" />
-    <option name="LAST_COMMIT_MESSAGE" value="Small improvements to make sure everything is up, running and build" />
+    <MESSAGE value="Removed Remix assets, added Watershed favicon and logo and added it in the header" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed Remix assets, added Watershed favicon and logo and added it in the header" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
