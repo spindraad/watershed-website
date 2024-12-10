@@ -7,30 +7,30 @@ import {
   Event,
   Tag,
 } from '@prisma/client';
-import { faker } from '@faker-js/faker';
+import { fakerEN, fakerNL, fakerEO } from '@faker-js/faker';
 
 const createNewsArticles = (alice: User, bob: User, client: PrismaClient) => {
   const newsArticles = Array.from({ length: 10 }).map<
     Omit<NewsArticle, 'id'> & { id?: string }
   >(() => ({
     title: {
-      en: faker.lorem.sentence(),
-      nl: faker.lorem.sentence(),
-      pap: faker.lorem.sentence(),
+      en: fakerEN.lorem.sentence(),
+      nl: fakerNL.lorem.sentence(),
+      pap: fakerEO.lorem.sentence(),
     },
     content: {
-      en: faker.lorem.paragraphs(3),
-      nl: faker.lorem.paragraphs(3),
-      pap: faker.lorem.paragraphs(3),
+      en: fakerEN.lorem.paragraphs(3),
+      nl: fakerNL.lorem.paragraphs(3),
+      pap: fakerEO.lorem.paragraphs(3),
     },
 
-    image: faker.image.url(),
-    authorId: faker.helpers.arrayElement([alice.id, bob.id]),
-    externalLink: faker.helpers.arrayElement([faker.internet.url(), '']),
+    image: fakerEN.image.url(),
+    authorId: fakerEN.helpers.arrayElement([alice.id, bob.id]),
+    externalLink: fakerEN.helpers.arrayElement([fakerEN.internet.url(), '']),
     contentRelationId: null,
 
-    createdAt: faker.date.past(),
-    updatedAt: faker.date.recent(),
+    createdAt: fakerEN.date.past(),
+    updatedAt: fakerEN.date.recent(),
   }));
 
   return client.newsArticle.createManyAndReturn({
@@ -43,13 +43,13 @@ const createProjects = (client: PrismaClient) => {
     Omit<Project, 'id'> & { id?: string }
   >(() => ({
     description: {
-      en: faker.lorem.paragraphs(3),
-      nl: faker.lorem.paragraphs(3),
-      pap: faker.lorem.paragraphs(3),
+      en: fakerEN.lorem.paragraphs(3),
+      nl: fakerNL.lorem.paragraphs(3),
+      pap: fakerEO.lorem.paragraphs(3),
     },
     contentRelationId: null,
-    createdAt: faker.date.past(),
-    updatedAt: faker.date.recent(),
+    createdAt: fakerEN.date.past(),
+    updatedAt: fakerEN.date.recent(),
   }));
 
   return client.project.createManyAndReturn({
@@ -61,10 +61,10 @@ const createCreators = (client: PrismaClient) => {
   const creators = Array.from({ length: 10 }).map<
     Omit<Creator, 'id'> & { id?: string }
   >(() => ({
-    name: faker.person.fullName(),
+    name: fakerEN.person.fullName(),
     contentRelationId: null,
-    createdAt: faker.date.past(),
-    updatedAt: faker.date.recent(),
+    createdAt: fakerEN.date.past(),
+    updatedAt: fakerEN.date.recent(),
   }));
 
   return client.creator.createManyAndReturn({
@@ -77,21 +77,21 @@ const createEvents = (client: PrismaClient) => {
     Omit<Event, 'id'> & { id?: string }
   >(() => ({
     title: {
-      en: faker.lorem.sentence(),
-      nl: faker.lorem.sentence(),
-      pap: faker.lorem.sentence(),
+      en: fakerEN.lorem.sentence(),
+      nl: fakerNL.lorem.sentence(),
+      pap: fakerEO.lorem.sentence(),
     },
     description: {
-      en: faker.lorem.paragraphs(3),
-      nl: faker.lorem.paragraphs(3),
-      pap: faker.lorem.paragraphs(3),
+      en: fakerEN.lorem.paragraphs(3),
+      nl: fakerNL.lorem.paragraphs(3),
+      pap: fakerEO.lorem.paragraphs(3),
     },
-    eventDate: faker.date.future(),
-    address: faker.location.streetAddress(),
+    eventDate: fakerEN.date.future(),
+    address: fakerEN.location.streetAddress(),
     link: '',
     contentRelationId: null,
-    createdAt: faker.date.past(),
-    updatedAt: faker.date.recent(),
+    createdAt: fakerEN.date.past(),
+    updatedAt: fakerEN.date.recent(),
   }));
 
   return client.event.createManyAndReturn({
@@ -104,19 +104,19 @@ const createTags = (client: PrismaClient) => {
     Omit<Tag, 'id'> & { id?: string }
   >(() => ({
     name: {
-      en: faker.lorem.word(),
-      nl: faker.lorem.word(),
-      pap: faker.lorem.word(),
+      en: fakerEN.lorem.word(),
+      nl: fakerNL.lorem.word(),
+      pap: fakerEO.lorem.word(),
     },
     description: {
-      en: faker.lorem.sentence(),
-      nl: faker.lorem.sentence(),
-      pap: faker.lorem.sentence(),
+      en: fakerEN.lorem.sentence(),
+      nl: fakerNL.lorem.sentence(),
+      pap: fakerEO.lorem.sentence(),
     },
-    slug: faker.lorem.slug(),
+    slug: fakerEN.lorem.slug(),
     contentRelationId: null,
-    createdAt: faker.date.past(),
-    updatedAt: faker.date.recent(),
+    createdAt: fakerEN.date.past(),
+    updatedAt: fakerEN.date.recent(),
   }));
 
   return client.tag.createManyAndReturn({
@@ -136,10 +136,14 @@ const createRelations = async (
     const contentRelation = await client.contentRelation.create({
       data: {
         news: { connect: { id: newsArticle.id } },
-        projects: { connect: { id: faker.helpers.arrayElement(projects).id } },
-        creators: { connect: { id: faker.helpers.arrayElement(creators).id } },
-        events: { connect: { id: faker.helpers.arrayElement(events).id } },
-        tags: { connect: { id: faker.helpers.arrayElement(tags).id } },
+        projects: {
+          connect: { id: fakerEN.helpers.arrayElement(projects).id },
+        },
+        creators: {
+          connect: { id: fakerEN.helpers.arrayElement(creators).id },
+        },
+        events: { connect: { id: fakerEN.helpers.arrayElement(events).id } },
+        tags: { connect: { id: fakerEN.helpers.arrayElement(tags).id } },
       },
     });
 
@@ -153,10 +157,14 @@ const createRelations = async (
     const contentRelation = await client.contentRelation.create({
       data: {
         projects: { connect: { id: project.id } },
-        news: { connect: { id: faker.helpers.arrayElement(newsArticles).id } },
-        creators: { connect: { id: faker.helpers.arrayElement(creators).id } },
-        events: { connect: { id: faker.helpers.arrayElement(events).id } },
-        tags: { connect: { id: faker.helpers.arrayElement(tags).id } },
+        news: {
+          connect: { id: fakerEN.helpers.arrayElement(newsArticles).id },
+        },
+        creators: {
+          connect: { id: fakerEN.helpers.arrayElement(creators).id },
+        },
+        events: { connect: { id: fakerEN.helpers.arrayElement(events).id } },
+        tags: { connect: { id: fakerEN.helpers.arrayElement(tags).id } },
       },
     });
 
@@ -170,10 +178,14 @@ const createRelations = async (
     const contentRelation = await client.contentRelation.create({
       data: {
         creators: { connect: { id: creator.id } },
-        news: { connect: { id: faker.helpers.arrayElement(newsArticles).id } },
-        projects: { connect: { id: faker.helpers.arrayElement(projects).id } },
-        events: { connect: { id: faker.helpers.arrayElement(events).id } },
-        tags: { connect: { id: faker.helpers.arrayElement(tags).id } },
+        news: {
+          connect: { id: fakerEN.helpers.arrayElement(newsArticles).id },
+        },
+        projects: {
+          connect: { id: fakerEN.helpers.arrayElement(projects).id },
+        },
+        events: { connect: { id: fakerEN.helpers.arrayElement(events).id } },
+        tags: { connect: { id: fakerEN.helpers.arrayElement(tags).id } },
       },
     });
 
@@ -187,10 +199,16 @@ const createRelations = async (
     const contentRelation = await client.contentRelation.create({
       data: {
         events: { connect: { id: event.id } },
-        news: { connect: { id: faker.helpers.arrayElement(newsArticles).id } },
-        projects: { connect: { id: faker.helpers.arrayElement(projects).id } },
-        creators: { connect: { id: faker.helpers.arrayElement(creators).id } },
-        tags: { connect: { id: faker.helpers.arrayElement(tags).id } },
+        news: {
+          connect: { id: fakerEN.helpers.arrayElement(newsArticles).id },
+        },
+        projects: {
+          connect: { id: fakerEN.helpers.arrayElement(projects).id },
+        },
+        creators: {
+          connect: { id: fakerEN.helpers.arrayElement(creators).id },
+        },
+        tags: { connect: { id: fakerEN.helpers.arrayElement(tags).id } },
       },
     });
 
@@ -204,10 +222,16 @@ const createRelations = async (
     const contentRelation = await client.contentRelation.create({
       data: {
         tags: { connect: { id: tag.id } },
-        news: { connect: { id: faker.helpers.arrayElement(newsArticles).id } },
-        projects: { connect: { id: faker.helpers.arrayElement(projects).id } },
-        creators: { connect: { id: faker.helpers.arrayElement(creators).id } },
-        events: { connect: { id: faker.helpers.arrayElement(events).id } },
+        news: {
+          connect: { id: fakerEN.helpers.arrayElement(newsArticles).id },
+        },
+        projects: {
+          connect: { id: fakerEN.helpers.arrayElement(projects).id },
+        },
+        creators: {
+          connect: { id: fakerEN.helpers.arrayElement(creators).id },
+        },
+        events: { connect: { id: fakerEN.helpers.arrayElement(events).id } },
       },
     });
 
