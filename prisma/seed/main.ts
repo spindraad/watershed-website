@@ -1,6 +1,6 @@
 import { PrismaClient, User } from '@prisma/client';
-import { createPasswordResetSession, createUsers } from './_users.ts';
-import { createContent } from './_content.ts';
+import { createPasswordResetSession, createUsers } from './_users';
+import { createContent } from './_content';
 
 const prisma = new PrismaClient();
 

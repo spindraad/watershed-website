@@ -27,9 +27,9 @@ const createNewsArticles = (alice: User, bob: User, client: PrismaClient) => {
     image: faker.image.url(),
     authorId: faker.helpers.arrayElement([alice.id, bob.id]),
     externalLink: faker.helpers.arrayElement([faker.internet.url(), '']),
-    contentRelationId: '',
+    contentRelationId: null,
 
-    createdAt: faker.date.recent(),
+    createdAt: faker.date.past(),
     updatedAt: faker.date.recent(),
   }));
 
@@ -47,7 +47,7 @@ const createProjects = (client: PrismaClient) => {
       nl: faker.lorem.paragraphs(3),
       pap: faker.lorem.paragraphs(3),
     },
-    contentRelationId: '',
+    contentRelationId: null,
     createdAt: faker.date.past(),
     updatedAt: faker.date.recent(),
   }));
@@ -62,7 +62,7 @@ const createCreators = (client: PrismaClient) => {
     Omit<Creator, 'id'> & { id?: string }
   >(() => ({
     name: faker.person.fullName(),
-    contentRelationId: '',
+    contentRelationId: null,
     createdAt: faker.date.past(),
     updatedAt: faker.date.recent(),
   }));
@@ -89,7 +89,7 @@ const createEvents = (client: PrismaClient) => {
     eventDate: faker.date.future(),
     address: faker.location.streetAddress(),
     link: '',
-    contentRelationId: '',
+    contentRelationId: null,
     createdAt: faker.date.past(),
     updatedAt: faker.date.recent(),
   }));
@@ -114,7 +114,7 @@ const createTags = (client: PrismaClient) => {
       pap: faker.lorem.sentence(),
     },
     slug: faker.lorem.slug(),
-    contentRelationId: '',
+    contentRelationId: null,
     createdAt: faker.date.past(),
     updatedAt: faker.date.recent(),
   }));

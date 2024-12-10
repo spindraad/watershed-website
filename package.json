@@ -30,9 +30,12 @@
     "prepare": "husky",
     "db:generate": "prisma generate",
     "db:migrate": "prisma migrate dev",
-    "db:push": "prisma db push && prisma generate",
+    "db:migrate:reset": "prisma migrate reset",
+    "db:push": "prisma db push",
+    "db:push:seed": "prisma db push && prisma db seed",
+    "db:push:reset": "prisma db push --force-reset",
+    "db:push:reset:seed": "prisma db push --force-reset && prisma db seed",
     "db:seed": "prisma db seed",
-    "db:reset": "prisma migrate reset",
     "db:studio": "prisma studio --browser none",
     "playwright:install": "playwright install --with-deps",
     "storybook:serve": "http-server storybook-static -p 6006 --silent",
@@ -114,7 +117,7 @@
     "storybook-react-i18next": "^3.1.7",
     "tailwindcss": "^3.4.14",
     "tailwindcss-plugin-custom-elements": "^1.0.0",
-    "ts-node": "^10.9.2",
+    "tsx": "^4.19.2",
     "typescript": "^5.1.6",
     "vite": "^5.4.11",
     "vite-env-only": "^3.0.3",
@@ -132,7 +135,7 @@
     ]
   },
   "prisma": {
-    "seed": "node --loader ts-node/esm ./prisma/seed/main.ts"
+    "seed": "tsx ./prisma/seed/main.ts"
   },
   "eslintConfig": {
     "extends": [
