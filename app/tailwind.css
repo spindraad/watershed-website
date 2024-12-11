@@ -112,4 +112,11 @@
   .link.active {
     color: rgb(var(--secondary));
   }
+
+  .tag-link::part(base) {
+    background: var(--sl-color-primary-50);
+  }
+  .tag-link::part(base):hover {
+    background: var(--sl-color-primary-100);
+  }
 }
