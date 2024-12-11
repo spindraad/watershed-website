@@ -16,10 +16,7 @@ export default function Header({ user }: Props) {
     <div className="h-24 border-b-4 border-b-secondary">
       <div className="container w-full mx-auto h-full flex items-center justify-between">
         <div className="flex items-center">
-          <a
-            href="/"
-            className="text-2xl font-bold text-secondary border-none block w-28"
-          >
+          <a href="/" className="block w-28">
             <Logo />
           </a>
         </div>

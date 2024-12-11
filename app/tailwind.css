@@ -105,8 +105,11 @@
     grid-column: full;
   }
 
-  .link,
-  a {
+  .link {
     border-bottom: 2px solid rgb(var(--secondary));
+  }
+
+  .link.active {
+    color: rgb(var(--secondary));
   }
 }

@@ -1,13 +1,35 @@
-import { Link, LinkProps } from '@remix-run/react';
+import { Link, LinkProps, NavLink, NavLinkProps } from '@remix-run/react';
 
-type Props = LinkProps;
+interface AnchorBaseProps {
+  anchorType?: 'link' | 'nav';
+}
 
-export default function Anchor({ className, children, ...props }: Props) {
+interface AnchorLinkProps extends AnchorBaseProps, LinkProps {}
+
+interface AnchorNavProps extends AnchorBaseProps, NavLinkProps {}
+
+type Props = AnchorLinkProps | AnchorNavProps;
+
+export default function Anchor({
+  anchorType = 'link',
+  className,
+  ...anchorProps
+}: Props) {
   const classes = `link ${className ?? ''}`;
 
+  if (anchorType === 'link') {
+    const { children, ...props } = anchorProps as AnchorLinkProps;
+    return (
+      <Link className={classes} {...props}>
+        {children}
+      </Link>
+    );
+  }
+
+  const { children, ...props } = anchorProps as AnchorNavProps;
   return (
-    <Link className={classes} {...props}>
+    <NavLink className={classes} {...props}>
       {children}
-    </Link>
+    </NavLink>
   );
 }

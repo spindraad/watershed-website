@@ -75,30 +75,30 @@ jobs:
     needs: [lint-and-build, test-unit, test-components]
     runs-on: ubuntu-latest
 
-    steps:
-      - name: 🚫 Reject Pull Request
-        if: failure()
-        uses: actions/github-script@v7
-        with:
-          script: |
-            github.rest.pulls.createReview({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              pull_number: context.payload.pull_request.number,
-              event: 'REQUEST_CHANGES',
-              body: 'The build failed because of issues.'
-            })
-
-      - name: ✅ Approve Pull Request
-        if: success()
-        uses: actions/github-script@v7
-        with:
-          github-token: ${{ secrets.PR_REVIEW_TOKEN }}
-          script: |
-            github.rest.pulls.createReview({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              pull_number: context.payload.pull_request.number,
-              event: 'APPROVE',
-              body: 'The build passed successfully.'
-            })
+#    steps:
+#      - name: 🚫 Reject Pull Request
+#        if: failure()
+#        uses: actions/github-script@v7
+#        with:
+#          script: |
+#            github.rest.pulls.createReview({
+#              owner: context.repo.owner,
+#              repo: context.repo.repo,
+#              pull_number: context.payload.pull_request.number,
+#              event: 'REQUEST_CHANGES',
+#              body: 'The build failed because of issues.'
+#            })
+#
+#      - name: ✅ Approve Pull Request
+#        if: success()
+#        uses: actions/github-script@v7
+#        with:
+#          github-token: ${{ secrets.PR_REVIEW_TOKEN }}
+#          script: |
+#            github.rest.pulls.createReview({
+#              owner: context.repo.owner,
+#              repo: context.repo.repo,
+#              pull_number: context.payload.pull_request.number,
+#              event: 'APPROVE',
+#              body: 'The build passed successfully.'
+#            })
