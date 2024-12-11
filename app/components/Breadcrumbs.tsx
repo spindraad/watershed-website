@@ -27,7 +27,7 @@ export default function Breadcrumbs() {
             {part.title}
           </Anchor>
           {part.isLast ?
-            <span>/</span>
+            <span>&gt;</span>
           : null}
         </>
       ))}
