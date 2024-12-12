@@ -4,20 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Improvements to the news articles overview page and its related components">
-      <change afterPath="$PROJECT_DIR$/app/models/news.server.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f8f326ed-6bd3-472a-9a5c-e32229f833e4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f8f326ed-6bd3-472a-9a5c-e32229f833e4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f8f326ed-6bd3-472a-9a5c-e32229f833e4/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f8f326ed-6bd3-472a-9a5c-e32229f833e4/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Improved the generation of files with plop">
+      <change afterPath="$PROJECT_DIR$/scaffold-templates/plop/form/{{ name }}.stories.tsx.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scaffold-templates/plop/form/{{ name }}.tsx.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/ArticleCard.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ArticleCard.stories.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/ArticleCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ArticleCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/Breadcrumbs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Breadcrumbs.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/i18n.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/i18n.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/nieuws/_index/_nieuws.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/nieuws/_index/_nieuws.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/types/PrismaJson.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/types/PrismaJson.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/seed/_content.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/seed/_content.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plopfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/plopfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scaffold-templates/plop/component/{{ name }}.stories.tsx.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/scaffold-templates/plop/component/{{ name }}.stories.tsx.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +89,7 @@
     &quot;git-widget-placeholder&quot;: &quot;feature/wsh-43-nieuws&quot;,
     &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;22.11.0&quot;,
     &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;22.9.0&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/lody/dev/projects/watershed-website&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/lody/dev/projects/watershed-website/scaffold-templates/plop/form&quot;,
     &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -126,6 +118,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/scaffold-templates/plop/form" />
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -270,7 +263,7 @@
       <workItem from="1732134752814" duration="7960000" />
       <workItem from="1732444117390" duration="53353000" />
       <workItem from="1732611753576" duration="9478000" />
-      <workItem from="1733828413609" duration="41522000" />
+      <workItem from="1733828413609" duration="45867000" />
     </task>
     <task id="LOCAL-00001" summary="Set up project, added dev dependencies and configured them">
       <option name="closed" value="true" />
@@ -536,7 +529,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733917024445</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Improvements to the news articles overview page and its related components">
+      <option name="closed" value="true" />
+      <created>1733995193694</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1733995193694</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -579,7 +580,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Slightly improved route folder organisation" />
     <MESSAGE value="Very quickly set up a global grid layout and a simple header" />
     <MESSAGE value="Started work on the Login Form Component" />
     <MESSAGE value="Finished login form" />
@@ -604,7 +604,8 @@
     <MESSAGE value="Created article preview card and tag components" />
     <MESSAGE value="Small improvement to the breadcrumbs" />
     <MESSAGE value="Improvements to the news articles overview page and its related components" />
-    <option name="LAST_COMMIT_MESSAGE" value="Improvements to the news articles overview page and its related components" />
+    <MESSAGE value="Improved the generation of files with plop" />
+    <option name="LAST_COMMIT_MESSAGE" value="Improved the generation of files with plop" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

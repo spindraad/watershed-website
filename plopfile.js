@@ -9,10 +9,19 @@ export default function (plop) {
       },
       {
         type: 'list',
-        name: 'storybookCategory',
-        message: 'In what Storybook category should this component be placed?',
-        choices: ['Components', 'Forms'],
-        default: 'Components',
+        name: 'path',
+        message: 'Where should this component be placed?',
+        choices: ['components', 'routes'],
+        default: 'components',
+      },
+      {
+        when(answers) {
+          return answers.path === 'routes';
+        },
+        type: 'input',
+        name: 'routeFolder',
+        message: 'In which route: ',
+        suffix: '~/routes/($lang)/',
       },
       {
         type: 'input',
@@ -23,13 +32,66 @@ export default function (plop) {
         },
       },
     ],
-    actions: [
+    actions(answers) {
+      return [
+        {
+          type: 'addMany',
+          destination:
+            answers?.path === 'components' ?
+              'app/components'
+            : `app/routes/($lang)/${answers.routeFolder}`,
+          templateFiles: 'scaffold-templates/plop/component/**',
+          base: 'scaffold-templates/plop/component',
+        },
+      ];
+    },
+  });
+
+  plop.setGenerator('form', {
+    description: 'Create a new form',
+    prompts: [
       {
-        type: 'addMany',
-        destination: 'app/components',
-        templateFiles: 'scaffold-templates/plop/component/**',
-        base: 'scaffold-templates/plop/component',
+        type: 'input',
+        name: 'name',
+        message: 'What is the name of the form?',
+      },
+      {
+        type: 'list',
+        name: 'path',
+        message: 'Where should this form be placed?',
+        choices: ['components', 'routes'],
+        default: 'components',
+      },
+      {
+        when(answers) {
+          return answers.path === 'routes';
+        },
+        type: 'input',
+        name: 'routeFolder',
+        message: 'In which route: ',
+        suffix: '~/routes/($lang)/',
+      },
+      {
+        type: 'input',
+        name: 'storybookTitle',
+        message: 'What is the title of the Storybook story?',
+        default(answers) {
+          return answers.name;
+        },
       },
     ],
+    actions(answers) {
+      return [
+        {
+          type: 'addMany',
+          destination:
+            answers?.path === 'components' ?
+              'app/components'
+            : `app/routes/($lang)/${answers.routeFolder}`,
+          templateFiles: 'scaffold-templates/plop/form/**',
+          base: 'scaffold-templates/plop/form',
+        },
+      ];
+    },
   });
 }
