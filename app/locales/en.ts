@@ -1,3 +1,6 @@
+import { en } from '~/routes/($lang)/nieuws/_index/YearSelector.translations';
+export const { YearSelectorComponent } = en;
+
 export const common = {
   title: 'Hello World!',
   login: 'Login',

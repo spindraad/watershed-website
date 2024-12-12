@@ -2,6 +2,7 @@ import {
   SlAlert,
   SlIcon,
   SlButton,
+  SlButtonGroup,
   SlInput,
   SlCheckbox,
   SlTag,
@@ -15,6 +16,7 @@ type Components = {
   SlAlert: typeof nullComponent | typeof SlAlert;
   SlIcon: typeof nullComponent | typeof SlIcon;
   SlButton: typeof nullComponent | typeof SlButton;
+  SlButtonGroup: typeof nullComponent | typeof SlButtonGroup;
   SlInput: typeof nullComponent | typeof SlInput;
   SlCheckbox: typeof nullComponent | typeof SlCheckbox;
   SlTag: typeof nullComponent | typeof SlTag;
@@ -25,6 +27,7 @@ const nullComponents: Components = {
   SlAlert: nullComponent,
   SlIcon: nullComponent,
   SlButton: nullComponent,
+  SlButtonGroup: nullComponent,
   SlInput: nullComponent,
   SlCheckbox: nullComponent,
   SlTag: nullComponent,
@@ -52,6 +55,7 @@ export function useShoelace({ URL }: { URL: string }) {
             SlAlert: components.SlAlert,
             SlIcon: components.SlIcon,
             SlButton: components.SlButton,
+            SlButtonGroup: components.SlButtonGroup,
             SlInput: components.SlInput,
             SlCheckbox: components.SlCheckbox,
             SlTag: components.SlTag,

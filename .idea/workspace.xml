@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Improved the generation of files with plop">
-      <change afterPath="$PROJECT_DIR$/scaffold-templates/plop/form/{{ name }}.stories.tsx.hbs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scaffold-templates/plop/form/{{ name }}.tsx.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/routes/($lang)/nieuws/_index/YearSelector.translations.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plopfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/plopfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scaffold-templates/plop/component/{{ name }}.stories.tsx.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/scaffold-templates/plop/component/{{ name }}.stories.tsx.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/shoelace.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/shoelace.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/locales/en.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/en.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/locales/nl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/nl.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/locales/pap.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/pap.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -263,7 +264,7 @@
       <workItem from="1732134752814" duration="7960000" />
       <workItem from="1732444117390" duration="53353000" />
       <workItem from="1732611753576" duration="9478000" />
-      <workItem from="1733828413609" duration="45867000" />
+      <workItem from="1733828413609" duration="47584000" />
     </task>
     <task id="LOCAL-00001" summary="Set up project, added dev dependencies and configured them">
       <option name="closed" value="true" />
@@ -537,7 +538,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733995193694</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Improved the generation of files with plop">
+      <option name="closed" value="true" />
+      <created>1734003121204</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1734003121204</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
