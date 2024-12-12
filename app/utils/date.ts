@@ -5,3 +5,10 @@ export function convertDateToLocaleString(date: Date) {
     year: 'numeric',
   }).format(date);
 }
+
+export function convertTimeToLocaleString(date: Date) {
+  return Intl.DateTimeFormat('nl', {
+    hour: '2-digit',
+    minute: '2-digit',
+  }).format(date);
+}
