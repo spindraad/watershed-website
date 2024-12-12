@@ -1,5 +1,7 @@
-import { nl } from '~/routes/($lang)/nieuws/_index/YearSelector.translations';
-export const { YearSelectorComponent } = nl;
+import { nl as YearSelectorTranslations } from '~/routes/($lang)/nieuws/_index/YearSelector.translations';
+export const { YearSelectorComponent } = YearSelectorTranslations;
+import { nl as ProjectSummaryTranslations } from '~/routes/($lang)/nieuws/_index/ProjectSummary.translations';
+export const { ProjectSummary } = ProjectSummaryTranslations;
 
 export const common = {
   title: 'Hallo Wereld!',

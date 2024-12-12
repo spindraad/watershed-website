@@ -1,10 +1,18 @@
+import { useContext } from 'react';
+import { useTranslation } from 'react-i18next';
+import { ShoelaceContext } from '~/components/shoelace';
+
 type Props = {
 
 };
 
 export default function {{ name }}({  }: Props) {
+  const { t } = useTranslation('{{ name }}');
+  const {  } = useContext(ShoelaceContext);
+
   return (
     <>
+      <h3>{t('Title')}</h3>
     </>
   );
 }

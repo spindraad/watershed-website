@@ -65,6 +65,12 @@ const createProjects = (client: PrismaClient) => {
       nl: fakerNL.lorem.paragraphs(3),
       pap: fakerEO.lorem.paragraphs(3),
     },
+    summary: {
+      en: fakerEN.lorem.paragraph({ min: 1, max: 3 }),
+      nl: fakerNL.lorem.paragraph({ min: 1, max: 3 }),
+      pap: fakerEO.lorem.paragraph({ min: 1, max: 3 }),
+    },
+    slug: fakerEN.lorem.slug(),
     contentRelationId: null,
     createdAt: fakerEN.date.past(),
     updatedAt: fakerEN.date.recent(),

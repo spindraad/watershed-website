@@ -108,6 +108,11 @@ model Project {
   /// [Localised]
   description Json
 
+  /// [Localised]
+  summary Json
+
+  slug String
+
   contentRelation   ContentRelation? @relation(fields: [contentRelationId], references: [id])
   contentRelationId String?
 
