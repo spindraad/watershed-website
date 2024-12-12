@@ -6,6 +6,8 @@ import { nl as EventSummaryTranslations } from '~/routes/($lang)/nieuws/_index/E
 export const { EventSummary } = EventSummaryTranslations;
 import { nl as ArtistProfileSummaryTranslations } from '~/routes/($lang)/nieuws/_index/ArtistProfileSummary.translations';
 export const { ArtistProfileSummary } = ArtistProfileSummaryTranslations;
+import { nl as ArtistsSummaryTranslations } from '~/routes/($lang)/nieuws/_index/ArtistsSummary.translations';
+export const { ArtistsSummary } = ArtistsSummaryTranslations;
 
 export const common = {
   title: 'Hallo Wereld!',

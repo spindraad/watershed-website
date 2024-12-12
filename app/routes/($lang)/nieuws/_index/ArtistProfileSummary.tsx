@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { ShoelaceContext } from '~/components/shoelace';
 import { SupportedLanguages } from '~/config/i18n';
 
-type Props = {
+export type Props = {
   /**
    * The profile picture URl of the artist
    */
