@@ -1,0 +1,50 @@
+import { useContext } from 'react';
+import { Form } from '@remix-run/react';
+import { useTranslation } from 'react-i18next';
+import { ShoelaceContext } from '~/components/shoelace';
+import Input from '~/components/Input';
+import { ValidationResult, ValidationErrors } from '~/validations/flows/{{ validation }}';
+
+type Props = {
+  /**
+  * The action attribute of the form.
+  */
+  action: string;
+
+  /**
+  * The errors to display in the form.
+  */
+  errors?: ValidationErrors & {
+  userNotFound?: string;
+  };
+
+  /**
+  * The possible values of the form.
+  */
+  values?: ValidationResult;
+};
+
+export default function {{ name }}({ action, errors, values }: Props) {
+  const { t } = useTranslation('{{ name }}');
+  const { SlButton } = useContext(ShoelaceContext);
+
+  return (
+    <Form
+      noValidate
+      className="flex flex-col gap-4"
+      action={action}
+      method="POST"
+    >
+      <Input
+        autocomplete="name"
+        name="name"
+        type="name"
+        label={t('Name')}
+        value={values?.name ?? ''}
+        error={errors?.name
+        ?.map((error) => t(`Errors.name.${error.errorCode}`))
+        .join(', ')}
+      />
+    </Form>
+  );
+}

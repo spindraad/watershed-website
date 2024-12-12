@@ -1,0 +1,50 @@
+import { z, ZodIssueCode } from 'zod';
+
+const validator = z.object({
+
+});
+
+export type ValidationResult = z.infer<typeof validator>;
+export type ValidationErrors = z.inferFlattenedErrors<
+  typeof validator,
+  { errorCode: ZodIssueCode }
+>['fieldErrors'];
+
+interface {{ validation }}BaseResponse {
+  success: boolean;
+}
+
+interface {{ validation }}ErrorResponse extends LoginBaseResponse {
+  success: false;
+  errors: ValidationErrors;
+}
+
+interface {{ validation }}SuccessResponse extends LoginBaseResponse {
+  success: true;
+  data: ValidationResult;
+}
+
+type {{ validation }}Response = {{ validation }}ErrorResponse | {{ validation }}SuccessResponse;
+
+export async function validate{{ validation }}(request: Request) {
+  const clonedRequest = request.clone();
+  const formData = Object.fromEntries(await clonedRequest.formData());
+
+  const result = validator.safeParse(formData);
+
+  if (!result.success) {
+    const errors = result.error.flatten((issue) => ({
+      errorCode: issue.code,
+    })).fieldErrors;
+
+    return {
+      success: false,
+      errors,
+    };
+  }
+
+  return {
+    success: true,
+    data: result.data,
+  };
+}

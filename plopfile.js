@@ -64,6 +64,11 @@ export default function (plop) {
         message: 'What is the name of the form?',
       },
       {
+        type: 'input',
+        name: 'validation',
+        message: 'What is the name of the validation flow?',
+      },
+      {
         type: 'list',
         name: 'path',
         message: 'Where should this form be placed?',
@@ -96,8 +101,14 @@ export default function (plop) {
             answers?.path === 'components' ?
               'app/components'
             : `app/routes/($lang)/${answers.routeFolder}`,
-          templateFiles: 'scaffold-templates/plop/form/**',
-          base: 'scaffold-templates/plop/form',
+          templateFiles: 'scaffold-templates/plop/form/component/**',
+          base: 'scaffold-templates/plop/form/component',
+        },
+        {
+          type: 'addMany',
+          destination: 'app/validations/flows',
+          templateFiles: 'scaffold-templates/plop/form/validation/**',
+          base: 'scaffold-templates/plop/form/validation',
         },
       ];
     },
