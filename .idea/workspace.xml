@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Created ProjectSummary component">
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Created EventSummary component">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/locales/en.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/en.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/locales/nl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/nl.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/utils/date.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/date.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/utils/date.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/date.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/nieuws/_index/EventSummary.translations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/nieuws/_index/EventSummary.translations.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/nieuws/_index/EventSummary.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/nieuws/_index/EventSummary.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/nieuws/_index/ProjectSummary.translations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/nieuws/_index/ProjectSummary.translations.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/nieuws/_index/ProjectSummary.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/nieuws/_index/ProjectSummary.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -263,7 +265,7 @@
       <workItem from="1732134752814" duration="7960000" />
       <workItem from="1732444117390" duration="53353000" />
       <workItem from="1732611753576" duration="9478000" />
-      <workItem from="1733828413609" duration="50571000" />
+      <workItem from="1733828413609" duration="52034000" />
     </task>
     <task id="LOCAL-00001" summary="Set up project, added dev dependencies and configured them">
       <option name="closed" value="true" />
@@ -569,7 +571,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734007163114</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Created EventSummary component">
+      <option name="closed" value="true" />
+      <created>1734009085091</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1734009085091</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -612,7 +622,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Started incorporating login flow validation" />
     <MESSAGE value="A lot of improvements to the current state of the login form, with some (extracted) components" />
     <MESSAGE value="Added validations for checking the login flow with Zod, and appended UI to accommodate for errors. Updated Dutch and English locale as well" />
     <MESSAGE value="Adjusted GH Actions to also run tests" />
@@ -637,7 +646,8 @@
     <MESSAGE value="Created YearSelector component" />
     <MESSAGE value="Component translations are going to be colocated, so I adjusted the generator a bit." />
     <MESSAGE value="Created ProjectSummary component" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created ProjectSummary component" />
+    <MESSAGE value="Created EventSummary component" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created EventSummary component" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

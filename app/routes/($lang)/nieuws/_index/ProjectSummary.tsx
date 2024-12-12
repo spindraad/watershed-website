@@ -26,7 +26,7 @@ export default function ProjectSummary({ summary, slug }: Props) {
       <h3 className="text-2xl">{t('Title')}</h3>
       <p>{summary[locale]}</p>
       <SlButton href={`/projecten/${slug}`} size="small">
-        Meer
+        {t('LinkButton')}
       </SlButton>
     </div>
   );

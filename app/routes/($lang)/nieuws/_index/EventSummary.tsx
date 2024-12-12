@@ -54,7 +54,7 @@ export default function EventSummary({ summary, slug, date, address }: Props) {
       </ul>
 
       <SlButton href={`/evenementen/${slug}`} size="small">
-        Info & tickets
+        {t('LinkButton')}
       </SlButton>
     </div>
   );

@@ -4,6 +4,8 @@ import { en as ProjectSummaryTranslations } from '~/routes/($lang)/nieuws/_index
 export const { ProjectSummary } = ProjectSummaryTranslations;
 import { en as EventSummaryTranslations } from '~/routes/($lang)/nieuws/_index/EventSummary.translations';
 export const { EventSummary } = EventSummaryTranslations;
+import { en as ArtistProfileSummaryTranslations } from '~/routes/($lang)/nieuws/_index/ArtistProfileSummary.translations';
+export const { ArtistProfileSummary } = ArtistProfileSummaryTranslations;
 
 export const common = {
   title: 'Hello World!',

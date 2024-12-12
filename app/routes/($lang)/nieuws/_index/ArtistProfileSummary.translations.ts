@@ -1,20 +1,20 @@
 export const en = {
-  ProjectSummary: {
-    Title: 'About the project',
+  ArtistProfileSummary: {
+    Title: '',
     LinkButton: 'More',
   },
 };
 
 export const nl = {
-  ProjectSummary: {
-    Title: 'Over het project',
+  ArtistProfileSummary: {
+    Title: '',
     LinkButton: 'Meer',
   },
 };
 
 export const pap = {
-  ProjectSummary: {
-    Title: 'About the project',
+  ArtistProfileSummary: {
+    Title: '',
     LinkButton: 'More',
   },
 };
