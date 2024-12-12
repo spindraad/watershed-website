@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Improved the generation of files with plop">
-      <change afterPath="$PROJECT_DIR$/app/routes/($lang)/nieuws/_index/YearSelector.translations.ts" afterDir="false" />
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Created YearSelector component">
+      <change afterPath="$PROJECT_DIR$/scaffold-templates/plop/component/{{ name }}.translations.ts.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/shoelace.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/shoelace.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/locales/en.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/en.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/locales/nl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/nl.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/locales/pap.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/pap.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plopfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/plopfile.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -264,7 +261,7 @@
       <workItem from="1732134752814" duration="7960000" />
       <workItem from="1732444117390" duration="53353000" />
       <workItem from="1732611753576" duration="9478000" />
-      <workItem from="1733828413609" duration="47584000" />
+      <workItem from="1733828413609" duration="48058000" />
     </task>
     <task id="LOCAL-00001" summary="Set up project, added dev dependencies and configured them">
       <option name="closed" value="true" />
@@ -546,7 +543,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734003121204</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Created YearSelector component">
+      <option name="closed" value="true" />
+      <created>1734005507641</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1734005507642</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -589,7 +594,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Very quickly set up a global grid layout and a simple header" />
     <MESSAGE value="Started work on the Login Form Component" />
     <MESSAGE value="Finished login form" />
     <MESSAGE value="Started incorporating login flow validation" />
@@ -614,7 +618,8 @@
     <MESSAGE value="Small improvement to the breadcrumbs" />
     <MESSAGE value="Improvements to the news articles overview page and its related components" />
     <MESSAGE value="Improved the generation of files with plop" />
-    <option name="LAST_COMMIT_MESSAGE" value="Improved the generation of files with plop" />
+    <MESSAGE value="Created YearSelector component" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created YearSelector component" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -43,6 +43,14 @@ export default function (plop) {
           templateFiles: 'scaffold-templates/plop/component/**',
           base: 'scaffold-templates/plop/component',
         },
+        //         {
+        //           type: 'modify',
+        //           path: 'app/locales/en.ts',
+        //           pattern: `
+        // import { en } from '${answers.routeFolder}';
+        // export const { ${answers.name} } = en;
+        //           `,
+        //         },
       ];
     },
   });
