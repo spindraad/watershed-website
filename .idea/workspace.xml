@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Created a summary component for one or more artists">
-      <change afterPath="$PROJECT_DIR$/app/routes/($lang)/nieuws/_index/ArtistsSummary.stories.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routes/($lang)/nieuws/_index/ArtistsSummary.translations.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routes/($lang)/nieuws/_index/ArtistsSummary.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/locales/en.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/en.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/locales/nl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/nl.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/nieuws/_index/ArtistProfileSummary.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/nieuws/_index/ArtistProfileSummary.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -265,7 +261,7 @@
       <workItem from="1732134752814" duration="7960000" />
       <workItem from="1732444117390" duration="53353000" />
       <workItem from="1732611753576" duration="9478000" />
-      <workItem from="1733828413609" duration="53167000" />
+      <workItem from="1733828413609" duration="54437000" />
     </task>
     <task id="LOCAL-00001" summary="Set up project, added dev dependencies and configured them">
       <option name="closed" value="true" />
@@ -587,7 +583,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734011975897</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Created a summary component for one or more artists">
+      <option name="closed" value="true" />
+      <created>1734012989769</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1734012989769</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
