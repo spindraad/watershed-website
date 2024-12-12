@@ -8,7 +8,7 @@ export type Props = {
   /**
    * Article image URL
    */
-  imageUrl: string;
+  imageUrl?: string;
 
   /**
    * Image alt text
@@ -21,9 +21,9 @@ export type Props = {
   title: string;
 
   /**
-   * Short description of the article
+   * Short summary of the article
    */
-  description: string;
+  summary: string;
 
   /**
    * Published date
@@ -45,27 +45,30 @@ export default function ArticleCard({
   imageUrl,
   imageAlt,
   title,
-  description,
+  summary,
   date,
   slug,
   tags,
 }: Props) {
   const { SlCard } = useContext(ShoelaceContext);
   return (
-    <Link to={slug}>
-      <SlCard className="w-full h-full max-w-sm group">
-        <img
-          slot="image"
-          className="aspect-square w-full object-cover"
-          src={imageUrl}
-          alt={imageAlt}
-        />
+    <Link className="w-full h-full group auto-rows-fr" to={slug}>
+      <SlCard>
+        {imageUrl ?
+          <img
+            slot="image"
+            className="aspect-square w-full object-cover"
+            src={imageUrl}
+            alt={imageAlt}
+          />
+        : null}
+
         <div className="flex flex-col gap-4">
           <h2 className="text-xl text-black group-hover:text-secondary transition-colors">
             {title}
           </h2>
 
-          <p>{description}</p>
+          <p>{summary}</p>
 
           <Tags tags={tags} />
 

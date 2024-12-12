@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { User } from '~/models/user.server';
 import { ShoelaceContext } from '~/components/shoelace';
 import Logo from '~/components/Logo';
+import Anchor from '~/components/Anchor';
 
 type Props = {
   user?: User;
@@ -21,6 +22,10 @@ export default function Header({ user }: Props) {
           </a>
         </div>
         <div className="flex items-center">
+          <Anchor anchorType="nav" to="/nieuws">
+            Nieuws
+          </Anchor>
+
           {user ?
             <form method="POST" action="/uitloggen">
               <SlButton variant="text" type="submit" size="large">

@@ -80,7 +80,15 @@ model NewsArticle {
   /// [Localised]
   content Json
 
-  image String?
+  /// [Localised]
+  summary Json
+
+  slug String
+
+  imageUrl String
+
+  /// [Localised]
+  imageAlt Json
 
   externalLink String?
 

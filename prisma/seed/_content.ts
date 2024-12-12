@@ -24,9 +24,27 @@ const createNewsArticles = (alice: User, bob: User, client: PrismaClient) => {
       pap: fakerEO.lorem.paragraphs(3),
     },
 
-    image: fakerEN.image.url(),
+    summary: {
+      en: fakerEN.lorem.paragraph({ min: 1, max: 2 }),
+      nl: fakerNL.lorem.paragraph({ min: 1, max: 2 }),
+      pap: fakerEO.lorem.paragraph({ min: 1, max: 2 }),
+    },
+
+    imageUrl: fakerEN.image.urlPicsumPhotos({
+      width: 700,
+      height: 900,
+      blur: 0,
+    }),
+    imageAlt: {
+      en: fakerEN.lorem.sentence(),
+      nl: fakerNL.lorem.sentence(),
+      pap: fakerEO.lorem.sentence(),
+    },
+
+    slug: fakerEN.lorem.slug(),
+
     authorId: fakerEN.helpers.arrayElement([alice.id, bob.id]),
-    externalLink: fakerEN.helpers.arrayElement([fakerEN.internet.url(), '']),
+    externalLink: fakerEN.helpers.arrayElement([fakerEN.internet.url(), null]),
     contentRelationId: null,
 
     createdAt: fakerEN.date.past(),

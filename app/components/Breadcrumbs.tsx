@@ -23,7 +23,7 @@ export default function Breadcrumbs() {
     <nav className="flex space-x-2 text-sm">
       {parts.map((part, index) => (
         <>
-          <Anchor anchorType="nav" end key={index} to={part.href}>
+          <Anchor anchorType="nav" key={index} end to={part.href}>
             {part.title}
           </Anchor>
           {part.isLast ?

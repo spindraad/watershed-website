@@ -34,11 +34,24 @@ export const SingleArticle: Story = {
     imageUrl: faker.image.urlPicsumPhotos(),
     imageAlt: faker.lorem.sentence(),
     title: faker.lorem.sentence(),
-    description: faker.lorem.paragraph(),
+    summary: faker.lorem.paragraph(),
     slug: faker.lorem.slug(),
     date: convertDateToLocaleString(faker.date.past()),
     tags,
   },
+  decorators: [(Story) => <div className="w-96">{Story()}</div>],
+};
+
+export const SingleArticleWithoutImage: Story = {
+  args: {
+    imageAlt: faker.lorem.sentence(),
+    title: faker.lorem.sentence(),
+    summary: faker.lorem.paragraph({ min: 1, max: 2 }),
+    slug: faker.lorem.slug(),
+    date: convertDateToLocaleString(faker.date.past()),
+    tags,
+  },
+  decorators: [(Story) => <div className="w-96">{Story()}</div>],
 };
 
 export const MultipleArticles: Story = {
@@ -51,14 +64,14 @@ export const MultipleArticles: Story = {
       }),
       imageAlt: faker.lorem.sentence(),
       title: faker.lorem.sentence(),
-      description: faker.lorem.paragraph(),
+      summary: faker.lorem.paragraph({ min: 1, max: 2 }),
       slug: faker.lorem.slug(),
       date: convertDateToLocaleString(faker.date.past()),
       tags,
     }));
 
     return (
-      <div className="flex flex-row flex-wrap gap-4">
+      <div className="grid grid-cols-3 gap-4">
         {articles.map((article, index) => (
           <ArticleCard key={index} {...article} />
         ))}
