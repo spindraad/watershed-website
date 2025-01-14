@@ -1,4 +1,4 @@
-import { ComponentConfig } from '@measured/puck';
+import { type ComponentConfig } from '@measured/puck';
 import HeadingComponent, {
   Props as HeadingComponentProps,
 } from '~/components/Heading';

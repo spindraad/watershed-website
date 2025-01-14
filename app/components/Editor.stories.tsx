@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { fn } from '@storybook/test';
-import PuckEditor from './PuckEditor';
+import Editor from 'app/components/Editor';
 
 export default {
-  title: 'Components/Puck Editor',
-  component: PuckEditor,
+  title: 'Components/Editor',
+  component: Editor,
   parameters: {
     layout: 'fullscreen',
   },
@@ -15,9 +15,9 @@ export default {
       </div>
     ),
   ],
-} satisfies Meta<typeof PuckEditor>;
+} satisfies Meta<typeof Editor>;
 
-type Story = StoryObj<typeof PuckEditor>;
+type Story = StoryObj<typeof Editor>;
 
 export const Default: Story = {
   args: {
