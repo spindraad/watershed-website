@@ -1,3 +1,6 @@
+import { pap } from '~/routes/($lang)/nieuws/_index/YearSelector.translations';
+export const { YearSelectorComponent } = pap;
+
 export const common = {
   title: 'Kon ta, Mundu!',
 };

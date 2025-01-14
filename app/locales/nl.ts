@@ -1,3 +1,16 @@
+import { nl as YearSelectorTranslations } from '~/routes/($lang)/nieuws/_index/YearSelector.translations';
+export const { YearSelectorComponent } = YearSelectorTranslations;
+import { nl as ProjectSummaryTranslations } from '~/routes/($lang)/nieuws/_index/ProjectSummary.translations';
+export const { ProjectSummary } = ProjectSummaryTranslations;
+import { nl as EventSummaryTranslations } from '~/routes/($lang)/nieuws/_index/EventSummary.translations';
+export const { EventSummary } = EventSummaryTranslations;
+import { nl as ArtistProfileSummaryTranslations } from '~/routes/($lang)/nieuws/_index/ArtistProfileSummary.translations';
+export const { ArtistProfileSummary } = ArtistProfileSummaryTranslations;
+import { nl as ArtistsSummaryTranslations } from '~/routes/($lang)/nieuws/_index/ArtistsSummary.translations';
+export const { ArtistsSummary } = ArtistsSummaryTranslations;
+import { nl as ProductSummaryTranslations } from '~/routes/($lang)/nieuws/_index/ProductSummary.translations';
+export const { ProductSummary } = ProductSummaryTranslations;
+
 export const common = {
   title: 'Hallo Wereld!',
   login: 'Inloggen',
@@ -103,4 +116,8 @@ export const ResetPasswordConfirmationComponent = {
 export const ChangePasswordRoute = {
   Title: 'Wachtwoord wijzigen',
   Explanation: 'Voer een nieuw wachtwoord in voor je account',
+};
+
+export const NewsOverviewRoute = {
+  Title: 'Nieuws',
 };

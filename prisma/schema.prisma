@@ -13,12 +13,16 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+generator json {
+  provider = "prisma-json-types-generator"
+}
+
 enum PasswordType {
   ACTIVE
   RESET
 }
 
-model PasswordResets {
+model PasswordReset {
   id String @id @default(cuid())
 
   email     String
@@ -35,6 +39,9 @@ model Password {
 
   user   User   @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: Cascade)
   userId String @unique
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
 
 model User {
@@ -44,4 +51,123 @@ model User {
   name  String
 
   password Password?
+
+  articles NewsArticle[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model ContentRelation {
+  id String @id @default(cuid())
+
+  news     NewsArticle[]
+  projects Project[]
+  creators Creator[]
+  events   Event[]
+  tags     Tag[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model NewsArticle {
+  id String @id @default(cuid())
+
+  /// [Localised]
+  title Json
+
+  /// [Localised]
+  content Json
+
+  /// [Localised]
+  summary Json
+
+  slug String
+
+  imageUrl String
+
+  /// [Localised]
+  imageAlt Json
+
+  externalLink String?
+
+  contentRelation   ContentRelation? @relation(fields: [contentRelationId], references: [id])
+  contentRelationId String?
+
+  author   User   @relation(fields: [authorId], references: [id])
+  authorId String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Project {
+  id String @id @default(cuid())
+
+  /// [Localised]
+  description Json
+
+  /// [Localised]
+  summary Json
+
+  slug String
+
+  contentRelation   ContentRelation? @relation(fields: [contentRelationId], references: [id])
+  contentRelationId String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Creator {
+  id String @id @default(cuid())
+
+  name String
+
+  contentRelation   ContentRelation? @relation(fields: [contentRelationId], references: [id])
+  contentRelationId String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Event {
+  id String @id @default(cuid())
+
+  /// [Localised]
+  title Json
+
+  /// [Localised]
+  description Json
+
+  link String
+
+  eventDate DateTime
+
+  address String
+
+  contentRelation   ContentRelation? @relation(fields: [contentRelationId], references: [id])
+  contentRelationId String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Tag {
+  id String @id @default(cuid())
+
+  /// [Localised]
+  name Json
+
+  /// [Localised]
+  description Json
+
+  slug String
+
+  contentRelation   ContentRelation? @relation(fields: [contentRelationId], references: [id])
+  contentRelationId String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }

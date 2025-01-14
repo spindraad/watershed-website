@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Small improvements to make sure everything is up, running and build">
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Added the improvements of generated components also to the generated form components, including some other stuff that's handy for forms">
+      <change afterPath="$PROJECT_DIR$/test-setup.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vitest.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/utils/date.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/date.test.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,12 +36,8 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="feature/wsh-21-forgot-password" />
-                    <option name="lastUsedInstant" value="1732463293" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="feature/wsh-14-session-management" />
-                    <option name="lastUsedInstant" value="1732003846" />
+                    <option name="branchName" value="feature/wsh-43-nieuws" />
+                    <option name="lastUsedInstant" value="1732628545" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="dev" />
@@ -82,14 +81,14 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "Vitest.All Tests.executor": "Debug",
+    "Vitest.All Tests.executor": "Run",
     "Vitest.validateLogin.executor": "Run",
     "Vitest.validateLogin.should return success: false when emailaddress is invalid.executor": "Run",
     "Vitest.validateLogin.should return success: false when emailaddress is missing.executor": "Run",
-    "git-widget-placeholder": "feature/wsh-21-forgot-password",
+    "git-widget-placeholder": "feature/wsh-43-nieuws",
     "javascript.nodejs.core.library.configured.version": "22.11.0",
     "javascript.nodejs.core.library.typings.version": "22.9.0",
-    "last_opened_file_path": "/Users/lody/dev/projects/watershed-website",
+    "last_opened_file_path": "/Users/lody/dev/projects/watershed-website/scaffold-templates/plop/form",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -102,8 +101,8 @@
     "npm.dev:storybook.executor": "Debug",
     "npm.docker:start.executor": "Run",
     "prettierjs.PrettierConfiguration.Package": "/Users/lody/dev/projects/watershed-website/node_modules/prettier",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "ts.external.directory.path": "/Applications/PhpStorm.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
+    "settings.editor.selected.configurable": "editor.preferences.completion",
+    "ts.external.directory.path": "/Users/lody/dev/projects/watershed-website/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -117,12 +116,20 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/scaffold-templates/plop/form" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/scaffold-templates/plop/form/validation" />
+      <recent name="$PROJECT_DIR$/scaffold-templates/plop/form/component" />
+      <recent name="$PROJECT_DIR$/app/routes/($lang)/nieuws/_index" />
+      <recent name="$PROJECT_DIR$/prisma/seed" />
       <recent name="$PROJECT_DIR$/app/components" />
-      <recent name="$PROJECT_DIR$/app/routes/($lang)" />
-      <recent name="$PROJECT_DIR$/app/routes" />
-      <recent name="$PROJECT_DIR$/app/routes/($lang)/_index" />
-      <recent name="$PROJECT_DIR$/app/routes/($lang)/index" />
+    </key>
+    <key name="es6.move.members.recent.items">
+      <recent name="$PROJECT_DIR$/prisma/seed/_content.ts" />
+      <recent name="$PROJECT_DIR$/prisma/seed/_users.ts" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -228,8 +235,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-PS-243.21565.202" />
-        <option value="bundled-php-predefined-a98d8de5180a-5fbe0c30323e-com.jetbrains.php.sharedIndexes-PS-243.21565.202" />
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-PS-243.22562.233" />
+        <option value="bundled-php-predefined-a98d8de5180a-7980c7aaca61-com.jetbrains.php.sharedIndexes-PS-243.22562.233" />
       </set>
     </attachedChunks>
   </component>
@@ -255,6 +262,9 @@
       <workItem from="1732134752814" duration="7960000" />
       <workItem from="1732444117390" duration="53353000" />
       <workItem from="1732611753576" duration="9478000" />
+      <workItem from="1733828413609" duration="57658000" />
+      <workItem from="1734440025262" duration="3286000" />
+      <workItem from="1736849861289" duration="1295000" />
     </task>
     <task id="LOCAL-00001" summary="Set up project, added dev dependencies and configured them">
       <option name="closed" value="true" />
@@ -448,7 +458,159 @@
       <option name="project" value="LOCAL" />
       <updated>1732620836000</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Removed Remix assets, added Watershed favicon and logo and added it in the header">
+      <option name="closed" value="true" />
+      <created>1732629587264</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1732629587264</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Added new models and updated seed command to fill DB">
+      <option name="closed" value="true" />
+      <created>1733840082928</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1733840082928</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Improved the way the seeding command is run">
+      <option name="closed" value="true" />
+      <created>1733841302564</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1733841302564</updated>
+    </task>
+    <task id="LOCAL-00028" summary="DB is now seeded with localised values, where Papiamentu is replaced with Esperanto">
+      <option name="closed" value="true" />
+      <created>1733842036173</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1733842036173</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Created barebones news overview route">
+      <option name="closed" value="true" />
+      <created>1733852331622</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1733852331622</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Created breadcrumbs">
+      <option name="closed" value="true" />
+      <created>1733902968189</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1733902968189</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Turned off the linear update part of the build">
+      <option name="closed" value="true" />
+      <created>1733903002510</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1733903002510</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Created article preview card and tag components">
+      <option name="closed" value="true" />
+      <created>1733916839139</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1733916839139</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Small improvement to the breadcrumbs">
+      <option name="closed" value="true" />
+      <created>1733917024445</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1733917024445</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Improvements to the news articles overview page and its related components">
+      <option name="closed" value="true" />
+      <created>1733995193694</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1733995193694</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Improved the generation of files with plop">
+      <option name="closed" value="true" />
+      <created>1734003121204</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1734003121204</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Created YearSelector component">
+      <option name="closed" value="true" />
+      <created>1734005507641</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1734005507642</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Component translations are going to be colocated, so I adjusted the generator a bit.">
+      <option name="closed" value="true" />
+      <created>1734005995151</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1734005995151</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Created ProjectSummary component">
+      <option name="closed" value="true" />
+      <created>1734007163114</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1734007163114</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Created EventSummary component">
+      <option name="closed" value="true" />
+      <created>1734009085091</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1734009085091</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Create artist profile summary component and added missing translations for a few components">
+      <option name="closed" value="true" />
+      <created>1734011975897</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1734011975897</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Created a summary component for one or more artists">
+      <option name="closed" value="true" />
+      <created>1734012989769</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1734012989769</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Created a summary component for a product">
+      <option name="closed" value="true" />
+      <created>1734014880835</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1734014880835</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Added the improvements of generated components also to the generated form components, including some other stuff that's handy for forms">
+      <option name="closed" value="true" />
+      <created>1734019561066</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1734019561066</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -491,30 +653,32 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Set up project, added dev dependencies and configured them" />
-    <MESSAGE value="Reset .idea folder and settings" />
-    <MESSAGE value="Added a GitHub Actions workflow for pull requests" />
-    <MESSAGE value="Set up Prisma, launched a local db and configured DataGrip and PhpStorm with it." />
-    <MESSAGE value="Set up and configured Storybook" />
-    <MESSAGE value="Re-enabled the automatic PR close functionality with the spindraad-bot PAT" />
-    <MESSAGE value="Implemented cookie-based sessions for users" />
-    <MESSAGE value="Set up route structure for login page" />
-    <MESSAGE value="Slightly improved route folder organisation" />
-    <MESSAGE value="Very quickly set up a global grid layout and a simple header" />
-    <MESSAGE value="Started work on the Login Form Component" />
-    <MESSAGE value="Finished login form" />
-    <MESSAGE value="Started incorporating login flow validation" />
-    <MESSAGE value="A lot of improvements to the current state of the login form, with some (extracted) components" />
-    <MESSAGE value="Added validations for checking the login flow with Zod, and appended UI to accommodate for errors. Updated Dutch and English locale as well" />
-    <MESSAGE value="Adjusted GH Actions to also run tests" />
-    <MESSAGE value="For now run only vitest in CI builds" />
     <MESSAGE value="Changed url for the login and logout pages to Dutch" />
     <MESSAGE value="Created components for the forget password route" />
     <MESSAGE value="Implemented reset password flow" />
     <MESSAGE value="Finished password reset flow" />
     <MESSAGE value="Updated GH action file to run both unit and component tests" />
     <MESSAGE value="Small improvements to make sure everything is up, running and build" />
-    <option name="LAST_COMMIT_MESSAGE" value="Small improvements to make sure everything is up, running and build" />
+    <MESSAGE value="Removed Remix assets, added Watershed favicon and logo and added it in the header" />
+    <MESSAGE value="Added new models and updated seed command to fill DB" />
+    <MESSAGE value="Improved the way the seeding command is run" />
+    <MESSAGE value="DB is now seeded with localised values, where Papiamentu is replaced with Esperanto" />
+    <MESSAGE value="Created barebones news overview route" />
+    <MESSAGE value="Created breadcrumbs" />
+    <MESSAGE value="Turned off the linear update part of the build" />
+    <MESSAGE value="Created article preview card and tag components" />
+    <MESSAGE value="Small improvement to the breadcrumbs" />
+    <MESSAGE value="Improvements to the news articles overview page and its related components" />
+    <MESSAGE value="Improved the generation of files with plop" />
+    <MESSAGE value="Created YearSelector component" />
+    <MESSAGE value="Component translations are going to be colocated, so I adjusted the generator a bit." />
+    <MESSAGE value="Created ProjectSummary component" />
+    <MESSAGE value="Created EventSummary component" />
+    <MESSAGE value="Create artist profile summary component and added missing translations for a few components" />
+    <MESSAGE value="Created a summary component for one or more artists" />
+    <MESSAGE value="Created a summary component for a product" />
+    <MESSAGE value="Added the improvements of generated components also to the generated form components, including some other stuff that's handy for forms" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added the improvements of generated components also to the generated form components, including some other stuff that's handy for forms" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
