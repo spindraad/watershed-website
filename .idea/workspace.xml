@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Fixed the date test spec to use mocked timers, now the test should run the same everywhere.">
-      <change afterPath="$PROJECT_DIR$/app/components/RichEditor.stories.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/RichEditor.translations.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/RichEditor.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/config/blocks/RichTextBlock.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/postinstall.js" beforeDir="false" afterPath="$PROJECT_DIR$/postinstall.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/RichEditor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/RichEditor.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,11 +124,11 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/config/blocks" />
       <recent name="$PROJECT_DIR$/app/config" />
       <recent name="$PROJECT_DIR$/scaffold-templates/plop/form/validation" />
       <recent name="$PROJECT_DIR$/scaffold-templates/plop/form/component" />
       <recent name="$PROJECT_DIR$/app/routes/($lang)/nieuws/_index" />
-      <recent name="$PROJECT_DIR$/prisma/seed" />
     </key>
     <key name="es6.move.members.recent.items">
       <recent name="$PROJECT_DIR$/prisma/seed/_content.ts" />
