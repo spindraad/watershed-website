@@ -1,12 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import Renderer from './Renderer';
+import PageRenderer from 'app/components/PageRenderer';
 
 export default {
-  title: 'Components/Renderer',
-  component: Renderer,
-} satisfies Meta<typeof Renderer>;
+  title: 'Components/Page Renderer',
+  component: PageRenderer,
+} satisfies Meta<typeof PageRenderer>;
 
-type Story = StoryObj<typeof Renderer>;
+type Story = StoryObj<typeof PageRenderer>;
 
 export const Default: Story = {
   args: {

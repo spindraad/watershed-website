@@ -6,10 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Fixed the date test spec to use mocked timers, now the test should run the same everywhere.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/PuckEditor.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Editor.stories.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/PuckEditor.translations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Editor.translations.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/PuckEditor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Editor.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/blocks/Heading.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/blocks/Heading.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/Editor.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PageEditor.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/Editor.translations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PageEditor.translations.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/Editor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PageEditor.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/Renderer.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PageRenderer.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/Renderer.translations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PageRenderer.translations.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/Renderer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PageRenderer.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

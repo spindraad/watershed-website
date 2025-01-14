@@ -9,7 +9,7 @@ import { config } from '~/config/puck.config';
 
 type Props = Pick<ComponentProps<typeof Puck>, 'data' | 'onPublish'>;
 
-export default function Editor({ data, onPublish }: Props) {
+export default function PageEditor({ data, onPublish }: Props) {
   // const { t } = useTranslation('PuckEditor');
   // const {} = useContext(ShoelaceContext);
 

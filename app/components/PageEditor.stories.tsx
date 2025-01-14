@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { fn } from '@storybook/test';
-import Editor from 'app/components/Editor';
+import PageEditor from '~/components/PageEditor';
 
 export default {
-  title: 'Components/Editor',
-  component: Editor,
+  title: 'Components/Page Editor',
+  component: PageEditor,
   parameters: {
     layout: 'fullscreen',
   },
@@ -15,9 +15,9 @@ export default {
       </div>
     ),
   ],
-} satisfies Meta<typeof Editor>;
+} satisfies Meta<typeof PageEditor>;
 
-type Story = StoryObj<typeof Editor>;
+type Story = StoryObj<typeof PageEditor>;
 
 export const Default: Story = {
   args: {

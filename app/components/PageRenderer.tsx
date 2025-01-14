@@ -5,7 +5,7 @@ import { config } from '~/config/puck.config';
 
 type Props = Pick<ComponentProps<typeof Puck>, 'data'>;
 
-export default function Renderer({ data }: Props) {
+export default function PageRenderer({ data }: Props) {
   // const { t } = useTranslation('Renderer');
   // const {  } = useContext(ShoelaceContext);
 
