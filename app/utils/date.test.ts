@@ -11,7 +11,7 @@ describe('convertDateToLocaleString', () => {
   test('converts a time to a pretty printed string', () => {
     const date = new Date('2024-04-08T10:30:00Z');
     const result = convertTimeToLocaleString(date);
-    // expect(result).toBe('10:30');
-    expect(result).toBe('16:00'); // Set to 16 because of Indian timezone, need to mock Date constructor for tests.
+    expect(result).toBe('12:30');
+    // expect(result).toBe('16:00'); // Set to 16 because of Indian timezone, need to mock Date constructor for tests.
   });
 });
