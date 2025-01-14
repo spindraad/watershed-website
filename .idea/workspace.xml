@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Added the improvements of generated components also to the generated form components, including some other stuff that's handy for forms">
+      <change afterPath="$PROJECT_DIR$/test-setup.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vitest.config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/utils/date.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/date.test.ts" afterDir="false" />
     </list>
@@ -262,7 +264,7 @@
       <workItem from="1732611753576" duration="9478000" />
       <workItem from="1733828413609" duration="57658000" />
       <workItem from="1734440025262" duration="3286000" />
-      <workItem from="1736849861289" duration="424000" />
+      <workItem from="1736849861289" duration="1295000" />
     </task>
     <task id="LOCAL-00001" summary="Set up project, added dev dependencies and configured them">
       <option name="closed" value="true" />
