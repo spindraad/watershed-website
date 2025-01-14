@@ -1,4 +1,4 @@
-type Props = {
+export type Props = {
   /**
    * The level of the heading.
    */
