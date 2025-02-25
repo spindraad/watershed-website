@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Fixed the date test spec to use mocked timers, now the test should run the same everywhere.">
-      <change afterPath="$PROJECT_DIR$/app/hooks/useSelectedPuckBlock.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Integrated the TinyMCE with Puck">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/Heading.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Heading.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/PageEditor.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PageEditor.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/RichEditor.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/RichEditor.stories.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/components/RichEditor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/RichEditor.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/blocks/Heading.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/blocks/Heading.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/config/blocks/RichTextBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/blocks/RichTextBlock.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/puck.config.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/puck.config.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/root.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/root.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -275,7 +275,7 @@
       <workItem from="1737636099799" duration="1397000" />
       <workItem from="1738578376616" duration="3780000" />
       <workItem from="1739446662793" duration="2214000" />
-      <workItem from="1740483962203" duration="2246000" />
+      <workItem from="1740483962203" duration="5192000" />
     </task>
     <task id="LOCAL-00001" summary="Set up project, added dev dependencies and configured them">
       <option name="closed" value="true" />
@@ -621,7 +621,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734019561066</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Integrated the TinyMCE with Puck">
+      <option name="closed" value="true" />
+      <created>1740486346938</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1740486346938</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -664,7 +672,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Changed url for the login and logout pages to Dutch" />
     <MESSAGE value="Created components for the forget password route" />
     <MESSAGE value="Implemented reset password flow" />
     <MESSAGE value="Finished password reset flow" />
@@ -689,7 +696,8 @@
     <MESSAGE value="Created a summary component for one or more artists" />
     <MESSAGE value="Created a summary component for a product" />
     <MESSAGE value="Added the improvements of generated components also to the generated form components, including some other stuff that's handy for forms" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added the improvements of generated components also to the generated form components, including some other stuff that's handy for forms" />
+    <MESSAGE value="Integrated the TinyMCE with Puck" />
+    <option name="LAST_COMMIT_MESSAGE" value="Integrated the TinyMCE with Puck" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

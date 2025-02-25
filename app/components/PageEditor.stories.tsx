@@ -22,8 +22,34 @@ type Story = StoryObj<typeof PageEditor>;
 export const Default: Story = {
   args: {
     data: {
-      content: [],
-      root: {},
+      root: { props: { title: '' } },
+      content: [
+        {
+          type: 'Heading',
+          props: {
+            id: 'Heading-1694032984497',
+            text: 'Welkom bij Watershed',
+            align: 'center',
+            level: 1,
+          },
+        },
+        {
+          type: 'RichTextBlock',
+          props: {
+            id: 'RichText-c8a0073a-9d67-4b30-8f31-281a76dedaa3',
+            content:
+              '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>',
+          },
+        },
+        {
+          type: 'RichTextBlock',
+          props: {
+            id: 'RichText-aa123bb456cc67788',
+            content:
+              '<p>Curabitur sit amet nunc nec nunc tincidunt fermentum.</p>',
+          },
+        },
+      ],
     },
     onPublish: fn(),
   },

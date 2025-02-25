@@ -8,6 +8,26 @@ export default {
 
 type Story = StoryObj<typeof RichEditor>;
 
+const css = `
+#editor-editor-id {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+`;
+
 export const Default: Story = {
-  args: {},
+  args: {
+    id: 'editor-id',
+  },
+  decorators: [
+    (Story) => (
+      <>
+        <style>{css}</style>
+        <div className="p-4">
+          <p>Write what you want:</p>
+          <Story />
+        </div>
+      </>
+    ),
+  ],
 };
