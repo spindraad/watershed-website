@@ -1,37 +1,41 @@
 import { Editor } from '@tinymce/tinymce-react';
-// import { useTranslation } from 'react-i18next';
-// import { ShoelaceContext } from '~/components/shoelace';
+import { useSelectedPuckBlock } from '~/hooks/useSelectedPuckBlock';
 
 type Props = {
+  /**
+   * The id of the editor.
+   */
+  id: string;
+
   /**
    * The initial content of the editor.
    */
   initialValue?: string;
-
-  /**
-   * Whether the editor is allows its content to be edited.
-   */
-  isEditable?: boolean;
 };
 
-export default function RichEditor({
-  initialValue = '<p>This is the initial content of the editor.</p>',
-  isEditable,
-}: Props) {
-  // const { t } = useTranslation('RichEditor');
-  // const {  } = useContext(ShoelaceContext);
+export default function RichEditor({ id, initialValue }: Props) {
+  const { onChange } = useSelectedPuckBlock(id);
 
   return (
     <div className="pointer-events-auto">
       <Editor
+        id={id}
         tinymceScriptSrc="/tinymce/tinymce.min.js"
         licenseKey="gpl"
         initialValue={initialValue}
+        inline={true}
+        onEditorChange={(content) => {
+          console.log('RichEditor onEditorChange', content);
+          if (onChange) {
+            onChange({ content });
+          } else {
+            console.warn('RichEditor missing onChange');
+          }
+        }}
         init={{
           height: 500,
+          width: '100%',
           menubar: false,
-          inline: isEditable, // Set to true for inline editing
-          disabled: !isEditable,
           plugins: [
             'advlist',
             'autolink',
@@ -62,4 +66,8 @@ export default function RichEditor({
       />
     </div>
   );
+}
+
+export function Renderer({ content }: { content: string }) {
+  return <div dangerouslySetInnerHTML={{ __html: content }} />;
 }

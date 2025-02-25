@@ -1,18 +1,22 @@
 import { ComponentConfig } from '@measured/puck';
-import RichEditor from '~/components/RichEditor';
+import RichEditor, { Renderer } from '~/components/RichEditor';
 
 export type RichTextBlockProps = {
-  state: any;
+  content: string;
 };
 
 export const RichTextBlock: ComponentConfig<RichTextBlockProps> = {
   fields: {
-    state: {
+    content: {
       type: 'custom',
       render: () => <></>,
     },
   },
-  render({ puck, ...props }) {
-    return <RichEditor isEditable={puck.isEditing} {...props} />;
+  render({ content, id, puck }) {
+    if (puck.isEditing) {
+      return <RichEditor id={id} initialValue={content} />;
+    }
+
+    return <Renderer content={content} />;
   },
 };
