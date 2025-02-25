@@ -1,23 +1,26 @@
 import type { Config } from '@measured/puck';
-import { Heading, Props as HeadingProps } from './blocks/Heading';
+import {
+  HeadingBlock,
+  Props as HeadingBlockProps,
+} from 'app/config/blocks/HeadingBlock';
 import {
   RichTextBlock,
   RichTextBlockProps,
 } from '~/config/blocks/RichTextBlock';
 
 type Props = {
-  Heading: HeadingProps;
+  HeadingBlock: HeadingBlockProps;
   RichTextBlock: RichTextBlockProps;
 };
 
 export const config: Config<Props> = {
   categories: {
     typography: {
-      components: ['Heading'],
+      components: ['HeadingBlock'],
     },
   },
   components: {
-    Heading,
+    HeadingBlock,
     RichTextBlock,
   },
 };

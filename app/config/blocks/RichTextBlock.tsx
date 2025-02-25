@@ -1,5 +1,5 @@
 import { ComponentConfig } from '@measured/puck';
-import RichEditor, { Renderer } from '~/components/RichEditor';
+import RichTextEditor from '~/components/RichTextEditor';
 import { useSelectedPuckBlock } from '~/hooks/useSelectedPuckBlock';
 
 export type RichTextBlockProps = {
@@ -7,6 +7,7 @@ export type RichTextBlockProps = {
 };
 
 export const RichTextBlock: ComponentConfig<RichTextBlockProps> = {
+  label: 'Rich text field',
   fields: {
     content: {
       type: 'custom',
@@ -15,14 +16,14 @@ export const RichTextBlock: ComponentConfig<RichTextBlockProps> = {
   },
   render({ content, id, puck }) {
     if (puck.isEditing) {
-      return <RichTextEditor id={id} initialValue={content} />;
+      return <RichTextEditorWrapper id={id} initialValue={content} />;
     }
 
-    return <Renderer content={content} />;
+    return <RichTextRenderer content={content} />;
   },
 };
 
-function RichTextEditor({
+function RichTextEditorWrapper({
   id,
   initialValue,
 }: {
@@ -32,16 +33,23 @@ function RichTextEditor({
   const { onChange } = useSelectedPuckBlock(id);
 
   return (
-    <RichEditor
-      id={id}
-      initialValue={initialValue}
-      onChange={(content) => {
-        if (onChange) {
-          onChange({ content });
-        } else {
-          console.warn('RichTextEditor missing onChange');
-        }
-      }}
-    />
+    <div className="puck-rich-text-editor-wrapper">
+      <RichTextEditor
+        id={id}
+        initialValue={initialValue}
+        inline={true}
+        onChange={(content) => {
+          if (onChange) {
+            onChange({ content });
+          } else {
+            console.warn('RichTextEditor missing onChange');
+          }
+        }}
+      />
+    </div>
   );
+}
+
+function RichTextRenderer({ content }: { content: string }) {
+  return <div dangerouslySetInnerHTML={{ __html: content }} />;
 }

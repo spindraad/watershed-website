@@ -43,7 +43,7 @@
     "generate": "plop component --"
   },
   "dependencies": {
-    "@measured/puck": "^0.17.3",
+    "@measured/puck": "^0.18.2",
     "@prisma/client": "^5.21.0",
     "@remix-run/node": "^2.13.1",
     "@remix-run/react": "^2.13.1",

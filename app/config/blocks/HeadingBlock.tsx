@@ -20,7 +20,8 @@ const levelOptions = [
   { label: '6', value: 6 },
 ];
 
-export const Heading: ComponentConfig<Props> = {
+export const HeadingBlock: ComponentConfig<Props> = {
+  label: 'Heading',
   fields: {
     text: {
       type: 'textarea',
@@ -44,7 +45,6 @@ export const Heading: ComponentConfig<Props> = {
     level: 2,
   },
   render({ text = '', level = 2 }) {
-    console.log('Heading render', level);
     return <HeadingComponent level={level}>{text}</HeadingComponent>;
   },
 };

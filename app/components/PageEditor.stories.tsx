@@ -25,7 +25,7 @@ export const Default: Story = {
       root: { props: { title: '' } },
       content: [
         {
-          type: 'Heading',
+          type: 'HeadingBlock',
           props: {
             id: 'Heading-1694032984497',
             text: 'Welkom bij Watershed',

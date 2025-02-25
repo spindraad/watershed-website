@@ -1,12 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import RichEditor from './RichEditor';
+import RichTextEditor from 'app/components/RichTextEditor';
 
 export default {
   title: 'Components/Rich Text Editor',
-  component: RichEditor,
-} satisfies Meta<typeof RichEditor>;
+  component: RichTextEditor,
+} satisfies Meta<typeof RichTextEditor>;
 
-type Story = StoryObj<typeof RichEditor>;
+type Story = StoryObj<typeof RichTextEditor>;
 
 const css = `
 #editor-editor-id {

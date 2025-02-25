@@ -15,17 +15,27 @@ type Props = {
    * The onChange handler.
    */
   onChange: (content: string) => void;
+
+  /**
+   * Whether the editor is inline or not.
+   */
+  inline?: boolean;
 };
 
-export default function RichEditor({ id, initialValue, onChange }: Props) {
+export default function RichTextEditor({
+  id,
+  initialValue,
+  onChange,
+  inline,
+}: Props) {
   return (
-    <div id={`editor-${id}`} className="pointer-events-auto">
+    <div id={`editor-${id}`}>
       <Editor
         id={id}
         tinymceScriptSrc="/tinymce/tinymce.min.js"
         licenseKey="gpl"
         initialValue={initialValue}
-        inline={true}
+        inline={inline}
         disabled={false}
         onEditorChange={(content) => {
           onChange(content);
@@ -64,8 +74,4 @@ export default function RichEditor({ id, initialValue, onChange }: Props) {
       />
     </div>
   );
-}
-
-export function Renderer({ content }: { content: string }) {
-  return <div dangerouslySetInnerHTML={{ __html: content }} />;
 }
