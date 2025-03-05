@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { fn } from '@storybook/test';
 import PageEditor from '~/components/PageEditor';
+import Header from '~/components/Header';
 
 export default {
   title: 'Components/Page Editor',
@@ -10,7 +11,8 @@ export default {
   },
   decorators: [
     (Story) => (
-      <div className="h-screen">
+      <div className="h-screen bg-primary text-black font-sans flex flex-col gap-4">
+        <Header />
         <Story />
       </div>
     ),
