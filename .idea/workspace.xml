@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Added Button Block as Puck component">
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Changed page editor layout to feel more like an actual page">
+      <change afterPath="$PROJECT_DIR$/app/config/blocks/GridBlock.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/PageEditor.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PageEditor.stories.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/PageEditor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PageEditor.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/shoelace.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/shoelace.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/tailwind.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/tailwind.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/puck.config.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/puck.config.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +107,7 @@
     &quot;npm.dev:storybook.executor&quot;: &quot;Debug&quot;,
     &quot;npm.docker:start.executor&quot;: &quot;Run&quot;,
     &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/lody/dev/projects/watershed-website/node_modules/prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.typescriptcompiler&quot;,
     &quot;ts.external.directory.path&quot;: &quot;/Users/lody/dev/projects/watershed-website/node_modules/typescript/lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
@@ -280,7 +278,8 @@
       <workItem from="1740483962203" duration="14102000" />
       <workItem from="1741163950063" duration="327000" />
       <workItem from="1741164297235" duration="2243000" />
-      <workItem from="1741167991516" duration="8759000" />
+      <workItem from="1741167991516" duration="9123000" />
+      <workItem from="1741177491521" duration="834000" />
     </task>
     <task id="LOCAL-00001" summary="Set up project, added dev dependencies and configured them">
       <option name="closed" value="true" />
@@ -658,7 +657,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741173291495</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="Changed page editor layout to feel more like an actual page">
+      <option name="closed" value="true" />
+      <created>1741177410193</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1741177410193</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -701,7 +708,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Updated GH action file to run both unit and component tests" />
     <MESSAGE value="Small improvements to make sure everything is up, running and build" />
     <MESSAGE value="Removed Remix assets, added Watershed favicon and logo and added it in the header" />
     <MESSAGE value="Added new models and updated seed command to fill DB" />
@@ -726,7 +732,8 @@
     <MESSAGE value="Refactor Heading component and enhance RichEditor integration" />
     <MESSAGE value="Refactored Puck block components in terms of name and label, updated Puck and added a class that allows us to use TinyMCE in Puck overriding the default pointer events setting" />
     <MESSAGE value="Added Button Block as Puck component" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Button Block as Puck component" />
+    <MESSAGE value="Changed page editor layout to feel more like an actual page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed page editor layout to feel more like an actual page" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
