@@ -49,6 +49,13 @@ export const Default: Story = {
               '<p>Curabitur sit amet nunc nec nunc tincidunt fermentum.</p>',
           },
         },
+        {
+          type: 'ButtonBlock',
+          props: {
+            id: 'Button-1234567890',
+            primary: 'primary',
+          },
+        },
       ],
     },
     onPublish: fn(),

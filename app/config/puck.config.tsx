@@ -7,10 +7,12 @@ import {
   RichTextBlock,
   RichTextBlockProps,
 } from '~/config/blocks/RichTextBlock';
+import { ButtonBlock, ButtonBlockProps } from '~/config/blocks/ButtonBlock';
 
 type Props = {
   HeadingBlock: HeadingBlockProps;
   RichTextBlock: RichTextBlockProps;
+  ButtonBlock: ButtonBlockProps;
 };
 
 export const config: Config<Props> = {
@@ -22,6 +24,7 @@ export const config: Config<Props> = {
   components: {
     HeadingBlock,
     RichTextBlock,
+    ButtonBlock,
   },
 };
 
