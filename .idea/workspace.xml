@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="CI/CD improvements: Node version is now specified in an .nvmrc file for re-use. Added caching and a deploy job for the new clusters (only dev is enabled now).">
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Since the version number is playing a bigger role, we're moving to a beta version now.">
+      <change afterPath="$PROJECT_DIR$/.helmignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ingress.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ingress.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -305,15 +309,7 @@
       <workItem from="1741164297235" duration="2243000" />
       <workItem from="1741167991516" duration="9123000" />
       <workItem from="1741177491521" duration="5426000" />
-      <workItem from="1741335542037" duration="13620000" />
-    </task>
-    <task id="LOCAL-00004" summary="Set up Prisma, launched a local db and configured DataGrip and PhpStorm with it.">
-      <option name="closed" value="true" />
-      <created>1729078765387</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1729078765387</updated>
+      <workItem from="1741335542037" duration="19896000" />
     </task>
     <task id="LOCAL-00005" summary="Set up and configured Storybook">
       <option name="closed" value="true" />
@@ -699,7 +695,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741358118011</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="Since the version number is playing a bigger role, we're moving to a beta version now.">
+      <option name="closed" value="true" />
+      <created>1741358286575</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1741358286575</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -742,7 +746,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="DB is now seeded with localised values, where Papiamentu is replaced with Esperanto" />
     <MESSAGE value="Created barebones news overview route" />
     <MESSAGE value="Created breadcrumbs" />
     <MESSAGE value="Turned off the linear update part of the build" />
@@ -767,7 +770,8 @@
     <MESSAGE value="Added footer to the editor for the Puck fields, and improved the button block" />
     <MESSAGE value="Created Helm templates in order to deploy this application on the k8s clusters" />
     <MESSAGE value="CI/CD improvements: Node version is now specified in an .nvmrc file for re-use. Added caching and a deploy job for the new clusters (only dev is enabled now)." />
-    <option name="LAST_COMMIT_MESSAGE" value="CI/CD improvements: Node version is now specified in an .nvmrc file for re-use. Added caching and a deploy job for the new clusters (only dev is enabled now)." />
+    <MESSAGE value="Since the version number is playing a bigger role, we're moving to a beta version now." />
+    <option name="LAST_COMMIT_MESSAGE" value="Since the version number is playing a bigger role, we're moving to a beta version now." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

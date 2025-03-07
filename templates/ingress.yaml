@@ -22,9 +22,9 @@ metadata:
     managed-by: helm
   annotations:
     {{- if eq .Values.environment "production" }}
-      external-dns.alpha.kubernetes.io/hostname: {{ .Values.app.domains.production }}
+    external-dns.alpha.kubernetes.io/hostname: {{ .Values.app.domains.production }}
     {{- else if eq .Values.environment "development" }}
-      external-dns.alpha.kubernetes.io/hostname: {{ .Values.app.domains.development }}
+    external-dns.alpha.kubernetes.io/hostname: {{ .Values.app.domains.development }}
     {{- end }}
     traefik.ingress.kubernetes.io/router.entrypoints: websecure
     traefik.ingress.kubernetes.io/router.tls: "true"
