@@ -4,10 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Added GridBlock to Puck">
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Created Helm templates in order to deploy this application on the k8s clusters">
+      <change afterPath="$PROJECT_DIR$/Chart.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/routes/healthz.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/routes/ready.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/deployment.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/ingress.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/secrets.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/service.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/values.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/PageEditor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PageEditor.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/blocks/ButtonBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/blocks/ButtonBlock.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.prettierignore" beforeDir="false" afterPath="$PROJECT_DIR$/.prettierignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,16 +42,16 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="features/WAT-11_setup-and-configure-puck-editor" />
-                    <option name="lastUsedInstant" value="1736852384" />
+                    <option name="branchName" value="feature/WAT-19_implement_kubernetes_cluster_deployment" />
+                    <option name="lastUsedInstant" value="1741337523" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="dev" />
+                    <option name="lastUsedInstant" value="1741337163" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="feature/wsh-43-nieuws" />
                     <option name="lastUsedInstant" value="1732628545" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="dev" />
-                    <option name="lastUsedInstant" value="1729172594" />
                   </RecentBranch>
                 </list>
               </option>
@@ -66,8 +73,34 @@
   </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
+  &quot;configuredContexts&quot;: [
+    {
+      &quot;name&quot;: &quot;do-ams3-spindraad-dev-cluster&quot;,
+      &quot;kubeConfigUrl&quot;: &quot;file:///Users/lody/.kube/config&quot;,
+      &quot;currentNamespace&quot;: &quot;Kubernetes.All.Namespaces.Label&quot;
+    },
+    {
+      &quot;name&quot;: &quot;do-ams3-spindraad-app-cluster&quot;,
+      &quot;kubeConfigUrl&quot;: &quot;file:///Users/lody/.kube/config&quot;,
+      &quot;currentNamespace&quot;: &quot;Kubernetes.All.Namespaces.Label&quot;
+    }
+  ],
   &quot;isMigrated&quot;: true
 }</component>
+  <component name="KubernetesSettings">
+    <option name="apiVersion" value="1.30" />
+    <option name="contextConfigFilePath" value="file://$USER_HOME$/.kube/config" />
+    <option name="contextName" value="do-ams3-spindraad-dev-cluster" />
+    <option name="getSpecFromCluster" value="true" />
+    <option name="helmParameters">
+      <HelmParameters>
+        <option name="chartPath" value="$PROJECT_DIR$" />
+        <option name="valuesFiles">
+          <option value="values.yaml" />
+        </option>
+      </HelmParameters>
+    </option>
+  </component>
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
@@ -91,7 +124,7 @@
     &quot;Vitest.validateLogin.executor&quot;: &quot;Run&quot;,
     &quot;Vitest.validateLogin.should return success: false when emailaddress is invalid.executor&quot;: &quot;Run&quot;,
     &quot;Vitest.validateLogin.should return success: false when emailaddress is missing.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;features/WAT-11__setup-and-configure-puck-editor&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/WAT-19__implement__kubernetes__cluster__deployment&quot;,
     &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;22.11.0&quot;,
     &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;22.9.0&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/lody/dev/projects/watershed-website/scaffold-templates/plop/form&quot;,
@@ -107,7 +140,7 @@
     &quot;npm.dev:storybook.executor&quot;: &quot;Debug&quot;,
     &quot;npm.docker:start.executor&quot;: &quot;Run&quot;,
     &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/lody/dev/projects/watershed-website/node_modules/prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.typescriptcompiler&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.intellij.kubernetes.config.KubernetesConfigurable&quot;,
     &quot;ts.external.directory.path&quot;: &quot;/Users/lody/dev/projects/watershed-website/node_modules/typescript/lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
@@ -116,6 +149,7 @@
       &quot;postgresql&quot;
     ],
     &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;Markdown&quot;,
       &quot;TEXT&quot;,
       &quot;XML&quot;
     ]
@@ -280,14 +314,7 @@
       <workItem from="1741164297235" duration="2243000" />
       <workItem from="1741167991516" duration="9123000" />
       <workItem from="1741177491521" duration="5426000" />
-    </task>
-    <task id="LOCAL-00001" summary="Set up project, added dev dependencies and configured them">
-      <option name="closed" value="true" />
-      <created>1729071133336</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1729071133336</updated>
+      <workItem from="1741335542037" duration="9443000" />
     </task>
     <task id="LOCAL-00002" summary="Reset .idea folder and settings">
       <option name="closed" value="true" />
@@ -673,7 +700,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741178388146</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Added footer to the editor for the Puck fields, and improved the button block">
+      <option name="closed" value="true" />
+      <created>1741335596534</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1741335596534</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -716,8 +751,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Removed Remix assets, added Watershed favicon and logo and added it in the header" />
-    <MESSAGE value="Added new models and updated seed command to fill DB" />
     <MESSAGE value="Improved the way the seeding command is run" />
     <MESSAGE value="DB is now seeded with localised values, where Papiamentu is replaced with Esperanto" />
     <MESSAGE value="Created barebones news overview route" />
@@ -741,7 +774,9 @@
     <MESSAGE value="Added Button Block as Puck component" />
     <MESSAGE value="Changed page editor layout to feel more like an actual page" />
     <MESSAGE value="Added GridBlock to Puck" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added GridBlock to Puck" />
+    <MESSAGE value="Added footer to the editor for the Puck fields, and improved the button block" />
+    <MESSAGE value="Created Helm templates in order to deploy this application on the k8s clusters" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created Helm templates in order to deploy this application on the k8s clusters" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

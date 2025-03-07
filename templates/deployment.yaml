@@ -1,0 +1,55 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.app.name }}
+  namespace: {{ .Values.app.namespace }}
+  labels:
+    app: {{ .Values.app.name }}
+    environment: {{ .Values.environment }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ .Values.app.name }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.app.name }}
+        environment: {{ .Values.environment }}
+    spec:
+      nodeSelector:
+        app-node: "true"
+      containers:
+        - name: {{ .Values.app.name }}
+          image: {{ .Values.app.image.repository }}:{{ .Values.app.image.tag }}
+          ports:
+            - containerPort: {{ .Values.service.targetPort }}
+          env:
+            - name: SENDGRID_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.app.name }}-secrets
+                  key: SENDGRID_API_KEY
+          resources:
+            requests:
+              cpu: {{ .Values.resources.requests.cpu | default "100m" }}
+              memory: {{ .Values.resources.requests.memory | default "128Mi" }}
+            limits:
+              cpu: {{ .Values.resources.limits.cpu | default "500m" }}
+              memory: {{ .Values.resources.limits.memory | default "512Mi" }}
+          livenessProbe:
+            httpGet:
+              path: /healthz        # Endpoint to check
+              port: {{ .Values.service.targetPort }}            # Port number of the app
+            initialDelaySeconds: 10 # Time to wait before starting the probe
+            periodSeconds: 10       # Interval between probes
+            timeoutSeconds: 1       # Probe timeout
+            failureThreshold: 3     # Restart after 3 failed probes
+          readinessProbe:
+            httpGet:
+              path: /ready          # Endpoint that indicates readiness
+              port: {{ .Values.service.targetPort }}
+            initialDelaySeconds: 5
+            periodSeconds: 5
+            timeoutSeconds: 1
+            failureThreshold: 3

@@ -1,0 +1,108 @@
+apiVersion: traefik.io/v1alpha1
+kind: Middleware
+metadata:
+  name: {{ .Values.app.name }}-https-redirect
+  namespace: {{ .Values.app.namespace }}
+  labels:
+    app: {{ .Values.app.name }}
+    managed-by: helm
+spec:
+  redirectScheme:
+    scheme: https
+    permanent: true
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: {{ .Values.app.name }}-dns-ingress
+  namespace: {{ .Values.app.namespace }}
+  labels:
+    app: {{ .Values.app.name }}
+    environment: {{ .Values.environment }}
+    managed-by: helm
+  annotations:
+    {{- if eq .Values.environment "production" }}
+      external-dns.alpha.kubernetes.io/hostname: {{ .Values.app.domains.production }}
+    {{- else if eq .Values.environment "development" }}
+      external-dns.alpha.kubernetes.io/hostname: {{ .Values.app.domains.development }}
+    {{- end }}
+    traefik.ingress.kubernetes.io/router.entrypoints: websecure
+    traefik.ingress.kubernetes.io/router.tls: "true"
+    traefik.ingress.kubernetes.io/router.middlewares: {{ .Values.app.namespace }}-{{ .Values.app.name }}-https-redirect@kubernetescrd
+    cert-manager.io/cluster-issuer: letsencrypt-dns-issuer
+spec:
+  rules:
+    {{- if eq .Values.environment "production" }}
+    - host: {{ .Values.app.domains.production }}
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: {{ .Values.service.name }}
+                port:
+                  number: {{ .Values.service.port }}
+    {{- else if eq .Values.environment "development" }}
+    - host: {{ .Values.app.domains.development }}
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: {{ .Values.service.name }}
+                port:
+                  number: {{ .Values.service.port }}
+    {{- end }}
+  tls:
+    {{- if eq .Values.environment "production" }}
+    - secretName: {{ .Values.app.domains.production }}-cert
+      hosts:
+        - {{ .Values.app.domains.production }}
+    {{- else if eq .Values.environment "development" }}
+    - secretName: {{ .Values.app.domains.development }}-cert
+      hosts:
+        - {{ .Values.app.domains.development }}
+    {{- end }}
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: {{ .Values.app.name }}-http-ingress
+  namespace: {{ .Values.app.namespace }}
+  labels:
+    app: {{ .Values.app.name }}
+    managed-by: helm
+  annotations:
+    traefik.ingress.kubernetes.io/router.entrypoints: websecure
+    traefik.ingress.kubernetes.io/router.tls: "true"
+    traefik.ingress.kubernetes.io/router.middlewares: {{ .Values.app.namespace }}-{{ .Values.app.name }}-https-redirect@kubernetescrd
+    cert-manager.io/cluster-issuer: letsencrypt-http-issuer
+spec:
+  rules:
+    - host: {{ .Values.app.domains.external }}
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: {{ .Values.service.name }}
+                port:
+                  number: {{ .Values.service.port }}
+    - host: www.{{ .Values.app.domains.external }}
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: {{ .Values.service.name }}
+                port:
+                  number: {{ .Values.service.port }}
+  tls:
+    - secretName: {{ .Values.app.domains.external }}-cert
+      hosts:
+        - {{ .Values.app.domains.external }}
+        - www.{{ .Values.app.domains.external }}

@@ -1,0 +1,28 @@
+app:
+  name: watershed-website
+  namespace: projects-watershed-website
+  domains:
+    production: watershed-website.spindraad.app
+    external: stichting-watershed.nl
+    development: watershed-website.spindraad.dev
+  image:
+    repository: registry.digitalocean.com/lodybo-registry/watershed-website
+    tag: latest
+
+service:
+  name: watershed-website-service
+  port: 80
+  targetPort: 3000
+
+secrets:
+    sendgridApiKey: "<PLACEHOLDER>"
+
+environment: production # or: development
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 128Mi
+  limits:
+    cpu: 500m
+    memory: 512Mi
