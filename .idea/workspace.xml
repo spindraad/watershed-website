@@ -5,16 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Created Helm templates in order to deploy this application on the k8s clusters">
-      <change afterPath="$PROJECT_DIR$/Chart.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routes/healthz.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routes/ready.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/deployment.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/ingress.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/secrets.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/service.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/values.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/workflows/deploy.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.nvmrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/pr-lint-build.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/pr-lint-build.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.prettierignore" beforeDir="false" afterPath="$PROJECT_DIR$/.prettierignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -314,15 +308,7 @@
       <workItem from="1741164297235" duration="2243000" />
       <workItem from="1741167991516" duration="9123000" />
       <workItem from="1741177491521" duration="5426000" />
-      <workItem from="1741335542037" duration="9443000" />
-    </task>
-    <task id="LOCAL-00002" summary="Reset .idea folder and settings">
-      <option name="closed" value="true" />
-      <created>1729071628239</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1729071628239</updated>
+      <workItem from="1741335542037" duration="13467000" />
     </task>
     <task id="LOCAL-00003" summary="Added a GitHub Actions workflow for pull requests">
       <option name="closed" value="true" />
@@ -708,7 +694,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741335596534</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="Created Helm templates in order to deploy this application on the k8s clusters">
+      <option name="closed" value="true" />
+      <created>1741354068750</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1741354068750</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">

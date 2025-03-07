@@ -1,0 +1,123 @@
+name: 🚀 Deploy
+
+on:
+  workflow_run:
+    workflows: ["🏗️ Lint and Build"]
+    types:
+      - completed
+    branches:
+      - main
+      - dev
+
+jobs:
+  docker-dev:
+    name: 🐳 Build and push Docker image
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/dev') }}
+
+    steps:
+      - name: ⬇️ Download build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: build
+
+      - name: ⬇️ Restore node_modules cache
+        uses: actions/cache@v4
+        with:
+          path: node_modules
+          key: node_modules-${{ hashFiles('package-lock.json') }}
+
+      - name: 🗑️ Prune dev dependencies
+        run: npm prune --omit=dev
+
+      - name: 🐳 Setup Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: 🐳 Login to DigitalOcean Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: registry.digitalocean.com/lodybo-registry
+          username: ${{ secrets.DIGITALOCEAN_REGISTRY_USER }}
+          password: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
+          logout: true
+
+      - name: ⚗️ Extract version from package.json
+        uses: sergeysova/jq-action@v2
+        id: version
+        with:
+          cmd: 'jq .version package.json -r'
+
+      - name: ⚗️ Extract repository from values.yaml
+        uses: mikefarah/yq@v4.44.2
+        id: repository
+        with:
+          cmd: "yq .app.image.repository values.yaml"
+
+      - name: 🐳 Build container image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          no-cache: true
+          tags: |
+            ${{ steps.repository.outputs.result }}:${{ steps.version.outputs.value }}
+            ${{ github.ref == 'refs/heads/main' && format('{0}:latest', steps.repository.outputs.result) || format('{0}:beta', steps.repository.outputs.result) }}
+          push: true
+          secrets: |
+            SENDGRID_API_KEY=${{ secrets.SENDGRID_API_KEY }}
+
+  deploy-dev:
+    name: 🚀 Deploy to cluster
+    runs-on: ubuntu-latest
+    needs: [ docker-dev ]
+    if: ${{ github.event.workflow_run.conclusion == 'success' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/dev') }}
+
+    steps:
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v4
+
+      - name: ⚗️ Extract version from package.json
+        uses: sergeysova/jq-action@v2
+        id: version
+        with:
+          cmd: 'jq .version package.json -r'
+
+      - name: ⚗️ Extract app name from values.yaml
+        uses: mikefarah/yq@v4.44.2
+        id: appname
+        with:
+          cmd: "yq .app.name values.yaml"
+
+      - name: ⚗️ Extract namespace from values.yaml
+        uses: mikefarah/yq@v4.44.2
+        id: namespace
+        with:
+          cmd: "yq .app.namespace values.yaml"
+
+      - name: 🌊 Install doctl
+        uses: digitalocean/action-doctl@v2
+        with:
+          token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
+
+      # Save the right kubernetes context depending on the branch name
+      - name: 💾 Save DigitalOcean kubeconfig for dev environment
+        if: github.ref == 'refs/heads/dev'
+        run: doctl kubernetes cluster kubeconfig save --expiry-seconds 600 spindraad-dev-cluster
+
+      # Save the right kubernetes context depending on the branch name
+      - name: 💾 Save DigitalOcean kubeconfig for production environment
+        if: github.ref == 'refs/heads/main'
+#        run: doctl kubernetes cluster kubeconfig save --expiry-seconds 600 spindraad-app-cluster
+        run: doctl kubernetes cluster kubeconfig save --expiry-seconds 600 spindraad-dev-cluster # For now, we only test the dev cluster
+
+      - name: ✏️ Update Helm Chart's appVersion
+        run: sed -i "s/<VERSION>/${{ steps.version.outputs.value }}/g" Chart.yaml
+
+      - name: 🚀 Deploy to cluster
+        run: >
+          helm upgrade --install
+          $(echo ${{ steps.appname.outputs.result }}) .
+          --set app.image.tag=$(echo ${{ steps.version.outputs.value }})
+          --set environment=$(echo ${{ github.ref == 'refs/heads/main' && 'production' || 'development' }})
+          --set secrets.sendgridApiKey=${{ secrets.SENDGRID_API_KEY }}
+          --namespace=$(echo ${{ steps.namespace.outputs.result }})
+          --create-namespace

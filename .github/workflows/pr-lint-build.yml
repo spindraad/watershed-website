@@ -1,6 +1,7 @@
 name: 🏗️ Lint and Build
 
 on:
+  workflow_dispatch:
   pull_request:
     branches:
       - '**'
@@ -16,9 +17,17 @@ jobs:
       - name: ⎔ Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version-file: ".nvmrc"
+
+      - name: Cache node_modules
+        id: cache
+        uses: actions/cache@v4
+        with:
+          path: node_modules
+          key: node_modules-${{ hashFiles('package-lock.json') }}
 
       - name: 📥 Install dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
         run: npm ci
 
       - name: 🔍 Lint
@@ -26,6 +35,14 @@ jobs:
 
       - name: 🏗️ Build
         run: npm run build
+
+      - name: 📦 Archive build
+        uses: actions/upload-artifact@v4
+        with:
+          name: build
+          path: |
+            build
+            public
 
   test-unit:
     name: 🧪 Test Unit
@@ -38,9 +55,17 @@ jobs:
       - name: ⎔ Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version-file: ".nvmrc"
+
+      - name: Cache node_modules
+        id: cache
+        uses: actions/cache@v4
+        with:
+          path: node_modules
+          key: node_modules-${{ hashFiles('package-lock.json') }}
 
       - name: 📥 Install dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
         run: npm ci
 
       - name: 🧪 Test
@@ -57,9 +82,17 @@ jobs:
       - name: ⎔ Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version-file: ".nvmrc"
+
+      - name: Cache node_modules
+        id: cache
+        uses: actions/cache@v4
+        with:
+          path: node_modules
+          key: node_modules-${{ hashFiles('package-lock.json') }}
 
       - name: 📥 Install dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
         run: npm ci
 
       - name: 🎭 Install Playwright dependencies
