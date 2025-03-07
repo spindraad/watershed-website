@@ -1,4 +1,4 @@
-type Props = {
+export type Props = {
   /**
    * The level of the heading.
    */
@@ -13,14 +13,26 @@ type Props = {
 export default function Heading({ level, children }: Props) {
   const Tag = `h${level}` as 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 
-  const classes = `font-bold text-secondary ${
-    level === 1 ? 'text-4xl'
-    : level === 2 ? 'text-3xl'
-    : level === 3 ? 'text-2xl'
-    : level === 4 ? 'text-xl'
-    : level === 5 ? 'text-lg'
-    : 'text-base'
-  }`;
+  let textSize = 'text-base';
+  switch (level) {
+    case 1:
+      textSize = 'text-4xl';
+      break;
+    case 2:
+      textSize = 'text-3xl';
+      break;
+    case 3:
+      textSize = 'text-2xl';
+      break;
+    case 4:
+      textSize = 'text-xl';
+      break;
+    case 5:
+      textSize = 'text-lg';
+      break;
+  }
+
+  const classes = `font-bold text-secondary ${textSize}`;
 
   return <Tag className={classes}>{children}</Tag>;
 }

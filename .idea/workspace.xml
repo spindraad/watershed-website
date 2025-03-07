@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Added the improvements of generated components also to the generated form components, including some other stuff that's handy for forms">
-      <change afterPath="$PROJECT_DIR$/test-setup.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vitest.config.ts" afterDir="false" />
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Added GridBlock to Puck">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/utils/date.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/date.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/PageEditor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PageEditor.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/blocks/ButtonBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/blocks/ButtonBlock.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +35,10 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
+                    <option name="branchName" value="features/WAT-11_setup-and-configure-puck-editor" />
+                    <option name="lastUsedInstant" value="1736852384" />
+                  </RecentBranch>
+                  <RecentBranch>
                     <option name="branchName" value="feature/wsh-43-nieuws" />
                     <option name="lastUsedInstant" value="1732628545" />
                   </RecentBranch>
@@ -55,9 +58,12 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;git@github.com:spindraad/watershed-website.git&quot;,
-    &quot;accountId&quot;: &quot;18703f32-ec78-4ae3-9f70-7591ebbe3f98&quot;
+    &quot;accountId&quot;: &quot;d73753c4-727a-4e01-afdd-37ace40afca2&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/node_modules/@shoelace-style/shoelace/dist/components/button/button.d.ts" root0="SKIP_INSPECTION" />
+  </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -75,59 +81,60 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenDatabaseViewOnStart": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "Vitest.All Tests.executor": "Run",
-    "Vitest.validateLogin.executor": "Run",
-    "Vitest.validateLogin.should return success: false when emailaddress is invalid.executor": "Run",
-    "Vitest.validateLogin.should return success: false when emailaddress is missing.executor": "Run",
-    "git-widget-placeholder": "feature/wsh-43-nieuws",
-    "javascript.nodejs.core.library.configured.version": "22.11.0",
-    "javascript.nodejs.core.library.typings.version": "22.9.0",
-    "last_opened_file_path": "/Users/lody/dev/projects/watershed-website/scaffold-templates/plop/form",
-    "node.js.detected.package.standard": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "node",
-    "nodejs_package_manager_path": "npm",
-    "npm.Develop.executor": "Run",
-    "npm.dev:remix.executor": "Debug",
-    "npm.dev:storybook.executor": "Debug",
-    "npm.docker:start.executor": "Run",
-    "prettierjs.PrettierConfiguration.Package": "/Users/lody/dev/projects/watershed-website/node_modules/prettier",
-    "settings.editor.selected.configurable": "editor.preferences.completion",
-    "ts.external.directory.path": "/Users/lody/dev/projects/watershed-website/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenDatabaseViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Vitest.All Tests.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.validateLogin.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.validateLogin.should return success: false when emailaddress is invalid.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.validateLogin.should return success: false when emailaddress is missing.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;features/WAT-11__setup-and-configure-puck-editor&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;22.11.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;22.9.0&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/lody/dev/projects/watershed-website/scaffold-templates/plop/form&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.Develop.executor&quot;: &quot;Run&quot;,
+    &quot;npm.dev:remix.executor&quot;: &quot;Debug&quot;,
+    &quot;npm.dev:storybook.executor&quot;: &quot;Debug&quot;,
+    &quot;npm.docker:start.executor&quot;: &quot;Run&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/lody/dev/projects/watershed-website/node_modules/prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.typescriptcompiler&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/lody/dev/projects/watershed-website/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ],
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "TEXT",
-      "XML"
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;TEXT&quot;,
+      &quot;XML&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/scaffold-templates/plop/form" />
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/config/blocks" />
+      <recent name="$PROJECT_DIR$/app/config" />
       <recent name="$PROJECT_DIR$/scaffold-templates/plop/form/validation" />
       <recent name="$PROJECT_DIR$/scaffold-templates/plop/form/component" />
       <recent name="$PROJECT_DIR$/app/routes/($lang)/nieuws/_index" />
-      <recent name="$PROJECT_DIR$/prisma/seed" />
-      <recent name="$PROJECT_DIR$/app/components" />
     </key>
     <key name="es6.move.members.recent.items">
+      <recent name="$PROJECT_DIR$/app/config/blocks/RichTextBlock.tsx" />
       <recent name="$PROJECT_DIR$/prisma/seed/_content.ts" />
       <recent name="$PROJECT_DIR$/prisma/seed/_users.ts" />
     </key>
@@ -227,16 +234,16 @@
     <recent_temporary>
       <list>
         <item itemvalue="Vitest.validateLogin.should return success: false when emailaddress is missing" />
-        <item itemvalue="Vitest.validateLogin" />
         <item itemvalue="Vitest.validateLogin.should return success: false when emailaddress is invalid" />
+        <item itemvalue="Vitest.validateLogin" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-PS-243.22562.233" />
-        <option value="bundled-php-predefined-a98d8de5180a-7980c7aaca61-com.jetbrains.php.sharedIndexes-PS-243.22562.233" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-PS-243.25659.45" />
+        <option value="bundled-php-predefined-a98d8de5180a-1ec7b7818973-com.jetbrains.php.sharedIndexes-PS-243.25659.45" />
       </set>
     </attachedChunks>
   </component>
@@ -265,6 +272,14 @@
       <workItem from="1733828413609" duration="57658000" />
       <workItem from="1734440025262" duration="3286000" />
       <workItem from="1736849861289" duration="1295000" />
+      <workItem from="1737636099799" duration="1397000" />
+      <workItem from="1738578376616" duration="3780000" />
+      <workItem from="1739446662793" duration="2214000" />
+      <workItem from="1740483962203" duration="14102000" />
+      <workItem from="1741163950063" duration="327000" />
+      <workItem from="1741164297235" duration="2243000" />
+      <workItem from="1741167991516" duration="9123000" />
+      <workItem from="1741177491521" duration="5426000" />
     </task>
     <task id="LOCAL-00001" summary="Set up project, added dev dependencies and configured them">
       <option name="closed" value="true" />
@@ -610,7 +625,55 @@
       <option name="project" value="LOCAL" />
       <updated>1734019561066</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Integrated the TinyMCE with Puck">
+      <option name="closed" value="true" />
+      <created>1740486346938</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1740486346938</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Refactor Heading component and enhance RichEditor integration">
+      <option name="closed" value="true" />
+      <created>1740489236895</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1740489236895</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Refactored Puck block components in terms of name and label, updated Puck and added a class that allows us to use TinyMCE in Puck overriding the default pointer events setting">
+      <option name="closed" value="true" />
+      <created>1740494063007</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1740494063007</updated>
+    </task>
+    <task id="LOCAL-00047" summary="Added Button Block as Puck component">
+      <option name="closed" value="true" />
+      <created>1741173291495</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1741173291495</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Changed page editor layout to feel more like an actual page">
+      <option name="closed" value="true" />
+      <created>1741177410193</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1741177410193</updated>
+    </task>
+    <task id="LOCAL-00049" summary="Added GridBlock to Puck">
+      <option name="closed" value="true" />
+      <created>1741178388146</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1741178388146</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -653,12 +716,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Changed url for the login and logout pages to Dutch" />
-    <MESSAGE value="Created components for the forget password route" />
-    <MESSAGE value="Implemented reset password flow" />
-    <MESSAGE value="Finished password reset flow" />
-    <MESSAGE value="Updated GH action file to run both unit and component tests" />
-    <MESSAGE value="Small improvements to make sure everything is up, running and build" />
     <MESSAGE value="Removed Remix assets, added Watershed favicon and logo and added it in the header" />
     <MESSAGE value="Added new models and updated seed command to fill DB" />
     <MESSAGE value="Improved the way the seeding command is run" />
@@ -678,7 +735,13 @@
     <MESSAGE value="Created a summary component for one or more artists" />
     <MESSAGE value="Created a summary component for a product" />
     <MESSAGE value="Added the improvements of generated components also to the generated form components, including some other stuff that's handy for forms" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added the improvements of generated components also to the generated form components, including some other stuff that's handy for forms" />
+    <MESSAGE value="Integrated the TinyMCE with Puck" />
+    <MESSAGE value="Refactor Heading component and enhance RichEditor integration" />
+    <MESSAGE value="Refactored Puck block components in terms of name and label, updated Puck and added a class that allows us to use TinyMCE in Puck overriding the default pointer events setting" />
+    <MESSAGE value="Added Button Block as Puck component" />
+    <MESSAGE value="Changed page editor layout to feel more like an actual page" />
+    <MESSAGE value="Added GridBlock to Puck" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added GridBlock to Puck" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

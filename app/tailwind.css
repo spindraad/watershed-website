@@ -119,4 +119,13 @@
   .tag-link::part(base):hover {
     background: var(--sl-color-primary-100);
   }
+
+  [data-puck-component] .puck-rich-text-editor-wrapper * {
+    pointer-events: auto;
+  }
+
+  .Puck,
+  .Puck > div:not(#puck-portal-root) {
+    height: 100%;
+  }
 }
