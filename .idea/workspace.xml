@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Changed page editor layout to feel more like an actual page">
-      <change afterPath="$PROJECT_DIR$/app/config/blocks/GridBlock.tsx" afterDir="false" />
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Added GridBlock to Puck">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/puck.config.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/puck.config.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/PageEditor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PageEditor.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/blocks/ButtonBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/blocks/ButtonBlock.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -279,7 +279,7 @@
       <workItem from="1741163950063" duration="327000" />
       <workItem from="1741164297235" duration="2243000" />
       <workItem from="1741167991516" duration="9123000" />
-      <workItem from="1741177491521" duration="834000" />
+      <workItem from="1741177491521" duration="5426000" />
     </task>
     <task id="LOCAL-00001" summary="Set up project, added dev dependencies and configured them">
       <option name="closed" value="true" />
@@ -665,7 +665,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741177410193</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Added GridBlock to Puck">
+      <option name="closed" value="true" />
+      <created>1741178388146</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1741178388146</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -708,7 +716,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Small improvements to make sure everything is up, running and build" />
     <MESSAGE value="Removed Remix assets, added Watershed favicon and logo and added it in the header" />
     <MESSAGE value="Added new models and updated seed command to fill DB" />
     <MESSAGE value="Improved the way the seeding command is run" />
@@ -733,7 +740,8 @@
     <MESSAGE value="Refactored Puck block components in terms of name and label, updated Puck and added a class that allows us to use TinyMCE in Puck overriding the default pointer events setting" />
     <MESSAGE value="Added Button Block as Puck component" />
     <MESSAGE value="Changed page editor layout to feel more like an actual page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed page editor layout to feel more like an actual page" />
+    <MESSAGE value="Added GridBlock to Puck" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added GridBlock to Puck" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

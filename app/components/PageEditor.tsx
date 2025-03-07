@@ -3,6 +3,7 @@ import {
   ReactNode,
   useContext,
   useEffect,
+  useMemo,
   useState,
 } from 'react';
 import { Overrides, Puck, usePuck } from '@measured/puck';
@@ -26,6 +27,7 @@ const overrides: Partial<Overrides> = {
 
 export default function PageEditor({ data, onPublish }: Props) {
   const { SlDrawer } = useContext(ShoelaceContext);
+
   const [open, setOpen] = useState(false);
 
   const handleDrawerOpen = () => {
@@ -44,8 +46,8 @@ export default function PageEditor({ data, onPublish }: Props) {
           open={open}
           placement="start"
           onSlAfterHide={() => setOpen(false)}
+          label="Componenten"
         >
-          <h2 className="mb-4">Componenten</h2>
           <Puck.Components />
         </SlDrawer>
 
@@ -55,6 +57,8 @@ export default function PageEditor({ data, onPublish }: Props) {
         />
 
         <Puck.Preview />
+
+        <EditorFooter />
       </div>
     </Puck>
   );
@@ -127,5 +131,56 @@ function EditorHeader({
         </SlButton>
       </div>
     </header>
+  );
+}
+
+function EditorFooter() {
+  const {
+    appState: {
+      ui: { itemSelector },
+      data,
+    },
+  } = usePuck();
+  const { SlDrawer } = useContext(ShoelaceContext);
+  const [open, setOpen] = useState(false);
+  const [selectedBlockType, setSelectedBlockType] = useState('');
+
+  const ignoreBlocks = useMemo(() => {
+    return ['RichTextBlock'];
+  }, []);
+
+  useEffect(() => {
+    if (itemSelector) {
+      const { index: destinationIndex, zone: destinationZone } = itemSelector;
+
+      if (destinationZone) {
+        const item =
+          destinationZone !== 'default-zone' ?
+            data.zones?.[destinationZone]?.[destinationIndex]
+          : data.content[destinationIndex];
+        if (item) {
+          setSelectedBlockType(item.type);
+        }
+      }
+    }
+  }, [itemSelector, data]);
+
+  useEffect(() => {
+    if (selectedBlockType) {
+      if (!ignoreBlocks.includes(selectedBlockType)) {
+        setOpen(true);
+      }
+    }
+  }, [selectedBlockType, ignoreBlocks]);
+
+  return (
+    <SlDrawer
+      open={open}
+      placement="bottom"
+      onSlAfterHide={() => setOpen(false)}
+      label="Blok instellingen"
+    >
+      <Puck.Fields />
+    </SlDrawer>
   );
 }

@@ -4,13 +4,13 @@ import { useContext } from 'react';
 import { ShoelaceContext } from '~/components/shoelace';
 
 export type ButtonBlockProps = {
-  primary?: SlButton['variant'];
+  variant?: SlButton['variant'];
 };
 
 export const ButtonBlock: ComponentConfig<ButtonBlockProps> = {
   label: 'Button',
   fields: {
-    primary: {
+    variant: {
       type: 'select',
       options: [
         { label: 'Default', value: 'default' },
@@ -24,7 +24,7 @@ export const ButtonBlock: ComponentConfig<ButtonBlockProps> = {
     },
   },
   defaultProps: {
-    primary: 'primary',
+    variant: 'primary',
   },
   render: (props) => {
     return <ButtonBlockComponent {...props} />;
@@ -32,10 +32,8 @@ export const ButtonBlock: ComponentConfig<ButtonBlockProps> = {
 };
 
 // Create a function component that can be used to invoke the ShoelaceContext
-function ButtonBlockComponent({ primary }: ButtonBlockProps) {
+function ButtonBlockComponent({ variant }: ButtonBlockProps) {
   const { SlButton } = useContext(ShoelaceContext);
-
-  const variant: SlButton['variant'] = primary ? 'primary' : 'default';
 
   return <SlButton variant={variant}>Click me</SlButton>;
 }
