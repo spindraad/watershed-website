@@ -1,6 +1,6 @@
 {
   "name": "watershed-website",
-  "version": "0.1.0-beta.0",
+  "version": "0.1.0-beta.3",
   "private": true,
   "sideEffects": false,
   "type": "module",
@@ -64,6 +64,7 @@
     "remix-i18next": "^6.4.1",
     "remix-utils": "^7.7.0",
     "tinymce": "^7.6.0",
+    "tsx": "^4.19.2",
     "zod": "^3.23.8"
   },
   "devDependencies": {
@@ -122,7 +123,6 @@
     "storybook-react-i18next": "^3.1.7",
     "tailwindcss": "^3.4.14",
     "tailwindcss-plugin-custom-elements": "^1.0.0",
-    "tsx": "^4.19.2",
     "typescript": "^5.1.6",
     "vite": "^5.4.11",
     "vite-env-only": "^3.0.3",

@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Since the version number is playing a bigger role, we're moving to a beta version now.">
-      <change afterPath="$PROJECT_DIR$/.helmignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Fixed the invalid ingress template, and created a Dockerfile for the deployment of the app. Also adjusted helm ignore file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ingress.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ingress.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/templates/deployment.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/secrets.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/templates/secrets.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/templates/service.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/values.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/values.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,8 +86,6 @@
 }</component>
   <component name="KubernetesSettings">
     <option name="apiVersion" value="1.30" />
-    <option name="contextConfigFilePath" value="file://$USER_HOME$/.kube/config" />
-    <option name="contextName" value="do-ams3-spindraad-dev-cluster" />
     <option name="getSpecFromCluster" value="true" />
     <option name="helmParameters">
       <HelmParameters>
@@ -109,47 +109,47 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenDatabaseViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;Vitest.All Tests.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.validateLogin.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.validateLogin.should return success: false when emailaddress is invalid.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.validateLogin.should return success: false when emailaddress is missing.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/WAT-19__implement__kubernetes__cluster__deployment&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;22.11.0&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;22.9.0&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/lody/dev/projects/watershed-website/scaffold-templates/plop/form&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.Develop.executor&quot;: &quot;Run&quot;,
-    &quot;npm.dev:remix.executor&quot;: &quot;Debug&quot;,
-    &quot;npm.dev:storybook.executor&quot;: &quot;Debug&quot;,
-    &quot;npm.docker:start.executor&quot;: &quot;Run&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/lody/dev/projects/watershed-website/node_modules/prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.intellij.kubernetes.config.KubernetesConfigurable&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/lody/dev/projects/watershed-website/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenDatabaseViewOnStart": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Vitest.All Tests.executor": "Run",
+    "Vitest.validateLogin.executor": "Run",
+    "Vitest.validateLogin.should return success: false when emailaddress is invalid.executor": "Run",
+    "Vitest.validateLogin.should return success: false when emailaddress is missing.executor": "Run",
+    "git-widget-placeholder": "feature/WAT-19__implement__kubernetes__cluster__deployment",
+    "javascript.nodejs.core.library.configured.version": "22.11.0",
+    "javascript.nodejs.core.library.typings.version": "22.9.0",
+    "last_opened_file_path": "/Users/lody/dev/projects/watershed-website/scaffold-templates/plop/form",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "npm",
+    "npm.Develop.executor": "Run",
+    "npm.dev:remix.executor": "Debug",
+    "npm.dev:storybook.executor": "Debug",
+    "npm.docker:start.executor": "Run",
+    "prettierjs.PrettierConfiguration.Package": "/Users/lody/dev/projects/watershed-website/node_modules/prettier",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "/Users/lody/dev/projects/watershed-website/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ],
-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
-      &quot;Markdown&quot;,
-      &quot;TEXT&quot;,
-      &quot;XML&quot;
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "Markdown",
+      "TEXT",
+      "XML"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/scaffold-templates/plop/form" />
@@ -309,15 +309,8 @@
       <workItem from="1741164297235" duration="2243000" />
       <workItem from="1741167991516" duration="9123000" />
       <workItem from="1741177491521" duration="5426000" />
-      <workItem from="1741335542037" duration="19896000" />
-    </task>
-    <task id="LOCAL-00005" summary="Set up and configured Storybook">
-      <option name="closed" value="true" />
-      <created>1729085210889</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1729085210889</updated>
+      <workItem from="1741335542037" duration="21807000" />
+      <workItem from="1741601622656" duration="7356000" />
     </task>
     <task id="LOCAL-00006" summary="Re-enabled the automatic PR close functionality with the spindraad-bot PAT">
       <option name="closed" value="true" />
@@ -703,7 +696,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741358286575</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="Fixed the invalid ingress template, and created a Dockerfile for the deployment of the app. Also adjusted helm ignore file">
+      <option name="closed" value="true" />
+      <created>1741384084997</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1741384084997</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -746,7 +747,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Created barebones news overview route" />
     <MESSAGE value="Created breadcrumbs" />
     <MESSAGE value="Turned off the linear update part of the build" />
     <MESSAGE value="Created article preview card and tag components" />
@@ -771,7 +771,8 @@
     <MESSAGE value="Created Helm templates in order to deploy this application on the k8s clusters" />
     <MESSAGE value="CI/CD improvements: Node version is now specified in an .nvmrc file for re-use. Added caching and a deploy job for the new clusters (only dev is enabled now)." />
     <MESSAGE value="Since the version number is playing a bigger role, we're moving to a beta version now." />
-    <option name="LAST_COMMIT_MESSAGE" value="Since the version number is playing a bigger role, we're moving to a beta version now." />
+    <MESSAGE value="Fixed the invalid ingress template, and created a Dockerfile for the deployment of the app. Also adjusted helm ignore file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed the invalid ingress template, and created a Dockerfile for the deployment of the app. Also adjusted helm ignore file" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
