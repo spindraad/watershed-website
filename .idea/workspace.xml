@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Cleaned up the pr-lint-build.yml workflow, and added explicit build steps to the deploy job. This decouples the two.">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/deploy.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/deploy.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Added extra clarification in build output for gh actions, and moved prisma to production deps because we need it in the container.">
+      <change beforePath="$PROJECT_DIR$/Chart.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Chart.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -306,15 +305,7 @@
       <workItem from="1741167991516" duration="9123000" />
       <workItem from="1741177491521" duration="5426000" />
       <workItem from="1741335542037" duration="21807000" />
-      <workItem from="1741601622656" duration="11709000" />
-    </task>
-    <task id="LOCAL-00010" summary="Very quickly set up a global grid layout and a simple header">
-      <option name="closed" value="true" />
-      <created>1732016454496</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1732016454496</updated>
+      <workItem from="1741601622656" duration="12559000" />
     </task>
     <task id="LOCAL-00011" summary="Started work on the Login Form Component">
       <option name="closed" value="true" />
@@ -700,7 +691,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741616085939</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="Added extra clarification in build output for gh actions, and moved prisma to production deps because we need it in the container.">
+      <option name="closed" value="true" />
+      <created>1741617054028</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1741617054028</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -743,7 +742,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Improvements to the news articles overview page and its related components" />
     <MESSAGE value="Improved the generation of files with plop" />
     <MESSAGE value="Created YearSelector component" />
     <MESSAGE value="Component translations are going to be colocated, so I adjusted the generator a bit." />
@@ -768,7 +766,8 @@
     <MESSAGE value="Deploy will now only be run on tagged versions." />
     <MESSAGE value="Added postversion script to push to origin" />
     <MESSAGE value="Cleaned up the pr-lint-build.yml workflow, and added explicit build steps to the deploy job. This decouples the two." />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleaned up the pr-lint-build.yml workflow, and added explicit build steps to the deploy job. This decouples the two." />
+    <MESSAGE value="Added extra clarification in build output for gh actions, and moved prisma to production deps because we need it in the container." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added extra clarification in build output for gh actions, and moved prisma to production deps because we need it in the container." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
