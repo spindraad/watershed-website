@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Moved dependent packages for prisma to deps">
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Explicitly regenerate prisma during Docker build.">
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -304,15 +304,7 @@
       <workItem from="1741167991516" duration="9123000" />
       <workItem from="1741177491521" duration="5426000" />
       <workItem from="1741335542037" duration="21807000" />
-      <workItem from="1741601622656" duration="14414000" />
-    </task>
-    <task id="LOCAL-00013" summary="Started incorporating login flow validation">
-      <option name="closed" value="true" />
-      <created>1732033711081</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1732033711081</updated>
+      <workItem from="1741601622656" duration="14746000" />
     </task>
     <task id="LOCAL-00014" summary="A lot of improvements to the current state of the login form, with some (extracted) components">
       <option name="closed" value="true" />
@@ -698,7 +690,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741618529897</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="Explicitly regenerate prisma during Docker build.">
+      <option name="closed" value="true" />
+      <created>1741619882898</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1741619882898</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -741,7 +741,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Component translations are going to be colocated, so I adjusted the generator a bit." />
     <MESSAGE value="Created ProjectSummary component" />
     <MESSAGE value="Created EventSummary component" />
     <MESSAGE value="Create artist profile summary component and added missing translations for a few components" />
@@ -766,7 +765,8 @@
     <MESSAGE value="Added extra clarification in build output for gh actions, and moved prisma to production deps because we need it in the container." />
     <MESSAGE value="Moved the prisma dependencies to production, this time correctly." />
     <MESSAGE value="Moved dependent packages for prisma to deps" />
-    <option name="LAST_COMMIT_MESSAGE" value="Moved dependent packages for prisma to deps" />
+    <MESSAGE value="Explicitly regenerate prisma during Docker build." />
+    <option name="LAST_COMMIT_MESSAGE" value="Explicitly regenerate prisma during Docker build." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
