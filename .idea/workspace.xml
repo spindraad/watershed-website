@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Added postgres as a temporary db container for the dev environment.">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/deploy.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/deploy.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Deploy will now only be run on tagged versions.">
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -305,15 +304,7 @@
       <workItem from="1741167991516" duration="9123000" />
       <workItem from="1741177491521" duration="5426000" />
       <workItem from="1741335542037" duration="21807000" />
-      <workItem from="1741601622656" duration="9861000" />
-    </task>
-    <task id="LOCAL-00007" summary="Set up route structure for login page">
-      <option name="closed" value="true" />
-      <created>1732012890766</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1732012890766</updated>
+      <workItem from="1741601622656" duration="10026000" />
     </task>
     <task id="LOCAL-00008" summary="Slightly improved route folder organisation">
       <option name="closed" value="true" />
@@ -699,7 +690,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741612416304</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="Deploy will now only be run on tagged versions.">
+      <option name="closed" value="true" />
+      <created>1741615184890</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1741615184890</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -742,7 +741,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Turned off the linear update part of the build" />
     <MESSAGE value="Created article preview card and tag components" />
     <MESSAGE value="Small improvement to the breadcrumbs" />
     <MESSAGE value="Improvements to the news articles overview page and its related components" />
@@ -767,7 +765,8 @@
     <MESSAGE value="Since the version number is playing a bigger role, we're moving to a beta version now." />
     <MESSAGE value="Fixed the invalid ingress template, and created a Dockerfile for the deployment of the app. Also adjusted helm ignore file" />
     <MESSAGE value="Added postgres as a temporary db container for the dev environment." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added postgres as a temporary db container for the dev environment." />
+    <MESSAGE value="Deploy will now only be run on tagged versions." />
+    <option name="LAST_COMMIT_MESSAGE" value="Deploy will now only be run on tagged versions." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

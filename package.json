@@ -40,7 +40,8 @@
     "playwright:install": "playwright install --with-deps",
     "storybook:serve": "http-server storybook-static -p 6006 --silent",
     "storybook:wait-until-reachable": "wait-on tcp:6006",
-    "generate": "plop component --"
+    "generate": "plop component --",
+    "postversion": "git push && git push --tags"
   },
   "dependencies": {
     "@measured/puck": "^0.18.2",
