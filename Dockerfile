@@ -10,4 +10,7 @@ ADD prisma /watershed-website-app/prisma
 ADD node_modules /watershed-website-app/node_modules
 ADD package.json /watershed-website-app/package.json
 
+# Generate Prisma Client in the container environment
+RUN npx prisma generate
+
 CMD ["npm", "start"]
