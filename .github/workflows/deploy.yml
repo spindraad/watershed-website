@@ -1,19 +1,15 @@
 name: 🚀 Deploy
 
 on:
-  workflow_run:
-    workflows: ["🏗️ Lint and Build"]
-    types:
-      - completed
-    branches:
-      - main
-      - dev
+  push:
+    tags:
+      - 'v[0-9]+.[0-9]+.[0-9]+'
+      - 'v[0-9]+.[0-9]+.[0-9]+-beta.[0-9]+'
 
 jobs:
-  docker-dev:
+  docker:
     name: 🐳 Build and push Docker image
     runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == 'success' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/dev') }}
 
     steps:
       - name: ⬇️ Download build artifacts
@@ -47,6 +43,17 @@ jobs:
         with:
           cmd: 'jq .version package.json -r'
 
+      - name: ⚗️ Determine environment
+        id: env
+        run: |
+          if [[ "${{ steps.version.outputs.value }}" == *-beta* ]]; then
+            echo "environment=development" >> $GITHUB_OUTPUT
+            echo "is_beta=true" >> $GITHUB_OUTPUT
+          else
+            echo "environment=production" >> $GITHUB_OUTPUT
+            echo "is_beta=false" >> $GITHUB_OUTPUT
+          fi
+
       - name: ⚗️ Extract repository from values.yaml
         uses: mikefarah/yq@v4.44.2
         id: repository
@@ -60,16 +67,13 @@ jobs:
           no-cache: true
           tags: |
             ${{ steps.repository.outputs.result }}:${{ steps.version.outputs.value }}
-            ${{ github.ref == 'refs/heads/main' && format('{0}:latest', steps.repository.outputs.result) || format('{0}:beta', steps.repository.outputs.result) }}
+            ${{ steps.env.outputs.is_beta == 'false' && format('{0}:latest', steps.repository.outputs.result) || format('{0}:beta', steps.repository.outputs.result) }}
           push: true
-          secrets: |
-            SENDGRID_API_KEY=${{ secrets.SENDGRID_API_KEY }}
 
   deploy-dev:
     name: 🚀 Deploy to cluster
     runs-on: ubuntu-latest
-    needs: [ docker-dev ]
-    if: ${{ github.event.workflow_run.conclusion == 'success' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/dev') }}
+    needs: [ docker ]
 
     steps:
       - name: ⬇️ Checkout repo
@@ -80,6 +84,18 @@ jobs:
         id: version
         with:
           cmd: 'jq .version package.json -r'
+
+      - name: ⚗️ Determine environment
+        id: env
+        ## TODO: Change cluster to production if the else clause.
+        run: |
+          if [[ "${{ steps.version.outputs.value }}" == *-beta* ]]; then
+            echo "environment=development" >> $GITHUB_OUTPUT
+            echo "cluster=spindraad-dev-cluster" >> $GITHUB_OUTPUT
+          else
+            echo "environment=production" >> $GITHUB_OUTPUT
+            echo "cluster=spindraad-dev-cluster" >> $GITHUB_OUTPUT
+          fi
 
       - name: ⚗️ Extract app name from values.yaml
         uses: mikefarah/yq@v4.44.2
@@ -98,16 +114,8 @@ jobs:
         with:
           token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
 
-      # Save the right kubernetes context depending on the branch name
-      - name: 💾 Save DigitalOcean kubeconfig for dev environment
-        if: github.ref == 'refs/heads/dev'
-        run: doctl kubernetes cluster kubeconfig save --expiry-seconds 600 spindraad-dev-cluster
-
-      # Save the right kubernetes context depending on the branch name
-      - name: 💾 Save DigitalOcean kubeconfig for production environment
-        if: github.ref == 'refs/heads/main'
-#        run: doctl kubernetes cluster kubeconfig save --expiry-seconds 600 spindraad-app-cluster
-        run: doctl kubernetes cluster kubeconfig save --expiry-seconds 600 spindraad-dev-cluster # For now, we only test the dev cluster
+      - name: 💾 Save DigitalOcean kubeconfig
+        run: doctl kubernetes cluster kubeconfig save --expiry-seconds 600 ${{ steps.env.outputs.cluster }}
 
       - name: ✏️ Update Helm Chart's appVersion
         run: sed -i "s/<VERSION>/${{ steps.version.outputs.value }}/g" Chart.yaml
@@ -117,7 +125,8 @@ jobs:
           helm upgrade --install
           $(echo ${{ steps.appname.outputs.result }}) .
           --set app.image.tag=$(echo ${{ steps.version.outputs.value }})
-          --set environment=$(echo ${{ github.ref == 'refs/heads/main' && 'production' || 'development' }})
+          --set environment=$(echo ${{ steps.env.outputs.environment }})
           --set secrets.sendgridApiKey=${{ secrets.SENDGRID_API_KEY }}
+          --set secrets.sessionSecret=${{ secrets.SESSION_SECRET }}
           --namespace=$(echo ${{ steps.namespace.outputs.result }})
           --create-namespace
