@@ -101,9 +101,11 @@ jobs:
         ## TODO: Change cluster to production if the else clause.
         run: |
           if [[ "${{ steps.version.outputs.value }}" == *-beta* ]]; then
+            echo "setting up for development"
             echo "environment=development" >> $GITHUB_OUTPUT
             echo "cluster=spindraad-dev-cluster" >> $GITHUB_OUTPUT
           else
+            echo "setting up for production"
             echo "environment=production" >> $GITHUB_OUTPUT
             echo "cluster=spindraad-dev-cluster" >> $GITHUB_OUTPUT
           fi
