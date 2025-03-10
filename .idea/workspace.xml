@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Deploy will now only be run on tagged versions.">
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Added postversion script to push to origin">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/deploy.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/deploy.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/pr-lint-build.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/pr-lint-build.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -304,15 +306,7 @@
       <workItem from="1741167991516" duration="9123000" />
       <workItem from="1741177491521" duration="5426000" />
       <workItem from="1741335542037" duration="21807000" />
-      <workItem from="1741601622656" duration="10026000" />
-    </task>
-    <task id="LOCAL-00008" summary="Slightly improved route folder organisation">
-      <option name="closed" value="true" />
-      <created>1732013131740</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1732013131740</updated>
+      <workItem from="1741601622656" duration="10731000" />
     </task>
     <task id="LOCAL-00009" summary="Very quickly set up a global grid layout and a simple header">
       <option name="closed" value="true" />
@@ -698,7 +692,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741615184890</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="Added postversion script to push to origin">
+      <option name="closed" value="true" />
+      <created>1741615356046</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1741615356046</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -741,7 +743,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Created article preview card and tag components" />
     <MESSAGE value="Small improvement to the breadcrumbs" />
     <MESSAGE value="Improvements to the news articles overview page and its related components" />
     <MESSAGE value="Improved the generation of files with plop" />
@@ -766,7 +767,8 @@
     <MESSAGE value="Fixed the invalid ingress template, and created a Dockerfile for the deployment of the app. Also adjusted helm ignore file" />
     <MESSAGE value="Added postgres as a temporary db container for the dev environment." />
     <MESSAGE value="Deploy will now only be run on tagged versions." />
-    <option name="LAST_COMMIT_MESSAGE" value="Deploy will now only be run on tagged versions." />
+    <MESSAGE value="Added postversion script to push to origin" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added postversion script to push to origin" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
