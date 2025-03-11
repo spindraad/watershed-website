@@ -10,7 +10,7 @@ import i18nServer from './modules/i18n.server';
 import { I18nextProvider, initReactI18next } from 'react-i18next';
 import * as i18n from './config/i18n';
 
-const ABORT_DELAY = 5_000;
+export const streamTimeout = 5_000;
 
 export default async function handleRequest(
   request: Request,
@@ -62,7 +62,7 @@ async function handleBotRequest(
         <RemixServer
           context={remixContext}
           url={request.url}
-          abortDelay={ABORT_DELAY}
+          abortDelay={streamTimeout + 1000}
         />
       </I18nextProvider>,
       {
@@ -97,7 +97,7 @@ async function handleBotRequest(
       },
     );
 
-    setTimeout(abort, ABORT_DELAY);
+    setTimeout(abort, streamTimeout + 1000);
   });
 }
 
@@ -116,7 +116,7 @@ async function handleBrowserRequest(
         <RemixServer
           context={remixContext}
           url={request.url}
-          abortDelay={ABORT_DELAY}
+          abortDelay={streamTimeout + 1000}
         />
       </I18nextProvider>,
       {
@@ -151,6 +151,6 @@ async function handleBrowserRequest(
       },
     );
 
-    setTimeout(abort, ABORT_DELAY);
+    setTimeout(abort, streamTimeout + 1000);
   });
 }
