@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Added GridBlock to Puck">
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Moved typescript to prod deps">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/38ac5dbc-b511-4104-af56-a1d81fb284c7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/38ac5dbc-b511-4104-af56-a1d81fb284c7.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/PageEditor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PageEditor.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/blocks/ButtonBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/blocks/ButtonBlock.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,16 +36,16 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="features/WAT-11_setup-and-configure-puck-editor" />
-                    <option name="lastUsedInstant" value="1736852384" />
+                    <option name="branchName" value="feature/WAT-19_implement_kubernetes_cluster_deployment" />
+                    <option name="lastUsedInstant" value="1741337523" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="dev" />
+                    <option name="lastUsedInstant" value="1741337163" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="feature/wsh-43-nieuws" />
                     <option name="lastUsedInstant" value="1732628545" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="dev" />
-                    <option name="lastUsedInstant" value="1729172594" />
                   </RecentBranch>
                 </list>
               </option>
@@ -66,8 +67,32 @@
   </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
+  &quot;configuredContexts&quot;: [
+    {
+      &quot;name&quot;: &quot;do-ams3-spindraad-dev-cluster&quot;,
+      &quot;kubeConfigUrl&quot;: &quot;file:///Users/lody/.kube/config&quot;,
+      &quot;currentNamespace&quot;: &quot;Kubernetes.All.Namespaces.Label&quot;
+    },
+    {
+      &quot;name&quot;: &quot;do-ams3-spindraad-app-cluster&quot;,
+      &quot;kubeConfigUrl&quot;: &quot;file:///Users/lody/.kube/config&quot;,
+      &quot;currentNamespace&quot;: &quot;Kubernetes.All.Namespaces.Label&quot;
+    }
+  ],
   &quot;isMigrated&quot;: true
 }</component>
+  <component name="KubernetesSettings">
+    <option name="apiVersion" value="1.30" />
+    <option name="getSpecFromCluster" value="true" />
+    <option name="helmParameters">
+      <HelmParameters>
+        <option name="chartPath" value="$PROJECT_DIR$" />
+        <option name="valuesFiles">
+          <option value="values.yaml" />
+        </option>
+      </HelmParameters>
+    </option>
+  </component>
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
@@ -81,46 +106,47 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenDatabaseViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;Vitest.All Tests.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.validateLogin.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.validateLogin.should return success: false when emailaddress is invalid.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.validateLogin.should return success: false when emailaddress is missing.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;features/WAT-11__setup-and-configure-puck-editor&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;22.11.0&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;22.9.0&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/lody/dev/projects/watershed-website/scaffold-templates/plop/form&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.Develop.executor&quot;: &quot;Run&quot;,
-    &quot;npm.dev:remix.executor&quot;: &quot;Debug&quot;,
-    &quot;npm.dev:storybook.executor&quot;: &quot;Debug&quot;,
-    &quot;npm.docker:start.executor&quot;: &quot;Run&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/lody/dev/projects/watershed-website/node_modules/prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.typescriptcompiler&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/lody/dev/projects/watershed-website/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenDatabaseViewOnStart": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Vitest.All Tests.executor": "Run",
+    "Vitest.validateLogin.executor": "Run",
+    "Vitest.validateLogin.should return success: false when emailaddress is invalid.executor": "Run",
+    "Vitest.validateLogin.should return success: false when emailaddress is missing.executor": "Run",
+    "git-widget-placeholder": "feature/WAT-19__implement__kubernetes__cluster__deployment",
+    "javascript.nodejs.core.library.configured.version": "22.11.0",
+    "javascript.nodejs.core.library.typings.version": "22.9.0",
+    "last_opened_file_path": "/Users/lody/dev/projects/watershed-website/scaffold-templates/plop/form",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "npm",
+    "npm.Develop.executor": "Run",
+    "npm.dev:remix.executor": "Debug",
+    "npm.dev:storybook.executor": "Debug",
+    "npm.docker:start.executor": "Run",
+    "prettierjs.PrettierConfiguration.Package": "/Users/lody/dev/projects/watershed-website/node_modules/prettier",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "/Users/lody/dev/projects/watershed-website/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ],
-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
-      &quot;TEXT&quot;,
-      &quot;XML&quot;
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "Markdown",
+      "TEXT",
+      "XML"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/scaffold-templates/plop/form" />
@@ -280,118 +306,8 @@
       <workItem from="1741164297235" duration="2243000" />
       <workItem from="1741167991516" duration="9123000" />
       <workItem from="1741177491521" duration="5426000" />
-    </task>
-    <task id="LOCAL-00001" summary="Set up project, added dev dependencies and configured them">
-      <option name="closed" value="true" />
-      <created>1729071133336</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1729071133336</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Reset .idea folder and settings">
-      <option name="closed" value="true" />
-      <created>1729071628239</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1729071628239</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Added a GitHub Actions workflow for pull requests">
-      <option name="closed" value="true" />
-      <created>1729072120884</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1729072120884</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Set up Prisma, launched a local db and configured DataGrip and PhpStorm with it.">
-      <option name="closed" value="true" />
-      <created>1729078765387</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1729078765387</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Set up and configured Storybook">
-      <option name="closed" value="true" />
-      <created>1729085210889</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1729085210889</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Re-enabled the automatic PR close functionality with the spindraad-bot PAT">
-      <option name="closed" value="true" />
-      <created>1730801147602</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1730801147602</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Set up route structure for login page">
-      <option name="closed" value="true" />
-      <created>1732012890766</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1732012890766</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Slightly improved route folder organisation">
-      <option name="closed" value="true" />
-      <created>1732013131740</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1732013131740</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Very quickly set up a global grid layout and a simple header">
-      <option name="closed" value="true" />
-      <created>1732016433994</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1732016433994</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Very quickly set up a global grid layout and a simple header">
-      <option name="closed" value="true" />
-      <created>1732016454496</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1732016454496</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Started work on the Login Form Component">
-      <option name="closed" value="true" />
-      <created>1732019852785</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1732019852785</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Finished login form">
-      <option name="closed" value="true" />
-      <created>1732024788607</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1732024788607</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Started incorporating login flow validation">
-      <option name="closed" value="true" />
-      <created>1732033711081</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1732033711081</updated>
-    </task>
-    <task id="LOCAL-00014" summary="A lot of improvements to the current state of the login form, with some (extracted) components">
-      <option name="closed" value="true" />
-      <created>1732447384881</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1732447384881</updated>
+      <workItem from="1741335542037" duration="21807000" />
+      <workItem from="1741601622656" duration="19399000" />
     </task>
     <task id="LOCAL-00015" summary="Added validations for checking the login flow with Zod, and appended UI to accommodate for errors. Updated Dutch and English locale as well">
       <option name="closed" value="true" />
@@ -673,7 +589,119 @@
       <option name="project" value="LOCAL" />
       <updated>1741178388146</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Added footer to the editor for the Puck fields, and improved the button block">
+      <option name="closed" value="true" />
+      <created>1741335596534</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1741335596534</updated>
+    </task>
+    <task id="LOCAL-00051" summary="Created Helm templates in order to deploy this application on the k8s clusters">
+      <option name="closed" value="true" />
+      <created>1741354068750</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1741354068750</updated>
+    </task>
+    <task id="LOCAL-00052" summary="CI/CD improvements: Node version is now specified in an .nvmrc file for re-use. Added caching and a deploy job for the new clusters (only dev is enabled now).">
+      <option name="closed" value="true" />
+      <created>1741358118011</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1741358118011</updated>
+    </task>
+    <task id="LOCAL-00053" summary="Since the version number is playing a bigger role, we're moving to a beta version now.">
+      <option name="closed" value="true" />
+      <created>1741358286575</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1741358286575</updated>
+    </task>
+    <task id="LOCAL-00054" summary="Fixed the invalid ingress template, and created a Dockerfile for the deployment of the app. Also adjusted helm ignore file">
+      <option name="closed" value="true" />
+      <created>1741384084997</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1741384084997</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Added postgres as a temporary db container for the dev environment.">
+      <option name="closed" value="true" />
+      <created>1741612416304</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1741612416304</updated>
+    </task>
+    <task id="LOCAL-00056" summary="Deploy will now only be run on tagged versions.">
+      <option name="closed" value="true" />
+      <created>1741615184890</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1741615184890</updated>
+    </task>
+    <task id="LOCAL-00057" summary="Added postversion script to push to origin">
+      <option name="closed" value="true" />
+      <created>1741615356046</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1741615356046</updated>
+    </task>
+    <task id="LOCAL-00058" summary="Cleaned up the pr-lint-build.yml workflow, and added explicit build steps to the deploy job. This decouples the two.">
+      <option name="closed" value="true" />
+      <created>1741616085939</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1741616085939</updated>
+    </task>
+    <task id="LOCAL-00059" summary="Added extra clarification in build output for gh actions, and moved prisma to production deps because we need it in the container.">
+      <option name="closed" value="true" />
+      <created>1741617054028</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1741617054028</updated>
+    </task>
+    <task id="LOCAL-00060" summary="Moved the prisma dependencies to production, this time correctly.">
+      <option name="closed" value="true" />
+      <created>1741617897596</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1741617897596</updated>
+    </task>
+    <task id="LOCAL-00061" summary="Moved dependent packages for prisma to deps">
+      <option name="closed" value="true" />
+      <created>1741618529897</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1741618529897</updated>
+    </task>
+    <task id="LOCAL-00062" summary="Explicitly regenerate prisma during Docker build.">
+      <option name="closed" value="true" />
+      <created>1741619882898</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1741619882898</updated>
+    </task>
+    <task id="LOCAL-00063" summary="Moved typescript to prod deps">
+      <option name="closed" value="true" />
+      <created>1741620230025</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1741620230025</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -716,20 +744,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Removed Remix assets, added Watershed favicon and logo and added it in the header" />
-    <MESSAGE value="Added new models and updated seed command to fill DB" />
-    <MESSAGE value="Improved the way the seeding command is run" />
-    <MESSAGE value="DB is now seeded with localised values, where Papiamentu is replaced with Esperanto" />
-    <MESSAGE value="Created barebones news overview route" />
-    <MESSAGE value="Created breadcrumbs" />
-    <MESSAGE value="Turned off the linear update part of the build" />
-    <MESSAGE value="Created article preview card and tag components" />
-    <MESSAGE value="Small improvement to the breadcrumbs" />
-    <MESSAGE value="Improvements to the news articles overview page and its related components" />
-    <MESSAGE value="Improved the generation of files with plop" />
-    <MESSAGE value="Created YearSelector component" />
-    <MESSAGE value="Component translations are going to be colocated, so I adjusted the generator a bit." />
-    <MESSAGE value="Created ProjectSummary component" />
     <MESSAGE value="Created EventSummary component" />
     <MESSAGE value="Create artist profile summary component and added missing translations for a few components" />
     <MESSAGE value="Created a summary component for one or more artists" />
@@ -741,7 +755,21 @@
     <MESSAGE value="Added Button Block as Puck component" />
     <MESSAGE value="Changed page editor layout to feel more like an actual page" />
     <MESSAGE value="Added GridBlock to Puck" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added GridBlock to Puck" />
+    <MESSAGE value="Added footer to the editor for the Puck fields, and improved the button block" />
+    <MESSAGE value="Created Helm templates in order to deploy this application on the k8s clusters" />
+    <MESSAGE value="CI/CD improvements: Node version is now specified in an .nvmrc file for re-use. Added caching and a deploy job for the new clusters (only dev is enabled now)." />
+    <MESSAGE value="Since the version number is playing a bigger role, we're moving to a beta version now." />
+    <MESSAGE value="Fixed the invalid ingress template, and created a Dockerfile for the deployment of the app. Also adjusted helm ignore file" />
+    <MESSAGE value="Added postgres as a temporary db container for the dev environment." />
+    <MESSAGE value="Deploy will now only be run on tagged versions." />
+    <MESSAGE value="Added postversion script to push to origin" />
+    <MESSAGE value="Cleaned up the pr-lint-build.yml workflow, and added explicit build steps to the deploy job. This decouples the two." />
+    <MESSAGE value="Added extra clarification in build output for gh actions, and moved prisma to production deps because we need it in the container." />
+    <MESSAGE value="Moved the prisma dependencies to production, this time correctly." />
+    <MESSAGE value="Moved dependent packages for prisma to deps" />
+    <MESSAGE value="Explicitly regenerate prisma during Docker build." />
+    <MESSAGE value="Moved typescript to prod deps" />
+    <option name="LAST_COMMIT_MESSAGE" value="Moved typescript to prod deps" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

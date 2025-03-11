@@ -1,0 +1,127 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.app.name }}
+  namespace: {{ .Values.app.namespace }}
+  labels:
+    app: {{ .Values.app.name }}
+    environment: {{ .Values.environment }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ .Values.app.name }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.app.name }}
+        environment: {{ .Values.environment }}
+    spec:
+      nodeSelector:
+        app-node: "true"
+      initContainers:
+        - name: db-seed
+          image: {{ .Values.app.image.repository }}:{{ .Values.app.image.tag }}
+          command: ["sh", "-c", "npm run db:deploy:dev"]
+          env:
+            - name: DATABASE_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.app.name }}-postgresql-secret
+                  key: POSTGRES_PASSWORD
+            - name: DATABASE_URL
+              value: "postgres://{{ .Values.postgresql.auth.username }}:$(DATABASE_PASSWORD)@{{ .Values.app.name }}-postgresql-service:5432/{{ .Values.postgresql.auth.database }}"
+      containers:
+        - name: {{ .Values.app.name }}
+          image: {{ .Values.app.image.repository }}:{{ .Values.app.image.tag }}
+          ports:
+            - containerPort: {{ .Values.service.targetPort }}
+          env:
+            - name: SENDGRID_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.app.name }}-secrets
+                  key: SENDGRID_API_KEY
+            - name: SESSION_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.app.name }}-session-secret
+                  key: SESSION_SECRET
+            - name: DATABASE_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.app.name }}-postgresql-secret
+                  key: POSTGRES_PASSWORD
+            - name: DATABASE_URL
+              value: "postgres://{{ .Values.postgresql.auth.username }}:$(DATABASE_PASSWORD)@{{ .Values.app.name }}-postgresql-service:5432/{{ .Values.postgresql.auth.database }}"
+          resources:
+            requests:
+              cpu: {{ .Values.resources.requests.cpu | default "100m" }}
+              memory: {{ .Values.resources.requests.memory | default "128Mi" }}
+            limits:
+              cpu: {{ .Values.resources.limits.cpu | default "500m" }}
+              memory: {{ .Values.resources.limits.memory | default "512Mi" }}
+          livenessProbe:
+            httpGet:
+              path: /healthz        # Endpoint to check
+              port: {{ .Values.service.targetPort }}            # Port number of the app
+            initialDelaySeconds: 10 # Time to wait before starting the probe
+            periodSeconds: 10       # Interval between probes
+            timeoutSeconds: 1       # Probe timeout
+            failureThreshold: 3     # Restart after 3 failed probes
+          readinessProbe:
+            httpGet:
+              path: /ready          # Endpoint that indicates readiness
+              port: {{ .Values.service.targetPort }}
+            initialDelaySeconds: 5
+            periodSeconds: 5
+            timeoutSeconds: 1
+            failureThreshold: 3
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.app.name }}-postgresql
+  namespace: {{ .Values.app.namespace }}
+  labels:
+    app: {{ .Values.app.name }}-postgresql
+    environment: {{ .Values.environment }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ .Values.app.name }}-postgresql
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.app.name }}-postgresql
+        environment: {{ .Values.environment }}
+    spec:
+      containers:
+        - name: postgres
+          image: {{ .Values.postgresql.image }}
+          env:
+            - name: POSTGRES_USER
+              value: {{ .Values.postgresql.auth.username }}
+            - name: POSTGRES_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.app.name }}-postgresql-secret
+                  key: POSTGRES_PASSWORD
+            - name: POSTGRES_DB
+              value: {{ .Values.postgresql.auth.database }}
+          ports:
+              - containerPort: 5432
+          resources:
+            requests:
+              memory: {{ .Values.postgresql.resources.requests.memory | default "256Mi" }}
+              cpu: {{ .Values.postgresql.resources.requests.cpu | default "100m" }}
+            limits:
+              memory: {{ .Values.postgresql.resources.limits.memory | default "512Mi" }}
+              cpu: {{ .Values.postgresql.resources.limits.cpu | default "500m" }}
+          volumeMounts:
+            - name: postgresql-data
+              mountPath: /var/lib/postgresql/data
+      volumes:
+        - name: postgresql-data
+          emptyDir: {}

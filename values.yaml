@@ -1,0 +1,46 @@
+app:
+  name: watershed-website
+  namespace: projects-watershed-website
+  domains:
+    production: watershed-website.spindraad.app
+    external: stichting-watershed.nl
+    development: watershed-website.spindraad.dev
+  image:
+    repository: registry.digitalocean.com/lodybo-registry/watershed-website
+    tag: latest
+
+service:
+  name: watershed-website-service
+  port: 80
+  targetPort: 3000
+
+secrets:
+    sendgridApiKey: "<PLACEHOLDER>"
+    sessionSecret: "<PLACEHOLDER>"
+
+environment: production # or: development
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 128Mi
+  limits:
+    cpu: 500m
+    memory: 512Mi
+
+postgresql:
+  enabled: true
+  image: "bitnami/postgresql:15"
+  auth:
+    username: watershed
+    password: watershed
+    database: watershed
+  persistence:
+    enabled: false # Change to true if you want persistent storage
+  resources:
+    requests:
+      memory: "256Mi"
+      cpu: "100m"
+    limits:
+      memory: "512Mi"
+      cpu: "500m"
