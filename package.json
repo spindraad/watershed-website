@@ -38,6 +38,7 @@
     "db:push:reset:seed": "prisma db push --force-reset && prisma db seed",
     "db:seed": "prisma db seed",
     "db:studio": "prisma studio --browser none",
+    "db:deploy:dev": "npm run db:migrate:deploy && npm run db:seed",
     "playwright:install": "playwright install --with-deps",
     "storybook:serve": "http-server storybook-static -p 6006 --silent",
     "storybook:wait-until-reachable": "wait-on tcp:6006",
