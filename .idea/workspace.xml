@@ -4,33 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Removed deprecated SerializedFrom type.">
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Ran the RRv7 codemod, manually made some improvements and fixes.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.server/session.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/.server/session.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/Anchor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Anchor.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/ArticleCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ArticleCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/ChangePasswordForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ChangePasswordForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/Tags.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Tags.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/i18n.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/i18n.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/entry.client.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/entry.client.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/entry.server.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/entry.server.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/modules/i18n.server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/modules/i18n.server.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/root.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/root.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/_index/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/_index/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/account/_account.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/account/_account.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/inloggen/LoginFormComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/inloggen/LoginFormComponent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/inloggen/_login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/inloggen/_login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/nieuws/_index/_nieuws.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/nieuws/_index/_nieuws.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/uitloggen/_logout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/uitloggen/_logout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/wachtwoord-reset/_reset-password.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/wachtwoord-reset/_reset-password.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/wachtwoord-veranderen/_change-password.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/wachtwoord-veranderen/_change-password.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/wachtwoord-vergeten/ForgetPasswordFormComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/wachtwoord-vergeten/ForgetPasswordFormComponent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/wachtwoord-vergeten/_forgot-password.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/wachtwoord-vergeten/_forgot-password.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/api_.locales.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/api_.locales.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/utils/matches.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/matches.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,9 +170,9 @@
       <command value="Develop (npm)" />
     </option>
   </component>
-  <component name="RunManager" selected="Compound.Develop">
+  <component name="RunManager" selected="npm.dev:storybook">
     <configuration name="Develop" type="CompoundRunConfigurationType">
-      <toRun name="dev:remix" type="js.build_tools.npm" />
+      <toRun name="dev:app" type="js.build_tools.npm" />
       <toRun name="dev:storybook" type="js.build_tools.npm" />
       <method v="2" />
     </configuration>
@@ -250,11 +226,11 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="dev:remix" type="js.build_tools.npm" nameIsGenerated="true">
+    <configuration name="dev:app" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="dev:remix" />
+        <script value="dev:app" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -272,7 +248,7 @@
     </configuration>
     <list>
       <item itemvalue="Compound.Develop" />
-      <item itemvalue="npm.dev:remix" />
+      <item itemvalue="npm.dev:app" />
       <item itemvalue="npm.dev:storybook" />
       <item itemvalue="Vitest.All Tests" />
       <item itemvalue="Vitest.validateLogin" />
@@ -329,15 +305,7 @@
       <workItem from="1741167991516" duration="9123000" />
       <workItem from="1741177491521" duration="5426000" />
       <workItem from="1741335542037" duration="21807000" />
-      <workItem from="1741601622656" duration="29025000" />
-    </task>
-    <task id="LOCAL-00022" summary="Finished password reset flow">
-      <option name="closed" value="true" />
-      <created>1732617421147</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1732617421147</updated>
+      <workItem from="1741601622656" duration="29215000" />
     </task>
     <task id="LOCAL-00023" summary="Updated GH action file to run both unit and component tests">
       <option name="closed" value="true" />
@@ -723,7 +691,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741702821493</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="Ran the RRv7 codemod, manually made some improvements and fixes.">
+      <option name="closed" value="true" />
+      <created>1741703420540</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1741703420540</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -766,7 +742,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Refactored Puck block components in terms of name and label, updated Puck and added a class that allows us to use TinyMCE in Puck overriding the default pointer events setting" />
     <MESSAGE value="Added Button Block as Puck component" />
     <MESSAGE value="Changed page editor layout to feel more like an actual page" />
     <MESSAGE value="Added GridBlock to Puck" />
@@ -791,7 +766,8 @@
     <MESSAGE value="Ignore workflow and helm templates in Prettier" />
     <MESSAGE value="Turned on the future flag for route config." />
     <MESSAGE value="Removed deprecated SerializedFrom type." />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed deprecated SerializedFrom type." />
+    <MESSAGE value="Ran the RRv7 codemod, manually made some improvements and fixes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Ran the RRv7 codemod, manually made some improvements and fixes." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
