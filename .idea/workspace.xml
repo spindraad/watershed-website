@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Ran the RRv7 codemod, manually made some improvements and fixes.">
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Changed scripts">
+      <change afterPath="$PROJECT_DIR$/react-router.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -305,15 +309,7 @@
       <workItem from="1741167991516" duration="9123000" />
       <workItem from="1741177491521" duration="5426000" />
       <workItem from="1741335542037" duration="21807000" />
-      <workItem from="1741601622656" duration="29215000" />
-    </task>
-    <task id="LOCAL-00023" summary="Updated GH action file to run both unit and component tests">
-      <option name="closed" value="true" />
-      <created>1732620491502</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1732620491502</updated>
+      <workItem from="1741601622656" duration="29614000" />
     </task>
     <task id="LOCAL-00024" summary="Small improvements to make sure everything is up, running and build">
       <option name="closed" value="true" />
@@ -699,7 +695,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741703420540</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="Changed scripts">
+      <option name="closed" value="true" />
+      <created>1741703575084</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1741703575084</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -742,7 +746,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added Button Block as Puck component" />
     <MESSAGE value="Changed page editor layout to feel more like an actual page" />
     <MESSAGE value="Added GridBlock to Puck" />
     <MESSAGE value="Added footer to the editor for the Puck fields, and improved the button block" />
@@ -767,7 +770,8 @@
     <MESSAGE value="Turned on the future flag for route config." />
     <MESSAGE value="Removed deprecated SerializedFrom type." />
     <MESSAGE value="Ran the RRv7 codemod, manually made some improvements and fixes." />
-    <option name="LAST_COMMIT_MESSAGE" value="Ran the RRv7 codemod, manually made some improvements and fixes." />
+    <MESSAGE value="Changed scripts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed scripts" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
