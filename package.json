@@ -43,6 +43,10 @@
     "storybook:serve": "http-server storybook-static -p 6006 --silent",
     "storybook:wait-until-reachable": "wait-on tcp:6006",
     "generate": "plop component --",
+    "release:patch": "npm version patch",
+    "release:minor": "npm version minor",
+    "release:major": "npm version major",
+    "release:beta": "npm version prerelease",
     "postversion": "git push && git push --tags"
   },
   "dependencies": {
