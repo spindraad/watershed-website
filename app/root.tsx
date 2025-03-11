@@ -7,8 +7,10 @@ import {
   ScrollRestoration,
   useRouteError,
   useRouteLoaderData,
-} from '@remix-run/react';
-import { json, LinksFunction, LoaderFunctionArgs } from '@remix-run/node';
+  data,
+  type LinksFunction,
+  type LoaderFunctionArgs,
+} from 'react-router';
 import { useShoelace, ShoelaceContext } from '~/components/shoelace';
 import i18nServer from '~/modules/i18n.server';
 import { getErrorMessage } from '~/utils/errors';
@@ -38,7 +40,7 @@ export async function loader({ request }: LoaderFunctionArgs) {
   const user = await getUser(request);
   const locale = await i18nServer.getLocale(request);
   const url = new URL(request.url);
-  return json({
+  return data({
     user,
     BASE_URL: url.origin,
     locale,

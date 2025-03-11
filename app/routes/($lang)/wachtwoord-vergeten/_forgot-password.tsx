@@ -1,6 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { ActionFunctionArgs, data } from '@remix-run/node';
-import { useActionData } from '@remix-run/react';
+import { type ActionFunctionArgs, data, useActionData } from 'react-router';
 import Heading from '~/components/Heading';
 import ForgetPasswordFormComponent from './ForgetPasswordFormComponent';
 import {

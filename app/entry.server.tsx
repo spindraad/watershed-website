@@ -1,8 +1,8 @@
 import { PassThrough } from 'node:stream';
 
-import type { AppLoadContext, EntryContext } from '@remix-run/node';
-import { createReadableStreamFromReadable } from '@remix-run/node';
-import { RemixServer } from '@remix-run/react';
+import type { AppLoadContext, EntryContext } from 'react-router';
+import { createReadableStreamFromReadable } from '@react-router/node';
+import { ServerRouter } from 'react-router';
 import { isbot } from 'isbot';
 import { renderToPipeableStream } from 'react-dom/server';
 import { createInstance, i18n as i18next } from 'i18next';
@@ -16,7 +16,7 @@ export default async function handleRequest(
   request: Request,
   responseStatusCode: number,
   responseHeaders: Headers,
-  remixContext: EntryContext,
+  reactRouterContext: EntryContext,
   // This is ignored so we can keep it in the template for visibility.  Feel
   // free to delete this parameter in your app if you're not using it!
 
@@ -24,7 +24,7 @@ export default async function handleRequest(
 ) {
   const instance = createInstance();
   const lng = await i18nServer.getLocale(request);
-  const ns = i18nServer.getRouteNamespaces(remixContext);
+  const ns = i18nServer.getRouteNamespaces(reactRouterContext);
 
   await instance.use(initReactI18next).init({ ...i18n, lng, ns });
 
@@ -33,7 +33,7 @@ export default async function handleRequest(
         request,
         responseStatusCode,
         responseHeaders,
-        remixContext,
+        reactRouterContext,
         loadContext,
         instance,
       )
@@ -41,7 +41,7 @@ export default async function handleRequest(
         request,
         responseStatusCode,
         responseHeaders,
-        remixContext,
+        reactRouterContext,
         loadContext,
         instance,
       );
@@ -51,7 +51,7 @@ async function handleBotRequest(
   request: Request,
   responseStatusCode: number,
   responseHeaders: Headers,
-  remixContext: EntryContext,
+  reactRouterContext: EntryContext,
   _loadContext: AppLoadContext,
   i18next: i18next,
 ) {
@@ -59,11 +59,7 @@ async function handleBotRequest(
     let shellRendered = false;
     const { pipe, abort } = renderToPipeableStream(
       <I18nextProvider i18n={i18next}>
-        <RemixServer
-          context={remixContext}
-          url={request.url}
-          abortDelay={streamTimeout + 1000}
-        />
+        <ServerRouter context={reactRouterContext} url={request.url} />
       </I18nextProvider>,
       {
         onAllReady() {
@@ -105,7 +101,7 @@ async function handleBrowserRequest(
   request: Request,
   responseStatusCode: number,
   responseHeaders: Headers,
-  remixContext: EntryContext,
+  reactRouterContext: EntryContext,
   _loadContext: AppLoadContext,
   i18next: i18next,
 ) {
@@ -113,11 +109,7 @@ async function handleBrowserRequest(
     let shellRendered = false;
     const { pipe, abort } = renderToPipeableStream(
       <I18nextProvider i18n={i18next}>
-        <RemixServer
-          context={remixContext}
-          url={request.url}
-          abortDelay={streamTimeout + 1000}
-        />
+        <ServerRouter context={reactRouterContext} url={request.url} />
       </I18nextProvider>,
       {
         onShellReady() {

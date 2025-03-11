@@ -1,4 +1,4 @@
-import { createCookieSessionStorage, redirect, Session } from '@remix-run/node';
+import { createCookieSessionStorage, redirect, Session } from 'react-router';
 import invariant from 'tiny-invariant';
 import { User } from '@prisma/client';
 import { getUserById } from '~/models/user.server';

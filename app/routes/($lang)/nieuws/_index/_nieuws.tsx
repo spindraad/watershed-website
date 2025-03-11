@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { useLoaderData } from '@remix-run/react';
+import { useLoaderData } from 'react-router';
 import Breadcrumbs from '~/components/Breadcrumbs';
 import { getNewsArticlesForOverview } from '~/models/news.server';
 import ArticleCard from '~/components/ArticleCard';

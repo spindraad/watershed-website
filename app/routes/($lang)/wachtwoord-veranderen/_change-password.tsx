@@ -1,6 +1,10 @@
 import { useTranslation } from 'react-i18next';
-import { ActionFunctionArgs, data } from '@remix-run/node';
-import { useActionData, useSearchParams } from '@remix-run/react';
+import {
+  type ActionFunctionArgs,
+  data,
+  useActionData,
+  useSearchParams,
+} from 'react-router';
 import Heading from '~/components/Heading';
 import ChangePasswordForm from '~/components/ChangePasswordForm';
 import {

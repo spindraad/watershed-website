@@ -1,5 +1,4 @@
-import { useLoaderData } from '@remix-run/react';
-import { LoaderFunctionArgs, redirect } from '@remix-run/node';
+import { useLoaderData, type LoaderFunctionArgs, redirect } from 'react-router';
 import Heading from '~/components/Heading';
 import { getUser } from '~/.server/session';
 

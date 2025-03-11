@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { Form } from '@remix-run/react';
+import { Form } from 'react-router';
 import Input from '~/components/Input';
 import { useContext } from 'react';
 import { ShoelaceContext } from '~/components/shoelace';

@@ -5,7 +5,7 @@ import * as dutchBundle from '~/locales/nl';
 import * as papiamentuBundle from '~/locales/pap';
 
 // List of supported languages, where NL is the default language.
-export const supportedLanguages = ['en', 'pap', 'nl'] as const;
+export const supportedLanguages = ['en', 'pap', 'nl'];
 
 export type SupportedLanguages = (typeof supportedLanguages)[number];
 
