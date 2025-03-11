@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Swapped the deprecated json() functions for the new data() functions where applicable.">
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Changed the stream/abort timeouts">
       <change beforePath="$PROJECT_DIR$/.github/workflows/deploy.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/deploy.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.github/workflows/pr-lint-build.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/pr-lint-build.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.prettierignore" beforeDir="false" afterPath="$PROJECT_DIR$/.prettierignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Chart.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Chart.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/entry.server.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/entry.server.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/values.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/values.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -308,15 +308,7 @@
       <workItem from="1741167991516" duration="9123000" />
       <workItem from="1741177491521" duration="5426000" />
       <workItem from="1741335542037" duration="21807000" />
-      <workItem from="1741601622656" duration="27128000" />
-    </task>
-    <task id="LOCAL-00018" summary="For now run only vitest in CI builds">
-      <option name="closed" value="true" />
-      <created>1732463230392</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1732463230392</updated>
+      <workItem from="1741601622656" duration="27342000" />
     </task>
     <task id="LOCAL-00019" summary="Changed url for the login and logout pages to Dutch">
       <option name="closed" value="true" />
@@ -702,7 +694,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741701379514</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="Changed the stream/abort timeouts">
+      <option name="closed" value="true" />
+      <created>1741701641034</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1741701641034</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -745,7 +745,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Created a summary component for a product" />
     <MESSAGE value="Added the improvements of generated components also to the generated form components, including some other stuff that's handy for forms" />
     <MESSAGE value="Integrated the TinyMCE with Puck" />
     <MESSAGE value="Refactor Heading component and enhance RichEditor integration" />
@@ -770,7 +769,8 @@
     <MESSAGE value="Updated Chart version after changes made for deployment" />
     <MESSAGE value="Changed the prisma dev deploy script to run migrate reset, which will reset the DB on each deploy." />
     <MESSAGE value="Swapped the deprecated json() functions for the new data() functions where applicable." />
-    <option name="LAST_COMMIT_MESSAGE" value="Swapped the deprecated json() functions for the new data() functions where applicable." />
+    <MESSAGE value="Changed the stream/abort timeouts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed the stream/abort timeouts" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
