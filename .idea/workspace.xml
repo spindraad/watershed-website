@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Explicitly regenerate prisma during Docker build.">
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Moved typescript to prod deps">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/templates/deployment.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -304,15 +306,7 @@
       <workItem from="1741167991516" duration="9123000" />
       <workItem from="1741177491521" duration="5426000" />
       <workItem from="1741335542037" duration="21807000" />
-      <workItem from="1741601622656" duration="14746000" />
-    </task>
-    <task id="LOCAL-00014" summary="A lot of improvements to the current state of the login form, with some (extracted) components">
-      <option name="closed" value="true" />
-      <created>1732447384881</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1732447384881</updated>
+      <workItem from="1741601622656" duration="16333000" />
     </task>
     <task id="LOCAL-00015" summary="Added validations for checking the login flow with Zod, and appended UI to accommodate for errors. Updated Dutch and English locale as well">
       <option name="closed" value="true" />
@@ -698,7 +692,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741619882898</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="Moved typescript to prod deps">
+      <option name="closed" value="true" />
+      <created>1741620230025</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1741620230025</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -741,7 +743,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Created ProjectSummary component" />
     <MESSAGE value="Created EventSummary component" />
     <MESSAGE value="Create artist profile summary component and added missing translations for a few components" />
     <MESSAGE value="Created a summary component for one or more artists" />
@@ -766,7 +767,8 @@
     <MESSAGE value="Moved the prisma dependencies to production, this time correctly." />
     <MESSAGE value="Moved dependent packages for prisma to deps" />
     <MESSAGE value="Explicitly regenerate prisma during Docker build." />
-    <option name="LAST_COMMIT_MESSAGE" value="Explicitly regenerate prisma during Docker build." />
+    <MESSAGE value="Moved typescript to prod deps" />
+    <option name="LAST_COMMIT_MESSAGE" value="Moved typescript to prod deps" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

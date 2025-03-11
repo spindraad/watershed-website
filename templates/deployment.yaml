@@ -22,7 +22,7 @@ spec:
       initContainers:
         - name: db-seed
           image: {{ .Values.app.image.repository }}:{{ .Values.app.image.tag }}
-          command: ["sh", "-c", "npm run db:seed"]
+          command: ["sh", "-c", "npm run db:migrate:deploy" , "npm run db:seed"]
           env:
             - name: DATABASE_PASSWORD
               valueFrom:
