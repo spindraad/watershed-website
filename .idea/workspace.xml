@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Ignore workflow and helm templates in Prettier">
-      <change afterPath="$PROJECT_DIR$/app/routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.ts" afterDir="false" />
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Turned on the future flag for route config.">
+      <change beforePath="$PROJECT_DIR$/app/models/user.server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.server.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -308,15 +304,7 @@
       <workItem from="1741167991516" duration="9123000" />
       <workItem from="1741177491521" duration="5426000" />
       <workItem from="1741335542037" duration="21807000" />
-      <workItem from="1741601622656" duration="27777000" />
-    </task>
-    <task id="LOCAL-00020" summary="Created components for the forget password route">
-      <option name="closed" value="true" />
-      <created>1732546781309</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1732546781309</updated>
+      <workItem from="1741601622656" duration="27944000" />
     </task>
     <task id="LOCAL-00021" summary="Implemented reset password flow">
       <option name="closed" value="true" />
@@ -702,7 +690,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741701708031</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="Turned on the future flag for route config.">
+      <option name="closed" value="true" />
+      <created>1741702194507</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1741702194507</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -745,7 +741,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Integrated the TinyMCE with Puck" />
     <MESSAGE value="Refactor Heading component and enhance RichEditor integration" />
     <MESSAGE value="Refactored Puck block components in terms of name and label, updated Puck and added a class that allows us to use TinyMCE in Puck overriding the default pointer events setting" />
     <MESSAGE value="Added Button Block as Puck component" />
@@ -770,7 +765,8 @@
     <MESSAGE value="Swapped the deprecated json() functions for the new data() functions where applicable." />
     <MESSAGE value="Changed the stream/abort timeouts" />
     <MESSAGE value="Ignore workflow and helm templates in Prettier" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ignore workflow and helm templates in Prettier" />
+    <MESSAGE value="Turned on the future flag for route config." />
+    <option name="LAST_COMMIT_MESSAGE" value="Turned on the future flag for route config." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

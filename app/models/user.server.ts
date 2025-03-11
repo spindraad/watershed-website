@@ -1,11 +1,8 @@
 import { prisma } from '~/.server/db';
-import { User as DbUser } from '@prisma/client';
+import { type User } from '@prisma/client';
 
-import { SerializeFrom } from '@remix-run/node';
 import bcrypt from 'bcryptjs';
 import { addHours } from 'date-fns';
-
-type User = SerializeFrom<DbUser> | DbUser;
 
 export { type User };
 
