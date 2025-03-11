@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { ActionFunctionArgs, json } from '@remix-run/node';
+import { ActionFunctionArgs, data } from '@remix-run/node';
 import { useActionData } from '@remix-run/react';
 import Heading from '~/components/Heading';
 import ForgetPasswordFormComponent from './ForgetPasswordFormComponent';
@@ -27,7 +27,7 @@ export async function action({ request }: ActionFunctionArgs) {
     const result = await validateForgetPassword(request);
 
     if (!result.success) {
-      return json<ActionData>(
+      return data<ActionData>(
         {
           success: false,
           errors: result.errors,
@@ -44,7 +44,7 @@ export async function action({ request }: ActionFunctionArgs) {
       passwordResetSession.token,
     );
 
-    return json<ActionData>({ success: true });
+    return data<ActionData>({ success: true });
   } else {
     return new Response(null, { status: 405 });
   }

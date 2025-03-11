@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { ActionFunctionArgs, json } from '@remix-run/node';
+import { ActionFunctionArgs, data } from '@remix-run/node';
 import { useActionData, useSearchParams } from '@remix-run/react';
 import invariant from 'tiny-invariant';
 import { isAfter } from 'date-fns';
@@ -39,7 +39,7 @@ export async function action({ request }: ActionFunctionArgs) {
     const results = await validateChangePassword(request);
 
     if (!results.success) {
-      return json<ActionData>(
+      return data<ActionData>(
         {
           success: false,
           errors: results.errors,
@@ -60,7 +60,7 @@ export async function action({ request }: ActionFunctionArgs) {
 
       await deletePasswordResetSession(token);
 
-      return json<ActionData>({
+      return data<ActionData>({
         success: true,
         data: {
           emailaddress: resetSession.email,
@@ -70,7 +70,7 @@ export async function action({ request }: ActionFunctionArgs) {
       });
     } catch (error: unknown) {
       if (error instanceof Prisma.PrismaClientKnownRequestError) {
-        return json<ActionData>({
+        return data<ActionData>({
           success: false,
           errors: {
             token: { errorCode: 'MissingToken' },
@@ -78,7 +78,7 @@ export async function action({ request }: ActionFunctionArgs) {
         });
       }
 
-      return json<ActionData>({
+      return data<ActionData>({
         success: false,
         errors: {
           token: { errorCode: 'ExpiredToken' },

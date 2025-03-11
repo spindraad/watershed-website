@@ -39,7 +39,7 @@ export async function verifyLogin(email: User['email'], password: string) {
 }
 
 export async function getPasswordResetSession(token: string) {
-  return prisma.passwordResets.findUniqueOrThrow({
+  return prisma.passwordReset.findUniqueOrThrow({
     where: {
       token,
     },
@@ -52,7 +52,7 @@ export async function createPasswordResetSession(email: User['email']) {
 
   await changeUserPasswordType(email, 'RESET');
 
-  return prisma.passwordResets.create({
+  return prisma.passwordReset.create({
     data: {
       email,
       expiresAt,
@@ -61,7 +61,7 @@ export async function createPasswordResetSession(email: User['email']) {
 }
 
 export async function deletePasswordResetSession(token: string) {
-  return prisma.passwordResets.delete({
+  return prisma.passwordReset.delete({
     where: {
       token,
     },

@@ -1,5 +1,5 @@
 import { useLoaderData } from '@remix-run/react';
-import { json, LoaderFunctionArgs, redirect } from '@remix-run/node';
+import { LoaderFunctionArgs, redirect } from '@remix-run/node';
 import Heading from '~/components/Heading';
 import { getUser } from '~/.server/session';
 
@@ -10,7 +10,7 @@ export async function loader({ request }: LoaderFunctionArgs) {
     return redirect('/inloggen');
   }
 
-  return json({ user });
+  return { user };
 }
 
 export default function AccountRoute() {

@@ -1,4 +1,4 @@
-import { type LoaderFunctionArgs, json } from '@remix-run/node';
+import { type LoaderFunctionArgs } from '@remix-run/node';
 import { cacheHeader } from 'pretty-cache-header';
 import { z } from 'zod';
 import { resources } from '~/config/i18n';
@@ -44,5 +44,5 @@ export async function loader({ request }: LoaderFunctionArgs) {
     );
   }
 
-  return json(namespaces[ns], { headers });
+  return Response.json(namespaces[ns], { headers });
 }

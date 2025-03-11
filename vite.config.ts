@@ -7,6 +7,13 @@ import react from '@vitejs/plugin-react';
 
 const isStorybook = process.argv[1]?.includes('storybook');
 
+declare module '@remix-run/node' {
+  // or cloudflare, deno, etc.
+  interface Future {
+    v3_singleFetch: true;
+  }
+}
+
 export default defineConfig({
   plugins: [
     envOnlyMacros(),
@@ -20,6 +27,8 @@ export default defineConfig({
           v3_fetcherPersist: true,
           v3_relativeSplatPath: true,
           v3_throwAbortReason: true,
+          v3_lazyRouteDiscovery: true,
+          v3_singleFetch: true,
         },
       })
     ),

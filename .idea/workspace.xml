@@ -4,8 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Changed the prisma dev deploy script to run migrate reset, which will reset the DB on each deploy.">
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Swapped the deprecated json() functions for the new data() functions where applicable.">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/user.server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.server.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/account/_account.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/account/_account.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/inloggen/_login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/inloggen/_login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/nieuws/_index/_nieuws.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/nieuws/_index/_nieuws.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/wachtwoord-reset/_reset-password.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/wachtwoord-reset/_reset-password.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/wachtwoord-veranderen/_change-password.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/wachtwoord-veranderen/_change-password.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/wachtwoord-vergeten/_forgot-password.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/wachtwoord-vergeten/_forgot-password.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/api_.locales.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/api_.locales.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +44,10 @@
             <RecentBranchesForRepo>
               <option name="branches">
                 <list>
+                  <RecentBranch>
+                    <option name="branchName" value="feature/WAT-129_update_remix_to_rrv7" />
+                    <option name="lastUsedInstant" value="1741698717" />
+                  </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="dev" />
                     <option name="lastUsedInstant" value="1741691474" />
@@ -99,47 +115,47 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenDatabaseViewOnStart": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "Vitest.All Tests.executor": "Run",
-    "Vitest.validateLogin.executor": "Run",
-    "Vitest.validateLogin.should return success: false when emailaddress is invalid.executor": "Run",
-    "Vitest.validateLogin.should return success: false when emailaddress is missing.executor": "Run",
-    "git-widget-placeholder": "dev",
-    "javascript.nodejs.core.library.configured.version": "22.11.0",
-    "javascript.nodejs.core.library.typings.version": "22.9.0",
-    "last_opened_file_path": "/Users/lody/dev/projects/watershed-website/scaffold-templates/plop/form",
-    "node.js.detected.package.standard": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "node",
-    "nodejs_package_manager_path": "npm",
-    "npm.Develop.executor": "Run",
-    "npm.dev:remix.executor": "Debug",
-    "npm.dev:storybook.executor": "Debug",
-    "npm.docker:start.executor": "Run",
-    "prettierjs.PrettierConfiguration.Package": "/Users/lody/dev/projects/watershed-website/node_modules/prettier",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "/Users/lody/dev/projects/watershed-website/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenDatabaseViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Vitest.All Tests.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.validateLogin.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.validateLogin.should return success: false when emailaddress is invalid.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.validateLogin.should return success: false when emailaddress is missing.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/WAT-129__update__remix__to__rrv7&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;22.11.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;22.9.0&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/lody/dev/projects/watershed-website/scaffold-templates/plop/form&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.Develop.executor&quot;: &quot;Run&quot;,
+    &quot;npm.dev:remix.executor&quot;: &quot;Debug&quot;,
+    &quot;npm.dev:storybook.executor&quot;: &quot;Debug&quot;,
+    &quot;npm.docker:start.executor&quot;: &quot;Run&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/lody/dev/projects/watershed-website/node_modules/prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/lody/dev/projects/watershed-website/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ],
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "Markdown",
-      "TEXT",
-      "XML"
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;Markdown&quot;,
+      &quot;TEXT&quot;,
+      &quot;XML&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/scaffold-templates/plop/form" />
@@ -165,7 +181,7 @@
       <command value="Develop (npm)" />
     </option>
   </component>
-  <component name="RunManager" selected="Vitest.All Tests">
+  <component name="RunManager" selected="Compound.Develop">
     <configuration name="Develop" type="CompoundRunConfigurationType">
       <toRun name="dev:remix" type="js.build_tools.npm" />
       <toRun name="dev:storybook" type="js.build_tools.npm" />
@@ -300,7 +316,7 @@
       <workItem from="1741167991516" duration="9123000" />
       <workItem from="1741177491521" duration="5426000" />
       <workItem from="1741335542037" duration="21807000" />
-      <workItem from="1741601622656" duration="22909000" />
+      <workItem from="1741601622656" duration="27031000" />
     </task>
     <task id="LOCAL-00017" summary="Adjusted GH Actions to also run tests">
       <option name="closed" value="true" />
@@ -737,7 +753,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Created a summary component for one or more artists" />
     <MESSAGE value="Created a summary component for a product" />
     <MESSAGE value="Added the improvements of generated components also to the generated form components, including some other stuff that's handy for forms" />
     <MESSAGE value="Integrated the TinyMCE with Puck" />
@@ -762,7 +777,8 @@
     <MESSAGE value="Moved typescript to prod deps" />
     <MESSAGE value="Updated Chart version after changes made for deployment" />
     <MESSAGE value="Changed the prisma dev deploy script to run migrate reset, which will reset the DB on each deploy." />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed the prisma dev deploy script to run migrate reset, which will reset the DB on each deploy." />
+    <MESSAGE value="Swapped the deprecated json() functions for the new data() functions where applicable." />
+    <option name="LAST_COMMIT_MESSAGE" value="Swapped the deprecated json() functions for the new data() functions where applicable." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

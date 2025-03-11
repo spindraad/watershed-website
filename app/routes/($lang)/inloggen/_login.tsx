@@ -1,6 +1,6 @@
 import {
   ActionFunctionArgs,
-  json,
+  data,
   MetaFunction,
   redirect,
 } from '@remix-run/node';
@@ -20,7 +20,7 @@ export async function action({ request }: ActionFunctionArgs) {
   const results = await validateLogin(request);
 
   if (!results.success) {
-    return json<ActionData>(results.errors, { status: 400 });
+    return data<ActionData>(results.errors, { status: 400 });
   }
 
   const formData = await request.formData();
@@ -39,7 +39,7 @@ export async function action({ request }: ActionFunctionArgs) {
   const user = await verifyLogin(emailaddress, password);
 
   if (!user) {
-    return json<ActionData>(
+    return data<ActionData>(
       {
         userNotFound: 'invalid_credentials',
       },
