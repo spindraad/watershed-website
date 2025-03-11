@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Moved typescript to prod deps">
-      <change beforePath="$PROJECT_DIR$/Chart.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Chart.yaml" afterDir="false" />
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Updated Chart version after changes made for deployment">
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -300,15 +300,7 @@
       <workItem from="1741167991516" duration="9123000" />
       <workItem from="1741177491521" duration="5426000" />
       <workItem from="1741335542037" duration="21807000" />
-      <workItem from="1741601622656" duration="21573000" />
-    </task>
-    <task id="LOCAL-00015" summary="Added validations for checking the login flow with Zod, and appended UI to accommodate for errors. Updated Dutch and English locale as well">
-      <option name="closed" value="true" />
-      <created>1732462394318</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1732462394318</updated>
+      <workItem from="1741601622656" duration="22777000" />
     </task>
     <task id="LOCAL-00016" summary="Added validations for checking the login flow with Zod, and appended UI to accommodate for errors. Updated Dutch and English locale as well">
       <option name="closed" value="true" />
@@ -694,7 +686,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741620230025</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="Updated Chart version after changes made for deployment">
+      <option name="closed" value="true" />
+      <created>1741691993206</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1741691993206</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -737,7 +737,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Created EventSummary component" />
     <MESSAGE value="Create artist profile summary component and added missing translations for a few components" />
     <MESSAGE value="Created a summary component for one or more artists" />
     <MESSAGE value="Created a summary component for a product" />
@@ -762,7 +761,8 @@
     <MESSAGE value="Moved dependent packages for prisma to deps" />
     <MESSAGE value="Explicitly regenerate prisma during Docker build." />
     <MESSAGE value="Moved typescript to prod deps" />
-    <option name="LAST_COMMIT_MESSAGE" value="Moved typescript to prod deps" />
+    <MESSAGE value="Updated Chart version after changes made for deployment" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated Chart version after changes made for deployment" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
