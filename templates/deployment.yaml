@@ -47,21 +47,13 @@ spec:
                 secretKeyRef:
                   name: {{ .Values.app.name }}-session-secret
                   key: SESSION_SECRET
-            - name: DATABASE_HOST
-              value: {{ .Values.app.name }}-postgresql-service
-            - name: DATABASE_PORT
-              value: "5432"
-            - name: DATABASE_USER
-              value: "{{ .Values.postgresql.auth.username }}"
             - name: DATABASE_PASSWORD
               valueFrom:
                 secretKeyRef:
                   name: {{ .Values.app.name }}-postgresql-secret
                   key: POSTGRES_PASSWORD
-            - name: DATABASE_NAME
-              value: "{{ .Values.postgresql.auth.database }}"
             - name: DATABASE_URL
-              value: "postgres://$(DATABASE_USER):$(DATABASE_PASSWORD)@$(DATABASE_HOST):$(DATABASE_PORT)/$(DATABASE_NAME)"
+              value: "postgres://{{ .Values.postgresql.auth.username }}:$(DATABASE_PASSWORD)@{{ .Values.app.name }}-postgresql-service:5432/{{ .Values.postgresql.auth.database }}"
           resources:
             requests:
               cpu: {{ .Values.resources.requests.cpu | default "100m" }}
