@@ -32,8 +32,11 @@ export default function AccountMenu({ user }: Props) {
       <div>
         <h3 className="font-bold">{t('AdminMenuLinks.Title')}</h3>
         <Menu>
-          <MenuItem to="/account" icon="calendar2-event">
+          <MenuItem to="/admin/evenementen" icon="calendar2-event">
             {t('AdminMenuLinks.Events')}
+          </MenuItem>
+          <MenuItem to="/admin/projecten" icon="kanban">
+            {t('AdminMenuLinks.Projects')}
           </MenuItem>
         </Menu>
       </div>

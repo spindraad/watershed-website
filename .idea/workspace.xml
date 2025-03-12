@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Removed some testing code I forgot to delete.">
-      <change afterPath="$PROJECT_DIR$/app/routes/($lang)/account/_index/_index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routes/($lang)/account/instellingen/_instellingen.tsx" afterDir="false" />
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Setup basic account page structure so that we can start with the admin work">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/locales/en.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/en.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/locales/nl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/nl.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/account/_account.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/account/_account.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/account/AccountMenu.translations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/account/AccountMenu.translations.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/account/AccountMenu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/account/AccountMenu.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/seed/_content.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/seed/_content.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -314,15 +313,7 @@
       <workItem from="1741167991516" duration="9123000" />
       <workItem from="1741177491521" duration="5426000" />
       <workItem from="1741335542037" duration="21807000" />
-      <workItem from="1741601622656" duration="41802000" />
-    </task>
-    <task id="LOCAL-00027" summary="Improved the way the seeding command is run">
-      <option name="closed" value="true" />
-      <created>1733841302564</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1733841302564</updated>
+      <workItem from="1741601622656" duration="42321000" />
     </task>
     <task id="LOCAL-00028" summary="DB is now seeded with localised values, where Papiamentu is replaced with Esperanto">
       <option name="closed" value="true" />
@@ -708,7 +699,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741776400952</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="Setup basic account page structure so that we can start with the admin work">
+      <option name="closed" value="true" />
+      <created>1741781802954</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1741781802954</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -751,7 +750,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Created Helm templates in order to deploy this application on the k8s clusters" />
     <MESSAGE value="CI/CD improvements: Node version is now specified in an .nvmrc file for re-use. Added caching and a deploy job for the new clusters (only dev is enabled now)." />
     <MESSAGE value="Since the version number is playing a bigger role, we're moving to a beta version now." />
     <MESSAGE value="Fixed the invalid ingress template, and created a Dockerfile for the deployment of the app. Also adjusted helm ignore file" />
@@ -776,7 +774,8 @@
     <MESSAGE value="Last changes in order to switch to React Router v7" />
     <MESSAGE value="Refine route configuration and update dependencies" />
     <MESSAGE value="Removed some testing code I forgot to delete." />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed some testing code I forgot to delete." />
+    <MESSAGE value="Setup basic account page structure so that we can start with the admin work" />
+    <option name="LAST_COMMIT_MESSAGE" value="Setup basic account page structure so that we can start with the admin work" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

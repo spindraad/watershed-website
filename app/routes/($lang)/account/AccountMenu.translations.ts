@@ -9,6 +9,7 @@ export const en = {
     AdminMenuLinks: {
       Title: 'Administration',
       Events: 'Events',
+      Projects: 'Events',
     },
   },
 };
@@ -24,6 +25,7 @@ export const nl = {
     AdminMenuLinks: {
       Title: 'Administratie',
       Events: 'Evenementen',
+      Projects: 'Projecten',
     },
   },
 };
@@ -39,6 +41,7 @@ export const pap = {
     AdminMenuLinks: {
       Title: 'Admin',
       Events: 'Events',
+      Projects: 'Events',
     },
   },
 };
