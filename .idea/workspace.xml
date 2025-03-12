@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Refine route configuration and update dependencies">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Removed some testing code I forgot to delete.">
+      <change afterPath="$PROJECT_DIR$/app/routes/($lang)/account/_index/_index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/routes/($lang)/account/instellingen/_instellingen.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/root.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/root.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/inloggen/LoginFormComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/inloggen/LoginFormComponent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/locales/en.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/en.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/locales/nl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/nl.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/account/_account.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/account/_account.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,12 +38,16 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="feature/WAT-129_update_remix_to_rrv7" />
-                    <option name="lastUsedInstant" value="1741698717" />
+                    <option name="branchName" value="feature/WAT-79_crud_read_flow" />
+                    <option name="lastUsedInstant" value="1741777396" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="release/WAT-77_implement_generic_crud_flow" />
+                    <option name="lastUsedInstant" value="1741777369" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="dev" />
-                    <option name="lastUsedInstant" value="1741691474" />
+                    <option name="lastUsedInstant" value="1741777114" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="feature/wsh-43-nieuws" />
@@ -116,7 +122,7 @@
     "Vitest.validateLogin.executor": "Run",
     "Vitest.validateLogin.should return success: false when emailaddress is invalid.executor": "Run",
     "Vitest.validateLogin.should return success: false when emailaddress is missing.executor": "Run",
-    "git-widget-placeholder": "feature/WAT-129__update__remix__to__rrv7",
+    "git-widget-placeholder": "feature/WAT-79__crud__read__flow",
     "javascript.nodejs.core.library.configured.version": "22.11.0",
     "javascript.nodejs.core.library.typings.version": "22.9.0",
     "last_opened_file_path": "/Users/lody/dev/projects/watershed-website/scaffold-templates/plop/form",
@@ -308,15 +314,7 @@
       <workItem from="1741167991516" duration="9123000" />
       <workItem from="1741177491521" duration="5426000" />
       <workItem from="1741335542037" duration="21807000" />
-      <workItem from="1741601622656" duration="38047000" />
-    </task>
-    <task id="LOCAL-00026" summary="Added new models and updated seed command to fill DB">
-      <option name="closed" value="true" />
-      <created>1733840082928</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1733840082928</updated>
+      <workItem from="1741601622656" duration="41802000" />
     </task>
     <task id="LOCAL-00027" summary="Improved the way the seeding command is run">
       <option name="closed" value="true" />
@@ -702,7 +700,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741774743058</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="Removed some testing code I forgot to delete.">
+      <option name="closed" value="true" />
+      <created>1741776400952</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1741776400952</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -745,7 +751,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added footer to the editor for the Puck fields, and improved the button block" />
     <MESSAGE value="Created Helm templates in order to deploy this application on the k8s clusters" />
     <MESSAGE value="CI/CD improvements: Node version is now specified in an .nvmrc file for re-use. Added caching and a deploy job for the new clusters (only dev is enabled now)." />
     <MESSAGE value="Since the version number is playing a bigger role, we're moving to a beta version now." />
@@ -770,25 +775,8 @@
     <MESSAGE value="Changed scripts" />
     <MESSAGE value="Last changes in order to switch to React Router v7" />
     <MESSAGE value="Refine route configuration and update dependencies" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refine route configuration and update dependencies" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/app/components/shoelace.ts</url>
-          <line>54</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/app/components/shoelace.ts</url>
-          <line>56</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Removed some testing code I forgot to delete." />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed some testing code I forgot to delete." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
