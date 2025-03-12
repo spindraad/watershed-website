@@ -4,15 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Cleaned up the content structures, removing stuff we don't need. Also added link to projects for an admin">
-      <change afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/_beheer.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/_index/_index.tsx" afterDir="false" />
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Created the dynamic content route, and added a basic implementation of the content table.">
+      <change afterPath="$PROJECT_DIR$/app/components/ContentTable.stories.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/ContentTable.translations.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/ContentTable.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/:content/_index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/locales/en.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/en.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/locales/nl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/nl.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/account/AccountMenu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/account/AccountMenu.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/account/_account.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/account/_account.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/account/_index/_index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/account/_index/_index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/AdminMenu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/AdminMenu.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,48 +112,48 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenDatabaseViewOnStart": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "Vitest.All Tests.executor": "Run",
-    "Vitest.validateLogin.executor": "Run",
-    "Vitest.validateLogin.should return success: false when emailaddress is invalid.executor": "Run",
-    "Vitest.validateLogin.should return success: false when emailaddress is missing.executor": "Run",
-    "git-widget-placeholder": "feature/WAT-79__crud__read__flow",
-    "javascript.nodejs.core.library.configured.version": "22.11.0",
-    "javascript.nodejs.core.library.typings.version": "22.9.0",
-    "last_opened_file_path": "/Users/lody/dev/projects/watershed-website/scaffold-templates/plop/form",
-    "node.js.detected.package.standard": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "node",
-    "nodejs_package_manager_path": "npm",
-    "npm.Develop.executor": "Run",
-    "npm.dev:app.executor": "Debug",
-    "npm.dev:remix.executor": "Debug",
-    "npm.dev:storybook.executor": "Debug",
-    "npm.docker:start.executor": "Run",
-    "prettierjs.PrettierConfiguration.Package": "/Users/lody/dev/projects/watershed-website/node_modules/prettier",
-    "settings.editor.selected.configurable": "Errors",
-    "ts.external.directory.path": "/Users/lody/dev/projects/watershed-website/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenDatabaseViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Vitest.All Tests.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.validateLogin.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.validateLogin.should return success: false when emailaddress is invalid.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.validateLogin.should return success: false when emailaddress is missing.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/WAT-79__crud__read__flow&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;22.11.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;22.9.0&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/lody/dev/projects/watershed-website/scaffold-templates/plop/form&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.Develop.executor&quot;: &quot;Run&quot;,
+    &quot;npm.dev:app.executor&quot;: &quot;Debug&quot;,
+    &quot;npm.dev:remix.executor&quot;: &quot;Debug&quot;,
+    &quot;npm.dev:storybook.executor&quot;: &quot;Debug&quot;,
+    &quot;npm.docker:start.executor&quot;: &quot;Run&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/lody/dev/projects/watershed-website/node_modules/prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/lody/dev/projects/watershed-website/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ],
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "Markdown",
-      "TEXT",
-      "XML"
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;Markdown&quot;,
+      &quot;TEXT&quot;,
+      &quot;XML&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/scaffold-templates/plop/form" />
@@ -316,15 +314,7 @@
       <workItem from="1741167991516" duration="9123000" />
       <workItem from="1741177491521" duration="5426000" />
       <workItem from="1741335542037" duration="21807000" />
-      <workItem from="1741601622656" duration="44563000" />
-    </task>
-    <task id="LOCAL-00029" summary="Created barebones news overview route">
-      <option name="closed" value="true" />
-      <created>1733852331622</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1733852331622</updated>
+      <workItem from="1741601622656" duration="45943000" />
     </task>
     <task id="LOCAL-00030" summary="Created breadcrumbs">
       <option name="closed" value="true" />
@@ -710,7 +700,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741782251665</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="Refactored the account menu into a separate component and added admin/ route">
+      <option name="closed" value="true" />
+      <created>1741784759857</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1741784759857</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -753,8 +751,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Since the version number is playing a bigger role, we're moving to a beta version now." />
-    <MESSAGE value="Fixed the invalid ingress template, and created a Dockerfile for the deployment of the app. Also adjusted helm ignore file" />
     <MESSAGE value="Added postgres as a temporary db container for the dev environment." />
     <MESSAGE value="Deploy will now only be run on tagged versions." />
     <MESSAGE value="Added postversion script to push to origin" />
@@ -778,7 +774,9 @@
     <MESSAGE value="Removed some testing code I forgot to delete." />
     <MESSAGE value="Setup basic account page structure so that we can start with the admin work" />
     <MESSAGE value="Cleaned up the content structures, removing stuff we don't need. Also added link to projects for an admin" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleaned up the content structures, removing stuff we don't need. Also added link to projects for an admin" />
+    <MESSAGE value="Refactored the account menu into a separate component and added admin/ route" />
+    <MESSAGE value="Created the dynamic content route, and added a basic implementation of the content table." />
+    <option name="LAST_COMMIT_MESSAGE" value="Created the dynamic content route, and added a basic implementation of the content table." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

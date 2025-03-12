@@ -11,19 +11,19 @@ export default function AdminMenu() {
       <h2 className="text-xl font-bold">{t('Title')}</h2>
 
       <SubMenu title={t('Events.Title')}>
-        <SubMenuItem icon="card-list" to="/">
+        <SubMenuItem icon="card-list" to="evenementen">
           {t('Events.List')}
         </SubMenuItem>
-        <SubMenuItem icon="plus-square" to="/">
+        <SubMenuItem icon="plus-square" to="evenementen/nieuw">
           {t('Events.Create')}
         </SubMenuItem>
       </SubMenu>
 
       <SubMenu title={t('Projects.Title')}>
-        <SubMenuItem icon="card-list" to="/">
+        <SubMenuItem icon="card-list" to="projecten">
           {t('Projects.List')}
         </SubMenuItem>
-        <SubMenuItem icon="plus-square" to="/">
+        <SubMenuItem icon="plus-square" to="projecten/nieuw">
           {t('Projects.Create')}
         </SubMenuItem>
       </SubMenu>
