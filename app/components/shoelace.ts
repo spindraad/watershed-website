@@ -57,6 +57,7 @@ export function useShoelace({ URL }: { URL: string }) {
         setBasePath(`${URL}/shoelace-assets/`);
 
         import('@shoelace-style/shoelace/dist/react').then((components) => {
+          console.log('Loaded Shoelace components');
           setComponents({
             SlAlert: components.SlAlert,
             SlIcon: components.SlIcon,

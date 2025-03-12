@@ -42,7 +42,7 @@ export async function loader({ request }: LoaderFunctionArgs) {
   const url = new URL(request.url);
   return data({
     user,
-    BASE_URL: url.origin,
+    BASE_URL: url.origin ?? '',
     locale,
   });
 }
@@ -53,7 +53,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
     locale?: string;
     BASE_URL: string;
   };
-  const shoelace = useShoelace({ URL: data.BASE_URL });
+  const shoelace = useShoelace({
+    URL: 'http://localhost:5173',
+  });
 
   return (
     <html lang={data?.locale ?? 'nl'}>
