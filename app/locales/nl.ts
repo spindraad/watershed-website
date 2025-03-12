@@ -14,6 +14,8 @@ import { nl as AccountMenuTranslations } from '~/routes/($lang)/account/AccountM
 export const { AccountMenu } = AccountMenuTranslations;
 import { nl as AdminMenuTranslations } from '~/routes/($lang)/beheer/AdminMenu.translations';
 export const { AdminMenu } = AdminMenuTranslations;
+import { nl as ContentTableTranslations } from '~/components/ContentTable.translations';
+export const { ContentTable } = ContentTableTranslations;
 
 export const common = {
   title: 'Hallo Wereld!',

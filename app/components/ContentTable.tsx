@@ -3,10 +3,11 @@ import { useTranslation } from 'react-i18next';
 // import { ShoelaceContext } from '~/components/shoelace';
 import { Link } from 'react-router';
 import { format, isDate } from 'date-fns';
+import { SupportedLanguages } from '~/config/i18n';
 
 export type ContentTableItem = Record<
   string,
-  string | PrismaJson.Localised | number | Date
+  string | Record<SupportedLanguages, string> | number | Date
 >;
 
 type Props = {
@@ -15,6 +16,7 @@ type Props = {
 
 export default function ContentTable({ items }: Props) {
   const {
+    t,
     i18n: { language },
   } = useTranslation('ContentTable');
   // const {} = useContext(ShoelaceContext);
@@ -23,25 +25,27 @@ export default function ContentTable({ items }: Props) {
   headers.push('actions');
 
   function parseItemValue(item: ContentTableItem, header: string) {
-    if (typeof item[header] === 'object') {
-      return item[header][
-        language as PrismaJson.Localised as 'nl' | 'en' | 'pap'
-      ];
+    const value = item[header];
+
+    if (isDate(value)) {
+      return format(value, 'dd-MM-yyyy');
     }
 
-    if (isDate(item[header])) {
-      return format(item[header], 'dd-MM-yyyy');
+    if (typeof value === 'object') {
+      return value[language];
     }
 
-    return item[header];
+    return value;
   }
 
   return (
     <table>
       <thead>
-        {headers.map((header) => (
-          <th key={header}>{header}</th>
-        ))}
+        <tr>
+          {headers.map((header) => (
+            <th key={header}>{t(`TableHeaders.${header}`)}</th>
+          ))}
+        </tr>
       </thead>
       <tbody>
         {items.map((item, index) => (

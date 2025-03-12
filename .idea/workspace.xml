@@ -4,18 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Created the dynamic content route, and added a basic implementation of the content table.">
-      <change afterPath="$PROJECT_DIR$/app/models/events.server.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/projects.server.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f8f326ed-6bd3-472a-9a5c-e32229f833e4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f8f326ed-6bd3-472a-9a5c-e32229f833e4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f8f326ed-6bd3-472a-9a5c-e32229f833e4/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f8f326ed-6bd3-472a-9a5c-e32229f833e4/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Made a basic implementation of a dynamic event/project overview">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/ContentTable.translations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ContentTable.translations.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/components/ContentTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ContentTable.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/news.server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/news.server.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/:content/_index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/:content/_index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/seed/_content.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/seed/_content.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/locales/en.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/en.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/locales/nl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/nl.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -320,15 +314,7 @@
       <workItem from="1741177491521" duration="5426000" />
       <workItem from="1741335542037" duration="21807000" />
       <workItem from="1741601622656" duration="48801000" />
-      <workItem from="1741788770297" duration="380000" />
-    </task>
-    <task id="LOCAL-00031" summary="Turned off the linear update part of the build">
-      <option name="closed" value="true" />
-      <created>1733903002510</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1733903002510</updated>
+      <workItem from="1741788770297" duration="1339000" />
     </task>
     <task id="LOCAL-00032" summary="Created article preview card and tag components">
       <option name="closed" value="true" />
@@ -714,7 +700,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741785775699</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="Made a basic implementation of a dynamic event/project overview">
+      <option name="closed" value="true" />
+      <created>1741789215526</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1741789215526</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -757,7 +751,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added postgres as a temporary db container for the dev environment." />
     <MESSAGE value="Deploy will now only be run on tagged versions." />
     <MESSAGE value="Added postversion script to push to origin" />
     <MESSAGE value="Cleaned up the pr-lint-build.yml workflow, and added explicit build steps to the deploy job. This decouples the two." />
@@ -782,7 +775,8 @@
     <MESSAGE value="Cleaned up the content structures, removing stuff we don't need. Also added link to projects for an admin" />
     <MESSAGE value="Refactored the account menu into a separate component and added admin/ route" />
     <MESSAGE value="Created the dynamic content route, and added a basic implementation of the content table." />
-    <option name="LAST_COMMIT_MESSAGE" value="Created the dynamic content route, and added a basic implementation of the content table." />
+    <MESSAGE value="Made a basic implementation of a dynamic event/project overview" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made a basic implementation of a dynamic event/project overview" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

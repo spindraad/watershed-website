@@ -14,6 +14,8 @@ import { en as AccountMenuTranslations } from '~/routes/($lang)/account/AccountM
 export const { AccountMenu } = AccountMenuTranslations;
 import { en as AdminMenuTranslations } from '~/routes/($lang)/beheer/AdminMenu.translations';
 export const { AdminMenu } = AdminMenuTranslations;
+import { en as ContentTableTranslations } from '~/components/ContentTable.translations';
+export const { ContentTable } = ContentTableTranslations;
 
 export const common = {
   title: 'Hello World!',
