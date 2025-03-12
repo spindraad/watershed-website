@@ -3,3 +3,6 @@ node_modules
 storybook-static
 build
 templates
+Chart.yaml
+.github
+values.yaml

@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Changed the prisma dev deploy script to run migrate reset, which will reset the DB on each deploy.">
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Refine route configuration and update dependencies">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/root.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/root.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/inloggen/LoginFormComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/inloggen/LoginFormComponent.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +35,10 @@
             <RecentBranchesForRepo>
               <option name="branches">
                 <list>
+                  <RecentBranch>
+                    <option name="branchName" value="feature/WAT-129_update_remix_to_rrv7" />
+                    <option name="lastUsedInstant" value="1741698717" />
+                  </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="dev" />
                     <option name="lastUsedInstant" value="1741691474" />
@@ -109,7 +116,7 @@
     "Vitest.validateLogin.executor": "Run",
     "Vitest.validateLogin.should return success: false when emailaddress is invalid.executor": "Run",
     "Vitest.validateLogin.should return success: false when emailaddress is missing.executor": "Run",
-    "git-widget-placeholder": "dev",
+    "git-widget-placeholder": "feature/WAT-129__update__remix__to__rrv7",
     "javascript.nodejs.core.library.configured.version": "22.11.0",
     "javascript.nodejs.core.library.typings.version": "22.9.0",
     "last_opened_file_path": "/Users/lody/dev/projects/watershed-website/scaffold-templates/plop/form",
@@ -121,11 +128,12 @@
     "nodejs_interpreter_path": "node",
     "nodejs_package_manager_path": "npm",
     "npm.Develop.executor": "Run",
+    "npm.dev:app.executor": "Debug",
     "npm.dev:remix.executor": "Debug",
     "npm.dev:storybook.executor": "Debug",
     "npm.docker:start.executor": "Run",
     "prettierjs.PrettierConfiguration.Package": "/Users/lody/dev/projects/watershed-website/node_modules/prettier",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "Errors",
     "ts.external.directory.path": "/Users/lody/dev/projects/watershed-website/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   },
@@ -165,9 +173,9 @@
       <command value="Develop (npm)" />
     </option>
   </component>
-  <component name="RunManager" selected="Vitest.All Tests">
+  <component name="RunManager" selected="Compound.Develop">
     <configuration name="Develop" type="CompoundRunConfigurationType">
-      <toRun name="dev:remix" type="js.build_tools.npm" />
+      <toRun name="dev:app" type="js.build_tools.npm" />
       <toRun name="dev:storybook" type="js.build_tools.npm" />
       <method v="2" />
     </configuration>
@@ -221,11 +229,11 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="dev:remix" type="js.build_tools.npm" nameIsGenerated="true">
+    <configuration name="dev:app" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="dev:remix" />
+        <script value="dev:app" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -243,7 +251,7 @@
     </configuration>
     <list>
       <item itemvalue="Compound.Develop" />
-      <item itemvalue="npm.dev:remix" />
+      <item itemvalue="npm.dev:app" />
       <item itemvalue="npm.dev:storybook" />
       <item itemvalue="Vitest.All Tests" />
       <item itemvalue="Vitest.validateLogin" />
@@ -300,79 +308,7 @@
       <workItem from="1741167991516" duration="9123000" />
       <workItem from="1741177491521" duration="5426000" />
       <workItem from="1741335542037" duration="21807000" />
-      <workItem from="1741601622656" duration="22909000" />
-    </task>
-    <task id="LOCAL-00017" summary="Adjusted GH Actions to also run tests">
-      <option name="closed" value="true" />
-      <created>1732462886826</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1732462886826</updated>
-    </task>
-    <task id="LOCAL-00018" summary="For now run only vitest in CI builds">
-      <option name="closed" value="true" />
-      <created>1732463230392</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1732463230392</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Changed url for the login and logout pages to Dutch">
-      <option name="closed" value="true" />
-      <created>1732525260765</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1732525260765</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Created components for the forget password route">
-      <option name="closed" value="true" />
-      <created>1732546781309</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1732546781309</updated>
-    </task>
-    <task id="LOCAL-00021" summary="Implemented reset password flow">
-      <option name="closed" value="true" />
-      <created>1732569819560</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1732569819560</updated>
-    </task>
-    <task id="LOCAL-00022" summary="Finished password reset flow">
-      <option name="closed" value="true" />
-      <created>1732617421147</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1732617421147</updated>
-    </task>
-    <task id="LOCAL-00023" summary="Updated GH action file to run both unit and component tests">
-      <option name="closed" value="true" />
-      <created>1732620491502</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1732620491502</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Small improvements to make sure everything is up, running and build">
-      <option name="closed" value="true" />
-      <created>1732620836000</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1732620836000</updated>
-    </task>
-    <task id="LOCAL-00025" summary="Removed Remix assets, added Watershed favicon and logo and added it in the header">
-      <option name="closed" value="true" />
-      <created>1732629587264</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1732629587264</updated>
+      <workItem from="1741601622656" duration="38047000" />
     </task>
     <task id="LOCAL-00026" summary="Added new models and updated seed command to fill DB">
       <option name="closed" value="true" />
@@ -694,7 +630,79 @@
       <option name="project" value="LOCAL" />
       <updated>1741693226516</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="Swapped the deprecated json() functions for the new data() functions where applicable.">
+      <option name="closed" value="true" />
+      <created>1741701379514</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1741701379514</updated>
+    </task>
+    <task id="LOCAL-00067" summary="Changed the stream/abort timeouts">
+      <option name="closed" value="true" />
+      <created>1741701641034</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1741701641034</updated>
+    </task>
+    <task id="LOCAL-00068" summary="Ignore workflow and helm templates in Prettier">
+      <option name="closed" value="true" />
+      <created>1741701708031</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1741701708031</updated>
+    </task>
+    <task id="LOCAL-00069" summary="Turned on the future flag for route config.">
+      <option name="closed" value="true" />
+      <created>1741702194507</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1741702194507</updated>
+    </task>
+    <task id="LOCAL-00070" summary="Removed deprecated SerializedFrom type.">
+      <option name="closed" value="true" />
+      <created>1741702821493</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1741702821493</updated>
+    </task>
+    <task id="LOCAL-00071" summary="Ran the RRv7 codemod, manually made some improvements and fixes.">
+      <option name="closed" value="true" />
+      <created>1741703420540</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1741703420540</updated>
+    </task>
+    <task id="LOCAL-00072" summary="Changed scripts">
+      <option name="closed" value="true" />
+      <created>1741703575084</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1741703575084</updated>
+    </task>
+    <task id="LOCAL-00073" summary="Last changes in order to switch to React Router v7">
+      <option name="closed" value="true" />
+      <created>1741704156871</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1741704156871</updated>
+    </task>
+    <task id="LOCAL-00074" summary="Refine route configuration and update dependencies">
+      <option name="closed" value="true" />
+      <created>1741774743058</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1741774743058</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -737,15 +745,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Created a summary component for one or more artists" />
-    <MESSAGE value="Created a summary component for a product" />
-    <MESSAGE value="Added the improvements of generated components also to the generated form components, including some other stuff that's handy for forms" />
-    <MESSAGE value="Integrated the TinyMCE with Puck" />
-    <MESSAGE value="Refactor Heading component and enhance RichEditor integration" />
-    <MESSAGE value="Refactored Puck block components in terms of name and label, updated Puck and added a class that allows us to use TinyMCE in Puck overriding the default pointer events setting" />
-    <MESSAGE value="Added Button Block as Puck component" />
-    <MESSAGE value="Changed page editor layout to feel more like an actual page" />
-    <MESSAGE value="Added GridBlock to Puck" />
     <MESSAGE value="Added footer to the editor for the Puck fields, and improved the button block" />
     <MESSAGE value="Created Helm templates in order to deploy this application on the k8s clusters" />
     <MESSAGE value="CI/CD improvements: Node version is now specified in an .nvmrc file for re-use. Added caching and a deploy job for the new clusters (only dev is enabled now)." />
@@ -762,7 +761,34 @@
     <MESSAGE value="Moved typescript to prod deps" />
     <MESSAGE value="Updated Chart version after changes made for deployment" />
     <MESSAGE value="Changed the prisma dev deploy script to run migrate reset, which will reset the DB on each deploy." />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed the prisma dev deploy script to run migrate reset, which will reset the DB on each deploy." />
+    <MESSAGE value="Swapped the deprecated json() functions for the new data() functions where applicable." />
+    <MESSAGE value="Changed the stream/abort timeouts" />
+    <MESSAGE value="Ignore workflow and helm templates in Prettier" />
+    <MESSAGE value="Turned on the future flag for route config." />
+    <MESSAGE value="Removed deprecated SerializedFrom type." />
+    <MESSAGE value="Ran the RRv7 codemod, manually made some improvements and fixes." />
+    <MESSAGE value="Changed scripts" />
+    <MESSAGE value="Last changes in order to switch to React Router v7" />
+    <MESSAGE value="Refine route configuration and update dependencies" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refine route configuration and update dependencies" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/app/components/shoelace.ts</url>
+          <line>54</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/app/components/shoelace.ts</url>
+          <line>56</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -1,6 +1,10 @@
 import { useTranslation } from 'react-i18next';
-import { ActionFunctionArgs, json } from '@remix-run/node';
-import { useActionData, useSearchParams } from '@remix-run/react';
+import {
+  type ActionFunctionArgs,
+  data,
+  useActionData,
+  useSearchParams,
+} from 'react-router';
 import Heading from '~/components/Heading';
 import ChangePasswordForm from '~/components/ChangePasswordForm';
 import {
@@ -17,7 +21,7 @@ export async function action({ request }: ActionFunctionArgs) {
     const result = await validateChangePassword(request);
 
     if (!result.success) {
-      return json<ChangePasswordResponse>(
+      return data<ChangePasswordResponse>(
         {
           success: false,
           errors: result.errors,
@@ -44,7 +48,7 @@ export async function action({ request }: ActionFunctionArgs) {
       const message = getErrorMessage(error);
       console.error('Error changing password:', message);
 
-      return json<ChangePasswordErrorResponse>(
+      return data<ChangePasswordErrorResponse>(
         {
           success: false,
           errors: {

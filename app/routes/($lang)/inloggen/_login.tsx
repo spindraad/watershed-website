@@ -1,16 +1,16 @@
 import {
-  ActionFunctionArgs,
-  json,
-  MetaFunction,
+  useActionData,
+  type ActionFunctionArgs,
+  data,
+  type MetaFunction,
   redirect,
-} from '@remix-run/node';
+} from 'react-router';
 import { useTranslation } from 'react-i18next';
 import LoginFormComponent from './LoginFormComponent';
 import Heading from '~/components/Heading';
 import { validateLogin, ValidationErrors } from '~/validations/flows/login';
 import { isUserPasswordActive, verifyLogin } from '~/models/user.server';
 import { createUserSession } from '~/.server/session';
-import { useActionData } from '@remix-run/react';
 
 type ActionData = ValidationErrors & {
   userNotFound?: string;
@@ -20,7 +20,7 @@ export async function action({ request }: ActionFunctionArgs) {
   const results = await validateLogin(request);
 
   if (!results.success) {
-    return json<ActionData>(results.errors, { status: 400 });
+    return data<ActionData>(results.errors, { status: 400 });
   }
 
   const formData = await request.formData();
@@ -39,7 +39,7 @@ export async function action({ request }: ActionFunctionArgs) {
   const user = await verifyLogin(emailaddress, password);
 
   if (!user) {
-    return json<ActionData>(
+    return data<ActionData>(
       {
         userNotFound: 'invalid_credentials',
       },

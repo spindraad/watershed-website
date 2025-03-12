@@ -1,4 +1,4 @@
-import { Link, LinkProps, NavLink, NavLinkProps } from '@remix-run/react';
+import { Link, LinkProps, NavLink, NavLinkProps } from 'react-router';
 
 interface AnchorBaseProps {
   anchorType?: 'link' | 'nav';

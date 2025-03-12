@@ -1,11 +1,8 @@
 import { prisma } from '~/.server/db';
-import { User as DbUser } from '@prisma/client';
+import { type User } from '@prisma/client';
 
-import { SerializeFrom } from '@remix-run/node';
 import bcrypt from 'bcryptjs';
 import { addHours } from 'date-fns';
-
-type User = SerializeFrom<DbUser> | DbUser;
 
 export { type User };
 
@@ -39,7 +36,7 @@ export async function verifyLogin(email: User['email'], password: string) {
 }
 
 export async function getPasswordResetSession(token: string) {
-  return prisma.passwordResets.findUniqueOrThrow({
+  return prisma.passwordReset.findUniqueOrThrow({
     where: {
       token,
     },
@@ -52,7 +49,7 @@ export async function createPasswordResetSession(email: User['email']) {
 
   await changeUserPasswordType(email, 'RESET');
 
-  return prisma.passwordResets.create({
+  return prisma.passwordReset.create({
     data: {
       email,
       expiresAt,
@@ -61,7 +58,7 @@ export async function createPasswordResetSession(email: User['email']) {
 }
 
 export async function deletePasswordResetSession(token: string) {
-  return prisma.passwordResets.delete({
+  return prisma.passwordReset.delete({
     where: {
       token,
     },

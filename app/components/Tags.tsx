@@ -1,5 +1,5 @@
 import { Tag as DbTag } from '@prisma/client';
-import { Link } from '@remix-run/react';
+import { Link } from 'react-router';
 import { useContext } from 'react';
 import { ShoelaceContext } from '~/components/shoelace';
 

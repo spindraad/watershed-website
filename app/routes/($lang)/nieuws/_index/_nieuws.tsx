@@ -1,6 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { json } from '@remix-run/node';
-import { useLoaderData } from '@remix-run/react';
+import { useLoaderData } from 'react-router';
 import Breadcrumbs from '~/components/Breadcrumbs';
 import { getNewsArticlesForOverview } from '~/models/news.server';
 import ArticleCard from '~/components/ArticleCard';
@@ -9,7 +8,7 @@ import { SupportedLanguages } from '~/config/i18n';
 export async function loader() {
   const articles = await getNewsArticlesForOverview();
 
-  return json({ articles });
+  return { articles };
 }
 
 export default function NewsOverviewRoute() {
