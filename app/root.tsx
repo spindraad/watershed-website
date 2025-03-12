@@ -54,7 +54,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
     BASE_URL: string;
   };
   const shoelace = useShoelace({
-    URL: 'http://localhost:5173',
+    URL: data.BASE_URL,
   });
 
   return (

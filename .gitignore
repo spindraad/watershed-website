@@ -12,3 +12,4 @@ storybook-static
 public/shoelace-assets
 public/tinymce
 .react-router/
+tmp

@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Last changes in order to switch to React Router v7">
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Refine route configuration and update dependencies">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/shoelace.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/shoelace.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/root.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/root.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/inloggen/LoginFormComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/inloggen/LoginFormComponent.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -311,15 +308,7 @@
       <workItem from="1741167991516" duration="9123000" />
       <workItem from="1741177491521" duration="5426000" />
       <workItem from="1741335542037" duration="21807000" />
-      <workItem from="1741601622656" duration="35887000" />
-    </task>
-    <task id="LOCAL-00025" summary="Removed Remix assets, added Watershed favicon and logo and added it in the header">
-      <option name="closed" value="true" />
-      <created>1732629587264</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1732629587264</updated>
+      <workItem from="1741601622656" duration="38047000" />
     </task>
     <task id="LOCAL-00026" summary="Added new models and updated seed command to fill DB">
       <option name="closed" value="true" />
@@ -705,7 +694,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741704156871</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="Refine route configuration and update dependencies">
+      <option name="closed" value="true" />
+      <created>1741774743058</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1741774743058</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -748,7 +745,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added GridBlock to Puck" />
     <MESSAGE value="Added footer to the editor for the Puck fields, and improved the button block" />
     <MESSAGE value="Created Helm templates in order to deploy this application on the k8s clusters" />
     <MESSAGE value="CI/CD improvements: Node version is now specified in an .nvmrc file for re-use. Added caching and a deploy job for the new clusters (only dev is enabled now)." />
@@ -773,7 +769,8 @@
     <MESSAGE value="Ran the RRv7 codemod, manually made some improvements and fixes." />
     <MESSAGE value="Changed scripts" />
     <MESSAGE value="Last changes in order to switch to React Router v7" />
-    <option name="LAST_COMMIT_MESSAGE" value="Last changes in order to switch to React Router v7" />
+    <MESSAGE value="Refine route configuration and update dependencies" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refine route configuration and update dependencies" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
