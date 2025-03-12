@@ -57,6 +57,11 @@ const createProjects = (client: PrismaClient) => {
   const projects = Array.from({ length: 10 }).map<
     Omit<Project, 'id'> & { id?: string }
   >(() => ({
+    title: {
+      en: fakerEN.lorem.sentence(),
+      nl: fakerNL.lorem.sentence(),
+      pap: fakerEO.lorem.sentence(),
+    },
     description: {
       en: fakerEN.lorem.paragraphs(3),
       nl: fakerNL.lorem.paragraphs(3),

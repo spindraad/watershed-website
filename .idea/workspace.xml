@@ -5,12 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Created the dynamic content route, and added a basic implementation of the content table.">
-      <change afterPath="$PROJECT_DIR$/app/components/ContentTable.stories.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/ContentTable.translations.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/ContentTable.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/:content/_index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/events.server.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/projects.server.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f8f326ed-6bd3-472a-9a5c-e32229f833e4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f8f326ed-6bd3-472a-9a5c-e32229f833e4.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f8f326ed-6bd3-472a-9a5c-e32229f833e4/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f8f326ed-6bd3-472a-9a5c-e32229f833e4/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/AdminMenu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/AdminMenu.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/ContentTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ContentTable.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/news.server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/news.server.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/:content/_index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/:content/_index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/seed/_content.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/seed/_content.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +144,7 @@
     &quot;npm.dev:storybook.executor&quot;: &quot;Debug&quot;,
     &quot;npm.docker:start.executor&quot;: &quot;Run&quot;,
     &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/lody/dev/projects/watershed-website/node_modules/prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.typescriptcompiler&quot;,
     &quot;ts.external.directory.path&quot;: &quot;/Users/lody/dev/projects/watershed-website/node_modules/typescript/lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
@@ -314,15 +319,8 @@
       <workItem from="1741167991516" duration="9123000" />
       <workItem from="1741177491521" duration="5426000" />
       <workItem from="1741335542037" duration="21807000" />
-      <workItem from="1741601622656" duration="45943000" />
-    </task>
-    <task id="LOCAL-00030" summary="Created breadcrumbs">
-      <option name="closed" value="true" />
-      <created>1733902968189</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1733902968189</updated>
+      <workItem from="1741601622656" duration="48801000" />
+      <workItem from="1741788770297" duration="380000" />
     </task>
     <task id="LOCAL-00031" summary="Turned off the linear update part of the build">
       <option name="closed" value="true" />
@@ -708,7 +706,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741784759857</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="Created the dynamic content route, and added a basic implementation of the content table.">
+      <option name="closed" value="true" />
+      <created>1741785775699</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1741785775699</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">

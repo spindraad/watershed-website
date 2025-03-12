@@ -10,16 +10,6 @@ export async function getNewsArticlesForOverview() {
       summary: true,
       slug: true,
       createdAt: true,
-      contentRelation: {
-        select: {
-          tags: {
-            select: {
-              name: true,
-              slug: true,
-            },
-          },
-        },
-      },
     },
   });
 
@@ -30,6 +20,5 @@ export async function getNewsArticlesForOverview() {
     summary: article.summary,
     slug: article.slug,
     date: convertDateToLocaleString(article.createdAt),
-    tags: article.contentRelation?.tags,
   }));
 }

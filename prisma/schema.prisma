@@ -90,6 +90,9 @@ model Project {
   id String @id @default(cuid())
 
   /// [Localised]
+  title Json
+
+  /// [Localised]
   description Json
 
   /// [Localised]
