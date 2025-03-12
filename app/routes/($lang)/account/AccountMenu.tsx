@@ -1,8 +1,7 @@
-import { ReactNode, useContext } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Link, LinkProps } from 'react-router';
-import { ShoelaceContext } from '~/components/shoelace';
 import { User } from '~/models/user.server';
+import SubMenu from '~/components/SubMenu';
+import SubMenuItem from '~/components/SubMenuItem';
 
 type Props = {
   user: User;
@@ -17,53 +16,23 @@ export default function AccountMenu({ user }: Props) {
         {t('Greeting', { name: user.name })}
       </h2>
 
-      <div>
-        <h3 className="font-bold">{t('AccountMenuLinks.Title')}</h3>
-        <Menu>
-          <MenuItem to="/account" icon="person-circle">
-            {t('AccountMenuLinks.Dashboard')}
-          </MenuItem>
-          <MenuItem to="/account/instellingen" icon="gear">
-            {t('AccountMenuLinks.Settings')}
-          </MenuItem>
-        </Menu>
-      </div>
+      <SubMenu title={t('AccountMenuLinks.Title')}>
+        <SubMenuItem to="/account" icon="person-circle">
+          {t('AccountMenuLinks.Dashboard')}
+        </SubMenuItem>
+        <SubMenuItem to="/account/instellingen" icon="gear">
+          {t('AccountMenuLinks.Settings')}
+        </SubMenuItem>
+      </SubMenu>
 
-      <div>
-        <h3 className="font-bold">{t('AdminMenuLinks.Title')}</h3>
-        <Menu>
-          <MenuItem to="/admin/evenementen" icon="calendar2-event">
-            {t('AdminMenuLinks.Events')}
-          </MenuItem>
-          <MenuItem to="/admin/projecten" icon="kanban">
-            {t('AdminMenuLinks.Projects')}
-          </MenuItem>
-        </Menu>
-      </div>
+      <SubMenu title={t('AdminMenuLinks.Title')} to="/beheer">
+        <SubMenuItem to="/beheer/evenementen" icon="calendar2-event">
+          {t('AdminMenuLinks.Events')}
+        </SubMenuItem>
+        <SubMenuItem to="/beheer/projecten" icon="kanban">
+          {t('AdminMenuLinks.Projects')}
+        </SubMenuItem>
+      </SubMenu>
     </div>
-  );
-}
-
-function Menu({ children }: { children: ReactNode }) {
-  return <ul className="ml-2 flex flex-col gap-1">{children}</ul>;
-}
-
-function MenuItem({
-  to,
-  children,
-  icon,
-}: {
-  to: LinkProps['to'];
-  children: ReactNode;
-  icon: string;
-}) {
-  const { SlIcon } = useContext(ShoelaceContext);
-  return (
-    <li>
-      <Link className="flex flex-row gap-1 items-center" to={to}>
-        <SlIcon name={icon}></SlIcon>
-        {children}
-      </Link>
-    </li>
   );
 }

@@ -12,6 +12,8 @@ import { nl as ProductSummaryTranslations } from '~/routes/($lang)/nieuws/_index
 export const { ProductSummary } = ProductSummaryTranslations;
 import { nl as AccountMenuTranslations } from '~/routes/($lang)/account/AccountMenu.translations';
 export const { AccountMenu } = AccountMenuTranslations;
+import { nl as AdminMenuTranslations } from '~/routes/($lang)/beheer/AdminMenu.translations';
+export const { AdminMenu } = AdminMenuTranslations;
 
 export const common = {
   title: 'Hallo Wereld!',

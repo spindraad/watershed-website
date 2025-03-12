@@ -1,6 +1,6 @@
-import Heading from '~/components/Heading';
 import { LoaderFunctionArgs, redirect } from 'react-router';
 import { getUser } from '~/.server/session';
+import Heading from '~/components/Heading';
 
 export async function loader({ request }: LoaderFunctionArgs) {
   const user = await getUser(request);
@@ -13,10 +13,10 @@ export async function loader({ request }: LoaderFunctionArgs) {
   return null;
 }
 
-export default function AccountPage() {
+export default function AdminPage() {
   return (
     <>
-      <Heading level={1}>Hallo</Heading>
+      <Heading level={1}>Hallo admin!</Heading>
     </>
   );
 }
