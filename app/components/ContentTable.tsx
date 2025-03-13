@@ -97,9 +97,16 @@ export default function ContentTable({ items }: Props) {
             {headers.map((header) => {
               if (header === 'actions') {
                 return (
-                  <td className="p-2" key={`${item.id}_${header}`}>
+                  <td
+                    className="p-2 flex flex-row gap-2 items-center"
+                    key={`${item.id}_${header}`}
+                  >
                     <Link to={`bewerken/${item.id}`}>
                       <SlIconButton name="pencil-square" />
+                    </Link>
+
+                    <Link to={`verwijderen/${item.id}`}>
+                      <SlIconButton name="trash3" />
                     </Link>
                   </td>
                 );
