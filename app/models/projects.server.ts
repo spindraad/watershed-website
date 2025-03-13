@@ -13,7 +13,7 @@ export function convertProjectsToTableData(
 ): ContentTableItem[] {
   return projects.map((project) => ({
     id: project.id,
-    project: project.description,
+    project: { value: project.title, isName: true },
     description: project.description,
   }));
 }

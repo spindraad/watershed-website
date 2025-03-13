@@ -11,7 +11,7 @@ export async function getEvents(): Promise<Event[]> {
 export function convertEventsToTableData(events: Event[]): ContentTableItem[] {
   return events.map((event) => ({
     id: event.id,
-    title: event.title,
+    title: { value: event.title, isName: true },
     location: event.address,
     date: event.eventDate,
   }));
