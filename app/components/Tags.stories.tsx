@@ -19,11 +19,6 @@ export const SingleTag: Story = {
           en: faker.lorem.word(),
           pap: faker.lorem.word(),
         },
-        description: {
-          nl: faker.lorem.sentence(),
-          en: faker.lorem.sentence(),
-          pap: faker.lorem.sentence(),
-        },
         slug: faker.lorem.slug(),
       },
     ],
@@ -38,11 +33,6 @@ export const MultipleTags: Story = {
         nl: faker.lorem.word(),
         en: faker.lorem.word(),
         pap: faker.lorem.word(),
-      },
-      description: {
-        nl: faker.lorem.sentence(),
-        en: faker.lorem.sentence(),
-        pap: faker.lorem.sentence(),
       },
       slug: faker.lorem.slug(),
     }));

@@ -1,4 +1,4 @@
-import type { Route } from './+types/new';
+import type { Route } from './+types/_nieuw';
 import { ContentURLParams } from '~/types/Content';
 
 export async function action({ params, request }: Route.ActionArgs) {
@@ -32,6 +32,7 @@ export async function action({ params, request }: Route.ActionArgs) {
   //   console.error('Data is invalid and cannot be saved...');
   //   return data({ errors }, { status: 400 });
   // }
+  console.log({ params, request: request.method });
   return null;
 }
 

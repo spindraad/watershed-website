@@ -1,4 +1,4 @@
-import type { Route } from './+types/edit';
+import type { Route } from './+types/_bewerken';
 import { ContentURLParams } from '~/types/Content';
 
 export async function loader({ params }: Route.LoaderArgs) {
@@ -17,6 +17,7 @@ export async function loader({ params }: Route.LoaderArgs) {
   //   const event = await getEvent(id);
   //   return data({ event });
   // }
+  console.log({ params });
   return null;
 }
 
@@ -51,6 +52,7 @@ export async function action({ params, request }: Route.ActionArgs) {
   //   console.error('Data is invalid and cannot be saved...');
   //   return data({ errors }, { status: 400 });
   // }
+  console.log({ params, request: request.method });
   return null;
 }
 

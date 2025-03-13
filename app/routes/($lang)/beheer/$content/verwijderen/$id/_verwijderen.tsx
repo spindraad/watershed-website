@@ -1,5 +1,5 @@
 import type { Route } from './+types/_verwijderen';
-import { redirect } from 'react-router';
+// import { redirect } from 'react-router';
 
 export async function loader() {
   // Return method not allowed
@@ -25,6 +25,7 @@ export async function action({ params, request }: Route.ActionArgs) {
   // }
   //
   // return redirect(`/beheer/${content}`);
+  console.log({ params });
   return null;
 }
 

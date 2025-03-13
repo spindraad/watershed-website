@@ -1,8 +1,7 @@
-import { Tag } from '@prisma/client';
 import { Link } from 'react-router';
 import { useContext } from 'react';
 import { ShoelaceContext } from '~/components/shoelace';
-import Tags from '~/components/Tags';
+import Tags, { Tag } from '~/components/Tags';
 
 export type Props = {
   /**
