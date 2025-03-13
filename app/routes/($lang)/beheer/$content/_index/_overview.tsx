@@ -7,6 +7,8 @@ import {
   getProjects,
 } from '~/models/projects.server';
 import { ContentURLParams } from '~/types/Content';
+import { useTranslation } from 'react-i18next';
+import Heading from '~/components/Heading';
 
 export async function loader({ params }: Route.LoaderArgs) {
   const content = params.content as ContentURLParams;
@@ -30,11 +32,26 @@ export async function loader({ params }: Route.LoaderArgs) {
   return { data };
 }
 
-export default function ContentOverviewRoute() {
+export default function ContentOverviewRoute({ params }: Route.ComponentProps) {
   const { data } = useLoaderData<typeof loader>();
+  const { t } = useTranslation('ContentOverviewRoute');
+  const content = params.content as ContentURLParams;
+
+  let translationKey = '';
+  switch (content) {
+    case 'evenementen': {
+      translationKey = 'Titles.events';
+      break;
+    }
+    case 'projecten': {
+      translationKey = 'Titles.projects';
+      break;
+    }
+  }
 
   return (
     <div>
+      <Heading level={1}>{t(translationKey)}</Heading>
       <ContentTable items={data} />
     </div>
   );

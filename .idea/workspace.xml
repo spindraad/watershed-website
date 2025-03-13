@@ -4,17 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Created all needed routes for CRUD functionality.">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/pr-lint-build.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/pr-lint-build.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Improvements to the content table, and a small bit of refactoring to keep the code readable.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/ArticleCard.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ArticleCard.stories.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/ArticleCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ArticleCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/Tags.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Tags.stories.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/Tags.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Tags.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/bewerken/$id/_bewerken.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/bewerken/$id/_bewerken.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/nieuw/_nieuw.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/nieuw/_nieuw.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/verwijderen/$id/_verwijderen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/verwijderen/$id/_verwijderen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/ContentTable.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ContentTable.stories.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,12 +34,12 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="feature/WAT-79_crud_read_flow" />
-                    <option name="lastUsedInstant" value="1741777396" />
+                    <option name="branchName" value="feature/WAT-81_create_generic_table" />
+                    <option name="lastUsedInstant" value="1741876625" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="release/WAT-77_implement_generic_crud_flow" />
-                    <option name="lastUsedInstant" value="1741777369" />
+                    <option name="lastUsedInstant" value="1741876190" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="dev" />
@@ -129,7 +121,7 @@
     &quot;Vitest.validateLogin.executor&quot;: &quot;Run&quot;,
     &quot;Vitest.validateLogin.should return success: false when emailaddress is invalid.executor&quot;: &quot;Run&quot;,
     &quot;Vitest.validateLogin.should return success: false when emailaddress is missing.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/WAT-79__crud__read__flow&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/WAT-81__create__generic__table&quot;,
     &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;22.11.0&quot;,
     &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;22.9.0&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/lody/dev/projects/watershed-website/scaffold-templates/plop/form&quot;,
@@ -140,7 +132,9 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.Dev.executor&quot;: &quot;Debug&quot;,
     &quot;npm.Develop.executor&quot;: &quot;Run&quot;,
+    &quot;npm.Storybook.executor&quot;: &quot;Debug&quot;,
     &quot;npm.dev:app.executor&quot;: &quot;Debug&quot;,
     &quot;npm.dev:remix.executor&quot;: &quot;Debug&quot;,
     &quot;npm.dev:storybook.executor&quot;: &quot;Debug&quot;,
@@ -188,8 +182,8 @@
   </component>
   <component name="RunManager" selected="Compound.Develop">
     <configuration name="Develop" type="CompoundRunConfigurationType">
-      <toRun name="dev:app" type="js.build_tools.npm" />
-      <toRun name="dev:storybook" type="js.build_tools.npm" />
+      <toRun name="Dev" type="js.build_tools.npm" />
+      <toRun name="Storybook" type="js.build_tools.npm" />
       <method v="2" />
     </configuration>
     <configuration name="All Tests" type="JavaScriptTestRunnerVitest" nameIsGenerated="true">
@@ -242,7 +236,7 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="dev:app" type="js.build_tools.npm">
+    <configuration name="Dev" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
@@ -252,7 +246,7 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="dev:storybook" type="js.build_tools.npm" nameIsGenerated="true">
+    <configuration name="Storybook" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
@@ -264,8 +258,8 @@
     </configuration>
     <list>
       <item itemvalue="Compound.Develop" />
-      <item itemvalue="npm.dev:app" />
-      <item itemvalue="npm.dev:storybook" />
+      <item itemvalue="npm.Dev" />
+      <item itemvalue="npm.Storybook" />
       <item itemvalue="Vitest.All Tests" />
       <item itemvalue="Vitest.validateLogin" />
       <item itemvalue="Vitest.validateLogin.should return success: false when emailaddress is invalid" />
@@ -323,23 +317,8 @@
       <workItem from="1741335542037" duration="21807000" />
       <workItem from="1741601622656" duration="48801000" />
       <workItem from="1741788770297" duration="8020000" />
-      <workItem from="1741873032040" duration="602000" />
-    </task>
-    <task id="LOCAL-00034" summary="Improvements to the news articles overview page and its related components">
-      <option name="closed" value="true" />
-      <created>1733995193694</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1733995193694</updated>
-    </task>
-    <task id="LOCAL-00035" summary="Improved the generation of files with plop">
-      <option name="closed" value="true" />
-      <created>1734003121204</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1734003121204</updated>
+      <workItem from="1741873032040" duration="9407000" />
+      <workItem from="1741900035832" duration="761000" />
     </task>
     <task id="LOCAL-00036" summary="Created YearSelector component">
       <option name="closed" value="true" />
@@ -717,7 +696,23 @@
       <option name="project" value="LOCAL" />
       <updated>1741869436229</updated>
     </task>
-    <option name="localTasksCounter" value="83" />
+    <task id="LOCAL-00083" summary="Code quality improvements, including running a type check on CI/CD">
+      <option name="closed" value="true" />
+      <created>1741873654799</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1741873654799</updated>
+    </task>
+    <task id="LOCAL-00084" summary="Improvements to the content table, and a small bit of refactoring to keep the code readable.">
+      <option name="closed" value="true" />
+      <created>1741900717805</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1741900717805</updated>
+    </task>
+    <option name="localTasksCounter" value="85" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -760,8 +755,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Cleaned up the pr-lint-build.yml workflow, and added explicit build steps to the deploy job. This decouples the two." />
-    <MESSAGE value="Added extra clarification in build output for gh actions, and moved prisma to production deps because we need it in the container." />
     <MESSAGE value="Moved the prisma dependencies to production, this time correctly." />
     <MESSAGE value="Moved dependent packages for prisma to deps" />
     <MESSAGE value="Explicitly regenerate prisma during Docker build." />
@@ -785,7 +778,9 @@
     <MESSAGE value="Made a basic implementation of a dynamic event/project overview" />
     <MESSAGE value="Content table is now localised and has a more robust value parser." />
     <MESSAGE value="Created all needed routes for CRUD functionality." />
-    <option name="LAST_COMMIT_MESSAGE" value="Created all needed routes for CRUD functionality." />
+    <MESSAGE value="Code quality improvements, including running a type check on CI/CD" />
+    <MESSAGE value="Improvements to the content table, and a small bit of refactoring to keep the code readable." />
+    <option name="LAST_COMMIT_MESSAGE" value="Improvements to the content table, and a small bit of refactoring to keep the code readable." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

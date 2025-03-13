@@ -127,3 +127,10 @@ export const ChangePasswordRoute = {
 export const NewsOverviewRoute = {
   Title: 'Nieuws',
 };
+
+export const ContentOverviewRoute = {
+  Titles: {
+    events: 'Evenementen',
+    projects: 'Projecten',
+  },
+};
