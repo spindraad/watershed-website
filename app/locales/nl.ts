@@ -18,6 +18,8 @@ import { nl as ContentTableTranslations } from '~/components/ContentTable.transl
 export const { ContentTable } = ContentTableTranslations;
 import { nl as ConfirmDeleteDialogTranslations } from '~/routes/($lang)/beheer/$content/_index/ConfirmDeleteDialog.translations';
 export const { ConfirmDeleteDialog } = ConfirmDeleteDialogTranslations;
+import { nl as DeletionNotificationTranslations } from '~/routes/($lang)/beheer/$content/_index/DeletionNotification.translations';
+export const { DeletionNotification } = DeletionNotificationTranslations;
 
 export const common = {
   title: 'Hallo Wereld!',

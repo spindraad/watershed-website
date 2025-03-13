@@ -4,16 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Added the trash button to the content table">
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Enhance delete functionality in ContentTable with notification and dialog improvements">
+      <change afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/_index/DeletionNotification.stories.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/_index/DeletionNotification.translations.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/_index/DeletionNotification.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/ContentTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ContentTable.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/shoelace.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/shoelace.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/locales/en.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/en.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/locales/nl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/nl.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/events.server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/events.server.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/projects.server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/projects.server.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/_index/_overview.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/_index/_overview.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/verwijderen/$id/_verwijderen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/verwijderen/$id/_verwijderen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/tailwind.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/tailwind.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -325,15 +324,7 @@
       <workItem from="1741601622656" duration="48801000" />
       <workItem from="1741788770297" duration="8020000" />
       <workItem from="1741873032040" duration="9407000" />
-      <workItem from="1741900035832" duration="5631000" />
-    </task>
-    <task id="LOCAL-00038" summary="Created ProjectSummary component">
-      <option name="closed" value="true" />
-      <created>1734007163114</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1734007163114</updated>
+      <workItem from="1741900035832" duration="8572000" />
     </task>
     <task id="LOCAL-00039" summary="Created EventSummary component">
       <option name="closed" value="true" />
@@ -719,7 +710,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741901232724</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="Implement delete functionality in ContentTable with confirmation dialog">
+      <option name="closed" value="true" />
+      <created>1741905742303</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1741905742303</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -762,8 +761,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Explicitly regenerate prisma during Docker build." />
-    <MESSAGE value="Moved typescript to prod deps" />
     <MESSAGE value="Updated Chart version after changes made for deployment" />
     <MESSAGE value="Changed the prisma dev deploy script to run migrate reset, which will reset the DB on each deploy." />
     <MESSAGE value="Swapped the deprecated json() functions for the new data() functions where applicable." />
@@ -787,7 +784,9 @@
     <MESSAGE value="Improvements to the content table, and a small bit of refactoring to keep the code readable." />
     <MESSAGE value="Updated the content table story with the new types." />
     <MESSAGE value="Added the trash button to the content table" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added the trash button to the content table" />
+    <MESSAGE value="Implement delete functionality in ContentTable with confirmation dialog" />
+    <MESSAGE value="Enhance delete functionality in ContentTable with notification and dialog improvements" />
+    <option name="LAST_COMMIT_MESSAGE" value="Enhance delete functionality in ContentTable with notification and dialog improvements" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

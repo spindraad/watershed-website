@@ -10,7 +10,9 @@ import { ContentURLParams } from '~/types/Content';
 import { useTranslation } from 'react-i18next';
 import Heading from '~/components/Heading';
 import ConfirmDeleteDialog from '~/routes/($lang)/beheer/$content/_index/ConfirmDeleteDialog';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
+import DeletionNotification from '~/routes/($lang)/beheer/$content/_index/DeletionNotification';
+import { SlAlert } from '@shoelace-style/shoelace';
 
 export async function loader({ params }: Route.LoaderArgs) {
   const content = params.content as ContentURLParams;
@@ -40,9 +42,10 @@ export default function ContentOverviewRoute({ params }: Route.ComponentProps) {
   const fetcher = useFetcher();
   const { t } = useTranslation('ContentOverviewRoute');
 
-  const [open, setOpen] = useState(false);
-  const [itemName, setItemName] = useState('');
-  const [itemID, setItemID] = useState('');
+  const [openDialog, setOpenDialog] = useState(false);
+  const notifyRef = useRef<SlAlert>(null);
+  const [itemName, setItemName] = useState('asd');
+  const [itemID, setItemID] = useState('asd');
 
   let translationKey = '';
   switch (content) {
@@ -59,11 +62,15 @@ export default function ContentOverviewRoute({ params }: Route.ComponentProps) {
   function triggerDelete(itemID: string, itemName: string) {
     setItemName(itemName);
     setItemID(itemID);
-    setOpen(true);
+    setOpenDialog(true);
   }
 
-  function handleClose() {
-    setOpen(false);
+  function handleDialogClose() {
+    setOpenDialog(false);
+  }
+
+  function handleNotifyClose() {
+    notifyRef.current?.hide();
   }
 
   function handleDelete() {
@@ -77,7 +84,8 @@ export default function ContentOverviewRoute({ params }: Route.ComponentProps) {
         },
       )
       .then(() => {
-        setOpen(false);
+        setOpenDialog(false);
+        notifyRef.current?.toast();
       });
   }
 
@@ -89,11 +97,17 @@ export default function ContentOverviewRoute({ params }: Route.ComponentProps) {
       <ContentTable items={data} triggerDelete={triggerDelete} />
 
       <ConfirmDeleteDialog
-        open={open}
+        open={openDialog}
         onDelete={handleDelete}
-        onCancel={handleClose}
+        onCancel={handleDialogClose}
         itemName={itemName}
         isDeleting={isDeleting}
+      />
+
+      <DeletionNotification
+        ref={notifyRef}
+        itemName={itemName}
+        onClose={handleNotifyClose}
       />
     </div>
   );
