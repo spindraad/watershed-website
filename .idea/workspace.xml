@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Code quality improvements, including running a type check on CI/CD">
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Improvements to the content table, and a small bit of refactoring to keep the code readable.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/components/ContentTable.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ContentTable.stories.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/ContentTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ContentTable.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/locales/en.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/en.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/locales/nl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/nl.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/events.server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/events.server.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/projects.server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/projects.server.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/_index/_overview.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/_index/_overview.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -324,15 +318,7 @@
       <workItem from="1741601622656" duration="48801000" />
       <workItem from="1741788770297" duration="8020000" />
       <workItem from="1741873032040" duration="9407000" />
-      <workItem from="1741900035832" duration="448000" />
-    </task>
-    <task id="LOCAL-00035" summary="Improved the generation of files with plop">
-      <option name="closed" value="true" />
-      <created>1734003121204</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1734003121204</updated>
+      <workItem from="1741900035832" duration="761000" />
     </task>
     <task id="LOCAL-00036" summary="Created YearSelector component">
       <option name="closed" value="true" />
@@ -718,7 +704,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741873654799</updated>
     </task>
-    <option name="localTasksCounter" value="84" />
+    <task id="LOCAL-00084" summary="Improvements to the content table, and a small bit of refactoring to keep the code readable.">
+      <option name="closed" value="true" />
+      <created>1741900717805</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1741900717805</updated>
+    </task>
+    <option name="localTasksCounter" value="85" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -761,7 +755,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added extra clarification in build output for gh actions, and moved prisma to production deps because we need it in the container." />
     <MESSAGE value="Moved the prisma dependencies to production, this time correctly." />
     <MESSAGE value="Moved dependent packages for prisma to deps" />
     <MESSAGE value="Explicitly regenerate prisma during Docker build." />
@@ -786,7 +779,8 @@
     <MESSAGE value="Content table is now localised and has a more robust value parser." />
     <MESSAGE value="Created all needed routes for CRUD functionality." />
     <MESSAGE value="Code quality improvements, including running a type check on CI/CD" />
-    <option name="LAST_COMMIT_MESSAGE" value="Code quality improvements, including running a type check on CI/CD" />
+    <MESSAGE value="Improvements to the content table, and a small bit of refactoring to keep the code readable." />
+    <option name="LAST_COMMIT_MESSAGE" value="Improvements to the content table, and a small bit of refactoring to keep the code readable." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

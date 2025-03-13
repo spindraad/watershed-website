@@ -10,11 +10,10 @@ export default {
 type Story = StoryObj<typeof ContentTable>;
 
 const items: ContentTableItem[] = Array.from({ length: 5 }, (_, index) => ({
-  id: index,
+  id: index.toString(),
   project: {
     value: faker.commerce.productName(),
-    isIndex: true,
-    linkUrl: index,
+    isName: true,
   },
   description: faker.commerce.productDescription(),
   location: faker.location.streetAddress(),
