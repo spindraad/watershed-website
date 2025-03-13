@@ -1,4 +1,4 @@
-import type { Route } from './+types/_index';
+import type { Route } from './+types/_overview';
 import { useLoaderData } from 'react-router';
 import ContentTable, { ContentTableItem } from '~/components/ContentTable';
 import { convertEventsToTableData, getEvents } from '~/models/events.server';
@@ -6,9 +6,10 @@ import {
   convertProjectsToTableData,
   getProjects,
 } from '~/models/projects.server';
+import { ContentURLParams } from '~/types/Content';
 
 export async function loader({ params }: Route.LoaderArgs) {
-  const { content } = params;
+  const content = params.content as ContentURLParams;
 
   let data: ContentTableItem[] = [];
 
