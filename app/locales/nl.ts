@@ -16,6 +16,8 @@ import { nl as AdminMenuTranslations } from '~/routes/($lang)/beheer/AdminMenu.t
 export const { AdminMenu } = AdminMenuTranslations;
 import { nl as ContentTableTranslations } from '~/components/ContentTable.translations';
 export const { ContentTable } = ContentTableTranslations;
+import { nl as ConfirmDeleteDialogTranslations } from '~/routes/($lang)/beheer/$content/_index/ConfirmDeleteDialog.translations';
+export const { ConfirmDeleteDialog } = ConfirmDeleteDialogTranslations;
 
 export const common = {
   title: 'Hallo Wereld!',

@@ -6,7 +6,10 @@ import { format, isDate } from 'date-fns';
 import { SupportedLanguages, supportedLanguages } from '~/config/i18n';
 import Anchor from '~/components/Anchor';
 
-type ItemValue = string | Record<SupportedLanguages, string> | number | Date;
+// TODO: Move to a shared location
+type LocalisedValue = Record<SupportedLanguages, string>;
+
+type ItemValue = string | LocalisedValue | number | Date;
 
 type ParametrizedItemValue = {
   // The value of the item.
@@ -23,6 +26,7 @@ export type ContentTableItem = {
 
 type Props = {
   items: ContentTableItem[];
+  triggerDelete: (itemID: string, itemName: string) => void;
 };
 
 function isSupportedLanguages(
@@ -47,7 +51,7 @@ function isParametrizedItemValue(
   return 'value' in value;
 }
 
-export default function ContentTable({ items }: Props) {
+export default function ContentTable({ items, triggerDelete }: Props) {
   const {
     t,
     i18n: { language },
@@ -75,6 +79,17 @@ export default function ContentTable({ items }: Props) {
     }
 
     return value;
+  }
+
+  function getItemName(item: ContentTableItem) {
+    let name: LocalisedValue = {};
+    Object.keys(item).forEach((key) => {
+      if (isParametrizedItemValue(item[key]) && item[key].isName) {
+        name = item[key].value as LocalisedValue;
+      }
+    });
+
+    return name[language];
   }
 
   return (
@@ -105,9 +120,10 @@ export default function ContentTable({ items }: Props) {
                       <SlIconButton name="pencil-square" />
                     </Link>
 
-                    <Link to={`verwijderen/${item.id}`}>
-                      <SlIconButton name="trash3" />
-                    </Link>
+                    <SlIconButton
+                      name="trash3"
+                      onClick={() => triggerDelete(item.id, getItemName(item))}
+                    />
                   </td>
                 );
               }

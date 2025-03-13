@@ -8,6 +8,10 @@ export async function getEvents(): Promise<Event[]> {
   return prisma.event.findMany();
 }
 
+export async function deleteEvent(eventID: string): Promise<void> {
+  await prisma.event.delete({ where: { id: eventID } });
+}
+
 export function convertEventsToTableData(events: Event[]): ContentTableItem[] {
   return events.map((event) => ({
     id: event.id,

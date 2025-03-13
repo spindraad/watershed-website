@@ -8,6 +8,10 @@ export async function getProjects(): Promise<Project[]> {
   return prisma.project.findMany();
 }
 
+export async function deleteProject(projectID: string): Promise<void> {
+  await prisma.project.delete({ where: { id: projectID } });
+}
+
 export function convertProjectsToTableData(
   projects: Project[],
 ): ContentTableItem[] {

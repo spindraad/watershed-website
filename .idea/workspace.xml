@@ -4,8 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Updated the content table story with the new types.">
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Added the trash button to the content table">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/components/ContentTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ContentTable.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/shoelace.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/shoelace.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/locales/en.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/en.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/locales/nl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/nl.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/events.server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/events.server.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/projects.server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/projects.server.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/_index/_overview.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/_index/_overview.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/verwijderen/$id/_verwijderen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/verwijderen/$id/_verwijderen.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -317,15 +325,7 @@
       <workItem from="1741601622656" duration="48801000" />
       <workItem from="1741788770297" duration="8020000" />
       <workItem from="1741873032040" duration="9407000" />
-      <workItem from="1741900035832" duration="1169000" />
-    </task>
-    <task id="LOCAL-00037" summary="Component translations are going to be colocated, so I adjusted the generator a bit.">
-      <option name="closed" value="true" />
-      <created>1734005995151</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1734005995151</updated>
+      <workItem from="1741900035832" duration="5631000" />
     </task>
     <task id="LOCAL-00038" summary="Created ProjectSummary component">
       <option name="closed" value="true" />
@@ -711,7 +711,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741900829513</updated>
     </task>
-    <option name="localTasksCounter" value="86" />
+    <task id="LOCAL-00086" summary="Added the trash button to the content table">
+      <option name="closed" value="true" />
+      <created>1741901232724</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1741901232724</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -754,7 +762,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Moved dependent packages for prisma to deps" />
     <MESSAGE value="Explicitly regenerate prisma during Docker build." />
     <MESSAGE value="Moved typescript to prod deps" />
     <MESSAGE value="Updated Chart version after changes made for deployment" />
@@ -779,7 +786,8 @@
     <MESSAGE value="Code quality improvements, including running a type check on CI/CD" />
     <MESSAGE value="Improvements to the content table, and a small bit of refactoring to keep the code readable." />
     <MESSAGE value="Updated the content table story with the new types." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated the content table story with the new types." />
+    <MESSAGE value="Added the trash button to the content table" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added the trash button to the content table" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
