@@ -1,11 +1,6 @@
-import {
-  useLoaderData,
-  type LoaderFunctionArgs,
-  redirect,
-  Outlet,
-} from 'react-router';
+import { type LoaderFunctionArgs, redirect, Outlet } from 'react-router';
 import { getUser } from '~/.server/session';
-import AccountMenu from '~/routes/($lang)/account/AccountMenu';
+import AdminMenu from '~/routes/($lang)/beheer/AdminMenu';
 
 export async function loader({ request }: LoaderFunctionArgs) {
   const user = await getUser(request);
@@ -18,13 +13,11 @@ export async function loader({ request }: LoaderFunctionArgs) {
   return { user };
 }
 
-export default function AccountRoute() {
-  const { user } = useLoaderData<typeof loader>();
-
+export default function AdminRoute() {
   return (
     <div className="flex gap-4 px-4">
       <div className="w-80">
-        <AccountMenu user={user} />
+        <AdminMenu />
       </div>
 
       <div className="w-full">

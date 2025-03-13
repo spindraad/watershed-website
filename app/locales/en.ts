@@ -10,6 +10,12 @@ import { en as ArtistsSummaryTranslations } from '~/routes/($lang)/nieuws/_index
 export const { ArtistsSummary } = ArtistsSummaryTranslations;
 import { en as ProductSummaryTranslations } from '~/routes/($lang)/nieuws/_index/ProductSummary.translations';
 export const { ProductSummary } = ProductSummaryTranslations;
+import { en as AccountMenuTranslations } from '~/routes/($lang)/account/AccountMenu.translations';
+export const { AccountMenu } = AccountMenuTranslations;
+import { en as AdminMenuTranslations } from '~/routes/($lang)/beheer/AdminMenu.translations';
+export const { AdminMenu } = AdminMenuTranslations;
+import { en as ContentTableTranslations } from '~/components/ContentTable.translations';
+export const { ContentTable } = ContentTableTranslations;
 
 export const common = {
   title: 'Hello World!',

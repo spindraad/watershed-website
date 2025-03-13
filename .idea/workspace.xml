@@ -4,11 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Refine route configuration and update dependencies">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Created all needed routes for CRUD functionality.">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/pr-lint-build.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/pr-lint-build.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/root.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/root.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/inloggen/LoginFormComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/inloggen/LoginFormComponent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/ArticleCard.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ArticleCard.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/ArticleCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ArticleCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/Tags.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Tags.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/Tags.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Tags.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/bewerken/$id/_bewerken.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/bewerken/$id/_bewerken.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/nieuw/_nieuw.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/nieuw/_nieuw.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/verwijderen/$id/_verwijderen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/verwijderen/$id/_verwijderen.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,12 +42,16 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="feature/WAT-129_update_remix_to_rrv7" />
-                    <option name="lastUsedInstant" value="1741698717" />
+                    <option name="branchName" value="feature/WAT-79_crud_read_flow" />
+                    <option name="lastUsedInstant" value="1741777396" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="release/WAT-77_implement_generic_crud_flow" />
+                    <option name="lastUsedInstant" value="1741777369" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="dev" />
-                    <option name="lastUsedInstant" value="1741691474" />
+                    <option name="lastUsedInstant" value="1741777114" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="feature/wsh-43-nieuws" />
@@ -96,6 +106,9 @@
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -106,59 +119,59 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenDatabaseViewOnStart": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "Vitest.All Tests.executor": "Run",
-    "Vitest.validateLogin.executor": "Run",
-    "Vitest.validateLogin.should return success: false when emailaddress is invalid.executor": "Run",
-    "Vitest.validateLogin.should return success: false when emailaddress is missing.executor": "Run",
-    "git-widget-placeholder": "feature/WAT-129__update__remix__to__rrv7",
-    "javascript.nodejs.core.library.configured.version": "22.11.0",
-    "javascript.nodejs.core.library.typings.version": "22.9.0",
-    "last_opened_file_path": "/Users/lody/dev/projects/watershed-website/scaffold-templates/plop/form",
-    "node.js.detected.package.standard": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "node",
-    "nodejs_package_manager_path": "npm",
-    "npm.Develop.executor": "Run",
-    "npm.dev:app.executor": "Debug",
-    "npm.dev:remix.executor": "Debug",
-    "npm.dev:storybook.executor": "Debug",
-    "npm.docker:start.executor": "Run",
-    "prettierjs.PrettierConfiguration.Package": "/Users/lody/dev/projects/watershed-website/node_modules/prettier",
-    "settings.editor.selected.configurable": "Errors",
-    "ts.external.directory.path": "/Users/lody/dev/projects/watershed-website/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenDatabaseViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Vitest.All Tests.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.validateLogin.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.validateLogin.should return success: false when emailaddress is invalid.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.validateLogin.should return success: false when emailaddress is missing.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/WAT-79__crud__read__flow&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;22.11.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;22.9.0&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/lody/dev/projects/watershed-website/scaffold-templates/plop/form&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.Develop.executor&quot;: &quot;Run&quot;,
+    &quot;npm.dev:app.executor&quot;: &quot;Debug&quot;,
+    &quot;npm.dev:remix.executor&quot;: &quot;Debug&quot;,
+    &quot;npm.dev:storybook.executor&quot;: &quot;Debug&quot;,
+    &quot;npm.docker:start.executor&quot;: &quot;Run&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/lody/dev/projects/watershed-website/node_modules/prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.typescriptcompiler&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/lody/dev/projects/watershed-website/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ],
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "Markdown",
-      "TEXT",
-      "XML"
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;Markdown&quot;,
+      &quot;TEXT&quot;,
+      &quot;XML&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/scaffold-templates/plop/form" />
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/config/blocks" />
-      <recent name="$PROJECT_DIR$/app/config" />
-      <recent name="$PROJECT_DIR$/scaffold-templates/plop/form/validation" />
-      <recent name="$PROJECT_DIR$/scaffold-templates/plop/form/component" />
-      <recent name="$PROJECT_DIR$/app/routes/($lang)/nieuws/_index" />
+      <recent name="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/verwijderen/_index" />
+      <recent name="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/bewerken/_index" />
+      <recent name="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/_index" />
+      <recent name="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/bewerken/$id" />
+      <recent name="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/verwijderen/$id" />
     </key>
     <key name="es6.move.members.recent.items">
       <recent name="$PROJECT_DIR$/app/config/blocks/RichTextBlock.tsx" />
@@ -308,71 +321,9 @@
       <workItem from="1741167991516" duration="9123000" />
       <workItem from="1741177491521" duration="5426000" />
       <workItem from="1741335542037" duration="21807000" />
-      <workItem from="1741601622656" duration="38047000" />
-    </task>
-    <task id="LOCAL-00026" summary="Added new models and updated seed command to fill DB">
-      <option name="closed" value="true" />
-      <created>1733840082928</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1733840082928</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Improved the way the seeding command is run">
-      <option name="closed" value="true" />
-      <created>1733841302564</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1733841302564</updated>
-    </task>
-    <task id="LOCAL-00028" summary="DB is now seeded with localised values, where Papiamentu is replaced with Esperanto">
-      <option name="closed" value="true" />
-      <created>1733842036173</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1733842036173</updated>
-    </task>
-    <task id="LOCAL-00029" summary="Created barebones news overview route">
-      <option name="closed" value="true" />
-      <created>1733852331622</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1733852331622</updated>
-    </task>
-    <task id="LOCAL-00030" summary="Created breadcrumbs">
-      <option name="closed" value="true" />
-      <created>1733902968189</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1733902968189</updated>
-    </task>
-    <task id="LOCAL-00031" summary="Turned off the linear update part of the build">
-      <option name="closed" value="true" />
-      <created>1733903002510</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1733903002510</updated>
-    </task>
-    <task id="LOCAL-00032" summary="Created article preview card and tag components">
-      <option name="closed" value="true" />
-      <created>1733916839139</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1733916839139</updated>
-    </task>
-    <task id="LOCAL-00033" summary="Small improvement to the breadcrumbs">
-      <option name="closed" value="true" />
-      <created>1733917024445</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1733917024445</updated>
+      <workItem from="1741601622656" duration="48801000" />
+      <workItem from="1741788770297" duration="8020000" />
+      <workItem from="1741873032040" duration="602000" />
     </task>
     <task id="LOCAL-00034" summary="Improvements to the news articles overview page and its related components">
       <option name="closed" value="true" />
@@ -702,7 +653,71 @@
       <option name="project" value="LOCAL" />
       <updated>1741774743058</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="Removed some testing code I forgot to delete.">
+      <option name="closed" value="true" />
+      <created>1741776400952</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1741776400952</updated>
+    </task>
+    <task id="LOCAL-00076" summary="Setup basic account page structure so that we can start with the admin work">
+      <option name="closed" value="true" />
+      <created>1741781802954</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1741781802954</updated>
+    </task>
+    <task id="LOCAL-00077" summary="Cleaned up the content structures, removing stuff we don't need. Also added link to projects for an admin">
+      <option name="closed" value="true" />
+      <created>1741782251665</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1741782251665</updated>
+    </task>
+    <task id="LOCAL-00078" summary="Refactored the account menu into a separate component and added admin/ route">
+      <option name="closed" value="true" />
+      <created>1741784759857</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1741784759857</updated>
+    </task>
+    <task id="LOCAL-00079" summary="Created the dynamic content route, and added a basic implementation of the content table.">
+      <option name="closed" value="true" />
+      <created>1741785775699</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1741785775699</updated>
+    </task>
+    <task id="LOCAL-00080" summary="Made a basic implementation of a dynamic event/project overview">
+      <option name="closed" value="true" />
+      <created>1741789215526</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1741789215526</updated>
+    </task>
+    <task id="LOCAL-00081" summary="Content table is now localised and has a more robust value parser.">
+      <option name="closed" value="true" />
+      <created>1741790225520</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1741790225520</updated>
+    </task>
+    <task id="LOCAL-00082" summary="Created all needed routes for CRUD functionality.">
+      <option name="closed" value="true" />
+      <created>1741869436229</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1741869436229</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -745,14 +760,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added footer to the editor for the Puck fields, and improved the button block" />
-    <MESSAGE value="Created Helm templates in order to deploy this application on the k8s clusters" />
-    <MESSAGE value="CI/CD improvements: Node version is now specified in an .nvmrc file for re-use. Added caching and a deploy job for the new clusters (only dev is enabled now)." />
-    <MESSAGE value="Since the version number is playing a bigger role, we're moving to a beta version now." />
-    <MESSAGE value="Fixed the invalid ingress template, and created a Dockerfile for the deployment of the app. Also adjusted helm ignore file" />
-    <MESSAGE value="Added postgres as a temporary db container for the dev environment." />
-    <MESSAGE value="Deploy will now only be run on tagged versions." />
-    <MESSAGE value="Added postversion script to push to origin" />
     <MESSAGE value="Cleaned up the pr-lint-build.yml workflow, and added explicit build steps to the deploy job. This decouples the two." />
     <MESSAGE value="Added extra clarification in build output for gh actions, and moved prisma to production deps because we need it in the container." />
     <MESSAGE value="Moved the prisma dependencies to production, this time correctly." />
@@ -770,25 +777,15 @@
     <MESSAGE value="Changed scripts" />
     <MESSAGE value="Last changes in order to switch to React Router v7" />
     <MESSAGE value="Refine route configuration and update dependencies" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refine route configuration and update dependencies" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/app/components/shoelace.ts</url>
-          <line>54</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/app/components/shoelace.ts</url>
-          <line>56</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Removed some testing code I forgot to delete." />
+    <MESSAGE value="Setup basic account page structure so that we can start with the admin work" />
+    <MESSAGE value="Cleaned up the content structures, removing stuff we don't need. Also added link to projects for an admin" />
+    <MESSAGE value="Refactored the account menu into a separate component and added admin/ route" />
+    <MESSAGE value="Created the dynamic content route, and added a basic implementation of the content table." />
+    <MESSAGE value="Made a basic implementation of a dynamic event/project overview" />
+    <MESSAGE value="Content table is now localised and has a more robust value parser." />
+    <MESSAGE value="Created all needed routes for CRUD functionality." />
+    <option name="LAST_COMMIT_MESSAGE" value="Created all needed routes for CRUD functionality." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
