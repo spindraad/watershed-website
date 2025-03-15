@@ -5,14 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Enhance delete functionality in ContentTable with notification and dialog improvements">
-      <change afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/_index/DeletionNotification.stories.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/_index/DeletionNotification.translations.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/_index/DeletionNotification.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/i18n.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/i18n.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/entry.client.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/entry.client.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/entry.server.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/entry.server.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/locales/en.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/en.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/locales/nl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/nl.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/modules/i18n.server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/modules/i18n.server.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/_index/_overview.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/_index/_overview.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/tailwind.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/tailwind.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/bewerken/$id/_bewerken.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/bewerken/$id/_bewerken.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/nieuw/_nieuw.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/nieuw/_nieuw.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,12 +42,12 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="feature/WAT-82_implement_delete_flow" />
-                    <option name="lastUsedInstant" value="1741901158" />
+                    <option name="branchName" value="feature/WAT-87_Implement_create_update_routes" />
+                    <option name="lastUsedInstant" value="1742034055" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="release/WAT-77_implement_generic_crud_flow" />
-                    <option name="lastUsedInstant" value="1741901098" />
+                    <option name="lastUsedInstant" value="1741909659" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="dev" />
@@ -127,7 +129,7 @@
     "Vitest.validateLogin.executor": "Run",
     "Vitest.validateLogin.should return success: false when emailaddress is invalid.executor": "Run",
     "Vitest.validateLogin.should return success: false when emailaddress is missing.executor": "Run",
-    "git-widget-placeholder": "feature/WAT-82__implement__delete__flow",
+    "git-widget-placeholder": "feature/WAT-87__Implement__create__update__routes",
     "javascript.nodejs.core.library.configured.version": "22.11.0",
     "javascript.nodejs.core.library.typings.version": "22.9.0",
     "last_opened_file_path": "/Users/lody/dev/projects/watershed-website/scaffold-templates/plop/form",
@@ -324,23 +326,8 @@
       <workItem from="1741601622656" duration="48801000" />
       <workItem from="1741788770297" duration="8020000" />
       <workItem from="1741873032040" duration="9407000" />
-      <workItem from="1741900035832" duration="8572000" />
-    </task>
-    <task id="LOCAL-00039" summary="Created EventSummary component">
-      <option name="closed" value="true" />
-      <created>1734009085091</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1734009085091</updated>
-    </task>
-    <task id="LOCAL-00040" summary="Create artist profile summary component and added missing translations for a few components">
-      <option name="closed" value="true" />
-      <created>1734011975897</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1734011975897</updated>
+      <workItem from="1741900035832" duration="9197000" />
+      <workItem from="1742033930615" duration="8281000" />
     </task>
     <task id="LOCAL-00041" summary="Created a summary component for one or more artists">
       <option name="closed" value="true" />
@@ -718,7 +705,23 @@
       <option name="project" value="LOCAL" />
       <updated>1741905742303</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <task id="LOCAL-00088" summary="Enhance delete functionality in ContentTable with notification and dialog improvements">
+      <option name="closed" value="true" />
+      <created>1741909278570</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1741909278570</updated>
+    </task>
+    <task id="LOCAL-00089" summary="Enhance delete functionality in ContentTable with notification and dialog improvements">
+      <option name="closed" value="true" />
+      <created>1741909296958</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1741909296958</updated>
+    </task>
+    <option name="localTasksCounter" value="90" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">

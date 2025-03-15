@@ -1,5 +1,21 @@
 import type { Route } from './+types/_nieuw';
 import { ContentURLParams } from '~/types/Content';
+import i18nServer from '~/modules/i18n.server';
+import { useTranslation } from 'react-i18next';
+
+export const handle = {
+  i18: 'NewContentRoute',
+};
+
+export async function loader({ params, request }: Route.LoaderArgs) {
+  const t = await i18nServer.getFixedT(request, 'NewContentRoute');
+
+  return {
+    metaTranslations: {
+      title: t('Meta.Title', { content: params.content, count: 1 }),
+    },
+  };
+}
 
 export async function action({ params, request }: Route.ActionArgs) {
   // const content = params.content as ContentURLParams;
@@ -36,12 +52,21 @@ export async function action({ params, request }: Route.ActionArgs) {
   return null;
 }
 
+export const meta: Route.MetaFunction = ({ data }) => {
+  return [
+    {
+      title: data.metaTranslations.title,
+    },
+  ];
+};
+
 export default function AdminNewContentRoute({ params }: Route.ComponentProps) {
   const type = params.content as ContentURLParams;
+  const { t } = useTranslation('NewContentRoute');
 
   return (
     <div className="w-full max-w-lg">
-      <h1 className="text-4xl">{`New ${type}`}</h1>
+      <h1 className="text-4xl">{t('Title', { content: type, count: 1 })}</h1>
     </div>
   );
 }

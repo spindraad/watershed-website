@@ -132,9 +132,37 @@ export const NewsOverviewRoute = {
   Title: 'Nieuws',
 };
 
+export const ContentTypes = {
+  // These use the content type as defined in the URLs
+  evenementen_one: 'Evenement',
+  evenementen_other: 'Evenementen',
+  projecten_one: 'Project',
+  projecten_other: 'Projecten',
+};
+
 export const ContentOverviewRoute = {
+  Meta: {
+    Title:
+      'Beheer - $t(ContentTypes:{{content}}, lowercase) | Stichting Watershed',
+  },
   Titles: {
     events: 'Evenementen',
     projects: 'Projecten',
   },
+};
+
+export const NewContentRoute = {
+  Meta: {
+    Title:
+      'Nieuw $t(ContentTypes:{{content}}, lowercase) | Stichting Watershed',
+  },
+  Title: 'Nieuw $t(ContentTypes:{{content}}, lowercase)',
+};
+
+export const EditContentRoute = {
+  Meta: {
+    Title:
+      'Bewerk $t(ContentTypes:{{content}}, lowercase) | Stichting Watershed',
+  },
+  Title: 'Bewerk $t(ContentTypes:{{content}}, lowercase)',
 };

@@ -13,9 +13,11 @@ import ConfirmDeleteDialog from '~/routes/($lang)/beheer/$content/_index/Confirm
 import { useRef, useState } from 'react';
 import DeletionNotification from '~/routes/($lang)/beheer/$content/_index/DeletionNotification';
 import { SlAlert } from '@shoelace-style/shoelace';
+import i18nServer from '~/modules/i18n.server';
 
-export async function loader({ params }: Route.LoaderArgs) {
+export async function loader({ params, request }: Route.LoaderArgs) {
   const content = params.content as ContentURLParams;
+  const t = await i18nServer.getFixedT(request, 'ContentOverviewRoute');
 
   let data: ContentTableItem[] = [];
 
@@ -33,8 +35,21 @@ export async function loader({ params }: Route.LoaderArgs) {
     }
   }
 
-  return { data };
+  return {
+    data,
+    metaTranslations: {
+      title: t('Meta.Title', { content, count: data.length }),
+    },
+  };
 }
+
+export const meta: Route.MetaFunction = ({ data }) => {
+  return [
+    {
+      title: data.metaTranslations.title,
+    },
+  ];
+};
 
 export default function ContentOverviewRoute({ params }: Route.ComponentProps) {
   const content = params.content as ContentURLParams;

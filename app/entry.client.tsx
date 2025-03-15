@@ -35,6 +35,11 @@ async function main() {
       },
     });
 
+  // TODO: Enable this when i18next is updated to latest
+  // i18n.formatters.forEach((formatter) => {
+  //   i18next.services.formatter?.add(formatter.name, formatter.func);
+  // });
+
   startTransition(() => {
     hydrateRoot(
       document,
