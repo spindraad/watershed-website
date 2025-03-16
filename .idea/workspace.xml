@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Added localised meta data for the content routes">
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="A lot of small changes to the translations, and added a &quot;new&quot; button to te crud overview route.">
+      <change afterPath="$PROJECT_DIR$/app/validations/models/event.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/entry.client.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/entry.client.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/Input.stories.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Input.stories.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Input.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/locales/en.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/en.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/locales/nl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/nl.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/_index/_overview.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/_index/_overview.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/tailwind.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/tailwind.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -323,15 +323,7 @@
       <workItem from="1741788770297" duration="8020000" />
       <workItem from="1741873032040" duration="9407000" />
       <workItem from="1741900035832" duration="9197000" />
-      <workItem from="1742033930615" duration="12239000" />
-    </task>
-    <task id="LOCAL-00042" summary="Created a summary component for a product">
-      <option name="closed" value="true" />
-      <created>1734014880835</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1734014880835</updated>
+      <workItem from="1742033930615" duration="19643000" />
     </task>
     <task id="LOCAL-00043" summary="Added the improvements of generated components also to the generated form components, including some other stuff that's handy for forms">
       <option name="closed" value="true" />
@@ -717,7 +709,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742042473396</updated>
     </task>
-    <option name="localTasksCounter" value="91" />
+    <task id="LOCAL-00091" summary="A lot of small changes to the translations, and added a &quot;new&quot; button to te crud overview route.">
+      <option name="closed" value="true" />
+      <created>1742152396007</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1742152396007</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -760,7 +760,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Changed the prisma dev deploy script to run migrate reset, which will reset the DB on each deploy." />
     <MESSAGE value="Swapped the deprecated json() functions for the new data() functions where applicable." />
     <MESSAGE value="Changed the stream/abort timeouts" />
     <MESSAGE value="Ignore workflow and helm templates in Prettier" />
@@ -785,7 +784,8 @@
     <MESSAGE value="Implement delete functionality in ContentTable with confirmation dialog" />
     <MESSAGE value="Enhance delete functionality in ContentTable with notification and dialog improvements" />
     <MESSAGE value="Added localised meta data for the content routes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added localised meta data for the content routes" />
+    <MESSAGE value="A lot of small changes to the translations, and added a &quot;new&quot; button to te crud overview route." />
+    <option name="LAST_COMMIT_MESSAGE" value="A lot of small changes to the translations, and added a &quot;new&quot; button to te crud overview route." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

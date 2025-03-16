@@ -4,7 +4,7 @@ import { ReactWebComponent } from '@lit/react';
 import { ShoelaceContext } from '~/components/shoelace';
 
 type Props = ComponentProps<ReactWebComponent<SlInputComponent>> & {
-  error?: string;
+  error?: string[];
 };
 
 export default function Input({
@@ -26,7 +26,7 @@ export default function Input({
         aria-describedby={error ? `${id}-error` : undefined}
       />
       <SlAlert id={`${id}-error`} open={!!error} variant="danger">
-        {error}
+        {error?.join(', ')}
       </SlAlert>
     </div>
   );

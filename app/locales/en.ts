@@ -20,6 +20,8 @@ import { en as ConfirmDeleteDialogTranslations } from '~/routes/($lang)/beheer/$
 export const { ConfirmDeleteDialog } = ConfirmDeleteDialogTranslations;
 import { en as DeletionNotificationTranslations } from '~/routes/($lang)/beheer/$content/_index/DeletionNotification.translations';
 export const { DeletionNotification } = DeletionNotificationTranslations;
+import { en as EventFormTranslations } from '~/components/EventForm.translations';
+export const { EventForm } = EventFormTranslations;
 
 export const common = {
   title: 'Hello World!',

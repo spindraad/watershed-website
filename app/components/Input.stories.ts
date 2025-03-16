@@ -19,6 +19,6 @@ export const TextInputWithError: Story = {
   args: {
     id: 'input',
     label: 'This is a simple text input',
-    error: 'This is an error message',
+    error: ['This is an error message'],
   },
 };
