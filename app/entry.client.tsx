@@ -6,7 +6,12 @@ import { startTransition, StrictMode } from 'react';
 import { hydrateRoot } from 'react-dom/client';
 import { I18nextProvider, initReactI18next } from 'react-i18next';
 import { getInitialNamespaces } from 'remix-i18next/client';
-import { defaultNS, fallbackLanguage, supportedLanguages } from '~/config/i18n';
+import {
+  defaultNS,
+  fallbackLanguage,
+  supportedLanguages,
+  formatters,
+} from '~/config/i18n';
 
 async function main() {
   // eslint-disable-next-line import/no-named-as-default-member
@@ -35,10 +40,9 @@ async function main() {
       },
     });
 
-  // TODO: Enable this when i18next is updated to latest
-  // i18n.formatters.forEach((formatter) => {
-  //   i18next.services.formatter?.add(formatter.name, formatter.func);
-  // });
+  formatters.forEach((formatter) => {
+    i18next.services.formatter?.add(formatter.name, formatter.func);
+  });
 
   startTransition(() => {
     hydrateRoot(

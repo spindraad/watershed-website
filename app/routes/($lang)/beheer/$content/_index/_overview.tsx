@@ -10,10 +10,11 @@ import { ContentURLParams } from '~/types/Content';
 import { useTranslation } from 'react-i18next';
 import Heading from '~/components/Heading';
 import ConfirmDeleteDialog from '~/routes/($lang)/beheer/$content/_index/ConfirmDeleteDialog';
-import { useRef, useState } from 'react';
+import { useContext, useRef, useState } from 'react';
 import DeletionNotification from '~/routes/($lang)/beheer/$content/_index/DeletionNotification';
 import { SlAlert } from '@shoelace-style/shoelace';
 import i18nServer from '~/modules/i18n.server';
+import { ShoelaceContext } from '~/components/shoelace';
 
 export async function loader({ params, request }: Route.LoaderArgs) {
   const content = params.content as ContentURLParams;
@@ -53,6 +54,7 @@ export const meta: Route.MetaFunction = ({ data }) => {
 
 export default function ContentOverviewRoute({ params }: Route.ComponentProps) {
   const content = params.content as ContentURLParams;
+  const { SlButton, SlIcon } = useContext(ShoelaceContext);
   const { data } = useLoaderData<typeof loader>();
   const fetcher = useFetcher();
   const { t } = useTranslation('ContentOverviewRoute');
@@ -61,18 +63,6 @@ export default function ContentOverviewRoute({ params }: Route.ComponentProps) {
   const notifyRef = useRef<SlAlert>(null);
   const [itemName, setItemName] = useState('asd');
   const [itemID, setItemID] = useState('asd');
-
-  let translationKey = '';
-  switch (content) {
-    case 'evenementen': {
-      translationKey = 'Titles.events';
-      break;
-    }
-    case 'projecten': {
-      translationKey = 'Titles.projects';
-      break;
-    }
-  }
 
   function triggerDelete(itemID: string, itemName: string) {
     setItemName(itemName);
@@ -107,8 +97,15 @@ export default function ContentOverviewRoute({ params }: Route.ComponentProps) {
   const isDeleting = fetcher.state !== 'idle';
 
   return (
-    <div>
-      <Heading level={1}>{t(translationKey)}</Heading>
+    <div className="space-y-4">
+      <div className="flex flex-row justify-between items-center">
+        <Heading level={1}>{t('Title', { content })}</Heading>
+        <SlButton href={`/beheer/${content}/nieuw`} variant="primary">
+          <SlIcon slot="prefix" name="plus-circle-dotted"></SlIcon>
+          {t('NewButtonCaption', { content, count: 1 })}
+        </SlButton>
+      </div>
+
       <ContentTable items={data} triggerDelete={triggerDelete} />
 
       <ConfirmDeleteDialog

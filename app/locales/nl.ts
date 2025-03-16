@@ -141,14 +141,12 @@ export const ContentTypes = {
 };
 
 export const ContentOverviewRoute = {
+  ...ContentTypes,
   Meta: {
-    Title:
-      'Beheer - $t(ContentTypes:{{content}}, lowercase) | Stichting Watershed',
+    Title: 'Beheer - $t({{content}}, lowercase) | Stichting Watershed',
   },
-  Titles: {
-    events: 'Evenementen',
-    projects: 'Projecten',
-  },
+  Title: '$t({{content}}, capitalize)',
+  NewButtonCaption: 'Nieuw $t({{content}}, {"count": {{count}} })',
 };
 
 export const NewContentRoute = {
