@@ -1,14 +1,14 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { faker } from '@faker-js/faker';
-import EventForm from './EventForm';
+import EventMutationForm from 'app/components/EventMutationForm';
 import { reactRouterParameters } from 'storybook-addon-remix-react-router';
 
 export default {
-  title: 'Components/Event Form',
-  component: EventForm,
-} satisfies Meta<typeof EventForm>;
+  title: 'Components/Event Mutation Form',
+  component: EventMutationForm,
+} satisfies Meta<typeof EventMutationForm>;
 
-type Story = StoryObj<typeof EventForm>;
+type Story = StoryObj<typeof EventMutationForm>;
 
 export const EmptyForm: Story = {
   args: {},
@@ -42,7 +42,6 @@ export const ErrorForm: Story = {
       routing: {
         path: '/',
         action: async () => {
-          await new Promise((resolve) => setTimeout(resolve, 2000));
           return {
             errors: {
               title: ['Title is required'],

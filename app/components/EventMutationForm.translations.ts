@@ -1,6 +1,6 @@
 export const en = {
-  EventForm: {
-    Title: 'New Event',
+  EventMutationForm: {
+    Title: 'New event',
     Labels: {
       Title: 'Title',
       Description: 'Description',
@@ -12,7 +12,7 @@ export const en = {
 };
 
 export const nl = {
-  EventForm: {
+  EventMutationForm: {
     Title: 'Nieuw evenement',
     Labels: {
       Title: 'Titel',
@@ -25,7 +25,7 @@ export const nl = {
 };
 
 export const pap = {
-  EventForm: {
+  EventMutationForm: {
     Title: '',
   },
 };
