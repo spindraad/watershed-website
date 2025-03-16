@@ -158,7 +158,6 @@ export const NewContentRoute = {
     Title:
       'Nieuw $t(ContentTypes:{{content}}, lowercase) | Stichting Watershed',
   },
-  Title: 'Nieuw $t(ContentTypes:{{content}}, lowercase)',
 };
 
 export const EditContentRoute = {
@@ -166,5 +165,4 @@ export const EditContentRoute = {
     Title:
       'Bewerk $t(ContentTypes:{{content}}, lowercase) | Stichting Watershed',
   },
-  Title: 'Bewerk $t(ContentTypes:{{content}}, lowercase)',
 };

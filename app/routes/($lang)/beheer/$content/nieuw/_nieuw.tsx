@@ -1,7 +1,17 @@
 import type { Route } from './+types/_nieuw';
 import { ContentURLParams } from '~/types/Content';
 import i18nServer from '~/modules/i18n.server';
-import { useTranslation } from 'react-i18next';
+import {
+  ProjectValidator,
+  validateProject,
+} from '~/validations/models/project';
+import { EventValidator, validateEvent } from '~/validations/models/event';
+import { saveEvent } from '~/models/events.server';
+import { saveProject } from '~/models/projects.server';
+import { data, redirect } from 'react-router';
+import { ZodError } from 'zod';
+import ProjectMutationForm from '~/components/ProjectMutationForm';
+import EventMutationForm from '~/components/EventMutationForm';
 
 export const handle = {
   i18: 'NewContentRoute',
@@ -18,38 +28,42 @@ export async function loader({ params, request }: Route.LoaderArgs) {
 }
 
 export async function action({ params, request }: Route.ActionArgs) {
-  // const content = params.content as ContentURLParams;
-  //
-  // let validatorFn;
-  //
-  // if (content === 'evenementen') {
-  //   validatorFn = validatePost;
-  // } else {
-  //   validatorFn = validateEvent;
-  // }
-  //
-  // try {
-  //   const result = await validatorFn(request);
-  //
-  //   if (content === 'evenementen') {
-  //     await savePost(result as PostValidator);
-  //   } else {
-  //     await saveEvent(result as EventValidator);
-  //   }
-  //
-  //   console.log('Data is validated and ready to be saved...');
-  //   return redirect(`/admin/${content}`);
-  // } catch (err) {
-  //   if (!(err instanceof ZodError)) {
-  //     throw err;
-  //   }
-  //
-  //   const errors = (err as ZodError).flatten().fieldErrors;
-  //   console.error('Data is invalid and cannot be saved...');
-  //   return data({ errors }, { status: 400 });
-  // }
-  console.log({ params, request: request.method });
-  return null;
+  const content = params.content as ContentURLParams;
+
+  let validatorFn;
+
+  switch (content) {
+    case 'projecten':
+      validatorFn = validateProject;
+      break;
+    case 'evenementen':
+      validatorFn = validateEvent;
+  }
+
+  try {
+    const result = await validatorFn(request);
+
+    switch (content) {
+      case 'projecten':
+        await saveProject(result as ProjectValidator);
+        break;
+      case 'evenementen':
+        await saveEvent(result as EventValidator);
+        break;
+    }
+
+    return redirect(`/beheer/${content}`);
+  } catch (err) {
+    if (!(err instanceof ZodError)) {
+      console.error('WRONG!', { err });
+      throw err;
+    }
+
+    console.error({ err });
+
+    const errors = (err as ZodError).flatten().fieldErrors;
+    return data({ errors }, { status: 400 });
+  }
 }
 
 export const meta: Route.MetaFunction = ({ data }) => {
@@ -62,11 +76,15 @@ export const meta: Route.MetaFunction = ({ data }) => {
 
 export default function AdminNewContentRoute({ params }: Route.ComponentProps) {
   const type = params.content as ContentURLParams;
-  const { t } = useTranslation('NewContentRoute');
 
-  return (
-    <div className="w-full max-w-lg">
-      <h1 className="text-4xl">{t('Title', { content: type, count: 1 })}</h1>
-    </div>
-  );
+  function getForm() {
+    switch (type) {
+      case 'projecten':
+        return <ProjectMutationForm />;
+      case 'evenementen':
+        return <EventMutationForm />;
+    }
+  }
+
+  return <div className="w-full max-w-lg">{getForm()}</div>;
 }

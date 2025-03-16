@@ -1,6 +1,7 @@
 import { Project } from '@prisma/client';
 import { prisma } from '~/.server/db';
 import type { ContentTableItem } from '~/components/ContentTable';
+import { ProjectValidator } from '~/validations/models/project';
 
 export type { Project };
 
@@ -10,6 +11,10 @@ export async function getProjects(): Promise<Project[]> {
 
 export async function deleteProject(projectID: string): Promise<void> {
   await prisma.project.delete({ where: { id: projectID } });
+}
+
+export async function saveProject(project: ProjectValidator): Promise<Project> {
+  return prisma.project.create({ data: project });
 }
 
 export function convertProjectsToTableData(

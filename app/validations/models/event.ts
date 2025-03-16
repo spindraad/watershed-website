@@ -15,7 +15,8 @@ export type EventErrors = z.inferFlattenedErrors<
 
 export async function validateEvent(request: Request): Promise<EventValidator> {
   const clonedRequest = request.clone();
-  const formData = await clonedRequest.formData();
+  const formData = Object.fromEntries(await clonedRequest.formData());
+  formData.eventDate = `${formData.eventDate}:00.000Z`;
 
   return eventValidator.parse(formData);
 }
