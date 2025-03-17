@@ -5,13 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Mutation forms are now processed and saved for 'Create'">
+      <change afterPath="$PROJECT_DIR$/app/types/Validations.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/locales/en.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/en.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/locales/nl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/nl.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/events.server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/events.server.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/projects.server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/projects.server.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/EventMutationForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/EventMutationForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/ProjectMutationForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ProjectMutationForm.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/nieuw/_nieuw.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/nieuw/_nieuw.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/validations/models/event.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/validations/models/event.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/validations/models/project.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/validations/models/project.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -324,15 +324,7 @@
       <workItem from="1741788770297" duration="8020000" />
       <workItem from="1741873032040" duration="9407000" />
       <workItem from="1741900035832" duration="9197000" />
-      <workItem from="1742033930615" duration="21836000" />
-    </task>
-    <task id="LOCAL-00045" summary="Refactor Heading component and enhance RichEditor integration">
-      <option name="closed" value="true" />
-      <created>1740489236895</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1740489236895</updated>
+      <workItem from="1742033930615" duration="33182000" />
     </task>
     <task id="LOCAL-00046" summary="Refactored Puck block components in terms of name and label, updated Puck and added a class that allows us to use TinyMCE in Puck overriding the default pointer events setting">
       <option name="closed" value="true" />
@@ -718,7 +710,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742161146618</updated>
     </task>
-    <option name="localTasksCounter" value="94" />
+    <task id="LOCAL-00094" summary="Mutation forms are now processed and saved for 'Create'">
+      <option name="closed" value="true" />
+      <created>1742162384034</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1742162384034</updated>
+    </task>
+    <option name="localTasksCounter" value="95" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">

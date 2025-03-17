@@ -43,26 +43,34 @@ export async function action({ params, request }: Route.ActionArgs) {
   try {
     const result = await validatorFn(request);
 
-    switch (content) {
-      case 'projecten':
-        await saveProject(result as ProjectValidator);
-        break;
-      case 'evenementen':
-        await saveEvent(result as EventValidator);
-        break;
+    if (result.success) {
+      switch (content) {
+        case 'projecten':
+          await saveProject(result.data as ProjectValidator);
+          break;
+        case 'evenementen':
+          await saveEvent(result.data as EventValidator);
+          break;
+      }
+
+      return redirect(`/beheer/${content}`);
     }
 
-    return redirect(`/beheer/${content}`);
+    const errors = (result.error! as ZodError).flatten().fieldErrors;
+
+    return data(
+      {
+        data: result.data,
+        errors,
+      },
+      { status: 400 },
+    );
   } catch (err) {
     if (!(err instanceof ZodError)) {
-      console.error('WRONG!', { err });
       throw err;
     }
 
-    console.error({ err });
-
-    const errors = (err as ZodError).flatten().fieldErrors;
-    return data({ errors }, { status: 400 });
+    return data(err, { status: 500 });
   }
 }
 

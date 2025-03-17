@@ -1,11 +1,12 @@
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useFetcher } from 'react-router';
 import { ShoelaceContext } from '~/components/shoelace';
 import Heading from '~/components/Heading';
 import { Event } from '~/models/events.server';
 import Input from '~/components/Input';
-import { EventErrors } from '~/validations/models/event';
+import { ErrorResponse } from '~/types/Validations';
+import { EventErrors, EventValidator } from '~/validations/models/event';
 
 type Props = Partial<Omit<Event, 'id' | 'createdAt' | 'updatedAt'>> & {
   id?: string;
@@ -13,20 +14,37 @@ type Props = Partial<Omit<Event, 'id' | 'createdAt' | 'updatedAt'>> & {
 
 export default function EventMutationForm({
   id = '',
-  title,
-  description,
-  link = '',
-  address = '',
-  eventDate,
+  ...initialValues
 }: Props) {
   const { t, i18n } = useTranslation('EventMutationForm');
   const { SlButton } = useContext(ShoelaceContext);
-  const fetcher = useFetcher();
+  const fetcher = useFetcher<ErrorResponse<EventErrors, EventValidator>>();
 
-  const localisedTitle = title ? title[i18n.language] : '';
-  const localisedDescription = description ? description[i18n.language] : '';
+  const [title, setTitle] = useState(
+    initialValues.title ? initialValues.title[i18n.language] : '',
+  );
+  const [description, setDescription] = useState(
+    initialValues.description ? initialValues.description[i18n.language] : '',
+  );
+  const [address, setAddress] = useState(initialValues.address ?? '');
+  const [link, setLink] = useState(initialValues.link ?? '');
+  const [eventDate, setEventDate] = useState(
+    initialValues.eventDate ? initialValues.eventDate.toISOString() : '',
+  );
 
-  const errors = fetcher.data?.errors as EventErrors;
+  useEffect(() => {
+    if (fetcher.data) {
+      const { title, description, address, link, eventDate } =
+        fetcher.data.data;
+      setTitle(title);
+      setDescription(description);
+      setAddress(address);
+      setLink(link);
+      setEventDate(eventDate);
+    }
+  }, [fetcher.data, i18n.language]);
+
+  const errors = fetcher.data?.errors;
   const isSubmitting = fetcher.state !== 'idle';
 
   return (
@@ -42,7 +60,7 @@ export default function EventMutationForm({
         name="title"
         id="title"
         type="text"
-        value={localisedTitle}
+        value={title}
         error={errors?.title}
       />
 
@@ -51,7 +69,7 @@ export default function EventMutationForm({
         name="description"
         id="description"
         type="text"
-        value={localisedDescription}
+        value={description}
         error={errors?.description}
       />
 
@@ -78,7 +96,7 @@ export default function EventMutationForm({
         name="eventDate"
         id="eventDate"
         type="datetime-local"
-        defaultValue={eventDate?.toISOString()}
+        defaultValue={eventDate}
         error={errors?.eventDate}
       />
 

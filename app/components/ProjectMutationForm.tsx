@@ -1,11 +1,12 @@
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Project } from '~/models/projects.server';
 import { ShoelaceContext } from '~/components/shoelace';
 import { useFetcher } from 'react-router';
-import { ProjectErrors } from '~/validations/models/project';
+import { ProjectErrors, ProjectValidator } from '~/validations/models/project';
 import Heading from '~/components/Heading';
 import Input from '~/components/Input';
+import { ErrorResponse } from '~/types/Validations';
 
 type Props = Partial<Omit<Project, 'id' | 'createdAt' | 'updatedAt'>> & {
   id?: string;
@@ -13,19 +14,32 @@ type Props = Partial<Omit<Project, 'id' | 'createdAt' | 'updatedAt'>> & {
 
 export default function ProjectMutationForm({
   id = '',
-  title,
-  description,
-  summary,
-  slug = '',
+  ...initialValues
 }: Props) {
   const { t, i18n } = useTranslation('ProjectMutationForm');
   const { SlButton } = useContext(ShoelaceContext);
-  const fetcher = useFetcher();
+  const fetcher = useFetcher<ErrorResponse<ProjectErrors, ProjectValidator>>();
 
-  const localisedTitle = title ? title[i18n.language] : '';
-  const localisedDescription = description ? description[i18n.language] : '';
-  const localisedSummary = summary ? summary[i18n.language] : '';
+  const [title, setTitle] = useState(
+    initialValues.title ? initialValues.title[i18n.language] : '',
+  );
+  const [description, setDescription] = useState(
+    initialValues.description ? initialValues.description[i18n.language] : '',
+  );
+  const [summary, setSummary] = useState(
+    initialValues.summary ? initialValues.summary[i18n.language] : '',
+  );
+  const [slug, setSlug] = useState(initialValues.slug ?? '');
 
+  useEffect(() => {
+    if (fetcher.data) {
+      const { title, description, summary, slug } = fetcher.data.data;
+      setTitle(title);
+      setDescription(description);
+      setSummary(summary);
+      setSlug(slug);
+    }
+  }, [fetcher.data, i18n.language]);
   const errors = fetcher.data?.errors as ProjectErrors;
   const isSubmitting = fetcher.state !== 'idle';
 
@@ -42,7 +56,7 @@ export default function ProjectMutationForm({
         name="title"
         id="title"
         type="text"
-        value={localisedTitle}
+        value={title}
         error={errors?.title}
       />
 
@@ -51,7 +65,7 @@ export default function ProjectMutationForm({
         name="description"
         id="description"
         type="text"
-        value={localisedDescription}
+        value={description}
         error={errors?.description}
       />
 
@@ -60,7 +74,7 @@ export default function ProjectMutationForm({
         name="summary"
         id="summary"
         type="text"
-        value={localisedSummary}
+        value={summary}
         error={errors?.summary}
       />
 

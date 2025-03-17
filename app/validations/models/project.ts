@@ -1,4 +1,9 @@
 import { z } from 'zod';
+import {
+  ErrorData,
+  ErrorValidation,
+  SuccessValidation,
+} from '~/types/Validations';
 
 export const projectValidator = z.object({
   title: z.string().min(1),
@@ -14,9 +19,20 @@ export type ProjectErrors = z.inferFlattenedErrors<
 
 export async function validateProject(
   request: Request,
-): Promise<ProjectValidator> {
+): Promise<
+  SuccessValidation<ProjectValidator> | ErrorValidation<ProjectValidator>
+> {
   const clonedRequest = request.clone();
   const formData = Object.fromEntries(await clonedRequest.formData());
 
-  return projectValidator.parse(formData);
+  const result = projectValidator.safeParse(formData);
+
+  if (result.success) {
+    return result as SuccessValidation<ProjectValidator>;
+  }
+
+  return {
+    ...result,
+    data: formData as ErrorData<ProjectValidator>,
+  } as ErrorValidation<ProjectValidator>;
 }
