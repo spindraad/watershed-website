@@ -4,14 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Mutation forms are now processed and saved for 'Create'">
-      <change afterPath="$PROJECT_DIR$/app/types/Validations.ts" afterDir="false" />
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="The create flow is basically done, including validation before saving">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/EventMutationForm.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/EventMutationForm.stories.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/components/EventMutationForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/EventMutationForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/ProjectMutationForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ProjectMutationForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Input.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/shoelace.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/shoelace.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/locales/en.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/en.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/locales/nl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/nl.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/nieuw/_nieuw.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/nieuw/_nieuw.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/validations/models/event.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/validations/models/event.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/validations/models/project.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/validations/models/project.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -324,15 +325,7 @@
       <workItem from="1741788770297" duration="8020000" />
       <workItem from="1741873032040" duration="9407000" />
       <workItem from="1741900035832" duration="9197000" />
-      <workItem from="1742033930615" duration="33182000" />
-    </task>
-    <task id="LOCAL-00046" summary="Refactored Puck block components in terms of name and label, updated Puck and added a class that allows us to use TinyMCE in Puck overriding the default pointer events setting">
-      <option name="closed" value="true" />
-      <created>1740494063007</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1740494063007</updated>
+      <workItem from="1742033930615" duration="42663000" />
     </task>
     <task id="LOCAL-00047" summary="Added Button Block as Puck component">
       <option name="closed" value="true" />
@@ -718,7 +711,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742162384034</updated>
     </task>
-    <option name="localTasksCounter" value="95" />
+    <task id="LOCAL-00095" summary="The create flow is basically done, including validation before saving">
+      <option name="closed" value="true" />
+      <created>1742213161165</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1742213161165</updated>
+    </task>
+    <option name="localTasksCounter" value="96" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -761,7 +762,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Turned on the future flag for route config." />
     <MESSAGE value="Removed deprecated SerializedFrom type." />
     <MESSAGE value="Ran the RRv7 codemod, manually made some improvements and fixes." />
     <MESSAGE value="Changed scripts" />
@@ -786,7 +786,8 @@
     <MESSAGE value="Created event form" />
     <MESSAGE value="Created project form, and made some smaller improvements to the event form" />
     <MESSAGE value="Mutation forms are now processed and saved for 'Create'" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mutation forms are now processed and saved for 'Create'" />
+    <MESSAGE value="The create flow is basically done, including validation before saving" />
+    <option name="LAST_COMMIT_MESSAGE" value="The create flow is basically done, including validation before saving" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

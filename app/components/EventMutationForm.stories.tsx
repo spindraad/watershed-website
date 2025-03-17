@@ -6,30 +6,36 @@ import { reactRouterParameters } from 'storybook-addon-remix-react-router';
 export default {
   title: 'Components/Event Mutation Form',
   component: EventMutationForm,
+  render(args) {
+    localStorage.removeItem('eventContent');
+    return <EventMutationForm {...args} />;
+  },
 } satisfies Meta<typeof EventMutationForm>;
 
 type Story = StoryObj<typeof EventMutationForm>;
+
+const fakeEvent = {
+  title: {
+    en: faker.lorem.words(),
+    nl: faker.lorem.words(),
+    pap: faker.lorem.words(),
+  },
+  description: {
+    en: faker.lorem.paragraph(),
+    nl: faker.lorem.paragraph(),
+    pap: faker.lorem.paragraph(),
+  },
+  address: `${faker.location.streetAddress()} ${faker.location.city()}, ${faker.location.state()} ${faker.location.zipCode()}`,
+  link: faker.internet.url(),
+  eventDate: faker.date.future(),
+};
 
 export const EmptyForm: Story = {
   args: {},
 };
 
 export const FilledForm: Story = {
-  args: {
-    title: {
-      en: faker.lorem.words(),
-      nl: faker.lorem.words(),
-      pap: faker.lorem.words(),
-    },
-    description: {
-      en: faker.lorem.paragraph(),
-      nl: faker.lorem.paragraph(),
-      pap: faker.lorem.paragraph(),
-    },
-    address: `${faker.location.streetAddress()} ${faker.location.city()}, ${faker.location.state()} ${faker.location.zipCode()}`,
-    link: faker.internet.url(),
-    eventDate: faker.date.future(),
-  },
+  args: fakeEvent,
 };
 
 export const ErrorForm: Story = {
@@ -54,5 +60,12 @@ export const ErrorForm: Story = {
         },
       },
     }),
+  },
+};
+
+export const LocalStoragePreFilledForm: Story = {
+  render() {
+    localStorage.setItem('eventContent', JSON.stringify(fakeEvent));
+    return <EventMutationForm />;
   },
 };

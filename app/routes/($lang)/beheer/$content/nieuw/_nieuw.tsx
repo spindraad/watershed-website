@@ -12,6 +12,8 @@ import { data, redirect } from 'react-router';
 import { ZodError } from 'zod';
 import ProjectMutationForm from '~/components/ProjectMutationForm';
 import EventMutationForm from '~/components/EventMutationForm';
+import { useContext } from 'react';
+import { ShoelaceContext } from '~/components/shoelace';
 
 export const handle = {
   i18: 'NewContentRoute',
@@ -94,5 +96,5 @@ export default function AdminNewContentRoute({ params }: Route.ComponentProps) {
     }
   }
 
-  return <div className="w-full max-w-lg">{getForm()}</div>;
+  return <div className="w-full">{getForm()}</div>;
 }

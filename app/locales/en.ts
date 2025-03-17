@@ -24,6 +24,8 @@ import { en as EventFormTranslations } from '~/components/EventMutationForm.tran
 export const { EventMutationForm } = EventFormTranslations;
 import { en as ProjectFormTranslations } from '~/components/ProjectMutationForm.translations';
 export const { ProjectMutationForm } = ProjectFormTranslations;
+import { en as LocaleSelectorTranslations } from '~/components/LocaleSelector.translations';
+export const { LocaleSelector } = LocaleSelectorTranslations;
 
 export const common = {
   title: 'Hello World!',
