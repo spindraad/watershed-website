@@ -4,15 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="The create flow is basically done, including validation before saving">
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Enhance EventMutationForm with locale support and local storage integration, also added a locale selector component.">
+      <change afterPath="$PROJECT_DIR$/app/utils/content.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/utils/content.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/ContentTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ContentTable.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/components/EventMutationForm.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/EventMutationForm.stories.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/components/EventMutationForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/EventMutationForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Input.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/LocaleSelector.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/LocaleSelector.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/LocaleSelector.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/LocaleSelector.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/components/shoelace.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/shoelace.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/locales/en.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/en.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/locales/nl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/nl.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/i18n.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/i18n.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/nieuw/_nieuw.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/nieuw/_nieuw.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/types/Content.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/types/Content.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/types/Validations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/types/Validations.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/validations/models/event.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/validations/models/event.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/validations/models/project.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/validations/models/project.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,11 +126,15 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Attach to Node.js/Chrome.Debug in Chrome.executor&quot;: &quot;Debug&quot;,
+    &quot;JavaScript Debug.Debug in Chrome.executor&quot;: &quot;Debug&quot;,
     &quot;RunOnceActivity.OpenDatabaseViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;Vitest.All Tests.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.Content utilities.Retrieve the number of errors for each localised field.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.Content utilities.executor&quot;: &quot;Run&quot;,
     &quot;Vitest.validateLogin.executor&quot;: &quot;Run&quot;,
     &quot;Vitest.validateLogin.should return success: false when emailaddress is invalid.executor&quot;: &quot;Run&quot;,
     &quot;Vitest.validateLogin.should return success: false when emailaddress is missing.executor&quot;: &quot;Run&quot;,
@@ -174,6 +185,7 @@
       <recent name="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/verwijderen/$id" />
     </key>
     <key name="es6.move.members.recent.items">
+      <recent name="$PROJECT_DIR$/app/types/Content.ts" />
       <recent name="$PROJECT_DIR$/app/config/blocks/RichTextBlock.tsx" />
       <recent name="$PROJECT_DIR$/prisma/seed/_content.ts" />
       <recent name="$PROJECT_DIR$/prisma/seed/_users.ts" />
@@ -186,7 +198,7 @@
       <command value="Develop (npm)" />
     </option>
   </component>
-  <component name="RunManager" selected="npm.Dev">
+  <component name="RunManager" selected="Compound.Develop">
     <configuration name="Develop" type="CompoundRunConfigurationType">
       <toRun name="Dev" type="js.build_tools.npm" />
       <toRun name="Storybook" type="js.build_tools.npm" />
@@ -199,6 +211,33 @@
       <vitest-options value="--watch" />
       <envs />
       <scope-kind value="ALL" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Content utilities" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <vitest-options value="--run" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/app/utils/content.test.ts" />
+      <test-names>
+        <test-name value="Content utilities" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Content utilities.Retrieve the number of errors for each localised field" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <vitest-options value="--run" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/app/utils/content.test.ts" />
+      <test-names>
+        <test-name value="Content utilities" />
+        <test-name value="Retrieve the number of errors for each localised field" />
+      </test-names>
       <method v="2" />
     </configuration>
     <configuration name="validateLogin" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
@@ -242,6 +281,10 @@
       </test-names>
       <method v="2" />
     </configuration>
+    <configuration name="Debug in Chrome" type="JavascriptDebugType" uri="http://localhost:5173">
+      <mapping url="http://localhost:5173" local-file="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
     <configuration name="Dev" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -264,15 +307,20 @@
     </configuration>
     <list>
       <item itemvalue="Compound.Develop" />
+      <item itemvalue="JavaScript Debug.Debug in Chrome" />
       <item itemvalue="npm.Dev" />
       <item itemvalue="npm.Storybook" />
       <item itemvalue="Vitest.All Tests" />
+      <item itemvalue="Vitest.Content utilities" />
+      <item itemvalue="Vitest.Content utilities.Retrieve the number of errors for each localised field" />
       <item itemvalue="Vitest.validateLogin" />
       <item itemvalue="Vitest.validateLogin.should return success: false when emailaddress is invalid" />
       <item itemvalue="Vitest.validateLogin.should return success: false when emailaddress is missing" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Vitest.Content utilities" />
+        <item itemvalue="Vitest.Content utilities.Retrieve the number of errors for each localised field" />
         <item itemvalue="Vitest.validateLogin.should return success: false when emailaddress is missing" />
         <item itemvalue="Vitest.validateLogin.should return success: false when emailaddress is invalid" />
         <item itemvalue="Vitest.validateLogin" />
@@ -325,15 +373,9 @@
       <workItem from="1741788770297" duration="8020000" />
       <workItem from="1741873032040" duration="9407000" />
       <workItem from="1741900035832" duration="9197000" />
-      <workItem from="1742033930615" duration="42663000" />
-    </task>
-    <task id="LOCAL-00047" summary="Added Button Block as Puck component">
-      <option name="closed" value="true" />
-      <created>1741173291495</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1741173291495</updated>
+      <workItem from="1742033930615" duration="57349000" />
+      <workItem from="1742396477168" duration="4319000" />
+      <workItem from="1742482836686" duration="6623000" />
     </task>
     <task id="LOCAL-00048" summary="Changed page editor layout to feel more like an actual page">
       <option name="closed" value="true" />
@@ -719,7 +761,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742213161165</updated>
     </task>
-    <option name="localTasksCounter" value="96" />
+    <task id="LOCAL-00096" summary="Enhance EventMutationForm with locale support and local storage integration, also added a locale selector component.">
+      <option name="closed" value="true" />
+      <created>1742224442828</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1742224442829</updated>
+    </task>
+    <option name="localTasksCounter" value="97" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -762,7 +812,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Removed deprecated SerializedFrom type." />
     <MESSAGE value="Ran the RRv7 codemod, manually made some improvements and fixes." />
     <MESSAGE value="Changed scripts" />
     <MESSAGE value="Last changes in order to switch to React Router v7" />
@@ -787,7 +836,8 @@
     <MESSAGE value="Created project form, and made some smaller improvements to the event form" />
     <MESSAGE value="Mutation forms are now processed and saved for 'Create'" />
     <MESSAGE value="The create flow is basically done, including validation before saving" />
-    <option name="LAST_COMMIT_MESSAGE" value="The create flow is basically done, including validation before saving" />
+    <MESSAGE value="Enhance EventMutationForm with locale support and local storage integration, also added a locale selector component." />
+    <option name="LAST_COMMIT_MESSAGE" value="Enhance EventMutationForm with locale support and local storage integration, also added a locale selector component." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

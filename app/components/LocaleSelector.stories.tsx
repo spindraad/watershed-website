@@ -37,3 +37,13 @@ export const ShowSelectedLocale: Story = {
     showSelectedLocale: true,
   },
 };
+
+export const Badges: Story = {
+  args: {
+    captionBadge: 5,
+    localeBadges: {
+      nl: '2',
+      en: '3',
+    },
+  },
+};

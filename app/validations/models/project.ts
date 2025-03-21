@@ -1,9 +1,5 @@
 import { z } from 'zod';
-import {
-  ErrorData,
-  ErrorValidation,
-  SuccessValidation,
-} from '~/types/Validations';
+import { Data, ErrorValidation, SuccessValidation } from '~/types/Validations';
 
 export const projectValidator = z.object({
   title: z.string().min(1),
@@ -33,6 +29,6 @@ export async function validateProject(
 
   return {
     ...result,
-    data: formData as ErrorData<ProjectValidator>,
+    data: formData as Data<ProjectValidator>,
   } as ErrorValidation<ProjectValidator>;
 }

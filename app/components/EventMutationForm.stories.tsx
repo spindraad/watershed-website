@@ -2,6 +2,13 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { faker } from '@faker-js/faker';
 import EventMutationForm from 'app/components/EventMutationForm';
 import { reactRouterParameters } from 'storybook-addon-remix-react-router';
+import {
+  EventErrors,
+  EventValidator,
+  eventValidator,
+  validateEvent,
+} from '~/validations/models/event';
+import { ErrorResponse } from '~/types/Validations';
 
 export default {
   title: 'Components/Event Mutation Form',
@@ -27,7 +34,7 @@ const fakeEvent = {
   },
   address: `${faker.location.streetAddress()} ${faker.location.city()}, ${faker.location.state()} ${faker.location.zipCode()}`,
   link: faker.internet.url(),
-  eventDate: faker.date.future(),
+  eventDate: faker.date.future().toISOString(),
 };
 
 export const EmptyForm: Story = {
@@ -40,23 +47,25 @@ export const FilledForm: Story = {
 
 export const ErrorForm: Story = {
   args: {
+    title: {
+      en: faker.lorem.words(),
+      pap: faker.lorem.words(),
+    },
+    description: {
+      nl: faker.lorem.paragraph(),
+      pap: faker.lorem.paragraph(),
+    },
+    address: `${faker.location.streetAddress()} ${faker.location.city()}, ${faker.location.state()} ${faker.location.zipCode()}`,
     link: faker.internet.url(),
+    eventDate: faker.date.future(),
   },
 
   parameters: {
     reactRouter: reactRouterParameters({
       routing: {
         path: '/',
-        action: async () => {
-          return {
-            errors: {
-              title: ['Title is required'],
-              description: ['Description is required'],
-              address: ['Address is required'],
-              link: ['Link is required'],
-              eventDate: ['Event date is required'],
-            },
-          };
+        action: async ({ request }) => {
+          return validateEvent(request);
         },
       },
     }),

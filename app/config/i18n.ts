@@ -8,7 +8,7 @@ import { FormatFunction } from 'i18next';
 // List of supported languages, where NL is the default language.
 export const supportedLanguages = ['en', 'pap', 'nl'];
 
-export type SupportedLanguages = (typeof supportedLanguages)[number];
+export type SupportedLanguages = 'en' | 'pap' | 'nl';
 
 // Fallback language if somehow the detected language is not supported.
 export const fallbackLanguage = 'nl';

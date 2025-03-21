@@ -23,6 +23,16 @@ type Props = {
    * Whether to show the selected locale in the button caption.
    */
   showSelectedLocale?: boolean;
+
+  /**
+   * Badge to display in the button caption.
+   */
+  captionBadge?: string | number;
+
+  /**
+   * Badges to display in the locale list
+   */
+  localeBadges?: Record<string, string | number>;
 };
 
 export default function LocaleSelector({
@@ -30,9 +40,11 @@ export default function LocaleSelector({
   emitChangeLanguage,
   selectedLocale,
   showSelectedLocale,
+  captionBadge,
+  localeBadges,
 }: Props) {
   const { t, i18n } = useTranslation('LocaleSelector');
-  const { SlButton, SlIcon, SlDropdown, SlMenu, SlMenuItem } =
+  const { SlButton, SlIcon, SlDropdown, SlMenu, SlMenuItem, SlBadge } =
     useContext(ShoelaceContext);
 
   const handleLocaleSelect = (event: CustomEvent) => {
@@ -56,6 +68,12 @@ export default function LocaleSelector({
         {showSelectedLocale ?
           t(`Locales.${selectedLocale}`)
         : t('ButtonCaption')}
+
+        {captionBadge ?
+          <SlBadge variant="primary" pill>
+            {captionBadge}
+          </SlBadge>
+        : null}
       </SlButton>
 
       <SlMenu onSlSelect={handleLocaleSelect}>
@@ -65,6 +83,11 @@ export default function LocaleSelector({
           value="nl"
         >
           {t('Locales.nl')}
+          {localeBadges?.nl ?
+            <SlBadge slot="suffix" variant="primary" pill>
+              {localeBadges.nl}
+            </SlBadge>
+          : null}
         </SlMenuItem>
         <SlMenuItem
           type="checkbox"
@@ -72,6 +95,11 @@ export default function LocaleSelector({
           value="en"
         >
           {t('Locales.en')}
+          {localeBadges?.en ?
+            <SlBadge slot="suffix" variant="primary" pill>
+              {localeBadges.en}
+            </SlBadge>
+          : null}
         </SlMenuItem>
         <SlMenuItem
           type="checkbox"
@@ -79,6 +107,11 @@ export default function LocaleSelector({
           value="pap"
         >
           {t('Locales.pap')}
+          {localeBadges?.pap ?
+            <SlBadge slot="suffix" variant="primary" pill>
+              {localeBadges.pap}
+            </SlBadge>
+          : null}
         </SlMenuItem>
       </SlMenu>
     </SlDropdown>

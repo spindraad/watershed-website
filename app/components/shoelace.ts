@@ -13,6 +13,7 @@ import {
   SlDropdown,
   SlMenu,
   SlMenuItem,
+  SlBadge,
 } from '@shoelace-style/shoelace/dist/react';
 import { useEffect, useState, useRef, createContext } from 'react';
 
@@ -33,6 +34,7 @@ type Components = {
   SlDropdown: typeof nullComponent | typeof SlDropdown;
   SlMenu: typeof nullComponent | typeof SlMenu;
   SlMenuItem: typeof nullComponent | typeof SlMenuItem;
+  SlBadge: typeof nullComponent | typeof SlBadge;
 };
 
 const nullComponents: Components = {
@@ -50,6 +52,7 @@ const nullComponents: Components = {
   SlDropdown: nullComponent,
   SlMenu: nullComponent,
   SlMenuItem: nullComponent,
+  SlBadge: nullComponent,
 };
 
 export const ShoelaceContext = createContext<Components>(nullComponents);
@@ -84,6 +87,7 @@ export function useShoelace({ URL }: { URL: string }) {
             SlDropdown: components.SlDropdown,
             SlMenu: components.SlMenu,
             SlMenuItem: components.SlMenuItem,
+            SlBadge: components.SlBadge,
           });
         });
       },

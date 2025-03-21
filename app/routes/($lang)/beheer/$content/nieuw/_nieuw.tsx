@@ -12,8 +12,6 @@ import { data, redirect } from 'react-router';
 import { ZodError } from 'zod';
 import ProjectMutationForm from '~/components/ProjectMutationForm';
 import EventMutationForm from '~/components/EventMutationForm';
-import { useContext } from 'react';
-import { ShoelaceContext } from '~/components/shoelace';
 
 export const handle = {
   i18: 'NewContentRoute',
@@ -58,15 +56,7 @@ export async function action({ params, request }: Route.ActionArgs) {
       return redirect(`/beheer/${content}`);
     }
 
-    const errors = (result.error! as ZodError).flatten().fieldErrors;
-
-    return data(
-      {
-        data: result.data,
-        errors,
-      },
-      { status: 400 },
-    );
+    return data(result, { status: 400 });
   } catch (err) {
     if (!(err instanceof ZodError)) {
       throw err;

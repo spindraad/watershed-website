@@ -3,11 +3,8 @@ import { useTranslation } from 'react-i18next';
 import { ShoelaceContext } from '~/components/shoelace';
 import { Link } from 'react-router';
 import { format, isDate } from 'date-fns';
-import { SupportedLanguages, supportedLanguages } from '~/config/i18n';
 import Anchor from '~/components/Anchor';
-
-// TODO: Move to a shared location
-type LocalisedValue = Record<SupportedLanguages, string>;
+import { isLocalisedValue, LocalisedValue } from '~/types/Content';
 
 type ItemValue = string | LocalisedValue | number | Date;
 
@@ -28,20 +25,6 @@ type Props = {
   items: ContentTableItem[];
   triggerDelete: (itemID: string, itemName: string) => void;
 };
-
-function isSupportedLanguages(
-  value: unknown,
-): value is Record<SupportedLanguages, string> {
-  if (typeof value !== 'object' || value === null) return false;
-
-  // Get the keys from the value object
-  const keys = Object.keys(value);
-
-  // Check if all keys are valid supported languages
-  return keys.every((key) =>
-    supportedLanguages.includes(key as SupportedLanguages),
-  );
-}
 
 // Write a type predicate to check if a value is of a ParametrizedItemValue type.
 function isParametrizedItemValue(
@@ -74,7 +57,7 @@ export default function ContentTable({ items, triggerDelete }: Props) {
       return format(value, 'dd-MM-yyyy');
     }
 
-    if (isSupportedLanguages(value)) {
+    if (isLocalisedValue(value)) {
       return value[language];
     }
 

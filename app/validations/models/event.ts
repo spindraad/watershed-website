@@ -1,22 +1,23 @@
 import { z } from 'zod';
-import {
-  SuccessValidation,
-  ErrorValidation,
-  ErrorData,
-} from '~/types/Validations';
+import { SuccessValidation, ErrorValidation, Data } from '~/types/Validations';
+import { transformFormData } from '~/utils/content';
+
+const localisedStringValidations = z.object({
+  nl: z.string().min(1),
+  en: z.string().min(1),
+  pap: z.string().min(1),
+});
 
 export const eventValidator = z.object({
-  title: z.string().min(1),
-  description: z.string().min(1),
+  title: localisedStringValidations,
+  description: localisedStringValidations,
   eventDate: z.string().datetime(),
   address: z.string().min(1),
   link: z.string().min(1),
 });
 
 export type EventValidator = z.infer<typeof eventValidator>;
-export type EventErrors = z.inferFlattenedErrors<
-  typeof eventValidator
->['fieldErrors'];
+export type EventErrors = z.inferFormattedError<typeof eventValidator>;
 
 export async function validateEvent(
   request: Request,
@@ -24,17 +25,20 @@ export async function validateEvent(
   SuccessValidation<EventValidator> | ErrorValidation<EventValidator>
 > {
   const clonedRequest = request.clone();
-  const formData = Object.fromEntries(await clonedRequest.formData());
-  formData.eventDate = `${formData.eventDate}:00.000Z`;
+  const formData = await clonedRequest.formData();
+  const transformedData = transformFormData(formData);
+  transformedData.eventDate = `${transformedData.eventDate}:00.000Z`;
 
-  const result = eventValidator.safeParse(formData);
+  const result = eventValidator.safeParse(transformedData);
 
+  console.log(result);
   if (result.success) {
     return result as SuccessValidation<EventValidator>;
   }
 
   return {
     ...result,
-    data: formData as ErrorData<EventValidator>,
+    errors: result.error.format(),
+    data: transformedData as Data<EventValidator>,
   } as ErrorValidation<EventValidator>;
 }

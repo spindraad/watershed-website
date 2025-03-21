@@ -1,14 +1,15 @@
 import { SafeParseError, SafeParseSuccess } from 'zod';
+import { LocalisedValue } from '~/types/Content';
 
-export type ErrorData<Data> = {
-  [Prop in keyof Data]: string;
+export type Data<Payload> = {
+  [Prop in keyof Payload]: string | LocalisedValue;
 };
 
-export type SuccessValidation<Data> = SafeParseSuccess<Data>;
-export type ErrorValidation<Data> = SafeParseError<Data> & {
-  data: ErrorData<Data>;
+export type SuccessValidation<Payload> = SafeParseSuccess<Payload>;
+export type ErrorValidation<Payload> = SafeParseError<Payload> & {
+  data: Data<Payload>;
 };
-export type ErrorResponse<Error, Data> = {
+export type ErrorResponse<Error, Payload> = {
   errors: Error;
-  data: ErrorData<Data>;
+  data: Data<Payload>;
 };
