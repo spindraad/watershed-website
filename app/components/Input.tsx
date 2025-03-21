@@ -1,25 +1,8 @@
-import { useContext, ComponentProps } from 'react';
-import {
-  SlBlurEvent,
-  SlChangeEvent,
-  SlClearEvent,
-  SlFocusEvent,
-  SlInput as SlInputComponent,
-  SlInputEvent,
-  SlInvalidEvent,
-} from '@shoelace-style/shoelace';
+import { ComponentProps, useContext } from 'react';
+import { SlInput as SlInputComponent } from '@shoelace-style/shoelace';
 import { ReactWebComponent } from '@lit/react';
 import { ShoelaceContext } from '~/components/shoelace';
-
-// Define custom event handler types
-type SlInputEventHandlers = {
-  onSlBlur?: (e: SlBlurEvent) => void;
-  onSlChange?: (e: SlChangeEvent) => void;
-  onSlClear?: (e: SlClearEvent) => void;
-  onSlFocus?: (e: SlFocusEvent) => void;
-  onSlInput?: (e: SlInputEvent) => void;
-  onSlInvalid?: (e: SlInvalidEvent) => void;
-};
+import { SlInputEventHandlers } from '~/types/Input';
 
 type Props = Omit<
   ComponentProps<ReactWebComponent<SlInputComponent>>,

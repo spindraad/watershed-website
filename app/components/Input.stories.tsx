@@ -4,6 +4,13 @@ import Input from './Input';
 export default {
   title: 'Components/Input',
   component: Input,
+  decorators: [
+    (Story) => (
+      <div className="w-96">
+        <Story />
+        </div>
+    ),
+  ],
 } satisfies Meta<typeof Input>;
 
 type Story = StoryObj<typeof Input>;

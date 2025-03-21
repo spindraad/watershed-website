@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import LocaleSelector from './LocaleSelector';
+import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
 
 export default {
   title: 'Components/Locale Selector',
@@ -34,7 +35,48 @@ export const HandleChangeEvent: Story = {
 export const ShowSelectedLocale: Story = {
   args: {
     selectedLocale: 'en',
-    showSelectedLocale: true,
+    captionType: 'selected',
+    onLocaleSelect: fn(),
+  },
+
+  play: async ({ canvasElement, args, step }) => {
+    const canvas = within(canvasElement);
+
+    await waitFor(() => {
+      expect(canvas.getByRole('menu')).toBeInTheDocument();
+    });
+
+    // const items = canvasElement.querySelectorAll('sl-menu-item');
+    const items = canvas.getAllByRole('menuitemcheckbox');
+    const dropdownTrigger = canvasElement.querySelector('sl-button');
+
+    await waitFor(() => {
+      expect(items[0]).toHaveTextContent('Dutch');
+      expect(items[1]).toHaveTextContent('English');
+      expect(items[2]).toHaveTextContent('Papiamentu');
+    });
+
+    if (dropdownTrigger) {
+      await step('Selecting "Dutch" locale', async () => {
+        await userEvent.click(dropdownTrigger);
+        await userEvent.click(items[0]);
+      });
+    }
+
+    await waitFor(() => {
+      expect(args.onLocaleSelect).toHaveBeenCalledWith('nl');
+    });
+
+    if (dropdownTrigger) {
+      await step('Selecting "Papiamentu" locale', async () => {
+        await userEvent.click(dropdownTrigger);
+        await userEvent.click(items[2]);
+      });
+    }
+
+    await waitFor(() => {
+      expect(args.onLocaleSelect).toHaveBeenCalledWith('pap');
+    });
   },
 };
 
@@ -45,5 +87,17 @@ export const Badges: Story = {
       nl: '2',
       en: '3',
     },
+  },
+};
+
+export const InlineButtons: Story = {
+  args: {
+    inline: true,
+  },
+};
+
+export const HoistButtons: Story = {
+  args: {
+    hoist: true,
   },
 };

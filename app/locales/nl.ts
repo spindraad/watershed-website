@@ -26,6 +26,8 @@ import { nl as ProjectFormTranslations } from '~/components/ProjectMutationForm.
 export const { ProjectMutationForm } = ProjectFormTranslations;
 import { nl as LocaleSelectorTranslations } from '~/components/LocaleSelector.translations';
 export const { LocaleSelector } = LocaleSelectorTranslations;
+import { nl as LocalisedInputTranslations } from '~/components/LocalisedInput.translations';
+export const { LocalisedInput } = LocalisedInputTranslations;
 
 export const common = {
   title: 'Hallo Wereld!',

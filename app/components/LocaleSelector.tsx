@@ -1,13 +1,14 @@
 import { useContext } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ShoelaceContext } from '~/components/shoelace';
+import { SupportedLanguages } from '~/config/i18n';
 
 type Props = {
   /**
    * Callback function that is called when a locale is selected.
    * @param locale
    */
-  onLocaleSelect?: (locale: string) => void;
+  onLocaleSelect?: (locale: SupportedLanguages) => void;
 
   /**
    * Whether to emit a change language event to the app (changes the app's locale).
@@ -17,12 +18,17 @@ type Props = {
   /**
    * The currently selected locale.
    */
-  selectedLocale?: string;
+  selectedLocale?: SupportedLanguages;
 
   /**
-   * Whether to show the selected locale in the button caption.
+   * Which caption to show in the button.
    */
-  showSelectedLocale?: boolean;
+  captionType?: 'default' | 'selected' | 'custom' | 'none';
+
+  /**
+   * If `captionType` is `custom`, the custom caption to show in the button.
+   */
+  buttonCaption?: string;
 
   /**
    * Badge to display in the button caption.
@@ -33,15 +39,34 @@ type Props = {
    * Badges to display in the locale list
    */
   localeBadges?: Record<string, string | number>;
+
+  /**
+   * The slot to render the component in.
+   */
+  slot?: string;
+
+  /**
+   * Whether to render the component inline (without borders and captions).
+   */
+  inline?: boolean;
+
+  /**
+   * Whether to hoist the dropdown menu to the body.
+   */
+  hoist?: boolean;
 };
 
 export default function LocaleSelector({
   onLocaleSelect,
   emitChangeLanguage,
   selectedLocale,
-  showSelectedLocale,
+  captionType = 'default',
+  buttonCaption = '',
   captionBadge,
   localeBadges,
+  slot = '',
+  inline = false,
+  hoist = false,
 }: Props) {
   const { t, i18n } = useTranslation('LocaleSelector');
   const { SlButton, SlIcon, SlDropdown, SlMenu, SlMenuItem, SlBadge } =
@@ -61,16 +86,38 @@ export default function LocaleSelector({
     }
   };
 
+  let caption;
+  switch (captionType) {
+    case 'default':
+      caption = t('ButtonCaption');
+      break;
+    case 'selected':
+      caption = t(`Locales.${selectedLocale}`);
+      break;
+    case 'custom':
+      caption = buttonCaption;
+      break;
+    case 'none':
+      caption = '';
+      break;
+  }
+
   return (
-    <SlDropdown>
-      <SlButton slot="trigger" type="button" caret>
+    <SlDropdown slot={slot} hoist={hoist}>
+      <SlButton
+        className={
+          inline || captionType === 'none' ? 'inline-locale-selector' : ''
+        }
+        slot="trigger"
+        type="button"
+        variant={inline ? 'text' : 'default'}
+        caret
+      >
         <SlIcon name="globe-europe-africa" slot="prefix" />
-        {showSelectedLocale ?
-          t(`Locales.${selectedLocale}`)
-        : t('ButtonCaption')}
+        {caption ? caption : null}
 
         {captionBadge ?
-          <SlBadge variant="primary" pill>
+          <SlBadge variant="danger" pill>
             {captionBadge}
           </SlBadge>
         : null}
@@ -84,7 +131,7 @@ export default function LocaleSelector({
         >
           {t('Locales.nl')}
           {localeBadges?.nl ?
-            <SlBadge slot="suffix" variant="primary" pill>
+            <SlBadge slot="suffix" variant="danger" pill>
               {localeBadges.nl}
             </SlBadge>
           : null}
@@ -96,7 +143,7 @@ export default function LocaleSelector({
         >
           {t('Locales.en')}
           {localeBadges?.en ?
-            <SlBadge slot="suffix" variant="primary" pill>
+            <SlBadge slot="suffix" variant="danger" pill>
               {localeBadges.en}
             </SlBadge>
           : null}
@@ -108,7 +155,7 @@ export default function LocaleSelector({
         >
           {t('Locales.pap')}
           {localeBadges?.pap ?
-            <SlBadge slot="suffix" variant="primary" pill>
+            <SlBadge slot="suffix" variant="danger" pill>
               {localeBadges.pap}
             </SlBadge>
           : null}
