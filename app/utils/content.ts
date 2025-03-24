@@ -56,6 +56,7 @@ export function countErrorsForLocalisedFields<D extends ZodTypeAny>(
   for (const field in errors) {
     if (field === '_errors') continue;
 
+    // @ts-expect-error - We know that fieldErrors is an object
     const fieldErrors = errors[field];
     if (!fieldErrors || typeof fieldErrors !== 'object') continue;
 

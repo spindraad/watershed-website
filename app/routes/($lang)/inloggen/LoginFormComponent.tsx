@@ -51,9 +51,9 @@ export default function LoginFormComponent({ action, errors, values }: Props) {
         type="email"
         label={t('Email')}
         value={values?.emailaddress ?? ''}
-        error={errors?.emailaddress
-          ?.map((error) => t(`Errors.emailaddress.${error.errorCode}`))
-          .join(', ')}
+        error={errors?.emailaddress?.map((error) =>
+          t(`Errors.emailaddress.${error.errorCode}`),
+        )}
       />
 
       <Input
@@ -63,9 +63,9 @@ export default function LoginFormComponent({ action, errors, values }: Props) {
         label={t('Password')}
         passwordToggle
         value={values?.password ?? ''}
-        error={errors?.password
-          ?.map((error) => t(`Errors.password.${error.errorCode}`))
-          .join(', ')}
+        error={errors?.password?.map((error) =>
+          t(`Errors.password.${error.errorCode}`),
+        )}
       />
 
       <SlAlert variant="danger" open={!!errors?.userNotFound}>

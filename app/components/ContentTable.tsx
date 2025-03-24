@@ -5,6 +5,7 @@ import { Link } from 'react-router';
 import { format, isDate } from 'date-fns';
 import Anchor from '~/components/Anchor';
 import { isLocalisedValue, LocalisedValue } from '~/types/Content';
+import { SupportedLanguages } from '~/config/i18n';
 
 type ItemValue = string | LocalisedValue | number | Date;
 
@@ -58,21 +59,25 @@ export default function ContentTable({ items, triggerDelete }: Props) {
     }
 
     if (isLocalisedValue(value)) {
-      return value[language];
+      return value[language as SupportedLanguages];
     }
 
     return value;
   }
 
   function getItemName(item: ContentTableItem) {
-    let name: LocalisedValue = {};
+    let name: LocalisedValue = {
+      en: '',
+      nl: '',
+      pap: '',
+    };
     Object.keys(item).forEach((key) => {
       if (isParametrizedItemValue(item[key]) && item[key].isName) {
         name = item[key].value as LocalisedValue;
       }
     });
 
-    return name[language];
+    return name[language as SupportedLanguages];
   }
 
   return (

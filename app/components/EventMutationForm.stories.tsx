@@ -1,10 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { faker } from '@faker-js/faker';
-import EventMutationForm from 'app/components/EventMutationForm';
+import EventMutationForm from './EventMutationForm';
 import { reactRouterParameters } from 'storybook-addon-remix-react-router';
 import { validateEvent } from '~/validations/models/event';
-import { expect, screen, userEvent, waitFor, within } from '@storybook/test';
-import { SlButton } from '@shoelace-style/shoelace/dist/shoelace.js';
+import { expect, screen, waitFor, within } from '@storybook/test';
 
 export default {
   title: 'Components/Event Mutation Form',
