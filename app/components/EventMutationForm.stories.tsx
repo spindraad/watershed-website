@@ -2,13 +2,9 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { faker } from '@faker-js/faker';
 import EventMutationForm from 'app/components/EventMutationForm';
 import { reactRouterParameters } from 'storybook-addon-remix-react-router';
-import {
-  EventErrors,
-  EventValidator,
-  eventValidator,
-  validateEvent,
-} from '~/validations/models/event';
-import { ErrorResponse } from '~/types/Validations';
+import { validateEvent } from '~/validations/models/event';
+import { expect, screen, userEvent, waitFor, within } from '@storybook/test';
+import { SlButton } from '@shoelace-style/shoelace/dist/shoelace.js';
 
 export default {
   title: 'Components/Event Mutation Form',
@@ -43,6 +39,34 @@ export const EmptyForm: Story = {
 
 export const FilledForm: Story = {
   args: fakeEvent,
+
+  play: async ({ canvasElement }) => {
+    await waitFor(() =>
+      Promise.allSettled([
+        customElements.whenDefined('sl-button'),
+        customElements.whenDefined('sl-input'),
+      ]),
+    );
+
+    await new Promise((resolve) => setTimeout(resolve, 0));
+    const form = canvasElement.querySelector('form') as HTMLFormElement;
+
+    const formData = new FormData(form);
+
+    await expect(formData.get('title.en')).toBe(fakeEvent.title.en);
+    await expect(formData.get('title.nl')).toBe(fakeEvent.title.nl);
+    await expect(formData.get('title.pap')).toBe(fakeEvent.title.pap);
+
+    await expect(formData.get('description.en')).toBe(fakeEvent.description.en);
+    await expect(formData.get('description.nl')).toBe(fakeEvent.description.nl);
+    await expect(formData.get('description.pap')).toBe(
+      fakeEvent.description.pap,
+    );
+
+    await expect(formData.get('address')).toBe(fakeEvent.address);
+    await expect(formData.get('eventDate')).toBe(fakeEvent.eventDate);
+    await expect(formData.get('link')).toBe(fakeEvent.link);
+  },
 };
 
 export const ErrorForm: Story = {
@@ -57,7 +81,7 @@ export const ErrorForm: Story = {
     },
     address: `${faker.location.streetAddress()} ${faker.location.city()}, ${faker.location.state()} ${faker.location.zipCode()}`,
     link: faker.internet.url(),
-    eventDate: faker.date.future(),
+    eventDate: faker.date.future().toISOString(),
   },
 
   parameters: {
@@ -65,16 +89,37 @@ export const ErrorForm: Story = {
       routing: {
         path: '/',
         action: async ({ request }) => {
-          return validateEvent(request);
+          const r = await validateEvent(request);
+          console.log(r);
+          return r;
         },
       },
     }),
   },
-};
 
-export const LocalStoragePreFilledForm: Story = {
-  render() {
-    localStorage.setItem('eventContent', JSON.stringify(fakeEvent));
-    return <EventMutationForm />;
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    await waitFor(() =>
+      Promise.allSettled([
+        customElements.whenDefined('sl-button'),
+        customElements.whenDefined('sl-input'),
+      ]),
+    );
+
+    const submit = screen.getByText('Save');
+
+    if (!submit) {
+      throw new Error('Submit button not found');
+    }
+
+    submit.click();
+
+    await waitFor(() => {
+      expect(canvas.getByText('Invalid datetime')).toBeInTheDocument();
+      expect(
+        canvas.getByText('String must contain at least 1 character(s)'),
+      ).toBeInTheDocument();
+    });
   },
 };

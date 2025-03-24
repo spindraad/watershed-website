@@ -27,6 +27,10 @@ export async function validateEvent(
   const clonedRequest = request.clone();
   const formData = await clonedRequest.formData();
   const transformedData = transformFormData(formData);
+  console.log({
+    formData: Object.fromEntries(formData),
+    transformedData,
+  });
   transformedData.eventDate = `${transformedData.eventDate}:00.000Z`;
 
   const result = eventValidator.safeParse(transformedData);
@@ -37,7 +41,7 @@ export async function validateEvent(
   }
 
   return {
-    ...result,
+    success: false,
     errors: result.error.format(),
     data: transformedData as Data<EventValidator>,
   } as ErrorValidation<EventValidator>;

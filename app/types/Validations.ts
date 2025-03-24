@@ -2,7 +2,8 @@ import { SafeParseError, SafeParseSuccess } from 'zod';
 import { LocalisedValue } from '~/types/Content';
 
 export type Data<Payload> = {
-  [Prop in keyof Payload]: string | LocalisedValue;
+  [Prop in keyof Payload]: Payload[Prop] extends LocalisedValue ? LocalisedValue
+  : Payload[Prop];
 };
 
 export type SuccessValidation<Payload> = SafeParseSuccess<Payload>;

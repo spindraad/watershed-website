@@ -9,6 +9,7 @@ import {
 import { SlInputEventHandlers } from '~/types/Input';
 import { SupportedLanguages } from '~/config/i18n';
 import LocaleSelector from '~/components/LocaleSelector';
+import { ZodFormattedError } from 'zod';
 
 type Props = Omit<
   ComponentProps<ReactWebComponent<SlInputComponent>>,
@@ -21,7 +22,7 @@ type Props = Omit<
   | 'value'
 > &
   SlInputEventHandlers & {
-    errors?: Partial<Record<SupportedLanguages, string[]>>;
+    errors?: Partial<ZodFormattedError<Record<SupportedLanguages, string[]>>>;
     selectedLocale?: SupportedLanguages;
     value?: Partial<Record<SupportedLanguages, string>>;
   };
@@ -58,12 +59,18 @@ export default function LocalisedInput({
     });
   }
 
-  const currentLocaleHasError = !!errors?.[currentLocale]?.length;
-  const errorsExist = Object.values(errors ?? {}).some((error) => error.length);
+  const currentLocaleHasError = !!errors?.[currentLocale]?._errors.length;
+  const errorsExist = Object.values(errors ?? {}).some((error) => {
+    if (Array.isArray(error)) return false;
+
+    return error._errors.length;
+  });
   const errorsByLocale = Object.entries(errors ?? {}).reduce<
     Record<string, number>
   >((acc, [locale, error]) => {
-    acc[locale] = error.length;
+    if (Array.isArray(error)) return acc;
+
+    acc[locale] = error._errors.length;
     return acc;
   }, {});
 
@@ -75,8 +82,7 @@ export default function LocalisedInput({
           type="text"
           label={`${label} (${t(`Locales.${currentLocale}`)})`}
           id={id}
-          name={name}
-          className={`${className} ${currentLocaleHasError ? 'part-[base]:border-red-300' : ''}`}
+          className={`${className} ${currentLocaleHasError ? 'part-[base]:border-red-300' : ''} w-full`}
           value={value[currentLocale]}
           onSlChange={handleValueChange}
           aria-invalid={ariaInvalid}
@@ -91,7 +97,7 @@ export default function LocalisedInput({
         />
       </div>
       <SlAlert id={`${id}-error`} open={currentLocaleHasError} variant="danger">
-        {errors?.[currentLocale]?.join(', ')}
+        {errors?.[currentLocale]?._errors.join(', ')}
       </SlAlert>
       <input type="hidden" name={`${name}.nl`} value={value.nl} />
       <input type="hidden" name={`${name}.en`} value={value.en} />

@@ -4,16 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Refactor EventMutationForm to support localization and improve error handling, including new utility functions for form data transformation and error counting.">
-      <change afterPath="$PROJECT_DIR$/app/types/Input.ts" afterDir="false" />
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Add LocalisedInput component and enhance LocaleSelector with new props and event handling">
+      <change afterPath="$PROJECT_DIR$/app/types/DeepPartial.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/Input.stories.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Input.stories.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Input.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/LocaleSelector.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/LocaleSelector.stories.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/LocaleSelector.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/LocaleSelector.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/locales/en.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/en.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/locales/nl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/nl.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/tailwind.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/tailwind.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/EventMutationForm.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/EventMutationForm.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/EventMutationForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/EventMutationForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/LocalisedInput.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/LocalisedInput.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/LocalisedInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/LocalisedInput.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/types/Validations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/types/Validations.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/utils/content.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/content.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/validations/models/event.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/validations/models/event.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,54 +118,55 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Attach to Node.js/Chrome.Debug in Chrome.executor&quot;: &quot;Debug&quot;,
-    &quot;JavaScript Debug.Debug in Chrome.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.OpenDatabaseViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;Vitest.All Tests.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.Content utilities.Retrieve the number of errors for each localised field.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.Content utilities.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.validateLogin.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.validateLogin.should return success: false when emailaddress is invalid.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.validateLogin.should return success: false when emailaddress is missing.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/WAT-87__Implement__create__update__routes&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;22.11.0&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;22.9.0&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/lody/dev/projects/watershed-website/scaffold-templates/plop/form&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.Dev.executor&quot;: &quot;Debug&quot;,
-    &quot;npm.Develop.executor&quot;: &quot;Run&quot;,
-    &quot;npm.Storybook.executor&quot;: &quot;Debug&quot;,
-    &quot;npm.dev:app.executor&quot;: &quot;Debug&quot;,
-    &quot;npm.dev:remix.executor&quot;: &quot;Debug&quot;,
-    &quot;npm.dev:storybook.executor&quot;: &quot;Debug&quot;,
-    &quot;npm.docker:start.executor&quot;: &quot;Run&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/lody/dev/projects/watershed-website/node_modules/prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.typescriptcompiler&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/lody/dev/projects/watershed-website/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Attach to Node.js/Chrome.Debug in Chrome.executor": "Debug",
+    "JavaScript Debug.Debug in Chrome.executor": "Debug",
+    "RunOnceActivity.OpenDatabaseViewOnStart": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Vitest.All Tests.executor": "Run",
+    "Vitest.Content utilities.Parse a localised form data object into a localised value object.executor": "Run",
+    "Vitest.Content utilities.Retrieve the number of errors for each localised field.executor": "Run",
+    "Vitest.Content utilities.executor": "Run",
+    "Vitest.validateLogin.executor": "Run",
+    "Vitest.validateLogin.should return success: false when emailaddress is invalid.executor": "Run",
+    "Vitest.validateLogin.should return success: false when emailaddress is missing.executor": "Run",
+    "git-widget-placeholder": "feature/WAT-87__Implement__create__update__routes",
+    "javascript.nodejs.core.library.configured.version": "22.11.0",
+    "javascript.nodejs.core.library.typings.version": "22.9.0",
+    "last_opened_file_path": "/Users/lody/dev/projects/watershed-website/scaffold-templates/plop/form",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "npm",
+    "npm.Dev.executor": "Debug",
+    "npm.Develop.executor": "Run",
+    "npm.Storybook.executor": "Debug",
+    "npm.dev:app.executor": "Debug",
+    "npm.dev:remix.executor": "Debug",
+    "npm.dev:storybook.executor": "Debug",
+    "npm.docker:start.executor": "Run",
+    "prettierjs.PrettierConfiguration.Package": "/Users/lody/dev/projects/watershed-website/node_modules/prettier",
+    "settings.editor.selected.configurable": "settings.typescriptcompiler",
+    "ts.external.directory.path": "/Users/lody/dev/projects/watershed-website/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ],
-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
-      &quot;Markdown&quot;,
-      &quot;TEXT&quot;,
-      &quot;XML&quot;
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "Markdown",
+      "TEXT",
+      "XML"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/scaffold-templates/plop/form" />
@@ -193,7 +194,7 @@
       <command value="Develop (npm)" />
     </option>
   </component>
-  <component name="RunManager" selected="Compound.Develop">
+  <component name="RunManager" selected="Vitest.Content utilities.Parse a localised form data object into a localised value object">
     <configuration name="Develop" type="CompoundRunConfigurationType">
       <toRun name="Dev" type="js.build_tools.npm" />
       <toRun name="Storybook" type="js.build_tools.npm" />
@@ -221,6 +222,20 @@
       </test-names>
       <method v="2" />
     </configuration>
+    <configuration name="Content utilities.Parse a localised form data object into a localised value object" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <vitest-options value="--run" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/app/utils/content.test.ts" />
+      <test-names>
+        <test-name value="Content utilities" />
+        <test-name value="Parse a localised form data object into a localised value object" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <configuration name="Content utilities.Retrieve the number of errors for each localised field" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
@@ -232,19 +247,6 @@
       <test-names>
         <test-name value="Content utilities" />
         <test-name value="Retrieve the number of errors for each localised field" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="validateLogin" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <vitest-options value="--run" />
-      <envs />
-      <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/app/validations/flows/login.test.ts" />
-      <test-names>
-        <test-name value="validateLogin" />
       </test-names>
       <method v="2" />
     </configuration>
@@ -306,19 +308,19 @@
       <item itemvalue="npm.Dev" />
       <item itemvalue="npm.Storybook" />
       <item itemvalue="Vitest.All Tests" />
+      <item itemvalue="Vitest.Content utilities.Parse a localised form data object into a localised value object" />
       <item itemvalue="Vitest.Content utilities" />
       <item itemvalue="Vitest.Content utilities.Retrieve the number of errors for each localised field" />
-      <item itemvalue="Vitest.validateLogin" />
       <item itemvalue="Vitest.validateLogin.should return success: false when emailaddress is invalid" />
       <item itemvalue="Vitest.validateLogin.should return success: false when emailaddress is missing" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Vitest.Content utilities.Parse a localised form data object into a localised value object" />
         <item itemvalue="Vitest.Content utilities" />
         <item itemvalue="Vitest.Content utilities.Retrieve the number of errors for each localised field" />
         <item itemvalue="Vitest.validateLogin.should return success: false when emailaddress is missing" />
         <item itemvalue="Vitest.validateLogin.should return success: false when emailaddress is invalid" />
-        <item itemvalue="Vitest.validateLogin" />
       </list>
     </recent_temporary>
   </component>
@@ -370,15 +372,7 @@
       <workItem from="1741900035832" duration="9197000" />
       <workItem from="1742033930615" duration="57349000" />
       <workItem from="1742396477168" duration="4319000" />
-      <workItem from="1742482836686" duration="17125000" />
-    </task>
-    <task id="LOCAL-00049" summary="Added GridBlock to Puck">
-      <option name="closed" value="true" />
-      <created>1741178388146</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1741178388146</updated>
+      <workItem from="1742482836686" duration="27193000" />
     </task>
     <task id="LOCAL-00050" summary="Added footer to the editor for the Puck fields, and improved the button block">
       <option name="closed" value="true" />
@@ -764,7 +758,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742582714602</updated>
     </task>
-    <option name="localTasksCounter" value="98" />
+    <task id="LOCAL-00098" summary="Add LocalisedInput component and enhance LocaleSelector with new props and event handling">
+      <option name="closed" value="true" />
+      <created>1742593893112</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1742593893112</updated>
+    </task>
+    <option name="localTasksCounter" value="99" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -807,7 +809,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Changed scripts" />
     <MESSAGE value="Last changes in order to switch to React Router v7" />
     <MESSAGE value="Refine route configuration and update dependencies" />
     <MESSAGE value="Removed some testing code I forgot to delete." />
@@ -832,7 +833,8 @@
     <MESSAGE value="The create flow is basically done, including validation before saving" />
     <MESSAGE value="Enhance EventMutationForm with locale support and local storage integration, also added a locale selector component." />
     <MESSAGE value="Refactor EventMutationForm to support localization and improve error handling, including new utility functions for form data transformation and error counting." />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor EventMutationForm to support localization and improve error handling, including new utility functions for form data transformation and error counting." />
+    <MESSAGE value="Add LocalisedInput component and enhance LocaleSelector with new props and event handling" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add LocalisedInput component and enhance LocaleSelector with new props and event handling" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

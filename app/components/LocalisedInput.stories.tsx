@@ -100,8 +100,8 @@ export const WithErrors: Story = {
     id: 'input',
     label: 'This is a simple text input with some errors',
     errors: {
-      nl: ['Dit is een foutmelding'],
-      en: ['This is an error message'],
+      nl: { _errors: ['Dit is een foutmelding'] },
+      pap: { _errors: ['Esaki ta un mensahe di error'] },
     },
   },
 
