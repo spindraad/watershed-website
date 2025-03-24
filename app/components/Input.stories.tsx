@@ -8,7 +8,7 @@ export default {
     (Story) => (
       <div className="w-96">
         <Story />
-        </div>
+      </div>
     ),
   ],
 } satisfies Meta<typeof Input>;

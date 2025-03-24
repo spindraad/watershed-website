@@ -26,7 +26,7 @@ export default function EventMutationForm({
   const content = fetcher.data?.data || initialValues;
 
   return (
-    <fetcher.Form className="space-y-4" method="post">
+    <fetcher.Form name="event-form" className="space-y-4" method="post">
       <div className="flex flex-row justify-between items-center">
         <Heading level={1}>{t('Title')}</Heading>
       </div>

@@ -1,14 +1,15 @@
-import { useContext, useEffect, useState } from 'react';
+import { useContext } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Project } from '~/models/projects.server';
 import { ShoelaceContext } from '~/components/shoelace';
 import { useFetcher } from 'react-router';
 import { ProjectErrors, ProjectValidator } from '~/validations/models/project';
 import Heading from '~/components/Heading';
 import Input from '~/components/Input';
 import { ErrorResponse } from '~/types/Validations';
+import LocalisedInput from '~/components/LocalisedInput';
+import { DeepPartial } from '~/types/DeepPartial';
 
-type Props = Partial<Omit<Project, 'id' | 'createdAt' | 'updatedAt'>> & {
+type Props = DeepPartial<ProjectValidator> & {
   id?: string;
 };
 
@@ -16,66 +17,46 @@ export default function ProjectMutationForm({
   id = '',
   ...initialValues
 }: Props) {
-  const { t, i18n } = useTranslation('ProjectMutationForm');
+  const { t } = useTranslation('ProjectMutationForm');
   const { SlButton } = useContext(ShoelaceContext);
   const fetcher = useFetcher<ErrorResponse<ProjectErrors, ProjectValidator>>();
 
-  const [title, setTitle] = useState(
-    initialValues.title ? initialValues.title[i18n.language] : '',
-  );
-  const [description, setDescription] = useState(
-    initialValues.description ? initialValues.description[i18n.language] : '',
-  );
-  const [summary, setSummary] = useState(
-    initialValues.summary ? initialValues.summary[i18n.language] : '',
-  );
-  const [slug, setSlug] = useState(initialValues.slug ?? '');
-
-  useEffect(() => {
-    if (fetcher.data) {
-      const { title, description, summary, slug } = fetcher.data.data;
-      setTitle(title);
-      setDescription(description);
-      setSummary(summary);
-      setSlug(slug);
-    }
-  }, [fetcher.data, i18n.language]);
-  const errors = fetcher.data?.errors as ProjectErrors;
   const isSubmitting = fetcher.state !== 'idle';
+  const errors = fetcher.data?.errors;
+  const content = fetcher.data?.data || initialValues;
 
   return (
-    <fetcher.Form className="space-y-4" method="post">
-      <Heading level={1}>{t('Title')}</Heading>
+    <fetcher.Form name="project-form" className="space-y-4" method="post">
+      <div className="flex flex-row justify-between items-center">
+        <Heading level={1}>{t('Title')}</Heading>
+      </div>
 
       {id ?
         <input type="hidden" name="id" value={id} />
       : null}
 
-      <Input
+      <LocalisedInput
         label={t('Labels.Title')}
         name="title"
         id="title"
-        type="text"
-        value={title}
-        error={errors?.title}
+        value={content?.title}
+        errors={errors?.title}
       />
 
-      <Input
+      <LocalisedInput
         label={t('Labels.Description')}
         name="description"
         id="description"
-        type="text"
-        value={description}
-        error={errors?.description}
+        value={content?.description}
+        errors={errors?.description}
       />
 
-      <Input
+      <LocalisedInput
         label={t('Labels.Summary')}
         name="summary"
         id="summary"
-        type="text"
-        value={summary}
-        error={errors?.summary}
+        value={content?.summary}
+        errors={errors?.summary}
       />
 
       <Input
@@ -83,8 +64,8 @@ export default function ProjectMutationForm({
         name="slug"
         id="slug"
         type="text"
-        value={slug}
-        error={errors?.slug}
+        value={content?.slug || ''}
+        error={errors?.slug?._errors}
       />
 
       <div className="flex justify-end">

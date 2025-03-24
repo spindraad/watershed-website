@@ -1,17 +1,22 @@
 import { z } from 'zod';
 import { Data, ErrorValidation, SuccessValidation } from '~/types/Validations';
+import { transformFormData } from '~/utils/content';
+
+const localisedStringValidations = z.object({
+  nl: z.string().min(1),
+  en: z.string().min(1),
+  pap: z.string().min(1),
+});
 
 export const projectValidator = z.object({
-  title: z.string().min(1),
-  description: z.string().min(1),
-  summary: z.string().min(1),
+  title: localisedStringValidations,
+  description: localisedStringValidations,
+  summary: localisedStringValidations,
   slug: z.string().min(1),
 });
 
 export type ProjectValidator = z.infer<typeof projectValidator>;
-export type ProjectErrors = z.inferFlattenedErrors<
-  typeof projectValidator
->['fieldErrors'];
+export type ProjectErrors = z.inferFormattedError<typeof projectValidator>;
 
 export async function validateProject(
   request: Request,
@@ -19,16 +24,18 @@ export async function validateProject(
   SuccessValidation<ProjectValidator> | ErrorValidation<ProjectValidator>
 > {
   const clonedRequest = request.clone();
-  const formData = Object.fromEntries(await clonedRequest.formData());
+  const formData = await clonedRequest.formData();
+  const transformedData = transformFormData(formData);
 
-  const result = projectValidator.safeParse(formData);
+  const result = projectValidator.safeParse(transformedData);
 
   if (result.success) {
     return result as SuccessValidation<ProjectValidator>;
   }
 
   return {
-    ...result,
-    data: formData as Data<ProjectValidator>,
+    success: false,
+    errors: result.error.format(),
+    data: transformedData as Data<ProjectValidator>,
   } as ErrorValidation<ProjectValidator>;
 }

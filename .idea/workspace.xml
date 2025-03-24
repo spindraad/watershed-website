@@ -4,14 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Add DeepPartial type and LocalisedInput component; refactor EventMutationForm for improved localization and error handling">
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Fixed a lot of lint and typecheck errors">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/ChangePasswordForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ChangePasswordForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/ContentTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ContentTable.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/components/EventMutationForm.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/EventMutationForm.stories.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/inloggen/LoginFormComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/inloggen/LoginFormComponent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/wachtwoord-vergeten/ForgetPasswordFormComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/wachtwoord-vergeten/ForgetPasswordFormComponent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/utils/content.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/content.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/EventMutationForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/EventMutationForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/Input.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Input.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/ProjectMutationForm.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ProjectMutationForm.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/ProjectMutationForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ProjectMutationForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/validations/models/event.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/validations/models/event.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/validations/models/project.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/validations/models/project.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -370,15 +371,7 @@
       <workItem from="1741900035832" duration="9197000" />
       <workItem from="1742033930615" duration="57349000" />
       <workItem from="1742396477168" duration="4319000" />
-      <workItem from="1742482836686" duration="28869000" />
-    </task>
-    <task id="LOCAL-00051" summary="Created Helm templates in order to deploy this application on the k8s clusters">
-      <option name="closed" value="true" />
-      <created>1741354068750</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1741354068750</updated>
+      <workItem from="1742482836686" duration="30930000" />
     </task>
     <task id="LOCAL-00052" summary="CI/CD improvements: Node version is now specified in an .nvmrc file for re-use. Added caching and a deploy job for the new clusters (only dev is enabled now).">
       <option name="closed" value="true" />
@@ -764,7 +757,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742817052503</updated>
     </task>
-    <option name="localTasksCounter" value="100" />
+    <task id="LOCAL-00100" summary="Fixed a lot of lint and typecheck errors">
+      <option name="closed" value="true" />
+      <created>1742819161843</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1742819161843</updated>
+    </task>
+    <option name="localTasksCounter" value="101" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -807,7 +808,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Refine route configuration and update dependencies" />
     <MESSAGE value="Removed some testing code I forgot to delete." />
     <MESSAGE value="Setup basic account page structure so that we can start with the admin work" />
     <MESSAGE value="Cleaned up the content structures, removing stuff we don't need. Also added link to projects for an admin" />
@@ -832,7 +832,8 @@
     <MESSAGE value="Refactor EventMutationForm to support localization and improve error handling, including new utility functions for form data transformation and error counting." />
     <MESSAGE value="Add LocalisedInput component and enhance LocaleSelector with new props and event handling" />
     <MESSAGE value="Add DeepPartial type and LocalisedInput component; refactor EventMutationForm for improved localization and error handling" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add DeepPartial type and LocalisedInput component; refactor EventMutationForm for improved localization and error handling" />
+    <MESSAGE value="Fixed a lot of lint and typecheck errors" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed a lot of lint and typecheck errors" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

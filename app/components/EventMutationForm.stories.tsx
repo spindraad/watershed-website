@@ -3,15 +3,11 @@ import { faker } from '@faker-js/faker';
 import EventMutationForm from './EventMutationForm';
 import { reactRouterParameters } from 'storybook-addon-remix-react-router';
 import { validateEvent } from '~/validations/models/event';
-import { expect, screen, waitFor, within } from '@storybook/test';
+import { expect, screen } from '@storybook/test';
 
 export default {
   title: 'Components/Event Mutation Form',
   component: EventMutationForm,
-  render(args) {
-    localStorage.removeItem('eventContent');
-    return <EventMutationForm {...args} />;
-  },
 } satisfies Meta<typeof EventMutationForm>;
 
 type Story = StoryObj<typeof EventMutationForm>;
@@ -39,16 +35,9 @@ export const EmptyForm: Story = {
 export const FilledForm: Story = {
   args: fakeEvent,
 
-  play: async ({ canvasElement }) => {
-    await waitFor(() =>
-      Promise.allSettled([
-        customElements.whenDefined('sl-button'),
-        customElements.whenDefined('sl-input'),
-      ]),
-    );
-
-    await new Promise((resolve) => setTimeout(resolve, 0));
-    const form = canvasElement.querySelector('form') as HTMLFormElement;
+  play: async () => {
+    await screen.findByText('Save');
+    const form = (await screen.findByRole('form')) as HTMLFormElement;
 
     const formData = new FormData(form);
 
@@ -88,37 +77,18 @@ export const ErrorForm: Story = {
       routing: {
         path: '/',
         action: async ({ request }) => {
-          const r = await validateEvent(request);
-          console.log(r);
-          return r;
+          return validateEvent(request);
         },
       },
     }),
   },
 
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-
-    await waitFor(() =>
-      Promise.allSettled([
-        customElements.whenDefined('sl-button'),
-        customElements.whenDefined('sl-input'),
-      ]),
-    );
-
-    const submit = screen.getByText('Save');
-
-    if (!submit) {
-      throw new Error('Submit button not found');
-    }
+  play: async () => {
+    const submit = await screen.findByText('Save');
 
     submit.click();
 
-    await waitFor(() => {
-      expect(canvas.getByText('Invalid datetime')).toBeInTheDocument();
-      expect(
-        canvas.getByText('String must contain at least 1 character(s)'),
-      ).toBeInTheDocument();
-    });
+    screen.findByText('Invalid datetime');
+    screen.findByText('String must contain at least 1 character(s)');
   },
 };
