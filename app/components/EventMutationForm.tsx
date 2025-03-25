@@ -8,9 +8,11 @@ import { ErrorResponse } from '~/types/Validations';
 import { EventErrors, EventValidator } from '~/validations/models/event';
 import LocalisedInput from '~/components/LocalisedInput';
 import { DeepPartial } from '~/types/DeepPartial';
+import { isDate } from 'date-fns';
 
-type Props = DeepPartial<EventValidator> & {
+type Props = DeepPartial<Omit<EventValidator, 'eventDate'>> & {
   id?: string;
+  eventDate?: Date;
 };
 
 export default function EventMutationForm({
@@ -23,12 +25,23 @@ export default function EventMutationForm({
 
   const isSubmitting = fetcher.state !== 'idle';
   const errors = fetcher.data?.errors;
-  const content = fetcher.data?.data || initialValues;
+  const content = fetcher.data?.data || {
+    ...initialValues,
+    eventDate:
+      isDate(initialValues.eventDate) ?
+        initialValues.eventDate.toISOString()
+      : undefined,
+  };
+
+  let titleTranslationKey = 'Title.New';
+  if (id) {
+    titleTranslationKey = 'Title.Edit';
+  }
 
   return (
     <fetcher.Form name="event-form" className="space-y-4" method="post">
       <div className="flex flex-row justify-between items-center">
-        <Heading level={1}>{t('Title')}</Heading>
+        <Heading level={1}>{t(titleTranslationKey)}</Heading>
       </div>
 
       {id ?

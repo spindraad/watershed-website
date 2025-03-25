@@ -25,10 +25,15 @@ export default function ProjectMutationForm({
   const errors = fetcher.data?.errors;
   const content = fetcher.data?.data || initialValues;
 
+  let titleTranslationKey = 'Title.New';
+  if (id) {
+    titleTranslationKey = 'Title.Edit';
+  }
+
   return (
     <fetcher.Form name="project-form" className="space-y-4" method="post">
       <div className="flex flex-row justify-between items-center">
-        <Heading level={1}>{t('Title')}</Heading>
+        <Heading level={1}>{t(titleTranslationKey)}</Heading>
       </div>
 
       {id ?

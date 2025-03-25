@@ -9,12 +9,23 @@ export async function getProjects(): Promise<Project[]> {
   return prisma.project.findMany();
 }
 
+export async function getProject(projectID: string): Promise<Project> {
+  return prisma.project.findUniqueOrThrow({ where: { id: projectID } });
+}
+
 export async function deleteProject(projectID: string): Promise<void> {
   await prisma.project.delete({ where: { id: projectID } });
 }
 
 export async function saveProject(project: ProjectValidator): Promise<Project> {
   return prisma.project.create({ data: project });
+}
+
+export async function updateProject(
+  projectID: string,
+  project: ProjectValidator,
+): Promise<Project> {
+  return prisma.project.update({ where: { id: projectID }, data: project });
 }
 
 export function convertProjectsToTableData(

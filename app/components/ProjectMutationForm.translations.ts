@@ -1,6 +1,9 @@
 export const en = {
   ProjectMutationForm: {
-    Title: 'New project',
+    Title: {
+      New: 'New project',
+      Edit: 'Edit project',
+    },
     Labels: {
       Title: 'Title',
       Description: 'Description',
@@ -12,7 +15,10 @@ export const en = {
 
 export const nl = {
   ProjectMutationForm: {
-    Title: 'Nieuw project',
+    Title: {
+      New: 'Nieuw project',
+      Edit: 'Bewerk project',
+    },
     Labels: {
       Title: 'Titel',
       Description: 'Beschrijving',
@@ -24,7 +30,10 @@ export const nl = {
 
 export const pap = {
   ProjectMutationForm: {
-    Title: 'Proyek nobo',
+    Title: {
+      New: 'Proyek nobo',
+      Edit: 'Edita proyek',
+    },
     Labels: {
       Title: 'Título',
       Description: 'Deskripshon',
