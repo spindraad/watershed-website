@@ -2,6 +2,7 @@ import { createCookie } from 'react-router';
 import { RemixI18Next } from 'remix-i18next/server';
 
 import * as i18n from '~/config/i18n';
+import { FormatFunction } from 'i18next';
 
 export const localeCookie = createCookie('locale', {
   path: '/',
@@ -27,5 +28,23 @@ export default new RemixI18Next({
   },
   i18next: {
     ...i18n,
+    interpolation: {
+      format: (value, format) => {
+        // TODO: Remove this when i18n is updated to latest
+        if (format) {
+          const { formatters } = i18n;
+
+          const formatterFunc: FormatFunction | undefined = formatters.find(
+            (formatter) => formatter.name === format,
+          )?.func;
+
+          if (formatterFunc) {
+            return formatterFunc(value);
+          }
+        }
+
+        return value;
+      },
+    },
   },
 });

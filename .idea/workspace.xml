@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Enhance delete functionality in ContentTable with notification and dialog improvements">
-      <change afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/_index/DeletionNotification.stories.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/_index/DeletionNotification.translations.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/_index/DeletionNotification.tsx" afterDir="false" />
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Enabled the UPDATE flow end to end.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/locales/en.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/en.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/locales/nl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/nl.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/_index/_overview.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/_index/_overview.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/tailwind.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/tailwind.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/EventMutationForm.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/EventMutationForm.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/EventMutationForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/EventMutationForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/LocalisedInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/LocalisedInput.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/bewerken/$id/_bewerken.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/bewerken/$id/_bewerken.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,12 +37,12 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="feature/WAT-82_implement_delete_flow" />
-                    <option name="lastUsedInstant" value="1741901158" />
+                    <option name="branchName" value="feature/WAT-87_Implement_create_update_routes" />
+                    <option name="lastUsedInstant" value="1742034055" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="release/WAT-77_implement_generic_crud_flow" />
-                    <option name="lastUsedInstant" value="1741901098" />
+                    <option name="lastUsedInstant" value="1741909659" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="dev" />
@@ -117,50 +114,55 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenDatabaseViewOnStart": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "Vitest.All Tests.executor": "Run",
-    "Vitest.validateLogin.executor": "Run",
-    "Vitest.validateLogin.should return success: false when emailaddress is invalid.executor": "Run",
-    "Vitest.validateLogin.should return success: false when emailaddress is missing.executor": "Run",
-    "git-widget-placeholder": "feature/WAT-82__implement__delete__flow",
-    "javascript.nodejs.core.library.configured.version": "22.11.0",
-    "javascript.nodejs.core.library.typings.version": "22.9.0",
-    "last_opened_file_path": "/Users/lody/dev/projects/watershed-website/scaffold-templates/plop/form",
-    "node.js.detected.package.standard": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "node",
-    "nodejs_package_manager_path": "npm",
-    "npm.Dev.executor": "Debug",
-    "npm.Develop.executor": "Run",
-    "npm.Storybook.executor": "Debug",
-    "npm.dev:app.executor": "Debug",
-    "npm.dev:remix.executor": "Debug",
-    "npm.dev:storybook.executor": "Debug",
-    "npm.docker:start.executor": "Run",
-    "prettierjs.PrettierConfiguration.Package": "/Users/lody/dev/projects/watershed-website/node_modules/prettier",
-    "settings.editor.selected.configurable": "settings.typescriptcompiler",
-    "ts.external.directory.path": "/Users/lody/dev/projects/watershed-website/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Attach to Node.js/Chrome.Debug in Chrome.executor&quot;: &quot;Debug&quot;,
+    &quot;JavaScript Debug.Debug in Chrome.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.OpenDatabaseViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Vitest.All Tests.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.Content utilities.Parse a localised form data object into a localised value object.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.Content utilities.Retrieve the number of errors for each localised field.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.Content utilities.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.validateLogin.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.validateLogin.should return success: false when emailaddress is invalid.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.validateLogin.should return success: false when emailaddress is missing.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/WAT-87__Implement__create__update__routes&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;22.11.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;22.9.0&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/lody/dev/projects/watershed-website/scaffold-templates/plop/form&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.Dev.executor&quot;: &quot;Debug&quot;,
+    &quot;npm.Develop.executor&quot;: &quot;Run&quot;,
+    &quot;npm.Storybook.executor&quot;: &quot;Debug&quot;,
+    &quot;npm.dev:app.executor&quot;: &quot;Debug&quot;,
+    &quot;npm.dev:remix.executor&quot;: &quot;Debug&quot;,
+    &quot;npm.dev:storybook.executor&quot;: &quot;Debug&quot;,
+    &quot;npm.docker:start.executor&quot;: &quot;Run&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/lody/dev/projects/watershed-website/node_modules/prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.typescriptcompiler&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/lody/dev/projects/watershed-website/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ],
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "Markdown",
-      "TEXT",
-      "XML"
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;Markdown&quot;,
+      &quot;TEXT&quot;,
+      &quot;XML&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/scaffold-templates/plop/form" />
@@ -174,6 +176,8 @@
       <recent name="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/verwijderen/$id" />
     </key>
     <key name="es6.move.members.recent.items">
+      <recent name="$PROJECT_DIR$/app/types/Input.ts" />
+      <recent name="$PROJECT_DIR$/app/types/Content.ts" />
       <recent name="$PROJECT_DIR$/app/config/blocks/RichTextBlock.tsx" />
       <recent name="$PROJECT_DIR$/prisma/seed/_content.ts" />
       <recent name="$PROJECT_DIR$/prisma/seed/_users.ts" />
@@ -201,16 +205,44 @@
       <scope-kind value="ALL" />
       <method v="2" />
     </configuration>
-    <configuration name="validateLogin" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
+    <configuration name="Content utilities" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
       <working-dir value="$PROJECT_DIR$" />
       <vitest-options value="--run" />
       <envs />
       <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/app/validations/flows/login.test.ts" />
+      <test-file value="$PROJECT_DIR$/app/utils/content.test.ts" />
       <test-names>
-        <test-name value="validateLogin" />
+        <test-name value="Content utilities" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Content utilities.Parse a localised form data object into a localised value object" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <vitest-options value="--run" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/app/utils/content.test.ts" />
+      <test-names>
+        <test-name value="Content utilities" />
+        <test-name value="Parse a localised form data object into a localised value object" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Content utilities.Retrieve the number of errors for each localised field" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <vitest-options value="--run" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/app/utils/content.test.ts" />
+      <test-names>
+        <test-name value="Content utilities" />
+        <test-name value="Retrieve the number of errors for each localised field" />
       </test-names>
       <method v="2" />
     </configuration>
@@ -242,6 +274,10 @@
       </test-names>
       <method v="2" />
     </configuration>
+    <configuration name="Debug in Chrome" type="JavascriptDebugType" uri="http://localhost:5173">
+      <mapping url="http://localhost:5173" local-file="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
     <configuration name="Dev" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -264,18 +300,23 @@
     </configuration>
     <list>
       <item itemvalue="Compound.Develop" />
+      <item itemvalue="JavaScript Debug.Debug in Chrome" />
       <item itemvalue="npm.Dev" />
       <item itemvalue="npm.Storybook" />
       <item itemvalue="Vitest.All Tests" />
-      <item itemvalue="Vitest.validateLogin" />
+      <item itemvalue="Vitest.Content utilities.Parse a localised form data object into a localised value object" />
+      <item itemvalue="Vitest.Content utilities" />
+      <item itemvalue="Vitest.Content utilities.Retrieve the number of errors for each localised field" />
       <item itemvalue="Vitest.validateLogin.should return success: false when emailaddress is invalid" />
       <item itemvalue="Vitest.validateLogin.should return success: false when emailaddress is missing" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Vitest.Content utilities.Parse a localised form data object into a localised value object" />
+        <item itemvalue="Vitest.Content utilities" />
+        <item itemvalue="Vitest.Content utilities.Retrieve the number of errors for each localised field" />
         <item itemvalue="Vitest.validateLogin.should return success: false when emailaddress is missing" />
         <item itemvalue="Vitest.validateLogin.should return success: false when emailaddress is invalid" />
-        <item itemvalue="Vitest.validateLogin" />
       </list>
     </recent_temporary>
   </component>
@@ -324,135 +365,10 @@
       <workItem from="1741601622656" duration="48801000" />
       <workItem from="1741788770297" duration="8020000" />
       <workItem from="1741873032040" duration="9407000" />
-      <workItem from="1741900035832" duration="8572000" />
-    </task>
-    <task id="LOCAL-00039" summary="Created EventSummary component">
-      <option name="closed" value="true" />
-      <created>1734009085091</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1734009085091</updated>
-    </task>
-    <task id="LOCAL-00040" summary="Create artist profile summary component and added missing translations for a few components">
-      <option name="closed" value="true" />
-      <created>1734011975897</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1734011975897</updated>
-    </task>
-    <task id="LOCAL-00041" summary="Created a summary component for one or more artists">
-      <option name="closed" value="true" />
-      <created>1734012989769</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1734012989769</updated>
-    </task>
-    <task id="LOCAL-00042" summary="Created a summary component for a product">
-      <option name="closed" value="true" />
-      <created>1734014880835</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1734014880835</updated>
-    </task>
-    <task id="LOCAL-00043" summary="Added the improvements of generated components also to the generated form components, including some other stuff that's handy for forms">
-      <option name="closed" value="true" />
-      <created>1734019561066</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1734019561066</updated>
-    </task>
-    <task id="LOCAL-00044" summary="Integrated the TinyMCE with Puck">
-      <option name="closed" value="true" />
-      <created>1740486346938</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1740486346938</updated>
-    </task>
-    <task id="LOCAL-00045" summary="Refactor Heading component and enhance RichEditor integration">
-      <option name="closed" value="true" />
-      <created>1740489236895</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1740489236895</updated>
-    </task>
-    <task id="LOCAL-00046" summary="Refactored Puck block components in terms of name and label, updated Puck and added a class that allows us to use TinyMCE in Puck overriding the default pointer events setting">
-      <option name="closed" value="true" />
-      <created>1740494063007</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1740494063007</updated>
-    </task>
-    <task id="LOCAL-00047" summary="Added Button Block as Puck component">
-      <option name="closed" value="true" />
-      <created>1741173291495</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1741173291495</updated>
-    </task>
-    <task id="LOCAL-00048" summary="Changed page editor layout to feel more like an actual page">
-      <option name="closed" value="true" />
-      <created>1741177410193</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1741177410193</updated>
-    </task>
-    <task id="LOCAL-00049" summary="Added GridBlock to Puck">
-      <option name="closed" value="true" />
-      <created>1741178388146</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1741178388146</updated>
-    </task>
-    <task id="LOCAL-00050" summary="Added footer to the editor for the Puck fields, and improved the button block">
-      <option name="closed" value="true" />
-      <created>1741335596534</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1741335596534</updated>
-    </task>
-    <task id="LOCAL-00051" summary="Created Helm templates in order to deploy this application on the k8s clusters">
-      <option name="closed" value="true" />
-      <created>1741354068750</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1741354068750</updated>
-    </task>
-    <task id="LOCAL-00052" summary="CI/CD improvements: Node version is now specified in an .nvmrc file for re-use. Added caching and a deploy job for the new clusters (only dev is enabled now).">
-      <option name="closed" value="true" />
-      <created>1741358118011</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1741358118011</updated>
-    </task>
-    <task id="LOCAL-00053" summary="Since the version number is playing a bigger role, we're moving to a beta version now.">
-      <option name="closed" value="true" />
-      <created>1741358286575</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1741358286575</updated>
-    </task>
-    <task id="LOCAL-00054" summary="Fixed the invalid ingress template, and created a Dockerfile for the deployment of the app. Also adjusted helm ignore file">
-      <option name="closed" value="true" />
-      <created>1741384084997</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1741384084997</updated>
+      <workItem from="1741900035832" duration="9197000" />
+      <workItem from="1742033930615" duration="57349000" />
+      <workItem from="1742396477168" duration="4319000" />
+      <workItem from="1742482836686" duration="46242000" />
     </task>
     <task id="LOCAL-00055" summary="Added postgres as a temporary db container for the dev environment.">
       <option name="closed" value="true" />
@@ -718,7 +634,135 @@
       <option name="project" value="LOCAL" />
       <updated>1741905742303</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <task id="LOCAL-00088" summary="Enhance delete functionality in ContentTable with notification and dialog improvements">
+      <option name="closed" value="true" />
+      <created>1741909278570</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1741909278570</updated>
+    </task>
+    <task id="LOCAL-00089" summary="Enhance delete functionality in ContentTable with notification and dialog improvements">
+      <option name="closed" value="true" />
+      <created>1741909296958</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1741909296958</updated>
+    </task>
+    <task id="LOCAL-00090" summary="Added localised meta data for the content routes">
+      <option name="closed" value="true" />
+      <created>1742042473396</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1742042473396</updated>
+    </task>
+    <task id="LOCAL-00091" summary="A lot of small changes to the translations, and added a &quot;new&quot; button to te crud overview route.">
+      <option name="closed" value="true" />
+      <created>1742152396007</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1742152396007</updated>
+    </task>
+    <task id="LOCAL-00092" summary="Created event form">
+      <option name="closed" value="true" />
+      <created>1742160220243</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1742160220243</updated>
+    </task>
+    <task id="LOCAL-00093" summary="Created project form, and made some smaller improvements to the event form">
+      <option name="closed" value="true" />
+      <created>1742161146618</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1742161146618</updated>
+    </task>
+    <task id="LOCAL-00094" summary="Mutation forms are now processed and saved for 'Create'">
+      <option name="closed" value="true" />
+      <created>1742162384034</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1742162384034</updated>
+    </task>
+    <task id="LOCAL-00095" summary="The create flow is basically done, including validation before saving">
+      <option name="closed" value="true" />
+      <created>1742213161165</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1742213161165</updated>
+    </task>
+    <task id="LOCAL-00096" summary="Enhance EventMutationForm with locale support and local storage integration, also added a locale selector component.">
+      <option name="closed" value="true" />
+      <created>1742224442828</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1742224442829</updated>
+    </task>
+    <task id="LOCAL-00097" summary="Refactor EventMutationForm to support localization and improve error handling, including new utility functions for form data transformation and error counting.">
+      <option name="closed" value="true" />
+      <created>1742582714601</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1742582714602</updated>
+    </task>
+    <task id="LOCAL-00098" summary="Add LocalisedInput component and enhance LocaleSelector with new props and event handling">
+      <option name="closed" value="true" />
+      <created>1742593893112</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1742593893112</updated>
+    </task>
+    <task id="LOCAL-00099" summary="Add DeepPartial type and LocalisedInput component; refactor EventMutationForm for improved localization and error handling">
+      <option name="closed" value="true" />
+      <created>1742817052503</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1742817052503</updated>
+    </task>
+    <task id="LOCAL-00100" summary="Fixed a lot of lint and typecheck errors">
+      <option name="closed" value="true" />
+      <created>1742819161843</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1742819161843</updated>
+    </task>
+    <task id="LOCAL-00101" summary="Simplified the component tests for Event Mutation Form and updated Project Mutation Form following the same workflow as the EMF">
+      <option name="closed" value="true" />
+      <created>1742821051846</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1742821051846</updated>
+    </task>
+    <task id="LOCAL-00102" summary="GH Actions now performs a build on normal push">
+      <option name="closed" value="true" />
+      <created>1742821098650</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1742821098650</updated>
+    </task>
+    <task id="LOCAL-00103" summary="Enabled the UPDATE flow end to end.">
+      <option name="closed" value="true" />
+      <created>1742892238660</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1742892238660</updated>
+    </task>
+    <option name="localTasksCounter" value="104" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -761,20 +805,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Updated Chart version after changes made for deployment" />
-    <MESSAGE value="Changed the prisma dev deploy script to run migrate reset, which will reset the DB on each deploy." />
-    <MESSAGE value="Swapped the deprecated json() functions for the new data() functions where applicable." />
-    <MESSAGE value="Changed the stream/abort timeouts" />
-    <MESSAGE value="Ignore workflow and helm templates in Prettier" />
-    <MESSAGE value="Turned on the future flag for route config." />
-    <MESSAGE value="Removed deprecated SerializedFrom type." />
-    <MESSAGE value="Ran the RRv7 codemod, manually made some improvements and fixes." />
-    <MESSAGE value="Changed scripts" />
-    <MESSAGE value="Last changes in order to switch to React Router v7" />
-    <MESSAGE value="Refine route configuration and update dependencies" />
-    <MESSAGE value="Removed some testing code I forgot to delete." />
-    <MESSAGE value="Setup basic account page structure so that we can start with the admin work" />
-    <MESSAGE value="Cleaned up the content structures, removing stuff we don't need. Also added link to projects for an admin" />
     <MESSAGE value="Refactored the account menu into a separate component and added admin/ route" />
     <MESSAGE value="Created the dynamic content route, and added a basic implementation of the content table." />
     <MESSAGE value="Made a basic implementation of a dynamic event/project overview" />
@@ -786,7 +816,21 @@
     <MESSAGE value="Added the trash button to the content table" />
     <MESSAGE value="Implement delete functionality in ContentTable with confirmation dialog" />
     <MESSAGE value="Enhance delete functionality in ContentTable with notification and dialog improvements" />
-    <option name="LAST_COMMIT_MESSAGE" value="Enhance delete functionality in ContentTable with notification and dialog improvements" />
+    <MESSAGE value="Added localised meta data for the content routes" />
+    <MESSAGE value="A lot of small changes to the translations, and added a &quot;new&quot; button to te crud overview route." />
+    <MESSAGE value="Created event form" />
+    <MESSAGE value="Created project form, and made some smaller improvements to the event form" />
+    <MESSAGE value="Mutation forms are now processed and saved for 'Create'" />
+    <MESSAGE value="The create flow is basically done, including validation before saving" />
+    <MESSAGE value="Enhance EventMutationForm with locale support and local storage integration, also added a locale selector component." />
+    <MESSAGE value="Refactor EventMutationForm to support localization and improve error handling, including new utility functions for form data transformation and error counting." />
+    <MESSAGE value="Add LocalisedInput component and enhance LocaleSelector with new props and event handling" />
+    <MESSAGE value="Add DeepPartial type and LocalisedInput component; refactor EventMutationForm for improved localization and error handling" />
+    <MESSAGE value="Fixed a lot of lint and typecheck errors" />
+    <MESSAGE value="Simplified the component tests for Event Mutation Form and updated Project Mutation Form following the same workflow as the EMF" />
+    <MESSAGE value="GH Actions now performs a build on normal push" />
+    <MESSAGE value="Enabled the UPDATE flow end to end." />
+    <option name="LAST_COMMIT_MESSAGE" value="Enabled the UPDATE flow end to end." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -129,4 +129,8 @@
     height: 100%;
   }
 
+  .inline-locale-selector::part(label) {
+    padding-inline-start: var(--sl-spacing-2x-small);
+    padding-inline-end: var(--sl-spacing-2x-small);
+  }
 }

@@ -20,6 +20,14 @@ import { nl as ConfirmDeleteDialogTranslations } from '~/routes/($lang)/beheer/$
 export const { ConfirmDeleteDialog } = ConfirmDeleteDialogTranslations;
 import { nl as DeletionNotificationTranslations } from '~/routes/($lang)/beheer/$content/_index/DeletionNotification.translations';
 export const { DeletionNotification } = DeletionNotificationTranslations;
+import { nl as EventFormTranslations } from '~/components/EventMutationForm.translations';
+export const { EventMutationForm } = EventFormTranslations;
+import { nl as ProjectFormTranslations } from '~/components/ProjectMutationForm.translations';
+export const { ProjectMutationForm } = ProjectFormTranslations;
+import { nl as LocaleSelectorTranslations } from '~/components/LocaleSelector.translations';
+export const { LocaleSelector } = LocaleSelectorTranslations;
+import { nl as LocalisedInputTranslations } from '~/components/LocalisedInput.translations';
+export const { LocalisedInput } = LocalisedInputTranslations;
 
 export const common = {
   title: 'Hallo Wereld!',
@@ -132,9 +140,33 @@ export const NewsOverviewRoute = {
   Title: 'Nieuws',
 };
 
+export const ContentTypes = {
+  // These use the content type as defined in the URLs
+  evenementen_one: 'Evenement',
+  evenementen_other: 'Evenementen',
+  projecten_one: 'Project',
+  projecten_other: 'Projecten',
+};
+
 export const ContentOverviewRoute = {
-  Titles: {
-    events: 'Evenementen',
-    projects: 'Projecten',
+  ...ContentTypes,
+  Meta: {
+    Title: 'Beheer - $t({{content}}, lowercase) | Stichting Watershed',
+  },
+  Title: '$t({{content}}, capitalize)',
+  NewButtonCaption: 'Nieuw $t({{content}}, {"count": {{count}} })',
+};
+
+export const NewContentRoute = {
+  Meta: {
+    Title:
+      'Nieuw $t(ContentTypes:{{content}}, lowercase) | Stichting Watershed',
+  },
+};
+
+export const EditContentRoute = {
+  Meta: {
+    Title:
+      'Bewerk $t(ContentTypes:{{content}}, lowercase) | Stichting Watershed',
   },
 };

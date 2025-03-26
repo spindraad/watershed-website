@@ -36,9 +36,9 @@ export default function ForgetPasswordFormComponent({ action, errors }: Props) {
           type="email"
           label={t('EmailInputLabel')}
           autocomplete="email"
-          error={errors?.emailaddress
-            ?.map((error) => t(`Errors.emailaddress.${error.errorCode}`))
-            .join(', ')}
+          error={errors?.emailaddress?.map((error) =>
+            t(`Errors.emailaddress.${error.errorCode}`),
+          )}
         />
 
         <SlButton className="self-end" variant="primary" type="submit">
