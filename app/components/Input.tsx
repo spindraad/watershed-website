@@ -1,11 +1,21 @@
-import { useContext, ComponentProps } from 'react';
+import { ComponentProps, useContext } from 'react';
 import { SlInput as SlInputComponent } from '@shoelace-style/shoelace';
 import { ReactWebComponent } from '@lit/react';
 import { ShoelaceContext } from '~/components/shoelace';
+import { SlInputEventHandlers } from '~/types/Input';
 
-type Props = ComponentProps<ReactWebComponent<SlInputComponent>> & {
-  error?: string;
-};
+type Props = Omit<
+  ComponentProps<ReactWebComponent<SlInputComponent>>,
+  | 'onSlBlur'
+  | 'onSlChange'
+  | 'onSlClear'
+  | 'onSlFocus'
+  | 'onSlInput'
+  | 'onSlInvalid'
+> &
+  SlInputEventHandlers & {
+    error?: string[];
+  };
 
 export default function Input({
   error,
@@ -26,7 +36,7 @@ export default function Input({
         aria-describedby={error ? `${id}-error` : undefined}
       />
       <SlAlert id={`${id}-error`} open={!!error} variant="danger">
-        {error}
+        {error?.join(', ')}
       </SlAlert>
     </div>
   );

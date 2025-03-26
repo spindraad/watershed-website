@@ -37,15 +37,13 @@ export default function ChangePasswordForm({
   const { t } = useTranslation('ChangePasswordFormComponent');
 
   const parseConfirmPasswordErrors = (errors?: ValidationErrors) => {
-    return errors?.confirmPassword
-      ?.map((error) => {
-        if (error.errorCode === 'custom') {
-          return t(`Errors.confirmPassword.${error.message}`);
-        }
+    return errors?.confirmPassword?.map((error) => {
+      if (error.errorCode === 'custom') {
+        return t(`Errors.confirmPassword.${error.message}`);
+      }
 
-        return t(`Errors.confirmPassword.${error.errorCode}`);
-      })
-      .join(', ');
+      return t(`Errors.confirmPassword.${error.errorCode}`);
+    });
   };
 
   return (
@@ -65,9 +63,9 @@ export default function ChangePasswordForm({
           type="email"
           name="emailaddress"
           label={t('EmailInputLabel')}
-          error={errors?.emailaddress
-            ?.map((error) => t(`Errors.emailaddress.${error.errorCode}`))
-            .join(', ')}
+          error={errors?.emailaddress?.map((error) =>
+            t(`Errors.emailaddress.${error.errorCode}`),
+          )}
         />
       }
 
@@ -76,9 +74,9 @@ export default function ChangePasswordForm({
         name="new-password"
         autocomplete="new-password"
         label={t('PasswordInputLabel')}
-        error={errors?.password
-          ?.map((error) => t(`Errors.password.${error.errorCode}`))
-          .join(', ')}
+        error={errors?.password?.map((error) =>
+          t(`Errors.password.${error.errorCode}`),
+        )}
       />
 
       <Input

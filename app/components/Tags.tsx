@@ -1,9 +1,13 @@
-import { Tag as DbTag } from '@prisma/client';
 import { Link } from 'react-router';
 import { useContext } from 'react';
 import { ShoelaceContext } from '~/components/shoelace';
+import { SupportedLanguages } from '~/config/i18n';
 
-type Tag = Omit<DbTag, 'contentRelationId' | 'createdAt' | 'updatedAt'>;
+export type Tag = {
+  id: string;
+  name: Record<SupportedLanguages, string>;
+  slug: string;
+};
 
 type Props = {
   /**

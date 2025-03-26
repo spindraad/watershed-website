@@ -1,10 +1,16 @@
-import { useLoaderData, type LoaderFunctionArgs, redirect } from 'react-router';
-import Heading from '~/components/Heading';
+import {
+  useLoaderData,
+  type LoaderFunctionArgs,
+  redirect,
+  Outlet,
+} from 'react-router';
 import { getUser } from '~/.server/session';
+import AccountMenu from '~/routes/($lang)/account/AccountMenu';
 
 export async function loader({ request }: LoaderFunctionArgs) {
   const user = await getUser(request);
 
+  // TODO: improve authentication
   if (!user) {
     return redirect('/inloggen');
   }
@@ -16,8 +22,14 @@ export default function AccountRoute() {
   const { user } = useLoaderData<typeof loader>();
 
   return (
-    <div className="content space-y-4">
-      <Heading level={1}>Hallo {user.name}</Heading>
+    <div className="flex gap-4 px-4">
+      <div className="w-80">
+        <AccountMenu user={user} />
+      </div>
+
+      <div className="w-full">
+        <Outlet />
+      </div>
     </div>
   );
 }

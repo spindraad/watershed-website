@@ -9,6 +9,11 @@ import {
   SlCard,
   SlDrawer,
   SlIconButton,
+  SlDialog,
+  SlDropdown,
+  SlMenu,
+  SlMenuItem,
+  SlBadge,
 } from '@shoelace-style/shoelace/dist/react';
 import { useEffect, useState, useRef, createContext } from 'react';
 
@@ -25,6 +30,11 @@ type Components = {
   SlCard: typeof nullComponent | typeof SlCard;
   SlDrawer: typeof nullComponent | typeof SlDrawer;
   SlIconButton: typeof nullComponent | typeof SlIconButton;
+  SlDialog: typeof nullComponent | typeof SlDialog;
+  SlDropdown: typeof nullComponent | typeof SlDropdown;
+  SlMenu: typeof nullComponent | typeof SlMenu;
+  SlMenuItem: typeof nullComponent | typeof SlMenuItem;
+  SlBadge: typeof nullComponent | typeof SlBadge;
 };
 
 const nullComponents: Components = {
@@ -38,6 +48,11 @@ const nullComponents: Components = {
   SlCard: nullComponent,
   SlDrawer: nullComponent,
   SlIconButton: nullComponent,
+  SlDialog: nullComponent,
+  SlDropdown: nullComponent,
+  SlMenu: nullComponent,
+  SlMenuItem: nullComponent,
+  SlBadge: nullComponent,
 };
 
 export const ShoelaceContext = createContext<Components>(nullComponents);
@@ -68,6 +83,11 @@ export function useShoelace({ URL }: { URL: string }) {
             SlCard: components.SlCard,
             SlDrawer: components.SlDrawer,
             SlIconButton: components.SlIconButton,
+            SlDialog: components.SlDialog,
+            SlDropdown: components.SlDropdown,
+            SlMenu: components.SlMenu,
+            SlMenuItem: components.SlMenuItem,
+            SlBadge: components.SlBadge,
           });
         });
       },

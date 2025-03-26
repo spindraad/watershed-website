@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { faker } from '@faker-js/faker';
 import ArticleCard, { Props } from './ArticleCard';
 import { convertDateToLocaleString } from '~/utils/date';
-import { Tag } from '@prisma/client';
+import { Tag } from '~/components/Tags';
 
 export default {
   title: 'Components/News Article Card',
