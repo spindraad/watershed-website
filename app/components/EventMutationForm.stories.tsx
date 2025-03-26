@@ -25,7 +25,7 @@ const fakeEvent = {
   },
   address: `${faker.location.streetAddress()} ${faker.location.city()}, ${faker.location.state()} ${faker.location.zipCode()}`,
   link: faker.internet.url(),
-  eventDate: faker.date.future().toISOString(),
+  eventDate: faker.date.future(),
 };
 
 export const EmptyForm: Story = {
@@ -52,7 +52,9 @@ export const FilledForm: Story = {
     );
 
     await expect(formData.get('address')).toBe(fakeEvent.address);
-    await expect(formData.get('eventDate')).toBe(fakeEvent.eventDate);
+    await expect(formData.get('eventDate')).toBe(
+      fakeEvent.eventDate.toISOString(),
+    );
     await expect(formData.get('link')).toBe(fakeEvent.link);
   },
 };
@@ -69,7 +71,7 @@ export const ErrorForm: Story = {
     },
     address: `${faker.location.streetAddress()} ${faker.location.city()}, ${faker.location.state()} ${faker.location.zipCode()}`,
     link: faker.internet.url(),
-    eventDate: faker.date.future().toISOString(),
+    eventDate: faker.date.future(),
   },
 
   parameters: {

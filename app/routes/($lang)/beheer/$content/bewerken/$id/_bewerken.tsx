@@ -1,14 +1,9 @@
 import type { Route } from './+types/_bewerken';
 import { ContentURLParams } from '~/types/Content';
 import i18nServer from '~/modules/i18n.server';
-import { useTranslation } from 'react-i18next';
 import { data, redirect, useLoaderData } from 'react-router';
-import { getEvent, saveEvent, updateEvent } from '~/models/events.server';
-import {
-  getProject,
-  saveProject,
-  updateProject,
-} from '~/models/projects.server';
+import { getEvent, updateEvent } from '~/models/events.server';
+import { getProject, updateProject } from '~/models/projects.server';
 import EventMutationForm from '~/components/EventMutationForm';
 import ProjectMutationForm from '~/components/ProjectMutationForm';
 import { EventValidator, validateEvent } from '~/validations/models/event';
@@ -76,17 +71,22 @@ export async function action({ params, request }: Route.ActionArgs) {
     const result = await validatorFn(request);
     const { id } = params;
 
-    switch (content) {
-      case 'evenementen':
-        await updateEvent(id, result.data as EventValidator);
-        break;
-      case 'projecten':
-        await updateProject(id, result.data as ProjectValidator);
-        break;
+    if (result.success) {
+      switch (content) {
+        case 'evenementen':
+          await updateEvent(id, result.data as EventValidator);
+          break;
+        case 'projecten':
+          await updateProject(id, result.data as ProjectValidator);
+          break;
+      }
+
+      console.log('Data is validated and ready to be saved...');
+      return redirect(`/beheer/${content}`);
     }
 
-    console.log('Data is validated and ready to be saved...');
-    return redirect(`/beheer/${content}`);
+    console.error('Data is invalid and cannot be saved...', result.error);
+    return data(result, { status: 400 });
   } catch (err) {
     if (!(err instanceof ZodError)) {
       throw err;

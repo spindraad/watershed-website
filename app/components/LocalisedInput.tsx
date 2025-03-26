@@ -55,7 +55,7 @@ export default function LocalisedInput({
   function handleValueChange(event: SlChangeEvent) {
     setValue({
       ...value,
-      [currentLocale]: event.detail.value,
+      [currentLocale]: (event.target as HTMLInputElement)?.value,
     });
   }
 
