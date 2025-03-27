@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Removed the news routes">
-      <change beforePath="$PROJECT_DIR$/app/locales/pap.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/pap.ts" afterDir="false" />
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Added fonts and setup styles for the heading">
+      <change beforePath="$PROJECT_DIR$/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +129,7 @@
     "Vitest.validateLogin.executor": "Run",
     "Vitest.validateLogin.should return success: false when emailaddress is invalid.executor": "Run",
     "Vitest.validateLogin.should return success: false when emailaddress is missing.executor": "Run",
-    "git-widget-placeholder": "#21 on feature/WAT-144__Remove__news",
+    "git-widget-placeholder": "feature/WAT-145__Add__demo__content",
     "javascript.nodejs.core.library.configured.version": "22.11.0",
     "javascript.nodejs.core.library.typings.version": "22.9.0",
     "last_opened_file_path": "/Users/lody/dev/projects/watershed-website/scaffold-templates/plop/form",
@@ -826,11 +826,11 @@
     <MESSAGE value="Simplified the component tests for Event Mutation Form and updated Project Mutation Form following the same workflow as the EMF" />
     <MESSAGE value="GH Actions now performs a build on normal push" />
     <MESSAGE value="Enabled the UPDATE flow end to end." />
-    <MESSAGE value="Added fonts and setup styles for the heading" />
     <MESSAGE value="Renamed news link to events" />
     <MESSAGE value="Moved the components from the news route to the generic components folder as they can be reused." />
     <MESSAGE value="Removed the news routes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed the news routes" />
+    <MESSAGE value="Added fonts and setup styles for the heading" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added fonts and setup styles for the heading" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

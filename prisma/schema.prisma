@@ -52,8 +52,6 @@ model User {
 
   password Password?
 
-  articles NewsArticle[]
-
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
