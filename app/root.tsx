@@ -65,7 +65,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body className="bg-primary text-black font-sans flex flex-col gap-4">
+      <body className="bg-primary text-black font-gt-haptik flex flex-col gap-4">
         <ShoelaceContext.Provider value={shoelace}>
           <Header user={user} />
           {children}
