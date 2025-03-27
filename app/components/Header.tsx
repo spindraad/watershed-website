@@ -22,8 +22,8 @@ export default function Header({ user }: Props) {
           </a>
         </div>
         <div className="flex items-center">
-          <Anchor anchorType="nav" to="/nieuws">
-            Nieuws
+          <Anchor anchorType="nav" to="/evenementen">
+            Evenementen
           </Anchor>
 
           {user ?

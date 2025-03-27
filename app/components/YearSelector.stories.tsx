@@ -4,6 +4,7 @@ import YearSelector from './YearSelector';
 export default {
   title: 'Components/Year Selector',
   component: YearSelector,
+  tags: ['news'],
 } satisfies Meta<typeof YearSelector>;
 
 type Story = StoryObj<typeof YearSelector>;
