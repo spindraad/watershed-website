@@ -5,6 +5,7 @@ import EventSummary from './EventSummary';
 export default {
   title: 'Components/Event Summary',
   component: EventSummary,
+  tags: ['news'],
   decorators: [(Story) => <div className="w-1/3">{Story()}</div>],
 } satisfies Meta<typeof EventSummary>;
 

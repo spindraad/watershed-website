@@ -4,8 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Added fonts and setup styles for the heading">
-      <change beforePath="$PROJECT_DIR$/app/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Header.tsx" afterDir="false" />
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Renamed news link to events">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/locales/en.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/en.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/locales/nl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/nl.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/nieuws/_index/ArtistProfileSummary.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ArtistProfileSummary.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/nieuws/_index/ArtistProfileSummary.translations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ArtistProfileSummary.translations.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/nieuws/_index/ArtistProfileSummary.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ArtistProfileSummary.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/nieuws/_index/ArtistsSummary.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ArtistsSummary.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/nieuws/_index/ArtistsSummary.translations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ArtistsSummary.translations.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/nieuws/_index/ArtistsSummary.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ArtistsSummary.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/nieuws/_index/EventSummary.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/EventSummary.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/nieuws/_index/EventSummary.translations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/EventSummary.translations.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/nieuws/_index/EventSummary.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/EventSummary.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/nieuws/_index/ProductSummary.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ProductSummary.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/nieuws/_index/ProductSummary.translations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ProductSummary.translations.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/nieuws/_index/ProductSummary.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ProductSummary.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/nieuws/_index/ProjectSummary.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ProjectSummary.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/nieuws/_index/ProjectSummary.translations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ProjectSummary.translations.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/nieuws/_index/ProjectSummary.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ProjectSummary.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/nieuws/_index/YearSelector.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/YearSelector.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/nieuws/_index/YearSelector.translations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/YearSelector.translations.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/nieuws/_index/YearSelector.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/YearSelector.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/tailwind.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/tailwind.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,11 +190,11 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/components/" />
       <recent name="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/verwijderen/_index" />
       <recent name="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/bewerken/_index" />
       <recent name="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/_index" />
       <recent name="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/bewerken/$id" />
-      <recent name="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/verwijderen/$id" />
     </key>
     <key name="es6.move.members.recent.items">
       <recent name="$PROJECT_DIR$/app/types/Input.ts" />
@@ -369,14 +390,6 @@
       <workItem from="1742033930615" duration="57349000" />
       <workItem from="1742396477168" duration="4319000" />
       <workItem from="1742482836686" duration="46242000" />
-    </task>
-    <task id="LOCAL-00056" summary="Deploy will now only be run on tagged versions.">
-      <option name="closed" value="true" />
-      <created>1741615184890</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1741615184890</updated>
     </task>
     <task id="LOCAL-00057" summary="Added postversion script to push to origin">
       <option name="closed" value="true" />
@@ -762,7 +775,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743068625588</updated>
     </task>
-    <option name="localTasksCounter" value="105" />
+    <task id="LOCAL-00105" summary="Renamed news link to events">
+      <option name="closed" value="true" />
+      <created>1743088390233</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1743088390233</updated>
+    </task>
+    <option name="localTasksCounter" value="106" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -805,7 +826,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Created the dynamic content route, and added a basic implementation of the content table." />
     <MESSAGE value="Made a basic implementation of a dynamic event/project overview" />
     <MESSAGE value="Content table is now localised and has a more robust value parser." />
     <MESSAGE value="Created all needed routes for CRUD functionality." />
@@ -830,7 +850,8 @@
     <MESSAGE value="GH Actions now performs a build on normal push" />
     <MESSAGE value="Enabled the UPDATE flow end to end." />
     <MESSAGE value="Added fonts and setup styles for the heading" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added fonts and setup styles for the heading" />
+    <MESSAGE value="Renamed news link to events" />
+    <option name="LAST_COMMIT_MESSAGE" value="Renamed news link to events" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
