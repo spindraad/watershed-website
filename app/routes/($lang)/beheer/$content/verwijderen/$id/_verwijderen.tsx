@@ -1,5 +1,5 @@
-import type { Route } from './+types/_verwijderen';
 import { redirect } from 'react-router';
+import type { Route } from './+types/_verwijderen';
 import { ContentURLParams } from '~/types/Content';
 import { deleteEvent } from '~/models/events.server';
 import { deleteProject } from '~/models/projects.server';
@@ -48,15 +48,6 @@ export async function action({ params, request }: Route.ActionArgs) {
   }
 }
 
-export default function AdminDeleteContentRoute({
-  params,
-}: Route.ComponentProps) {
-  return (
-    <div>
-      <h1>Are you sure you want to delete this content?</h1>
-      <p>
-        Type: {params.content} with id {params.id}
-      </p>
-    </div>
-  );
+export default function AdminDeleteContentRoute() {
+  return null;
 }

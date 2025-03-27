@@ -1,3 +1,5 @@
+import { data, redirect } from 'react-router';
+import { ZodError } from 'zod';
 import type { Route } from './+types/_nieuw';
 import { ContentURLParams } from '~/types/Content';
 import i18nServer from '~/modules/i18n.server';
@@ -8,13 +10,11 @@ import {
 import { EventValidator, validateEvent } from '~/validations/models/event';
 import { saveEvent } from '~/models/events.server';
 import { saveProject } from '~/models/projects.server';
-import { data, redirect } from 'react-router';
-import { ZodError } from 'zod';
 import ProjectMutationForm from '~/components/ProjectMutationForm';
 import EventMutationForm from '~/components/EventMutationForm';
 
 export const handle = {
-  i18: 'NewContentRoute',
+  i18n: ['NewContentRoute', 'ProjectMutationForm', 'EventMutationForm'],
 };
 
 export async function loader({ params, request }: Route.LoaderArgs) {

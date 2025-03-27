@@ -27,10 +27,9 @@ export default async function handleRequest(
   const ns = i18nServer.getRouteNamespaces(reactRouterContext);
 
   await instance.use(initReactI18next).init({ ...i18n, lng, ns });
-  // TODO: Enable this when i18next is updated to latest
-  // i18n.formatters.forEach((formatter) => {
-  //   instance.services.formatter?.add(formatter.name, formatter.func);
-  // });
+  i18n.formatters.forEach((formatter) => {
+    instance.services.formatter?.add(formatter.name, formatter.func);
+  });
 
   return isbot(request.headers.get('user-agent') || '') ?
       handleBotRequest(

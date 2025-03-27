@@ -1,5 +1,5 @@
-import Heading from '~/components/Heading';
 import { LoaderFunctionArgs, redirect } from 'react-router';
+import Heading from '~/components/Heading';
 import { getUser } from '~/.server/session';
 
 export async function loader({ request }: LoaderFunctionArgs) {

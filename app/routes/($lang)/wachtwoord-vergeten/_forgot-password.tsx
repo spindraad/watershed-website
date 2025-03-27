@@ -21,6 +21,9 @@ type ErrorActionData = {
 
 type ActionData = SuccessActionData | ErrorActionData;
 
+export const handle = {
+  i18n: 'ForgotPasswordRoute',
+};
 export async function action({ request }: ActionFunctionArgs) {
   if (request.method === 'POST') {
     const result = await validateForgetPassword(request);

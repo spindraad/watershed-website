@@ -1,7 +1,8 @@
 import type { Route } from './+types/_bewerken';
+import { ZodError } from 'zod';
+import { data, redirect, useLoaderData } from 'react-router';
 import { ContentURLParams } from '~/types/Content';
 import i18nServer from '~/modules/i18n.server';
-import { data, redirect, useLoaderData } from 'react-router';
 import { getEvent, updateEvent } from '~/models/events.server';
 import { getProject, updateProject } from '~/models/projects.server';
 import EventMutationForm from '~/components/EventMutationForm';
@@ -11,10 +12,9 @@ import {
   ProjectValidator,
   validateProject,
 } from '~/validations/models/project';
-import { ZodError } from 'zod';
 
 export const handle = {
-  i18: 'EditContentRoute',
+  i18n: 'EditContentRoute',
 };
 
 export async function loader({ params, request }: Route.LoaderArgs) {
