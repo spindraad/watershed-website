@@ -16,6 +16,10 @@ import { changeUserPasswordType, updatePassword } from '~/models/user.server';
 import { createUserSession } from '~/.server/session';
 import { getErrorMessage } from '~/utils/errors';
 
+export const handle = {
+  i18n: 'ChangePasswordRoute',
+};
+
 export async function action({ request }: ActionFunctionArgs) {
   if (request.method === 'POST') {
     const result = await validateChangePassword(request);

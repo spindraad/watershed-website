@@ -5,7 +5,11 @@ import {
   Outlet,
 } from 'react-router';
 import { getUser } from '~/.server/session';
-import AccountMenu from '~/routes/($lang)/account/AccountMenu';
+import AccountMenu from './AccountMenu';
+
+export const handle = {
+  i18n: ['AccountMenu'],
+};
 
 export async function loader({ request }: LoaderFunctionArgs) {
   const user = await getUser(request);

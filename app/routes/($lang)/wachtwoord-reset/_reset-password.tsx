@@ -30,6 +30,10 @@ type TokenErrorResponse = {
   };
 };
 
+export const handle = {
+  i18n: 'ResetPasswordRoute',
+};
+
 type ActionData = ChangePasswordResponse | TokenErrorResponse;
 
 export async function action({ request }: ActionFunctionArgs) {

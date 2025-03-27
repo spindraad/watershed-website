@@ -12,6 +12,10 @@ import { validateLogin, ValidationErrors } from '~/validations/flows/login';
 import { isUserPasswordActive, verifyLogin } from '~/models/user.server';
 import { createUserSession } from '~/.server/session';
 
+export const handle = {
+  i18n: 'login',
+};
+
 type ActionData = ValidationErrors & {
   userNotFound?: string;
 };

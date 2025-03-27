@@ -34,7 +34,7 @@ export const links: LinksFunction = () => [
   },
 ];
 
-export const handle = { i18n: ['common'] };
+export const handle = { i18n: 'common' };
 
 export async function loader({ request }: LoaderFunctionArgs) {
   const user = await getUser(request);

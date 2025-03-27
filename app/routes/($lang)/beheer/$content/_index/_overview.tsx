@@ -1,5 +1,8 @@
 import type { Route } from './+types/_overview';
+import { useContext, useRef, useState } from 'react';
 import { useFetcher, useLoaderData } from 'react-router';
+import { SlAlert } from '@shoelace-style/shoelace';
+import { useTranslation } from 'react-i18next';
 import ContentTable, { ContentTableItem } from '~/components/ContentTable';
 import { convertEventsToTableData, getEvents } from '~/models/events.server';
 import {
@@ -7,14 +10,20 @@ import {
   getProjects,
 } from '~/models/projects.server';
 import { ContentURLParams } from '~/types/Content';
-import { useTranslation } from 'react-i18next';
 import Heading from '~/components/Heading';
-import ConfirmDeleteDialog from '~/routes/($lang)/beheer/$content/_index/ConfirmDeleteDialog';
-import { useContext, useRef, useState } from 'react';
-import DeletionNotification from '~/routes/($lang)/beheer/$content/_index/DeletionNotification';
-import { SlAlert } from '@shoelace-style/shoelace';
+import ConfirmDeleteDialog from './ConfirmDeleteDialog';
+import DeletionNotification from './DeletionNotification';
 import i18nServer from '~/modules/i18n.server';
 import { ShoelaceContext } from '~/components/shoelace';
+
+export const handle = {
+  i18n: [
+    'ContentOverviewRoute',
+    'ContentTable',
+    'ConfirmDeleteDialog',
+    'DeletionNotification',
+  ],
+};
 
 export async function loader({ params, request }: Route.LoaderArgs) {
   const content = params.content as ContentURLParams;

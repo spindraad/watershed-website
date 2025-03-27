@@ -15,9 +15,10 @@ import {
   SlMenuItem,
   SlBadge,
 } from '@shoelace-style/shoelace/dist/react';
-import { useEffect, useState, useRef, createContext } from 'react';
+import { useEffect, useState, useRef, createContext, forwardRef } from 'react';
 
-const nullComponent = () => null;
+// eslint-disable-next-line react/display-name
+const nullComponent = forwardRef(() => null);
 
 type Components = {
   SlAlert: typeof nullComponent | typeof SlAlert;

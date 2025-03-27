@@ -1,6 +1,10 @@
 import { type LoaderFunctionArgs, redirect, Outlet } from 'react-router';
 import { getUser } from '~/.server/session';
-import AdminMenu from '~/routes/($lang)/beheer/AdminMenu';
+import AdminMenu from './AdminMenu';
+
+export const handle = {
+  i18n: 'AdminMenu',
+};
 
 export async function loader({ request }: LoaderFunctionArgs) {
   const user = await getUser(request);
