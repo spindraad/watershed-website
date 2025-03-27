@@ -2,35 +2,54 @@ import { PrismaClient, User } from '@prisma/client';
 import bcrypt from 'bcryptjs';
 import { faker } from '@faker-js/faker';
 
-export const createUsers = async (
-  client: PrismaClient,
-): Promise<[User, User]> => {
-  return Promise.all([
-    client.user.create({
-      data: {
-        name: 'Alice',
-        email: 'alice@wonderworld.net',
-        password: {
-          create: {
-            // eslint-disable-next-line import/no-named-as-default-member
-            hash: await bcrypt.hash('password', 10),
+type UserSeed = {
+  name: string;
+  email: string;
+  password: string;
+};
+
+const users: UserSeed[] = [
+  {
+    name: 'Stan',
+    email: 'stan@stichtingwatershed.nl',
+    password: 'password',
+  },
+  {
+    name: 'Juliet',
+    email: 'juliet@stichtingwatershed.nl',
+    password: 'password',
+  },
+  {
+    name: 'Arantja',
+    email: 'arantja@stichtingwatershed.nl',
+    password: 'password',
+  },
+  {
+    name: 'Lody',
+    email: 'lody@stichtingwatershed.nl',
+    password: 'password',
+  },
+];
+
+export const createUsers = async (client: PrismaClient): Promise<User[]> => {
+  return Promise.all(
+    users.map(async ({ name, email, password }) => {
+      // eslint-disable-next-line import/no-named-as-default-member
+      const hashedPassword = await bcrypt.hash(password, 10);
+
+      return client.user.create({
+        data: {
+          name,
+          email,
+          password: {
+            create: {
+              hash: hashedPassword,
+            },
           },
         },
-      },
+      });
     }),
-    client.user.create({
-      data: {
-        name: 'Bob',
-        email: 'bob@wonderworld.net',
-        password: {
-          create: {
-            // eslint-disable-next-line import/no-named-as-default-member
-            hash: await bcrypt.hash('password', 10),
-          },
-        },
-      },
-    }),
-  ]);
+  );
 };
 export const createPasswordResetSession = async (
   aliceUser: User,
