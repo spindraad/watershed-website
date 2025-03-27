@@ -25,3 +25,38 @@ export const Default: Story = {
     children: 'Hello, World!',
   },
 };
+
+export const Level2: Story = {
+  args: {
+    level: 2,
+    children: 'Hello, World!',
+  },
+};
+
+export const Level3: Story = {
+  args: {
+    level: 3,
+    children: 'Hello, World!',
+  },
+};
+
+export const Level4: Story = {
+  args: {
+    level: 4,
+    children: 'Hello, World!',
+  },
+};
+
+export const Level5: Story = {
+  args: {
+    level: 5,
+    children: 'Hello, World!',
+  },
+};
+
+export const Level6: Story = {
+  args: {
+    level: 6,
+    children: 'Hello, World!',
+  },
+};

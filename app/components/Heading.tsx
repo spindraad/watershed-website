@@ -32,7 +32,11 @@ export default function Heading({ level, children }: Props) {
       break;
   }
 
-  const classes = `font-bold text-secondary ${textSize}`;
+  let additionalHeadingClasses = 'font-gt-haptik';
+  if (level === 1) {
+    additionalHeadingClasses = 'italic font-gt-haptik-rotalic';
+  }
+  const classes = `font-black text-secondary ${textSize} ${additionalHeadingClasses}`;
 
   return <Tag className={classes}>{children}</Tag>;
 }

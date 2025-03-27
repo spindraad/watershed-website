@@ -21,7 +21,9 @@ export default {
         secondary: 'rgb(var(--secondary))',
       },
       fontFamily: {
-        arial: ['var(--font-family-sans)'],
+        sans: ['var(--font-family-sans)'],
+        'gt-haptik': ['var(--font-family-gt-haptik)'],
+        'gt-haptik-rotalic': ['var(--font-family-gt-haptik-rotalic)'],
       },
     },
   },
