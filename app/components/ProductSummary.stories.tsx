@@ -5,6 +5,7 @@ import ProductSummary from './ProductSummary';
 export default {
   title: 'Components/Product Summary',
   component: ProductSummary,
+  tags: ['news'],
 } satisfies Meta<typeof ProductSummary>;
 
 type Story = StoryObj<typeof ProductSummary>;

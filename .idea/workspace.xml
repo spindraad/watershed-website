@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Added fonts and setup styles for the heading">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/seed/_content.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/seed/_content.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/seed/_users.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/seed/_users.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/seed/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/seed/main.ts" afterDir="false" />
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Removed the news routes">
+      <change beforePath="$PROJECT_DIR$/app/locales/pap.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/pap.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,12 +33,12 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="feature/WAT-145_Add_demo_content" />
-                    <option name="lastUsedInstant" value="1743102200" />
+                    <option name="branchName" value="fix/WAT-142_Fix_hydration_errors" />
+                    <option name="lastUsedInstant" value="1743071334" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="release/WAT-140_Prepare_demo_deployment" />
-                    <option name="lastUsedInstant" value="1743102038" />
+                    <option name="lastUsedInstant" value="1743071259" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="dev" />
@@ -133,7 +129,7 @@
     "Vitest.validateLogin.executor": "Run",
     "Vitest.validateLogin.should return success: false when emailaddress is invalid.executor": "Run",
     "Vitest.validateLogin.should return success: false when emailaddress is missing.executor": "Run",
-    "git-widget-placeholder": "feature/WAT-145__Add__demo__content",
+    "git-widget-placeholder": "#21 on feature/WAT-144__Remove__news",
     "javascript.nodejs.core.library.configured.version": "22.11.0",
     "javascript.nodejs.core.library.typings.version": "22.9.0",
     "last_opened_file_path": "/Users/lody/dev/projects/watershed-website/scaffold-templates/plop/form",
@@ -173,11 +169,11 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/components/" />
       <recent name="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/verwijderen/_index" />
       <recent name="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/bewerken/_index" />
       <recent name="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/_index" />
       <recent name="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/bewerken/$id" />
-      <recent name="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/verwijderen/$id" />
     </key>
     <key name="es6.move.members.recent.items">
       <recent name="$PROJECT_DIR$/app/types/Input.ts" />
@@ -373,30 +369,6 @@
       <workItem from="1742033930615" duration="57349000" />
       <workItem from="1742396477168" duration="4319000" />
       <workItem from="1742482836686" duration="46242000" />
-    </task>
-    <task id="LOCAL-00056" summary="Deploy will now only be run on tagged versions.">
-      <option name="closed" value="true" />
-      <created>1741615184890</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1741615184890</updated>
-    </task>
-    <task id="LOCAL-00057" summary="Added postversion script to push to origin">
-      <option name="closed" value="true" />
-      <created>1741615356046</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1741615356046</updated>
-    </task>
-    <task id="LOCAL-00058" summary="Cleaned up the pr-lint-build.yml workflow, and added explicit build steps to the deploy job. This decouples the two.">
-      <option name="closed" value="true" />
-      <created>1741616085939</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1741616085939</updated>
     </task>
     <task id="LOCAL-00059" summary="Added extra clarification in build output for gh actions, and moved prisma to production deps because we need it in the container.">
       <option name="closed" value="true" />
@@ -766,7 +738,31 @@
       <option name="project" value="LOCAL" />
       <updated>1743068625588</updated>
     </task>
-    <option name="localTasksCounter" value="105" />
+    <task id="LOCAL-00105" summary="Renamed news link to events">
+      <option name="closed" value="true" />
+      <created>1743088390233</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1743088390233</updated>
+    </task>
+    <task id="LOCAL-00106" summary="Moved the components from the news route to the generic components folder as they can be reused.">
+      <option name="closed" value="true" />
+      <created>1743088866498</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1743088866498</updated>
+    </task>
+    <task id="LOCAL-00107" summary="Removed the news routes">
+      <option name="closed" value="true" />
+      <created>1743088900548</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1743088900548</updated>
+    </task>
+    <option name="localTasksCounter" value="108" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -809,9 +805,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Created the dynamic content route, and added a basic implementation of the content table." />
-    <MESSAGE value="Made a basic implementation of a dynamic event/project overview" />
-    <MESSAGE value="Content table is now localised and has a more robust value parser." />
     <MESSAGE value="Created all needed routes for CRUD functionality." />
     <MESSAGE value="Code quality improvements, including running a type check on CI/CD" />
     <MESSAGE value="Improvements to the content table, and a small bit of refactoring to keep the code readable." />
@@ -834,7 +827,10 @@
     <MESSAGE value="GH Actions now performs a build on normal push" />
     <MESSAGE value="Enabled the UPDATE flow end to end." />
     <MESSAGE value="Added fonts and setup styles for the heading" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added fonts and setup styles for the heading" />
+    <MESSAGE value="Renamed news link to events" />
+    <MESSAGE value="Moved the components from the news route to the generic components folder as they can be reused." />
+    <MESSAGE value="Removed the news routes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed the news routes" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

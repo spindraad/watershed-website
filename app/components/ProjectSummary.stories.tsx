@@ -5,6 +5,7 @@ import ProjectSummary from './ProjectSummary';
 export default {
   title: 'Components/Project Summary',
   component: ProjectSummary,
+  tags: ['news'],
   decorators: [(Story) => <div className="w-1/3">{Story()}</div>],
 } satisfies Meta<typeof ProjectSummary>;
 
