@@ -1,5 +1,6 @@
 import type { Config } from 'tailwindcss';
 import { StatePlugin, PartPlugin } from 'tailwindcss-plugin-custom-elements';
+import TypographyPlugin from '@tailwindcss/typography';
 
 export default {
   content: ['./app/**/{**,.client,.server}/**/*.{js,jsx,ts,tsx}'],
@@ -27,5 +28,5 @@ export default {
       },
     },
   },
-  plugins: [StatePlugin(), PartPlugin()],
+  plugins: [StatePlugin(), PartPlugin(), TypographyPlugin()],
 } satisfies Config;

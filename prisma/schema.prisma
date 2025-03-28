@@ -92,3 +92,21 @@ model Event {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
+
+model Page {
+  id String @id @default(cuid())
+
+  /// [Localised]
+  title Json
+
+  /// [Localised]
+  summary Json
+
+  /// [Localised]
+  content Json
+
+  slug String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

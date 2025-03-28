@@ -20,6 +20,7 @@ import './tailwind.css';
 import Header from '~/components/Header';
 import { useOptionalUser } from '~/utils/user';
 import { getUser } from '~/.server/session';
+import Heading from '~/components/Heading';
 
 export const links: LinksFunction = () => [
   {
@@ -86,12 +87,12 @@ export function ErrorBoundary() {
 
   if (isRouteErrorResponse(error)) {
     return (
-      <>
-        <h1>
-          {error.status} {error.statusText}
-        </h1>
+      <div className="content">
+        <Heading level={1}>
+          {error.status.toString(10)} {error.statusText}
+        </Heading>
         <p>{error.data}</p>
-      </>
+      </div>
     );
   }
 

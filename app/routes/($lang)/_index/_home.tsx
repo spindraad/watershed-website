@@ -1,5 +1,6 @@
-import type { MetaFunction } from 'react-router';
-import { useTranslation } from 'react-i18next';
+import { MetaFunction, useLoaderData } from 'react-router';
+import { getPageBySlug } from '~/models/pages.server';
+import PageRenderer from '~/components/PageRenderer';
 
 export const meta: MetaFunction = () => {
   return [
@@ -15,13 +16,22 @@ export const meta: MetaFunction = () => {
   ];
 };
 
+export async function loader() {
+  const page = await getPageBySlug('home');
+
+  return {
+    title: page.title,
+    data: page.content,
+  };
+}
+
 export default function Index() {
-  const { t } = useTranslation();
+  const { data } = useLoaderData<typeof loader>();
 
   return (
     <>
       <div className="content">
-        <h1>{t('title')}</h1>
+        <PageRenderer data={data} />
       </div>
     </>
   );
