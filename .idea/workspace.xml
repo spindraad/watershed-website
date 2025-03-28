@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Very basically implemented color schemes">
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="We can now navigate to different pages">
+      <change afterPath="$PROJECT_DIR$/app/routes/($lang)/evenementen/$eventId/_event-detail.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/routes/($lang)/evenementen/_index/_events.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/routes/($lang)/projecten/$projectID/_project-detail.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/routes/($lang)/projecten/_index/_projects.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/$/_pages.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/$/_pages.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/_index/_home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/test/_home.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/tailwind.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/tailwind.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/EventSummary.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/EventSummary.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,11 +175,11 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/routes/($lang)/evenementen/_index" />
       <recent name="$PROJECT_DIR$/app/routes/($lang)" />
       <recent name="$PROJECT_DIR$/app/components/" />
       <recent name="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/verwijderen/_index" />
       <recent name="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/bewerken/_index" />
-      <recent name="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/_index" />
     </key>
     <key name="es6.move.members.recent.items">
       <recent name="$PROJECT_DIR$/app/types/Input.ts" />
@@ -374,14 +375,6 @@
       <workItem from="1742033930615" duration="57349000" />
       <workItem from="1742396477168" duration="4319000" />
       <workItem from="1742482836686" duration="46242000" />
-    </task>
-    <task id="LOCAL-00064" summary="Updated Chart version after changes made for deployment">
-      <option name="closed" value="true" />
-      <created>1741691993206</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1741691993206</updated>
     </task>
     <task id="LOCAL-00065" summary="Changed the prisma dev deploy script to run migrate reset, which will reset the DB on each deploy.">
       <option name="closed" value="true" />
@@ -767,7 +760,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743163796421</updated>
     </task>
-    <option name="localTasksCounter" value="113" />
+    <task id="LOCAL-00113" summary="We can now navigate to different pages">
+      <option name="closed" value="true" />
+      <created>1743164457213</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1743164457213</updated>
+    </task>
+    <option name="localTasksCounter" value="114" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -810,7 +811,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added the trash button to the content table" />
     <MESSAGE value="Implement delete functionality in ContentTable with confirmation dialog" />
     <MESSAGE value="Enhance delete functionality in ContentTable with notification and dialog improvements" />
     <MESSAGE value="Added localised meta data for the content routes" />
@@ -835,7 +835,8 @@
     <MESSAGE value="Created demo page content and a catch-all page route that loads content." />
     <MESSAGE value="Implemented dropcap style heading" />
     <MESSAGE value="Very basically implemented color schemes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Very basically implemented color schemes" />
+    <MESSAGE value="We can now navigate to different pages" />
+    <option name="LAST_COMMIT_MESSAGE" value="We can now navigate to different pages" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
