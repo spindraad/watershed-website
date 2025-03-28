@@ -18,6 +18,7 @@ export const meta: MetaFunction = () => {
 
 export async function loader() {
   const page = await getPageBySlug('home');
+  console.log('home');
 
   return {
     title: page.title,

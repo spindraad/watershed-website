@@ -17,13 +17,25 @@ export default function Header({ user }: Props) {
     <div className="h-24 border-b-4 border-b-secondary">
       <div className="container w-full mx-auto h-full flex items-center justify-between">
         <div className="flex items-center">
-          <a href="/" className="block w-28">
+          <a href="/home" className="block w-28">
             <Logo />
           </a>
         </div>
-        <div className="flex items-center">
+        <div className="flex gap-2 items-center">
           <Anchor anchorType="nav" to="/evenementen">
-            Evenementen
+            evenementen
+          </Anchor>
+
+          <Anchor anchorType="nav" to="/projecten">
+            projecten
+          </Anchor>
+
+          <Anchor anchorType="nav" to="/about">
+            over ons
+          </Anchor>
+
+          <Anchor anchorType="nav" to="/contact">
+            contact
           </Anchor>
 
           {user ?

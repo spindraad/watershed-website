@@ -8,7 +8,7 @@ import { Prisma } from '@prisma/client';
 export const meta: Route.MetaFunction = () => [];
 export async function loader({ params }: Route.LoaderArgs) {
   const slug = parseParamsToSlug(params);
-  console.log(params);
+  console.log('slug', slug);
 
   try {
     const pageData = await getPageBySlug(slug);
