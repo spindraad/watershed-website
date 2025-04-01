@@ -11,21 +11,33 @@ describe('parseURL', () => {
       '*': '',
     };
 
-    expect(parseParamsToSlug(params)).toEqual('contact');
+    expect(parseParamsToSlug(params)).toStrictEqual({
+      locale: 'nl',
+      slug: 'contact',
+      path: 'nl/contact',
+    });
 
     params = {
       lang: 'nl',
       '*': 'contact',
     };
 
-    expect(parseParamsToSlug(params)).toEqual('nl/contact');
+    expect(parseParamsToSlug(params)).toStrictEqual({
+      locale: 'nl',
+      slug: 'contact',
+      path: 'nl/contact',
+    });
 
     params = {
       lang: 'en',
       '*': 'contact',
     };
 
-    expect(parseParamsToSlug(params)).toEqual('en/contact');
+    expect(parseParamsToSlug(params)).toStrictEqual({
+      locale: 'en',
+      slug: 'contact',
+      path: 'en/contact',
+    });
   });
 
   test('Return the correct url for "/over-ons/team"', () => {
@@ -34,20 +46,32 @@ describe('parseURL', () => {
       '*': 'team',
     };
 
-    expect(parseParamsToSlug(params)).toEqual('over-ons/team');
+    expect(parseParamsToSlug(params)).toStrictEqual({
+      locale: 'nl',
+      slug: 'over-ons/team',
+      path: 'nl/over-ons/team',
+    });
 
     params = {
       lang: 'nl',
       '*': 'over-ons/team',
     };
 
-    expect(parseParamsToSlug(params)).toEqual('nl/over-ons/team');
+    expect(parseParamsToSlug(params)).toStrictEqual({
+      locale: 'nl',
+      slug: 'over-ons/team',
+      path: 'nl/over-ons/team',
+    });
 
     params = {
       lang: 'en',
       '*': 'over-ons/team',
     };
 
-    expect(parseParamsToSlug(params)).toEqual('en/over-ons/team');
+    expect(parseParamsToSlug(params)).toStrictEqual({
+      locale: 'en',
+      slug: 'over-ons/team',
+      path: 'en/over-ons/team',
+    });
   });
 });

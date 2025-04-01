@@ -1,4 +1,3 @@
-import { getEvents } from '~/models/events.server';
 import { Link, useLoaderData } from 'react-router';
 import Heading from '~/components/Heading';
 import { getProjects } from '~/models/projects.server';

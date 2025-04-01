@@ -52,10 +52,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
   const user = useOptionalUser();
   const data = useRouteLoaderData('root') as {
     locale?: string;
-    BASE_URL: string;
+    BASE_URL?: string;
   };
   const shoelace = useShoelace({
-    URL: data.BASE_URL,
+    URL: data?.BASE_URL ?? '',
   });
 
   return (

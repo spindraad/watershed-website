@@ -1,23 +1,22 @@
-import type { Route } from './+types/_pages';
+import type { Route } from './+types/_home';
 import { parseParamsToSlug } from '~/utils/slug';
 import { getPageBySlug } from '~/models/pages.server';
 import { data, useLoaderData } from 'react-router';
 import PageRenderer from '~/components/PageRenderer';
 import { Prisma } from '@prisma/client';
-import { SupportedLanguages } from '~/config/i18n';
+import { fallbackLanguage, SupportedLanguages } from '~/config/i18n';
 
-export async function loader({ params }: Route.LoaderArgs) {
-  const { locale, slug } = parseParamsToSlug(params);
-
+export async function loader() {
   try {
-    const pageData = await getPageBySlug(slug || 'home');
+    const pageData = await getPageBySlug('home');
 
     return {
-      title: pageData.title[locale as SupportedLanguages],
-      data: pageData.content[locale as SupportedLanguages],
+      title: pageData.title[fallbackLanguage as SupportedLanguages],
+      data: pageData.content[fallbackLanguage as SupportedLanguages],
       meta: {
-        title: pageData.meta.title[locale as SupportedLanguages],
-        description: pageData.meta.description[locale as SupportedLanguages],
+        title: pageData.meta.title[fallbackLanguage as SupportedLanguages],
+        description:
+          pageData.meta.description[fallbackLanguage as SupportedLanguages],
       },
     };
   } catch (error) {

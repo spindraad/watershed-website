@@ -4,13 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="We can now navigate to different pages">
-      <change afterPath="$PROJECT_DIR$/app/routes/($lang)/evenementen/$eventId/_event-detail.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routes/($lang)/evenementen/_index/_events.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routes/($lang)/projecten/$projectID/_project-detail.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routes/($lang)/projecten/_index/_projects.tsx" afterDir="false" />
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Created basic event and project overview/detail routes">
+      <change afterPath="$PROJECT_DIR$/app/routes/_index/_home.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prisma/seed/_pageContent.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f8f326ed-6bd3-472a-9a5c-e32229f833e4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f8f326ed-6bd3-472a-9a5c-e32229f833e4.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f8f326ed-6bd3-472a-9a5c-e32229f833e4/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f8f326ed-6bd3-472a-9a5c-e32229f833e4/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/components/EventSummary.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/EventSummary.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/root.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/root.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/$/_pages.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/$/_pages.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/projecten/_index/_projects.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/projecten/_index/_projects.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/test/_home.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/types/PrismaJson.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/types/PrismaJson.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/utils/slug.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/slug.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/utils/slug.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/slug.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/seed/_content.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/seed/_content.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,17 +137,19 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "Vitest.All Tests.executor": "Debug",
+    "Vitest.All Tests.executor": "Run",
     "Vitest.Content utilities.Parse a localised form data object into a localised value object.executor": "Run",
     "Vitest.Content utilities.Retrieve the number of errors for each localised field.executor": "Run",
     "Vitest.Content utilities.executor": "Run",
+    "Vitest.parseURL.Return the correct url for \"/over-ons/team\".executor": "Debug",
+    "Vitest.parseURL.Return the correct urls for \"/contact\".executor": "Debug",
     "Vitest.validateLogin.executor": "Run",
     "Vitest.validateLogin.should return success: false when emailaddress is invalid.executor": "Run",
     "Vitest.validateLogin.should return success: false when emailaddress is missing.executor": "Run",
     "git-widget-placeholder": "feature/WAT-145__Add__demo__content",
     "javascript.nodejs.core.library.configured.version": "22.11.0",
     "javascript.nodejs.core.library.typings.version": "22.9.0",
-    "last_opened_file_path": "/Users/lody/dev/projects/watershed-website/scaffold-templates/plop/form",
+    "last_opened_file_path": "/Users/lody/dev/projects/watershed-website/app/routes/_index",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -148,6 +160,8 @@
     "npm.Dev.executor": "Debug",
     "npm.Develop.executor": "Run",
     "npm.Storybook.executor": "Debug",
+    "npm.db:generate.executor": "Run",
+    "npm.db:push:seed.executor": "Run",
     "npm.dev:app.executor": "Debug",
     "npm.dev:remix.executor": "Debug",
     "npm.dev:storybook.executor": "Debug",
@@ -171,6 +185,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/routes/_index" />
       <recent name="$PROJECT_DIR$/scaffold-templates/plop/form" />
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -194,9 +209,11 @@
       <command value="npm run docker:start" />
       <command value="npm run dev" />
       <command value="Develop (npm)" />
+      <command value="npm run db:generate" />
+      <command value="npm run db:push:seed" />
     </option>
   </component>
-  <component name="RunManager" selected="Vitest.All Tests">
+  <component name="RunManager" selected="Vitest.parseURL.Return the correct url for &quot;/over-ons/team&quot;">
     <configuration name="Develop" type="CompoundRunConfigurationType">
       <toRun name="Dev" type="js.build_tools.npm" />
       <toRun name="Storybook" type="js.build_tools.npm" />
@@ -209,19 +226,6 @@
       <vitest-options value="--watch" />
       <envs />
       <scope-kind value="ALL" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Content utilities" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <vitest-options value="--run" />
-      <envs />
-      <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/app/utils/content.test.ts" />
-      <test-names>
-        <test-name value="Content utilities" />
-      </test-names>
       <method v="2" />
     </configuration>
     <configuration name="Content utilities.Parse a localised form data object into a localised value object" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
@@ -238,45 +242,31 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="Content utilities.Retrieve the number of errors for each localised field" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
+    <configuration name="parseURL.Return the correct url for &quot;/over-ons/team&quot;" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
       <working-dir value="$PROJECT_DIR$" />
       <vitest-options value="--run" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/app/utils/content.test.ts" />
+      <test-file value="$PROJECT_DIR$/app/utils/slug.test.ts" />
       <test-names>
-        <test-name value="Content utilities" />
-        <test-name value="Retrieve the number of errors for each localised field" />
+        <test-name value="parseURL" />
+        <test-name value="Return the correct url for &quot;/over-ons/team&quot;" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="validateLogin.should return success: false when emailaddress is invalid" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
+    <configuration name="parseURL.Return the correct urls for &quot;/contact&quot;" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
       <working-dir value="$PROJECT_DIR$" />
       <vitest-options value="--run" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/app/validations/flows/login.test.ts" />
+      <test-file value="$PROJECT_DIR$/app/utils/slug.test.ts" />
       <test-names>
-        <test-name value="validateLogin" />
-        <test-name value="should return success: false when emailaddress is invalid" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="validateLogin.should return success: false when emailaddress is missing" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <vitest-options value="--run" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/app/validations/flows/login.test.ts" />
-      <test-names>
-        <test-name value="validateLogin" />
-        <test-name value="should return success: false when emailaddress is missing" />
+        <test-name value="parseURL" />
+        <test-name value="Return the correct urls for &quot;/contact&quot;" />
       </test-names>
       <method v="2" />
     </configuration>
@@ -304,25 +294,45 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="db:generate" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="db:generate" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="db:push:seed" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="db:push:seed" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Compound.Develop" />
       <item itemvalue="JavaScript Debug.Debug in Chrome" />
       <item itemvalue="npm.Dev" />
       <item itemvalue="npm.Storybook" />
+      <item itemvalue="npm.db:generate" />
+      <item itemvalue="npm.db:push:seed" />
       <item itemvalue="Vitest.All Tests" />
+      <item itemvalue="Vitest.parseURL.Return the correct url for &quot;/over-ons/team&quot;" />
+      <item itemvalue="Vitest.parseURL.Return the correct urls for &quot;/contact&quot;" />
       <item itemvalue="Vitest.Content utilities.Parse a localised form data object into a localised value object" />
-      <item itemvalue="Vitest.Content utilities" />
-      <item itemvalue="Vitest.Content utilities.Retrieve the number of errors for each localised field" />
-      <item itemvalue="Vitest.validateLogin.should return success: false when emailaddress is invalid" />
-      <item itemvalue="Vitest.validateLogin.should return success: false when emailaddress is missing" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.db:push:seed" />
+        <item itemvalue="npm.db:generate" />
+        <item itemvalue="Vitest.parseURL.Return the correct url for &quot;/over-ons/team&quot;" />
+        <item itemvalue="Vitest.parseURL.Return the correct urls for &quot;/contact&quot;" />
         <item itemvalue="Vitest.Content utilities.Parse a localised form data object into a localised value object" />
-        <item itemvalue="Vitest.Content utilities" />
-        <item itemvalue="Vitest.Content utilities.Retrieve the number of errors for each localised field" />
-        <item itemvalue="Vitest.validateLogin.should return success: false when emailaddress is missing" />
-        <item itemvalue="Vitest.validateLogin.should return success: false when emailaddress is invalid" />
       </list>
     </recent_temporary>
   </component>
@@ -375,14 +385,7 @@
       <workItem from="1742033930615" duration="57349000" />
       <workItem from="1742396477168" duration="4319000" />
       <workItem from="1742482836686" duration="46242000" />
-    </task>
-    <task id="LOCAL-00065" summary="Changed the prisma dev deploy script to run migrate reset, which will reset the DB on each deploy.">
-      <option name="closed" value="true" />
-      <created>1741693226516</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1741693226516</updated>
+      <workItem from="1743532443910" duration="5077000" />
     </task>
     <task id="LOCAL-00066" summary="Swapped the deprecated json() functions for the new data() functions where applicable.">
       <option name="closed" value="true" />
@@ -768,7 +771,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743164457213</updated>
     </task>
-    <option name="localTasksCounter" value="114" />
+    <task id="LOCAL-00114" summary="Created basic event and project overview/detail routes">
+      <option name="closed" value="true" />
+      <created>1743165995432</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1743165995432</updated>
+    </task>
+    <option name="localTasksCounter" value="115" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -811,7 +822,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Implement delete functionality in ContentTable with confirmation dialog" />
     <MESSAGE value="Enhance delete functionality in ContentTable with notification and dialog improvements" />
     <MESSAGE value="Added localised meta data for the content routes" />
     <MESSAGE value="A lot of small changes to the translations, and added a &quot;new&quot; button to te crud overview route." />
@@ -836,7 +846,8 @@
     <MESSAGE value="Implemented dropcap style heading" />
     <MESSAGE value="Very basically implemented color schemes" />
     <MESSAGE value="We can now navigate to different pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="We can now navigate to different pages" />
+    <MESSAGE value="Created basic event and project overview/detail routes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created basic event and project overview/detail routes" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

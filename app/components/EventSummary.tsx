@@ -12,7 +12,7 @@ type Props = {
   /**
    * A summary of the event
    */
-  summary?: any;
+  summary?: PrismaJson.Localised;
 
   /**
    * The slug of the event page.

@@ -102,8 +102,11 @@ model Page {
   /// [Localised]
   summary Json
 
-  /// [Localised]
+  /// [LocalisedContent]
   content Json
+
+  /// [LocalisedPageMeta]
+  meta Json
 
   slug String
 
