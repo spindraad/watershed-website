@@ -4,16 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Fixed linting and typecheck errors">
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Added link to user account in header">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/locales/en.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/en.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/locales/nl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/nl.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/evenementen/$eventId/_event-detail.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/evenementen/$eventId/_event-detail.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/evenementen/_index/_events.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/evenementen/_index/_events.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/Heading.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Heading.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/root.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/root.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/routes/($lang)/projecten/$projectID/_project-detail.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/projecten/$projectID/_project-detail.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/projecten/_index/_projects.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/projecten/_index/_projects.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/utils/slug.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/slug.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/utils/slug.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/slug.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/tailwind.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/tailwind.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -378,23 +375,7 @@
       <workItem from="1742033930615" duration="57349000" />
       <workItem from="1742396477168" duration="4319000" />
       <workItem from="1742482836686" duration="46242000" />
-      <workItem from="1743532443910" duration="6931000" />
-    </task>
-    <task id="LOCAL-00068" summary="Ignore workflow and helm templates in Prettier">
-      <option name="closed" value="true" />
-      <created>1741701708031</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1741701708031</updated>
-    </task>
-    <task id="LOCAL-00069" summary="Turned on the future flag for route config.">
-      <option name="closed" value="true" />
-      <created>1741702194507</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1741702194507</updated>
+      <workItem from="1743532443910" duration="10606000" />
     </task>
     <task id="LOCAL-00070" summary="Removed deprecated SerializedFrom type.">
       <option name="closed" value="true" />
@@ -772,7 +753,23 @@
       <option name="project" value="LOCAL" />
       <updated>1743537907745</updated>
     </task>
-    <option name="localTasksCounter" value="117" />
+    <task id="LOCAL-00117" summary="Added meta for eventsd ad projects">
+      <option name="closed" value="true" />
+      <created>1743539422157</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1743539422157</updated>
+    </task>
+    <task id="LOCAL-00118" summary="Added link to user account in header">
+      <option name="closed" value="true" />
+      <created>1743540189385</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1743540189385</updated>
+    </task>
+    <option name="localTasksCounter" value="119" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -815,9 +812,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="A lot of small changes to the translations, and added a &quot;new&quot; button to te crud overview route." />
-    <MESSAGE value="Created event form" />
-    <MESSAGE value="Created project form, and made some smaller improvements to the event form" />
     <MESSAGE value="Mutation forms are now processed and saved for 'Create'" />
     <MESSAGE value="The create flow is basically done, including validation before saving" />
     <MESSAGE value="Enhance EventMutationForm with locale support and local storage integration, also added a locale selector component." />
@@ -840,7 +834,10 @@
     <MESSAGE value="Created basic event and project overview/detail routes" />
     <MESSAGE value="Many fixes and improvements to the routing in order to make it more robust. Also added page meta to the database and made the page meta and page content pieces localised." />
     <MESSAGE value="Fixed linting and typecheck errors" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed linting and typecheck errors" />
+    <MESSAGE value="Added meta for events and projects" />
+    <MESSAGE value="Added meta for events and projects" />
+    <MESSAGE value="Added link to user account in header" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added link to user account in header" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

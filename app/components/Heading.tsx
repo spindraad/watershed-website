@@ -32,33 +32,20 @@ export default function Heading({ level, children }: Props) {
       break;
   }
 
-  const classes = `font-bold ${textSize}`;
+  const classes = `font-bold ${textSize} text-primary-700`;
   if (level === 1) {
-    const additionalHeadingClasses = 'italic font-gt-haptik-rotalic';
+    const additionalHeadingClasses =
+      'italic text-primary-700 font-gt-haptik-rotalic';
     const dropCapLetter = children[0];
     const remainingText = children.slice(1);
 
     return (
-      <h1
-        className={`${classes}`}
-        style={{
-          color: 'var(--sl-color-primary-700)',
-        }}
-      >
+      <h1 className={`${classes}`}>
         <span className={additionalHeadingClasses}>{dropCapLetter}</span>
         {remainingText}
       </h1>
     );
   }
 
-  return (
-    <Tag
-      className={classes}
-      style={{
-        color: 'var(--sl-color-primary-700)',
-      }}
-    >
-      {children}
-    </Tag>
-  );
+  return <Tag className={classes}>{children}</Tag>;
 }

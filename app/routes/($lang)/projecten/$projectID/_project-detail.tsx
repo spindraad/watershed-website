@@ -54,12 +54,7 @@ export default function ProjectDetailRoute() {
           {convertDateToLocaleString(project.createdAt)}
         </p>
 
-        <p
-          className="text-2xl"
-          style={{
-            fontWeight: 200,
-          }}
-        >
+        <p className="text-2xl font-thin">
           {project.summary[i18n.language as SupportedLanguages]}
         </p>
 

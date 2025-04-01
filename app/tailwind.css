@@ -165,98 +165,142 @@
 
 @layer base {
   :root {
-    /* Colors */
-    --white: rgb(255, 255, 255);
-    --black: rgb(0, 0, 0);
+    /* Basic colors */
+    --white: 255, 255, 255;
+    --black: 0, 0, 0;
 
-    /* Purple color palette for Shoelace tokens */
-    --sl-color-primary-50: rgb(249, 248, 252); /* #F9F8FC */
-    --sl-color-primary-100: rgb(240, 237, 248); /* #F0EDF8 */
-    --sl-color-primary-200: rgb(218, 211, 238); /* #DAD3EE */
-    --sl-color-primary-300: rgb(186, 171, 226); /* #BAABE2 */
-    --sl-color-primary-400: rgb(154, 131, 216); /* #9A83D8 */
-    --sl-color-primary-500: rgb(118, 85, 206); /* #7655CE */
-    --sl-color-primary-600: rgb(86, 48, 187); /* #5630BB */
-    --sl-color-primary-700: rgb(72, 39, 162); /* #4827A2 */
-    --sl-color-primary-800: rgb(57, 28, 135); /* #391C87 */
-    --sl-color-primary-900: rgb(45, 19, 113); /* #2D1371 */
-    --sl-color-primary-950: rgb(33, 12, 90); /* #210C5A */
+    /* Purple color palette */
+    --primary-50: 249, 248, 252; /* #F9F8FC */
+    --primary-100: 240, 237, 248; /* #F0EDF8 */
+    --primary-200: 218, 211, 238; /* #DAD3EE */
+    --primary-300: 186, 171, 226; /* #BAABE2 */
+    --primary-400: 154, 131, 216; /* #9A83D8 */
+    --primary-500: 118, 85, 206; /* #7655CE */
+    --primary-600: 86, 48, 187; /* #5630BB */
+    --primary-700: 72, 39, 162; /* #4827A2 */
+    --primary-800: 57, 28, 135; /* #391C87 */
+    --primary-900: 45, 19, 113; /* #2D1371 */
+    --primary-950: 33, 12, 90; /* #210C5A */
 
-    /* Peach color palette for Shoelace tokens */
-    --sl-color-secondary-50: rgb(255, 241, 230); /* #FFF1E6 */
-    --sl-color-secondary-100: rgb(
-      255,
-      241,
-      230
-    ); /* #FFF1E6 - duplicate of 50 */
-    --sl-color-secondary-200: rgb(255, 233, 214); /* #FFE9D6 */
-    --sl-color-secondary-300: rgb(255, 211, 172); /* #FFD3AC */
-    --sl-color-secondary-400: rgb(247, 174, 110); /* #F7AE6E */
-    --sl-color-secondary-500: rgb(245, 153, 71); /* #F59947 */
-    --sl-color-secondary-600: rgb(220, 135, 57); /* #DC8739 */
-    --sl-color-secondary-700: rgb(189, 69, 36); /* #BD4524 */
-    --sl-color-secondary-800: rgb(146, 53, 28); /* #92351C */
-    --sl-color-secondary-900: rgb(99, 36, 19); /* #632413 */
-    --sl-color-secondary-950: rgb(51, 19, 10); /* #33130A */
+    /* Peach color palette */
+    --secondary-50: 255, 241, 230; /* #FFF1E6 */
+    --secondary-100: 255, 241, 230; /* #FFF1E6 */
+    --secondary-200: 255, 233, 214; /* #FFE9D6 */
+    --secondary-300: 255, 211, 172; /* #FFD3AC */
+    --secondary-400: 247, 174, 110; /* #F7AE6E */
+    --secondary-500: 245, 153, 71; /* #F59947 */
+    --secondary-600: 220, 135, 57; /* #DC8739 */
+    --secondary-700: 189, 69, 36; /* #BD4524 */
+    --secondary-800: 146, 53, 28; /* #92351C */
+    --secondary-900: 99, 36, 19; /* #632413 */
+    --secondary-950: 51, 19, 10; /* #33130A */
 
-    /* Dark grey color palette for Shoelace tokens */
-    /* TODO: Apply this palette to Tailwind's neutral color */
-    --sl-color-neutral-0: rgb(255, 255, 255); /* #FFFFFF */
-    --sl-color-neutral-50: rgb(236, 239, 243); /* #ECEFF3 */
-    --sl-color-neutral-100: rgb(220, 226, 234); /* #DCE2EA */
-    --sl-color-neutral-200: rgb(189, 199, 214); /* #BDC7D6 */
-    --sl-color-neutral-300: rgb(157, 173, 195); /* #9DADC3 */
-    --sl-color-neutral-400: rgb(125, 146, 176); /* #7D92B0 */
-    --sl-color-neutral-500: rgb(95, 120, 155); /* #5F789B */
-    --sl-color-neutral-600: rgb(76, 96, 124); /* #4C607C */
-    --sl-color-neutral-700: rgb(60, 76, 98); /* #3C4C62 */
-    --sl-color-neutral-800: rgb(45, 56, 73); /* #2D3849 */
-    --sl-color-neutral-1000: rgb(0, 0, 0); /* #000000 */
+    /* Dark grey color palette */
+    --neutral-0: 255, 255, 255; /* #FFFFFF */
+    --neutral-50: 236, 239, 243; /* #ECEFF3 */
+    --neutral-100: 220, 226, 234; /* #DCE2EA */
+    --neutral-200: 189, 199, 214; /* #BDC7D6 */
+    --neutral-300: 157, 173, 195; /* #9DADC3 */
+    --neutral-400: 125, 146, 176; /* #7D92B0 */
+    --neutral-500: 95, 120, 155; /* #5F789B */
+    --neutral-600: 76, 96, 124; /* #4C607C */
+    --neutral-700: 60, 76, 98; /* #3C4C62 */
+    --neutral-800: 45, 56, 73; /* #2D3849 */
+    --neutral-1000: 0, 0, 0; /* #000000 */
 
-    /* Peach/Red color palette for danger tokens */
-    --sl-color-danger-50: rgb(255, 240, 240); /* #FFF0F0 */
-    --sl-color-danger-100: rgb(255, 224, 224); /* #FFE0E0 */
-    --sl-color-danger-200: rgb(255, 194, 194); /* #FFC2C2 */
-    --sl-color-danger-300: rgb(255, 153, 153); /* #FF9999 */
-    --sl-color-danger-400: rgb(255, 103, 103); /* #FF6767 */
-    --sl-color-danger-500: rgb(255, 51, 51); /* #FF3333 */
-    --sl-color-danger-600: rgb(255, 10, 10); /* #FF0A0A */
-    --sl-color-danger-700: rgb(224, 0, 0); /* #E00000 */
-    --sl-color-danger-800: rgb(173, 0, 0); /* #AD0000 */
-    --sl-color-danger-900: rgb(122, 0, 0); /* #7A0000 */
-    --sl-color-danger-950: rgb(77, 0, 0); /* #4D0000 */
+    /* Peach/Red color palette */
+    --danger-50: 255, 240, 240; /* #FFF0F0 */
+    --danger-100: 255, 224, 224; /* #FFE0E0 */
+    --danger-200: 255, 194, 194; /* #FFC2C2 */
+    --danger-300: 255, 153, 153; /* #FF9999 */
+    --danger-400: 255, 103, 103; /* #FF6767 */
+    --danger-500: 255, 51, 51; /* #FF3333 */
+    --danger-600: 255, 10, 10; /* #FF0A0A */
+    --danger-700: 224, 0, 0; /* #E00000 */
+    --danger-800: 173, 0, 0; /* #AD0000 */
+    --danger-900: 122, 0, 0; /* #7A0000 */
+    --danger-950: 77, 0, 0; /* #4D0000 */
 
-    /* Yellow color palette for accent tokens */
-    --accent-primary-50: rgb(254, 254, 246); /* #FEFEF6 */
-    --accent-primary-100: rgb(250, 250, 219); /* #FAFADB */
-    --accent-primary-200: rgb(247, 247, 200); /* #F7F7C8 */
-    --accent-primary-300: rgb(247, 244, 126); /* #F7F47E */
-    --accent-primary-400: rgb(243, 240, 73); /* #F3F049 */
-    --accent-primary-500: rgb(240, 236, 22); /* #F0EC16 */
-    --accent-primary-600: rgb(234, 230, 28); /* #EAE61C */
-    --accent-primary-700: rgb(201, 198, 13); /* #C9C60D */
-    --accent-primary-800: rgb(122, 109, 5); /* #7A6D05 */
-    --accent-primary-900: rgb(70, 62, 2); /* #463E02 */
-    --accent-primary-950: rgb(50, 49, 1); /* #323101 */
+    /* Yellow color palette */
+    --accent-primary-50: 254, 254, 246; /* #FEFEF6 */
+    --accent-primary-100: 250, 250, 219; /* #FAFADB */
+    --accent-primary-200: 247, 247, 200; /* #F7F7C8 */
+    --accent-primary-300: 247, 244, 126; /* #F7F47E */
+    --accent-primary-400: 243, 240, 73; /* #F3F049 */
+    --accent-primary-500: 240, 236, 22; /* #F0EC16 */
+    --accent-primary-600: 234, 230, 28; /* #EAE61C */
+    --accent-primary-700: 201, 198, 13; /* #C9C60D */
+    --accent-primary-800: 122, 109, 5; /* #7A6D05 */
+    --accent-primary-900: 70, 62, 2; /* #463E02 */
+    --accent-primary-950: 50, 49, 1; /* #323101 */
 
-    /* Screamin' Green color palette for accent secondary tokens */
-    --accent-secondary-50: rgb(230, 254, 232); /* #E6FEE8 */
-    --accent-secondary-100: rgb(210, 254, 213); /* #D2FED5 */
-    --accent-secondary-200: rgb(156, 252, 162); /* #9CFCA2 */
-    --accent-secondary-300: rgb(100, 251, 110); /* #64FB6E */
-    --accent-secondary-400: rgb(57, 249, 70); /* #39F946 */
+    /* Screamin' Green color palette */
+    --accent-secondary-50: 230, 254, 232; /* #E6FEE8 */
+    --accent-secondary-100: 210, 254, 213; /* #D2FED5 */
+    --accent-secondary-200: 156, 252, 162; /* #9CFCA2 */
+    --accent-secondary-300: 100, 251, 110; /* #64FB6E */
+    --accent-secondary-400: 57, 249, 70; /* #39F946 */
 
-    /* Foam/Spray color palette for accent tertiary tokens */
-    --accent-tertiary-50: rgb(231, 253, 254); /* #E7FDFE */
-    --accent-tertiary-100: rgb(204, 251, 252); /* #CCFBFC */
-    --accent-tertiary-200: rgb(161, 247, 252); /* #A1F7FC */
-    --accent-tertiary-300: rgb(112, 241, 253); /* #70F1FD */
-    --accent-tertiary-400: rgb(59, 236, 252); /* #3BECFC */
+    /* Foam/Spray color palette */
+    --accent-tertiary-50: 231, 253, 254; /* #E7FDFE */
+    --accent-tertiary-100: 204, 251, 252; /* #CCFBFC */
+    --accent-tertiary-200: 161, 247, 252; /* #A1F7FC */
+    --accent-tertiary-300: 112, 241, 253; /* #70F1FD */
+    --accent-tertiary-400: 59, 236, 252; /* #3BECFC */
+
+    /* Shoelace mappings */
+    --sl-color-primary-50: rgb(var(--primary-50));
+    --sl-color-primary-100: rgb(var(--primary-100));
+    --sl-color-primary-200: rgb(var(--primary-200));
+    --sl-color-primary-300: rgb(var(--primary-300));
+    --sl-color-primary-400: rgb(var(--primary-400));
+    --sl-color-primary-500: rgb(var(--primary-500));
+    --sl-color-primary-600: rgb(var(--primary-600));
+    --sl-color-primary-700: rgb(var(--primary-700));
+    --sl-color-primary-800: rgb(var(--primary-800));
+    --sl-color-primary-900: rgb(var(--primary-900));
+    --sl-color-primary-950: rgb(var(--primary-950));
+
+    --sl-color-secondary-50: rgb(var(--secondary-50));
+    --sl-color-secondary-100: rgb(var(--secondary-100));
+    --sl-color-secondary-200: rgb(var(--secondary-200));
+    --sl-color-secondary-300: rgb(var(--secondary-300));
+    --sl-color-secondary-400: rgb(var(--secondary-400));
+    --sl-color-secondary-500: rgb(var(--secondary-500));
+    --sl-color-secondary-600: rgb(var(--secondary-600));
+    --sl-color-secondary-700: rgb(var(--secondary-700));
+    --sl-color-secondary-800: rgb(var(--secondary-800));
+    --sl-color-secondary-900: rgb(var(--secondary-900));
+    --sl-color-secondary-950: rgb(var(--secondary-950));
+
+    --sl-color-neutral-0: rgb(var(--neutral-0));
+    --sl-color-neutral-50: rgb(var(--neutral-50));
+    --sl-color-neutral-100: rgb(var(--neutral-100));
+    --sl-color-neutral-200: rgb(var(--neutral-200));
+    --sl-color-neutral-300: rgb(var(--neutral-300));
+    --sl-color-neutral-400: rgb(var(--neutral-400));
+    --sl-color-neutral-500: rgb(var(--neutral-500));
+    --sl-color-neutral-600: rgb(var(--neutral-600));
+    --sl-color-neutral-700: rgb(var(--neutral-700));
+    --sl-color-neutral-800: rgb(var(--neutral-800));
+    --sl-color-neutral-1000: rgb(var(--neutral-1000));
+
+    --sl-color-danger-50: rgb(var(--danger-50));
+    --sl-color-danger-100: rgb(var(--danger-100));
+    --sl-color-danger-200: rgb(var(--danger-200));
+    --sl-color-danger-300: rgb(var(--danger-300));
+    --sl-color-danger-400: rgb(var(--danger-400));
+    --sl-color-danger-500: rgb(var(--danger-500));
+    --sl-color-danger-600: rgb(var(--danger-600));
+    --sl-color-danger-700: rgb(var(--danger-700));
+    --sl-color-danger-800: rgb(var(--danger-800));
+    --sl-color-danger-900: rgb(var(--danger-900));
+    --sl-color-danger-950: rgb(var(--danger-950));
 
     /* Fonts */
-    --font-family-sans: -apple-system, BlinkMacSystemFont, ‘Segoe UI’, Roboto,
-      Helvetica, Arial, sans-serif, ‘Apple Color Emoji’, ‘Segoe UI Emoji’,
-      ‘Segoe UI Symbol’;
+    --font-family-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+      Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+      'Segoe UI Symbol';
     --font-family-gt-haptik: 'GT Haptik', var(--font-family-sans);
     --font-family-gt-haptik-rotalic: 'GT Haptik Rotalic',
       var(--font-family-sans);
@@ -298,18 +342,18 @@
   }
 
   .link {
-    border-bottom: 2px solid rgb(var(--secondary));
+    border-bottom: 2px solid rgb(var(--primary-500));
   }
 
   .link.active {
-    color: rgb(var(--secondary));
+    color: rgb(var(--primary-500));
   }
 
   .tag-link::part(base) {
-    background: var(--sl-color-primary-50);
+    background: var(--primary-50);
   }
   .tag-link::part(base):hover {
-    background: var(--sl-color-primary-100);
+    background: var(--primary-100);
   }
 
   [data-puck-component] .puck-rich-text-editor-wrapper * {
