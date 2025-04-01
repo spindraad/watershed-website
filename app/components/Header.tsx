@@ -10,7 +10,7 @@ type Props = {
 };
 
 export default function Header({ user }: Props) {
-  const { SlButton } = useContext(ShoelaceContext);
+  const { SlButton, SlIcon } = useContext(ShoelaceContext);
   const { t } = useTranslation();
 
   return (
@@ -39,8 +39,16 @@ export default function Header({ user }: Props) {
           </Anchor>
 
           {user ?
-            <form method="POST" action="/uitloggen">
-              <SlButton variant="text" type="submit" size="large">
+            <form
+              className="ml-4 flex flex-row"
+              method="POST"
+              action="/uitloggen"
+            >
+              <Anchor to="/account" className="flex items-center gap-2">
+                <SlIcon name="person-circle" />
+                <span className="text-primary-500">{user.name}</span>
+              </Anchor>
+              <SlButton variant="text" type="submit">
                 <span className="link">{t('logout')}</span>
               </SlButton>
             </form>
