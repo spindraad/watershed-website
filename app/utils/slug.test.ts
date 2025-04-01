@@ -1,10 +1,10 @@
 import { describe, test, expect } from 'vitest';
 import type { Route } from '+/app/routes/($lang)/$/+types/_pages';
-import { parseParamsToSlug } from 'app/utils/slug';
+import { isSupportedLanguage, parseParamsToSlug } from 'app/utils/slug';
 
 type Params = Route.ComponentProps['params'];
 
-describe('parseURL', () => {
+describe("URL's", () => {
   test('Return the correct urls for "/contact"', () => {
     let params: Params = {
       lang: 'contact',
@@ -73,5 +73,16 @@ describe('parseURL', () => {
       slug: 'over-ons/team',
       path: 'en/over-ons/team',
     });
+  });
+
+  test('Test whether a supported language is recognized', () => {
+    expect(isSupportedLanguage('nl')).toBe(true);
+    expect(isSupportedLanguage('en')).toBe(true);
+    expect(isSupportedLanguage('pap')).toBe(true);
+    expect(isSupportedLanguage('fr')).toBe(false);
+    expect(isSupportedLanguage('de')).toBe(false);
+    expect(isSupportedLanguage('about')).toBe(false);
+    expect(isSupportedLanguage('contact')).toBe(false);
+    expect(isSupportedLanguage('over-ons/team')).toBe(false);
   });
 });

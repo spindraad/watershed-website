@@ -5,16 +5,36 @@ import Heading from '~/components/Heading';
 import { getProject } from '~/models/projects.server';
 import { convertDateToLocaleString } from '~/utils/date';
 import { SupportedLanguages } from '~/config/i18n';
+import i18nServer from '~/modules/i18n.server';
 
-export async function loader({ params }: Route.LoaderArgs) {
+export async function loader({ request, params }: Route.LoaderArgs) {
+  const t = await i18nServer.getFixedT(request, 'ProjectDetailRoute');
   const { projectID } = params;
 
   const project = await getProject(projectID);
 
   return {
     project,
+    metaTranslations: {
+      title: t('Meta.Title', {
+        title: project.title.nl,
+      }),
+      description: t('Meta.Description', {
+        description: project.description.nl,
+      }),
+    },
   };
 }
+
+export const meta = ({ data }: Route.MetaArgs) => [
+  {
+    title: data.metaTranslations.title,
+  },
+  {
+    name: 'description',
+    content: data.metaTranslations.description,
+  },
+];
 
 export default function ProjectDetailRoute() {
   const { project } = useLoaderData<typeof loader>();

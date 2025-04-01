@@ -170,3 +170,33 @@ export const EditContentRoute = {
       'Bewerk $t(ContentTypes:{{content}}, lowercase) | Stichting Watershed',
   },
 };
+
+export const EventIndexRoute = {
+  Title: 'Evenementen',
+  Meta: {
+    Title: 'Evenementen | Stichting Watershed',
+    Description: 'Bekijk onze aankomende evenementen',
+  },
+};
+
+export const EventDetailRoute = {
+  Meta: {
+    Title: '{{title}} | Stichting Watershed',
+    description: '{{description}}',
+  },
+};
+
+export const ProjectIndexRoute = {
+  Title: 'Projecten',
+  Meta: {
+    Title: 'Projecten | Stichting Watershed',
+    Description: 'Bekijk onze projecten',
+  },
+};
+
+export const ProjectDetailRoute = {
+  Meta: {
+    Title: '{{title}} | Stichting Watershed',
+    description: '{{description}}',
+  },
+};

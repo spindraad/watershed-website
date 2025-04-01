@@ -1,5 +1,9 @@
 import type { Route } from '+/app/routes/($lang)/$/+types/_pages';
-import { fallbackLanguage } from '~/config/i18n';
+import {
+  fallbackLanguage,
+  supportedLanguages,
+  SupportedLanguages,
+} from '~/config/i18n';
 
 export type SlugObject = {
   locale: string;
@@ -32,4 +36,8 @@ export function parseParamsToSlug(
     slug,
     path: `${fallbackLanguage}/${slug}`,
   };
+}
+
+export function isSupportedLanguage(lang: string): lang is SupportedLanguages {
+  return supportedLanguages.includes(lang);
 }
