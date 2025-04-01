@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Removed the news routes">
-      <change beforePath="$PROJECT_DIR$/app/locales/pap.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/pap.ts" afterDir="false" />
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Fixed color declarations across Tailwind, Shoelace and the app">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/Anchor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Anchor.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/tailwind.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/tailwind.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,13 +129,15 @@
     "Vitest.Content utilities.Parse a localised form data object into a localised value object.executor": "Run",
     "Vitest.Content utilities.Retrieve the number of errors for each localised field.executor": "Run",
     "Vitest.Content utilities.executor": "Run",
+    "Vitest.parseURL.Return the correct url for \"/over-ons/team\".executor": "Debug",
+    "Vitest.parseURL.Return the correct urls for \"/contact\".executor": "Debug",
     "Vitest.validateLogin.executor": "Run",
     "Vitest.validateLogin.should return success: false when emailaddress is invalid.executor": "Run",
     "Vitest.validateLogin.should return success: false when emailaddress is missing.executor": "Run",
-    "git-widget-placeholder": "#21 on feature/WAT-144__Remove__news",
+    "git-widget-placeholder": "feature/WAT-145__Add__demo__content",
     "javascript.nodejs.core.library.configured.version": "22.11.0",
     "javascript.nodejs.core.library.typings.version": "22.9.0",
-    "last_opened_file_path": "/Users/lody/dev/projects/watershed-website/scaffold-templates/plop/form",
+    "last_opened_file_path": "/Users/lody/dev/projects/watershed-website/app/routes/_index",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -143,6 +148,8 @@
     "npm.Dev.executor": "Debug",
     "npm.Develop.executor": "Run",
     "npm.Storybook.executor": "Debug",
+    "npm.db:generate.executor": "Run",
+    "npm.db:push:seed.executor": "Run",
     "npm.dev:app.executor": "Debug",
     "npm.dev:remix.executor": "Debug",
     "npm.dev:storybook.executor": "Debug",
@@ -157,6 +164,7 @@
       "postgresql"
     ],
     "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "CSS",
       "Markdown",
       "TEXT",
       "XML"
@@ -165,15 +173,16 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/routes/_index" />
       <recent name="$PROJECT_DIR$/scaffold-templates/plop/form" />
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/routes/($lang)/evenementen/_index" />
+      <recent name="$PROJECT_DIR$/app/routes/($lang)" />
       <recent name="$PROJECT_DIR$/app/components/" />
       <recent name="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/verwijderen/_index" />
       <recent name="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/bewerken/_index" />
-      <recent name="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/_index" />
-      <recent name="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/bewerken/$id" />
     </key>
     <key name="es6.move.members.recent.items">
       <recent name="$PROJECT_DIR$/app/types/Input.ts" />
@@ -188,9 +197,11 @@
       <command value="npm run docker:start" />
       <command value="npm run dev" />
       <command value="Develop (npm)" />
+      <command value="npm run db:generate" />
+      <command value="npm run db:push:seed" />
     </option>
   </component>
-  <component name="RunManager" selected="Compound.Develop">
+  <component name="RunManager" selected="Vitest.parseURL.Return the correct url for &quot;/over-ons/team&quot;">
     <configuration name="Develop" type="CompoundRunConfigurationType">
       <toRun name="Dev" type="js.build_tools.npm" />
       <toRun name="Storybook" type="js.build_tools.npm" />
@@ -203,19 +214,6 @@
       <vitest-options value="--watch" />
       <envs />
       <scope-kind value="ALL" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Content utilities" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <vitest-options value="--run" />
-      <envs />
-      <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/app/utils/content.test.ts" />
-      <test-names>
-        <test-name value="Content utilities" />
-      </test-names>
       <method v="2" />
     </configuration>
     <configuration name="Content utilities.Parse a localised form data object into a localised value object" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
@@ -232,45 +230,31 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="Content utilities.Retrieve the number of errors for each localised field" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
+    <configuration name="parseURL.Return the correct url for &quot;/over-ons/team&quot;" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
       <working-dir value="$PROJECT_DIR$" />
       <vitest-options value="--run" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/app/utils/content.test.ts" />
+      <test-file value="$PROJECT_DIR$/app/utils/slug.test.ts" />
       <test-names>
-        <test-name value="Content utilities" />
-        <test-name value="Retrieve the number of errors for each localised field" />
+        <test-name value="parseURL" />
+        <test-name value="Return the correct url for &quot;/over-ons/team&quot;" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="validateLogin.should return success: false when emailaddress is invalid" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
+    <configuration name="parseURL.Return the correct urls for &quot;/contact&quot;" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
       <working-dir value="$PROJECT_DIR$" />
       <vitest-options value="--run" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/app/validations/flows/login.test.ts" />
+      <test-file value="$PROJECT_DIR$/app/utils/slug.test.ts" />
       <test-names>
-        <test-name value="validateLogin" />
-        <test-name value="should return success: false when emailaddress is invalid" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="validateLogin.should return success: false when emailaddress is missing" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <vitest-options value="--run" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/app/validations/flows/login.test.ts" />
-      <test-names>
-        <test-name value="validateLogin" />
-        <test-name value="should return success: false when emailaddress is missing" />
+        <test-name value="parseURL" />
+        <test-name value="Return the correct urls for &quot;/contact&quot;" />
       </test-names>
       <method v="2" />
     </configuration>
@@ -298,25 +282,45 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="db:generate" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="db:generate" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="db:push:seed" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="db:push:seed" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Compound.Develop" />
       <item itemvalue="JavaScript Debug.Debug in Chrome" />
       <item itemvalue="npm.Dev" />
       <item itemvalue="npm.Storybook" />
+      <item itemvalue="npm.db:generate" />
+      <item itemvalue="npm.db:push:seed" />
       <item itemvalue="Vitest.All Tests" />
+      <item itemvalue="Vitest.parseURL.Return the correct url for &quot;/over-ons/team&quot;" />
+      <item itemvalue="Vitest.parseURL.Return the correct urls for &quot;/contact&quot;" />
       <item itemvalue="Vitest.Content utilities.Parse a localised form data object into a localised value object" />
-      <item itemvalue="Vitest.Content utilities" />
-      <item itemvalue="Vitest.Content utilities.Retrieve the number of errors for each localised field" />
-      <item itemvalue="Vitest.validateLogin.should return success: false when emailaddress is invalid" />
-      <item itemvalue="Vitest.validateLogin.should return success: false when emailaddress is missing" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.db:push:seed" />
+        <item itemvalue="npm.db:generate" />
+        <item itemvalue="Vitest.parseURL.Return the correct url for &quot;/over-ons/team&quot;" />
+        <item itemvalue="Vitest.parseURL.Return the correct urls for &quot;/contact&quot;" />
         <item itemvalue="Vitest.Content utilities.Parse a localised form data object into a localised value object" />
-        <item itemvalue="Vitest.Content utilities" />
-        <item itemvalue="Vitest.Content utilities.Retrieve the number of errors for each localised field" />
-        <item itemvalue="Vitest.validateLogin.should return success: false when emailaddress is missing" />
-        <item itemvalue="Vitest.validateLogin.should return success: false when emailaddress is invalid" />
       </list>
     </recent_temporary>
   </component>
@@ -369,102 +373,7 @@
       <workItem from="1742033930615" duration="57349000" />
       <workItem from="1742396477168" duration="4319000" />
       <workItem from="1742482836686" duration="46242000" />
-    </task>
-    <task id="LOCAL-00059" summary="Added extra clarification in build output for gh actions, and moved prisma to production deps because we need it in the container.">
-      <option name="closed" value="true" />
-      <created>1741617054028</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1741617054028</updated>
-    </task>
-    <task id="LOCAL-00060" summary="Moved the prisma dependencies to production, this time correctly.">
-      <option name="closed" value="true" />
-      <created>1741617897596</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1741617897596</updated>
-    </task>
-    <task id="LOCAL-00061" summary="Moved dependent packages for prisma to deps">
-      <option name="closed" value="true" />
-      <created>1741618529897</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1741618529897</updated>
-    </task>
-    <task id="LOCAL-00062" summary="Explicitly regenerate prisma during Docker build.">
-      <option name="closed" value="true" />
-      <created>1741619882898</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1741619882898</updated>
-    </task>
-    <task id="LOCAL-00063" summary="Moved typescript to prod deps">
-      <option name="closed" value="true" />
-      <created>1741620230025</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1741620230025</updated>
-    </task>
-    <task id="LOCAL-00064" summary="Updated Chart version after changes made for deployment">
-      <option name="closed" value="true" />
-      <created>1741691993206</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1741691993206</updated>
-    </task>
-    <task id="LOCAL-00065" summary="Changed the prisma dev deploy script to run migrate reset, which will reset the DB on each deploy.">
-      <option name="closed" value="true" />
-      <created>1741693226516</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1741693226516</updated>
-    </task>
-    <task id="LOCAL-00066" summary="Swapped the deprecated json() functions for the new data() functions where applicable.">
-      <option name="closed" value="true" />
-      <created>1741701379514</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1741701379514</updated>
-    </task>
-    <task id="LOCAL-00067" summary="Changed the stream/abort timeouts">
-      <option name="closed" value="true" />
-      <created>1741701641034</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1741701641034</updated>
-    </task>
-    <task id="LOCAL-00068" summary="Ignore workflow and helm templates in Prettier">
-      <option name="closed" value="true" />
-      <created>1741701708031</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1741701708031</updated>
-    </task>
-    <task id="LOCAL-00069" summary="Turned on the future flag for route config.">
-      <option name="closed" value="true" />
-      <created>1741702194507</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1741702194507</updated>
-    </task>
-    <task id="LOCAL-00070" summary="Removed deprecated SerializedFrom type.">
-      <option name="closed" value="true" />
-      <created>1741702821493</created>
-      <option name="number" value="00070" />
-      <option name="presentableId" value="LOCAL-00070" />
-      <option name="project" value="LOCAL" />
-      <updated>1741702821493</updated>
+      <workItem from="1743532443910" duration="12075000" />
     </task>
     <task id="LOCAL-00071" summary="Ran the RRv7 codemod, manually made some improvements and fixes.">
       <option name="closed" value="true" />
@@ -762,7 +671,103 @@
       <option name="project" value="LOCAL" />
       <updated>1743088900548</updated>
     </task>
-    <option name="localTasksCounter" value="108" />
+    <task id="LOCAL-00108" summary="Removed more references to the News">
+      <option name="closed" value="true" />
+      <created>1743104420500</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1743104420500</updated>
+    </task>
+    <task id="LOCAL-00109" summary="Created demo page content and a catch-all page route that loads content.">
+      <option name="closed" value="true" />
+      <created>1743160227922</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1743160227922</updated>
+    </task>
+    <task id="LOCAL-00110" summary="Created demo page content and a catch-all page route that loads content.">
+      <option name="closed" value="true" />
+      <created>1743160351245</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1743160351245</updated>
+    </task>
+    <task id="LOCAL-00111" summary="Implemented dropcap style heading">
+      <option name="closed" value="true" />
+      <created>1743161655262</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1743161655262</updated>
+    </task>
+    <task id="LOCAL-00112" summary="Very basically implemented color schemes">
+      <option name="closed" value="true" />
+      <created>1743163796421</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1743163796421</updated>
+    </task>
+    <task id="LOCAL-00113" summary="We can now navigate to different pages">
+      <option name="closed" value="true" />
+      <created>1743164457213</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1743164457213</updated>
+    </task>
+    <task id="LOCAL-00114" summary="Created basic event and project overview/detail routes">
+      <option name="closed" value="true" />
+      <created>1743165995432</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1743165995432</updated>
+    </task>
+    <task id="LOCAL-00115" summary="Many fixes and improvements to the routing in order to make it more robust. Also added page meta to the database and made the page meta and page content pieces localised.">
+      <option name="closed" value="true" />
+      <created>1743537654154</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1743537654154</updated>
+    </task>
+    <task id="LOCAL-00116" summary="Fixed linting and typecheck errors">
+      <option name="closed" value="true" />
+      <created>1743537907745</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1743537907745</updated>
+    </task>
+    <task id="LOCAL-00117" summary="Added meta for eventsd ad projects">
+      <option name="closed" value="true" />
+      <created>1743539422157</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1743539422157</updated>
+    </task>
+    <task id="LOCAL-00118" summary="Added link to user account in header">
+      <option name="closed" value="true" />
+      <created>1743540189385</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1743540189385</updated>
+    </task>
+    <task id="LOCAL-00119" summary="Fixed color declarations across Tailwind, Shoelace and the app">
+      <option name="closed" value="true" />
+      <created>1743543475860</created>
+      <option name="number" value="00119" />
+      <option name="presentableId" value="LOCAL-00119" />
+      <option name="project" value="LOCAL" />
+      <updated>1743543475860</updated>
+    </task>
+    <option name="localTasksCounter" value="120" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -805,18 +810,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Created all needed routes for CRUD functionality." />
-    <MESSAGE value="Code quality improvements, including running a type check on CI/CD" />
-    <MESSAGE value="Improvements to the content table, and a small bit of refactoring to keep the code readable." />
-    <MESSAGE value="Updated the content table story with the new types." />
-    <MESSAGE value="Added the trash button to the content table" />
-    <MESSAGE value="Implement delete functionality in ContentTable with confirmation dialog" />
-    <MESSAGE value="Enhance delete functionality in ContentTable with notification and dialog improvements" />
-    <MESSAGE value="Added localised meta data for the content routes" />
-    <MESSAGE value="A lot of small changes to the translations, and added a &quot;new&quot; button to te crud overview route." />
-    <MESSAGE value="Created event form" />
-    <MESSAGE value="Created project form, and made some smaller improvements to the event form" />
-    <MESSAGE value="Mutation forms are now processed and saved for 'Create'" />
     <MESSAGE value="The create flow is basically done, including validation before saving" />
     <MESSAGE value="Enhance EventMutationForm with locale support and local storage integration, also added a locale selector component." />
     <MESSAGE value="Refactor EventMutationForm to support localization and improve error handling, including new utility functions for form data transformation and error counting." />
@@ -826,11 +819,23 @@
     <MESSAGE value="Simplified the component tests for Event Mutation Form and updated Project Mutation Form following the same workflow as the EMF" />
     <MESSAGE value="GH Actions now performs a build on normal push" />
     <MESSAGE value="Enabled the UPDATE flow end to end." />
-    <MESSAGE value="Added fonts and setup styles for the heading" />
     <MESSAGE value="Renamed news link to events" />
     <MESSAGE value="Moved the components from the news route to the generic components folder as they can be reused." />
     <MESSAGE value="Removed the news routes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed the news routes" />
+    <MESSAGE value="Added fonts and setup styles for the heading" />
+    <MESSAGE value="Removed more references to the News" />
+    <MESSAGE value="Created demo page content and a catch-all page route that loads content." />
+    <MESSAGE value="Implemented dropcap style heading" />
+    <MESSAGE value="Very basically implemented color schemes" />
+    <MESSAGE value="We can now navigate to different pages" />
+    <MESSAGE value="Created basic event and project overview/detail routes" />
+    <MESSAGE value="Many fixes and improvements to the routing in order to make it more robust. Also added page meta to the database and made the page meta and page content pieces localised." />
+    <MESSAGE value="Fixed linting and typecheck errors" />
+    <MESSAGE value="Added meta for events and projects" />
+    <MESSAGE value="Added meta for events and projects" />
+    <MESSAGE value="Added link to user account in header" />
+    <MESSAGE value="Fixed color declarations across Tailwind, Shoelace and the app" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed color declarations across Tailwind, Shoelace and the app" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

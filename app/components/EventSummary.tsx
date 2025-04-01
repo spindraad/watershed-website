@@ -12,12 +12,12 @@ type Props = {
   /**
    * A summary of the event
    */
-  summary: PrismaJson.Localised;
+  summary?: PrismaJson.Localised;
 
   /**
    * The slug of the event page.
    */
-  slug: string;
+  slug?: string;
 
   /**
    * The date and time of the event
@@ -39,7 +39,9 @@ export default function EventSummary({ summary, slug, date, address }: Props) {
   return (
     <div className="space-y-4">
       <h3 className="text-2xl">{t('Title')}</h3>
-      <p>{summary[locale]}</p>
+      {summary ?
+        <p>{summary[locale]}</p>
+      : null}
 
       <ul className="flex flex-row flex-wrap gap-6">
         <li className="flex flex-row gap-2">
@@ -53,9 +55,11 @@ export default function EventSummary({ summary, slug, date, address }: Props) {
         </li>
       </ul>
 
-      <SlButton href={`/evenementen/${slug}`} size="small">
-        {t('LinkButton')}
-      </SlButton>
+      {slug ?
+        <SlButton href={`/evenementen/${slug}`} size="small">
+          {t('LinkButton')}
+        </SlButton>
+      : null}
     </div>
   );
 }

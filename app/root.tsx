@@ -20,6 +20,7 @@ import './tailwind.css';
 import Header from '~/components/Header';
 import { useOptionalUser } from '~/utils/user';
 import { getUser } from '~/.server/session';
+import Heading from '~/components/Heading';
 
 export const links: LinksFunction = () => [
   {
@@ -51,10 +52,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
   const user = useOptionalUser();
   const data = useRouteLoaderData('root') as {
     locale?: string;
-    BASE_URL: string;
+    BASE_URL?: string;
   };
   const shoelace = useShoelace({
-    URL: data.BASE_URL,
+    URL: data?.BASE_URL ?? '',
   });
 
   return (
@@ -65,7 +66,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body className="bg-primary text-black font-gt-haptik flex flex-col gap-4">
+      <body className="text-black bg-accent-primary-100 font-gt-haptik flex flex-col gap-4">
         <ShoelaceContext.Provider value={shoelace}>
           <Header user={user} />
           {children}
@@ -86,12 +87,12 @@ export function ErrorBoundary() {
 
   if (isRouteErrorResponse(error)) {
     return (
-      <>
-        <h1>
-          {error.status} {error.statusText}
-        </h1>
+      <div className="content">
+        <Heading level={1}>
+          {error.status.toString(10)} {error.statusText}
+        </Heading>
         <p>{error.data}</p>
-      </>
+      </div>
     );
   }
 

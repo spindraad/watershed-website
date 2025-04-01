@@ -2,6 +2,7 @@ import { Link, LinkProps, NavLink, NavLinkProps } from 'react-router';
 
 interface AnchorBaseProps {
   anchorType?: 'link' | 'nav';
+  noUnderline?: boolean;
 }
 
 interface AnchorLinkProps extends AnchorBaseProps, LinkProps {}
@@ -12,10 +13,11 @@ type Props = AnchorLinkProps | AnchorNavProps;
 
 export default function Anchor({
   anchorType = 'link',
+  noUnderline = false,
   className,
   ...anchorProps
 }: Props) {
-  const classes = `link ${className ?? ''}`;
+  const classes = `link ${className ?? ''} ${noUnderline ? 'no-underline' : ''}`;
 
   if (anchorType === 'link') {
     const { children, ...props } = anchorProps as AnchorLinkProps;

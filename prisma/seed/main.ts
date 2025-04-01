@@ -1,20 +1,21 @@
-import { PrismaClient, User } from '@prisma/client';
+import { PrismaClient } from '@prisma/client';
+import { faker } from '@faker-js/faker';
 import { createPasswordResetSession, createUsers } from './_users';
 import { createContent } from './_content';
 
 const prisma = new PrismaClient();
 
-let alice: User;
-let bob: User;
-
 async function seed() {
   const users = await createUsers(prisma);
-  alice = users[0];
-  bob = users[1];
 
-  await createPasswordResetSession(alice, prisma);
+  const randomlyPickedUser = faker.helpers.arrayElement(users);
+  console.log(
+    'Creating password reset session for user:',
+    randomlyPickedUser.email,
+  );
+  await createPasswordResetSession(randomlyPickedUser, prisma);
 
-  await createContent(alice, bob, prisma);
+  await createContent(prisma);
 }
 
 seed()
