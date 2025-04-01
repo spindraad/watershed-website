@@ -7,6 +7,7 @@ import {
   convertDateToLocaleString,
   convertTimeToLocaleString,
 } from '~/utils/date';
+import { SupportedLanguages } from '~/config/i18n';
 
 export async function loader({ params }: Route.LoaderArgs) {
   const { eventId } = params;
@@ -22,14 +23,18 @@ export default function EventDetailRoute() {
   const { event } = useLoaderData<typeof loader>();
   const { i18n } = useTranslation();
 
-  const content = { __html: event.description[i18n.language] };
+  const content = {
+    __html: event.description[i18n.language as SupportedLanguages],
+  };
 
   const datetime = `${convertDateToLocaleString(event.eventDate)} ${convertTimeToLocaleString(event.eventDate)}`;
 
   return (
     <>
       <div className="content space-y-4">
-        <Heading level={1}>{event.title[i18n.language]}</Heading>
+        <Heading level={1}>
+          {event.title[i18n.language as SupportedLanguages]}
+        </Heading>
         <p className="flex flex-row gap-4">
           <span>{datetime}</span>
           <span>{event.address}</span>

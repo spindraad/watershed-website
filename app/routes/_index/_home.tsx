@@ -1,5 +1,4 @@
 import type { Route } from './+types/_home';
-import { parseParamsToSlug } from '~/utils/slug';
 import { getPageBySlug } from '~/models/pages.server';
 import { data, useLoaderData } from 'react-router';
 import PageRenderer from '~/components/PageRenderer';
