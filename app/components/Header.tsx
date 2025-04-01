@@ -39,21 +39,24 @@ export default function Header({ user }: Props) {
           </Anchor>
 
           {user ?
-            <form
-              className="ml-4 flex flex-row"
-              method="POST"
-              action="/uitloggen"
-            >
-              <Anchor to="/account" className="flex items-center gap-2">
+            <div className="ml-5 flex flex-row gap-4 items-center">
+              <Anchor
+                noUnderline
+                anchorType="nav"
+                to="/account"
+                className="flex flex-row gap-2 items-center text-primary-500"
+              >
                 <SlIcon name="person-circle" />
-                <span className="text-primary-500">{user.name}</span>
+                <span>{user.name}</span>
               </Anchor>
-              <SlButton variant="text" type="submit">
-                <span className="link">{t('logout')}</span>
-              </SlButton>
-            </form>
-          : <SlButton variant="text" href="/inloggen" size="large">
-              <span className="link">{t('login')}</span>
+              <form method="POST" action="/uitloggen">
+                <SlButton variant="primary" outline type="submit" size="small">
+                  {t('logout')}
+                </SlButton>
+              </form>
+            </div>
+          : <SlButton variant="primary" outline href="/inloggen" size="small">
+              {t('login')}
             </SlButton>
           }
         </div>
