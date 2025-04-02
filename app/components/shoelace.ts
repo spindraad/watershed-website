@@ -70,7 +70,7 @@ export function useShoelace({ URL }: { URL: string }) {
 
     import('@shoelace-style/shoelace/dist/utilities/base-path.js').then(
       ({ setBasePath }) => {
-        setBasePath(`${URL}/shoelace-assets/`);
+        setBasePath(`/shoelace-assets/`);
 
         import('@shoelace-style/shoelace/dist/react').then((components) => {
           setComponents({

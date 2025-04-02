@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Improvements to the header and anchor">
-      <change afterPath="$PROJECT_DIR$/scripts/diff-db-staging.zsh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/shoelace.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/shoelace.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,7 +194,7 @@
       <command value="npm run db:push:seed" />
     </option>
   </component>
-  <component name="RunManager" selected="Vitest.parseURL.Return the correct url for &quot;/over-ons/team&quot;">
+  <component name="RunManager" selected="Compound.Develop">
     <configuration name="Develop" type="CompoundRunConfigurationType">
       <toRun name="Dev" type="js.build_tools.npm" />
       <toRun name="Storybook" type="js.build_tools.npm" />
@@ -369,7 +367,7 @@
       <workItem from="1742396477168" duration="4319000" />
       <workItem from="1742482836686" duration="46242000" />
       <workItem from="1743532443910" duration="13418000" />
-      <workItem from="1743580092944" duration="3168000" />
+      <workItem from="1743580092944" duration="4643000" />
     </task>
     <task id="LOCAL-00072" summary="Changed scripts">
       <option name="closed" value="true" />
