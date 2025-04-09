@@ -140,6 +140,13 @@ export const NewsOverviewRoute = {
   Title: 'Nieuws',
 };
 
+export const AdminRoute = {
+  Title: 'Beheer',
+  Meta: {
+    Title: 'Beheer | Stichting Watershed',
+  },
+};
+
 export const ContentTypes = {
   // These use the content type as defined in the URLs
   evenementen_one: 'Evenement',

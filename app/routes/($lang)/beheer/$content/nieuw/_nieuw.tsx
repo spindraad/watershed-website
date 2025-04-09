@@ -38,6 +38,9 @@ export async function action({ params, request }: Route.ActionArgs) {
       break;
     case 'evenementen':
       validatorFn = validateEvent;
+      break;
+    default:
+      throw new Error(`Unsupported content type: ${content}`);
   }
 
   try {

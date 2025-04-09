@@ -15,6 +15,7 @@ import ConfirmDeleteDialog from './ConfirmDeleteDialog';
 import DeletionNotification from './DeletionNotification';
 import i18nServer from '~/modules/i18n.server';
 import { ShoelaceContext } from '~/components/shoelace';
+import { convertPagesToTableData, getPages } from '~/models/pages.server';
 
 export const handle = {
   i18n: [
@@ -32,6 +33,12 @@ export async function loader({ params, request }: Route.LoaderArgs) {
   let data: ContentTableItem[] = [];
 
   switch (content) {
+    case 'paginas': {
+      const pages = await getPages();
+      data = convertPagesToTableData(pages);
+      break;
+    }
+
     case 'evenementen': {
       const events = await getEvents();
       data = convertEventsToTableData(events);

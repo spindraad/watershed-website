@@ -10,6 +10,15 @@ export default function AdminMenu() {
     <div className="flex flex-col gap-4">
       <h2 className="text-xl font-bold">{t('Title')}</h2>
 
+      <SubMenu title={t('Pages.Title')}>
+        <SubMenuItem icon="card-list" to="paginas">
+          {t('Pages.List')}
+        </SubMenuItem>
+        <SubMenuItem icon="plus-square" to="paginas/nieuw">
+          {t('Pages.Create')}
+        </SubMenuItem>
+      </SubMenu>
+
       <SubMenu title={t('Events.Title')}>
         <SubMenuItem icon="card-list" to="evenementen">
           {t('Events.List')}
