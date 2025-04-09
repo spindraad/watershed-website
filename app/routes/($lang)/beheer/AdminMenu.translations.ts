@@ -1,6 +1,11 @@
 export const en = {
   AdminMenu: {
     Title: 'Administration',
+    Pages: {
+      Title: 'Pages',
+      List: 'Overview',
+      Create: 'Create new page',
+    },
     Events: {
       Title: 'Events',
       List: 'Overview',
@@ -17,6 +22,11 @@ export const en = {
 export const nl = {
   AdminMenu: {
     Title: 'Beheer',
+    Pages: {
+      Title: "Pagina's",
+      List: 'Overzicht',
+      Create: 'Nieuwe pagina aanmaken',
+    },
     Events: {
       Title: 'Evenementen',
       List: 'Overzicht',

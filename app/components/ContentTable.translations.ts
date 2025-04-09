@@ -9,6 +9,8 @@ export const en = {
       date: 'Date',
       project: 'Project',
       description: 'Description',
+      slug: 'Slug',
+      createdAt: 'Created at',
     },
   },
 };
@@ -24,6 +26,8 @@ export const nl = {
       date: 'Datum',
       project: 'Project',
       description: 'Omschrijving',
+      slug: 'Slug',
+      createdAt: 'Aangemaakt op',
     },
   },
 };
@@ -39,6 +43,8 @@ export const pap = {
       date: 'Date',
       project: 'Project',
       description: 'Description',
+      slug: 'Slug',
+      createdAt: 'Created at',
     },
   },
 };
