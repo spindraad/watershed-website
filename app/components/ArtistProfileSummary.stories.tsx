@@ -5,6 +5,7 @@ import ArtistProfileSummary from './ArtistProfileSummary';
 export default {
   title: 'Components/Artist Profile Summary',
   component: ArtistProfileSummary,
+  tags: ['news'],
 } satisfies Meta<typeof ArtistProfileSummary>;
 
 type Story = StoryObj<typeof ArtistProfileSummary>;

@@ -1,6 +1,6 @@
 {
   "name": "watershed-website",
-  "version": "0.1.0-beta.18",
+  "version": "0.1.0-beta.21",
   "private": true,
   "sideEffects": false,
   "type": "module",
@@ -100,6 +100,7 @@
     "@storybook/react-vite": "^8.6.4",
     "@storybook/test": "^8.6.4",
     "@storybook/test-runner": "^0.22.0",
+    "@tailwindcss/typography": "^0.5.16",
     "@types/bcryptjs": "^2.4.6",
     "@types/node": "^20.14.15",
     "@types/react": "^18.2.20",

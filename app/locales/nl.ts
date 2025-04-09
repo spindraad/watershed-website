@@ -1,14 +1,14 @@
-import { nl as YearSelectorTranslations } from '~/routes/($lang)/nieuws/_index/YearSelector.translations';
+import { nl as YearSelectorTranslations } from '~/components/YearSelector.translations';
 export const { YearSelectorComponent } = YearSelectorTranslations;
-import { nl as ProjectSummaryTranslations } from '~/routes/($lang)/nieuws/_index/ProjectSummary.translations';
+import { nl as ProjectSummaryTranslations } from '~/components/ProjectSummary.translations';
 export const { ProjectSummary } = ProjectSummaryTranslations;
-import { nl as EventSummaryTranslations } from '~/routes/($lang)/nieuws/_index/EventSummary.translations';
+import { nl as EventSummaryTranslations } from '~/components/EventSummary.translations';
 export const { EventSummary } = EventSummaryTranslations;
-import { nl as ArtistProfileSummaryTranslations } from '~/routes/($lang)/nieuws/_index/ArtistProfileSummary.translations';
+import { nl as ArtistProfileSummaryTranslations } from '~/components/ArtistProfileSummary.translations';
 export const { ArtistProfileSummary } = ArtistProfileSummaryTranslations;
-import { nl as ArtistsSummaryTranslations } from '~/routes/($lang)/nieuws/_index/ArtistsSummary.translations';
+import { nl as ArtistsSummaryTranslations } from '~/components/ArtistsSummary.translations';
 export const { ArtistsSummary } = ArtistsSummaryTranslations;
-import { nl as ProductSummaryTranslations } from '~/routes/($lang)/nieuws/_index/ProductSummary.translations';
+import { nl as ProductSummaryTranslations } from '~/components/ProductSummary.translations';
 export const { ProductSummary } = ProductSummaryTranslations;
 import { nl as AccountMenuTranslations } from '~/routes/($lang)/account/AccountMenu.translations';
 export const { AccountMenu } = AccountMenuTranslations;
@@ -168,5 +168,35 @@ export const EditContentRoute = {
   Meta: {
     Title:
       'Bewerk $t(ContentTypes:{{content}}, lowercase) | Stichting Watershed',
+  },
+};
+
+export const EventIndexRoute = {
+  Title: 'Evenementen',
+  Meta: {
+    Title: 'Evenementen | Stichting Watershed',
+    Description: 'Bekijk onze aankomende evenementen',
+  },
+};
+
+export const EventDetailRoute = {
+  Meta: {
+    Title: '{{title}} | Stichting Watershed',
+    description: '{{description}}',
+  },
+};
+
+export const ProjectIndexRoute = {
+  Title: 'Projecten',
+  Meta: {
+    Title: 'Projecten | Stichting Watershed',
+    Description: 'Bekijk onze projecten',
+  },
+};
+
+export const ProjectDetailRoute = {
+  Meta: {
+    Title: '{{title}} | Stichting Watershed',
+    description: '{{description}}',
   },
 };

@@ -1,13 +1,14 @@
-import { ComponentProps } from 'react';
-import { type Puck, Render } from '@measured/puck';
-// import { ShoelaceContext } from '~/components/shoelace';
+import { Data, Render } from '@measured/puck';
 import { config } from '~/config/puck.config';
 
-type Props = Pick<ComponentProps<typeof Puck>, 'data'>;
+type Props = {
+  data: Partial<Data>;
+};
 
 export default function PageRenderer({ data }: Props) {
-  // const { t } = useTranslation('Renderer');
-  // const {  } = useContext(ShoelaceContext);
-
-  return <Render config={config} data={data} />;
+  return (
+    <div className="prose prose-lg max-w-full">
+      <Render config={config} data={data} />
+    </div>
+  );
 }
