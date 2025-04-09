@@ -12,9 +12,17 @@ import { saveEvent } from '~/models/events.server';
 import { saveProject } from '~/models/projects.server';
 import ProjectMutationForm from '~/components/ProjectMutationForm';
 import EventMutationForm from '~/components/EventMutationForm';
+import { validatePage } from '~/validations/models/page';
+import PageMutationForm from '~/components/PageMutationForm';
 
 export const handle = {
-  i18n: ['NewContentRoute', 'ProjectMutationForm', 'EventMutationForm'],
+  i18n: [
+    'NewContentRoute',
+    'ProjectMutationForm',
+    'EventMutationForm',
+    'PageMutationForm',
+    'PageEditor',
+  ],
 };
 
 export async function loader({ params, request }: Route.LoaderArgs) {
@@ -33,6 +41,9 @@ export async function action({ params, request }: Route.ActionArgs) {
   let validatorFn;
 
   switch (content) {
+    case 'paginas':
+      validatorFn = validatePage;
+      break;
     case 'projecten':
       validatorFn = validateProject;
       break;
@@ -82,6 +93,8 @@ export default function AdminNewContentRoute({ params }: Route.ComponentProps) {
 
   function getForm() {
     switch (type) {
+      case 'paginas':
+        return <PageMutationForm />;
       case 'projecten':
         return <ProjectMutationForm />;
       case 'evenementen':

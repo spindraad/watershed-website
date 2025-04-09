@@ -3,7 +3,6 @@ import {
   ReactNode,
   useContext,
   useEffect,
-  useMemo,
   useState,
 } from 'react';
 import { Overrides, Puck, usePuck } from '@measured/puck';
@@ -13,7 +12,12 @@ import '@measured/puck/puck.css';
 import { config } from '~/config/puck.config';
 import { ShoelaceContext } from '~/components/shoelace';
 
-type Props = Pick<ComponentProps<typeof Puck>, 'data' | 'onPublish'>;
+type PuckProps = ComponentProps<typeof Puck>;
+type Props = {
+  data?: PuckProps['data'];
+  onPublish: PuckProps['onPublish'];
+  isSaving?: boolean;
+};
 
 const overrides: Partial<Overrides> = {
   iframe: ({ children, document }) => {
@@ -25,13 +29,24 @@ const overrides: Partial<Overrides> = {
   },
 };
 
-export default function PageEditor({ data, onPublish }: Props) {
+export default function PageEditor({
+  data = {},
+  onPublish,
+  isSaving = false,
+}: Props) {
   const { SlDrawer } = useContext(ShoelaceContext);
 
-  const [open, setOpen] = useState(false);
+  const [leftDrawerOpen, setLeftDrawerOpen] = useState(false);
+  const [rightDrawerOpen, setRightDrawerOpen] = useState(false);
 
-  const handleDrawerOpen = () => {
-    setOpen(true);
+  const handleDrawerOpen = (orientation: 'left' | 'right') => {
+    if (orientation === 'left') {
+      setLeftDrawerOpen(true);
+    }
+
+    if (orientation === 'right') {
+      setRightDrawerOpen(true);
+    }
   };
 
   return (
@@ -43,9 +58,9 @@ export default function PageEditor({ data, onPublish }: Props) {
     >
       <div className="w-full h-full flex flex-col gap-4 px-4">
         <SlDrawer
-          open={open}
+          open={leftDrawerOpen}
           placement="start"
-          onSlAfterHide={() => setOpen(false)}
+          onSlAfterHide={() => setLeftDrawerOpen(false)}
           label="Componenten"
         >
           <Puck.Components />
@@ -54,11 +69,19 @@ export default function PageEditor({ data, onPublish }: Props) {
         <EditorHeader
           onPublish={onPublish}
           handleDrawerOpen={handleDrawerOpen}
+          isSaving={isSaving}
         />
 
-        <Puck.Preview />
+        <SlDrawer
+          open={rightDrawerOpen}
+          placement="end"
+          onSlAfterHide={() => setRightDrawerOpen(false)}
+          label="Velden"
+        >
+          <Puck.Fields />
+        </SlDrawer>
 
-        <EditorFooter />
+        <Puck.Preview />
       </div>
     </Puck>
   );
@@ -91,17 +114,16 @@ function MockShoelaceProvider({
 function EditorHeader({
   onPublish,
   handleDrawerOpen,
+  isSaving,
 }: {
   onPublish: Props['onPublish'];
-  handleDrawerOpen: () => void;
+  handleDrawerOpen: (orientation: 'left' | 'right') => void;
+  isSaving?: Props['isSaving'];
 }) {
   const { appState } = usePuck();
   const { SlButton, SlIconButton, SlIcon } = useContext(ShoelaceContext);
 
-  const [isPublishing, setIsPublishing] = useState(false);
-
   const publish = () => {
-    setIsPublishing(true);
     if (onPublish) {
       onPublish(appState.data);
     }
@@ -113,74 +135,32 @@ function EditorHeader({
         <div className="flex flex-row gap-2 justify-center items-center">
           <SlIconButton
             name="layout-sidebar-inset"
-            label="Toon zijbalk"
-            onClick={handleDrawerOpen}
+            label="Toon componenten"
+            onClick={() => handleDrawerOpen('left')}
             className="text-xl"
           />
-          <h1 className="text-xl font-bold">Editor</h1>
+          <h1 className="text-xl font-bold">Pagina bewerken</h1>
         </div>
 
-        <SlButton
-          variant="primary"
-          disabled={isPublishing}
-          loading={isPublishing}
-          onClick={publish}
-        >
-          <SlIcon name="cloud-upload" slot="prefix" />
-          Publiceren
-        </SlButton>
+        <div className="flex flex-row gap-2 justify-center items-center">
+          <SlButton
+            variant="primary"
+            disabled={isSaving}
+            loading={isSaving}
+            onClick={publish}
+          >
+            <SlIcon name="cloud-upload" slot="prefix" />
+            Publiceren
+          </SlButton>
+
+          <SlIconButton
+            name="layout-sidebar-inset-reverse"
+            label="Veld"
+            onClick={() => handleDrawerOpen('right')}
+            className="text-xl"
+          />
+        </div>
       </div>
     </header>
-  );
-}
-
-function EditorFooter() {
-  const {
-    appState: {
-      ui: { itemSelector },
-      data,
-    },
-  } = usePuck();
-  const { SlDrawer } = useContext(ShoelaceContext);
-  const [open, setOpen] = useState(false);
-  const [selectedBlockType, setSelectedBlockType] = useState('');
-
-  const ignoreBlocks = useMemo(() => {
-    return ['RichTextBlock'];
-  }, []);
-
-  useEffect(() => {
-    if (itemSelector) {
-      const { index: destinationIndex, zone: destinationZone } = itemSelector;
-
-      if (destinationZone) {
-        const item =
-          destinationZone !== 'default-zone' ?
-            data.zones?.[destinationZone]?.[destinationIndex]
-          : data.content[destinationIndex];
-        if (item) {
-          setSelectedBlockType(item.type);
-        }
-      }
-    }
-  }, [itemSelector, data]);
-
-  useEffect(() => {
-    if (selectedBlockType) {
-      if (!ignoreBlocks.includes(selectedBlockType)) {
-        setOpen(true);
-      }
-    }
-  }, [selectedBlockType, ignoreBlocks]);
-
-  return (
-    <SlDrawer
-      open={open}
-      placement="bottom"
-      onSlAfterHide={() => setOpen(false)}
-      label="Blok instellingen"
-    >
-      <Puck.Fields />
-    </SlDrawer>
   );
 }

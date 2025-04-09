@@ -4,19 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Improvements to the header and anchor">
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Pages are now served from the content overview route as well, and can be accessed from the admin menu. A &quot;qa&quot; script is added to run a small and full qa control locally.">
+      <change afterPath="$PROJECT_DIR$/app/validations/models/page.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/ContentTable.translations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ContentTable.translations.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/locales/en.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/en.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/locales/nl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/nl.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/pages.server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/pages.server.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/_index/_overview.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/_index/_overview.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/PageEditor.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PageEditor.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/PageEditor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PageEditor.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/blocks/HeadingBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/blocks/HeadingBlock.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/puck.config.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/puck.config.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/nieuw/_nieuw.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/nieuw/_nieuw.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/AdminMenu.translations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/AdminMenu.translations.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/AdminMenu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/AdminMenu.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/_index/_index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/_index/_index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/types/Content.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/types/Content.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,12 +39,12 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="feature/WAT-83_Create_overview_route" />
-                    <option name="lastUsedInstant" value="1744183068" />
+                    <option name="branchName" value="feature/WAT-84_Hook_pages_into_crud_flow" />
+                    <option name="lastUsedInstant" value="1744185357" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="release/WAT-60_Create_CRUD_flow_for_generic_pages" />
-                    <option name="lastUsedInstant" value="1744183043" />
+                    <option name="lastUsedInstant" value="1744185222" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="dev" />
@@ -125,60 +120,60 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Attach to Node.js/Chrome.Debug in Chrome.executor": "Debug",
-    "JavaScript Debug.Debug in Chrome.executor": "Debug",
-    "RunOnceActivity.OpenDatabaseViewOnStart": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "Vitest.All Tests.executor": "Run",
-    "Vitest.Content utilities.Parse a localised form data object into a localised value object.executor": "Run",
-    "Vitest.Content utilities.Retrieve the number of errors for each localised field.executor": "Run",
-    "Vitest.Content utilities.executor": "Run",
-    "Vitest.parseURL.Return the correct url for \"/over-ons/team\".executor": "Debug",
-    "Vitest.parseURL.Return the correct urls for \"/contact\".executor": "Debug",
-    "Vitest.validateLogin.executor": "Run",
-    "Vitest.validateLogin.should return success: false when emailaddress is invalid.executor": "Run",
-    "Vitest.validateLogin.should return success: false when emailaddress is missing.executor": "Run",
-    "git-widget-placeholder": "feature/WAT-83__Create__overview__route",
-    "javascript.nodejs.core.library.configured.version": "22.11.0",
-    "javascript.nodejs.core.library.typings.version": "22.9.0",
-    "last_opened_file_path": "/Users/lody/dev/projects/watershed-website/app/routes/_index",
-    "node.js.detected.package.standard": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "node",
-    "nodejs_package_manager_path": "npm",
-    "npm.Dev.executor": "Debug",
-    "npm.Develop.executor": "Run",
-    "npm.Storybook.executor": "Debug",
-    "npm.db:generate.executor": "Run",
-    "npm.db:push:seed.executor": "Run",
-    "npm.dev:app.executor": "Debug",
-    "npm.dev:remix.executor": "Debug",
-    "npm.dev:storybook.executor": "Debug",
-    "npm.docker:start.executor": "Run",
-    "prettierjs.PrettierConfiguration.Package": "/Users/lody/dev/projects/watershed-website/node_modules/prettier",
-    "settings.editor.selected.configurable": "settings.typescriptcompiler",
-    "ts.external.directory.path": "/Users/lody/dev/projects/watershed-website/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Attach to Node.js/Chrome.Debug in Chrome.executor&quot;: &quot;Debug&quot;,
+    &quot;JavaScript Debug.Debug in Chrome.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.OpenDatabaseViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Vitest.All Tests.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.Content utilities.Parse a localised form data object into a localised value object.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.Content utilities.Retrieve the number of errors for each localised field.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.Content utilities.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.parseURL.Return the correct url for \&quot;/over-ons/team\&quot;.executor&quot;: &quot;Debug&quot;,
+    &quot;Vitest.parseURL.Return the correct urls for \&quot;/contact\&quot;.executor&quot;: &quot;Debug&quot;,
+    &quot;Vitest.validateLogin.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.validateLogin.should return success: false when emailaddress is invalid.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.validateLogin.should return success: false when emailaddress is missing.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/WAT-84__Hook__pages__into__crud__flow&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;22.11.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;22.9.0&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/lody/dev/projects/watershed-website/app/routes/_index&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.Dev.executor&quot;: &quot;Debug&quot;,
+    &quot;npm.Develop.executor&quot;: &quot;Run&quot;,
+    &quot;npm.Storybook.executor&quot;: &quot;Debug&quot;,
+    &quot;npm.db:generate.executor&quot;: &quot;Run&quot;,
+    &quot;npm.db:push:seed.executor&quot;: &quot;Run&quot;,
+    &quot;npm.dev:app.executor&quot;: &quot;Debug&quot;,
+    &quot;npm.dev:remix.executor&quot;: &quot;Debug&quot;,
+    &quot;npm.dev:storybook.executor&quot;: &quot;Debug&quot;,
+    &quot;npm.docker:start.executor&quot;: &quot;Run&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/lody/dev/projects/watershed-website/node_modules/prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.typescriptcompiler&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/lody/dev/projects/watershed-website/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ],
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "CSS",
-      "Markdown",
-      "TEXT",
-      "XML"
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;CSS&quot;,
+      &quot;Markdown&quot;,
+      &quot;TEXT&quot;,
+      &quot;XML&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/routes/_index" />
@@ -388,15 +383,8 @@
       <workItem from="1744104003640" duration="30000" />
       <workItem from="1744107218447" duration="215000" />
       <workItem from="1744109617972" duration="1204000" />
-      <workItem from="1744182959032" duration="1711000" />
-    </task>
-    <task id="LOCAL-00072" summary="Changed scripts">
-      <option name="closed" value="true" />
-      <created>1741703575084</created>
-      <option name="number" value="00072" />
-      <option name="presentableId" value="LOCAL-00072" />
-      <option name="project" value="LOCAL" />
-      <updated>1741703575084</updated>
+      <workItem from="1744182959032" duration="3484000" />
+      <workItem from="1744186455792" duration="5439000" />
     </task>
     <task id="LOCAL-00073" summary="Last changes in order to switch to React Router v7">
       <option name="closed" value="true" />
@@ -782,7 +770,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743544618451</updated>
     </task>
-    <option name="localTasksCounter" value="121" />
+    <task id="LOCAL-00121" summary="Pages are now served from the content overview route as well, and can be accessed from the admin menu. A &quot;qa&quot; script is added to run a small and full qa control locally.">
+      <option name="closed" value="true" />
+      <created>1744184819879</created>
+      <option name="number" value="00121" />
+      <option name="presentableId" value="LOCAL-00121" />
+      <option name="project" value="LOCAL" />
+      <updated>1744184819879</updated>
+    </task>
+    <option name="localTasksCounter" value="122" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -825,7 +821,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Enhance EventMutationForm with locale support and local storage integration, also added a locale selector component." />
     <MESSAGE value="Refactor EventMutationForm to support localization and improve error handling, including new utility functions for form data transformation and error counting." />
     <MESSAGE value="Add LocalisedInput component and enhance LocaleSelector with new props and event handling" />
     <MESSAGE value="Add DeepPartial type and LocalisedInput component; refactor EventMutationForm for improved localization and error handling" />
@@ -850,7 +845,8 @@
     <MESSAGE value="Added link to user account in header" />
     <MESSAGE value="Fixed color declarations across Tailwind, Shoelace and the app" />
     <MESSAGE value="Improvements to the header and anchor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Improvements to the header and anchor" />
+    <MESSAGE value="Pages are now served from the content overview route as well, and can be accessed from the admin menu. A &quot;qa&quot; script is added to run a small and full qa control locally." />
+    <option name="LAST_COMMIT_MESSAGE" value="Pages are now served from the content overview route as well, and can be accessed from the admin menu. A &quot;qa&quot; script is added to run a small and full qa control locally." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
