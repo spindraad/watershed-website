@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Improvements to the header and anchor">
-      <change beforePath="$PROJECT_DIR$/app/components/shoelace.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/shoelace.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -367,7 +367,12 @@
       <workItem from="1742396477168" duration="4319000" />
       <workItem from="1742482836686" duration="46242000" />
       <workItem from="1743532443910" duration="13418000" />
-      <workItem from="1743580092944" duration="4643000" />
+      <workItem from="1743580092944" duration="5922000" />
+      <workItem from="1743669706808" duration="808000" />
+      <workItem from="1744051194684" duration="893000" />
+      <workItem from="1744104003640" duration="30000" />
+      <workItem from="1744107218447" duration="215000" />
+      <workItem from="1744109617972" duration="1204000" />
     </task>
     <task id="LOCAL-00072" summary="Changed scripts">
       <option name="closed" value="true" />
