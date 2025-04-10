@@ -4,25 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Reworked the Puck editor to support for page/SEO metadata.">
-      <change afterPath="$PROJECT_DIR$/app/validations/models/page.test.ts" afterDir="false" />
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Created &quot;new&quot; flow for generic pages.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/PageEditor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PageEditor.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/PageRenderer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PageRenderer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/puck.config.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/puck.config.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/locales/en.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/en.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/locales/nl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/nl.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/pages.server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/pages.server.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/$/_pages.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/$/_pages.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/account/AccountMenu.translations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/account/AccountMenu.translations.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/account/AccountMenu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/account/AccountMenu.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/_index/_overview.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/_index/_overview.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/nieuw/_nieuw.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/nieuw/_nieuw.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/_index/_home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/_index/_home.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/validations/models/page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/validations/models/page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/PageMutationForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PageMutationForm.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/seed/_content.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/seed/_content.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/seed/_pageContent.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/seed/_pageContent.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -397,23 +382,7 @@
       <workItem from="1744182959032" duration="3484000" />
       <workItem from="1744186455792" duration="6845000" />
       <workItem from="1744269733595" duration="10876000" />
-      <workItem from="1744286517948" duration="6542000" />
-    </task>
-    <task id="LOCAL-00074" summary="Refine route configuration and update dependencies">
-      <option name="closed" value="true" />
-      <created>1741774743058</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1741774743058</updated>
-    </task>
-    <task id="LOCAL-00075" summary="Removed some testing code I forgot to delete.">
-      <option name="closed" value="true" />
-      <created>1741776400952</created>
-      <option name="number" value="00075" />
-      <option name="presentableId" value="LOCAL-00075" />
-      <option name="project" value="LOCAL" />
-      <updated>1741776400952</updated>
+      <workItem from="1744286517948" duration="10065000" />
     </task>
     <task id="LOCAL-00076" summary="Setup basic account page structure so that we can start with the admin work">
       <option name="closed" value="true" />
@@ -791,7 +760,23 @@
       <option name="project" value="LOCAL" />
       <updated>1744195214321</updated>
     </task>
-    <option name="localTasksCounter" value="123" />
+    <task id="LOCAL-00123" summary="Created &quot;new&quot; flow for generic pages.">
+      <option name="closed" value="true" />
+      <created>1744293214432</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1744293214433</updated>
+    </task>
+    <task id="LOCAL-00124" summary="Created &quot;new&quot; flow for generic pages.">
+      <option name="closed" value="true" />
+      <created>1744293439309</created>
+      <option name="number" value="00124" />
+      <option name="presentableId" value="LOCAL-00124" />
+      <option name="project" value="LOCAL" />
+      <updated>1744293439309</updated>
+    </task>
+    <option name="localTasksCounter" value="125" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -834,7 +819,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add LocalisedInput component and enhance LocaleSelector with new props and event handling" />
     <MESSAGE value="Add DeepPartial type and LocalisedInput component; refactor EventMutationForm for improved localization and error handling" />
     <MESSAGE value="Fixed a lot of lint and typecheck errors" />
     <MESSAGE value="Simplified the component tests for Event Mutation Form and updated Project Mutation Form following the same workflow as the EMF" />
@@ -859,19 +843,8 @@
     <MESSAGE value="Improvements to the header and anchor" />
     <MESSAGE value="Pages are now served from the content overview route as well, and can be accessed from the admin menu. A &quot;qa&quot; script is added to run a small and full qa control locally." />
     <MESSAGE value="Reworked the Puck editor to support for page/SEO metadata." />
-    <option name="LAST_COMMIT_MESSAGE" value="Reworked the Puck editor to support for page/SEO metadata." />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/app/routes/($lang)/beheer/$content/nieuw/_nieuw.tsx</url>
-          <line>57</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Created &quot;new&quot; flow for generic pages." />
+    <option name="LAST_COMMIT_MESSAGE" value="Created &quot;new&quot; flow for generic pages." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -17,19 +17,14 @@ type OnPublishFn = ComponentProps<typeof Puck>['onPublish'];
 
 export default function PageMutationForm({ id = '', ...initialValues }: Props) {
   const { t } = useTranslation('PageMutationForm');
-  const { SlAlert } = useContext(ShoelaceContext);
   const fetcher = useFetcher<ErrorResponse<PageErrors, PageValidator>>();
-
-  const isSubmitting = fetcher.state !== 'idle';
-  const errors = fetcher.data?.errors;
-  const content = fetcher.data?.data?.content || initialValues?.content;
 
   const handleSubmit: OnPublishFn = (data) => {
     const formData = new FormData();
     formData.append('content.nl', JSON.stringify(data));
     formData.append('content.en', JSON.stringify(data));
     formData.append('content.pap', JSON.stringify(data));
-    formData.append('slug', 'test-slug');
+    // formData.append('slug', 'test-slug');
 
     console.log('formData', formData);
     fetcher.submit(formData, {
@@ -42,15 +37,13 @@ export default function PageMutationForm({ id = '', ...initialValues }: Props) {
     titleTranslationKey = 'Title.Edit';
   }
 
-  console.log('status', fetcher.state);
+  const isSubmitting = fetcher.state !== 'idle';
+  const content = fetcher.data?.data?.content || initialValues?.content;
+  const errors = fetcher.data?.errors;
 
   return (
     <>
-      <SlAlert variant="danger" open={!!errors}>
-        {Object.values(errors || []).map((error, index) => (
-          <div key={`error-${index}`}>{t(`Error.${error}`)}</div>
-        ))}
-      </SlAlert>
+      <FormErrors errors={errors} />
 
       <PageEditor
         onPublish={handleSubmit}
@@ -59,5 +52,49 @@ export default function PageMutationForm({ id = '', ...initialValues }: Props) {
         data={content?.nl}
       />
     </>
+  );
+}
+
+type FieldError = { field: string; message: string };
+
+function FormErrors({ errors }: { errors?: PageErrors }) {
+  const { SlAlert } = useContext(ShoelaceContext);
+  let messages: FieldError[] = [];
+
+  if (errors) {
+    messages = Object.keys(errors).reduce<FieldError[]>((acc, field) => {
+      let errorMessage = '';
+      const error = errors[field as keyof PageErrors];
+
+      if (!error) {
+        return acc;
+      }
+
+      if ('_errors' in error) {
+        errorMessage = error._errors.join(', ');
+      } else if (Array.isArray(error)) {
+        errorMessage = error.join(', ');
+      } else {
+        errorMessage = error;
+      }
+
+      if (!errorMessage) {
+        return acc;
+      }
+
+      return [...acc, { field, message: errorMessage }];
+    }, []);
+  }
+
+  return (
+    <SlAlert variant="danger" open={!!messages.length}>
+      <ul>
+        {messages.map(({ field, message }, index) => (
+          <li key={`error-${index}`}>
+            Fout bij veld {field}: {message}
+          </li>
+        ))}
+      </ul>
+    </SlAlert>
   );
 }

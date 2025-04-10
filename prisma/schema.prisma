@@ -99,7 +99,7 @@ model Page {
   /// [LocalisedContent]
   content Json
 
-  slug String
+  slug String @unique
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
