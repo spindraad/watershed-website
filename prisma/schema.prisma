@@ -96,17 +96,8 @@ model Event {
 model Page {
   id String @id @default(cuid())
 
-  /// [Localised]
-  title Json
-
-  /// [Localised]
-  summary Json
-
   /// [LocalisedContent]
   content Json
-
-  /// [LocalisedPageMeta]
-  meta Json
 
   slug String
 

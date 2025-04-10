@@ -5,6 +5,7 @@ import { data, useLoaderData } from 'react-router';
 import PageRenderer from '~/components/PageRenderer';
 import { Prisma } from '@prisma/client';
 import { SupportedLanguages } from '~/config/i18n';
+import { WatershedPageData } from '~/config/puck.config';
 
 export async function loader({ params }: Route.LoaderArgs) {
   const { locale, slug } = parseParamsToSlug(params);
@@ -12,12 +13,16 @@ export async function loader({ params }: Route.LoaderArgs) {
   try {
     const pageData = await getPageBySlug(slug || 'home');
 
+    const data = pageData.content[
+      locale as SupportedLanguages
+    ] as WatershedPageData;
+
     return {
-      title: pageData.title[locale as SupportedLanguages],
-      data: pageData.content[locale as SupportedLanguages],
+      title: data.root.title,
+      data: data,
       meta: {
-        title: pageData.meta.title[locale as SupportedLanguages],
-        description: pageData.meta.description[locale as SupportedLanguages],
+        title: data.root.meta?.title,
+        description: data.root.meta?.description,
       },
     };
   } catch (error) {

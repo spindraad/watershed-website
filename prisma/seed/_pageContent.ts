@@ -1,17 +1,17 @@
 export const home = {
   en: {
-    root: { title: 'Home' },
-    zones: {},
-    content: [
-      {
-        type: 'HeadingBlock',
-        props: {
-          id: 'Heading-1694032984497',
-          text: 'Welcome to our website',
-          align: 'center',
-          level: 1,
+    root: {
+      props: {
+        title: 'Welcome to our website',
+        summary: 'The homepage of the website',
+        meta: {
+          title: 'Home | Stichting Watershed',
+          description: 'Welcome to Stichting Watershed',
         },
       },
+    },
+    zones: {},
+    content: [
       {
         type: 'RichTextBlock',
         props: {
@@ -23,18 +23,18 @@ export const home = {
     ],
   },
   nl: {
-    root: { title: 'Home' },
-    zones: {},
-    content: [
-      {
-        type: 'HeadingBlock',
-        props: {
-          id: 'Heading-1694032984497',
-          text: 'Welkom op onze website',
-          align: 'center',
-          level: 1,
+    root: {
+      props: {
+        title: 'Welkom op onze website',
+        summary: 'De hoofdpagina van de website',
+        meta: {
+          title: 'Hoofdpagina | Stichting Watershed',
+          description: 'Welkom bij Stichting Watershed',
         },
       },
+    },
+    zones: {},
+    content: [
       {
         type: 'RichTextBlock',
         props: {
@@ -46,18 +46,18 @@ export const home = {
     ],
   },
   pap: {
-    root: { title: 'HOMES' },
-    zones: {},
-    content: [
-      {
-        type: 'HeadingBlock',
-        props: {
-          id: 'Heading-1694032984497',
-          text: 'Bienvenido na nos website',
-          align: 'center',
-          level: 1,
+    root: {
+      props: {
+        title: 'Welcome na nos website',
+        summary: 'Homepage di nos website',
+        meta: {
+          title: 'Home | Stichting Watershed',
+          description: 'Welcome na Stichting Watershed',
         },
       },
+    },
+    zones: {},
+    content: [
       {
         type: 'RichTextBlock',
         props: {
@@ -72,53 +72,96 @@ export const home = {
 
 export const about = {
   en: {
-    root: { title: 'About Us' },
-    zones: {},
-    content: [
-      {
-        type: 'HeadingBlock',
-        props: {
-          id: 'Heading-169403298449711',
-          text: 'About Our Organization',
-          align: 'center',
-          level: 1,
+    root: {
+      props: {
+        title: 'About Our Organization',
+        summary: 'This is the about us page',
+        meta: {
+          title: 'About Our Organization | Stichting Watershed',
+          description: 'Learn more about our organization',
         },
       },
+    },
+    zones: {},
+    content: [
       {
         type: 'RichTextBlock',
         props: {
           id: 'RichText-c8a0073a-9d67-4b30-8f31-281a76dedaa31122',
           content:
-            '<p>We are an organization committed to excellence. Founded in 2010, we have been serving our community for many years.</p><p>Our team consists of dedicated professionals who are passionate about their work.</p>',
+            '<p>We are an organization committed to excellence. Founded in 2010, we have been serving our community for many years.</p>',
+        },
+      },
+      {
+        type: 'HeadingBlock',
+        props: {
+          id: 'Heading-169403298449711',
+          text: 'Team',
+          align: 'center',
+          level: 2,
+        },
+      },
+      {
+        type: 'RichTextBlock',
+        props: {
+          id: 'RichText-c8a0073a-9d67-4b30-8f31-281a76dedaa3112244',
+          content:
+            '<p>Our team consists of dedicated professionals who are passionate about their work.</p>',
         },
       },
     ],
   },
   nl: {
-    root: { title: 'Over Ons' },
-    zones: {},
-    content: [
-      {
-        type: 'HeadingBlock',
-        props: {
-          id: 'Heading-169403298449711',
-          text: 'Over Onze Organisatie',
-          align: 'center',
-          level: 1,
+    root: {
+      props: {
+        title: 'Over Ons',
+        summary: 'Dit is de over ons pagina',
+        meta: {
+          title: 'Over ons | Stichting Watershed',
+          description: 'Leer meer over onze organisatie',
         },
       },
+    },
+    zones: {},
+    content: [
       {
         type: 'RichTextBlock',
         props: {
           id: 'RichText-c8a0073a-9d67-4b30-8f31-281a76dedaa31122',
           content:
-            '<p>Wij zijn een organisatie die zich inzet voor uitmuntendheid. Opgericht in 2010, dienen we onze gemeenschap al vele jaren.</p><p>Ons team bestaat uit toegewijde professionals die gepassioneerd zijn over hun werk.</p>',
+            '<p>Wij zijn een organisatie die zich inzet voor uitmuntendheid. Opgericht in 2010, dienen we onze gemeenschap al vele jaren.</p>',
+        },
+      },
+      {
+        type: 'HeadingBlock',
+        props: {
+          id: 'Heading-169403298449711',
+          text: 'Ons team',
+          align: 'center',
+          level: 2,
+        },
+      },
+      {
+        type: 'RichTextBlock',
+        props: {
+          id: 'RichText-c8a0073a-9d67-4b30-8f31-281a76dedaa3112266',
+          content:
+            '<p>Ons team bestaat uit toegewijde professionals die gepassioneerd zijn over hun werk.</p>',
         },
       },
     ],
   },
   pap: {
-    root: { title: 'Tokante Nos' },
+    root: {
+      props: {
+        title: 'Tokante Nos',
+        summary: 'Welcome to our website',
+        meta: {
+          title: 'Home | Stichting Watershed',
+          description: 'This is our homepage.',
+        },
+      },
+    },
     zones: {},
     content: [
       {
@@ -144,18 +187,18 @@ export const about = {
 
 export const contact = {
   en: {
-    root: { title: 'Contact Us' },
-    zones: {},
-    content: [
-      {
-        type: 'HeadingBlock',
-        props: {
-          id: 'Heading-1694032984497113344',
-          text: 'Contact Us',
-          align: 'center',
-          level: 1,
+    root: {
+      props: {
+        title: 'Contact Us',
+        summary: 'This is the contact us page',
+        meta: {
+          title: 'Contact us | Stichting Watershed',
+          description: 'Get in touch with us',
         },
       },
+    },
+    zones: {},
+    content: [
       {
         type: 'RichTextBlock',
         props: {
@@ -167,18 +210,18 @@ export const contact = {
     ],
   },
   nl: {
-    root: { title: 'Contact Us' },
-    zones: {},
-    content: [
-      {
-        type: 'HeadingBlock',
-        props: {
-          id: 'Heading-1694032984497113344',
-          text: 'Contact Us',
-          align: 'center',
-          level: 1,
+    root: {
+      props: {
+        title: 'Neem contact op',
+        summary: 'Dit is de contactpagina',
+        meta: {
+          title: 'Neem contact op | Stichting Watershed',
+          description: 'Neem contact met ons op',
         },
       },
+    },
+    zones: {},
+    content: [
       {
         type: 'RichTextBlock',
         props: {
@@ -190,7 +233,16 @@ export const contact = {
     ],
   },
   pap: {
-    root: { title: 'Kontakto Ku Nos' },
+    root: {
+      props: {
+        title: 'Kontakto Ku Nos',
+        summary: 'Welcome to our website',
+        meta: {
+          title: 'Home | Stichting Watershed',
+          description: 'This is our homepage.',
+        },
+      },
+    },
     zones: {},
     content: [
       {

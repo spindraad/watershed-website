@@ -1,6 +1,8 @@
 import { Page } from '@prisma/client';
 import { prisma } from '~/.server/db';
 import { type ContentTableItem } from '~/components/ContentTable';
+import { PageValidator } from '~/validations/models/page';
+import { SupportedLanguages } from '~/config/i18n';
 
 export function getPages() {
   return prisma.page.findMany({
@@ -18,10 +20,19 @@ export function getPageBySlug(slug: string) {
   });
 }
 
-export function convertPagesToTableData(pages: Page[]): ContentTableItem[] {
+export function savePage(page: PageValidator) {
+  return prisma.page.create({
+    data: page,
+  });
+}
+
+export function convertPagesToTableData(
+  pages: Page[],
+  locale: SupportedLanguages,
+): ContentTableItem[] {
   return pages.map((page) => ({
     id: page.id,
-    title: { value: page.title, isName: true },
+    title: { value: page.content[locale].root.props.title, isName: true },
     slug: page.slug,
     createdAt: page.createdAt,
   }));

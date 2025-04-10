@@ -17,6 +17,11 @@ type Props = {
   data?: PuckProps['data'];
   onPublish: PuckProps['onPublish'];
   isSaving?: boolean;
+  title: string;
+};
+
+type EditorHeaderProps = Pick<Props, 'onPublish' | 'isSaving' | 'title'> & {
+  handleDrawerOpen: (orientation: 'left' | 'right') => void;
 };
 
 const overrides: Partial<Overrides> = {
@@ -33,6 +38,7 @@ export default function PageEditor({
   data = {},
   onPublish,
   isSaving = false,
+  title,
 }: Props) {
   const { SlDrawer } = useContext(ShoelaceContext);
 
@@ -70,6 +76,7 @@ export default function PageEditor({
           onPublish={onPublish}
           handleDrawerOpen={handleDrawerOpen}
           isSaving={isSaving}
+          title={title}
         />
 
         <SlDrawer
@@ -115,11 +122,8 @@ function EditorHeader({
   onPublish,
   handleDrawerOpen,
   isSaving,
-}: {
-  onPublish: Props['onPublish'];
-  handleDrawerOpen: (orientation: 'left' | 'right') => void;
-  isSaving?: Props['isSaving'];
-}) {
+  title,
+}: EditorHeaderProps) {
   const { appState } = usePuck();
   const { SlButton, SlIconButton, SlIcon } = useContext(ShoelaceContext);
 
@@ -139,7 +143,7 @@ function EditorHeader({
             onClick={() => handleDrawerOpen('left')}
             className="text-xl"
           />
-          <h1 className="text-xl font-bold">Pagina bewerken</h1>
+          <h1 className="text-xl font-bold">{title}</h1>
         </div>
 
         <div className="flex flex-row gap-2 justify-center items-center">

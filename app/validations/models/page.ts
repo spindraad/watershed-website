@@ -2,23 +2,15 @@ import { z } from 'zod';
 import { Data, ErrorValidation, SuccessValidation } from '~/types/Validations';
 import { transformFormData } from '~/utils/content';
 
-const localisedStringValidations = z.object({
-  nl: z.string().min(1),
-  en: z.string().min(1),
-  pap: z.string().min(1),
-});
+const dataSchema = z.any();
 
 export const pageValidator = z.object({
-  title: localisedStringValidations,
-  description: localisedStringValidations,
-  content: localisedStringValidations,
+  content: z.object({
+    en: dataSchema,
+    nl: dataSchema,
+    pap: dataSchema,
+  }),
   slug: z.string().min(1),
-  // meta: z.array(
-  //   z.object({
-  //     name: localisedStringValidations,
-  //     description: localisedStringValidations,
-  //   }),
-  // ),
 });
 
 export type PageValidator = z.infer<typeof pageValidator>;
@@ -34,7 +26,17 @@ export async function validatePage(
   const result = pageValidator.safeParse(transformedData);
 
   if (result.success) {
-    return result as SuccessValidation<PageValidator>;
+    return {
+      ...result,
+      data: {
+        ...result.data,
+        content: {
+          en: JSON.parse(result.data.content.en),
+          nl: JSON.parse(result.data.content.nl),
+          pap: JSON.parse(result.data.content.pap),
+        },
+      },
+    } as SuccessValidation<PageValidator>;
   }
 
   return {

@@ -26,6 +26,9 @@ export default function AccountMenu({ user }: Props) {
       </SubMenu>
 
       <SubMenu title={t('AdminMenuLinks.Title')} to="/beheer">
+        <SubMenuItem to="/beheer/paginas" icon="file-earmark">
+          {t('AdminMenuLinks.Pages')}
+        </SubMenuItem>
         <SubMenuItem to="/beheer/evenementen" icon="calendar2-event">
           {t('AdminMenuLinks.Events')}
         </SubMenuItem>

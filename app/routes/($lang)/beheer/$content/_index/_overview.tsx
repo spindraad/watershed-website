@@ -16,9 +16,11 @@ import DeletionNotification from './DeletionNotification';
 import i18nServer from '~/modules/i18n.server';
 import { ShoelaceContext } from '~/components/shoelace';
 import { convertPagesToTableData, getPages } from '~/models/pages.server';
+import { SupportedLanguages } from '~/config/i18n';
 
 export const handle = {
   i18n: [
+    'ContentTypes',
     'ContentOverviewRoute',
     'ContentTable',
     'ConfirmDeleteDialog',
@@ -29,13 +31,14 @@ export const handle = {
 export async function loader({ params, request }: Route.LoaderArgs) {
   const content = params.content as ContentURLParams;
   const t = await i18nServer.getFixedT(request, 'ContentOverviewRoute');
+  const locale = (await i18nServer.getLocale(request)) as SupportedLanguages;
 
   let data: ContentTableItem[] = [];
 
   switch (content) {
     case 'paginas': {
       const pages = await getPages();
-      data = convertPagesToTableData(pages);
+      data = convertPagesToTableData(pages, locale);
       break;
     }
 
@@ -68,7 +71,9 @@ export const meta: Route.MetaFunction = ({ data }) => {
   ];
 };
 
-export default function ContentOverviewRoute({ params }: Route.ComponentProps) {
+export default function AdminContentOverviewRoute({
+  params,
+}: Route.ComponentProps) {
   const content = params.content as ContentURLParams;
   const { SlButton, SlIcon } = useContext(ShoelaceContext);
   const { data } = useLoaderData<typeof loader>();
@@ -112,13 +117,18 @@ export default function ContentOverviewRoute({ params }: Route.ComponentProps) {
 
   const isDeleting = fetcher.state !== 'idle';
 
+  let newButtonTranslationKey = 'NewButtonCaption.Neuter';
+  if (content === 'paginas') {
+    newButtonTranslationKey = 'NewButtonCaption.Common';
+  }
+
   return (
     <div className="space-y-4">
       <div className="flex flex-row justify-between items-center">
-        <Heading level={1}>{t('Title', { content })}</Heading>
+        <Heading level={1}>{t('Title', { content, count: 2 })}</Heading>
         <SlButton href={`/beheer/${content}/nieuw`} variant="primary">
           <SlIcon slot="prefix" name="plus-circle-dotted"></SlIcon>
-          {t('NewButtonCaption', { content, count: 1 })}
+          {t(newButtonTranslationKey, { content, count: 1 })}
         </SlButton>
       </div>
 

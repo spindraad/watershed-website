@@ -10,6 +10,7 @@ export const en = {
       Title: 'Administration',
       Events: 'Events',
       Projects: 'Events',
+      Pages: 'Pages',
     },
   },
 };
@@ -26,6 +27,7 @@ export const nl = {
       Title: 'Administratie',
       Events: 'Evenementen',
       Projects: 'Projecten',
+      Pages: "Pagina's",
     },
   },
 };
@@ -42,6 +44,7 @@ export const pap = {
       Title: 'Admin',
       Events: 'Events',
       Projects: 'Events',
+      Pages: 'Pages',
     },
   },
 };

@@ -1,4 +1,4 @@
-import type { Config } from '@measured/puck';
+import type { Config, Data } from '@measured/puck';
 import {
   HeadingBlock,
   Props as HeadingBlockProps,
@@ -26,6 +26,8 @@ type RootProps = {
     description: string;
   };
 };
+
+export type WatershedPageData = Data<Props, RootProps>;
 
 export const config: Config<Props, RootProps> = {
   categories: {
@@ -76,7 +78,9 @@ export const config: Config<Props, RootProps> = {
     render({ children, title }) {
       return (
         <div className="flex flex-col gap-4">
-          <Heading level={1}>{title}</Heading>
+          {title ?
+            <Heading level={1}>{title}</Heading>
+          : null}
           {children}
         </div>
       );

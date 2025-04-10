@@ -4,14 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Pages are now served from the content overview route as well, and can be accessed from the admin menu. A &quot;qa&quot; script is added to run a small and full qa control locally.">
-      <change afterPath="$PROJECT_DIR$/app/validations/models/page.ts" afterDir="false" />
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Reworked the Puck editor to support for page/SEO metadata.">
+      <change afterPath="$PROJECT_DIR$/app/validations/models/page.test.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/PageEditor.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PageEditor.stories.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/components/PageEditor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PageEditor.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/blocks/HeadingBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/blocks/HeadingBlock.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/PageRenderer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PageRenderer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/config/puck.config.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/puck.config.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/locales/en.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/en.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/locales/nl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/nl.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/pages.server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/pages.server.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/$/_pages.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/$/_pages.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/account/AccountMenu.translations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/account/AccountMenu.translations.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/account/AccountMenu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/account/AccountMenu.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/_index/_overview.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/_index/_overview.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/nieuw/_nieuw.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/nieuw/_nieuw.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/_index/_home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/_index/_home.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/validations/models/page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/validations/models/page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/seed/_content.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/seed/_content.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/seed/_pageContent.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/seed/_pageContent.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,6 +143,7 @@
     &quot;Vitest.Content utilities.Parse a localised form data object into a localised value object.executor&quot;: &quot;Run&quot;,
     &quot;Vitest.Content utilities.Retrieve the number of errors for each localised field.executor&quot;: &quot;Run&quot;,
     &quot;Vitest.Content utilities.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.Validating the page.executor&quot;: &quot;Run&quot;,
     &quot;Vitest.parseURL.Return the correct url for \&quot;/over-ons/team\&quot;.executor&quot;: &quot;Debug&quot;,
     &quot;Vitest.parseURL.Return the correct urls for \&quot;/contact\&quot;.executor&quot;: &quot;Debug&quot;,
     &quot;Vitest.validateLogin.executor&quot;: &quot;Run&quot;,
@@ -219,17 +231,16 @@
       <scope-kind value="ALL" />
       <method v="2" />
     </configuration>
-    <configuration name="Content utilities.Parse a localised form data object into a localised value object" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
+    <configuration name="Validating the page" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
       <working-dir value="$PROJECT_DIR$" />
       <vitest-options value="--run" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/app/utils/content.test.ts" />
+      <test-file value="$PROJECT_DIR$/app/validations/models/page.test.ts" />
       <test-names>
-        <test-name value="Content utilities" />
-        <test-name value="Parse a localised form data object into a localised value object" />
+        <test-name value="Validating the page" />
       </test-names>
       <method v="2" />
     </configuration>
@@ -313,17 +324,17 @@
       <item itemvalue="npm.db:generate" />
       <item itemvalue="npm.db:push:seed" />
       <item itemvalue="Vitest.All Tests" />
+      <item itemvalue="Vitest.Validating the page" />
       <item itemvalue="Vitest.parseURL.Return the correct url for &quot;/over-ons/team&quot;" />
       <item itemvalue="Vitest.parseURL.Return the correct urls for &quot;/contact&quot;" />
-      <item itemvalue="Vitest.Content utilities.Parse a localised form data object into a localised value object" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Vitest.Validating the page" />
         <item itemvalue="npm.db:push:seed" />
         <item itemvalue="npm.db:generate" />
         <item itemvalue="Vitest.parseURL.Return the correct url for &quot;/over-ons/team&quot;" />
         <item itemvalue="Vitest.parseURL.Return the correct urls for &quot;/contact&quot;" />
-        <item itemvalue="Vitest.Content utilities.Parse a localised form data object into a localised value object" />
       </list>
     </recent_temporary>
   </component>
@@ -384,15 +395,9 @@
       <workItem from="1744107218447" duration="215000" />
       <workItem from="1744109617972" duration="1204000" />
       <workItem from="1744182959032" duration="3484000" />
-      <workItem from="1744186455792" duration="5439000" />
-    </task>
-    <task id="LOCAL-00073" summary="Last changes in order to switch to React Router v7">
-      <option name="closed" value="true" />
-      <created>1741704156871</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1741704156871</updated>
+      <workItem from="1744186455792" duration="6845000" />
+      <workItem from="1744269733595" duration="10876000" />
+      <workItem from="1744286517948" duration="6542000" />
     </task>
     <task id="LOCAL-00074" summary="Refine route configuration and update dependencies">
       <option name="closed" value="true" />
@@ -778,7 +783,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744184819879</updated>
     </task>
-    <option name="localTasksCounter" value="122" />
+    <task id="LOCAL-00122" summary="Reworked the Puck editor to support for page/SEO metadata.">
+      <option name="closed" value="true" />
+      <created>1744195214320</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1744195214321</updated>
+    </task>
+    <option name="localTasksCounter" value="123" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -821,7 +834,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Refactor EventMutationForm to support localization and improve error handling, including new utility functions for form data transformation and error counting." />
     <MESSAGE value="Add LocalisedInput component and enhance LocaleSelector with new props and event handling" />
     <MESSAGE value="Add DeepPartial type and LocalisedInput component; refactor EventMutationForm for improved localization and error handling" />
     <MESSAGE value="Fixed a lot of lint and typecheck errors" />
@@ -846,7 +858,20 @@
     <MESSAGE value="Fixed color declarations across Tailwind, Shoelace and the app" />
     <MESSAGE value="Improvements to the header and anchor" />
     <MESSAGE value="Pages are now served from the content overview route as well, and can be accessed from the admin menu. A &quot;qa&quot; script is added to run a small and full qa control locally." />
-    <option name="LAST_COMMIT_MESSAGE" value="Pages are now served from the content overview route as well, and can be accessed from the admin menu. A &quot;qa&quot; script is added to run a small and full qa control locally." />
+    <MESSAGE value="Reworked the Puck editor to support for page/SEO metadata." />
+    <option name="LAST_COMMIT_MESSAGE" value="Reworked the Puck editor to support for page/SEO metadata." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/app/routes/($lang)/beheer/$content/nieuw/_nieuw.tsx</url>
+          <line>57</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
