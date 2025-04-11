@@ -5,8 +5,9 @@ import { convertDateToLocaleString } from '~/utils/date';
 import { Tag } from '~/components/Tags';
 
 export default {
-  title: 'Components/News Article Card',
+  title: 'Organisms/News Article Card',
   component: ArticleCard,
+  tags: ['components', 'deprecated', 'news'],
 } satisfies Meta<typeof ArticleCard>;
 
 type Story = StoryObj<typeof ArticleCard>;

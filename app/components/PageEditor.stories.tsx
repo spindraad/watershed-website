@@ -4,7 +4,7 @@ import PageEditor from '~/components/PageEditor';
 import Header from '~/components/Header';
 
 export default {
-  title: 'Components/Page Editor',
+  title: 'Templates/Page Editor',
   component: PageEditor,
   parameters: {
     layout: 'fullscreen',
@@ -17,6 +17,7 @@ export default {
       </div>
     ),
   ],
+  tags: ['components', 'content'],
 } satisfies Meta<typeof PageEditor>;
 
 type Story = StoryObj<typeof PageEditor>;

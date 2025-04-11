@@ -2,8 +2,9 @@ import type { Meta, StoryObj } from '@storybook/react';
 import PageMutationForm from './PageMutationForm';
 
 export default {
-  title: 'Components/Page Mutation Form',
+  title: 'Forms/Page Mutation Form',
   component: PageMutationForm,
+  tags: ['components', 'content'],
 } satisfies Meta<typeof PageMutationForm>;
 
 type Story = StoryObj<typeof PageMutationForm>;

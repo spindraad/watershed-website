@@ -15,6 +15,7 @@ export default {
   parameters: {
     layout: 'padded',
   },
+  tags: ['route-components', 'authentication'],
 } satisfies Meta<typeof LoginFormComponent>;
 
 type Story = StoryObj<typeof LoginFormComponent>;

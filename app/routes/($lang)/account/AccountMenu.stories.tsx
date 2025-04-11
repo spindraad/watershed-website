@@ -3,7 +3,7 @@ import AccountMenu from './AccountMenu';
 import { User } from '~/models/user.server';
 
 export default {
-  title: 'Components/Account Menu',
+  title: 'Molecules/Account Menu',
   component: AccountMenu,
   decorators: [
     (Story) => (
@@ -12,6 +12,7 @@ export default {
       </div>
     ),
   ],
+  tags: ['route-components', 'navigation'],
 } satisfies Meta<typeof AccountMenu>;
 
 type Story = StoryObj<typeof AccountMenu>;

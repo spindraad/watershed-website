@@ -4,10 +4,43 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Created &quot;new&quot; flow for generic pages.">
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="PageMutationForm now also shows errors, and made slug unique in prisma">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.storybook/preview.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/.storybook/preview.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/Anchor.stories.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Anchor.stories.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/ArticleCard.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ArticleCard.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/ArtistProfileSummary.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ArtistProfileSummary.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/ArtistsSummary.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ArtistsSummary.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/Breadcrumbs.stories.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Breadcrumbs.stories.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/ChangePasswordForm.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ChangePasswordForm.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/ContentTable.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ContentTable.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/DateInput.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/DateInput.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/EventMutationForm.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/EventMutationForm.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/EventSummary.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/EventSummary.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/Header.stories.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Header.stories.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/Heading.stories.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Heading.stories.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/Input.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Input.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/LocaleSelector.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/LocaleSelector.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/LocalisedInput.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/LocalisedInput.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/Logo.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Logo.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/PageEditor.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PageEditor.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/PageMutationForm.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PageMutationForm.stories.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/components/PageMutationForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PageMutationForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/PageRenderer.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PageRenderer.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/ProductSummary.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ProductSummary.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/ProjectMutationForm.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ProjectMutationForm.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/ProjectSummary.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ProjectSummary.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/RichTextEditor.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/RichTextEditor.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/SubMenu.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/SubMenu.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/Tags.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Tags.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/YearSelector.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/YearSelector.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/account/AccountMenu.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/account/AccountMenu.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/_index/ConfirmDeleteDialog.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/_index/ConfirmDeleteDialog.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/_index/DeletionNotification.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/_index/DeletionNotification.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/AdminMenu.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/AdminMenu.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/inloggen/LoginFormComponent.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/inloggen/LoginFormComponent.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/wachtwoord-vergeten/ForgetPasswordConfirmation.stories.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/wachtwoord-vergeten/ForgetPasswordConfirmation.stories.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/wachtwoord-vergeten/ForgetPasswordFormComponent.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/wachtwoord-vergeten/ForgetPasswordFormComponent.stories.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -382,15 +415,8 @@
       <workItem from="1744182959032" duration="3484000" />
       <workItem from="1744186455792" duration="6845000" />
       <workItem from="1744269733595" duration="10876000" />
-      <workItem from="1744286517948" duration="10065000" />
-    </task>
-    <task id="LOCAL-00076" summary="Setup basic account page structure so that we can start with the admin work">
-      <option name="closed" value="true" />
-      <created>1741781802954</created>
-      <option name="number" value="00076" />
-      <option name="presentableId" value="LOCAL-00076" />
-      <option name="project" value="LOCAL" />
-      <updated>1741781802954</updated>
+      <workItem from="1744286517948" duration="11011000" />
+      <workItem from="1744356213721" duration="2406000" />
     </task>
     <task id="LOCAL-00077" summary="Cleaned up the content structures, removing stuff we don't need. Also added link to projects for an admin">
       <option name="closed" value="true" />
@@ -776,7 +802,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744293439309</updated>
     </task>
-    <option name="localTasksCounter" value="125" />
+    <task id="LOCAL-00125" summary="PageMutationForm now also shows errors, and made slug unique in prisma">
+      <option name="closed" value="true" />
+      <created>1744296682184</created>
+      <option name="number" value="00125" />
+      <option name="presentableId" value="LOCAL-00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1744296682184</updated>
+    </task>
+    <option name="localTasksCounter" value="126" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -819,7 +853,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add DeepPartial type and LocalisedInput component; refactor EventMutationForm for improved localization and error handling" />
     <MESSAGE value="Fixed a lot of lint and typecheck errors" />
     <MESSAGE value="Simplified the component tests for Event Mutation Form and updated Project Mutation Form following the same workflow as the EMF" />
     <MESSAGE value="GH Actions now performs a build on normal push" />
@@ -844,7 +877,8 @@
     <MESSAGE value="Pages are now served from the content overview route as well, and can be accessed from the admin menu. A &quot;qa&quot; script is added to run a small and full qa control locally." />
     <MESSAGE value="Reworked the Puck editor to support for page/SEO metadata." />
     <MESSAGE value="Created &quot;new&quot; flow for generic pages." />
-    <option name="LAST_COMMIT_MESSAGE" value="Created &quot;new&quot; flow for generic pages." />
+    <MESSAGE value="PageMutationForm now also shows errors, and made slug unique in prisma" />
+    <option name="LAST_COMMIT_MESSAGE" value="PageMutationForm now also shows errors, and made slug unique in prisma" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

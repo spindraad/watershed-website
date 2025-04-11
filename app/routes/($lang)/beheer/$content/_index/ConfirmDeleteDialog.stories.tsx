@@ -6,9 +6,10 @@ import { reactRouterParameters } from 'storybook-addon-remix-react-router';
 import { useFetcher } from 'react-router';
 
 export default {
-  title: 'Components/Confirm Deletion dialog',
+  title: 'Molecules/Confirm Deletion dialog',
   component: ConfirmDeleteDialog,
   parameters: { actions: { argTypesRegex: '^on.*' } },
+  tags: ['route-components', 'shoelace', 'content'],
 } satisfies Meta<typeof ConfirmDeleteDialog>;
 
 type Story = StoryObj<typeof ConfirmDeleteDialog>;

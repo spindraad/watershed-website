@@ -3,8 +3,9 @@ import { fakerNL as faker } from '@faker-js/faker';
 import ContentTable, { ContentTableItem } from './ContentTable';
 
 export default {
-  title: 'Components/Content Table',
+  title: 'Organisms/Content Table',
   component: ContentTable,
+  tags: ['components', 'content'],
 } satisfies Meta<typeof ContentTable>;
 
 type Story = StoryObj<typeof ContentTable>;

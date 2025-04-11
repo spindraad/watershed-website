@@ -3,9 +3,9 @@ import { faker } from '@faker-js/faker';
 import EventSummary from './EventSummary';
 
 export default {
-  title: 'Components/Event Summary',
+  title: 'Organisms/Event Summary',
   component: EventSummary,
-  tags: ['news'],
+  tags: ['components', 'events'],
   decorators: [(Story) => <div className="w-1/3">{Story()}</div>],
 } satisfies Meta<typeof EventSummary>;
 

@@ -2,9 +2,9 @@ import type { Meta, StoryObj } from '@storybook/react';
 import YearSelector from './YearSelector';
 
 export default {
-  title: 'Components/Year Selector',
+  title: 'Molecules/Year Selector',
   component: YearSelector,
-  tags: ['news'],
+  tags: ['components', 'shoelace'],
 } satisfies Meta<typeof YearSelector>;
 
 type Story = StoryObj<typeof YearSelector>;

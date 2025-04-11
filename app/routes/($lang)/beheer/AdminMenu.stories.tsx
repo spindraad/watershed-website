@@ -2,8 +2,9 @@ import type { Meta, StoryObj } from '@storybook/react';
 import AdminMenu from './AdminMenu';
 
 export default {
-  title: 'Components/Admin Menu',
+  title: 'Molecules/Admin Menu',
   component: AdminMenu,
+  tags: ['route-components', 'navigation'],
 } satisfies Meta<typeof AdminMenu>;
 
 type Story = StoryObj<typeof AdminMenu>;

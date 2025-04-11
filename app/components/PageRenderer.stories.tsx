@@ -2,8 +2,9 @@ import type { Meta, StoryObj } from '@storybook/react';
 import PageRenderer from 'app/components/PageRenderer';
 
 export default {
-  title: 'Components/Page Renderer',
+  title: 'Templates/Page Renderer',
   component: PageRenderer,
+  tags: ['components', 'content'],
 } satisfies Meta<typeof PageRenderer>;
 
 type Story = StoryObj<typeof PageRenderer>;
@@ -11,7 +12,9 @@ type Story = StoryObj<typeof PageRenderer>;
 export const Default: Story = {
   args: {
     data: {
-      root: { props: { title: '' } },
+      root: {
+        props: { title: '', summary: '', meta: { title: '', description: '' } },
+      },
       zones: {},
       content: [
         {
@@ -20,7 +23,7 @@ export const Default: Story = {
             id: 'Heading-1694032984497',
             text: 'Welkom bij Watershed',
             align: 'center',
-            level: 1,
+            level: 2,
           },
         },
         {
@@ -43,7 +46,7 @@ export const Default: Story = {
           type: 'ButtonBlock',
           props: {
             id: 'Button-1234567890',
-            primary: 'primary',
+            variant: 'primary',
           },
         },
       ],
