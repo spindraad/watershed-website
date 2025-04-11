@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Added page summary to the content table">
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Created delete route">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/PageRenderer.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PageRenderer.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/ContentTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ContentTable.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/pages.server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/pages.server.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/_index/_overview.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/_index/_overview.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/verwijderen/$id/_verwijderen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/verwijderen/$id/_verwijderen.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,8 +37,8 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="feature/WAT-84_Hook_pages_into_crud_flow" />
-                    <option name="lastUsedInstant" value="1744185357" />
+                    <option name="branchName" value="feature/WAT-158_Support_deleting_pages" />
+                    <option name="lastUsedInstant" value="1744376370" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="release/WAT-60_Create_CRUD_flow_for_generic_pages" />
@@ -135,7 +137,7 @@
     &quot;Vitest.validateLogin.executor&quot;: &quot;Run&quot;,
     &quot;Vitest.validateLogin.should return success: false when emailaddress is invalid.executor&quot;: &quot;Run&quot;,
     &quot;Vitest.validateLogin.should return success: false when emailaddress is missing.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/WAT-84__Hook__pages__into__crud__flow&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/WAT-158__Support__deleting__pages&quot;,
     &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;22.11.0&quot;,
     &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;22.9.0&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/lody/dev/projects/watershed-website/app/routes/_index&quot;,
@@ -203,7 +205,12 @@
       <command value="npm run db:push:seed" />
     </option>
   </component>
-  <component name="RunManager" selected="npm.typecheck">
+  <component name="RunManager" selected="Compound.Develop">
+    <configuration name="Develop" type="CompoundRunConfigurationType">
+      <toRun name="Dev" type="js.build_tools.npm" />
+      <toRun name="Storybook" type="js.build_tools.npm" />
+      <method v="2" />
+    </configuration>
     <configuration name="Develop" type="CompoundRunConfigurationType">
       <toRun name="Dev" type="js.build_tools.npm" />
       <toRun name="Storybook" type="js.build_tools.npm" />
@@ -216,6 +223,28 @@
       <vitest-options value="--watch" />
       <envs />
       <scope-kind value="ALL" />
+      <method v="2" />
+    </configuration>
+    <configuration name="All Tests" type="JavaScriptTestRunnerVitest" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <vitest-options value="--watch" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Validating the page" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <vitest-options value="--run" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/app/validations/models/page.test.ts" />
+      <test-names>
+        <test-name value="Validating the page" />
+      </test-names>
       <method v="2" />
     </configuration>
     <configuration name="Validating the page" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
@@ -245,6 +274,24 @@
       </test-names>
       <method v="2" />
     </configuration>
+    <configuration name="parseURL.Return the correct url for &quot;/over-ons/team&quot;" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <vitest-options value="--run" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/app/utils/slug.test.ts" />
+      <test-names>
+        <test-name value="parseURL" />
+        <test-name value="Return the correct url for &quot;/over-ons/team&quot;" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Debug in Chrome" type="JavascriptDebugType" uri="http://localhost:5173">
+      <mapping url="http://localhost:5173" local-file="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
     <configuration name="Debug in Chrome" type="JavascriptDebugType" uri="http://localhost:5173">
       <mapping url="http://localhost:5173" local-file="$PROJECT_DIR$" />
       <method v="2" />
@@ -254,6 +301,26 @@
       <command value="run" />
       <scripts>
         <script value="dev:app" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="Dev" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev:app" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="Storybook" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev:storybook" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -279,11 +346,41 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="db:generate" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="db:generate" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="db:push:seed" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
         <script value="db:push:seed" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="db:push:seed" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="db:push:seed" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="typecheck" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="typecheck" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -819,7 +916,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Removed the news routes" />
     <MESSAGE value="Added fonts and setup styles for the heading" />
     <MESSAGE value="Removed more references to the News" />
     <MESSAGE value="Created demo page content and a catch-all page route that loads content." />
@@ -844,7 +940,8 @@
     <MESSAGE value="Ran prisma migrate to updated db to new schema" />
     <MESSAGE value="Pages can now be edited and saved  Also added slugs to seeding scripts" />
     <MESSAGE value="Changed some of the navigation labels" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed some of the navigation labels" />
+    <MESSAGE value="Created delete route" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created delete route" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
