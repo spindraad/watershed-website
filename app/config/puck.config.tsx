@@ -21,6 +21,7 @@ type Props = {
 type RootProps = {
   title: string;
   summary: string;
+  slug: string;
   meta: {
     title: string;
     description: string;
@@ -28,6 +29,7 @@ type RootProps = {
 };
 
 export type WatershedPageData = Data<Props, RootProps>;
+export type WatershedPageConfig = Config<Props, RootProps>;
 
 export const config: Config<Props, RootProps> = {
   categories: {
@@ -59,6 +61,10 @@ export const config: Config<Props, RootProps> = {
       summary: {
         label: 'Pagina omschrijving',
         type: 'textarea',
+      },
+      slug: {
+        label: 'Slug',
+        type: 'text',
       },
       meta: {
         type: 'object',

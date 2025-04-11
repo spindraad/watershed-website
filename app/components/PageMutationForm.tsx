@@ -8,12 +8,15 @@ import { ErrorResponse } from '~/types/Validations';
 import PageEditor from '~/components/PageEditor';
 import { useTranslation } from 'react-i18next';
 import { ShoelaceContext } from '~/components/shoelace';
+import { WatershedPageConfig } from '~/config/puck.config';
 
 type Props = DeepPartial<PageValidator> & {
   id?: string;
 };
 
-type OnPublishFn = ComponentProps<typeof Puck>['onPublish'];
+type OnPublishFn = ComponentProps<
+  typeof Puck<WatershedPageConfig>
+>['onPublish'];
 
 export default function PageMutationForm({ id = '', ...initialValues }: Props) {
   const { t } = useTranslation('PageMutationForm');
@@ -24,9 +27,8 @@ export default function PageMutationForm({ id = '', ...initialValues }: Props) {
     formData.append('content.nl', JSON.stringify(data));
     formData.append('content.en', JSON.stringify(data));
     formData.append('content.pap', JSON.stringify(data));
-    // formData.append('slug', 'test-slug');
+    formData.append('slug', data.root.props?.slug ?? '');
 
-    console.log('formData', formData);
     fetcher.submit(formData, {
       method: id ? 'PUT' : 'POST',
     });

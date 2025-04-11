@@ -9,12 +9,16 @@ import { Overrides, Puck, usePuck } from '@measured/puck';
 
 import '@measured/puck/puck.css';
 
-import { config } from '~/config/puck.config';
+import {
+  config,
+  WatershedPageConfig,
+  WatershedPageData,
+} from '~/config/puck.config';
 import { ShoelaceContext } from '~/components/shoelace';
 
-type PuckProps = ComponentProps<typeof Puck>;
+type PuckProps = ComponentProps<typeof Puck<WatershedPageConfig>>;
 type Props = {
-  data?: PuckProps['data'];
+  data?: WatershedPageData | object;
   onPublish: PuckProps['onPublish'];
   isSaving?: boolean;
   title: string;
@@ -124,7 +128,7 @@ function EditorHeader({
   isSaving,
   title,
 }: EditorHeaderProps) {
-  const { appState } = usePuck();
+  const { appState } = usePuck<WatershedPageConfig>();
   const { SlButton, SlIconButton, SlIcon } = useContext(ShoelaceContext);
 
   const publish = () => {
