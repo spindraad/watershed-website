@@ -4,8 +4,9 @@ import { reactRouterParameters } from 'storybook-addon-remix-react-router';
 import { User } from '~/models/user.server';
 
 export default {
-  title: 'Components/Header',
+  title: 'Organisms/Header',
   component: Header,
+  tags: ['components', 'navigation'],
 } satisfies Meta<typeof Header>;
 
 type Story = StoryObj<typeof Header>;

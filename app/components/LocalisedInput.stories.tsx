@@ -4,7 +4,7 @@ import { fn, waitFor, within, expect } from '@storybook/test';
 import { reactRouterParameters } from 'storybook-addon-remix-react-router';
 
 export default {
-  title: 'Components/Localised Input',
+  title: 'Molecules/Localised Input',
   component: LocalisedInput,
   decorators: [
     (Story) => (
@@ -20,6 +20,7 @@ export default {
       },
     },
   },
+  tags: ['components', 'shoelace', 'input', 'localisation'],
 } satisfies Meta<typeof LocalisedInput>;
 
 type Story = StoryObj<typeof LocalisedInput>;

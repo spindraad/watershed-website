@@ -5,8 +5,9 @@ import { ShoelaceContext } from '~/components/shoelace';
 import { SlAlert } from '@shoelace-style/shoelace';
 
 export default {
-  title: 'Components/Deletion notification',
+  title: 'Molecules/Deletion notification',
   component: DeletionNotification,
+  tags: ['route-components', 'content', 'shoelace'],
 } satisfies Meta<typeof DeletionNotification>;
 
 type Story = StoryObj<typeof DeletionNotification>;

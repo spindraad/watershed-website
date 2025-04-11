@@ -3,9 +3,9 @@ import { fakerEN, fakerNL, fakerEO } from '@faker-js/faker';
 import ProjectSummary from './ProjectSummary';
 
 export default {
-  title: 'Components/Project Summary',
+  title: 'Molecules/Project Summary',
   component: ProjectSummary,
-  tags: ['news'],
+  tags: ['components', 'content'],
   decorators: [(Story) => <div className="w-1/3">{Story()}</div>],
 } satisfies Meta<typeof ProjectSummary>;
 

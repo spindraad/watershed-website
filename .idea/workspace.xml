@@ -4,19 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Improvements to the header and anchor">
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Added page summary to the content table">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/ContentTable.translations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ContentTable.translations.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/locales/en.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/en.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/locales/nl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/nl.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/PageRenderer.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PageRenderer.stories.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/pages.server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/pages.server.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/_index/_overview.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/_index/_overview.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/nieuw/_nieuw.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/nieuw/_nieuw.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/AdminMenu.translations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/AdminMenu.translations.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/AdminMenu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/AdminMenu.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/_index/_index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/_index/_index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/types/Content.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/types/Content.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,12 +35,12 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="feature/WAT-83_Create_overview_route" />
-                    <option name="lastUsedInstant" value="1744183068" />
+                    <option name="branchName" value="feature/WAT-84_Hook_pages_into_crud_flow" />
+                    <option name="lastUsedInstant" value="1744185357" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="release/WAT-60_Create_CRUD_flow_for_generic_pages" />
-                    <option name="lastUsedInstant" value="1744183043" />
+                    <option name="lastUsedInstant" value="1744185222" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="dev" />
@@ -80,6 +71,7 @@
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/node_modules/@shoelace-style/shoelace/dist/components/button/button.d.ts" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/node_modules/zod/lib/types.d.ts" root0="SKIP_INSPECTION" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
@@ -125,60 +117,62 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Attach to Node.js/Chrome.Debug in Chrome.executor": "Debug",
-    "JavaScript Debug.Debug in Chrome.executor": "Debug",
-    "RunOnceActivity.OpenDatabaseViewOnStart": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "Vitest.All Tests.executor": "Run",
-    "Vitest.Content utilities.Parse a localised form data object into a localised value object.executor": "Run",
-    "Vitest.Content utilities.Retrieve the number of errors for each localised field.executor": "Run",
-    "Vitest.Content utilities.executor": "Run",
-    "Vitest.parseURL.Return the correct url for \"/over-ons/team\".executor": "Debug",
-    "Vitest.parseURL.Return the correct urls for \"/contact\".executor": "Debug",
-    "Vitest.validateLogin.executor": "Run",
-    "Vitest.validateLogin.should return success: false when emailaddress is invalid.executor": "Run",
-    "Vitest.validateLogin.should return success: false when emailaddress is missing.executor": "Run",
-    "git-widget-placeholder": "feature/WAT-83__Create__overview__route",
-    "javascript.nodejs.core.library.configured.version": "22.11.0",
-    "javascript.nodejs.core.library.typings.version": "22.9.0",
-    "last_opened_file_path": "/Users/lody/dev/projects/watershed-website/app/routes/_index",
-    "node.js.detected.package.standard": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "node",
-    "nodejs_package_manager_path": "npm",
-    "npm.Dev.executor": "Debug",
-    "npm.Develop.executor": "Run",
-    "npm.Storybook.executor": "Debug",
-    "npm.db:generate.executor": "Run",
-    "npm.db:push:seed.executor": "Run",
-    "npm.dev:app.executor": "Debug",
-    "npm.dev:remix.executor": "Debug",
-    "npm.dev:storybook.executor": "Debug",
-    "npm.docker:start.executor": "Run",
-    "prettierjs.PrettierConfiguration.Package": "/Users/lody/dev/projects/watershed-website/node_modules/prettier",
-    "settings.editor.selected.configurable": "settings.typescriptcompiler",
-    "ts.external.directory.path": "/Users/lody/dev/projects/watershed-website/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Attach to Node.js/Chrome.Debug in Chrome.executor&quot;: &quot;Debug&quot;,
+    &quot;JavaScript Debug.Debug in Chrome.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.OpenDatabaseViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Vitest.All Tests.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.Content utilities.Parse a localised form data object into a localised value object.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.Content utilities.Retrieve the number of errors for each localised field.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.Content utilities.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.Validating the page.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.parseURL.Return the correct url for \&quot;/over-ons/team\&quot;.executor&quot;: &quot;Debug&quot;,
+    &quot;Vitest.parseURL.Return the correct urls for \&quot;/contact\&quot;.executor&quot;: &quot;Debug&quot;,
+    &quot;Vitest.validateLogin.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.validateLogin.should return success: false when emailaddress is invalid.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.validateLogin.should return success: false when emailaddress is missing.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/WAT-84__Hook__pages__into__crud__flow&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;22.11.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;22.9.0&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/lody/dev/projects/watershed-website/app/routes/_index&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.Dev.executor&quot;: &quot;Debug&quot;,
+    &quot;npm.Develop.executor&quot;: &quot;Run&quot;,
+    &quot;npm.Storybook.executor&quot;: &quot;Debug&quot;,
+    &quot;npm.db:generate.executor&quot;: &quot;Run&quot;,
+    &quot;npm.db:push:seed.executor&quot;: &quot;Run&quot;,
+    &quot;npm.dev:app.executor&quot;: &quot;Debug&quot;,
+    &quot;npm.dev:remix.executor&quot;: &quot;Debug&quot;,
+    &quot;npm.dev:storybook.executor&quot;: &quot;Debug&quot;,
+    &quot;npm.docker:start.executor&quot;: &quot;Run&quot;,
+    &quot;npm.typecheck.executor&quot;: &quot;Run&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/lody/dev/projects/watershed-website/node_modules/prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.typescriptcompiler&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/lody/dev/projects/watershed-website/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ],
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "CSS",
-      "Markdown",
-      "TEXT",
-      "XML"
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;CSS&quot;,
+      &quot;Markdown&quot;,
+      &quot;TEXT&quot;,
+      &quot;XML&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/routes/_index" />
@@ -209,7 +203,7 @@
       <command value="npm run db:push:seed" />
     </option>
   </component>
-  <component name="RunManager" selected="Compound.Develop">
+  <component name="RunManager" selected="npm.typecheck">
     <configuration name="Develop" type="CompoundRunConfigurationType">
       <toRun name="Dev" type="js.build_tools.npm" />
       <toRun name="Storybook" type="js.build_tools.npm" />
@@ -224,17 +218,16 @@
       <scope-kind value="ALL" />
       <method v="2" />
     </configuration>
-    <configuration name="Content utilities.Parse a localised form data object into a localised value object" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
+    <configuration name="Validating the page" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
       <working-dir value="$PROJECT_DIR$" />
       <vitest-options value="--run" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/app/utils/content.test.ts" />
+      <test-file value="$PROJECT_DIR$/app/validations/models/page.test.ts" />
       <test-names>
-        <test-name value="Content utilities" />
-        <test-name value="Parse a localised form data object into a localised value object" />
+        <test-name value="Validating the page" />
       </test-names>
       <method v="2" />
     </configuration>
@@ -249,20 +242,6 @@
       <test-names>
         <test-name value="parseURL" />
         <test-name value="Return the correct url for &quot;/over-ons/team&quot;" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="parseURL.Return the correct urls for &quot;/contact&quot;" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <vitest-options value="--run" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/app/utils/slug.test.ts" />
-      <test-names>
-        <test-name value="parseURL" />
-        <test-name value="Return the correct urls for &quot;/contact&quot;" />
       </test-names>
       <method v="2" />
     </configuration>
@@ -310,25 +289,35 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="typecheck" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="typecheck" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Compound.Develop" />
       <item itemvalue="JavaScript Debug.Debug in Chrome" />
       <item itemvalue="npm.Dev" />
       <item itemvalue="npm.Storybook" />
+      <item itemvalue="npm.typecheck" />
       <item itemvalue="npm.db:generate" />
       <item itemvalue="npm.db:push:seed" />
       <item itemvalue="Vitest.All Tests" />
+      <item itemvalue="Vitest.Validating the page" />
       <item itemvalue="Vitest.parseURL.Return the correct url for &quot;/over-ons/team&quot;" />
-      <item itemvalue="Vitest.parseURL.Return the correct urls for &quot;/contact&quot;" />
-      <item itemvalue="Vitest.Content utilities.Parse a localised form data object into a localised value object" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.typecheck" />
+        <item itemvalue="Vitest.Validating the page" />
         <item itemvalue="npm.db:push:seed" />
         <item itemvalue="npm.db:generate" />
         <item itemvalue="Vitest.parseURL.Return the correct url for &quot;/over-ons/team&quot;" />
-        <item itemvalue="Vitest.parseURL.Return the correct urls for &quot;/contact&quot;" />
-        <item itemvalue="Vitest.Content utilities.Parse a localised form data object into a localised value object" />
       </list>
     </recent_temporary>
   </component>
@@ -388,95 +377,12 @@
       <workItem from="1744104003640" duration="30000" />
       <workItem from="1744107218447" duration="215000" />
       <workItem from="1744109617972" duration="1204000" />
-      <workItem from="1744182959032" duration="1711000" />
-    </task>
-    <task id="LOCAL-00072" summary="Changed scripts">
-      <option name="closed" value="true" />
-      <created>1741703575084</created>
-      <option name="number" value="00072" />
-      <option name="presentableId" value="LOCAL-00072" />
-      <option name="project" value="LOCAL" />
-      <updated>1741703575084</updated>
-    </task>
-    <task id="LOCAL-00073" summary="Last changes in order to switch to React Router v7">
-      <option name="closed" value="true" />
-      <created>1741704156871</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1741704156871</updated>
-    </task>
-    <task id="LOCAL-00074" summary="Refine route configuration and update dependencies">
-      <option name="closed" value="true" />
-      <created>1741774743058</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1741774743058</updated>
-    </task>
-    <task id="LOCAL-00075" summary="Removed some testing code I forgot to delete.">
-      <option name="closed" value="true" />
-      <created>1741776400952</created>
-      <option name="number" value="00075" />
-      <option name="presentableId" value="LOCAL-00075" />
-      <option name="project" value="LOCAL" />
-      <updated>1741776400952</updated>
-    </task>
-    <task id="LOCAL-00076" summary="Setup basic account page structure so that we can start with the admin work">
-      <option name="closed" value="true" />
-      <created>1741781802954</created>
-      <option name="number" value="00076" />
-      <option name="presentableId" value="LOCAL-00076" />
-      <option name="project" value="LOCAL" />
-      <updated>1741781802954</updated>
-    </task>
-    <task id="LOCAL-00077" summary="Cleaned up the content structures, removing stuff we don't need. Also added link to projects for an admin">
-      <option name="closed" value="true" />
-      <created>1741782251665</created>
-      <option name="number" value="00077" />
-      <option name="presentableId" value="LOCAL-00077" />
-      <option name="project" value="LOCAL" />
-      <updated>1741782251665</updated>
-    </task>
-    <task id="LOCAL-00078" summary="Refactored the account menu into a separate component and added admin/ route">
-      <option name="closed" value="true" />
-      <created>1741784759857</created>
-      <option name="number" value="00078" />
-      <option name="presentableId" value="LOCAL-00078" />
-      <option name="project" value="LOCAL" />
-      <updated>1741784759857</updated>
-    </task>
-    <task id="LOCAL-00079" summary="Created the dynamic content route, and added a basic implementation of the content table.">
-      <option name="closed" value="true" />
-      <created>1741785775699</created>
-      <option name="number" value="00079" />
-      <option name="presentableId" value="LOCAL-00079" />
-      <option name="project" value="LOCAL" />
-      <updated>1741785775699</updated>
-    </task>
-    <task id="LOCAL-00080" summary="Made a basic implementation of a dynamic event/project overview">
-      <option name="closed" value="true" />
-      <created>1741789215526</created>
-      <option name="number" value="00080" />
-      <option name="presentableId" value="LOCAL-00080" />
-      <option name="project" value="LOCAL" />
-      <updated>1741789215526</updated>
-    </task>
-    <task id="LOCAL-00081" summary="Content table is now localised and has a more robust value parser.">
-      <option name="closed" value="true" />
-      <created>1741790225520</created>
-      <option name="number" value="00081" />
-      <option name="presentableId" value="LOCAL-00081" />
-      <option name="project" value="LOCAL" />
-      <updated>1741790225520</updated>
-    </task>
-    <task id="LOCAL-00082" summary="Created all needed routes for CRUD functionality.">
-      <option name="closed" value="true" />
-      <created>1741869436229</created>
-      <option name="number" value="00082" />
-      <option name="presentableId" value="LOCAL-00082" />
-      <option name="project" value="LOCAL" />
-      <updated>1741869436229</updated>
+      <workItem from="1744182959032" duration="3484000" />
+      <workItem from="1744186455792" duration="6845000" />
+      <workItem from="1744269733595" duration="10876000" />
+      <workItem from="1744286517948" duration="11011000" />
+      <workItem from="1744356213721" duration="7920000" />
+      <workItem from="1744375081403" duration="282000" />
     </task>
     <task id="LOCAL-00083" summary="Code quality improvements, including running a type check on CI/CD">
       <option name="closed" value="true" />
@@ -782,7 +688,95 @@
       <option name="project" value="LOCAL" />
       <updated>1743544618451</updated>
     </task>
-    <option name="localTasksCounter" value="121" />
+    <task id="LOCAL-00121" summary="Pages are now served from the content overview route as well, and can be accessed from the admin menu. A &quot;qa&quot; script is added to run a small and full qa control locally.">
+      <option name="closed" value="true" />
+      <created>1744184819879</created>
+      <option name="number" value="00121" />
+      <option name="presentableId" value="LOCAL-00121" />
+      <option name="project" value="LOCAL" />
+      <updated>1744184819879</updated>
+    </task>
+    <task id="LOCAL-00122" summary="Reworked the Puck editor to support for page/SEO metadata.">
+      <option name="closed" value="true" />
+      <created>1744195214320</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1744195214321</updated>
+    </task>
+    <task id="LOCAL-00123" summary="Created &quot;new&quot; flow for generic pages.">
+      <option name="closed" value="true" />
+      <created>1744293214432</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1744293214433</updated>
+    </task>
+    <task id="LOCAL-00124" summary="Created &quot;new&quot; flow for generic pages.">
+      <option name="closed" value="true" />
+      <created>1744293439309</created>
+      <option name="number" value="00124" />
+      <option name="presentableId" value="LOCAL-00124" />
+      <option name="project" value="LOCAL" />
+      <updated>1744293439309</updated>
+    </task>
+    <task id="LOCAL-00125" summary="PageMutationForm now also shows errors, and made slug unique in prisma">
+      <option name="closed" value="true" />
+      <created>1744296682184</created>
+      <option name="number" value="00125" />
+      <option name="presentableId" value="LOCAL-00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1744296682184</updated>
+    </task>
+    <task id="LOCAL-00126" summary="Rearranged all the components in Storybook. They are now categorised according to Atomic Design, and have been tagged.">
+      <option name="closed" value="true" />
+      <created>1744358709945</created>
+      <option name="number" value="00126" />
+      <option name="presentableId" value="LOCAL-00126" />
+      <option name="project" value="LOCAL" />
+      <updated>1744358709945</updated>
+    </task>
+    <task id="LOCAL-00127" summary="The slug can now also be set in Puck">
+      <option name="closed" value="true" />
+      <created>1744362418411</created>
+      <option name="number" value="00127" />
+      <option name="presentableId" value="LOCAL-00127" />
+      <option name="project" value="LOCAL" />
+      <updated>1744362418411</updated>
+    </task>
+    <task id="LOCAL-00128" summary="DB diff script is runnable from npm and fixed the wrong port check method.">
+      <option name="closed" value="true" />
+      <created>1744362859461</created>
+      <option name="number" value="00128" />
+      <option name="presentableId" value="LOCAL-00128" />
+      <option name="project" value="LOCAL" />
+      <updated>1744362859461</updated>
+    </task>
+    <task id="LOCAL-00129" summary="Ran prisma migrate to updated db to new schema">
+      <option name="closed" value="true" />
+      <created>1744363054265</created>
+      <option name="number" value="00129" />
+      <option name="presentableId" value="LOCAL-00129" />
+      <option name="project" value="LOCAL" />
+      <updated>1744363054265</updated>
+    </task>
+    <task id="LOCAL-00130" summary="Pages can now be edited and saved  Also added slugs to seeding scripts">
+      <option name="closed" value="true" />
+      <created>1744364119344</created>
+      <option name="number" value="00130" />
+      <option name="presentableId" value="LOCAL-00130" />
+      <option name="project" value="LOCAL" />
+      <updated>1744364119344</updated>
+    </task>
+    <task id="LOCAL-00131" summary="Changed some of the navigation labels">
+      <option name="closed" value="true" />
+      <created>1744365268366</created>
+      <option name="number" value="00131" />
+      <option name="presentableId" value="LOCAL-00131" />
+      <option name="project" value="LOCAL" />
+      <updated>1744365268366</updated>
+    </task>
+    <option name="localTasksCounter" value="132" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -825,16 +819,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Enhance EventMutationForm with locale support and local storage integration, also added a locale selector component." />
-    <MESSAGE value="Refactor EventMutationForm to support localization and improve error handling, including new utility functions for form data transformation and error counting." />
-    <MESSAGE value="Add LocalisedInput component and enhance LocaleSelector with new props and event handling" />
-    <MESSAGE value="Add DeepPartial type and LocalisedInput component; refactor EventMutationForm for improved localization and error handling" />
-    <MESSAGE value="Fixed a lot of lint and typecheck errors" />
-    <MESSAGE value="Simplified the component tests for Event Mutation Form and updated Project Mutation Form following the same workflow as the EMF" />
-    <MESSAGE value="GH Actions now performs a build on normal push" />
-    <MESSAGE value="Enabled the UPDATE flow end to end." />
-    <MESSAGE value="Renamed news link to events" />
-    <MESSAGE value="Moved the components from the news route to the generic components folder as they can be reused." />
     <MESSAGE value="Removed the news routes" />
     <MESSAGE value="Added fonts and setup styles for the heading" />
     <MESSAGE value="Removed more references to the News" />
@@ -850,7 +834,17 @@
     <MESSAGE value="Added link to user account in header" />
     <MESSAGE value="Fixed color declarations across Tailwind, Shoelace and the app" />
     <MESSAGE value="Improvements to the header and anchor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Improvements to the header and anchor" />
+    <MESSAGE value="Pages are now served from the content overview route as well, and can be accessed from the admin menu. A &quot;qa&quot; script is added to run a small and full qa control locally." />
+    <MESSAGE value="Reworked the Puck editor to support for page/SEO metadata." />
+    <MESSAGE value="Created &quot;new&quot; flow for generic pages." />
+    <MESSAGE value="PageMutationForm now also shows errors, and made slug unique in prisma" />
+    <MESSAGE value="Rearranged all the components in Storybook. They are now categorised according to Atomic Design, and have been tagged." />
+    <MESSAGE value="The slug can now also be set in Puck" />
+    <MESSAGE value="DB diff script is runnable from npm and fixed the wrong port check method." />
+    <MESSAGE value="Ran prisma migrate to updated db to new schema" />
+    <MESSAGE value="Pages can now be edited and saved  Also added slugs to seeding scripts" />
+    <MESSAGE value="Changed some of the navigation labels" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed some of the navigation labels" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

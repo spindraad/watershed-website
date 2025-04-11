@@ -3,8 +3,9 @@ import { faker } from '@faker-js/faker';
 import Tags from './Tags';
 
 export default {
-  title: 'Components/Tags',
+  title: 'Atoms/Tags',
   component: Tags,
+  tags: ['components', 'navigation'],
 } satisfies Meta<typeof Tags>;
 
 type Story = StoryObj<typeof Tags>;

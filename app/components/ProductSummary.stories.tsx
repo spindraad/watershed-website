@@ -3,9 +3,9 @@ import { faker } from '@faker-js/faker';
 import ProductSummary from './ProductSummary';
 
 export default {
-  title: 'Components/Product Summary',
+  title: 'Molecules/Product Summary',
   component: ProductSummary,
-  tags: ['news'],
+  tags: ['components', 'deprecated'],
 } satisfies Meta<typeof ProductSummary>;
 
 type Story = StoryObj<typeof ProductSummary>;

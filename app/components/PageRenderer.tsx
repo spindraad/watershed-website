@@ -1,8 +1,8 @@
-import { Data, Render } from '@measured/puck';
-import { config } from '~/config/puck.config';
+import { Render } from '@measured/puck';
+import { config, WatershedPageData } from '~/config/puck.config';
 
 type Props = {
-  data: Partial<Data>;
+  data: Partial<WatershedPageData>;
 };
 
 export default function PageRenderer({ data }: Props) {

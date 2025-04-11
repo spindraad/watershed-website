@@ -11,6 +11,7 @@ export default {
       </div>
     ),
   ],
+  tags: ['route-components', 'authentication'],
 } as Meta<typeof ForgetPasswordFormComponent>;
 
 type Story = StoryObj<typeof ForgetPasswordFormComponent>;

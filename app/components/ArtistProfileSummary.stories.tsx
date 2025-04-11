@@ -3,9 +3,9 @@ import { faker } from '@faker-js/faker';
 import ArtistProfileSummary from './ArtistProfileSummary';
 
 export default {
-  title: 'Components/Artist Profile Summary',
+  title: 'Organisms/Artist Profile Summary',
   component: ArtistProfileSummary,
-  tags: ['news'],
+  tags: ['components', 'artists'],
 } satisfies Meta<typeof ArtistProfileSummary>;
 
 type Story = StoryObj<typeof ArtistProfileSummary>;

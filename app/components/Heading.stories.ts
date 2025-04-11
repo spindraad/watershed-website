@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import Heading from './Heading';
 
 export default {
-  title: 'Components/Heading',
+  title: 'Atoms/Heading',
   component: Heading,
   argTypes: {
     level: {
@@ -15,6 +15,7 @@ export default {
       },
     },
   },
+  tags: ['components', 'text'],
 } satisfies Meta<typeof Heading>;
 
 type Story = StoryObj<typeof Heading>;

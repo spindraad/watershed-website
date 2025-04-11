@@ -15,10 +15,16 @@ set -e
 # - LOCAL_DB_URL: URL for the local database (defaults to postgresql://postgres:postgres@localhost:5432/postgres)
 # ===============================================================
 
+# Check if run from the root directory (with package.json)
+if [[ ! -f package.json ]]; then
+  echo "ERROR: This script must be run from the root directory of the project."
+  exit 1
+fi
+
 # Load environment variables from .env file if it exists
-if [[ -f ../.env ]]; then
+if [[ -f ./.env ]]; then
   echo "Loading environment variables from .env file..."
-  source ../.env
+  source ./.env
 fi
 
 # Check required environment variables
@@ -83,22 +89,14 @@ trap '{
 }' EXIT INT TERM
 
 # Wait for port forwarding to be established with timeout
-# TODO: Use a more robust method to check if port-forwarding is established, since this gives an exit code that causes the diff to not run.
 log "Waiting for port-forwarding to be established (timeout: 15s)..."
 MAX_RETRIES=15
 count=0
-while true; do
-  # Use a different check method that doesn't exit the script
-  if (echo > /dev/tcp/localhost/$PORT_FORWARD_PORT) >/dev/null 2>&1; then
-    log "Port-forwarding successfully established"
-    break
-  fi
-
+while ! nc -z localhost $PORT_FORWARD_PORT 2>/dev/null; do
   if [[ $count -ge $MAX_RETRIES ]]; then
     log "ERROR: Port-forwarding failed to establish within timeout period"
     exit 1
   fi
-
   sleep 1
   ((count++))
 done

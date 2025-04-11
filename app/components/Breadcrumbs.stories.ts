@@ -3,8 +3,9 @@ import Breadcrumbs from './Breadcrumbs';
 import { reactRouterParameters } from 'storybook-addon-remix-react-router';
 
 export default {
-  title: 'Components/Breadcrumbs',
+  title: 'Molecules/Breadcrumbs',
   component: Breadcrumbs,
+  tags: ['components', 'navigation'],
 } satisfies Meta<typeof Breadcrumbs>;
 
 type Story = StoryObj<typeof Breadcrumbs>;

@@ -3,8 +3,9 @@ import SubMenu from './SubMenu';
 import SubMenuItem from '~/components/SubMenuItem';
 
 export default {
-  title: 'Components/Sub Menu',
+  title: 'Molecules/Sub Menu',
   component: SubMenu,
+  tags: ['components', 'navigation'],
 } satisfies Meta<typeof SubMenu>;
 
 type Story = StoryObj<typeof SubMenu>;
