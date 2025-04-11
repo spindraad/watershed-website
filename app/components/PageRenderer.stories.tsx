@@ -13,7 +13,12 @@ export const Default: Story = {
   args: {
     data: {
       root: {
-        props: { title: '', summary: '', meta: { title: '', description: '' } },
+        props: {
+          title: '',
+          summary: '',
+          slug: '',
+          meta: { title: '', description: '' },
+        },
       },
       zones: {},
       content: [
