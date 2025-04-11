@@ -1,9 +1,18 @@
-export const home = {
+import { WatershedPageData } from '~/config/puck.config';
+
+type SeedContent = {
+  en: WatershedPageData;
+  nl: WatershedPageData;
+  pap: WatershedPageData;
+};
+
+export const home: SeedContent = {
   en: {
     root: {
       props: {
         title: 'Welcome to our website',
         summary: 'The homepage of the website',
+        slug: 'home',
         meta: {
           title: 'Home | Stichting Watershed',
           description: 'Welcome to Stichting Watershed',
@@ -27,6 +36,7 @@ export const home = {
       props: {
         title: 'Welkom op onze website',
         summary: 'De hoofdpagina van de website',
+        slug: 'home',
         meta: {
           title: 'Hoofdpagina | Stichting Watershed',
           description: 'Welkom bij Stichting Watershed',
@@ -50,6 +60,7 @@ export const home = {
       props: {
         title: 'Welcome na nos website',
         summary: 'Homepage di nos website',
+        slug: 'home',
         meta: {
           title: 'Home | Stichting Watershed',
           description: 'Welcome na Stichting Watershed',
@@ -70,12 +81,13 @@ export const home = {
   },
 };
 
-export const about = {
+export const about: SeedContent = {
   en: {
     root: {
       props: {
         title: 'About Our Organization',
         summary: 'This is the about us page',
+        slug: 'about',
         meta: {
           title: 'About Our Organization | Stichting Watershed',
           description: 'Learn more about our organization',
@@ -116,6 +128,7 @@ export const about = {
       props: {
         title: 'Over Ons',
         summary: 'Dit is de over ons pagina',
+        slug: 'over-ons',
         meta: {
           title: 'Over ons | Stichting Watershed',
           description: 'Leer meer over onze organisatie',
@@ -156,6 +169,7 @@ export const about = {
       props: {
         title: 'Tokante Nos',
         summary: 'Welcome to our website',
+        slug: 'tokante-nos',
         meta: {
           title: 'Home | Stichting Watershed',
           description: 'This is our homepage.',
@@ -185,12 +199,13 @@ export const about = {
   },
 };
 
-export const contact = {
+export const contact: SeedContent = {
   en: {
     root: {
       props: {
         title: 'Contact Us',
         summary: 'This is the contact us page',
+        slug: 'contact',
         meta: {
           title: 'Contact us | Stichting Watershed',
           description: 'Get in touch with us',
@@ -214,6 +229,7 @@ export const contact = {
       props: {
         title: 'Neem contact op',
         summary: 'Dit is de contactpagina',
+        slug: 'contact',
         meta: {
           title: 'Neem contact op | Stichting Watershed',
           description: 'Neem contact met ons op',
@@ -237,6 +253,7 @@ export const contact = {
       props: {
         title: 'Kontakto Ku Nos',
         summary: 'Welcome to our website',
+        slug: 'kontakto-ku-nos',
         meta: {
           title: 'Home | Stichting Watershed',
           description: 'This is our homepage.',

@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="The slug can now also be set in Puck">
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Ran prisma migrate to updated db to new schema">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/diff-db-staging.zsh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/diff-db-staging.zsh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/pages.server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/pages.server.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/bewerken/$id/_bewerken.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/bewerken/$id/_bewerken.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/seed/_pageContent.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/seed/_pageContent.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,7 +157,7 @@
     "npm.docker:start.executor": "Run",
     "prettierjs.PrettierConfiguration.Package": "/Users/lody/dev/projects/watershed-website/node_modules/prettier",
     "settings.editor.selected.configurable": "settings.typescriptcompiler",
-    "ts.external.directory.path": "/Applications/PhpStorm.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
+    "ts.external.directory.path": "/Users/lody/dev/projects/watershed-website/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -383,23 +384,7 @@
       <workItem from="1744186455792" duration="6845000" />
       <workItem from="1744269733595" duration="10876000" />
       <workItem from="1744286517948" duration="11011000" />
-      <workItem from="1744356213721" duration="5331000" />
-    </task>
-    <task id="LOCAL-00079" summary="Created the dynamic content route, and added a basic implementation of the content table.">
-      <option name="closed" value="true" />
-      <created>1741785775699</created>
-      <option name="number" value="00079" />
-      <option name="presentableId" value="LOCAL-00079" />
-      <option name="project" value="LOCAL" />
-      <updated>1741785775699</updated>
-    </task>
-    <task id="LOCAL-00080" summary="Made a basic implementation of a dynamic event/project overview">
-      <option name="closed" value="true" />
-      <created>1741789215526</created>
-      <option name="number" value="00080" />
-      <option name="presentableId" value="LOCAL-00080" />
-      <option name="project" value="LOCAL" />
-      <updated>1741789215526</updated>
+      <workItem from="1744356213721" duration="6305000" />
     </task>
     <task id="LOCAL-00081" summary="Content table is now localised and has a more robust value parser.">
       <option name="closed" value="true" />
@@ -777,7 +762,23 @@
       <option name="project" value="LOCAL" />
       <updated>1744362418411</updated>
     </task>
-    <option name="localTasksCounter" value="128" />
+    <task id="LOCAL-00128" summary="DB diff script is runnable from npm and fixed the wrong port check method.">
+      <option name="closed" value="true" />
+      <created>1744362859461</created>
+      <option name="number" value="00128" />
+      <option name="presentableId" value="LOCAL-00128" />
+      <option name="project" value="LOCAL" />
+      <updated>1744362859461</updated>
+    </task>
+    <task id="LOCAL-00129" summary="Ran prisma migrate to updated db to new schema">
+      <option name="closed" value="true" />
+      <created>1744363054265</created>
+      <option name="number" value="00129" />
+      <option name="presentableId" value="LOCAL-00129" />
+      <option name="project" value="LOCAL" />
+      <updated>1744363054265</updated>
+    </task>
+    <option name="localTasksCounter" value="130" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -820,8 +821,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="GH Actions now performs a build on normal push" />
-    <MESSAGE value="Enabled the UPDATE flow end to end." />
     <MESSAGE value="Renamed news link to events" />
     <MESSAGE value="Moved the components from the news route to the generic components folder as they can be reused." />
     <MESSAGE value="Removed the news routes" />
@@ -845,7 +844,9 @@
     <MESSAGE value="PageMutationForm now also shows errors, and made slug unique in prisma" />
     <MESSAGE value="Rearranged all the components in Storybook. They are now categorised according to Atomic Design, and have been tagged." />
     <MESSAGE value="The slug can now also be set in Puck" />
-    <option name="LAST_COMMIT_MESSAGE" value="The slug can now also be set in Puck" />
+    <MESSAGE value="DB diff script is runnable from npm and fixed the wrong port check method." />
+    <MESSAGE value="Ran prisma migrate to updated db to new schema" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ran prisma migrate to updated db to new schema" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

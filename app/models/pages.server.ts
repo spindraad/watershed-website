@@ -12,6 +12,14 @@ export function getPages() {
   });
 }
 
+export function getPage(id: string) {
+  return prisma.page.findFirstOrThrow({
+    where: {
+      id,
+    },
+  });
+}
+
 export function getPageBySlug(slug: string) {
   return prisma.page.findFirstOrThrow({
     where: {
@@ -22,6 +30,15 @@ export function getPageBySlug(slug: string) {
 
 export function savePage(page: PageValidator) {
   return prisma.page.create({
+    data: page,
+  });
+}
+
+export function updatePage(id: string, page: PageValidator) {
+  return prisma.page.update({
+    where: {
+      id,
+    },
     data: page,
   });
 }
