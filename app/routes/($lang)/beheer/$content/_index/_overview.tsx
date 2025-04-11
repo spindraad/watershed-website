@@ -82,8 +82,8 @@ export default function AdminContentOverviewRoute({
 
   const [openDialog, setOpenDialog] = useState(false);
   const notifyRef = useRef<SlAlert>(null);
-  const [itemName, setItemName] = useState('asd');
-  const [itemID, setItemID] = useState('asd');
+  const [itemName, setItemName] = useState('');
+  const [itemID, setItemID] = useState('');
 
   function triggerDelete(itemID: string, itemName: string) {
     setItemName(itemName);

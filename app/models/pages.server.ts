@@ -47,6 +47,14 @@ export function updatePage(id: string, page: PageValidator) {
   });
 }
 
+export async function deletePage(id: string) {
+  await prisma.page.delete({
+    where: {
+      id,
+    },
+  });
+}
+
 export function convertPagesToTableData(
   pages: Page[],
   locale: SupportedLanguages,
@@ -54,8 +62,11 @@ export function convertPagesToTableData(
   return pages.map((page) => ({
     id: page.id,
     title: {
-      value:
-        (page.content[locale] as WatershedPageData).root.props?.title ?? '',
+      value: {
+        en: (page.content.en as WatershedPageData).root.props?.title ?? '',
+        nl: (page.content.nl as WatershedPageData).root.props?.title ?? '',
+        pap: (page.content.pap as WatershedPageData).root.props?.title ?? '',
+      },
       isName: true,
     },
     description:
