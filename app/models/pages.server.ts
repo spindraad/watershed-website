@@ -50,6 +50,7 @@ export function convertPagesToTableData(
   return pages.map((page) => ({
     id: page.id,
     title: { value: page.content[locale].root.props.title, isName: true },
+    description: page.content[locale].root.props.summary,
     slug: page.slug,
     createdAt: page.createdAt,
   }));
