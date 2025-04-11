@@ -3,7 +3,7 @@ export const en = {
     Greeting: 'Hello {{name}}',
     AccountMenuLinks: {
       Title: 'My account',
-      Dashboard: 'Dashboard',
+      Dashboard: 'Profile',
       Settings: 'Settings',
     },
     AdminMenuLinks: {
@@ -20,11 +20,11 @@ export const nl = {
     Greeting: 'Hallo {{name}}',
     AccountMenuLinks: {
       Title: 'Mijn account',
-      Dashboard: 'Dashboard',
+      Dashboard: 'Profiel',
       Settings: 'Instellingen',
     },
     AdminMenuLinks: {
-      Title: 'Administratie',
+      Title: 'Beheer',
       Events: 'Evenementen',
       Projects: 'Projecten',
       Pages: "Pagina's",
@@ -37,7 +37,7 @@ export const pap = {
     Greeting: 'Bon dia {{name}}',
     AccountMenuLinks: {
       Title: 'Account',
-      Dashboard: 'Dashboard',
+      Dashboard: 'Profile',
       Settings: 'Settings',
     },
     AdminMenuLinks: {
