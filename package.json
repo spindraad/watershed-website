@@ -41,6 +41,7 @@
     "db:seed": "prisma db seed",
     "db:studio": "prisma studio --browser none",
     "db:deploy:dev": "npm run db:migrate:reset -- --force",
+    "db:diff": "./scripts/diff-db-staging.zsh",
     "playwright:install": "playwright install --with-deps",
     "storybook:serve": "http-server storybook-static -p 6006 --silent",
     "storybook:wait-until-reachable": "wait-on tcp:6006",
