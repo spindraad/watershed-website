@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Puck editor is now full height for pages">
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="The admin sidebar is now hidden for the page mutation routes.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/PageEditor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PageEditor.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/_index/_overview.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/_index/_overview.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/bewerken/$id/_bewerken.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/bewerken/$id/_bewerken.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/nieuw/_nieuw.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/nieuw/_nieuw.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/verwijderen/$id/_verwijderen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/verwijderen/$id/_verwijderen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/_beheer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/_beheer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/PageMutationForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PageMutationForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/types/PrismaJson.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/types/PrismaJson.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -479,15 +475,7 @@
       <workItem from="1744286517948" duration="11011000" />
       <workItem from="1744356213721" duration="7920000" />
       <workItem from="1744375081403" duration="282000" />
-      <workItem from="1744790598033" duration="11103000" />
-    </task>
-    <task id="LOCAL-00086" summary="Added the trash button to the content table">
-      <option name="closed" value="true" />
-      <created>1741901232724</created>
-      <option name="number" value="00086" />
-      <option name="presentableId" value="LOCAL-00086" />
-      <option name="project" value="LOCAL" />
-      <updated>1741901232724</updated>
+      <workItem from="1744790598033" duration="12910000" />
     </task>
     <task id="LOCAL-00087" summary="Implement delete functionality in ContentTable with confirmation dialog">
       <option name="closed" value="true" />
@@ -873,7 +861,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744797771323</updated>
     </task>
-    <option name="localTasksCounter" value="135" />
+    <task id="LOCAL-00135" summary="The admin sidebar is now hidden for the page mutation routes.">
+      <option name="closed" value="true" />
+      <created>1744803292824</created>
+      <option name="number" value="00135" />
+      <option name="presentableId" value="LOCAL-00135" />
+      <option name="project" value="LOCAL" />
+      <updated>1744803292825</updated>
+    </task>
+    <option name="localTasksCounter" value="136" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -916,7 +912,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Created demo page content and a catch-all page route that loads content." />
     <MESSAGE value="Implemented dropcap style heading" />
     <MESSAGE value="Very basically implemented color schemes" />
     <MESSAGE value="We can now navigate to different pages" />
@@ -941,7 +936,8 @@
     <MESSAGE value="Created delete route" />
     <MESSAGE value="The page content is now more strictly validated, because we now transform the slug on multiple levels." />
     <MESSAGE value="Puck editor is now full height for pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="Puck editor is now full height for pages" />
+    <MESSAGE value="The admin sidebar is now hidden for the page mutation routes." />
+    <option name="LAST_COMMIT_MESSAGE" value="The admin sidebar is now hidden for the page mutation routes." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -1,4 +1,4 @@
-import { Data } from '@measured/puck';
+import { WatershedPageData } from '~/config/puck.config';
 
 declare global {
   // eslint-disable-next-line @typescript-eslint/no-namespace
@@ -10,14 +10,9 @@ declare global {
     };
 
     type LocalisedContent = {
-      en: Data;
-      nl: Data;
-      pap: Data;
-    };
-
-    type LocalisedPageMeta = {
-      title: Localised;
-      description: Localised;
+      en: WatershedPageData;
+      nl: WatershedPageData;
+      pap: WatershedPageData;
     };
   }
 }
