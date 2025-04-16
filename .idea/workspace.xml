@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Created delete route">
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="The page content is now more strictly validated, because we now transform the slug on multiple levels.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/validations/models/page.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/validations/models/page.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/validations/models/page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/validations/models/page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/root.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/root.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/bewerken/$id/_bewerken.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/bewerken/$id/_bewerken.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/nieuw/_nieuw.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/nieuw/_nieuw.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/_beheer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/_beheer.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -475,15 +477,7 @@
       <workItem from="1744286517948" duration="11011000" />
       <workItem from="1744356213721" duration="7920000" />
       <workItem from="1744375081403" duration="282000" />
-      <workItem from="1744790598033" duration="6455000" />
-    </task>
-    <task id="LOCAL-00084" summary="Improvements to the content table, and a small bit of refactoring to keep the code readable.">
-      <option name="closed" value="true" />
-      <created>1741900717805</created>
-      <option name="number" value="00084" />
-      <option name="presentableId" value="LOCAL-00084" />
-      <option name="project" value="LOCAL" />
-      <updated>1741900717805</updated>
+      <workItem from="1744790598033" duration="6947000" />
     </task>
     <task id="LOCAL-00085" summary="Updated the content table story with the new types.">
       <option name="closed" value="true" />
@@ -869,7 +863,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744378023049</updated>
     </task>
-    <option name="localTasksCounter" value="133" />
+    <task id="LOCAL-00133" summary="The page content is now more strictly validated, because we now transform the slug on multiple levels.">
+      <option name="closed" value="true" />
+      <created>1744797230848</created>
+      <option name="number" value="00133" />
+      <option name="presentableId" value="LOCAL-00133" />
+      <option name="project" value="LOCAL" />
+      <updated>1744797230848</updated>
+    </task>
+    <option name="localTasksCounter" value="134" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -912,7 +914,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added fonts and setup styles for the heading" />
     <MESSAGE value="Removed more references to the News" />
     <MESSAGE value="Created demo page content and a catch-all page route that loads content." />
     <MESSAGE value="Implemented dropcap style heading" />
@@ -937,7 +938,8 @@
     <MESSAGE value="Pages can now be edited and saved  Also added slugs to seeding scripts" />
     <MESSAGE value="Changed some of the navigation labels" />
     <MESSAGE value="Created delete route" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created delete route" />
+    <MESSAGE value="The page content is now more strictly validated, because we now transform the slug on multiple levels." />
+    <option name="LAST_COMMIT_MESSAGE" value="The page content is now more strictly validated, because we now transform the slug on multiple levels." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

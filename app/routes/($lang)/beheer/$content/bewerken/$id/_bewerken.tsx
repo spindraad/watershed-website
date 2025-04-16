@@ -135,5 +135,5 @@ export default function AdminEditContentRoute({
     }
   }
 
-  return <div className="w-full">{getForm()}</div>;
+  return <>{getForm()}</>;
 }

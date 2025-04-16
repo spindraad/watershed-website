@@ -105,5 +105,5 @@ export default function AdminNewContentRoute({ params }: Route.ComponentProps) {
     }
   }
 
-  return <div className="w-full min-h-screen">{getForm()}</div>;
+  return <>{getForm()}</>;
 }

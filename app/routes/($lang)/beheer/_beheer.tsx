@@ -19,12 +19,12 @@ export async function loader({ request }: LoaderFunctionArgs) {
 
 export default function AdminRoute() {
   return (
-    <div className="flex gap-4 px-4">
+    <div className="flex gap-4 px-4 h-full">
       <div className="w-80">
         <AdminMenu />
       </div>
 
-      <div className="w-full">
+      <div className="w-full h-full">
         <Outlet />
       </div>
     </div>
