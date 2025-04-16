@@ -12,9 +12,15 @@ import {
   ProjectValidator,
   validateProject,
 } from '~/validations/models/project';
+import { getPage, updatePage } from '~/models/pages.server';
+import { PageValidator, validatePage } from '~/validations/models/page';
+import PageMutationForm from '~/components/PageMutationForm';
 
 export const handle = {
   i18n: 'EditContentRoute',
+  crud: {
+    state: 'update',
+  },
 };
 
 export async function loader({ params, request }: Route.LoaderArgs) {
@@ -37,6 +43,9 @@ export async function loader({ params, request }: Route.LoaderArgs) {
 
   let payload;
   switch (content) {
+    case 'paginas':
+      payload = await getPage(id);
+      break;
     case 'evenementen':
       payload = await getEvent(id);
       break;
@@ -57,6 +66,9 @@ export async function action({ params, request }: Route.ActionArgs) {
   let validatorFn;
 
   switch (content) {
+    case 'paginas':
+      validatorFn = validatePage;
+      break;
     case 'evenementen':
       validatorFn = validateEvent;
       break;
@@ -73,6 +85,9 @@ export async function action({ params, request }: Route.ActionArgs) {
 
     if (result.success) {
       switch (content) {
+        case 'paginas':
+          await updatePage(id, result.data as PageValidator);
+          break;
         case 'evenementen':
           await updateEvent(id, result.data as EventValidator);
           break;
@@ -114,6 +129,8 @@ export default function AdminEditContentRoute({
 
   function getForm() {
     switch (type) {
+      case 'paginas':
+        return <PageMutationForm {...payload} />;
       case 'projecten':
         return <ProjectMutationForm {...payload} />;
       case 'evenementen':
@@ -121,5 +138,5 @@ export default function AdminEditContentRoute({
     }
   }
 
-  return <div className="w-full">{getForm()}</div>;
+  return <>{getForm()}</>;
 }

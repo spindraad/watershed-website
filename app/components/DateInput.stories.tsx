@@ -2,8 +2,9 @@ import type { Meta, StoryObj } from '@storybook/react';
 import DateInput from './DateInput';
 
 export default {
-  title: 'Components/Date Input',
+  title: 'Atoms/Date Input',
   component: DateInput,
+  tags: ['components', 'input', 'shoelace'],
 } satisfies Meta<typeof DateInput>;
 
 type Story = StoryObj<typeof DateInput>;

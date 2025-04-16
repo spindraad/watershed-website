@@ -3,7 +3,7 @@ import LocaleSelector from './LocaleSelector';
 import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
 
 export default {
-  title: 'Components/Locale Selector',
+  title: 'Molecules/Locale Selector',
   component: LocaleSelector,
   decorators: [
     (Story) => (
@@ -12,6 +12,7 @@ export default {
       </div>
     ),
   ],
+  tags: ['components', 'shoelace', 'localisation'],
 } satisfies Meta<typeof LocaleSelector>;
 
 type Story = StoryObj<typeof LocaleSelector>;

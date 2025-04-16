@@ -28,6 +28,8 @@ import { nl as LocaleSelectorTranslations } from '~/components/LocaleSelector.tr
 export const { LocaleSelector } = LocaleSelectorTranslations;
 import { nl as LocalisedInputTranslations } from '~/components/LocalisedInput.translations';
 export const { LocalisedInput } = LocalisedInputTranslations;
+import { nl as PageMutationFormTranslations } from '~/components/PageMutationForm.translations';
+export const { PageMutationForm } = PageMutationFormTranslations;
 
 export const common = {
   title: 'Hallo Wereld!',
@@ -140,21 +142,34 @@ export const NewsOverviewRoute = {
   Title: 'Nieuws',
 };
 
+export const AdminRoute = {
+  Title: 'Beheer',
+  Meta: {
+    Title: 'Beheer | Stichting Watershed',
+  },
+};
+
 export const ContentTypes = {
   // These use the content type as defined in the URLs
   evenementen_one: 'Evenement',
   evenementen_other: 'Evenementen',
   projecten_one: 'Project',
   projecten_other: 'Projecten',
+  paginas_one: 'Pagina',
+  paginas_other: "Pagina's",
 };
 
 export const ContentOverviewRoute = {
   ...ContentTypes,
   Meta: {
-    Title: 'Beheer - $t({{content}}, lowercase) | Stichting Watershed',
+    Title:
+      'Beheer - $t(ContentTypes:{{content}}, lowercase) | Stichting Watershed',
   },
-  Title: '$t({{content}}, capitalize)',
-  NewButtonCaption: 'Nieuw $t({{content}}, {"count": {{count}} })',
+  Title: '$t(ContentTypes:{{content}}, capitalize)',
+  NewButtonCaption: {
+    Common: 'Nieuwe $t(ContentTypes:{{content}}, {"count": {{count}} })',
+    Neuter: 'Nieuw $t(ContentTypes:{{content}}, {"count": {{count}} })',
+  },
 };
 
 export const NewContentRoute = {
@@ -195,6 +210,21 @@ export const ProjectIndexRoute = {
 };
 
 export const ProjectDetailRoute = {
+  Meta: {
+    Title: '{{title}} | Stichting Watershed',
+    description: '{{description}}',
+  },
+};
+
+export const PageIndexRoute = {
+  Title: "Pagina's",
+  Meta: {
+    Title: "Pagina's | Stichting Watershed",
+    Description: "Bekijk onze pagina's",
+  },
+};
+
+export const PageDetailRoute = {
   Meta: {
     Title: '{{title}} | Stichting Watershed',
     description: '{{description}}',

@@ -12,9 +12,20 @@ import { saveEvent } from '~/models/events.server';
 import { saveProject } from '~/models/projects.server';
 import ProjectMutationForm from '~/components/ProjectMutationForm';
 import EventMutationForm from '~/components/EventMutationForm';
+import { PageValidator, validatePage } from '~/validations/models/page';
+import PageMutationForm from '~/components/PageMutationForm';
+import { savePage } from '~/models/pages.server';
 
 export const handle = {
-  i18n: ['NewContentRoute', 'ProjectMutationForm', 'EventMutationForm'],
+  i18n: [
+    'NewContentRoute',
+    'ProjectMutationForm',
+    'EventMutationForm',
+    'PageMutationForm',
+  ],
+  crud: {
+    state: 'create',
+  },
 };
 
 export async function loader({ params, request }: Route.LoaderArgs) {
@@ -33,11 +44,17 @@ export async function action({ params, request }: Route.ActionArgs) {
   let validatorFn;
 
   switch (content) {
+    case 'paginas':
+      validatorFn = validatePage;
+      break;
     case 'projecten':
       validatorFn = validateProject;
       break;
     case 'evenementen':
       validatorFn = validateEvent;
+      break;
+    default:
+      throw new Error(`Unsupported content type: ${content}`);
   }
 
   try {
@@ -45,6 +62,9 @@ export async function action({ params, request }: Route.ActionArgs) {
 
     if (result.success) {
       switch (content) {
+        case 'paginas':
+          await savePage(result.data as PageValidator);
+          break;
         case 'projecten':
           await saveProject(result.data as ProjectValidator);
           break;
@@ -79,6 +99,8 @@ export default function AdminNewContentRoute({ params }: Route.ComponentProps) {
 
   function getForm() {
     switch (type) {
+      case 'paginas':
+        return <PageMutationForm />;
       case 'projecten':
         return <ProjectMutationForm />;
       case 'evenementen':
@@ -86,5 +108,5 @@ export default function AdminNewContentRoute({ params }: Route.ComponentProps) {
     }
   }
 
-  return <div className="w-full">{getForm()}</div>;
+  return <>{getForm()}</>;
 }

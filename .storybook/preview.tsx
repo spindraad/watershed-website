@@ -12,7 +12,7 @@ import '../app/tailwind.css';
 import './viewer.css';
 
 const preview: Preview = {
-  tags: ['autodocs', 'autodocs'],
+  tags: ['autodocs'],
   parameters: {
     i18n,
     backgrounds: {
@@ -46,7 +46,15 @@ const preview: Preview = {
     },
     options: {
       storySort: {
-        order: ['Introduction', 'Brand', 'Components', 'Forms'],
+        order: [
+          'Introduction',
+          'Brand',
+          'Atoms',
+          'Molecules',
+          'Organisms',
+          'Forms',
+          'Templates',
+        ],
       },
     },
   },

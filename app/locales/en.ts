@@ -28,6 +28,8 @@ import { en as LocaleSelectorTranslations } from '~/components/LocaleSelector.tr
 export const { LocaleSelector } = LocaleSelectorTranslations;
 import { en as LocalisedInputTranslations } from '~/components/LocalisedInput.translations';
 export const { LocalisedInput } = LocalisedInputTranslations;
+import { en as PageMutationFormTranslations } from '~/components/PageMutationForm.translations';
+export const { PageMutationForm } = PageMutationFormTranslations;
 
 export const common = {
   title: 'Hello World!',
@@ -139,21 +141,34 @@ export const NewsOverviewRoute = {
   Title: 'News',
 };
 
+export const AdminRoute = {
+  Title: 'Admin',
+  Meta: {
+    Title: 'Admin | Stichting Watershed',
+  },
+};
+
 export const ContentTypes = {
   // These use the content type as defined in the URLs
   evenementen_one: 'Event',
   evenementen_other: 'Events',
   projecten_one: 'Project',
   projecten_other: 'Projects',
+  paginas_one: 'Page',
+  paginas_other: 'Pages',
 };
 
 export const ContentOverviewRoute = {
   ...ContentTypes,
   Meta: {
-    Title: 'Admin - $t({{content}}, lowercase) | Stichting Watershed',
+    Title:
+      'Admin - $t(ContentTypes:{{content}}, lowercase) | Stichting Watershed',
   },
-  Title: '$t({{content}}, capitalize)',
-  NewButtonCaption: 'New $t({{content}}, lowercase)',
+  Title: '$t(ContentTypes:{{content}}, capitalize)',
+  NewButtonCaption: {
+    Common: 'New $t(ContentTypes:{{content}}, lowercase)',
+    Neuter: 'New $t(ContentTypes:{{content}}, lowercase)',
+  },
 };
 
 export const NewContentRoute = {
@@ -192,6 +207,21 @@ export const ProjectIndexRoute = {
 };
 
 export const ProjectDetailRoute = {
+  Meta: {
+    Title: '{{title}} | Stichting Watershed',
+    description: '{{description}}',
+  },
+};
+
+export const PageIndexRoute = {
+  Title: 'Pages',
+  Meta: {
+    Title: 'Pages | Stichting Watershed',
+    Description: 'Our pages',
+  },
+};
+
+export const PageDetailRoute = {
   Meta: {
     Title: '{{title}} | Stichting Watershed',
     description: '{{description}}',

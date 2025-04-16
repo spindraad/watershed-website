@@ -4,7 +4,7 @@ import PageEditor from '~/components/PageEditor';
 import Header from '~/components/Header';
 
 export default {
-  title: 'Components/Page Editor',
+  title: 'Templates/Page Editor',
   component: PageEditor,
   parameters: {
     layout: 'fullscreen',
@@ -17,6 +17,7 @@ export default {
       </div>
     ),
   ],
+  tags: ['components', 'content'],
 } satisfies Meta<typeof PageEditor>;
 
 type Story = StoryObj<typeof PageEditor>;
@@ -24,7 +25,9 @@ type Story = StoryObj<typeof PageEditor>;
 export const Default: Story = {
   args: {
     data: {
-      root: { props: { title: '' } },
+      root: {
+        props: { title: 'Hallo', summary: 'Dit is een beschrijving' },
+      },
       content: [
         {
           type: 'HeadingBlock',
@@ -32,7 +35,7 @@ export const Default: Story = {
             id: 'Heading-1694032984497',
             text: 'Welkom bij Watershed',
             align: 'center',
-            level: 1,
+            level: 2,
           },
         },
         {
@@ -61,5 +64,28 @@ export const Default: Story = {
       ],
     },
     onPublish: fn(),
+  },
+};
+
+export const EmptyEditor: Story = {
+  args: {
+    data: {
+      root: {
+        props: { title: 'Hallo Wereld!', summary: 'Dit is een pagina' },
+      },
+    },
+    onPublish: fn(),
+  },
+};
+
+export const Publishing: Story = {
+  args: {
+    data: {
+      root: {
+        props: { title: 'Hallo Wereld!', summary: 'Dit is een pagina' },
+      },
+    },
+    onPublish: fn(),
+    isSaving: true,
   },
 };

@@ -4,18 +4,22 @@ import { data, useLoaderData } from 'react-router';
 import PageRenderer from '~/components/PageRenderer';
 import { Prisma } from '@prisma/client';
 import { fallbackLanguage, SupportedLanguages } from '~/config/i18n';
+import { WatershedPageData } from '~/config/puck.config';
 
 export async function loader() {
   try {
     const pageData = await getPageBySlug('home');
 
+    const data = pageData.content[
+      fallbackLanguage as SupportedLanguages
+    ] as WatershedPageData;
+
     return {
-      title: pageData.title[fallbackLanguage as SupportedLanguages],
-      data: pageData.content[fallbackLanguage as SupportedLanguages],
+      title: data.root.title,
+      data,
       meta: {
-        title: pageData.meta.title[fallbackLanguage as SupportedLanguages],
-        description:
-          pageData.meta.description[fallbackLanguage as SupportedLanguages],
+        title: data.root.meta?.title,
+        description: data.root.meta?.description,
       },
     };
   } catch (error) {

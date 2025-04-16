@@ -3,6 +3,13 @@ import type { Route } from './+types/_verwijderen';
 import { ContentURLParams } from '~/types/Content';
 import { deleteEvent } from '~/models/events.server';
 import { deleteProject } from '~/models/projects.server';
+import { deletePage } from '~/models/pages.server';
+
+export const handle = {
+  crud: {
+    state: 'delete',
+  },
+};
 
 export async function loader() {
   // Return method not allowed
@@ -25,6 +32,10 @@ export async function action({ params, request }: Route.ActionArgs) {
 
   let deleteFn: (id: string) => Promise<void>;
   switch (content) {
+    case 'paginas': {
+      deleteFn = deletePage;
+      break;
+    }
     case 'evenementen': {
       deleteFn = deleteEvent;
       break;

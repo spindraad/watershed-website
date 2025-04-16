@@ -2,8 +2,9 @@ import type { Meta, StoryObj } from '@storybook/react';
 import RichTextEditor from 'app/components/RichTextEditor';
 
 export default {
-  title: 'Components/Rich Text Editor',
+  title: 'Molecules/Rich Text Editor',
   component: RichTextEditor,
+  tags: ['components', 'content', 'input'],
 } satisfies Meta<typeof RichTextEditor>;
 
 type Story = StoryObj<typeof RichTextEditor>;

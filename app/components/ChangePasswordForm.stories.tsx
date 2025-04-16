@@ -7,6 +7,7 @@ export default {
   decorators: [
     (Story) => <div className="w-full max-w-[35rem]">{Story()}</div>,
   ],
+  tags: ['components', 'authentication'],
 } satisfies Meta<typeof ChangePasswordForm>;
 
 type Story = StoryObj<typeof ChangePasswordForm>;

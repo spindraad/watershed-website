@@ -6,8 +6,9 @@ import { validateEvent } from '~/validations/models/event';
 import { expect, screen } from '@storybook/test';
 
 export default {
-  title: 'Components/Event Mutation Form',
+  title: 'Forms/Event Mutation Form',
   component: EventMutationForm,
+  tags: ['components', 'content'],
 } satisfies Meta<typeof EventMutationForm>;
 
 type Story = StoryObj<typeof EventMutationForm>;

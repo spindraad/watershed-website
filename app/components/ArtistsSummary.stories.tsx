@@ -4,9 +4,9 @@ import ArtistsSummary from './ArtistsSummary';
 import { Props as ArtistProfileSummaryProps } from './ArtistProfileSummary';
 
 export default {
-  title: 'Components/Artists Summary',
+  title: 'Organisms/Artists Summary',
   component: ArtistsSummary,
-  tags: ['news'],
+  tags: ['components', 'artists'],
 } satisfies Meta<typeof ArtistsSummary>;
 
 type Story = StoryObj<typeof ArtistsSummary>;

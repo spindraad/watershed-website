@@ -6,8 +6,9 @@ import { validateProject } from '~/validations/models/project';
 import { reactRouterParameters } from 'storybook-addon-remix-react-router';
 
 export default {
-  title: 'Components/Project Mutation Form',
+  title: 'Forms/Project Mutation Form',
   component: ProjectMutationForm,
+  tags: ['components', 'content'],
 } satisfies Meta<typeof ProjectMutationForm>;
 
 type Story = StoryObj<typeof ProjectMutationForm>;
