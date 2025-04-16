@@ -6,10 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Created delete route">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/ContentTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ContentTable.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/pages.server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/pages.server.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/_index/_overview.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/_index/_overview.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/verwijderen/$id/_verwijderen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/verwijderen/$id/_verwijderen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/validations/models/page.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/validations/models/page.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/validations/models/page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/validations/models/page.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,12 +35,8 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="feature/WAT-158_Support_deleting_pages" />
-                    <option name="lastUsedInstant" value="1744376370" />
-                  </RecentBranch>
-                  <RecentBranch>
                     <option name="branchName" value="release/WAT-60_Create_CRUD_flow_for_generic_pages" />
-                    <option name="lastUsedInstant" value="1744185222" />
+                    <option name="lastUsedInstant" value="1744378298" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="dev" />
@@ -106,6 +100,7 @@
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="php" />
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -119,62 +114,63 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Attach to Node.js/Chrome.Debug in Chrome.executor&quot;: &quot;Debug&quot;,
-    &quot;JavaScript Debug.Debug in Chrome.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.OpenDatabaseViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;Vitest.All Tests.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.Content utilities.Parse a localised form data object into a localised value object.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.Content utilities.Retrieve the number of errors for each localised field.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.Content utilities.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.Validating the page.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.parseURL.Return the correct url for \&quot;/over-ons/team\&quot;.executor&quot;: &quot;Debug&quot;,
-    &quot;Vitest.parseURL.Return the correct urls for \&quot;/contact\&quot;.executor&quot;: &quot;Debug&quot;,
-    &quot;Vitest.validateLogin.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.validateLogin.should return success: false when emailaddress is invalid.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.validateLogin.should return success: false when emailaddress is missing.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/WAT-158__Support__deleting__pages&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;22.11.0&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;22.9.0&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/lody/dev/projects/watershed-website/app/routes/_index&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.Dev.executor&quot;: &quot;Debug&quot;,
-    &quot;npm.Develop.executor&quot;: &quot;Run&quot;,
-    &quot;npm.Storybook.executor&quot;: &quot;Debug&quot;,
-    &quot;npm.db:generate.executor&quot;: &quot;Run&quot;,
-    &quot;npm.db:push:seed.executor&quot;: &quot;Run&quot;,
-    &quot;npm.dev:app.executor&quot;: &quot;Debug&quot;,
-    &quot;npm.dev:remix.executor&quot;: &quot;Debug&quot;,
-    &quot;npm.dev:storybook.executor&quot;: &quot;Debug&quot;,
-    &quot;npm.docker:start.executor&quot;: &quot;Run&quot;,
-    &quot;npm.typecheck.executor&quot;: &quot;Run&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/lody/dev/projects/watershed-website/node_modules/prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.typescriptcompiler&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/lody/dev/projects/watershed-website/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Attach to Node.js/Chrome.Debug in Chrome.executor": "Debug",
+    "JavaScript Debug.Debug in Chrome.executor": "Debug",
+    "RunOnceActivity.OpenDatabaseViewOnStart": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Vitest.All Tests.executor": "Run",
+    "Vitest.Content utilities.Parse a localised form data object into a localised value object.executor": "Run",
+    "Vitest.Content utilities.Retrieve the number of errors for each localised field.executor": "Run",
+    "Vitest.Content utilities.executor": "Run",
+    "Vitest.Validating page requests.executor": "Debug",
+    "Vitest.Validating the page.executor": "Debug",
+    "Vitest.parseURL.Return the correct url for \"/over-ons/team\".executor": "Debug",
+    "Vitest.parseURL.Return the correct urls for \"/contact\".executor": "Debug",
+    "Vitest.validateLogin.executor": "Run",
+    "Vitest.validateLogin.should return success: false when emailaddress is invalid.executor": "Run",
+    "Vitest.validateLogin.should return success: false when emailaddress is missing.executor": "Run",
+    "git-widget-placeholder": "release/WAT-60__Create__CRUD__flow__for__generic__pages",
+    "javascript.nodejs.core.library.configured.version": "22.11.0",
+    "javascript.nodejs.core.library.typings.version": "22.9.0",
+    "last_opened_file_path": "/Users/lody/dev/projects/watershed-website/app/routes/_index",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "npm",
+    "npm.Dev.executor": "Debug",
+    "npm.Develop.executor": "Run",
+    "npm.Storybook.executor": "Debug",
+    "npm.db:generate.executor": "Run",
+    "npm.db:push:seed.executor": "Run",
+    "npm.dev:app.executor": "Debug",
+    "npm.dev:remix.executor": "Debug",
+    "npm.dev:storybook.executor": "Debug",
+    "npm.docker:start.executor": "Run",
+    "npm.typecheck.executor": "Run",
+    "prettierjs.PrettierConfiguration.Package": "/Users/lody/dev/projects/watershed-website/node_modules/prettier",
+    "settings.editor.selected.configurable": "settings.typescriptcompiler",
+    "ts.external.directory.path": "/Users/lody/dev/projects/watershed-website/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ],
-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
-      &quot;CSS&quot;,
-      &quot;Markdown&quot;,
-      &quot;TEXT&quot;,
-      &quot;XML&quot;
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "CSS",
+      "Markdown",
+      "TEXT",
+      "XML"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/routes/_index" />
@@ -205,7 +201,7 @@
       <command value="npm run db:push:seed" />
     </option>
   </component>
-  <component name="RunManager" selected="Compound.Develop">
+  <component name="RunManager" selected="Vitest.Validating page requests">
     <configuration name="Develop" type="CompoundRunConfigurationType">
       <toRun name="Dev" type="js.build_tools.npm" />
       <toRun name="Storybook" type="js.build_tools.npm" />
@@ -234,16 +230,16 @@
       <scope-kind value="ALL" />
       <method v="2" />
     </configuration>
-    <configuration name="Validating the page" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
+    <configuration name="Validating page requests" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
       <working-dir value="$PROJECT_DIR$" />
       <vitest-options value="--run" />
       <envs />
-      <scope-kind value="TEST" />
+      <scope-kind value="SUITE" />
       <test-file value="$PROJECT_DIR$/app/validations/models/page.test.ts" />
       <test-names>
-        <test-name value="Validating the page" />
+        <test-name value="Validating page requests" />
       </test-names>
       <method v="2" />
     </configuration>
@@ -260,17 +256,16 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="parseURL.Return the correct url for &quot;/over-ons/team&quot;" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
+    <configuration name="Validating the page" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
       <working-dir value="$PROJECT_DIR$" />
       <vitest-options value="--run" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/app/utils/slug.test.ts" />
+      <test-file value="$PROJECT_DIR$/app/validations/models/page.test.ts" />
       <test-names>
-        <test-name value="parseURL" />
-        <test-name value="Return the correct url for &quot;/over-ons/team&quot;" />
+        <test-name value="Validating the page" />
       </test-names>
       <method v="2" />
     </configuration>
@@ -405,16 +400,16 @@
       <item itemvalue="npm.db:generate" />
       <item itemvalue="npm.db:push:seed" />
       <item itemvalue="Vitest.All Tests" />
+      <item itemvalue="Vitest.Validating page requests" />
       <item itemvalue="Vitest.Validating the page" />
-      <item itemvalue="Vitest.parseURL.Return the correct url for &quot;/over-ons/team&quot;" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.typecheck" />
+        <item itemvalue="Vitest.Validating page requests" />
         <item itemvalue="Vitest.Validating the page" />
+        <item itemvalue="npm.typecheck" />
         <item itemvalue="npm.db:push:seed" />
         <item itemvalue="npm.db:generate" />
-        <item itemvalue="Vitest.parseURL.Return the correct url for &quot;/over-ons/team&quot;" />
       </list>
     </recent_temporary>
   </component>
@@ -480,14 +475,7 @@
       <workItem from="1744286517948" duration="11011000" />
       <workItem from="1744356213721" duration="7920000" />
       <workItem from="1744375081403" duration="282000" />
-    </task>
-    <task id="LOCAL-00083" summary="Code quality improvements, including running a type check on CI/CD">
-      <option name="closed" value="true" />
-      <created>1741873654799</created>
-      <option name="number" value="00083" />
-      <option name="presentableId" value="LOCAL-00083" />
-      <option name="project" value="LOCAL" />
-      <updated>1741873654799</updated>
+      <workItem from="1744790598033" duration="6455000" />
     </task>
     <task id="LOCAL-00084" summary="Improvements to the content table, and a small bit of refactoring to keep the code readable.">
       <option name="closed" value="true" />
@@ -873,7 +861,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744365268366</updated>
     </task>
-    <option name="localTasksCounter" value="132" />
+    <task id="LOCAL-00132" summary="Created delete route">
+      <option name="closed" value="true" />
+      <created>1744378023049</created>
+      <option name="number" value="00132" />
+      <option name="presentableId" value="LOCAL-00132" />
+      <option name="project" value="LOCAL" />
+      <updated>1744378023049</updated>
+    </task>
+    <option name="localTasksCounter" value="133" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
