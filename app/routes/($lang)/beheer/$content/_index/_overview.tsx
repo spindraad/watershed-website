@@ -26,6 +26,9 @@ export const handle = {
     'ConfirmDeleteDialog',
     'DeletionNotification',
   ],
+  crud: {
+    state: 'read',
+  },
 };
 
 export async function loader({ params, request }: Route.LoaderArgs) {

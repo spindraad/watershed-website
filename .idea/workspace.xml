@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="The page content is now more strictly validated, because we now transform the slug on multiple levels.">
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Puck editor is now full height for pages">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/root.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/root.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/PageEditor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PageEditor.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/_index/_overview.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/_index/_overview.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/bewerken/$id/_bewerken.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/bewerken/$id/_bewerken.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/nieuw/_nieuw.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/nieuw/_nieuw.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/verwijderen/$id/_verwijderen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/verwijderen/$id/_verwijderen.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/_beheer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/_beheer.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -477,15 +479,7 @@
       <workItem from="1744286517948" duration="11011000" />
       <workItem from="1744356213721" duration="7920000" />
       <workItem from="1744375081403" duration="282000" />
-      <workItem from="1744790598033" duration="6947000" />
-    </task>
-    <task id="LOCAL-00085" summary="Updated the content table story with the new types.">
-      <option name="closed" value="true" />
-      <created>1741900829513</created>
-      <option name="number" value="00085" />
-      <option name="presentableId" value="LOCAL-00085" />
-      <option name="project" value="LOCAL" />
-      <updated>1741900829513</updated>
+      <workItem from="1744790598033" duration="11103000" />
     </task>
     <task id="LOCAL-00086" summary="Added the trash button to the content table">
       <option name="closed" value="true" />
@@ -871,7 +865,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744797230848</updated>
     </task>
-    <option name="localTasksCounter" value="134" />
+    <task id="LOCAL-00134" summary="Puck editor is now full height for pages">
+      <option name="closed" value="true" />
+      <created>1744797771323</created>
+      <option name="number" value="00134" />
+      <option name="presentableId" value="LOCAL-00134" />
+      <option name="project" value="LOCAL" />
+      <updated>1744797771323</updated>
+    </task>
+    <option name="localTasksCounter" value="135" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -914,7 +916,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Removed more references to the News" />
     <MESSAGE value="Created demo page content and a catch-all page route that loads content." />
     <MESSAGE value="Implemented dropcap style heading" />
     <MESSAGE value="Very basically implemented color schemes" />
@@ -939,7 +940,8 @@
     <MESSAGE value="Changed some of the navigation labels" />
     <MESSAGE value="Created delete route" />
     <MESSAGE value="The page content is now more strictly validated, because we now transform the slug on multiple levels." />
-    <option name="LAST_COMMIT_MESSAGE" value="The page content is now more strictly validated, because we now transform the slug on multiple levels." />
+    <MESSAGE value="Puck editor is now full height for pages" />
+    <option name="LAST_COMMIT_MESSAGE" value="Puck editor is now full height for pages" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

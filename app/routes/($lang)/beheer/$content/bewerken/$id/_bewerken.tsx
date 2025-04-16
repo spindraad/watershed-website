@@ -18,6 +18,9 @@ import PageMutationForm from '~/components/PageMutationForm';
 
 export const handle = {
   i18n: 'EditContentRoute',
+  crud: {
+    state: 'update',
+  },
 };
 
 export async function loader({ params, request }: Route.LoaderArgs) {

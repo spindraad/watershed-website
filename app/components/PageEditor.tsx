@@ -138,8 +138,15 @@ function EditorHeader({
   };
 
   return (
-    <header>
-      <div className="flex flex-row justify-between items-center mx-auto h-24">
+    <header className="flex flex-col gap-2 w-full h-24 justify-center">
+      <div className="w-auto">
+        <SlButton href="/beheer/paginas" variant="neutral" size="small" outline>
+          <SlIcon name="arrow-left" slot="prefix" />
+          Terug
+        </SlButton>
+      </div>
+
+      <div className="flex flex-row justify-between items-center mx-auto w-full">
         <div className="flex flex-row gap-2 justify-center items-center">
           <SlIconButton
             name="layout-sidebar-inset"

@@ -23,6 +23,9 @@ export const handle = {
     'EventMutationForm',
     'PageMutationForm',
   ],
+  crud: {
+    state: 'create',
+  },
 };
 
 export async function loader({ params, request }: Route.LoaderArgs) {

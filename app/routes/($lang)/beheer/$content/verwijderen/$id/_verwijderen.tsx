@@ -5,6 +5,12 @@ import { deleteEvent } from '~/models/events.server';
 import { deleteProject } from '~/models/projects.server';
 import { deletePage } from '~/models/pages.server';
 
+export const handle = {
+  crud: {
+    state: 'delete',
+  },
+};
+
 export async function loader() {
   // Return method not allowed
   return new Response('Method not allowed', { status: 405 });
