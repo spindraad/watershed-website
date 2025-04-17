@@ -7,9 +7,11 @@ export async function loader({ params }: Route.LoaderArgs) {
   const file = await fileStorage.get(fileName);
 
   if (!file) {
+    console.warn(`File not found: ${fileName}`);
     throw new Response('Not Found', { status: 404 });
   }
 
+  console.log(`Serving file: ${fileName}`);
   return new Response(file.stream(), {
     headers: {
       'Content-Type': file.type,

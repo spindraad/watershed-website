@@ -16,6 +16,11 @@ export const en = {
       List: 'Overview',
       Create: 'Create new project',
     },
+    Media: {
+      Title: 'Media',
+      List: 'Manage media',
+      Create: 'Upload new media',
+    },
   },
 };
 
@@ -36,6 +41,11 @@ export const nl = {
       Title: 'Projects',
       List: 'Overzicht',
       Create: 'Nieuw project aanmaken',
+    },
+    Media: {
+      Title: 'Media',
+      List: 'Media beheren',
+      Create: 'Nieuwe media uploaden',
     },
   },
 };

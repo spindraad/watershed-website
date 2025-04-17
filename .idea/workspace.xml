@@ -4,14 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Double checked and fixed the meta tags where applicable, so now regular pages have their custom meta tags back.">
-      <change afterPath="$PROJECT_DIR$/app/.server/file-uploads.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routes/afbeelding_/$fileName/_dynamic-image.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routes/afbeelding_/_index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Implemented a basic upload handler for images">
+      <change afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/media/_index/_media-overview.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/media/uploaden/_media-upload.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.server/file-uploads.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/.server/file-uploads.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/ContentTable.translations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ContentTable.translations.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/AdminMenu.translations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/AdminMenu.translations.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/AdminMenu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/AdminMenu.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/afbeelding_/$fileName/_dynamic-image.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/afbeelding_/$fileName/_dynamic-image.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,11 +203,11 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/routes/($lang)/beheer/media/_index" />
+      <recent name="$PROJECT_DIR$/app/routes/($lang)/beheer/media/uploaden" />
+      <recent name="$PROJECT_DIR$/tmp" />
       <recent name="$PROJECT_DIR$/app/routes/afbeelding_/$fileName" />
       <recent name="$PROJECT_DIR$/app/routes" />
-      <recent name="$PROJECT_DIR$/app/routes/($lang)" />
-      <recent name="$PROJECT_DIR$/app/routes/afbeelding" />
-      <recent name="$PROJECT_DIR$/app/routes/($lang)/evenementen/_index" />
     </key>
     <key name="es6.move.members.recent.items">
       <recent name="$PROJECT_DIR$/app/types/Input.ts" />
@@ -501,15 +502,7 @@
       <workItem from="1744356213721" duration="7920000" />
       <workItem from="1744375081403" duration="282000" />
       <workItem from="1744790598033" duration="12910000" />
-      <workItem from="1744892412975" duration="135000" />
-    </task>
-    <task id="LOCAL-00089" summary="Enhance delete functionality in ContentTable with notification and dialog improvements">
-      <option name="closed" value="true" />
-      <created>1741909296958</created>
-      <option name="number" value="00089" />
-      <option name="presentableId" value="LOCAL-00089" />
-      <option name="project" value="LOCAL" />
-      <updated>1741909296958</updated>
+      <workItem from="1744892412975" duration="2831000" />
     </task>
     <task id="LOCAL-00090" summary="Added localised meta data for the content routes">
       <option name="closed" value="true" />
@@ -895,7 +888,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744881036902</updated>
     </task>
-    <option name="localTasksCounter" value="138" />
+    <task id="LOCAL-00138" summary="Implemented a basic upload handler for images">
+      <option name="closed" value="true" />
+      <created>1744892763555</created>
+      <option name="number" value="00138" />
+      <option name="presentableId" value="LOCAL-00138" />
+      <option name="project" value="LOCAL" />
+      <updated>1744892763555</updated>
+    </task>
+    <option name="localTasksCounter" value="139" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -938,7 +939,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="We can now navigate to different pages" />
     <MESSAGE value="Created basic event and project overview/detail routes" />
     <MESSAGE value="Many fixes and improvements to the routing in order to make it more robust. Also added page meta to the database and made the page meta and page content pieces localised." />
     <MESSAGE value="Fixed linting and typecheck errors" />
@@ -963,7 +963,8 @@
     <MESSAGE value="The admin sidebar is now hidden for the page mutation routes." />
     <MESSAGE value="Added new logo and favicon" />
     <MESSAGE value="Double checked and fixed the meta tags where applicable, so now regular pages have their custom meta tags back." />
-    <option name="LAST_COMMIT_MESSAGE" value="Double checked and fixed the meta tags where applicable, so now regular pages have their custom meta tags back." />
+    <MESSAGE value="Implemented a basic upload handler for images" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented a basic upload handler for images" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
