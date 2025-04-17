@@ -1,26 +1,33 @@
-import {
-  useActionData,
-  type ActionFunctionArgs,
-  data,
-  type MetaFunction,
-  redirect,
-} from 'react-router';
+import type { Route } from './+types/_login';
+import { useActionData, data, redirect } from 'react-router';
 import { useTranslation } from 'react-i18next';
 import LoginFormComponent from './LoginFormComponent';
 import Heading from '~/components/Heading';
 import { validateLogin, ValidationErrors } from '~/validations/flows/login';
 import { isUserPasswordActive, verifyLogin } from '~/models/user.server';
 import { createUserSession } from '~/.server/session';
+import i18nServer from '~/modules/i18n.server';
 
 export const handle = {
-  i18n: 'login',
+  i18n: 'LoginRoute',
 };
 
 type ActionData = ValidationErrors & {
   userNotFound?: string;
 };
 
-export async function action({ request }: ActionFunctionArgs) {
+export async function loader({ request }: Route.LoaderArgs) {
+  const t = await i18nServer.getFixedT(request, 'LoginRoute');
+
+  return {
+    metaTranslations: {
+      title: t('Meta.Title'),
+      description: t('Meta.Description'),
+    },
+  };
+}
+
+export async function action({ request }: Route.ActionArgs) {
   const results = await validateLogin(request);
 
   if (!results.success) {
@@ -59,22 +66,25 @@ export async function action({ request }: ActionFunctionArgs) {
   });
 }
 
-export const meta: MetaFunction = () => {
+export const meta: Route.MetaFunction = ({ data }) => {
   return [
     {
-      title: 'Login',
-      description: 'Login to your account',
+      title: data.metaTranslations.title,
+    },
+    {
+      name: 'description',
+      content: data.metaTranslations.description,
     },
   ];
 };
 
 export default function LoginRoute() {
-  const { t } = useTranslation('login');
+  const { t } = useTranslation('LoginRoute');
   const actionData = useActionData<ActionData>();
 
   return (
     <div className="content space-y-4">
-      <Heading level={1}>{t('title')}</Heading>
+      <Heading level={1}>{t('Title')}</Heading>
 
       <div className="w-full max-w-lg">
         <LoginFormComponent action="/inloggen" errors={actionData} />

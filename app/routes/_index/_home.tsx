@@ -15,11 +15,11 @@ export async function loader() {
     ] as WatershedPageData;
 
     return {
-      title: data.root.title,
+      title: data.root.props?.title,
       data,
       meta: {
-        title: data.root.meta?.title,
-        description: data.root.meta?.description,
+        title: data.root.props?.meta?.title,
+        description: data.root.props?.meta?.description,
       },
     };
   } catch (error) {
@@ -39,8 +39,8 @@ export const meta: Route.MetaFunction = ({
 }: Route.MetaArgs) => [
   {
     title: meta.title,
-    description: meta.description,
   },
+  { name: 'description', content: meta.description },
 ];
 
 export default function PageRoute() {

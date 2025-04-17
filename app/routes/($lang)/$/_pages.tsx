@@ -18,11 +18,11 @@ export async function loader({ params }: Route.LoaderArgs) {
     ] as WatershedPageData;
 
     return {
-      title: data.root.title,
+      title: data.root.props?.title,
       data: data,
       meta: {
-        title: data.root.meta?.title,
-        description: data.root.meta?.description,
+        title: data.root.props?.meta?.title,
+        description: data.root.props?.meta?.description,
       },
     };
   } catch (error) {

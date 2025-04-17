@@ -37,10 +37,12 @@ export const common = {
   logout: 'Logout',
 };
 
-export const login = {
-  title: 'Login',
-  username: 'Username',
-  password: 'Password',
+export const LoginRoute = {
+  Title: 'Login',
+  Meta: {
+    Title: 'Login | Stichting Watershed',
+    Description: 'Login to your account',
+  },
 };
 
 export const LoginFormComponent = {
@@ -141,6 +143,13 @@ export const NewsOverviewRoute = {
   Title: 'News',
 };
 
+export const AccountRoute = {
+  Title: 'Account',
+  Meta: {
+    Title: 'Account | Stichting Watershed',
+  },
+};
+
 export const AdminRoute = {
   Title: 'Admin',
   Meta: {
@@ -194,7 +203,7 @@ export const EventIndexRoute = {
 export const EventDetailRoute = {
   Meta: {
     Title: '{{title}} | Stichting Watershed',
-    description: '{{description}}',
+    Description: '{{description}}',
   },
 };
 
@@ -209,7 +218,7 @@ export const ProjectIndexRoute = {
 export const ProjectDetailRoute = {
   Meta: {
     Title: '{{title}} | Stichting Watershed',
-    description: '{{description}}',
+    Description: '{{description}}',
   },
 };
 
