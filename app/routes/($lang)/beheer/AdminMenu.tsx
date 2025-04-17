@@ -37,6 +37,15 @@ export default function AdminMenu() {
         </SubMenuItem>
       </SubMenu>
 
+      <SubMenu title={t('Media.Title')}>
+        <SubMenuItem icon="images" to="media">
+          {t('Media.List')}
+        </SubMenuItem>
+        <SubMenuItem icon="cloud-upload" to="media/uploaden">
+          {t('Media.Create')}
+        </SubMenuItem>
+      </SubMenu>
+
       <Link to="/account">Mijn account</Link>
     </div>
   );

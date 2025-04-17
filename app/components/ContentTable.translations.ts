@@ -1,6 +1,6 @@
 export const en = {
   ContentTable: {
-    Title: 'yo',
+    Title: '',
     TableHeaders: {
       actions: 'Actions',
       id: 'ID',
