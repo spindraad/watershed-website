@@ -1,3 +1,3 @@
 export async function loader() {
-  return new Reponse('Not Found', { status: 404 });
+  return new Response('Not Found', { status: 404 });
 }

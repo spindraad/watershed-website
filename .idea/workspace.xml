@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Implemented a basic upload handler for images">
-      <change afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/media/_index/_media-overview.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/media/uploaden/_media-upload.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.server/file-uploads.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/.server/file-uploads.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/ContentTable.translations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ContentTable.translations.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/AdminMenu.translations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/AdminMenu.translations.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/AdminMenu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/AdminMenu.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/afbeelding_/$fileName/_dynamic-image.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/afbeelding_/$fileName/_dynamic-image.ts" afterDir="false" />
-    </list>
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Added some test routes for checking the image upload. Also improved it so the DX is a bit better." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -502,15 +493,7 @@
       <workItem from="1744356213721" duration="7920000" />
       <workItem from="1744375081403" duration="282000" />
       <workItem from="1744790598033" duration="12910000" />
-      <workItem from="1744892412975" duration="2831000" />
-    </task>
-    <task id="LOCAL-00090" summary="Added localised meta data for the content routes">
-      <option name="closed" value="true" />
-      <created>1742042473396</created>
-      <option name="number" value="00090" />
-      <option name="presentableId" value="LOCAL-00090" />
-      <option name="project" value="LOCAL" />
-      <updated>1742042473396</updated>
+      <workItem from="1744892412975" duration="3229000" />
     </task>
     <task id="LOCAL-00091" summary="A lot of small changes to the translations, and added a &quot;new&quot; button to te crud overview route.">
       <option name="closed" value="true" />
@@ -896,7 +879,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744892763555</updated>
     </task>
-    <option name="localTasksCounter" value="139" />
+    <task id="LOCAL-00139" summary="Added some test routes for checking the image upload. Also improved it so the DX is a bit better.">
+      <option name="closed" value="true" />
+      <created>1744895409097</created>
+      <option name="number" value="00139" />
+      <option name="presentableId" value="LOCAL-00139" />
+      <option name="project" value="LOCAL" />
+      <updated>1744895409097</updated>
+    </task>
+    <option name="localTasksCounter" value="140" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -939,7 +930,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Created basic event and project overview/detail routes" />
     <MESSAGE value="Many fixes and improvements to the routing in order to make it more robust. Also added page meta to the database and made the page meta and page content pieces localised." />
     <MESSAGE value="Fixed linting and typecheck errors" />
     <MESSAGE value="Added meta for events and projects" />
@@ -964,7 +954,8 @@
     <MESSAGE value="Added new logo and favicon" />
     <MESSAGE value="Double checked and fixed the meta tags where applicable, so now regular pages have their custom meta tags back." />
     <MESSAGE value="Implemented a basic upload handler for images" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented a basic upload handler for images" />
+    <MESSAGE value="Added some test routes for checking the image upload. Also improved it so the DX is a bit better." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added some test routes for checking the image upload. Also improved it so the DX is a bit better." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
