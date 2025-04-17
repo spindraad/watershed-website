@@ -31,9 +31,15 @@ export const handle = {
 export async function loader({ params, request }: Route.LoaderArgs) {
   const t = await i18nServer.getFixedT(request, 'NewContentRoute');
 
+  let titleKey = 'Meta.Title.Neuter';
+  const content = params.content as ContentURLParams;
+  if (content === 'paginas') {
+    titleKey = 'Meta.Title.Common';
+  }
+
   return {
     metaTranslations: {
-      title: t('Meta.Title', { content: params.content, count: 1 }),
+      title: t(titleKey, { content: params.content, count: 1 }),
     },
   };
 }
