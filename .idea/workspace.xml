@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Added some test routes for checking the image upload. Also improved it so the DX is a bit better." />
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Fixed typo">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/deploy.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/deploy.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/templates/deployment.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/secrets.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/templates/secrets.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/values.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/values.yaml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,12 +53,8 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="feature/WAT-167_Implement_upload_in_RR" />
-                    <option name="lastUsedInstant" value="1744884526" />
-                  </RecentBranch>
-                  <RecentBranch>
                     <option name="branchName" value="release/WAT-50_Upload_mechanism" />
-                    <option name="lastUsedInstant" value="1744884210" />
+                    <option name="lastUsedInstant" value="1744895914" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="dev" />
@@ -148,7 +151,7 @@
     &quot;Vitest.validateLogin.executor&quot;: &quot;Run&quot;,
     &quot;Vitest.validateLogin.should return success: false when emailaddress is invalid.executor&quot;: &quot;Run&quot;,
     &quot;Vitest.validateLogin.should return success: false when emailaddress is missing.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/WAT-167__Implement__upload__in__RR&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;release/WAT-50__Upload__mechanism&quot;,
     &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;22.11.0&quot;,
     &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;22.9.0&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/lody/dev/projects/watershed-website/app/routes/_index&quot;,
@@ -493,15 +496,11 @@
       <workItem from="1744356213721" duration="7920000" />
       <workItem from="1744375081403" duration="282000" />
       <workItem from="1744790598033" duration="12910000" />
-      <workItem from="1744892412975" duration="3229000" />
-    </task>
-    <task id="LOCAL-00091" summary="A lot of small changes to the translations, and added a &quot;new&quot; button to te crud overview route.">
-      <option name="closed" value="true" />
-      <created>1742152396007</created>
-      <option name="number" value="00091" />
-      <option name="presentableId" value="LOCAL-00091" />
-      <option name="project" value="LOCAL" />
-      <updated>1742152396007</updated>
+      <workItem from="1744892412975" duration="3451000" />
+      <workItem from="1744962947469" duration="22000" />
+      <workItem from="1744963015579" duration="25000" />
+      <workItem from="1744982416131" duration="1808000" />
+      <workItem from="1745396952332" duration="6017000" />
     </task>
     <task id="LOCAL-00092" summary="Created event form">
       <option name="closed" value="true" />
@@ -887,7 +886,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744895409097</updated>
     </task>
-    <option name="localTasksCounter" value="140" />
+    <task id="LOCAL-00140" summary="Fixed typo">
+      <option name="closed" value="true" />
+      <created>1744895739994</created>
+      <option name="number" value="00140" />
+      <option name="presentableId" value="LOCAL-00140" />
+      <option name="project" value="LOCAL" />
+      <updated>1744895739994</updated>
+    </task>
+    <option name="localTasksCounter" value="141" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -930,7 +937,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Many fixes and improvements to the routing in order to make it more robust. Also added page meta to the database and made the page meta and page content pieces localised." />
     <MESSAGE value="Fixed linting and typecheck errors" />
     <MESSAGE value="Added meta for events and projects" />
     <MESSAGE value="Added meta for events and projects" />
@@ -955,7 +961,8 @@
     <MESSAGE value="Double checked and fixed the meta tags where applicable, so now regular pages have their custom meta tags back." />
     <MESSAGE value="Implemented a basic upload handler for images" />
     <MESSAGE value="Added some test routes for checking the image upload. Also improved it so the DX is a bit better." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added some test routes for checking the image upload. Also improved it so the DX is a bit better." />
+    <MESSAGE value="Fixed typo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed typo" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

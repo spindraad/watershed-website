@@ -54,6 +54,18 @@ spec:
                   key: POSTGRES_PASSWORD
             - name: DATABASE_URL
               value: "postgres://{{ .Values.postgresql.auth.username }}:$(DATABASE_PASSWORD)@{{ .Values.app.name }}-postgresql-service:5432/{{ .Values.postgresql.auth.database }}"
+            - name: BUCKET_NAME
+              value: {{ .Values.bucket.name }}
+            - name: BUCKET_KEY_ID
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.app.name }}-bucket-secret
+                  key: BUCKET_KEY_ID
+            - name: BUCKET_SECRET_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.app.name }}-bucket-secret
+                  key: BUCKET_SECRET_KEY
           resources:
             requests:
               cpu: {{ .Values.resources.requests.cpu | default "100m" }}
