@@ -1,40 +1,31 @@
-# Welcome to Remix!
+# Stichting Watershed
 
-- 📖 [Remix docs](https://remix.run/docs)
+This repo contains the source code for the newly redesigned website for [Stichting Watershed](https://stichtingwatershed.nl).
 
 ## Development
 
-Run the dev server:
+The website is designed to be run in Docker containers. This means you can quickly spin it up locally:
 
-```shellscript
-npm run dev
+```shell
+$ docker build -t watershed-website .
+$ docker run -p 8080:80 watershed-website
 ```
+
+Then, you can access the website at [http://localhost:8080](http://localhost:8080).
 
 ## Deployment
 
-First, build your app for production:
+The website is deployed using GitHub Actions. The deployment process is triggered by tagging a release with `npm run release <release-name|version>`.
+The deployment is being done on a dev cluster or on production based on whether a beta version is being tagged.
 
-```sh
-npm run build
-```
+### Prerequisites
 
-Then run the app in production mode:
+Before deploying the website on a cluster, you need to have a DO Spaces bucket created. You can do this through [DO's portal](https://docs.digitalocean.com/products/kubernetes/how-to/use-spaces/).
+You also need to have a DO Spaces access key and secret key.
 
-```sh
-npm start
-```
+Keep in mind:
 
-Now you'll need to pick a host to deploy it to.
-
-### DIY
-
-If you're familiar with deploying Node applications, the built-in Remix app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-- `build/server`
-- `build/client`
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever css framework you prefer. See the [Vite docs on css](https://vitejs.dev/guide/features.html#css) for more information.
+- The region is `ams3`.
+- Enable CDN.
+- The names for the buckets are `watershed-dev-bucket` and `watershed-production-bucket`.
+- Create access keys for the buckets and store those in `.env`.

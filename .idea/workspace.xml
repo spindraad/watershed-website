@@ -4,15 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Added new logo and favicon">
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Configured Kubernetes templates with the correct bucket name and credentials based on the deployment environment">
+      <change afterPath="$PROJECT_DIR$/app/.server/S3FileStorageClass.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/locales/en.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/en.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/locales/nl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/nl.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/$/_pages.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/$/_pages.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/account/_account.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/account/_account.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/nieuw/_nieuw.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/nieuw/_nieuw.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/inloggen/_login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/inloggen/_login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/_index/_home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/_index/_home.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.server/file-uploads.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/.server/file-uploads.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/media/_index/_media-overview.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/media/_index/_media-overview.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/environment.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,27 +24,27 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "history": [
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;history&quot;: [
     {
-      "state": "OPEN"
+      &quot;state&quot;: &quot;OPEN&quot;
     }
   ],
-  "lastFilter": {
-    "state": "OPEN"
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
   }
-}]]></component>
-  <component name="GitHubPullRequestState"><![CDATA[{
-  "prStates": [
+}</component>
+  <component name="GitHubPullRequestState">{
+  &quot;prStates&quot;: [
     {
-      "id": {
-        "id": "PR_kwDONBCqIM6S2BUB",
-        "number": 27
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDONBCqIM6S2BUB&quot;,
+        &quot;number&quot;: 27
       },
-      "lastSeen": 1744811292575
+      &quot;lastSeen&quot;: 1744811292575
     }
   ]
-}]]></component>
+}</component>
   <component name="GitToolBoxStore">
     <option name="recentBranches">
       <RecentBranches>
@@ -55,12 +54,16 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="fix/WAT-160_Homepage_misses_meta_info" />
-                    <option name="lastUsedInstant" value="1744878788" />
+                    <option name="branchName" value="feature/WAT-168_Implement_S3_Deployment" />
+                    <option name="lastUsedInstant" value="1745413410" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="release/WAT-50_Upload_mechanism" />
+                    <option name="lastUsedInstant" value="1744895914" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="dev" />
-                    <option name="lastUsedInstant" value="1744811464" />
+                    <option name="lastUsedInstant" value="1744882410" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="release/WAT-48_Design" />
@@ -122,7 +125,7 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="php" />
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -153,7 +156,7 @@
     "Vitest.validateLogin.executor": "Run",
     "Vitest.validateLogin.should return success: false when emailaddress is invalid.executor": "Run",
     "Vitest.validateLogin.should return success: false when emailaddress is missing.executor": "Run",
-    "git-widget-placeholder": "fix/WAT-160__Homepage__misses__meta__info",
+    "git-widget-placeholder": "feature/WAT-168__Implement__S3__Deployment",
     "javascript.nodejs.core.library.configured.version": "22.11.0",
     "javascript.nodejs.core.library.typings.version": "22.9.0",
     "last_opened_file_path": "/Users/lody/dev/projects/watershed-website/app/routes/_index",
@@ -175,7 +178,8 @@
     "npm.docker:start.executor": "Run",
     "npm.typecheck.executor": "Run",
     "prettierjs.PrettierConfiguration.Package": "/Users/lody/dev/projects/watershed-website/node_modules/prettier",
-    "settings.editor.selected.configurable": "tasks.servers",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "settings.typescriptcompiler",
     "ts.external.directory.path": "/Users/lody/dev/projects/watershed-website/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   },
@@ -198,11 +202,11 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/routes/($lang)/evenementen/_index" />
-      <recent name="$PROJECT_DIR$/app/routes/($lang)" />
-      <recent name="$PROJECT_DIR$/app/components/" />
-      <recent name="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/verwijderen/_index" />
-      <recent name="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/bewerken/_index" />
+      <recent name="$PROJECT_DIR$/app/routes/($lang)/beheer/media/_index" />
+      <recent name="$PROJECT_DIR$/app/routes/($lang)/beheer/media/uploaden" />
+      <recent name="$PROJECT_DIR$/tmp" />
+      <recent name="$PROJECT_DIR$/app/routes/afbeelding_/$fileName" />
+      <recent name="$PROJECT_DIR$/app/routes" />
     </key>
     <key name="es6.move.members.recent.items">
       <recent name="$PROJECT_DIR$/app/types/Input.ts" />
@@ -221,7 +225,7 @@
       <command value="npm run db:push:seed" />
     </option>
   </component>
-  <component name="RunManager" selected="Vitest.Validating page requests">
+  <component name="RunManager" selected="npm.Dev">
     <configuration name="Develop" type="CompoundRunConfigurationType">
       <toRun name="Dev" type="js.build_tools.npm" />
       <toRun name="Storybook" type="js.build_tools.npm" />
@@ -497,46 +501,11 @@
       <workItem from="1744356213721" duration="7920000" />
       <workItem from="1744375081403" duration="282000" />
       <workItem from="1744790598033" duration="12910000" />
-    </task>
-    <task id="LOCAL-00088" summary="Enhance delete functionality in ContentTable with notification and dialog improvements">
-      <option name="closed" value="true" />
-      <created>1741909278570</created>
-      <option name="number" value="00088" />
-      <option name="presentableId" value="LOCAL-00088" />
-      <option name="project" value="LOCAL" />
-      <updated>1741909278570</updated>
-    </task>
-    <task id="LOCAL-00089" summary="Enhance delete functionality in ContentTable with notification and dialog improvements">
-      <option name="closed" value="true" />
-      <created>1741909296958</created>
-      <option name="number" value="00089" />
-      <option name="presentableId" value="LOCAL-00089" />
-      <option name="project" value="LOCAL" />
-      <updated>1741909296958</updated>
-    </task>
-    <task id="LOCAL-00090" summary="Added localised meta data for the content routes">
-      <option name="closed" value="true" />
-      <created>1742042473396</created>
-      <option name="number" value="00090" />
-      <option name="presentableId" value="LOCAL-00090" />
-      <option name="project" value="LOCAL" />
-      <updated>1742042473396</updated>
-    </task>
-    <task id="LOCAL-00091" summary="A lot of small changes to the translations, and added a &quot;new&quot; button to te crud overview route.">
-      <option name="closed" value="true" />
-      <created>1742152396007</created>
-      <option name="number" value="00091" />
-      <option name="presentableId" value="LOCAL-00091" />
-      <option name="project" value="LOCAL" />
-      <updated>1742152396007</updated>
-    </task>
-    <task id="LOCAL-00092" summary="Created event form">
-      <option name="closed" value="true" />
-      <created>1742160220243</created>
-      <option name="number" value="00092" />
-      <option name="presentableId" value="LOCAL-00092" />
-      <option name="project" value="LOCAL" />
-      <updated>1742160220243</updated>
+      <workItem from="1744892412975" duration="3451000" />
+      <workItem from="1744962947469" duration="22000" />
+      <workItem from="1744963015579" duration="25000" />
+      <workItem from="1744982416131" duration="1808000" />
+      <workItem from="1745396952332" duration="15001000" />
     </task>
     <task id="LOCAL-00093" summary="Created project form, and made some smaller improvements to the event form">
       <option name="closed" value="true" />
@@ -890,7 +859,47 @@
       <option name="project" value="LOCAL" />
       <updated>1744811941293</updated>
     </task>
-    <option name="localTasksCounter" value="137" />
+    <task id="LOCAL-00137" summary="Double checked and fixed the meta tags where applicable, so now regular pages have their custom meta tags back.">
+      <option name="closed" value="true" />
+      <created>1744881036902</created>
+      <option name="number" value="00137" />
+      <option name="presentableId" value="LOCAL-00137" />
+      <option name="project" value="LOCAL" />
+      <updated>1744881036902</updated>
+    </task>
+    <task id="LOCAL-00138" summary="Implemented a basic upload handler for images">
+      <option name="closed" value="true" />
+      <created>1744892763555</created>
+      <option name="number" value="00138" />
+      <option name="presentableId" value="LOCAL-00138" />
+      <option name="project" value="LOCAL" />
+      <updated>1744892763555</updated>
+    </task>
+    <task id="LOCAL-00139" summary="Added some test routes for checking the image upload. Also improved it so the DX is a bit better.">
+      <option name="closed" value="true" />
+      <created>1744895409097</created>
+      <option name="number" value="00139" />
+      <option name="presentableId" value="LOCAL-00139" />
+      <option name="project" value="LOCAL" />
+      <updated>1744895409097</updated>
+    </task>
+    <task id="LOCAL-00140" summary="Fixed typo">
+      <option name="closed" value="true" />
+      <created>1744895739994</created>
+      <option name="number" value="00140" />
+      <option name="presentableId" value="LOCAL-00140" />
+      <option name="project" value="LOCAL" />
+      <updated>1744895739994</updated>
+    </task>
+    <task id="LOCAL-00141" summary="Configured Kubernetes templates with the correct bucket name and credentials based on the deployment environment">
+      <option name="closed" value="true" />
+      <created>1745403299993</created>
+      <option name="number" value="00141" />
+      <option name="presentableId" value="LOCAL-00141" />
+      <option name="project" value="LOCAL" />
+      <updated>1745403299993</updated>
+    </task>
+    <option name="localTasksCounter" value="142" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -933,11 +942,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Very basically implemented color schemes" />
-    <MESSAGE value="We can now navigate to different pages" />
-    <MESSAGE value="Created basic event and project overview/detail routes" />
-    <MESSAGE value="Many fixes and improvements to the routing in order to make it more robust. Also added page meta to the database and made the page meta and page content pieces localised." />
-    <MESSAGE value="Fixed linting and typecheck errors" />
     <MESSAGE value="Added meta for events and projects" />
     <MESSAGE value="Added meta for events and projects" />
     <MESSAGE value="Added link to user account in header" />
@@ -958,7 +962,12 @@
     <MESSAGE value="Puck editor is now full height for pages" />
     <MESSAGE value="The admin sidebar is now hidden for the page mutation routes." />
     <MESSAGE value="Added new logo and favicon" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added new logo and favicon" />
+    <MESSAGE value="Double checked and fixed the meta tags where applicable, so now regular pages have their custom meta tags back." />
+    <MESSAGE value="Implemented a basic upload handler for images" />
+    <MESSAGE value="Added some test routes for checking the image upload. Also improved it so the DX is a bit better." />
+    <MESSAGE value="Fixed typo" />
+    <MESSAGE value="Configured Kubernetes templates with the correct bucket name and credentials based on the deployment environment" />
+    <option name="LAST_COMMIT_MESSAGE" value="Configured Kubernetes templates with the correct bucket name and credentials based on the deployment environment" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

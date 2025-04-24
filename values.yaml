@@ -17,6 +17,8 @@ service:
 secrets:
     sendgridApiKey: "<PLACEHOLDER>"
     sessionSecret: "<PLACEHOLDER>"
+    bucketKeyID: "<PLACEHOLDER>"
+    bucketSecretKey: "<PLACEHOLDER>"
 
 environment: production # or: development
 
@@ -44,3 +46,5 @@ postgresql:
     limits:
       memory: "512Mi"
       cpu: "500m"
+bucket:
+  name: "<PLACEHOLDER>"
