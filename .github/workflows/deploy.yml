@@ -141,5 +141,8 @@ jobs:
           --set environment=$(echo ${{ steps.env.outputs.environment }})
           --set secrets.sendgridApiKey=${{ secrets.SENDGRID_API_KEY }}
           --set secrets.sessionSecret=${{ secrets.SESSION_SECRET }}
+          --set bucket.name=${{ steps.env.outputs.environment == 'development' && secrets.DEV_BUCKET_NAME || secrets.PROD_BUCKET_NAME }}
+          --set secrets.bucketKeyID=${{ steps.env.outputs.environment == 'development' && secrets.DEV_BUCKET_KEY_ID || secrets.PROD_BUCKET_KEY_ID }}
+          --set secrets.bucketSecretKey=${{ steps.env.outputs.environment == 'development' && secrets.DEV_BUCKET_SECRET_KEY || secrets.PROD_BUCKET_SECRET_KEY }}
           --namespace=$(echo ${{ steps.namespace.outputs.result }})
           --create-namespace
