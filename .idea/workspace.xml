@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Configured Kubernetes templates with the correct bucket name and credentials based on the deployment environment">
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/inloggen/_login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/inloggen/_login.tsx" afterDir="false" />
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Added missing LoginFormComponent translations to login route">
+      <change afterPath="$PROJECT_DIR$/.github/workflows/db-migrations.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -498,15 +499,7 @@
       <workItem from="1745396952332" duration="15001000" />
       <workItem from="1745499566279" duration="607000" />
       <workItem from="1745568448307" duration="476000" />
-      <workItem from="1745574701792" duration="1575000" />
-    </task>
-    <task id="LOCAL-00093" summary="Created project form, and made some smaller improvements to the event form">
-      <option name="closed" value="true" />
-      <created>1742161146618</created>
-      <option name="number" value="00093" />
-      <option name="presentableId" value="LOCAL-00093" />
-      <option name="project" value="LOCAL" />
-      <updated>1742161146618</updated>
+      <workItem from="1745574701792" duration="2415000" />
     </task>
     <task id="LOCAL-00094" summary="Mutation forms are now processed and saved for 'Create'">
       <option name="closed" value="true" />
@@ -892,7 +885,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745403299993</updated>
     </task>
-    <option name="localTasksCounter" value="142" />
+    <task id="LOCAL-00142" summary="Added missing LoginFormComponent translations to login route">
+      <option name="closed" value="true" />
+      <created>1745581050466</created>
+      <option name="number" value="00142" />
+      <option name="presentableId" value="LOCAL-00142" />
+      <option name="project" value="LOCAL" />
+      <updated>1745581050467</updated>
+    </task>
+    <option name="localTasksCounter" value="143" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -936,7 +937,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added meta for events and projects" />
-    <MESSAGE value="Added meta for events and projects" />
     <MESSAGE value="Added link to user account in header" />
     <MESSAGE value="Fixed color declarations across Tailwind, Shoelace and the app" />
     <MESSAGE value="Improvements to the header and anchor" />
@@ -960,7 +960,8 @@
     <MESSAGE value="Added some test routes for checking the image upload. Also improved it so the DX is a bit better." />
     <MESSAGE value="Fixed typo" />
     <MESSAGE value="Configured Kubernetes templates with the correct bucket name and credentials based on the deployment environment" />
-    <option name="LAST_COMMIT_MESSAGE" value="Configured Kubernetes templates with the correct bucket name and credentials based on the deployment environment" />
+    <MESSAGE value="Added missing LoginFormComponent translations to login route" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added missing LoginFormComponent translations to login route" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
