@@ -28,7 +28,8 @@ export default function (plop) {
         name: 'storybookTitle',
         message: 'What is the title of the Storybook story?',
         default(answers) {
-          return answers.name;
+          // Split the name by uppercase letters
+          return answers.name.split(/(?<![A-Z])(?=[A-Z])/).join(' ');
         },
       },
     ],

@@ -84,10 +84,60 @@ const createPages = (client: PrismaClient) => {
   });
 };
 
+const createNavigationMenu = (client: PrismaClient) => {
+  const menuItems = [
+    {
+      id: 'events',
+      title: {
+        en: 'Events',
+        nl: 'Evenementen',
+        pap: 'Eventos',
+      },
+      slug: 'events',
+      order: 0,
+    },
+    {
+      id: 'projects',
+      title: {
+        en: 'Projects',
+        nl: 'Projecten',
+        pap: 'Proyekto',
+      },
+      slug: 'projects',
+      order: 1,
+    },
+    {
+      id: 'about',
+      title: {
+        en: 'About Us',
+        nl: 'Over Ons',
+        pap: 'Sobre Nos',
+      },
+      slug: 'about',
+      order: 2,
+    },
+    {
+      id: 'contact',
+      title: {
+        en: 'Contact Us',
+        nl: 'Neem Contact Op',
+        pap: 'Kontakto Ku Nos',
+      },
+      slug: 'contact',
+      order: 3,
+    },
+  ];
+
+  return client.menuItem.createManyAndReturn({
+    data: menuItems,
+  });
+};
+
 export async function createContent(client: PrismaClient) {
   const projects = createProjects(client);
   const events = createEvents(client);
   const pages = createPages(client);
+  const menuItems = createNavigationMenu(client);
 
-  return Promise.all([projects, events, pages]);
+  return Promise.all([projects, events, pages, menuItems]);
 }

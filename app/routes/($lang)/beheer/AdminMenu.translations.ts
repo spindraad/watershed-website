@@ -5,6 +5,7 @@ export const en = {
       Title: 'Pages',
       List: 'Overview',
       Create: 'Create new page',
+      Menu: 'Manage main navigation',
     },
     Events: {
       Title: 'Events',
@@ -31,6 +32,7 @@ export const nl = {
       Title: "Pagina's",
       List: 'Overzicht',
       Create: 'Nieuwe pagina aanmaken',
+      Menu: 'Hoofdmenu beheren',
     },
     Events: {
       Title: 'Evenementen',

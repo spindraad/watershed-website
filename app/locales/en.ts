@@ -236,3 +236,13 @@ export const PageDetailRoute = {
     description: '{{description}}',
   },
 };
+
+export const ManageMenuRoute = {
+  Title: 'Manage menu',
+  Meta: {
+    Title: 'Manage navigation menu | Stichting Watershed',
+    Description: 'Manage the navigation menu',
+  },
+  EditorDescription: 'Drag and drop to reorder the menu items',
+  ExampleDescription: 'Example',
+};

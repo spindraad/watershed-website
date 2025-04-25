@@ -104,3 +104,18 @@ model Page {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
+
+model MenuItem {
+  id String @id @default(cuid())
+
+  /// [Localised]
+  title Json
+
+  slug String @unique
+
+  order    Int
+  parentId String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
