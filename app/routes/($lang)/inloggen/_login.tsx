@@ -9,7 +9,7 @@ import { createUserSession } from '~/.server/session';
 import i18nServer from '~/modules/i18n.server';
 
 export const handle = {
-  i18n: 'LoginRoute',
+  i18n: ['LoginRoute', 'LoginFormComponent'],
 };
 
 type ActionData = ValidationErrors & {
