@@ -4,22 +4,28 @@ import { useFetcher, useLoaderData } from 'react-router';
 import i18nServer from '~/modules/i18n.server';
 import { useTranslation } from 'react-i18next';
 import Heading from '~/components/Heading';
-import NavigationMenu, {
-  NavigationMenuItem,
-} from '~/components/NavigationMenu';
+import { NavigationMenuItem } from '~/components/NavigationMenu';
 import MenuEditor from '~/components/MenuEditor';
 import { useState } from 'react';
+import Header from '~/components/Header';
+import { getUser } from '~/.server/session';
 
 export const handle = {
   i18n: ['ManageMenuRoute', 'MenuEditor'],
 };
 
 export async function loader({ request }: Route.LoaderArgs) {
+  const user = await getUser(request);
+  if (!user) {
+    throw new Response('Unauthorized', { status: 401 });
+  }
+
   const t = await i18nServer.getFixedT(request, 'ManageMenuRoute');
 
   const menuItems = await getMenuItems();
 
   return {
+    user,
     menuItems,
     metaTranslations: {
       title: t('Meta.Title'),
@@ -48,7 +54,7 @@ export const meta: Route.MetaFunction = ({ data }) => [
 export default function ManageMenuRoute() {
   const fetcher = useFetcher<NavigationMenuItem[]>();
   const { t } = useTranslation('ManageMenuRoute');
-  const { menuItems: storedMenuItems } = useLoaderData<typeof loader>();
+  const { user, menuItems: storedMenuItems } = useLoaderData<typeof loader>();
   const [menuItems, setMenuItems] = useState(() => storedMenuItems);
 
   const handleSave = (items: NavigationMenuItem[]) => {
@@ -64,8 +70,8 @@ export default function ManageMenuRoute() {
   return (
     <div className="flex flex-col gap-4">
       <Heading level={1}>{t('Title')}</Heading>
-      <div className="flex flex-row gap-6">
-        <div className="space-y-4 w-[40rem]">
+      <div className="flex flex-col gap-6">
+        <div className="w-full">
           <MenuEditor
             items={menuItems}
             onSave={handleSave}
@@ -75,7 +81,7 @@ export default function ManageMenuRoute() {
 
         <div className="space-y-4 w-full">
           <Heading level={2}>{t('ExampleDescription')}</Heading>
-          <NavigationMenu items={menuItems} />
+          <Header user={user} menuItems={menuItems} demoMode />
         </div>
       </div>
     </div>

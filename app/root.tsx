@@ -21,6 +21,8 @@ import Header from '~/components/Header';
 import { useOptionalUser } from '~/utils/user';
 import { getUser } from '~/.server/session';
 import Heading from '~/components/Heading';
+import { getMenuItems } from '~/models/menu.server';
+import { NavigationMenuItem } from '~/components/NavigationMenu';
 
 export const links: LinksFunction = () => [
   {
@@ -41,10 +43,14 @@ export async function loader({ request }: LoaderFunctionArgs) {
   const user = await getUser(request);
   const locale = await i18nServer.getLocale(request);
   const url = new URL(request.url);
+
+  const menuItems = await getMenuItems();
+
   return data({
     user,
     BASE_URL: url.origin ?? '',
     locale,
+    menuItems,
   });
 }
 
@@ -53,6 +59,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
   const data = useRouteLoaderData('root') as {
     locale?: string;
     BASE_URL?: string;
+    menuItems: NavigationMenuItem[];
   };
   const shoelace = useShoelace({
     URL: data?.BASE_URL ?? '',
@@ -68,7 +75,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </head>
       <body className="h-full text-black bg-accent-primary-100 font-gt-haptik flex flex-col gap-4">
         <ShoelaceContext.Provider value={shoelace}>
-          <Header user={user} />
+          <Header user={user} menuItems={data.menuItems} />
           {children}
         </ShoelaceContext.Provider>
         <ScrollRestoration />

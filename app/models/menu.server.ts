@@ -1,7 +1,7 @@
 import { prisma } from '~/.server/db';
 import { NavigationMenuItem } from '~/components/NavigationMenu';
 
-export function getMenuItems() {
+export function getMenuItems(): Promise<NavigationMenuItem[]> {
   return prisma.menuItem.findMany({
     orderBy: {
       order: 'asc',

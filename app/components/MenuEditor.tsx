@@ -12,10 +12,10 @@ import {
 import { CSS } from '@dnd-kit/utilities';
 import {
   arrayMove,
+  horizontalListSortingStrategy,
   SortableContext,
   sortableKeyboardCoordinates,
   useSortable,
-  verticalListSortingStrategy,
 } from '@dnd-kit/sortable';
 import { ShoelaceContext } from '~/components/shoelace';
 import { NavigationMenuItem } from '~/components/NavigationMenu';
@@ -71,13 +71,13 @@ export default function MenuEditor({ items, onSave, isSaving }: Props) {
     >
       <SortableContext
         items={sortedItems}
-        strategy={verticalListSortingStrategy}
+        strategy={horizontalListSortingStrategy}
       >
         <div className="flex flex-col gap-4">
           <Heading level={2}>{t('Title')}</Heading>
           <p>{t('Description')}</p>
 
-          <ul className="flex flex-col gap-2">
+          <ul className="flex flex-row gap-2">
             {sortedItems.map((item) => (
               <SortableItem key={item.id} item={item} />
             ))}
@@ -111,7 +111,7 @@ const Item = forwardRef<HTMLLIElement, ItemProps>(({ item, ...props }, ref) => {
   return (
     <li
       ref={ref}
-      className="flex flex-row gap-4 items-center border border-neutral-100 bg-white px-4 py-2 rounded-md"
+      className="flex flex-row gap-4 items-center border border-neutral-100 bg-white px-4 py-2 rounded-md w-full"
       {...props}
     >
       <SlIcon name="grip-vertical" />

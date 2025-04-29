@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="MenuEditor now works as component that can be previewed.">
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Swapped navigation menu out for the actual header (in demo mode), which also meant we can load the dynamic header on the site itself. Also swapped orientation on the manage menu page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Header.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/components/MenuEditor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/MenuEditor.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/menu.server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/menu.server.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/root.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/root.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/menu/_index/_manage-main-nav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/menu/_index/_manage-main-nav.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -502,15 +504,7 @@
       <workItem from="1745499566279" duration="607000" />
       <workItem from="1745568448307" duration="476000" />
       <workItem from="1745574701792" duration="11502000" />
-      <workItem from="1745907637700" duration="17649000" />
-    </task>
-    <task id="LOCAL-00100" summary="Fixed a lot of lint and typecheck errors">
-      <option name="closed" value="true" />
-      <created>1742819161843</created>
-      <option name="number" value="00100" />
-      <option name="presentableId" value="LOCAL-00100" />
-      <option name="project" value="LOCAL" />
-      <updated>1742819161843</updated>
+      <workItem from="1745907637700" duration="18721000" />
     </task>
     <task id="LOCAL-00101" summary="Simplified the component tests for Event Mutation Form and updated Project Mutation Form following the same workflow as the EMF">
       <option name="closed" value="true" />
@@ -896,7 +890,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745931701320</updated>
     </task>
-    <option name="localTasksCounter" value="149" />
+    <task id="LOCAL-00149" summary="We now have a basic workflow for editing the menu">
+      <option name="closed" value="true" />
+      <created>1745932515135</created>
+      <option name="number" value="00149" />
+      <option name="presentableId" value="LOCAL-00149" />
+      <option name="project" value="LOCAL" />
+      <updated>1745932515135</updated>
+    </task>
+    <option name="localTasksCounter" value="150" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -939,8 +941,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Created &quot;new&quot; flow for generic pages." />
-    <MESSAGE value="PageMutationForm now also shows errors, and made slug unique in prisma" />
     <MESSAGE value="Rearranged all the components in Storybook. They are now categorised according to Atomic Design, and have been tagged." />
     <MESSAGE value="The slug can now also be set in Puck" />
     <MESSAGE value="DB diff script is runnable from npm and fixed the wrong port check method." />
@@ -964,7 +964,9 @@
     <MESSAGE value="Created base component for the MenuEditor" />
     <MESSAGE value="We now have a very rudimentary draggable menu editor interface" />
     <MESSAGE value="MenuEditor now works as component that can be previewed." />
-    <option name="LAST_COMMIT_MESSAGE" value="MenuEditor now works as component that can be previewed." />
+    <MESSAGE value="We now have a basic workflow for editing the menu" />
+    <MESSAGE value="Swapped navigation menu out for the actual header (in demo mode), which also meant we can load the dynamic header on the site itself. Also swapped orientation on the manage menu page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Swapped navigation menu out for the actual header (in demo mode), which also meant we can load the dynamic header on the site itself. Also swapped orientation on the manage menu page" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
