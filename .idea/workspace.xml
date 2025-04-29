@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Extended Plop generator to allow the selection of tags and categories">
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Created base component for the MenuEditor">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/NavigationMenu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/NavigationMenu.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/locales/en.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/en.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/locales/nl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/nl.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/MenuEditor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/MenuEditor.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -502,15 +500,7 @@
       <workItem from="1745499566279" duration="607000" />
       <workItem from="1745568448307" duration="476000" />
       <workItem from="1745574701792" duration="11502000" />
-      <workItem from="1745907637700" duration="5762000" />
-    </task>
-    <task id="LOCAL-00097" summary="Refactor EventMutationForm to support localization and improve error handling, including new utility functions for form data transformation and error counting.">
-      <option name="closed" value="true" />
-      <created>1742582714601</created>
-      <option name="number" value="00097" />
-      <option name="presentableId" value="LOCAL-00097" />
-      <option name="project" value="LOCAL" />
-      <updated>1742582714602</updated>
+      <workItem from="1745907637700" duration="10519000" />
     </task>
     <task id="LOCAL-00098" summary="Add LocalisedInput component and enhance LocaleSelector with new props and event handling">
       <option name="closed" value="true" />
@@ -896,7 +886,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745913292888</updated>
     </task>
-    <option name="localTasksCounter" value="146" />
+    <task id="LOCAL-00146" summary="Created base component for the MenuEditor">
+      <option name="closed" value="true" />
+      <created>1745918677113</created>
+      <option name="number" value="00146" />
+      <option name="presentableId" value="LOCAL-00146" />
+      <option name="project" value="LOCAL" />
+      <updated>1745918677113</updated>
+    </task>
+    <option name="localTasksCounter" value="147" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -939,7 +937,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Improvements to the header and anchor" />
     <MESSAGE value="Pages are now served from the content overview route as well, and can be accessed from the admin menu. A &quot;qa&quot; script is added to run a small and full qa control locally." />
     <MESSAGE value="Reworked the Puck editor to support for page/SEO metadata." />
     <MESSAGE value="Created &quot;new&quot; flow for generic pages." />
@@ -964,7 +961,8 @@
     <MESSAGE value="Added Prisma migrations script for prod and dev database deploys, in preparation for when we switch over to managed databases." />
     <MESSAGE value="Created a Nav menu component that lists a navigation menu, and created the route for the menu manager" />
     <MESSAGE value="Extended Plop generator to allow the selection of tags and categories" />
-    <option name="LAST_COMMIT_MESSAGE" value="Extended Plop generator to allow the selection of tags and categories" />
+    <MESSAGE value="Created base component for the MenuEditor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created base component for the MenuEditor" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
