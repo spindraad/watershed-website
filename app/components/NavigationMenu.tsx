@@ -1,6 +1,6 @@
 import Anchor from '~/components/Anchor';
 
-type NavigationMenuItem = {
+export type NavigationMenuItem = {
   id: string;
   title: PrismaJson.Localised;
   slug: string;

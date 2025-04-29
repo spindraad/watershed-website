@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Created a Nav menu component that lists a navigation menu, and created the route for the menu manager">
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Extended Plop generator to allow the selection of tags and categories">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/NavigationMenu.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/NavigationMenu.stories.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plopfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/plopfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scaffold-templates/plop/component/{{ name }}.stories.tsx.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/scaffold-templates/plop/component/{{ name }}.stories.tsx.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scaffold-templates/plop/form/component/{{ name }}.stories.tsx.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/scaffold-templates/plop/form/component/{{ name }}.stories.tsx.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scaffold-templates/plop/form/component/{{ name }}.tsx.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/scaffold-templates/plop/form/component/{{ name }}.tsx.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/NavigationMenu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/NavigationMenu.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/locales/en.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/en.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/locales/nl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/nl.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -506,15 +502,7 @@
       <workItem from="1745499566279" duration="607000" />
       <workItem from="1745568448307" duration="476000" />
       <workItem from="1745574701792" duration="11502000" />
-      <workItem from="1745907637700" duration="3861000" />
-    </task>
-    <task id="LOCAL-00096" summary="Enhance EventMutationForm with locale support and local storage integration, also added a locale selector component.">
-      <option name="closed" value="true" />
-      <created>1742224442828</created>
-      <option name="number" value="00096" />
-      <option name="presentableId" value="LOCAL-00096" />
-      <option name="project" value="LOCAL" />
-      <updated>1742224442829</updated>
+      <workItem from="1745907637700" duration="5762000" />
     </task>
     <task id="LOCAL-00097" summary="Refactor EventMutationForm to support localization and improve error handling, including new utility functions for form data transformation and error counting.">
       <option name="closed" value="true" />
@@ -900,7 +888,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745593659021</updated>
     </task>
-    <option name="localTasksCounter" value="145" />
+    <task id="LOCAL-00145" summary="Extended Plop generator to allow the selection of tags and categories">
+      <option name="closed" value="true" />
+      <created>1745913292888</created>
+      <option name="number" value="00145" />
+      <option name="presentableId" value="LOCAL-00145" />
+      <option name="project" value="LOCAL" />
+      <updated>1745913292888</updated>
+    </task>
+    <option name="localTasksCounter" value="146" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -943,7 +939,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fixed color declarations across Tailwind, Shoelace and the app" />
     <MESSAGE value="Improvements to the header and anchor" />
     <MESSAGE value="Pages are now served from the content overview route as well, and can be accessed from the admin menu. A &quot;qa&quot; script is added to run a small and full qa control locally." />
     <MESSAGE value="Reworked the Puck editor to support for page/SEO metadata." />
@@ -968,7 +963,8 @@
     <MESSAGE value="Added missing LoginFormComponent translations to login route" />
     <MESSAGE value="Added Prisma migrations script for prod and dev database deploys, in preparation for when we switch over to managed databases." />
     <MESSAGE value="Created a Nav menu component that lists a navigation menu, and created the route for the menu manager" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created a Nav menu component that lists a navigation menu, and created the route for the menu manager" />
+    <MESSAGE value="Extended Plop generator to allow the selection of tags and categories" />
+    <option name="LAST_COMMIT_MESSAGE" value="Extended Plop generator to allow the selection of tags and categories" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
