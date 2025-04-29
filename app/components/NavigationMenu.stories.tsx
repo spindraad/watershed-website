@@ -4,7 +4,7 @@ import NavigationMenu from './NavigationMenu';
 export default {
   title: 'Molecules/Navigation Menu',
   component: NavigationMenu,
-  tags: ['navigation'],
+  tags: ['components', 'navigation'],
 } satisfies Meta<typeof NavigationMenu>;
 
 type Story = StoryObj<typeof NavigationMenu>;
