@@ -1,6 +1,6 @@
 import type { Route } from './+types/_manage-main-nav';
-import { getMenuItems } from '~/models/menu.server';
-import { useLoaderData } from 'react-router';
+import { getMenuItems, saveMenuItems } from '~/models/menu.server';
+import { useFetcher, useLoaderData } from 'react-router';
 import i18nServer from '~/modules/i18n.server';
 import { useTranslation } from 'react-i18next';
 import Heading from '~/components/Heading';
@@ -28,6 +28,15 @@ export async function loader({ request }: Route.LoaderArgs) {
   };
 }
 
+export async function action({ request }: Route.ActionArgs) {
+  const items = await request.json();
+  await saveMenuItems(items);
+
+  return {
+    message: 'Menu items saved successfully',
+  };
+}
+
 export const meta: Route.MetaFunction = ({ data }) => [
   { title: data.metaTranslations.title },
   {
@@ -37,20 +46,31 @@ export const meta: Route.MetaFunction = ({ data }) => [
 ];
 
 export default function ManageMenuRoute() {
+  const fetcher = useFetcher<NavigationMenuItem[]>();
   const { t } = useTranslation('ManageMenuRoute');
   const { menuItems: storedMenuItems } = useLoaderData<typeof loader>();
   const [menuItems, setMenuItems] = useState(() => storedMenuItems);
 
   const handleSave = (items: NavigationMenuItem[]) => {
     setMenuItems(items);
+    fetcher.submit(items, {
+      method: 'post',
+      encType: 'application/json',
+    });
   };
+
+  const isSaving = fetcher.state !== 'idle';
 
   return (
     <div className="flex flex-col gap-4">
       <Heading level={1}>{t('Title')}</Heading>
-      <div className="flex flex-row gap-2">
-        <div className="space-y-4 w-full">
-          <MenuEditor items={menuItems} onSave={handleSave} />
+      <div className="flex flex-row gap-6">
+        <div className="space-y-4 w-[40rem]">
+          <MenuEditor
+            items={menuItems}
+            onSave={handleSave}
+            isSaving={isSaving}
+          />
         </div>
 
         <div className="space-y-4 w-full">

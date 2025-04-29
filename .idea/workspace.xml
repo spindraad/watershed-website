@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="We now have a very rudimentary draggable menu editor interface">
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="MenuEditor now works as component that can be previewed.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/MenuEditor.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/MenuEditor.stories.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/components/MenuEditor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/MenuEditor.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/menu.server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/menu.server.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/menu/_index/_manage-main-nav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/menu/_index/_manage-main-nav.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -505,15 +502,7 @@
       <workItem from="1745499566279" duration="607000" />
       <workItem from="1745568448307" duration="476000" />
       <workItem from="1745574701792" duration="11502000" />
-      <workItem from="1745907637700" duration="16839000" />
-    </task>
-    <task id="LOCAL-00099" summary="Add DeepPartial type and LocalisedInput component; refactor EventMutationForm for improved localization and error handling">
-      <option name="closed" value="true" />
-      <created>1742817052503</created>
-      <option name="number" value="00099" />
-      <option name="presentableId" value="LOCAL-00099" />
-      <option name="project" value="LOCAL" />
-      <updated>1742817052503</updated>
+      <workItem from="1745907637700" duration="17649000" />
     </task>
     <task id="LOCAL-00100" summary="Fixed a lot of lint and typecheck errors">
       <option name="closed" value="true" />
@@ -899,7 +888,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745924998902</updated>
     </task>
-    <option name="localTasksCounter" value="148" />
+    <task id="LOCAL-00148" summary="MenuEditor now works as component that can be previewed.">
+      <option name="closed" value="true" />
+      <created>1745931701320</created>
+      <option name="number" value="00148" />
+      <option name="presentableId" value="LOCAL-00148" />
+      <option name="project" value="LOCAL" />
+      <updated>1745931701320</updated>
+    </task>
+    <option name="localTasksCounter" value="149" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -942,7 +939,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Reworked the Puck editor to support for page/SEO metadata." />
     <MESSAGE value="Created &quot;new&quot; flow for generic pages." />
     <MESSAGE value="PageMutationForm now also shows errors, and made slug unique in prisma" />
     <MESSAGE value="Rearranged all the components in Storybook. They are now categorised according to Atomic Design, and have been tagged." />
@@ -967,7 +963,8 @@
     <MESSAGE value="Extended Plop generator to allow the selection of tags and categories" />
     <MESSAGE value="Created base component for the MenuEditor" />
     <MESSAGE value="We now have a very rudimentary draggable menu editor interface" />
-    <option name="LAST_COMMIT_MESSAGE" value="We now have a very rudimentary draggable menu editor interface" />
+    <MESSAGE value="MenuEditor now works as component that can be previewed." />
+    <option name="LAST_COMMIT_MESSAGE" value="MenuEditor now works as component that can be previewed." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

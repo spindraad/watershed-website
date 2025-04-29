@@ -24,9 +24,10 @@ import Heading from '~/components/Heading';
 type Props = {
   items: NavigationMenuItem[];
   onSave: (items: NavigationMenuItem[]) => void;
+  isSaving?: boolean;
 };
 
-export default function MenuEditor({ items, onSave }: Props) {
+export default function MenuEditor({ items, onSave, isSaving }: Props) {
   const { t } = useTranslation('MenuEditor');
   const { SlButton } = useContext(ShoelaceContext);
   const [sortedItems, setSortedItems] = useState(
@@ -73,7 +74,7 @@ export default function MenuEditor({ items, onSave }: Props) {
         strategy={verticalListSortingStrategy}
       >
         <div className="flex flex-col gap-4">
-          <Heading level={3}>{t('Title')}</Heading>
+          <Heading level={2}>{t('Title')}</Heading>
           <p>{t('Description')}</p>
 
           <ul className="flex flex-col gap-2">
@@ -87,6 +88,8 @@ export default function MenuEditor({ items, onSave }: Props) {
             variant="primary"
             size="large"
             onClick={handleSave}
+            disabled={isSaving}
+            loading={isSaving}
           >
             {t('SaveButtonCaption')}
           </SlButton>

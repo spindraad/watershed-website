@@ -1,4 +1,5 @@
 import { prisma } from '~/.server/db';
+import { NavigationMenuItem } from '~/components/NavigationMenu';
 
 export function getMenuItems() {
   return prisma.menuItem.findMany({
@@ -12,4 +13,25 @@ export function getMenuItems() {
       order: true,
     },
   });
+}
+
+export function saveMenuItems(items: NavigationMenuItem[]) {
+  return prisma.$transaction(
+    items.map((item) =>
+      prisma.menuItem.upsert({
+        where: { id: item.id },
+        create: {
+          id: item.id,
+          title: item.title,
+          slug: item.slug,
+          order: item.order,
+        },
+        update: {
+          title: item.title,
+          slug: item.slug,
+          order: item.order,
+        },
+      }),
+    ),
+  );
 }
