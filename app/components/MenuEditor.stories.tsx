@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { action } from '@storybook/addon-actions';
 import MenuEditor from './MenuEditor';
 
 export default {
@@ -18,6 +19,7 @@ type Story = StoryObj<typeof MenuEditor>;
 
 export const Default: Story = {
   args: {
+    onSave: action('onSave'),
     items: [
       {
         id: 'projecten',

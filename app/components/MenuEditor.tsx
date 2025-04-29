@@ -1,116 +1,146 @@
-import { ReactNode, useContext, useState } from 'react';
+import { CSSProperties, forwardRef, useContext, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
+  closestCenter,
   DndContext,
-  DragOverlay,
-  useDraggable,
-  useDroppable,
+  DragEndEvent,
+  KeyboardSensor,
+  PointerSensor,
+  useSensor,
+  useSensors,
 } from '@dnd-kit/core';
 import { CSS } from '@dnd-kit/utilities';
+import {
+  arrayMove,
+  SortableContext,
+  sortableKeyboardCoordinates,
+  useSortable,
+  verticalListSortingStrategy,
+} from '@dnd-kit/sortable';
 import { ShoelaceContext } from '~/components/shoelace';
 import { NavigationMenuItem } from '~/components/NavigationMenu';
 import Heading from '~/components/Heading';
 
 type Props = {
   items: NavigationMenuItem[];
+  onSave: (items: NavigationMenuItem[]) => void;
 };
 
-export default function MenuEditor({ items }: Props) {
+export default function MenuEditor({ items, onSave }: Props) {
   const { t } = useTranslation('MenuEditor');
   const { SlButton } = useContext(ShoelaceContext);
-  const [activeID, setActiveID] = useState(null);
+  const [sortedItems, setSortedItems] = useState(
+    (() => items.sort((a, b) => a.order - b.order))(),
+  );
+  const sensors = useSensors(
+    useSensor(PointerSensor),
+    useSensor(KeyboardSensor, {
+      coordinateGetter: sortableKeyboardCoordinates,
+    }),
+  );
 
-  function handleDragStart(event: any) {
-    const { active } = event;
-    setActiveID(active.id);
+  function handleDragEnd(event: DragEndEvent) {
+    const { active, over } = event;
+
+    if (active.id !== over?.id) {
+      setSortedItems((items) => {
+        const oldIndex = items.findIndex((item) => item.id === active.id);
+        const newIndex = items.findIndex((item) => item.id === over?.id);
+
+        const updatedArray = arrayMove(items, oldIndex, newIndex);
+
+        updatedArray.forEach((item, index) => {
+          item.order = index;
+        });
+
+        return updatedArray;
+      });
+    }
   }
 
-  function handleDragEnd(event: any) {
-    console.log('Drag end', event);
-    setActiveID(null);
+  function handleSave() {
+    onSave(sortedItems);
   }
-
-  const activeItem = items.find((item) => item.id === activeID);
 
   return (
-    <DndContext onDragStart={handleDragStart} onDragEnd={handleDragEnd}>
-      <div className="flex flex-col gap-4">
-        <Heading level={3}>{t('Title')}</Heading>
-        <p>{t('Description')}</p>
+    <DndContext
+      sensors={sensors}
+      collisionDetection={closestCenter}
+      onDragEnd={handleDragEnd}
+    >
+      <SortableContext
+        items={sortedItems}
+        strategy={verticalListSortingStrategy}
+      >
+        <div className="flex flex-col gap-4">
+          <Heading level={3}>{t('Title')}</Heading>
+          <p>{t('Description')}</p>
 
-        <Droppable>
           <ul className="flex flex-col gap-2">
-            {items.map((item) => (
-              <Draggable key={item.id} id={item.id}>
-                <Item item={item} />
-              </Draggable>
+            {sortedItems.map((item) => (
+              <SortableItem key={item.id} item={item} />
             ))}
           </ul>
-        </Droppable>
 
-        <DragOverlay>
-          {activeID && activeItem ?
-            <Item item={activeItem} />
-          : null}
-        </DragOverlay>
-
-        <SlButton className="w-32 self-end" variant="primary" size="large">
-          {t('SaveButtonCaption')}
-        </SlButton>
-      </div>
+          <SlButton
+            className="w-32 self-end"
+            variant="primary"
+            size="large"
+            onClick={handleSave}
+          >
+            {t('SaveButtonCaption')}
+          </SlButton>
+        </div>
+      </SortableContext>
     </DndContext>
-  );
-}
-
-type DroppableProps = {
-  children: ReactNode;
-};
-
-function Droppable({ children }: DroppableProps) {
-  const { setNodeRef } = useDroppable({
-    id: 'menu-editor-droppable',
-  });
-
-  return (
-    <div ref={setNodeRef} className="flex flex-col gap-2">
-      {children}
-    </div>
-  );
-}
-
-type DraggableProps = {
-  id: string;
-  children: ReactNode;
-};
-
-function Draggable({ id, children }: DraggableProps) {
-  const { attributes, listeners, setNodeRef, transform } = useDraggable({
-    id: `menu-editor-draggable-${id}`,
-  });
-
-  const style = { transform: CSS.Translate.toString(transform) };
-
-  return (
-    <li ref={setNodeRef} {...attributes} {...listeners} key={id} style={style}>
-      {children}
-    </li>
   );
 }
 
 type ItemProps = {
   item: NavigationMenuItem;
+  style?: CSSProperties;
 };
 
-function Item({ item }: ItemProps) {
+const Item = forwardRef<HTMLLIElement, ItemProps>(({ item, ...props }, ref) => {
   const { SlIcon } = useContext(ShoelaceContext);
+  const { i18n } = useTranslation('MenuEditor');
 
   return (
-    <div className="flex flex-row gap-4 items-center border border-neutral-100 bg-white px-4 py-2 rounded-md">
+    <li
+      ref={ref}
+      className="flex flex-row gap-4 items-center border border-neutral-100 bg-white px-4 py-2 rounded-md"
+      {...props}
+    >
       <SlIcon name="grip-vertical" />
       <div className="flex flex-col gap-0">
-        {item.title.nl}
+        {item.title[i18n.language]}
         <span className="text-xs">{item.slug}</span>
       </div>
-    </div>
+    </li>
+  );
+});
+Item.displayName = 'Item';
+
+type SortableItemProps = {
+  item: NavigationMenuItem;
+};
+
+function SortableItem({ item }: SortableItemProps) {
+  const { attributes, listeners, setNodeRef, transform, transition } =
+    useSortable({ id: item.id });
+
+  const style = {
+    transform: CSS.Transform.toString(transform),
+    transition,
+  };
+
+  return (
+    <Item
+      item={item}
+      ref={setNodeRef}
+      style={style}
+      {...attributes}
+      {...listeners}
+    />
   );
 }

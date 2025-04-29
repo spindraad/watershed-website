@@ -5,5 +5,11 @@ export function getMenuItems() {
     orderBy: {
       order: 'asc',
     },
+    select: {
+      id: true,
+      title: true,
+      slug: true,
+      order: true,
+    },
   });
 }
