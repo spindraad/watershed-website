@@ -1,25 +1,18 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
+import { fn } from '@storybook/test';
 import MenuEditor from './MenuEditor';
 
 export default {
   title: 'Organisms/Menu Editor',
   component: MenuEditor,
   tags: ['components', 'navigation'],
-  decorators: [
-    (Story) => (
-      <div className="w-64">
-        <Story />
-      </div>
-    ),
-  ],
 } satisfies Meta<typeof MenuEditor>;
 
 type Story = StoryObj<typeof MenuEditor>;
 
 export const Default: Story = {
   args: {
-    onSave: action('onSave'),
+    onChange: fn(),
     items: [
       {
         id: 'projecten',

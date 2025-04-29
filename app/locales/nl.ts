@@ -254,4 +254,6 @@ export const ManageMenuRoute = {
   },
   EditorDescription: 'Sleep de items om de volgorde te wijzigen',
   ExampleDescription: 'Voorbeeld',
+  CancelButtonCaption: 'Annuleren',
+  SaveButtonCaption: 'Opslaan',
 };

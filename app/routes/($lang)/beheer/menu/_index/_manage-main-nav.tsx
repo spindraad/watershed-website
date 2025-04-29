@@ -1,14 +1,15 @@
 import type { Route } from './+types/_manage-main-nav';
 import { getMenuItems, saveMenuItems } from '~/models/menu.server';
-import { useFetcher, useLoaderData } from 'react-router';
+import { redirect, useFetcher, useLoaderData } from 'react-router';
 import i18nServer from '~/modules/i18n.server';
 import { useTranslation } from 'react-i18next';
 import Heading from '~/components/Heading';
 import { NavigationMenuItem } from '~/components/NavigationMenu';
 import MenuEditor from '~/components/MenuEditor';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import Header from '~/components/Header';
 import { getUser } from '~/.server/session';
+import { ShoelaceContext } from '~/components/shoelace';
 
 export const handle = {
   i18n: ['ManageMenuRoute', 'MenuEditor'],
@@ -38,9 +39,7 @@ export async function action({ request }: Route.ActionArgs) {
   const items = await request.json();
   await saveMenuItems(items);
 
-  return {
-    message: 'Menu items saved successfully',
-  };
+  return redirect('/beheer');
 }
 
 export const meta: Route.MetaFunction = ({ data }) => [
@@ -56,10 +55,14 @@ export default function ManageMenuRoute() {
   const { t } = useTranslation('ManageMenuRoute');
   const { user, menuItems: storedMenuItems } = useLoaderData<typeof loader>();
   const [menuItems, setMenuItems] = useState(() => storedMenuItems);
+  const { SlButton } = useContext(ShoelaceContext);
 
-  const handleSave = (items: NavigationMenuItem[]) => {
+  const handleOnMenuChange = (items: NavigationMenuItem[]) => {
     setMenuItems(items);
-    fetcher.submit(items, {
+  };
+
+  const saveMenu = () => {
+    fetcher.submit(menuItems, {
       method: 'post',
       encType: 'application/json',
     });
@@ -68,13 +71,13 @@ export default function ManageMenuRoute() {
   const isSaving = fetcher.state !== 'idle';
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4 h-full">
       <Heading level={1}>{t('Title')}</Heading>
       <div className="flex flex-col gap-6">
         <div className="w-full">
           <MenuEditor
             items={menuItems}
-            onSave={handleSave}
+            onChange={handleOnMenuChange}
             isSaving={isSaving}
           />
         </div>
@@ -83,6 +86,13 @@ export default function ManageMenuRoute() {
           <Heading level={2}>{t('ExampleDescription')}</Heading>
           <Header user={user} menuItems={menuItems} demoMode />
         </div>
+      </div>
+
+      <div className="flex flex-row justify-between gap-4 mt-auto py-4">
+        <SlButton href="/beheer">{t('CancelButtonCaption')}</SlButton>
+        <SlButton variant="primary" onClick={saveMenu} loading={isSaving}>
+          {t('SaveButtonCaption')}
+        </SlButton>
       </div>
     </div>
   );

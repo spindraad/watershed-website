@@ -247,4 +247,6 @@ export const ManageMenuRoute = {
   },
   EditorDescription: 'Drag and drop to reorder the menu items',
   ExampleDescription: 'Example',
+  CancelButtonCaption: 'Cancel',
+  SaveButtonCaption: 'Save',
 };

@@ -23,13 +23,12 @@ import Heading from '~/components/Heading';
 
 type Props = {
   items: NavigationMenuItem[];
-  onSave: (items: NavigationMenuItem[]) => void;
+  onChange: (items: NavigationMenuItem[]) => void;
   isSaving?: boolean;
 };
 
-export default function MenuEditor({ items, onSave, isSaving }: Props) {
+export default function MenuEditor({ items, onChange }: Props) {
   const { t } = useTranslation('MenuEditor');
-  const { SlButton } = useContext(ShoelaceContext);
   const [sortedItems, setSortedItems] = useState(
     (() => items.sort((a, b) => a.order - b.order))(),
   );
@@ -54,13 +53,10 @@ export default function MenuEditor({ items, onSave, isSaving }: Props) {
           item.order = index;
         });
 
+        onChange(updatedArray);
         return updatedArray;
       });
     }
-  }
-
-  function handleSave() {
-    onSave(sortedItems);
   }
 
   return (
@@ -82,17 +78,6 @@ export default function MenuEditor({ items, onSave, isSaving }: Props) {
               <SortableItem key={item.id} item={item} />
             ))}
           </ul>
-
-          <SlButton
-            className="w-32 self-end"
-            variant="primary"
-            size="large"
-            onClick={handleSave}
-            disabled={isSaving}
-            loading={isSaving}
-          >
-            {t('SaveButtonCaption')}
-          </SlButton>
         </div>
       </SortableContext>
     </DndContext>
