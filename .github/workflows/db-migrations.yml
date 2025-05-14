@@ -10,7 +10,8 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-#    steps:
+    steps:
+      - run: echo "Here is where the migration will be applied"
 #      - name: Checkout repo
 #        uses: actions/checkout@v4
 #      - name: Setup Node
