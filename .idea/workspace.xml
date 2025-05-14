@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Swapped navigation menu out for the actual header (in demo mode), which also meant we can load the dynamic header on the site itself. Also swapped orientation on the manage menu page">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/MenuEditor.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/MenuEditor.stories.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/MenuEditor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/MenuEditor.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/locales/en.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/en.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/locales/nl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/nl.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/menu/_index/_manage-main-nav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/menu/_index/_manage-main-nav.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Extracted save action and implemented it on the page level, just like Cancel." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -504,15 +497,7 @@
       <workItem from="1745499566279" duration="607000" />
       <workItem from="1745568448307" duration="476000" />
       <workItem from="1745574701792" duration="11502000" />
-      <workItem from="1745907637700" duration="19243000" />
-    </task>
-    <task id="LOCAL-00102" summary="GH Actions now performs a build on normal push">
-      <option name="closed" value="true" />
-      <created>1742821098650</created>
-      <option name="number" value="00102" />
-      <option name="presentableId" value="LOCAL-00102" />
-      <option name="project" value="LOCAL" />
-      <updated>1742821098650</updated>
+      <workItem from="1745907637700" duration="20662000" />
     </task>
     <task id="LOCAL-00103" summary="Enabled the UPDATE flow end to end.">
       <option name="closed" value="true" />
@@ -898,7 +883,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745933545842</updated>
     </task>
-    <option name="localTasksCounter" value="151" />
+    <task id="LOCAL-00151" summary="Extracted save action and implemented it on the page level, just like Cancel.">
+      <option name="closed" value="true" />
+      <created>1745934104888</created>
+      <option name="number" value="00151" />
+      <option name="presentableId" value="LOCAL-00151" />
+      <option name="project" value="LOCAL" />
+      <updated>1745934104888</updated>
+    </task>
+    <option name="localTasksCounter" value="152" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -941,7 +934,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Rearranged all the components in Storybook. They are now categorised according to Atomic Design, and have been tagged." />
     <MESSAGE value="The slug can now also be set in Puck" />
     <MESSAGE value="DB diff script is runnable from npm and fixed the wrong port check method." />
     <MESSAGE value="Ran prisma migrate to updated db to new schema" />
@@ -966,7 +958,8 @@
     <MESSAGE value="MenuEditor now works as component that can be previewed." />
     <MESSAGE value="We now have a basic workflow for editing the menu" />
     <MESSAGE value="Swapped navigation menu out for the actual header (in demo mode), which also meant we can load the dynamic header on the site itself. Also swapped orientation on the manage menu page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Swapped navigation menu out for the actual header (in demo mode), which also meant we can load the dynamic header on the site itself. Also swapped orientation on the manage menu page" />
+    <MESSAGE value="Extracted save action and implemented it on the page level, just like Cancel." />
+    <option name="LAST_COMMIT_MESSAGE" value="Extracted save action and implemented it on the page level, just like Cancel." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
