@@ -16,68 +16,152 @@ type IllustrationKey = keyof typeof illustrations;
 
 const objectFitOptions = {
   cover:
-    'Vult het frame volledig, mogelijk worden delen van de afbeelding afgesneden',
-  contain:
-    'Toont de hele afbeelding, mogelijk met lege ruimte aan de zijkanten',
-  fill: 'Rekt de afbeelding uit om het frame volledig te vullen',
+    'Vul het frame volledig, mogelijk worden delen van de afbeelding afgesneden',
+  contain: 'Toon de hele afbeelding, mogelijk met lege ruimte aan de zijkanten',
+  fill: 'Rek de afbeelding uit om het frame volledig te vullen',
   'scale-down':
-    'Toont de afbeelding op natuurlijke grootte, of kleiner indien nodig',
-  none: 'Behoudt originele grootte, wordt mogelijk afgesneden',
+    'Toon de afbeelding op natuurlijke grootte, of kleiner indien nodig',
+  none: 'Behoud originele grootte, wordt mogelijk afgesneden',
 } as const;
 
 type ObjectFitOption = keyof typeof objectFitOptions;
 
 export type IllustrationBlockProps = {
   illustration?: IllustrationKey;
-  width?: string;
-  height?: string;
-  fit?: CSSProperties['objectFit'];
+  image: {
+    size?: {
+      width?: string;
+      height?: string;
+    };
+    fit?: CSSProperties['objectFit'];
+    position?: {
+      left?: string;
+      top?: string;
+    };
+  };
+  wrapper?: {
+    width?: string;
+    height?: string;
+  };
 };
 
 export const IllustrationBlock: ComponentConfig<IllustrationBlockProps> = {
   label: 'Illustraties',
   fields: {
     illustration: {
+      label: 'Illustratie',
       type: 'select',
       options: Object.keys(illustrations).map((key) => ({
         label: key,
         value: key,
       })),
     },
-    width: {
-      label: 'Width',
-      type: 'text',
+    image: {
+      label: 'Afbeelding',
+      type: 'object',
+      objectFields: {
+        size: {
+          type: 'object',
+          label: 'Afbeeldingsgrootte (in % of px)',
+          objectFields: {
+            width: {
+              label: 'Breedte',
+              type: 'text',
+            },
+            height: {
+              label: 'Hoogte',
+              type: 'text',
+            },
+          },
+        },
+        fit: {
+          label: 'Fit',
+          type: 'radio',
+          options: Object.keys(objectFitOptions).map((key) => ({
+            label: objectFitOptions[key as ObjectFitOption],
+            value: key,
+          })),
+        },
+        position: {
+          type: 'object',
+          label: 'Positie',
+          objectFields: {
+            left: {
+              label: 'Links',
+              type: 'text',
+            },
+            top: {
+              label: 'Boven',
+              type: 'text',
+            },
+          },
+        },
+      },
     },
-    height: {
-      label: 'Height',
-      type: 'text',
-    },
-    fit: {
-      label: 'Fit',
-      type: 'select',
-      options: Object.keys(objectFitOptions).map((key) => ({
-        label: objectFitOptions[key as ObjectFitOption],
-        value: key,
-      })),
+    wrapper: {
+      type: 'object',
+      label: 'Blok grootte (in % of px)',
+      objectFields: {
+        width: {
+          label: 'Breedte',
+          type: 'text',
+        },
+        height: {
+          label: 'Hoogte',
+          type: 'text',
+        },
+      },
     },
   },
   defaultProps: {
     illustration: 'Figuur met popbeker',
-    width: '100%',
-    height: 'auto',
+    image: {
+      size: {
+        width: '100%',
+        height: 'auto',
+      },
+      fit: 'cover',
+      position: {
+        left: '50%',
+        top: '50%',
+      },
+    },
+    wrapper: {
+      width: '100%',
+      height: 'auto',
+    },
   },
-  render: ({ illustration, width, height, fit }) => {
+  render: ({ illustration, image, wrapper }) => {
     const imageSrc = illustrations[illustration as IllustrationKey];
+    const width = image?.size?.width || '100%';
+    const height = image?.size?.height || 'auto';
+    const left = image?.position?.left || '50%';
+    const top = image?.position?.top || '50%';
+    const objectFit = image?.fit || 'cover';
+    const objectPosition = `${left} ${top}`;
+    const wrapperWidth = wrapper?.width || '100%';
+    const wrapperHeight = wrapper?.height || 'auto';
+
     return (
-      <img
-        src={`/illustraties/${imageSrc}`}
-        alt={illustration}
+      <div
         style={{
-          width: width,
-          height: height,
-          objectFit: fit,
+          width: wrapperWidth,
+          height: wrapperHeight,
+          position: 'relative',
+          overflow: 'hidden',
         }}
-      />
+      >
+        <img
+          src={`/illustraties/${imageSrc}`}
+          alt={illustration}
+          style={{
+            width,
+            height,
+            objectFit,
+            objectPosition,
+          }}
+        />
+      </div>
     );
   },
 };
