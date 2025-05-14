@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Semantically fixed db migrations workflow">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/config/blocks/IllustrationBlock.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/Header.stories.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Header.stories.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/MenuEditor.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/MenuEditor.stories.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/MenuEditor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/MenuEditor.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/PageEditor.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PageEditor.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/puck.config.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/puck.config.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,16 +50,12 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="feature/WAT-161_Implement_Menu_Editor" />
-                    <option name="lastUsedInstant" value="1745575044" />
+                    <option name="branchName" value="feature/WAT-164_Add_support_for_illustrations_selections_puck" />
+                    <option name="lastUsedInstant" value="1747213726" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="dev" />
-                    <option name="lastUsedInstant" value="1744882410" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="release/WAT-48_Design" />
-                    <option name="lastUsedInstant" value="1742998362" />
+                    <option name="lastUsedInstant" value="1747213298" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="feature/wsh-43-nieuws" />
@@ -151,7 +144,7 @@
     "Vitest.validateLogin.executor": "Run",
     "Vitest.validateLogin.should return success: false when emailaddress is invalid.executor": "Run",
     "Vitest.validateLogin.should return success: false when emailaddress is missing.executor": "Run",
-    "git-widget-placeholder": "feature/WAT-161__Implement__Menu__Editor",
+    "git-widget-placeholder": "feature/WAT-164__Add__support__for__illustrations__selections__puck",
     "javascript.nodejs.core.library.configured.version": "22.11.0",
     "javascript.nodejs.core.library.typings.version": "22.15.18",
     "last_opened_file_path": "/Users/lody/dev/projects/watershed-website/app/routes/_index",
@@ -935,7 +928,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="dev" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>

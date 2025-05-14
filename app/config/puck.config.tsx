@@ -10,12 +10,17 @@ import {
 import { ButtonBlock, ButtonBlockProps } from '~/config/blocks/ButtonBlock';
 import { GridBlock, GribBlockProps } from '~/config/blocks/GridBlock';
 import Heading from '~/components/Heading';
+import {
+  IllustrationBlock,
+  IllustrationBlockProps,
+} from '~/config/blocks/IllustrationBlock';
 
 type Props = {
   HeadingBlock: HeadingBlockProps;
   RichTextBlock: RichTextBlockProps;
   ButtonBlock: ButtonBlockProps;
   GridBlock: GribBlockProps;
+  IllustrationBlock: IllustrationBlockProps;
 };
 
 type RootProps = {
@@ -43,7 +48,7 @@ export const config: Config<Props, RootProps> = {
     },
     ui: {
       title: 'UI',
-      components: ['ButtonBlock'],
+      components: ['ButtonBlock', 'IllustrationBlock'],
     },
   },
   components: {
@@ -51,6 +56,7 @@ export const config: Config<Props, RootProps> = {
     RichTextBlock,
     ButtonBlock,
     GridBlock,
+    IllustrationBlock,
   },
   root: {
     fields: {
