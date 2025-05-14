@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Extracted save action and implemented it on the page level, just like Cancel.">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/db-migrations.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/db-migrations.yml" afterDir="false" />
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Semantically fixed db migrations workflow">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/Header.stories.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Header.stories.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/MenuEditor.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/MenuEditor.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/MenuEditor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/MenuEditor.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/PageEditor.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PageEditor.stories.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,7 +174,7 @@
     "npm.typecheck.executor": "Run",
     "prettierjs.PrettierConfiguration.Package": "/Users/lody/dev/projects/watershed-website/node_modules/prettier",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "settings.typescriptcompiler",
     "ts.external.directory.path": "/Users/lody/dev/projects/watershed-website/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   },
@@ -500,15 +505,7 @@
       <workItem from="1745568448307" duration="476000" />
       <workItem from="1745574701792" duration="11502000" />
       <workItem from="1745907637700" duration="20662000" />
-      <workItem from="1747211105587" duration="127000" />
-    </task>
-    <task id="LOCAL-00103" summary="Enabled the UPDATE flow end to end.">
-      <option name="closed" value="true" />
-      <created>1742892238660</created>
-      <option name="number" value="00103" />
-      <option name="presentableId" value="LOCAL-00103" />
-      <option name="project" value="LOCAL" />
-      <updated>1742892238660</updated>
+      <workItem from="1747211105587" duration="682000" />
     </task>
     <task id="LOCAL-00104" summary="Added fonts and setup styles for the heading">
       <option name="closed" value="true" />
@@ -894,7 +891,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745934104888</updated>
     </task>
-    <option name="localTasksCounter" value="152" />
+    <task id="LOCAL-00152" summary="Semantically fixed db migrations workflow">
+      <option name="closed" value="true" />
+      <created>1747211251622</created>
+      <option name="number" value="00152" />
+      <option name="presentableId" value="LOCAL-00152" />
+      <option name="project" value="LOCAL" />
+      <updated>1747211251622</updated>
+    </task>
+    <option name="localTasksCounter" value="153" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -937,7 +942,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="The slug can now also be set in Puck" />
     <MESSAGE value="DB diff script is runnable from npm and fixed the wrong port check method." />
     <MESSAGE value="Ran prisma migrate to updated db to new schema" />
     <MESSAGE value="Pages can now be edited and saved  Also added slugs to seeding scripts" />
@@ -962,7 +966,8 @@
     <MESSAGE value="We now have a basic workflow for editing the menu" />
     <MESSAGE value="Swapped navigation menu out for the actual header (in demo mode), which also meant we can load the dynamic header on the site itself. Also swapped orientation on the manage menu page" />
     <MESSAGE value="Extracted save action and implemented it on the page level, just like Cancel." />
-    <option name="LAST_COMMIT_MESSAGE" value="Extracted save action and implemented it on the page level, just like Cancel." />
+    <MESSAGE value="Semantically fixed db migrations workflow" />
+    <option name="LAST_COMMIT_MESSAGE" value="Semantically fixed db migrations workflow" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -20,6 +20,7 @@ import {
 import { ShoelaceContext } from '~/components/shoelace';
 import { NavigationMenuItem } from '~/components/NavigationMenu';
 import Heading from '~/components/Heading';
+import { SupportedLanguages } from '~/config/i18n';
 
 type Props = {
   items: NavigationMenuItem[];
@@ -101,7 +102,7 @@ const Item = forwardRef<HTMLLIElement, ItemProps>(({ item, ...props }, ref) => {
     >
       <SlIcon name="grip-vertical" />
       <div className="flex flex-col gap-0">
-        {item.title[i18n.language]}
+        {item.title[i18n.language as SupportedLanguages]}
         <span className="text-xs">{item.slug}</span>
       </div>
     </li>
