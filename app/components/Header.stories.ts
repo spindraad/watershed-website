@@ -2,6 +2,7 @@ import { type Meta, type StoryObj } from '@storybook/react';
 import Header from './Header';
 import { reactRouterParameters } from 'storybook-addon-remix-react-router';
 import { User } from '~/models/user.server';
+import { menuItems } from '~/components/MenuEditor.stories';
 
 export default {
   title: 'Organisms/Header',
@@ -20,12 +21,15 @@ const user: User = {
 };
 
 export const Default: Story = {
-  args: {},
+  args: {
+    menuItems,
+  },
 };
 
 export const WithUser: Story = {
   args: {
     user,
+    menuItems,
   },
 
   parameters: {

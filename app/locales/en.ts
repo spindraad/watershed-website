@@ -30,6 +30,8 @@ import { en as LocalisedInputTranslations } from '~/components/LocalisedInput.tr
 export const { LocalisedInput } = LocalisedInputTranslations;
 import { en as PageMutationFormTranslations } from '~/components/PageMutationForm.translations';
 export const { PageMutationForm } = PageMutationFormTranslations;
+import { nl as MenuEditorTranslations } from '~/components/MenuEditor.translations';
+export const { MenuEditor } = MenuEditorTranslations;
 
 export const common = {
   title: 'Hello World!',
@@ -235,4 +237,16 @@ export const PageDetailRoute = {
     Title: '{{title}} | Stichting Watershed',
     description: '{{description}}',
   },
+};
+
+export const ManageMenuRoute = {
+  Title: 'Manage menu',
+  Meta: {
+    Title: 'Manage navigation menu | Stichting Watershed',
+    Description: 'Manage the navigation menu',
+  },
+  EditorDescription: 'Drag and drop to reorder the menu items',
+  ExampleDescription: 'Example',
+  CancelButtonCaption: 'Cancel',
+  SaveButtonCaption: 'Save',
 };

@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Configured Kubernetes templates with the correct bucket name and credentials based on the deployment environment">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Semantically fixed db migrations workflow">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/Header.stories.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Header.stories.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/MenuEditor.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/MenuEditor.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/MenuEditor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/MenuEditor.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/PageEditor.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PageEditor.stories.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,12 +53,8 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="feature/WAT-168_Implement_S3_Deployment" />
-                    <option name="lastUsedInstant" value="1745413410" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="release/WAT-50_Upload_mechanism" />
-                    <option name="lastUsedInstant" value="1744895914" />
+                    <option name="branchName" value="feature/WAT-161_Implement_Menu_Editor" />
+                    <option name="lastUsedInstant" value="1745575044" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="dev" />
@@ -132,64 +132,64 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Attach to Node.js/Chrome.Debug in Chrome.executor&quot;: &quot;Debug&quot;,
-    &quot;JavaScript Debug.Debug in Chrome.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.OpenDatabaseViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;Vitest.All Tests.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.Content utilities.Parse a localised form data object into a localised value object.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.Content utilities.Retrieve the number of errors for each localised field.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.Content utilities.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.Validating page requests.executor&quot;: &quot;Debug&quot;,
-    &quot;Vitest.Validating the page.executor&quot;: &quot;Debug&quot;,
-    &quot;Vitest.parseURL.Return the correct url for \&quot;/over-ons/team\&quot;.executor&quot;: &quot;Debug&quot;,
-    &quot;Vitest.parseURL.Return the correct urls for \&quot;/contact\&quot;.executor&quot;: &quot;Debug&quot;,
-    &quot;Vitest.validateLogin.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.validateLogin.should return success: false when emailaddress is invalid.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.validateLogin.should return success: false when emailaddress is missing.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;22.11.0&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;22.9.0&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/lody/dev/projects/watershed-website/app/routes/_index&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.Dev.executor&quot;: &quot;Debug&quot;,
-    &quot;npm.Develop.executor&quot;: &quot;Run&quot;,
-    &quot;npm.Storybook.executor&quot;: &quot;Debug&quot;,
-    &quot;npm.db:generate.executor&quot;: &quot;Run&quot;,
-    &quot;npm.db:push:seed.executor&quot;: &quot;Run&quot;,
-    &quot;npm.dev:app.executor&quot;: &quot;Debug&quot;,
-    &quot;npm.dev:remix.executor&quot;: &quot;Debug&quot;,
-    &quot;npm.dev:storybook.executor&quot;: &quot;Debug&quot;,
-    &quot;npm.docker:start.executor&quot;: &quot;Run&quot;,
-    &quot;npm.typecheck.executor&quot;: &quot;Run&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/lody/dev/projects/watershed-website/node_modules/prettier&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.typescriptcompiler&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/lody/dev/projects/watershed-website/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Attach to Node.js/Chrome.Debug in Chrome.executor": "Debug",
+    "JavaScript Debug.Debug in Chrome.executor": "Debug",
+    "RunOnceActivity.OpenDatabaseViewOnStart": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Vitest.All Tests.executor": "Run",
+    "Vitest.Content utilities.Parse a localised form data object into a localised value object.executor": "Run",
+    "Vitest.Content utilities.Retrieve the number of errors for each localised field.executor": "Run",
+    "Vitest.Content utilities.executor": "Run",
+    "Vitest.Validating page requests.executor": "Debug",
+    "Vitest.Validating the page.executor": "Debug",
+    "Vitest.parseURL.Return the correct url for \"/over-ons/team\".executor": "Debug",
+    "Vitest.parseURL.Return the correct urls for \"/contact\".executor": "Debug",
+    "Vitest.validateLogin.executor": "Run",
+    "Vitest.validateLogin.should return success: false when emailaddress is invalid.executor": "Run",
+    "Vitest.validateLogin.should return success: false when emailaddress is missing.executor": "Run",
+    "git-widget-placeholder": "feature/WAT-161__Implement__Menu__Editor",
+    "javascript.nodejs.core.library.configured.version": "22.11.0",
+    "javascript.nodejs.core.library.typings.version": "22.15.18",
+    "last_opened_file_path": "/Users/lody/dev/projects/watershed-website/app/routes/_index",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "npm",
+    "npm.Dev.executor": "Debug",
+    "npm.Develop.executor": "Run",
+    "npm.Storybook.executor": "Debug",
+    "npm.db:generate.executor": "Run",
+    "npm.db:push:seed.executor": "Run",
+    "npm.dev:app.executor": "Debug",
+    "npm.dev:remix.executor": "Debug",
+    "npm.dev:storybook.executor": "Debug",
+    "npm.docker:start.executor": "Run",
+    "npm.typecheck.executor": "Run",
+    "prettierjs.PrettierConfiguration.Package": "/Users/lody/dev/projects/watershed-website/node_modules/prettier",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "settings.typescriptcompiler",
+    "ts.external.directory.path": "/Users/lody/dev/projects/watershed-website/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ],
-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
-      &quot;CSS&quot;,
-      &quot;Markdown&quot;,
-      &quot;TEXT&quot;,
-      &quot;XML&quot;
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "CSS",
+      "Markdown",
+      "TEXT",
+      "XML"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/routes/_index" />
@@ -220,7 +220,7 @@
       <command value="npm run db:push:seed" />
     </option>
   </component>
-  <component name="RunManager" selected="npm.Dev">
+  <component name="RunManager" selected="Compound.Develop">
     <configuration name="Develop" type="CompoundRunConfigurationType">
       <toRun name="Dev" type="js.build_tools.npm" />
       <toRun name="Storybook" type="js.build_tools.npm" />
@@ -436,8 +436,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-PS-243.26053.13" />
-        <option value="bundled-php-predefined-a98d8de5180a-1ec7b7818973-com.jetbrains.php.sharedIndexes-PS-243.26053.13" />
+        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-PS-251.23774.466" />
+        <option value="bundled-php-predefined-a98d8de5180a-aaeaa8632555-com.jetbrains.php.sharedIndexes-PS-251.23774.466" />
       </set>
     </attachedChunks>
   </component>
@@ -503,94 +503,9 @@
       <workItem from="1745396952332" duration="15001000" />
       <workItem from="1745499566279" duration="607000" />
       <workItem from="1745568448307" duration="476000" />
-    </task>
-    <task id="LOCAL-00093" summary="Created project form, and made some smaller improvements to the event form">
-      <option name="closed" value="true" />
-      <created>1742161146618</created>
-      <option name="number" value="00093" />
-      <option name="presentableId" value="LOCAL-00093" />
-      <option name="project" value="LOCAL" />
-      <updated>1742161146618</updated>
-    </task>
-    <task id="LOCAL-00094" summary="Mutation forms are now processed and saved for 'Create'">
-      <option name="closed" value="true" />
-      <created>1742162384034</created>
-      <option name="number" value="00094" />
-      <option name="presentableId" value="LOCAL-00094" />
-      <option name="project" value="LOCAL" />
-      <updated>1742162384034</updated>
-    </task>
-    <task id="LOCAL-00095" summary="The create flow is basically done, including validation before saving">
-      <option name="closed" value="true" />
-      <created>1742213161165</created>
-      <option name="number" value="00095" />
-      <option name="presentableId" value="LOCAL-00095" />
-      <option name="project" value="LOCAL" />
-      <updated>1742213161165</updated>
-    </task>
-    <task id="LOCAL-00096" summary="Enhance EventMutationForm with locale support and local storage integration, also added a locale selector component.">
-      <option name="closed" value="true" />
-      <created>1742224442828</created>
-      <option name="number" value="00096" />
-      <option name="presentableId" value="LOCAL-00096" />
-      <option name="project" value="LOCAL" />
-      <updated>1742224442829</updated>
-    </task>
-    <task id="LOCAL-00097" summary="Refactor EventMutationForm to support localization and improve error handling, including new utility functions for form data transformation and error counting.">
-      <option name="closed" value="true" />
-      <created>1742582714601</created>
-      <option name="number" value="00097" />
-      <option name="presentableId" value="LOCAL-00097" />
-      <option name="project" value="LOCAL" />
-      <updated>1742582714602</updated>
-    </task>
-    <task id="LOCAL-00098" summary="Add LocalisedInput component and enhance LocaleSelector with new props and event handling">
-      <option name="closed" value="true" />
-      <created>1742593893112</created>
-      <option name="number" value="00098" />
-      <option name="presentableId" value="LOCAL-00098" />
-      <option name="project" value="LOCAL" />
-      <updated>1742593893112</updated>
-    </task>
-    <task id="LOCAL-00099" summary="Add DeepPartial type and LocalisedInput component; refactor EventMutationForm for improved localization and error handling">
-      <option name="closed" value="true" />
-      <created>1742817052503</created>
-      <option name="number" value="00099" />
-      <option name="presentableId" value="LOCAL-00099" />
-      <option name="project" value="LOCAL" />
-      <updated>1742817052503</updated>
-    </task>
-    <task id="LOCAL-00100" summary="Fixed a lot of lint and typecheck errors">
-      <option name="closed" value="true" />
-      <created>1742819161843</created>
-      <option name="number" value="00100" />
-      <option name="presentableId" value="LOCAL-00100" />
-      <option name="project" value="LOCAL" />
-      <updated>1742819161843</updated>
-    </task>
-    <task id="LOCAL-00101" summary="Simplified the component tests for Event Mutation Form and updated Project Mutation Form following the same workflow as the EMF">
-      <option name="closed" value="true" />
-      <created>1742821051846</created>
-      <option name="number" value="00101" />
-      <option name="presentableId" value="LOCAL-00101" />
-      <option name="project" value="LOCAL" />
-      <updated>1742821051846</updated>
-    </task>
-    <task id="LOCAL-00102" summary="GH Actions now performs a build on normal push">
-      <option name="closed" value="true" />
-      <created>1742821098650</created>
-      <option name="number" value="00102" />
-      <option name="presentableId" value="LOCAL-00102" />
-      <option name="project" value="LOCAL" />
-      <updated>1742821098650</updated>
-    </task>
-    <task id="LOCAL-00103" summary="Enabled the UPDATE flow end to end.">
-      <option name="closed" value="true" />
-      <created>1742892238660</created>
-      <option name="number" value="00103" />
-      <option name="presentableId" value="LOCAL-00103" />
-      <option name="project" value="LOCAL" />
-      <updated>1742892238660</updated>
+      <workItem from="1745574701792" duration="11502000" />
+      <workItem from="1745907637700" duration="20662000" />
+      <workItem from="1747211105587" duration="682000" />
     </task>
     <task id="LOCAL-00104" summary="Added fonts and setup styles for the heading">
       <option name="closed" value="true" />
@@ -896,7 +811,95 @@
       <option name="project" value="LOCAL" />
       <updated>1745403299993</updated>
     </task>
-    <option name="localTasksCounter" value="142" />
+    <task id="LOCAL-00142" summary="Added missing LoginFormComponent translations to login route">
+      <option name="closed" value="true" />
+      <created>1745581050466</created>
+      <option name="number" value="00142" />
+      <option name="presentableId" value="LOCAL-00142" />
+      <option name="project" value="LOCAL" />
+      <updated>1745581050467</updated>
+    </task>
+    <task id="LOCAL-00143" summary="Added Prisma migrations script for prod and dev database deploys, in preparation for when we switch over to managed databases.">
+      <option name="closed" value="true" />
+      <created>1745581278552</created>
+      <option name="number" value="00143" />
+      <option name="presentableId" value="LOCAL-00143" />
+      <option name="project" value="LOCAL" />
+      <updated>1745581278552</updated>
+    </task>
+    <task id="LOCAL-00144" summary="Created a Nav menu component that lists a navigation menu, and created the route for the menu manager">
+      <option name="closed" value="true" />
+      <created>1745593659021</created>
+      <option name="number" value="00144" />
+      <option name="presentableId" value="LOCAL-00144" />
+      <option name="project" value="LOCAL" />
+      <updated>1745593659021</updated>
+    </task>
+    <task id="LOCAL-00145" summary="Extended Plop generator to allow the selection of tags and categories">
+      <option name="closed" value="true" />
+      <created>1745913292888</created>
+      <option name="number" value="00145" />
+      <option name="presentableId" value="LOCAL-00145" />
+      <option name="project" value="LOCAL" />
+      <updated>1745913292888</updated>
+    </task>
+    <task id="LOCAL-00146" summary="Created base component for the MenuEditor">
+      <option name="closed" value="true" />
+      <created>1745918677113</created>
+      <option name="number" value="00146" />
+      <option name="presentableId" value="LOCAL-00146" />
+      <option name="project" value="LOCAL" />
+      <updated>1745918677113</updated>
+    </task>
+    <task id="LOCAL-00147" summary="We now have a very rudimentary draggable menu editor interface">
+      <option name="closed" value="true" />
+      <created>1745924998902</created>
+      <option name="number" value="00147" />
+      <option name="presentableId" value="LOCAL-00147" />
+      <option name="project" value="LOCAL" />
+      <updated>1745924998902</updated>
+    </task>
+    <task id="LOCAL-00148" summary="MenuEditor now works as component that can be previewed.">
+      <option name="closed" value="true" />
+      <created>1745931701320</created>
+      <option name="number" value="00148" />
+      <option name="presentableId" value="LOCAL-00148" />
+      <option name="project" value="LOCAL" />
+      <updated>1745931701320</updated>
+    </task>
+    <task id="LOCAL-00149" summary="We now have a basic workflow for editing the menu">
+      <option name="closed" value="true" />
+      <created>1745932515135</created>
+      <option name="number" value="00149" />
+      <option name="presentableId" value="LOCAL-00149" />
+      <option name="project" value="LOCAL" />
+      <updated>1745932515135</updated>
+    </task>
+    <task id="LOCAL-00150" summary="Swapped navigation menu out for the actual header (in demo mode), which also meant we can load the dynamic header on the site itself. Also swapped orientation on the manage menu page">
+      <option name="closed" value="true" />
+      <created>1745933545842</created>
+      <option name="number" value="00150" />
+      <option name="presentableId" value="LOCAL-00150" />
+      <option name="project" value="LOCAL" />
+      <updated>1745933545842</updated>
+    </task>
+    <task id="LOCAL-00151" summary="Extracted save action and implemented it on the page level, just like Cancel.">
+      <option name="closed" value="true" />
+      <created>1745934104888</created>
+      <option name="number" value="00151" />
+      <option name="presentableId" value="LOCAL-00151" />
+      <option name="project" value="LOCAL" />
+      <updated>1745934104888</updated>
+    </task>
+    <task id="LOCAL-00152" summary="Semantically fixed db migrations workflow">
+      <option name="closed" value="true" />
+      <created>1747211251622</created>
+      <option name="number" value="00152" />
+      <option name="presentableId" value="LOCAL-00152" />
+      <option name="project" value="LOCAL" />
+      <updated>1747211251622</updated>
+    </task>
+    <option name="localTasksCounter" value="153" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -939,17 +942,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added meta for events and projects" />
-    <MESSAGE value="Added meta for events and projects" />
-    <MESSAGE value="Added link to user account in header" />
-    <MESSAGE value="Fixed color declarations across Tailwind, Shoelace and the app" />
-    <MESSAGE value="Improvements to the header and anchor" />
-    <MESSAGE value="Pages are now served from the content overview route as well, and can be accessed from the admin menu. A &quot;qa&quot; script is added to run a small and full qa control locally." />
-    <MESSAGE value="Reworked the Puck editor to support for page/SEO metadata." />
-    <MESSAGE value="Created &quot;new&quot; flow for generic pages." />
-    <MESSAGE value="PageMutationForm now also shows errors, and made slug unique in prisma" />
-    <MESSAGE value="Rearranged all the components in Storybook. They are now categorised according to Atomic Design, and have been tagged." />
-    <MESSAGE value="The slug can now also be set in Puck" />
     <MESSAGE value="DB diff script is runnable from npm and fixed the wrong port check method." />
     <MESSAGE value="Ran prisma migrate to updated db to new schema" />
     <MESSAGE value="Pages can now be edited and saved  Also added slugs to seeding scripts" />
@@ -964,7 +956,18 @@
     <MESSAGE value="Added some test routes for checking the image upload. Also improved it so the DX is a bit better." />
     <MESSAGE value="Fixed typo" />
     <MESSAGE value="Configured Kubernetes templates with the correct bucket name and credentials based on the deployment environment" />
-    <option name="LAST_COMMIT_MESSAGE" value="Configured Kubernetes templates with the correct bucket name and credentials based on the deployment environment" />
+    <MESSAGE value="Added missing LoginFormComponent translations to login route" />
+    <MESSAGE value="Added Prisma migrations script for prod and dev database deploys, in preparation for when we switch over to managed databases." />
+    <MESSAGE value="Created a Nav menu component that lists a navigation menu, and created the route for the menu manager" />
+    <MESSAGE value="Extended Plop generator to allow the selection of tags and categories" />
+    <MESSAGE value="Created base component for the MenuEditor" />
+    <MESSAGE value="We now have a very rudimentary draggable menu editor interface" />
+    <MESSAGE value="MenuEditor now works as component that can be previewed." />
+    <MESSAGE value="We now have a basic workflow for editing the menu" />
+    <MESSAGE value="Swapped navigation menu out for the actual header (in demo mode), which also meant we can load the dynamic header on the site itself. Also swapped orientation on the manage menu page" />
+    <MESSAGE value="Extracted save action and implemented it on the page level, just like Cancel." />
+    <MESSAGE value="Semantically fixed db migrations workflow" />
+    <option name="LAST_COMMIT_MESSAGE" value="Semantically fixed db migrations workflow" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -2,8 +2,14 @@ import type { Meta, StoryObj } from '@storybook/react';
 import {{ name }} from './{{ name }}';
 
 export default {
-  title: 'Components/{{ storybookTitle }}',
+  title: '{{ category }}/{{ storybookTitle }}',
   component: {{ name }},
+  {{#ifeq path 'components'}}
+  tags: ['components', {{#each tags }}'{{.}}'{{#unless @last}}, {{/unless}}{{/each}}],
+  {{/ifeq}}
+  {{#ifeq path 'routes'}}
+  tags: ['components', {{#each tags }}'{{.}}'{{#unless @last}}, {{/unless}}{{/each}}],
+  {{/ifeq}}
 } satisfies Meta<typeof {{ name }}>;
 
 type Story = StoryObj<typeof {{ name }}>;

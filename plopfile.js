@@ -1,4 +1,18 @@
 export default function (plop) {
+  const tags = [
+    { name: 'Navigation', value: 'navigation' },
+    { name: 'Deprecated', value: 'deprecated' },
+    { name: 'News', value: 'news' },
+    { name: 'Artists', value: 'artists' },
+    { name: 'Authentication', value: 'authentication' },
+    { name: 'Content', value: 'content' },
+    { name: 'Input', value: 'input' },
+    { name: 'Shoelace', value: 'shoelace' },
+    { name: 'Events', value: 'events' },
+    { name: 'Text', value: 'text' },
+    { name: 'Localisation', value: 'localisation' },
+  ];
+
   plop.setGenerator('component', {
     description: 'Create a new component',
     prompts: [
@@ -24,11 +38,28 @@ export default function (plop) {
         suffix: '~/routes/($lang)/',
       },
       {
+        type: 'list',
+        name: 'category',
+        message: 'What type of component is this?',
+        choices: [
+          { name: 'Atoms', value: 'Atoms' },
+          { name: 'Molecules', value: 'Molecules' },
+          { name: 'Organisms', value: 'Organisms' },
+          { name: 'Templates', value: 'Templates' },
+        ],
+      },
+      {
+        type: 'checkbox',
+        name: 'tags',
+        choices: tags,
+      },
+      {
         type: 'input',
         name: 'storybookTitle',
         message: 'What is the title of the Storybook story?',
         default(answers) {
-          return answers.name;
+          // Split the name by uppercase letters
+          return answers.name.split(/(?<![A-Z])(?=[A-Z])/).join(' ');
         },
       },
     ],
@@ -43,14 +74,6 @@ export default function (plop) {
           templateFiles: 'scaffold-templates/plop/component/**',
           base: 'scaffold-templates/plop/component',
         },
-        //         {
-        //           type: 'modify',
-        //           path: 'app/locales/en.ts',
-        //           pattern: `
-        // import { en } from '${answers.routeFolder}';
-        // export const { ${answers.name} } = en;
-        //           `,
-        //         },
       ];
     },
   });
@@ -85,11 +108,17 @@ export default function (plop) {
         suffix: '~/routes/($lang)/',
       },
       {
+        type: 'checkbox',
+        name: 'tags',
+        choices: tags,
+      },
+      {
         type: 'input',
         name: 'storybookTitle',
         message: 'What is the title of the Storybook story?',
         default(answers) {
-          return answers.name;
+          // Split the name by uppercase letters
+          return answers.name.split(/(?<![A-Z])(?=[A-Z])/).join(' ');
         },
       },
     ],
@@ -112,5 +141,12 @@ export default function (plop) {
         },
       ];
     },
+  });
+
+  plop.setHelper('ifeq', function (a, b, options) {
+    if (a === b) {
+      return options.fn(this);
+    }
+    return options.inverse(this);
   });
 }

@@ -17,6 +17,9 @@ export default function AdminMenu() {
         <SubMenuItem icon="plus-square" to="paginas/nieuw">
           {t('Pages.Create')}
         </SubMenuItem>
+        <SubMenuItem icon="list" to="menu">
+          {t('Pages.Menu')}
+        </SubMenuItem>
       </SubMenu>
 
       <SubMenu title={t('Events.Title')}>

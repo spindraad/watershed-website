@@ -1,0 +1,62 @@
+import type { Meta, StoryObj } from '@storybook/react';
+import { fn } from '@storybook/test';
+import MenuEditor from './MenuEditor';
+import { NavigationMenuItem } from '~/components/NavigationMenu';
+
+export default {
+  title: 'Organisms/Menu Editor',
+  component: MenuEditor,
+  tags: ['components', 'navigation'],
+} satisfies Meta<typeof MenuEditor>;
+
+type Story = StoryObj<typeof MenuEditor>;
+
+export const menuItems: NavigationMenuItem[] = [
+  {
+    id: 'projecten',
+    title: {
+      en: 'projecten',
+      nl: 'projecten',
+      pap: 'projecten',
+    },
+    slug: 'projecten',
+    order: 1,
+  },
+  {
+    id: 'evenementen',
+    title: {
+      en: 'evenementen',
+      nl: 'evenementen',
+      pap: 'evenementen',
+    },
+    slug: 'evenementen',
+    order: 0,
+  },
+  {
+    id: 'contact',
+    title: {
+      en: 'contact',
+      nl: 'contact',
+      pap: 'contact',
+    },
+    slug: 'contact',
+    order: 3,
+  },
+  {
+    id: 'about',
+    title: {
+      en: 'over ons',
+      nl: 'over ons',
+      pap: 'over ons',
+    },
+    slug: 'about',
+    order: 2,
+  },
+];
+
+export const Default: Story = {
+  args: {
+    onChange: fn(),
+    items: menuItems,
+  },
+};
