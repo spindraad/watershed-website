@@ -4,10 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Smaller changes and improvements so that we can work with illustrations in Puck">
-      <change afterPath="$PROJECT_DIR$/prisma/seed/_events.ts" afterDir="false" />
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Started with seeding more accurate event data">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.helmignore" beforeDir="false" afterPath="$PROJECT_DIR$/.helmignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f8f326ed-6bd3-472a-9a5c-e32229f833e4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f8f326ed-6bd3-472a-9a5c-e32229f833e4.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f8f326ed-6bd3-472a-9a5c-e32229f833e4/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f8f326ed-6bd3-472a-9a5c-e32229f833e4/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/evenementen/_index/_events.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/evenementen/_index/_events.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/validations/models/event.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/validations/models/event.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/prisma/seed/_content.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/seed/_content.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/seed/_events.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/seed/_events.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,6 +162,8 @@
     &quot;npm.Develop.executor&quot;: &quot;Run&quot;,
     &quot;npm.Storybook.executor&quot;: &quot;Debug&quot;,
     &quot;npm.db:generate.executor&quot;: &quot;Run&quot;,
+    &quot;npm.db:push.executor&quot;: &quot;Run&quot;,
+    &quot;npm.db:push:reset:seed.executor&quot;: &quot;Run&quot;,
     &quot;npm.db:push:seed.executor&quot;: &quot;Run&quot;,
     &quot;npm.dev:app.executor&quot;: &quot;Debug&quot;,
     &quot;npm.dev:remix.executor&quot;: &quot;Debug&quot;,
@@ -207,6 +216,8 @@
       <command value="Develop (npm)" />
       <command value="npm run db:generate" />
       <command value="npm run db:push:seed" />
+      <command value="npm run db:push:reset:seed" />
+      <command value="npm run db:push" />
     </option>
   </component>
   <component name="RunManager" selected="Compound.Develop">
@@ -277,20 +288,6 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="parseURL.Return the correct url for &quot;/over-ons/team&quot;" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <vitest-options value="--run" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/app/utils/slug.test.ts" />
-      <test-names>
-        <test-name value="parseURL" />
-        <test-name value="Return the correct url for &quot;/over-ons/team&quot;" />
-      </test-names>
-      <method v="2" />
-    </configuration>
     <configuration name="Debug in Chrome" type="JavascriptDebugType" uri="http://localhost:5173">
       <mapping url="http://localhost:5173" local-file="$PROJECT_DIR$" />
       <method v="2" />
@@ -349,11 +346,21 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="db:generate" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="db:push" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="db:generate" />
+        <script value="db:push" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="db:push:reset:seed" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="db:push:reset:seed" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -374,16 +381,6 @@
       <command value="run" />
       <scripts>
         <script value="db:push:seed" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="typecheck" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="typecheck" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -404,23 +401,15 @@
       <item itemvalue="JavaScript Debug.Debug in Chrome" />
       <item itemvalue="npm.Dev" />
       <item itemvalue="npm.Storybook" />
-      <item itemvalue="npm.typecheck" />
       <item itemvalue="npm.db:generate" />
+      <item itemvalue="npm.db:push" />
+      <item itemvalue="npm.db:push:reset:seed" />
       <item itemvalue="npm.db:push:seed" />
+      <item itemvalue="npm.typecheck" />
       <item itemvalue="Vitest.All Tests" />
-      <item itemvalue="Vitest.parseURL.Return the correct url for &quot;/over-ons/team&quot;" />
       <item itemvalue="Vitest.Validating page requests" />
       <item itemvalue="Vitest.Validating the page" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Vitest.Validating page requests" />
-        <item itemvalue="Vitest.Validating the page" />
-        <item itemvalue="npm.typecheck" />
-        <item itemvalue="npm.db:push:seed" />
-        <item itemvalue="npm.db:generate" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -497,6 +486,7 @@
       <workItem from="1747211105587" duration="682000" />
       <workItem from="1747735077937" duration="235000" />
       <workItem from="1747735387455" duration="512000" />
+      <workItem from="1747743981666" duration="447000" />
     </task>
     <task id="LOCAL-00105" summary="Renamed news link to events">
       <option name="closed" value="true" />

@@ -83,6 +83,10 @@ model Event {
   /// [Localised]
   description Json
 
+  organiser String?
+
+  image String
+
   link String
 
   eventDate DateTime

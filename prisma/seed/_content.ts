@@ -1,6 +1,7 @@
-import { PrismaClient, Project, Event } from '@prisma/client';
+import { PrismaClient, Project } from '@prisma/client';
 import { fakerEN, fakerNL, fakerEO } from '@faker-js/faker';
 import { home, contact, about } from './_pageContent';
+import { events, uploadImagesIfNeeded } from './_events';
 
 const createProjects = (client: PrismaClient) => {
   const projects = Array.from({ length: 10 }).map<
@@ -32,29 +33,12 @@ const createProjects = (client: PrismaClient) => {
 };
 
 const createEvents = (client: PrismaClient) => {
-  const events = Array.from({ length: 10 }).map<
-    Omit<Event, 'id'> & { id?: string }
-  >(() => ({
-    title: {
-      en: fakerEN.lorem.sentence(),
-      nl: fakerNL.lorem.sentence(),
-      pap: fakerEO.lorem.sentence(),
-    },
-    description: {
-      en: fakerEN.lorem.paragraphs(3),
-      nl: fakerNL.lorem.paragraphs(3),
-      pap: fakerEO.lorem.paragraphs(3),
-    },
-    eventDate: fakerEN.date.future(),
-    address: fakerEN.location.streetAddress(),
-    link: '',
-    createdAt: fakerEN.date.past(),
-    updatedAt: fakerEN.date.recent(),
-  }));
-
-  return client.event.createManyAndReturn({
-    data: events,
-  });
+  return Promise.all([
+    client.event.createManyAndReturn({
+      data: events,
+    }),
+    uploadImagesIfNeeded(),
+  ]);
 };
 
 const createPages = (client: PrismaClient) => {
@@ -93,7 +77,7 @@ const createNavigationMenu = (client: PrismaClient) => {
         nl: 'Evenementen',
         pap: 'Eventos',
       },
-      slug: 'events',
+      slug: 'evenementen',
       order: 0,
     },
     {
@@ -103,7 +87,7 @@ const createNavigationMenu = (client: PrismaClient) => {
         nl: 'Projecten',
         pap: 'Proyekto',
       },
-      slug: 'projects',
+      slug: 'projecten',
       order: 1,
     },
     {

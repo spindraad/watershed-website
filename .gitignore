@@ -14,3 +14,4 @@ public/shoelace-assets
 public/tinymce
 .react-router/
 tmp
+prisma/seed/images

@@ -11,6 +11,8 @@ const localisedStringValidations = z.object({
 export const eventValidator = z.object({
   title: localisedStringValidations,
   description: localisedStringValidations,
+  image: z.string().min(1),
+  organiser: z.string().optional(),
   eventDate: z.string().datetime(),
   address: z.string().min(1),
   link: z.string().min(1),

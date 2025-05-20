@@ -34,7 +34,6 @@ public
 .env
 postgres-data
 *storybook.log
-storybook-static
 prisma
 docs
 .github
