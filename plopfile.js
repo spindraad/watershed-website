@@ -11,6 +11,9 @@ export default function (plop) {
     { name: 'Events', value: 'events' },
     { name: 'Text', value: 'text' },
     { name: 'Localisation', value: 'localisation' },
+    { name: 'UI/styling', value: 'ui-styling' },
+    { name: 'Misc', value: 'misc' },
+    { name: 'Testing', value: 'testing' },
   ];
 
   plop.setGenerator('component', {

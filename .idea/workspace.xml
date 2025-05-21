@@ -4,17 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Started with seeding more accurate event data">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.helmignore" beforeDir="false" afterPath="$PROJECT_DIR$/.helmignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f8f326ed-6bd3-472a-9a5c-e32229f833e4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f8f326ed-6bd3-472a-9a5c-e32229f833e4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f8f326ed-6bd3-472a-9a5c-e32229f833e4/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f8f326ed-6bd3-472a-9a5c-e32229f833e4/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
+    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Event model is amended with organiser and image fields which are seeded and shown in UI.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/evenementen/_index/_events.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/evenementen/_index/_events.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/validations/models/event.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/validations/models/event.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/seed/_content.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/seed/_content.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/seed/_events.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/seed/_events.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plopfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/plopfile.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -486,15 +478,8 @@
       <workItem from="1747211105587" duration="682000" />
       <workItem from="1747735077937" duration="235000" />
       <workItem from="1747735387455" duration="512000" />
-      <workItem from="1747743981666" duration="447000" />
-    </task>
-    <task id="LOCAL-00105" summary="Renamed news link to events">
-      <option name="closed" value="true" />
-      <created>1743088390233</created>
-      <option name="number" value="00105" />
-      <option name="presentableId" value="LOCAL-00105" />
-      <option name="project" value="LOCAL" />
-      <updated>1743088390233</updated>
+      <workItem from="1747743981666" duration="7251000" />
+      <workItem from="1747812049963" duration="3122000" />
     </task>
     <task id="LOCAL-00106" summary="Moved the components from the news route to the generic components folder as they can be reused.">
       <option name="closed" value="true" />
@@ -880,7 +865,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747224136313</updated>
     </task>
-    <option name="localTasksCounter" value="154" />
+    <task id="LOCAL-00154" summary="Event model is amended with organiser and image fields which are seeded and shown in UI.">
+      <option name="closed" value="true" />
+      <created>1747744474997</created>
+      <option name="number" value="00154" />
+      <option name="presentableId" value="LOCAL-00154" />
+      <option name="project" value="LOCAL" />
+      <updated>1747744474997</updated>
+    </task>
+    <option name="localTasksCounter" value="155" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -935,7 +928,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Ran prisma migrate to updated db to new schema" />
     <MESSAGE value="Pages can now be edited and saved  Also added slugs to seeding scripts" />
     <MESSAGE value="Changed some of the navigation labels" />
     <MESSAGE value="Created delete route" />
@@ -960,7 +952,8 @@
     <MESSAGE value="Extracted save action and implemented it on the page level, just like Cancel." />
     <MESSAGE value="Semantically fixed db migrations workflow" />
     <MESSAGE value="Smaller changes and improvements so that we can work with illustrations in Puck" />
-    <option name="LAST_COMMIT_MESSAGE" value="Smaller changes and improvements so that we can work with illustrations in Puck" />
+    <MESSAGE value="Event model is amended with organiser and image fields which are seeded and shown in UI." />
+    <option name="LAST_COMMIT_MESSAGE" value="Event model is amended with organiser and image fields which are seeded and shown in UI." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
