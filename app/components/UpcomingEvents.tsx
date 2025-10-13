@@ -25,9 +25,9 @@ export default function UpcomingEvents({ events }: Props) {
     });
 
   return (
-    <div>
+    <div className="@container">
       <div className="flex flex-row justify-between items-center">
-        <div className="flex flex-row gap-2 items-center">
+        <div className="flex flex-row gap-2 items-center relative">
           <Icon name="heading-arrow" />
           <Heading level={2} textSizeClass="text-xl">
             coming UP
@@ -37,7 +37,7 @@ export default function UpcomingEvents({ events }: Props) {
         <Gimmick />
       </div>
 
-      <ul className="grid grid-cols-[repeat(2,minmax(10vw,20rem))] gap-4 mt-8">
+      <ul className="flex flex-row flex-wrap gap-8 mt-8">
         <li className="w-36 sm:w-44 h-auto">
           <img
             src="/illustraties/ezel-ZW.png"
@@ -72,21 +72,19 @@ export default function UpcomingEvents({ events }: Props) {
 
 function Gimmick() {
   return (
-    <div className="relative">
-      <span
-        style={{
-          position: 'absolute',
-          top: -30,
-          right: -10,
-          display: 'inline-block',
-          width: 'min(20vw, 180px)',
-          height: 'min(20vw, 180px)',
-          backgroundImage: 'url(/illustraties/event-gimmick.svg)',
-          backgroundSize: 'contain',
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'center',
-        }}
-      />
-    </div>
+    <span
+      style={{
+        position: 'absolute',
+        top: 10,
+        left: 'min(85cqw, 45rem)',
+        display: 'inline-block',
+        width: '5rem',
+        height: '5rem',
+        backgroundImage: 'url(/illustraties/event-gimmick.svg)',
+        backgroundSize: 'contain',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+      }}
+    />
   );
 }

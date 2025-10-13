@@ -4,20 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a371227e-1556-4281-bf9d-e84dc3a6719d" name="WAT-50 Content summaries" comment="Opened project in a new editor with lots of catching up from PHPStorm. Also configured Storybook with more devices and a proxy">
-      <change afterPath="$PROJECT_DIR$/app/components/UpcomingEvents.translations.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/colors.ts" afterDir="false" />
+    <list default="true" id="a371227e-1556-4281-bf9d-e84dc3a6719d" name="WAT-50 Content summaries" comment="Installed and configured the container query plugin for Tailwind">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.storybook/preview-body.html" beforeDir="false" afterPath="$PROJECT_DIR$/.storybook/preview-body.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.storybook/preview.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/.storybook/preview.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/HandDrawnBox.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/HandDrawnBox.stories.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/HandDrawnBox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/HandDrawnBox.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/Heading.stories.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Heading.stories.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/Heading.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Heading.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/components/UpcomingEvents.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/UpcomingEvents.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/tailwind.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/tailwind.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Brand.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Brand.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
     </list>
     <list id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Added box and line illustrations, and created the hand drawn box component" />
     <option name="SHOW_DIALOG" value="false" />
@@ -496,54 +485,6 @@
       <workItem from="1757113103308" duration="35000" />
       <workItem from="1760341367186" duration="338000" />
     </task>
-    <task id="LOCAL-00109" summary="Created demo page content and a catch-all page route that loads content.">
-      <option name="closed" value="true" />
-      <created>1743160227922</created>
-      <option name="number" value="00109" />
-      <option name="presentableId" value="LOCAL-00109" />
-      <option name="project" value="LOCAL" />
-      <updated>1743160227922</updated>
-    </task>
-    <task id="LOCAL-00110" summary="Created demo page content and a catch-all page route that loads content.">
-      <option name="closed" value="true" />
-      <created>1743160351245</created>
-      <option name="number" value="00110" />
-      <option name="presentableId" value="LOCAL-00110" />
-      <option name="project" value="LOCAL" />
-      <updated>1743160351245</updated>
-    </task>
-    <task id="LOCAL-00111" summary="Implemented dropcap style heading">
-      <option name="closed" value="true" />
-      <created>1743161655262</created>
-      <option name="number" value="00111" />
-      <option name="presentableId" value="LOCAL-00111" />
-      <option name="project" value="LOCAL" />
-      <updated>1743161655262</updated>
-    </task>
-    <task id="LOCAL-00112" summary="Very basically implemented color schemes">
-      <option name="closed" value="true" />
-      <created>1743163796421</created>
-      <option name="number" value="00112" />
-      <option name="presentableId" value="LOCAL-00112" />
-      <option name="project" value="LOCAL" />
-      <updated>1743163796421</updated>
-    </task>
-    <task id="LOCAL-00113" summary="We can now navigate to different pages">
-      <option name="closed" value="true" />
-      <created>1743164457213</created>
-      <option name="number" value="00113" />
-      <option name="presentableId" value="LOCAL-00113" />
-      <option name="project" value="LOCAL" />
-      <updated>1743164457213</updated>
-    </task>
-    <task id="LOCAL-00114" summary="Created basic event and project overview/detail routes">
-      <option name="closed" value="true" />
-      <created>1743165995432</created>
-      <option name="number" value="00114" />
-      <option name="presentableId" value="LOCAL-00114" />
-      <option name="project" value="LOCAL" />
-      <updated>1743165995432</updated>
-    </task>
     <task id="LOCAL-00115" summary="Many fixes and improvements to the routing in order to make it more robust. Also added page meta to the database and made the page meta and page content pieces localised.">
       <option name="closed" value="true" />
       <created>1743537654154</created>
@@ -882,7 +823,7 @@
       <option name="presentableId" value="WAT-50" />
       <option name="project" value="WAT" />
       <updated>1760341705962</updated>
-      <workItem from="1760341706290" duration="13549000" />
+      <workItem from="1760341706290" duration="15020000" />
     </task>
     <task id="LOCAL-00156" summary="Opened project in a new editor with lots of catching up from PHPStorm. Also configured Storybook with more devices and a proxy">
       <option name="closed" value="true" />
@@ -892,7 +833,55 @@
       <option name="project" value="LOCAL" />
       <updated>1760346646513</updated>
     </task>
-    <option name="localTasksCounter" value="157" />
+    <task id="LOCAL-00157" summary="Updated Heading component with extra props, and improved the italic uppercase logic">
+      <option name="closed" value="true" />
+      <created>1760356050036</created>
+      <option name="number" value="00157" />
+      <option name="presentableId" value="LOCAL-00157" />
+      <option name="project" value="LOCAL" />
+      <updated>1760356050036</updated>
+    </task>
+    <task id="LOCAL-00158" summary="Some Storybook/docs improvements">
+      <option name="closed" value="true" />
+      <created>1760356071375</created>
+      <option name="number" value="00158" />
+      <option name="presentableId" value="LOCAL-00158" />
+      <option name="project" value="LOCAL" />
+      <updated>1760356071375</updated>
+    </task>
+    <task id="LOCAL-00159" summary="Added props to the hand drawn box component">
+      <option name="closed" value="true" />
+      <created>1760356092757</created>
+      <option name="number" value="00159" />
+      <option name="presentableId" value="LOCAL-00159" />
+      <option name="project" value="LOCAL" />
+      <updated>1760356092757</updated>
+    </task>
+    <task id="LOCAL-00160" summary="Created a post it note component">
+      <option name="closed" value="true" />
+      <created>1760356105283</created>
+      <option name="number" value="00160" />
+      <option name="presentableId" value="LOCAL-00160" />
+      <option name="project" value="LOCAL" />
+      <updated>1760356105283</updated>
+    </task>
+    <task id="LOCAL-00161" summary="Improved the upcoming events">
+      <option name="closed" value="true" />
+      <created>1760356120298</created>
+      <option name="number" value="00161" />
+      <option name="presentableId" value="LOCAL-00161" />
+      <option name="project" value="LOCAL" />
+      <updated>1760356120298</updated>
+    </task>
+    <task id="LOCAL-00162" summary="Installed and configured the container query plugin for Tailwind">
+      <option name="closed" value="true" />
+      <created>1760356588316</created>
+      <option name="number" value="00162" />
+      <option name="presentableId" value="LOCAL-00162" />
+      <option name="project" value="LOCAL" />
+      <updated>1760356588316</updated>
+    </task>
+    <option name="localTasksCounter" value="163" />
     <option name="clearContext" value="false" />
     <option name="createBranch" value="false" />
     <option name="useBranch" value="true" />
@@ -955,12 +944,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Created delete route" />
-    <MESSAGE value="The page content is now more strictly validated, because we now transform the slug on multiple levels." />
-    <MESSAGE value="Puck editor is now full height for pages" />
-    <MESSAGE value="The admin sidebar is now hidden for the page mutation routes." />
-    <MESSAGE value="Added new logo and favicon" />
-    <MESSAGE value="Double checked and fixed the meta tags where applicable, so now regular pages have their custom meta tags back." />
     <MESSAGE value="Implemented a basic upload handler for images" />
     <MESSAGE value="Added some test routes for checking the image upload. Also improved it so the DX is a bit better." />
     <MESSAGE value="Fixed typo" />
@@ -980,7 +963,13 @@
     <MESSAGE value="Event model is amended with organiser and image fields which are seeded and shown in UI." />
     <MESSAGE value="Added box and line illustrations, and created the hand drawn box component" />
     <MESSAGE value="Opened project in a new editor with lots of catching up from PHPStorm. Also configured Storybook with more devices and a proxy" />
-    <option name="LAST_COMMIT_MESSAGE" value="Opened project in a new editor with lots of catching up from PHPStorm. Also configured Storybook with more devices and a proxy" />
+    <MESSAGE value="Updated Heading component with extra props, and improved the italic uppercase logic" />
+    <MESSAGE value="Some Storybook/docs improvements" />
+    <MESSAGE value="Added props to the hand drawn box component" />
+    <MESSAGE value="Created a post it note component" />
+    <MESSAGE value="Improved the upcoming events" />
+    <MESSAGE value="Installed and configured the container query plugin for Tailwind" />
+    <option name="LAST_COMMIT_MESSAGE" value="Installed and configured the container query plugin for Tailwind" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
