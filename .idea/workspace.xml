@@ -4,9 +4,43 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Event model is amended with organiser and image fields which are seeded and shown in UI.">
+    <list default="true" id="a371227e-1556-4281-bf9d-e84dc3a6719d" name="WAT-50 Content summaries" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/copilot.data.migration.agent.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/copilot.data.migration.ask.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/copilot.data.migration.ask2agent.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/copilot.data.migration.edit.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plopfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/plopfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.storybook/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/.storybook/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.storybook/preview.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/.storybook/preview.tsx" afterDir="false" />
+    </list>
+    <list id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Added box and line illustrations, and created the hand drawn box component">
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/38ac5dbc-b511-4104-af56-a1d81fb284c7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/38ac5dbc-b511-4104-af56-a1d81fb284c7/storage_v2/_src_/database/watershed.SztK8w.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/38ac5dbc-b511-4104-af56-a1d81fb284c7/storage_v2/_src_/database/watershed.SztK8w/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/38ac5dbc-b511-4104-af56-a1d81fb284c7/storage_v2/_src_/database/watershed.SztK8w/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/38ac5dbc-b511-4104-af56-a1d81fb284c7/storage_v2/_src_/database/watershed.SztK8w/schema/public.abK9xQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f8f326ed-6bd3-472a-9a5c-e32229f833e4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f8f326ed-6bd3-472a-9a5c-e32229f833e4/storage_v2/_src_/database/postgres.edMnLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f8f326ed-6bd3-472a-9a5c-e32229f833e4/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f8f326ed-6bd3-472a-9a5c-e32229f833e4/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f8f326ed-6bd3-472a-9a5c-e32229f833e4/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/git_toolbox_blame.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/prettier.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/watershed-website.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/watershed-website.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webResources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +51,11 @@
     <execution />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="feature/WAT-153_content_summaries_for_homepage" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -93,6 +132,8 @@
 }</component>
   <component name="KubernetesSettings">
     <option name="apiVersion" value="1.30" />
+    <option name="contextConfigFilePath" value="file://$USER_HOME$/.kube/config" />
+    <option name="contextName" value="do-ams3-spindraad-dev-cluster" />
     <option name="getSpecFromCluster" value="true" />
     <option name="helmParameters">
       <HelmParameters>
@@ -102,6 +143,30 @@
         </option>
       </HelmParameters>
     </option>
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/.idea/workspace.xml">
+      <ranges>
+        <range start1="6" end1="7" start2="6" end2="42" changelist="a371227e-1556-4281-bf9d-e84dc3a6719d" />
+        <range start1="8" end1="9" start2="43" end2="43" changelist="a371227e-1556-4281-bf9d-e84dc3a6719d" />
+        <range start1="19" end1="19" start2="53" end2="58" changelist="a371227e-1556-4281-bf9d-e84dc3a6719d" />
+        <range start1="95" end1="95" start2="134" end2="136" changelist="a371227e-1556-4281-bf9d-e84dc3a6719d" />
+        <range start1="104" end1="104" start2="145" end2="169" changelist="a371227e-1556-4281-bf9d-e84dc3a6719d" />
+        <range start1="122" end1="169" start2="187" end2="238" changelist="a371227e-1556-4281-bf9d-e84dc3a6719d" />
+        <range start1="170" end1="173" start2="239" end2="242" changelist="a371227e-1556-4281-bf9d-e84dc3a6719d" />
+        <range start1="174" end1="179" start2="243" end2="248" changelist="a371227e-1556-4281-bf9d-e84dc3a6719d" />
+        <range start1="181" end1="182" start2="250" end2="251" changelist="a371227e-1556-4281-bf9d-e84dc3a6719d" />
+        <range start1="325" end1="345" start2="394" end2="394" changelist="a371227e-1556-4281-bf9d-e84dc3a6719d" />
+        <range start1="395" end1="397" start2="444" end2="444" changelist="a371227e-1556-4281-bf9d-e84dc3a6719d" />
+        <range start1="408" end1="410" start2="455" end2="457" changelist="a371227e-1556-4281-bf9d-e84dc3a6719d" />
+        <range start1="415" end1="416" start2="462" end2="464" changelist="a371227e-1556-4281-bf9d-e84dc3a6719d" />
+        <range start1="420" end1="421" start2="468" end2="469" changelist="a371227e-1556-4281-bf9d-e84dc3a6719d" />
+        <range start1="481" end1="498" start2="529" end2="543" changelist="a371227e-1556-4281-bf9d-e84dc3a6719d" />
+        <range start1="875" end1="877" start2="920" end2="950" changelist="a371227e-1556-4281-bf9d-e84dc3a6719d" />
+        <range start1="930" end1="931" start2="1003" end2="1003" changelist="7f955583-8571-46fe-bf73-823af2e4bb22" />
+        <range start1="955" end1="956" start2="1027" end2="1029" changelist="7f955583-8571-46fe-bf73-823af2e4bb22" />
+      </ranges>
+    </file>
   </component>
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/package.json" />
@@ -120,66 +185,70 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Attach to Node.js/Chrome.Debug in Chrome.executor&quot;: &quot;Debug&quot;,
-    &quot;JavaScript Debug.Debug in Chrome.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.OpenDatabaseViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;Vitest.All Tests.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.Content utilities.Parse a localised form data object into a localised value object.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.Content utilities.Retrieve the number of errors for each localised field.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.Content utilities.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.Validating page requests.executor&quot;: &quot;Debug&quot;,
-    &quot;Vitest.Validating the page.executor&quot;: &quot;Debug&quot;,
-    &quot;Vitest.parseURL.Return the correct url for \&quot;/over-ons/team\&quot;.executor&quot;: &quot;Debug&quot;,
-    &quot;Vitest.parseURL.Return the correct urls for \&quot;/contact\&quot;.executor&quot;: &quot;Debug&quot;,
-    &quot;Vitest.validateLogin.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.validateLogin.should return success: false when emailaddress is invalid.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.validateLogin.should return success: false when emailaddress is missing.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/WAT-153__content__summaries__for__homepage&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;22.11.0&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;22.15.18&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/lody/dev/projects/watershed-website/app/routes/_index&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.Dev.executor&quot;: &quot;Debug&quot;,
-    &quot;npm.Develop.executor&quot;: &quot;Run&quot;,
-    &quot;npm.Storybook.executor&quot;: &quot;Debug&quot;,
-    &quot;npm.db:generate.executor&quot;: &quot;Run&quot;,
-    &quot;npm.db:push.executor&quot;: &quot;Run&quot;,
-    &quot;npm.db:push:reset:seed.executor&quot;: &quot;Run&quot;,
-    &quot;npm.db:push:seed.executor&quot;: &quot;Run&quot;,
-    &quot;npm.dev:app.executor&quot;: &quot;Debug&quot;,
-    &quot;npm.dev:remix.executor&quot;: &quot;Debug&quot;,
-    &quot;npm.dev:storybook.executor&quot;: &quot;Debug&quot;,
-    &quot;npm.docker:start.executor&quot;: &quot;Run&quot;,
-    &quot;npm.typecheck.executor&quot;: &quot;Run&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/lody/dev/projects/watershed-website/node_modules/prettier&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.typescriptcompiler&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/lody/dev/projects/watershed-website/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Attach to Node.js/Chrome.Debug in Chrome.executor": "Debug",
+    "JavaScript Debug.Debug in Chrome.executor": "Debug",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.OpenDatabaseViewOnStart": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Vitest.All Tests.executor": "Run",
+    "Vitest.Content utilities.Parse a localised form data object into a localised value object.executor": "Run",
+    "Vitest.Content utilities.Retrieve the number of errors for each localised field.executor": "Run",
+    "Vitest.Content utilities.executor": "Run",
+    "Vitest.Validating page requests.executor": "Debug",
+    "Vitest.Validating the page.executor": "Debug",
+    "Vitest.parseURL.Return the correct url for \"/over-ons/team\".executor": "Debug",
+    "Vitest.parseURL.Return the correct urls for \"/contact\".executor": "Debug",
+    "Vitest.validateLogin.executor": "Run",
+    "Vitest.validateLogin.should return success: false when emailaddress is invalid.executor": "Run",
+    "Vitest.validateLogin.should return success: false when emailaddress is missing.executor": "Run",
+    "git-widget-placeholder": "feature/WAT-153__content__summaries__for__homepage",
+    "javascript.nodejs.core.library.configured.version": "22.11.0",
+    "javascript.nodejs.core.library.typings.version": "22.18.1",
+    "last_opened_file_path": "/Users/lody/dev/projects/watershed-website/app/routes/_index",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "npm",
+    "npm.Dev.executor": "Run",
+    "npm.Develop.executor": "Run",
+    "npm.Storybook.executor": "Run",
+    "npm.db:generate.executor": "Run",
+    "npm.db:push.executor": "Run",
+    "npm.db:push:reset:seed.executor": "Run",
+    "npm.db:push:seed.executor": "Run",
+    "npm.dev:app.executor": "Debug",
+    "npm.dev:remix.executor": "Debug",
+    "npm.dev:storybook.executor": "Debug",
+    "npm.docker:start.executor": "Run",
+    "npm.typecheck.executor": "Run",
+    "prettierjs.PrettierConfiguration.Package": "/Users/lody/dev/projects/watershed-website/node_modules/prettier",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "tasks.timeTracking",
+    "ts.external.directory.path": "/Users/lody/dev/projects/watershed-website/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ],
-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
-      &quot;CSS&quot;,
-      &quot;Markdown&quot;,
-      &quot;TEXT&quot;,
-      &quot;XML&quot;
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "CSS",
+      "Markdown",
+      "TEXT",
+      "XML"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/routes/_index" />
@@ -328,26 +397,6 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="db:generate" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="db:generate" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="db:push" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="db:push" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <configuration name="db:push:reset:seed" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -393,8 +442,6 @@
       <item itemvalue="JavaScript Debug.Debug in Chrome" />
       <item itemvalue="npm.Dev" />
       <item itemvalue="npm.Storybook" />
-      <item itemvalue="npm.db:generate" />
-      <item itemvalue="npm.db:push" />
       <item itemvalue="npm.db:push:reset:seed" />
       <item itemvalue="npm.db:push:seed" />
       <item itemvalue="npm.typecheck" />
@@ -406,19 +453,20 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-PS-251.25410.148" />
-        <option value="bundled-php-predefined-a98d8de5180a-c5828cf854d9-com.jetbrains.php.sharedIndexes-PS-251.25410.148" />
+        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-PS-252.26830.95" />
+        <option value="bundled-php-predefined-a98d8de5180a-9b563d34894c-com.jetbrains.php.sharedIndexes-PS-252.26830.95" />
       </set>
     </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
+    <task id="Default" summary="Default task">
+      <branch name="feature/WAT-153_content_summaries_for_homepage" repository="$PROJECT_DIR$" original="true" />
       <changelist id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="" />
       <created>1725347655792</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1725347655792</updated>
+      <updated>1760341705962</updated>
       <workItem from="1729067684577" duration="3861000" />
       <workItem from="1729071575602" duration="4244000" />
       <workItem from="1729076289567" duration="16697000" />
@@ -479,23 +527,20 @@
       <workItem from="1747735077937" duration="235000" />
       <workItem from="1747735387455" duration="512000" />
       <workItem from="1747743981666" duration="7251000" />
-      <workItem from="1747812049963" duration="3122000" />
-    </task>
-    <task id="LOCAL-00106" summary="Moved the components from the news route to the generic components folder as they can be reused.">
-      <option name="closed" value="true" />
-      <created>1743088866498</created>
-      <option name="number" value="00106" />
-      <option name="presentableId" value="LOCAL-00106" />
-      <option name="project" value="LOCAL" />
-      <updated>1743088866498</updated>
-    </task>
-    <task id="LOCAL-00107" summary="Removed the news routes">
-      <option name="closed" value="true" />
-      <created>1743088900548</created>
-      <option name="number" value="00107" />
-      <option name="presentableId" value="LOCAL-00107" />
-      <option name="project" value="LOCAL" />
-      <updated>1743088900548</updated>
+      <workItem from="1747812049963" duration="3962000" />
+      <workItem from="1747828876889" duration="3412000" />
+      <workItem from="1748345627473" duration="7843000" />
+      <workItem from="1749042109513" duration="813000" />
+      <workItem from="1749804852060" duration="5293000" />
+      <workItem from="1751063943472" duration="1433000" />
+      <workItem from="1751528729243" duration="5227000" />
+      <workItem from="1751631870853" duration="90000" />
+      <workItem from="1751632900551" duration="2409000" />
+      <workItem from="1751662919403" duration="9000" />
+      <workItem from="1751875173518" duration="16000" />
+      <workItem from="1751983260331" duration="154000" />
+      <workItem from="1757113103308" duration="35000" />
+      <workItem from="1760341367186" duration="338000" />
     </task>
     <task id="LOCAL-00108" summary="Removed more references to the News">
       <option name="closed" value="true" />
@@ -873,8 +918,36 @@
       <option name="project" value="LOCAL" />
       <updated>1747744474997</updated>
     </task>
-    <option name="localTasksCounter" value="155" />
-    <servers />
+    <task id="LOCAL-00155" summary="Added box and line illustrations, and created the hand drawn box component">
+      <option name="closed" value="true" />
+      <created>1747828048930</created>
+      <option name="number" value="00155" />
+      <option name="presentableId" value="LOCAL-00155" />
+      <option name="project" value="LOCAL" />
+      <updated>1747828048930</updated>
+    </task>
+    <task active="true" id="WAT-50" summary="Content summaries">
+      <branch name="feature/WAT-153_content_summaries_for_homepage" repository="$PROJECT_DIR$" />
+      <changelist id="a371227e-1556-4281-bf9d-e84dc3a6719d" name="WAT-50 Content summaries" comment="" />
+      <created>1760305693143</created>
+      <option name="issue" value="true" />
+      <url>https://youtrack.spindraad.dev/issue/WAT-50</url>
+      <option name="number" value="50" />
+      <option name="presentableId" value="WAT-50" />
+      <option name="project" value="WAT" />
+      <updated>1760341705962</updated>
+      <workItem from="1760341706290" duration="4841000" />
+    </task>
+    <option name="localTasksCounter" value="156" />
+    <option name="clearContext" value="false" />
+    <option name="createBranch" value="false" />
+    <option name="useBranch" value="true" />
+    <servers>
+      <YouTrack url="https://youtrack.spindraad.dev">
+        <option name="defaultSearch" value="Board Watershed Sprint Board: {Current sprint} #WAT-50 " />
+        <username>random</username>
+      </YouTrack>
+    </servers>
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
     <option name="shellPath" value="C:\Windows\System32\wsl.exe" />
@@ -928,7 +1001,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Pages can now be edited and saved  Also added slugs to seeding scripts" />
     <MESSAGE value="Changed some of the navigation labels" />
     <MESSAGE value="Created delete route" />
     <MESSAGE value="The page content is now more strictly validated, because we now transform the slug on multiple levels." />
@@ -953,7 +1025,8 @@
     <MESSAGE value="Semantically fixed db migrations workflow" />
     <MESSAGE value="Smaller changes and improvements so that we can work with illustrations in Puck" />
     <MESSAGE value="Event model is amended with organiser and image fields which are seeded and shown in UI." />
-    <option name="LAST_COMMIT_MESSAGE" value="Event model is amended with organiser and image fields which are seeded and shown in UI." />
+    <MESSAGE value="Added box and line illustrations, and created the hand drawn box component" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added box and line illustrations, and created the hand drawn box component" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

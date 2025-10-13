@@ -1,5 +1,5 @@
 import type { Preview } from '@storybook/react';
-import { MINIMAL_VIEWPORTS } from '@storybook/addon-viewport';
+import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import {
   withRouter,
   reactRouterParameters,
@@ -42,7 +42,7 @@ const preview: Preview = {
       order: ['Introduction', 'Brand', 'Components'],
     },
     viewport: {
-      viewports: MINIMAL_VIEWPORTS,
+      options: INITIAL_VIEWPORTS,
     },
     options: {
       storySort: {
@@ -65,6 +65,7 @@ const preview: Preview = {
       en: 'English',
       nl: 'Nederlands',
     },
+    viewport: { value: 'iphone12', isRotated: false },
   },
   decorators: [withRouter(), withShoelace()],
 };

@@ -44,5 +44,17 @@ const config: StorybookConfig = {
   typescript: {
     reactDocgen: 'react-docgen-typescript',
   },
+
+  async viteFinal(config) {
+    return {
+      ...config,
+      server: {
+        ...config.server,
+        proxy: {
+          '/afbeelding': 'http://localhost:5173',
+        },
+      },
+    };
+  },
 };
 export default config;

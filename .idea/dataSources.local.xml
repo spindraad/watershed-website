@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="dataSourceStorageLocal" created-in="PS-251.25410.148">
-    <data-source name="LocalDev" uuid="f8f326ed-6bd3-472a-9a5c-e32229f833e4">
-      <database-info product="PostgreSQL" version="17.0 (Debian 17.0-1.pgdg120+1)" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.7.3" dbms="POSTGRES" exact-version="17.0" exact-driver-version="42.7">
-        <identifier-quote-string>&quot;</identifier-quote-string>
-      </database-info>
-      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
-      <secret-storage>master_key</secret-storage>
-      <user-name>postgres</user-name>
-      <schema-mapping>
-        <introspection-scope>
-          <node kind="database" qname="@">
-            <node kind="schema" qname="@" />
-          </node>
-        </introspection-scope>
-      </schema-mapping>
-    </data-source>
-    <data-source name="Dev Cluster" uuid="38ac5dbc-b511-4104-af56-a1d81fb284c7">
+  <component name="dataSourceStorageLocal" created-in="PS-252.26830.95">
+    <data-source name="Dev Cluster DB" uuid="e7efc8ac-48c4-4403-8890-06c5f249fdb1">
       <database-info product="PostgreSQL" version="15.10" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.7.3" dbms="POSTGRES" exact-version="15.10" exact-driver-version="42.7">
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
@@ -30,6 +15,15 @@
           </node>
         </introspection-scope>
       </schema-mapping>
+    </data-source>
+    <data-source name="Local DB" uuid="6f310b5d-d6a9-4068-9954-4933694bcfe2">
+      <database-info product="PostgreSQL" version="17.0 (Debian 17.0-1.pgdg120+1)" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.7.3" dbms="POSTGRES" exact-version="17.0" exact-driver-version="42.7">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>postgres</user-name>
+      <schema-mapping />
     </data-source>
   </component>
 </project>
