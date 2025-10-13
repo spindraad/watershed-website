@@ -61,3 +61,11 @@ export const Level6: Story = {
     children: 'Hello, World!',
   },
 };
+
+export const CustomTextSize: Story = {
+  args: {
+    level: 5,
+    children: 'Hello, World!',
+    textSizeClass: 'text-4xl',
+  },
+};
