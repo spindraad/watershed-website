@@ -1,4 +1,13 @@
 import { Meta, ColorPalette, ColorItem, Typeset } from '@storybook/blocks';
+import {
+  purple,
+  peach,
+  darkGrey,
+  peachRed,
+  foamSpray,
+  yellow,
+  screaminGreen,
+} from './colors';
 
 <Meta title="Brand" />
 
@@ -6,82 +15,127 @@ import { Meta, ColorPalette, ColorItem, Typeset } from '@storybook/blocks';
 
 The Watershed brand is currently being redesigned. This page will be updated with the new brand guidelines once they are available.
 
+## Surface
+
+The Watershed brand uses a light surface color for its backgrounds.
+
+<ColorPalette>
+  <ColorItem
+    title="Surface"
+    subtitle="Default"
+    colors={['rgb(var(--surface__surface))']}
+  />
+</ColorPalette>
+
+<ColorPalette>
+  <ColorItem
+    title="Surface"
+    subtitle="Primary"
+    colors={['rgb(var(--surface__primary-container))']}
+  />
+</ColorPalette>
+
+<ColorPalette>
+  <ColorItem
+    title="Surface"
+    subtitle="Secondary"
+    colors={['rgb(var(--surface__secondary-container))']}
+  />
+</ColorPalette>
+
 ## Colors
 
 Watershed currently uses the following colors in its branding:
 
+### Purple
+
 <ColorPalette>
-  <ColorItem
-    title="Primary"
-    subtitle="Pink"
-    colors={{ Pink: 'rgb(var(--primary))' }}
-  />
-  <ColorItem
-    title="Secondary"
-    subtitle="Blue"
-    colors={{ Blue: 'rgb(var(--secondary))' }}
-  />
+  {Object.keys(purple).map((shade) => (
+    <ColorItem
+      key={shade}
+      title="Purple"
+      subtitle={`${shade}`}
+      colors={[`rgb(var(${shade}))`]}
+    />
+  ))}
 </ColorPalette>
 
-The blue color is also being used as the primary color for all the Shoelace components.
-We've generated a color scheme based on the blue color that is used as custom properties.
+### Peach
 
 <ColorPalette>
-  <ColorItem
-    title="Primary"
-    subtitle="--sl-primary-50"
-    colors={['var(--sl-color-primary-50)']}
-  />
-  <ColorItem
-    title="Primary"
-    subtitle="--sl-primary-100"
-    colors={['var(--sl-color-primary-100)']}
-  />
-  <ColorItem
-    title="Primary"
-    subtitle="--sl-primary-200"
-    colors={['var(--sl-color-primary-200)']}
-  />
-  <ColorItem
-    title="Primary"
-    subtitle="--sl-primary-300"
-    colors={['var(--sl-color-primary-300)']}
-  />
-  <ColorItem
-    title="Primary"
-    subtitle="--sl-primary-400"
-    colors={['var(--sl-color-primary-400)']}
-  />
-  <ColorItem
-    title="Primary"
-    subtitle="--sl-primary-500"
-    colors={['var(--sl-color-primary-500)']}
-  />
-  <ColorItem
-    title="Primary"
-    subtitle="--sl-primary-600"
-    colors={['var(--sl-color-primary-600)']}
-  />
-  <ColorItem
-    title="Primary"
-    subtitle="--sl-primary-700"
-    colors={['var(--sl-color-primary-700)']}
-  />
-  <ColorItem
-    title="Primary"
-    subtitle="--sl-primary-800"
-    colors={['var(--sl-color-primary-800)']}
-  />
-  <ColorItem
-    title="Primary"
-    subtitle="--sl-primary-900"
-    colors={['var(--sl-color-primary-900)']}
-  />
-  <ColorItem
-    title="Primary"
-    subtitle="--sl-primary-950"
-    colors={['var(--sl-color-primary-950)']}
-  />
+  {Object.keys(peach).map((shade) => (
+    <ColorItem
+      key={shade}
+      title="Peach"
+      subtitle={`${shade}`}
+      colors={[`rgb(var(${shade}))`]}
+    />
+  ))}
+</ColorPalette>
+
+### Dark Grey
+
+<ColorPalette>
+  {Object.keys(darkGrey).map((shade) => (
+    <ColorItem
+      key={shade}
+      title="Dark Grey"
+      subtitle={`${shade}`}
+      colors={[`rgb(var(${shade}))`]}
+    />
+  ))}
+</ColorPalette>
+
+### Peach Red
+
+<ColorPalette>
+  {Object.keys(peachRed).map((shade) => (
+    <ColorItem
+      key={shade}
+      title="Peach Red"
+      subtitle={`${shade}`}
+      colors={[`rgb(var(${shade}))`]}
+    />
+  ))}
+</ColorPalette>
+
+### Foam Spray
+
+<ColorPalette>
+  {Object.keys(foamSpray).map((shade) => (
+    <ColorItem
+      key={shade}
+      title="Foam Spray"
+      subtitle={`${shade}`}
+      colors={[`rgb(var(${shade}))`]}
+    />
+  ))}
+</ColorPalette>
+
+### Yellow
+
+<ColorPalette>
+  {Object.keys(yellow).map((shade) => (
+    <ColorItem
+      key={shade}
+      title="Yellow"
+      subtitle={`${shade}`}
+      colors={[`rgb(var(${shade}))`]}
+    />
+  ))}
+</ColorPalette>
+
+### Screamin' Green
+
+<ColorPalette>
+  {Object.keys(screaminGreen).map((shade) => (
+    <ColorItem
+      key={shade}
+      title="Screamin' Green"
+      subtitle={`${shade}`}
+      colors={[`rgb(var(${shade}))`]}
+    />
+  ))}
 </ColorPalette>
 
 ## Fonts

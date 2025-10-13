@@ -17,13 +17,17 @@ const preview: Preview = {
     i18n,
     backgrounds: {
       options: {
-        primary: {
-          name: 'Primary color',
-          value: 'rgb(var(--primary))',
+        surface: {
+          name: 'Surface',
+          value: 'rgb(var(--surface__surface))',
         },
-        secondary: {
-          name: 'Secondary color',
-          value: 'rgb(var(--secondary))',
+        surfacePrimary: {
+          name: 'Surface (primary container)',
+          value: 'rgb(var(--surface__primary-container))',
+        },
+        surfaceSecondary: {
+          name: 'Surface (secondary container)',
+          value: 'rgb(var(--surface__secondary-container))',
         },
       },
     },
@@ -59,8 +63,8 @@ const preview: Preview = {
     },
   },
   initialGlobals: {
-    background: { value: 'primary' },
-    locale: 'en',
+    background: { value: 'surface' },
+    locale: 'nl',
     locales: {
       en: 'English',
       nl: 'Nederlands',

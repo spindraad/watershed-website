@@ -99,6 +99,11 @@ export default {
         },
         white: 'rgb(var(--white))',
         black: 'rgb(var(--black))',
+        surface: {
+          DEFAULT: 'rgb(var(--surface__surface))',
+          primary: 'rgb(var(--surface__primary-container))',
+          secondary: 'rgb(var(--surface__secondary-container))',
+        },
       },
       fontFamily: {
         sans: ['var(--font-family-sans)'],
