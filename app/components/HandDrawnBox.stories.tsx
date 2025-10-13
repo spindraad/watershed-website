@@ -17,6 +17,25 @@ export default {
         type: 'text',
       },
     },
+    padding: {
+      control: {
+        type: 'text',
+      },
+      description: 'Tailwind CSS padding classes (e.g., p-4, p-6)',
+    },
+    background: {
+      control: {
+        type: 'text',
+      },
+      description:
+        'Tailwind CSS background classes (e.g., bg-white, bg-gray-100)',
+    },
+    classes: {
+      control: {
+        type: 'text',
+      },
+      description: 'Additional Tailwind CSS classes to apply to the box',
+    },
   },
 } satisfies Meta<typeof HandDrawnBox>;
 

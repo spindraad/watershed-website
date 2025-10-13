@@ -31,18 +31,22 @@ type Props = {
   drawStyle: DrawStyles;
   children: ReactNode;
   padding?: string;
+  background?: string;
+  classes?: string;
 };
 
 export default function HandDrawnBox({
   drawStyle,
   children,
   padding = 'p-4',
+  background = 'transparent',
+  classes = '',
 }: Props) {
   const style = drawStyles[drawStyle];
 
   return (
     <div
-      className={`${padding} border border-black border-solid`}
+      className={`${padding} ${background} ${classes} border border-black border-solid bg-clip-padding`}
       style={{
         borderImageSource: style.borderImage,
         borderImageSlice: style.imageSlice,
