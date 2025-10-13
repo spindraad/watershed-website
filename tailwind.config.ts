@@ -1,6 +1,7 @@
 import type { Config } from 'tailwindcss';
 import { StatePlugin, PartPlugin } from 'tailwindcss-plugin-custom-elements';
 import TypographyPlugin from '@tailwindcss/typography';
+import ContainerQueryPlugin from '@tailwindcss/container-queries';
 
 export default {
   content: ['./app/**/{**,.client,.server}/**/*.{js,jsx,ts,tsx}'],
@@ -121,5 +122,10 @@ export default {
       },
     },
   },
-  plugins: [StatePlugin(), PartPlugin(), TypographyPlugin()],
+  plugins: [
+    StatePlugin(),
+    PartPlugin(),
+    TypographyPlugin(),
+    ContainerQueryPlugin,
+  ],
 } satisfies Config;
