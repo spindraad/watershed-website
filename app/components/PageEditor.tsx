@@ -15,6 +15,7 @@ import {
   WatershedPageData,
 } from '~/config/puck.config';
 import { ShoelaceContext } from '~/components/shoelace';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 type PuckProps = ComponentProps<typeof Puck<WatershedPageConfig>>;
 type Props = {
@@ -44,6 +45,7 @@ export default function PageEditor({
   isSaving = false,
   title,
 }: Props) {
+  const queryClient = new QueryClient();
   const { SlDrawer } = useContext(ShoelaceContext);
 
   const [leftDrawerOpen, setLeftDrawerOpen] = useState(false);
@@ -60,41 +62,43 @@ export default function PageEditor({
   };
 
   return (
-    <Puck
-      overrides={overrides}
-      config={config}
-      data={data}
-      onPublish={onPublish}
-    >
-      <div className="w-full h-full flex flex-col gap-4 px-4">
-        <SlDrawer
-          open={leftDrawerOpen}
-          placement="start"
-          onSlAfterHide={() => setLeftDrawerOpen(false)}
-          label="Componenten"
-        >
-          <Puck.Components />
-        </SlDrawer>
+    <QueryClientProvider client={queryClient}>
+      <Puck
+        overrides={overrides}
+        config={config}
+        data={data}
+        onPublish={onPublish}
+      >
+        <div className="w-full h-full flex flex-col gap-4 px-4">
+          <SlDrawer
+            open={leftDrawerOpen}
+            placement="start"
+            onSlAfterHide={() => setLeftDrawerOpen(false)}
+            label="Componenten"
+          >
+            <Puck.Components />
+          </SlDrawer>
 
-        <EditorHeader
-          onPublish={onPublish}
-          handleDrawerOpen={handleDrawerOpen}
-          isSaving={isSaving}
-          title={title}
-        />
+          <EditorHeader
+            onPublish={onPublish}
+            handleDrawerOpen={handleDrawerOpen}
+            isSaving={isSaving}
+            title={title}
+          />
 
-        <SlDrawer
-          open={rightDrawerOpen}
-          placement="end"
-          onSlAfterHide={() => setRightDrawerOpen(false)}
-          label="Velden"
-        >
-          <Puck.Fields />
-        </SlDrawer>
+          <SlDrawer
+            open={rightDrawerOpen}
+            placement="end"
+            onSlAfterHide={() => setRightDrawerOpen(false)}
+            label="Velden"
+          >
+            <Puck.Fields />
+          </SlDrawer>
 
-        <Puck.Preview />
-      </div>
-    </Puck>
+          <Puck.Preview />
+        </div>
+      </Puck>
+    </QueryClientProvider>
   );
 }
 

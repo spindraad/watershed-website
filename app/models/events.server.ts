@@ -4,9 +4,17 @@ import { type ContentTableItem } from '~/components/ContentTable';
 import { EventValidator } from '~/validations/models/event';
 
 export type { Event };
+export type SerializedEvent = Omit<
+  Event,
+  'eventDate' | 'createdAt' | 'updatedAt'
+> & {
+  eventDate: string;
+  createdAt: string;
+  updatedAt: string;
+};
 
-export async function getEvents(): Promise<Event[]> {
-  return prisma.event.findMany();
+export async function getEvents(max?: number): Promise<Event[]> {
+  return prisma.event.findMany({ take: max, orderBy: { eventDate: 'asc' } });
 }
 
 export async function getEvent(eventID: string): Promise<Event> {

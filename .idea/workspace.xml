@@ -4,9 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a371227e-1556-4281-bf9d-e84dc3a6719d" name="WAT-50 Content summaries" comment="Installed and configured the container query plugin for Tailwind">
+    <list default="true" id="a371227e-1556-4281-bf9d-e84dc3a6719d" name="WAT-50 Content summaries" comment="Some layout improvements to the upcoming events block">
+      <change afterPath="$PROJECT_DIR$/app/config/blocks/UpcomingEventsBlock.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/routes/api_/events/_events.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/iconen/eye.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.storybook/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/.storybook/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/PageEditor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PageEditor.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/PageRenderer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PageRenderer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/components/UpcomingEvents.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/UpcomingEvents.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/shoelace.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/shoelace.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/puck.config.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/puck.config.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/events.server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/events.server.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/api_.locales.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/api_/locales/_locales.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/utils/date.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/date.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/utils/date.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/date.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <list id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Added box and line illustrations, and created the hand drawn box component" />
     <option name="SHOW_DIALOG" value="false" />
@@ -146,6 +160,8 @@
     "Vitest.Content utilities.executor": "Run",
     "Vitest.Validating page requests.executor": "Debug",
     "Vitest.Validating the page.executor": "Debug",
+    "Vitest.convertDateToLocaleString.converts a date to a human readable format with shortened weekday.executor": "Run",
+    "Vitest.convertDateToLocaleString.executor": "Run",
     "Vitest.parseURL.Return the correct url for \"/over-ons/team\".executor": "Debug",
     "Vitest.parseURL.Return the correct urls for \"/contact\".executor": "Debug",
     "Vitest.validateLogin.executor": "Run",
@@ -176,7 +192,28 @@
     "npm.typecheck.executor": "Run",
     "prettierjs.PrettierConfiguration.Package": "/Users/lody/dev/projects/watershed-website/node_modules/prettier",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "tasks.timeTracking",
+    "settings.editor.selected.configurable": "tasks.servers",
+    "timeTracker.activityTracker": "null",
+    "timeTracker.comment": "",
+    "timeTracker.inactivityPeriodInMills": "600000",
+    "timeTracker.isAutoTrackingEnable": "false",
+    "timeTracker.isAutoTrackingTemporaryDisabled": "false",
+    "timeTracker.isManualTrackingEnable": "true",
+    "timeTracker.isPaused": "false",
+    "timeTracker.isPostAfterCommitEnabled": "false",
+    "timeTracker.isPostedScheduled": "true",
+    "timeTracker.isRunning": "false",
+    "timeTracker.isScheduledEnabled": "false",
+    "timeTracker.isWhenProjectClosedEnabled": "false",
+    "timeTracker.issueId": "WAT-50",
+    "timeTracker.issueIdReadable": "WAT-50",
+    "timeTracker.pausedTime": "0",
+    "timeTracker.query": "",
+    "timeTracker.recordedTime": "0",
+    "timeTracker.scheduledPeriod": "19:00:0",
+    "timeTracker.startTime": "1760434586916",
+    "timeTracker.timeInMills": "0",
+    "timeTracker.type": "Development",
     "ts.external.directory.path": "/Users/lody/dev/projects/watershed-website/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   },
@@ -199,11 +236,11 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/routes/($lang)/beheer/media/_index" />
-      <recent name="$PROJECT_DIR$/app/routes/($lang)/beheer/media/uploaden" />
-      <recent name="$PROJECT_DIR$/tmp" />
-      <recent name="$PROJECT_DIR$/app/routes/afbeelding_/$fileName" />
+      <recent name="$PROJECT_DIR$/public/iconen" />
+      <recent name="$PROJECT_DIR$/app/routes/api_/locales" />
+      <recent name="$PROJECT_DIR$/app/routes/api_/events" />
       <recent name="$PROJECT_DIR$/app/routes" />
+      <recent name="$PROJECT_DIR$/app/routes/api_" />
     </key>
     <key name="es6.move.members.recent.items">
       <recent name="$PROJECT_DIR$/app/types/Input.ts" />
@@ -224,7 +261,7 @@
       <command value="npm run db:push" />
     </option>
   </component>
-  <component name="RunManager" selected="Compound.Develop">
+  <component name="RunManager" selected="Vitest.convertDateToLocaleString">
     <configuration name="Develop" type="CompoundRunConfigurationType">
       <toRun name="Dev" type="js.build_tools.npm" />
       <toRun name="Storybook" type="js.build_tools.npm" />
@@ -292,6 +329,33 @@
       </test-names>
       <method v="2" />
     </configuration>
+    <configuration name="convertDateToLocaleString" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <vitest-options value="--run" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/app/utils/date.test.ts" />
+      <test-names>
+        <test-name value="convertDateToLocaleString" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="convertDateToLocaleString.converts a date to a human readable format with shortened weekday" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <vitest-options value="--run" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/app/utils/date.test.ts" />
+      <test-names>
+        <test-name value="convertDateToLocaleString" />
+        <test-name value="converts a date to a human readable format with shortened weekday" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <configuration name="Debug in Chrome" type="JavascriptDebugType" uri="http://localhost:5173">
       <mapping url="http://localhost:5173" local-file="$PROJECT_DIR$" />
       <method v="2" />
@@ -335,26 +399,6 @@
       <command value="run" />
       <scripts>
         <script value="dev:storybook" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="db:push:reset:seed" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="db:push:reset:seed" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="db:push:seed" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="db:push:seed" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -385,13 +429,19 @@
       <item itemvalue="JavaScript Debug.Debug in Chrome" />
       <item itemvalue="npm.Dev" />
       <item itemvalue="npm.Storybook" />
-      <item itemvalue="npm.db:push:reset:seed" />
-      <item itemvalue="npm.db:push:seed" />
       <item itemvalue="npm.typecheck" />
       <item itemvalue="Vitest.All Tests" />
+      <item itemvalue="Vitest.convertDateToLocaleString" />
+      <item itemvalue="Vitest.convertDateToLocaleString.converts a date to a human readable format with shortened weekday" />
       <item itemvalue="Vitest.Validating page requests" />
       <item itemvalue="Vitest.Validating the page" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Vitest.convertDateToLocaleString" />
+        <item itemvalue="Vitest.convertDateToLocaleString.converts a date to a human readable format with shortened weekday" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -484,14 +534,6 @@
       <workItem from="1751983260331" duration="154000" />
       <workItem from="1757113103308" duration="35000" />
       <workItem from="1760341367186" duration="338000" />
-    </task>
-    <task id="LOCAL-00115" summary="Many fixes and improvements to the routing in order to make it more robust. Also added page meta to the database and made the page meta and page content pieces localised.">
-      <option name="closed" value="true" />
-      <created>1743537654154</created>
-      <option name="number" value="00115" />
-      <option name="presentableId" value="LOCAL-00115" />
-      <option name="project" value="LOCAL" />
-      <updated>1743537654154</updated>
     </task>
     <task id="LOCAL-00116" summary="Fixed linting and typecheck errors">
       <option name="closed" value="true" />
@@ -819,11 +861,14 @@
       <created>1760305693143</created>
       <option name="issue" value="true" />
       <url>https://youtrack.spindraad.dev/issue/WAT-50</url>
+      <lastPost>1760359568103</lastPost>
       <option name="number" value="50" />
       <option name="presentableId" value="WAT-50" />
       <option name="project" value="WAT" />
-      <updated>1760341705962</updated>
-      <workItem from="1760341706290" duration="15020000" />
+      <updated>1760359567985</updated>
+      <workItem from="1760341706290" duration="17131000" />
+      <workItem from="1760359568103" />
+      <workItem from="1760434553239" duration="5898000" />
     </task>
     <task id="LOCAL-00156" summary="Opened project in a new editor with lots of catching up from PHPStorm. Also configured Storybook with more devices and a proxy">
       <option name="closed" value="true" />
@@ -881,7 +926,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760356588316</updated>
     </task>
-    <option name="localTasksCounter" value="163" />
+    <task id="LOCAL-00163" summary="Some layout improvements to the upcoming events block">
+      <option name="closed" value="true" />
+      <created>1760357550066</created>
+      <option name="number" value="00163" />
+      <option name="presentableId" value="LOCAL-00163" />
+      <option name="project" value="LOCAL" />
+      <updated>1760357550066</updated>
+    </task>
+    <option name="localTasksCounter" value="164" />
     <option name="clearContext" value="false" />
     <option name="createBranch" value="false" />
     <option name="useBranch" value="true" />
@@ -944,7 +997,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Implemented a basic upload handler for images" />
     <MESSAGE value="Added some test routes for checking the image upload. Also improved it so the DX is a bit better." />
     <MESSAGE value="Fixed typo" />
     <MESSAGE value="Configured Kubernetes templates with the correct bucket name and credentials based on the deployment environment" />
@@ -969,7 +1021,8 @@
     <MESSAGE value="Created a post it note component" />
     <MESSAGE value="Improved the upcoming events" />
     <MESSAGE value="Installed and configured the container query plugin for Tailwind" />
-    <option name="LAST_COMMIT_MESSAGE" value="Installed and configured the container query plugin for Tailwind" />
+    <MESSAGE value="Some layout improvements to the upcoming events block" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some layout improvements to the upcoming events block" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

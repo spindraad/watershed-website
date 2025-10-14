@@ -14,6 +14,10 @@ import {
   IllustrationBlock,
   IllustrationBlockProps,
 } from '~/config/blocks/IllustrationBlock';
+import {
+  UpcomingEventsBlock,
+  UpcomingEventsBlockProps,
+} from '~/config/blocks/UpcomingEventsBlock';
 
 type Props = {
   HeadingBlock: HeadingBlockProps;
@@ -21,6 +25,7 @@ type Props = {
   ButtonBlock: ButtonBlockProps;
   GridBlock: GribBlockProps;
   IllustrationBlock: IllustrationBlockProps;
+  UpcomingEventsBlock: UpcomingEventsBlockProps;
 };
 
 type RootProps = {
@@ -48,7 +53,7 @@ export const config: Config<Props, RootProps> = {
     },
     ui: {
       title: 'UI',
-      components: ['ButtonBlock', 'IllustrationBlock'],
+      components: ['ButtonBlock', 'IllustrationBlock', 'UpcomingEventsBlock'],
     },
   },
   components: {
@@ -57,6 +62,7 @@ export const config: Config<Props, RootProps> = {
     ButtonBlock,
     GridBlock,
     IllustrationBlock,
+    UpcomingEventsBlock,
   },
   root: {
     fields: {

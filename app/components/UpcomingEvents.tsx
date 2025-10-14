@@ -1,9 +1,10 @@
 import Heading from '~/components/Heading';
 import Icon from '~/components/Icon';
-import type { Event } from '~/models/events.server';
+import type { SerializedEvent as Event } from '~/models/events.server';
 import { useTranslation } from 'react-i18next';
 import HandDrawnBox from '~/components/HandDrawnBox';
 import PostItNote from '~/components/PostItNote';
+import { convertDateToLocaleStringWithShortWeekday } from '~/utils/date';
 
 export type UpcomingEventDetails = Pick<
   Event,
@@ -17,12 +18,9 @@ type Props = {
 export default function UpcomingEvents({ events }: Props) {
   const { t } = useTranslation('UpcomingEvents');
 
-  const formatDate = (date: Date) =>
-    date.toLocaleDateString('nl-NL', {
-      weekday: 'short', // "wo"
-      day: 'numeric', // "11"
-      month: 'short', // "sept"
-    });
+  const formatDate = (date: string) => {
+    return convertDateToLocaleStringWithShortWeekday(date);
+  };
 
   return (
     <div className="@container">

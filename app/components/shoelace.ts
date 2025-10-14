@@ -14,6 +14,7 @@ import {
   SlMenu,
   SlMenuItem,
   SlBadge,
+  SlSpinner,
 } from '@shoelace-style/shoelace/dist/react';
 import { useEffect, useState, useRef, createContext, forwardRef } from 'react';
 
@@ -36,6 +37,7 @@ type Components = {
   SlMenu: typeof nullComponent | typeof SlMenu;
   SlMenuItem: typeof nullComponent | typeof SlMenuItem;
   SlBadge: typeof nullComponent | typeof SlBadge;
+  SlSpinner: typeof nullComponent | typeof SlSpinner;
 };
 
 const nullComponents: Components = {
@@ -54,6 +56,7 @@ const nullComponents: Components = {
   SlMenu: nullComponent,
   SlMenuItem: nullComponent,
   SlBadge: nullComponent,
+  SlSpinner: nullComponent,
 };
 
 export const ShoelaceContext = createContext<Components>(nullComponents);
@@ -89,6 +92,7 @@ export function useShoelace({ URL }: { URL: string }) {
             SlMenu: components.SlMenu,
             SlMenuItem: components.SlMenuItem,
             SlBadge: components.SlBadge,
+            SlSpinner: components.SlSpinner,
           });
         });
       },
