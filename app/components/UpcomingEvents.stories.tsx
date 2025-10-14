@@ -21,7 +21,7 @@ const events: UpcomingEventDetails[] = [
     },
     image: 'buskeda-milouska.png',
     organiser: 'Milouska Meulens',
-    eventDate: new Date('2025-09-11T15:00:00Z'),
+    eventDate: '2025-09-11T15:00:00Z',
   },
   {
     id: '2',
@@ -32,7 +32,7 @@ const events: UpcomingEventDetails[] = [
     },
     image: 'echte-verhalen.png',
     organiser: null,
-    eventDate: new Date('2025-09-11T17:00:00Z'),
+    eventDate: '2025-09-11T17:00:00Z',
   },
   {
     id: '3',
@@ -43,7 +43,7 @@ const events: UpcomingEventDetails[] = [
     },
     image: 'ik-weet-zeker.png',
     organiser: 'Monique Hendriks',
-    eventDate: new Date('2025-09-11T19:00:00Z'),
+    eventDate: '2025-09-11T19:00:00Z',
   },
 ];
 

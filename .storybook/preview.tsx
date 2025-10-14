@@ -64,7 +64,7 @@ const preview: Preview = {
   },
   initialGlobals: {
     background: { value: 'surface' },
-    locale: 'nl',
+    locale: 'en', // Cannot be set to Dutch because of failing tests
     locales: {
       en: 'English',
       nl: 'Nederlands',

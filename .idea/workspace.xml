@@ -4,23 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a371227e-1556-4281-bf9d-e84dc3a6719d" name="WAT-50 Content summaries" comment="Some layout improvements to the upcoming events block">
-      <change afterPath="$PROJECT_DIR$/app/config/blocks/UpcomingEventsBlock.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routes/api_/events/_events.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/iconen/eye.png" afterDir="false" />
+    <list default="true" id="a371227e-1556-4281-bf9d-e84dc3a6719d" name="WAT-50 Content summaries" comment="Created a Puck block of the upcoming events component, which also needed React Query, an api endpoint and a loader">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.storybook/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/.storybook/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/PageEditor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PageEditor.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/PageRenderer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PageRenderer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/UpcomingEvents.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/UpcomingEvents.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/shoelace.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/shoelace.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/puck.config.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/puck.config.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/events.server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/events.server.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/api_.locales.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/api_/locales/_locales.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/utils/date.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/date.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/utils/date.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/date.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.storybook/preview.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/.storybook/preview.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/EventMutationForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/EventMutationForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/UpcomingEvents.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/UpcomingEvents.stories.tsx" afterDir="false" />
     </list>
     <list id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Added box and line illustrations, and created the hand drawn box component" />
     <option name="SHOW_DIALOG" value="false" />
@@ -535,14 +523,6 @@
       <workItem from="1757113103308" duration="35000" />
       <workItem from="1760341367186" duration="338000" />
     </task>
-    <task id="LOCAL-00116" summary="Fixed linting and typecheck errors">
-      <option name="closed" value="true" />
-      <created>1743537907745</created>
-      <option name="number" value="00116" />
-      <option name="presentableId" value="LOCAL-00116" />
-      <option name="project" value="LOCAL" />
-      <updated>1743537907745</updated>
-    </task>
     <task id="LOCAL-00117" summary="Added meta for eventsd ad projects">
       <option name="closed" value="true" />
       <created>1743539422157</created>
@@ -861,14 +841,15 @@
       <created>1760305693143</created>
       <option name="issue" value="true" />
       <url>https://youtrack.spindraad.dev/issue/WAT-50</url>
-      <lastPost>1760359568103</lastPost>
+      <lastPost>1760448510191</lastPost>
       <option name="number" value="50" />
       <option name="presentableId" value="WAT-50" />
       <option name="project" value="WAT" />
-      <updated>1760359567985</updated>
+      <updated>1760448510077</updated>
       <workItem from="1760341706290" duration="17131000" />
       <workItem from="1760359568103" />
-      <workItem from="1760434553239" duration="5898000" />
+      <workItem from="1760434553239" duration="6105000" />
+      <workItem from="1760448510191" />
     </task>
     <task id="LOCAL-00156" summary="Opened project in a new editor with lots of catching up from PHPStorm. Also configured Storybook with more devices and a proxy">
       <option name="closed" value="true" />
@@ -934,7 +915,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760357550066</updated>
     </task>
-    <option name="localTasksCounter" value="164" />
+    <task id="LOCAL-00164" summary="Created a Puck block of the upcoming events component, which also needed React Query, an api endpoint and a loader">
+      <option name="closed" value="true" />
+      <created>1760448379403</created>
+      <option name="number" value="00164" />
+      <option name="presentableId" value="LOCAL-00164" />
+      <option name="project" value="LOCAL" />
+      <updated>1760448379403</updated>
+    </task>
+    <option name="localTasksCounter" value="165" />
     <option name="clearContext" value="false" />
     <option name="createBranch" value="false" />
     <option name="useBranch" value="true" />
@@ -997,7 +986,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added some test routes for checking the image upload. Also improved it so the DX is a bit better." />
     <MESSAGE value="Fixed typo" />
     <MESSAGE value="Configured Kubernetes templates with the correct bucket name and credentials based on the deployment environment" />
     <MESSAGE value="Added missing LoginFormComponent translations to login route" />
@@ -1022,7 +1010,8 @@
     <MESSAGE value="Improved the upcoming events" />
     <MESSAGE value="Installed and configured the container query plugin for Tailwind" />
     <MESSAGE value="Some layout improvements to the upcoming events block" />
-    <option name="LAST_COMMIT_MESSAGE" value="Some layout improvements to the upcoming events block" />
+    <MESSAGE value="Created a Puck block of the upcoming events component, which also needed React Query, an api endpoint and a loader" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created a Puck block of the upcoming events component, which also needed React Query, an api endpoint and a loader" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

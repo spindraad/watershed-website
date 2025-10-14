@@ -10,9 +10,10 @@ import LocalisedInput from '~/components/LocalisedInput';
 import { DeepPartial } from '~/types/DeepPartial';
 import DateInput from '~/components/DateInput';
 
-type Props = DeepPartial<Omit<EventValidator, 'eventDate'>> & {
+type Props = DeepPartial<Omit<EventValidator, 'eventDate' | 'organiser'>> & {
   id?: string;
   eventDate?: Date;
+  organiser?: string | null;
 };
 
 export default function EventMutationForm({
