@@ -23,6 +23,7 @@ import { getUser } from '~/.server/session';
 import Heading from '~/components/Heading';
 import { getMenuItems } from '~/models/menu.server';
 import { NavigationMenuItem } from '~/components/NavigationMenu';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 export const links: LinksFunction = () => [
   {
@@ -64,20 +65,24 @@ export function Layout({ children }: { children: React.ReactNode }) {
   const shoelace = useShoelace({
     URL: data?.BASE_URL ?? '',
   });
+  const queryClient = new QueryClient();
 
   return (
     <html className="h-full" lang={data?.locale ?? 'nl'}>
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#7655CE" />
         <Meta />
         <Links />
       </head>
       <body className="h-full text-black bg-accent-primary-100 font-gt-haptik flex flex-col gap-4">
-        <ShoelaceContext.Provider value={shoelace}>
-          <Header user={user} menuItems={data.menuItems} />
-          {children}
-        </ShoelaceContext.Provider>
+        <QueryClientProvider client={queryClient}>
+          <ShoelaceContext.Provider value={shoelace}>
+            <Header user={user} menuItems={data.menuItems} />
+            {children}
+          </ShoelaceContext.Provider>
+        </QueryClientProvider>
         <ScrollRestoration />
         <Scripts />
       </body>
