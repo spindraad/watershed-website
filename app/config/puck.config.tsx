@@ -18,6 +18,10 @@ import {
   UpcomingEventsBlock,
   UpcomingEventsBlockProps,
 } from '~/config/blocks/UpcomingEventsBlock';
+import {
+  BackgroundBlock,
+  BackgroundBlockProps,
+} from '~/config/blocks/BackgroundBlock';
 
 type Props = {
   HeadingBlock: HeadingBlockProps;
@@ -26,10 +30,14 @@ type Props = {
   GridBlock: GribBlockProps;
   IllustrationBlock: IllustrationBlockProps;
   UpcomingEventsBlock: UpcomingEventsBlockProps;
+  BackgroundBlock: BackgroundBlockProps;
 };
 
 type RootProps = {
-  title: string;
+  title: {
+    text: string;
+    hidden: boolean;
+  };
   summary: string;
   slug: string;
   meta: {
@@ -53,7 +61,12 @@ export const config: Config<Props, RootProps> = {
     },
     ui: {
       title: 'UI',
-      components: ['ButtonBlock', 'IllustrationBlock', 'UpcomingEventsBlock'],
+      components: [
+        'ButtonBlock',
+        'IllustrationBlock',
+        'UpcomingEventsBlock',
+        'BackgroundBlock',
+      ],
     },
   },
   components: {
@@ -63,12 +76,27 @@ export const config: Config<Props, RootProps> = {
     GridBlock,
     IllustrationBlock,
     UpcomingEventsBlock,
+    BackgroundBlock,
   },
   root: {
     fields: {
       title: {
+        type: 'object',
         label: 'Pagina titel',
-        type: 'text',
+        objectFields: {
+          text: {
+            label: 'Titel',
+            type: 'text',
+          },
+          hidden: {
+            label: 'Verberg titel op pagina',
+            type: 'radio',
+            options: [
+              { label: 'Ja', value: true },
+              { label: 'Nee', value: false },
+            ],
+          },
+        },
       },
       summary: {
         label: 'Pagina omschrijving',
@@ -93,11 +121,20 @@ export const config: Config<Props, RootProps> = {
         },
       },
     },
+    defaultProps: {
+      title: { text: 'Nieuwe pagina', hidden: false },
+      summary: '',
+      slug: '',
+      meta: {
+        title: 'Nieuwe pagina',
+        description: '',
+      },
+    },
     render({ children, title }) {
       return (
         <div className="flex flex-col gap-4">
-          {title ?
-            <Heading level={1}>{title}</Heading>
+          {!title.hidden && title.text ?
+            <Heading level={1}>{title.text}</Heading>
           : null}
           {children}
         </div>

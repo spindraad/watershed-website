@@ -4,13 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a371227e-1556-4281-bf9d-e84dc3a6719d" name="WAT-50 Content summaries" comment="Created a Puck block of the upcoming events component, which also needed React Query, an api endpoint and a loader">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.storybook/preview.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/.storybook/preview.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/EventMutationForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/EventMutationForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/UpcomingEvents.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/UpcomingEvents.stories.tsx" afterDir="false" />
+    <list default="true" id="a371227e-1556-4281-bf9d-e84dc3a6719d" name="WAT-50 Content summaries" comment="Add Upcoming Events translations and fixed UpcomingEventsBlock component suspense error">
+      <change afterPath="$PROJECT_DIR$/app/config/blocks/BackgroundBlock.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/iconen/close.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/iconen/left-caret.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/iconen/menu.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/iconen/right-caret.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/NavigationMenu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/NavigationMenu.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/PageEditor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PageEditor.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/PageRenderer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PageRenderer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/UpcomingEvents.translations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/UpcomingEvents.translations.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/UpcomingEvents.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/UpcomingEvents.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/blocks/IllustrationBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/blocks/IllustrationBlock.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/blocks/UpcomingEventsBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/blocks/UpcomingEventsBlock.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/puck.config.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/puck.config.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/locales/en.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/en.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/locales/nl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/nl.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/pages.server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/pages.server.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/root.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/root.tsx" afterDir="false" />
     </list>
     <list id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Added box and line illustrations, and created the hand drawn box component" />
+    <list id="beb23f38-d23a-47e7-ba80-27679dd64e74" name="WAT-54 CLI" comment="WAT-54 CLI">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,8 +73,20 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
+                    <option name="branchName" value="feature/WAT-153_content_summaries_for_homepage" />
+                    <option name="lastUsedInstant" value="1760957971" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="feature/WAT-54-Create-CLI" />
+                    <option name="lastUsedInstant" value="1760451925" />
+                  </RecentBranch>
+                  <RecentBranch>
                     <option name="branchName" value="dev" />
-                    <option name="lastUsedInstant" value="1747225347" />
+                    <option name="lastUsedInstant" value="1760451842" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1760451806" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="feature/wsh-43-nieuws" />
@@ -166,9 +194,9 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_interpreter_path": "node",
     "nodejs_package_manager_path": "npm",
-    "npm.Dev.executor": "Run",
+    "npm.Dev.executor": "Debug",
     "npm.Develop.executor": "Run",
-    "npm.Storybook.executor": "Run",
+    "npm.Storybook.executor": "Debug",
     "npm.db:generate.executor": "Run",
     "npm.db:push.executor": "Run",
     "npm.db:push:reset:seed.executor": "Run",
@@ -181,6 +209,7 @@
     "prettierjs.PrettierConfiguration.Package": "/Users/lody/dev/projects/watershed-website/node_modules/prettier",
     "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "tasks.servers",
+    "tasks.open.task.update.state.enabled": "true",
     "timeTracker.activityTracker": "null",
     "timeTracker.comment": "",
     "timeTracker.inactivityPeriodInMills": "600000",
@@ -249,7 +278,7 @@
       <command value="npm run db:push" />
     </option>
   </component>
-  <component name="RunManager" selected="Vitest.convertDateToLocaleString">
+  <component name="RunManager" selected="Compound.Develop">
     <configuration name="Develop" type="CompoundRunConfigurationType">
       <toRun name="Dev" type="js.build_tools.npm" />
       <toRun name="Storybook" type="js.build_tools.npm" />
@@ -392,16 +421,6 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="db:push:seed" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="db:push:seed" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <configuration name="typecheck" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -419,15 +438,18 @@
       <item itemvalue="npm.Storybook" />
       <item itemvalue="npm.typecheck" />
       <item itemvalue="Vitest.All Tests" />
-      <item itemvalue="Vitest.convertDateToLocaleString" />
-      <item itemvalue="Vitest.convertDateToLocaleString.converts a date to a human readable format with shortened weekday" />
       <item itemvalue="Vitest.Validating page requests" />
       <item itemvalue="Vitest.Validating the page" />
+      <item itemvalue="Vitest.convertDateToLocaleString" />
+      <item itemvalue="Vitest.convertDateToLocaleString.converts a date to a human readable format with shortened weekday" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Vitest.convertDateToLocaleString" />
+        <item itemvalue="Vitest.Validating the page" />
+        <item itemvalue="Vitest.Validating page requests" />
         <item itemvalue="Vitest.convertDateToLocaleString.converts a date to a human readable format with shortened weekday" />
+        <item itemvalue="Vitest.convertDateToLocaleString" />
+        <item itemvalue="npm.typecheck" />
       </list>
     </recent_temporary>
   </component>
@@ -522,14 +544,6 @@
       <workItem from="1751983260331" duration="154000" />
       <workItem from="1757113103308" duration="35000" />
       <workItem from="1760341367186" duration="338000" />
-    </task>
-    <task id="LOCAL-00117" summary="Added meta for eventsd ad projects">
-      <option name="closed" value="true" />
-      <created>1743539422157</created>
-      <option name="number" value="00117" />
-      <option name="presentableId" value="LOCAL-00117" />
-      <option name="project" value="LOCAL" />
-      <updated>1743539422157</updated>
     </task>
     <task id="LOCAL-00118" summary="Added link to user account in header">
       <option name="closed" value="true" />
@@ -845,11 +859,12 @@
       <option name="number" value="50" />
       <option name="presentableId" value="WAT-50" />
       <option name="project" value="WAT" />
-      <updated>1760448510077</updated>
+      <updated>1760957989938</updated>
       <workItem from="1760341706290" duration="17131000" />
       <workItem from="1760359568103" />
       <workItem from="1760434553239" duration="6105000" />
       <workItem from="1760448510191" />
+      <workItem from="1760957990186" duration="10253000" />
     </task>
     <task id="LOCAL-00156" summary="Opened project in a new editor with lots of catching up from PHPStorm. Also configured Storybook with more devices and a proxy">
       <option name="closed" value="true" />
@@ -923,13 +938,27 @@
       <option name="project" value="LOCAL" />
       <updated>1760448379403</updated>
     </task>
+    <task id="WAT-54" summary="CLI">
+      <branch name="dev" repository="$PROJECT_DIR$" original="true" />
+      <branch name="feature/WAT-54-Create-CLI" repository="$PROJECT_DIR$" />
+      <changelist id="beb23f38-d23a-47e7-ba80-27679dd64e74" name="WAT-54 CLI" comment="" />
+      <created>1760340494584</created>
+      <option name="issue" value="true" />
+      <url>https://youtrack.spindraad.dev/issue/WAT-54</url>
+      <option name="number" value="54" />
+      <option name="presentableId" value="WAT-54" />
+      <option name="project" value="WAT" />
+      <updated>1760957989938</updated>
+      <workItem from="1760451925232" />
+      <workItem from="1760957832911" />
+    </task>
     <option name="localTasksCounter" value="165" />
-    <option name="clearContext" value="false" />
-    <option name="createBranch" value="false" />
-    <option name="useBranch" value="true" />
     <servers>
       <YouTrack url="https://youtrack.spindraad.dev">
-        <option name="defaultSearch" value="Board Watershed Sprint Board: {Current sprint} #WAT-50 " />
+        <option name="defaultSearch" value="Board Watershed Sprint Board: {Current sprint}" />
+        <option name="preferredOpenTaskState">
+          <CustomTaskState id="In Progress" name="In Progress" />
+        </option>
         <username>random</username>
       </YouTrack>
     </servers>
@@ -986,7 +1015,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fixed typo" />
     <MESSAGE value="Configured Kubernetes templates with the correct bucket name and credentials based on the deployment environment" />
     <MESSAGE value="Added missing LoginFormComponent translations to login route" />
     <MESSAGE value="Added Prisma migrations script for prod and dev database deploys, in preparation for when we switch over to managed databases." />
@@ -1011,7 +1039,8 @@
     <MESSAGE value="Installed and configured the container query plugin for Tailwind" />
     <MESSAGE value="Some layout improvements to the upcoming events block" />
     <MESSAGE value="Created a Puck block of the upcoming events component, which also needed React Query, an api endpoint and a loader" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created a Puck block of the upcoming events component, which also needed React Query, an api endpoint and a loader" />
+    <MESSAGE value="Add Upcoming Events translations and fixed UpcomingEventsBlock component suspense error" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Upcoming Events translations and fixed UpcomingEventsBlock component suspense error" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

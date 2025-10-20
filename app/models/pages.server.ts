@@ -63,9 +63,10 @@ export function convertPagesToTableData(
     id: page.id,
     title: {
       value: {
-        en: (page.content.en as WatershedPageData).root.props?.title ?? '',
-        nl: (page.content.nl as WatershedPageData).root.props?.title ?? '',
-        pap: (page.content.pap as WatershedPageData).root.props?.title ?? '',
+        en: (page.content.en as WatershedPageData).root.props?.title.text ?? '',
+        nl: (page.content.nl as WatershedPageData).root.props?.title.text ?? '',
+        pap:
+          (page.content.pap as WatershedPageData).root.props?.title.text ?? '',
       },
       isName: true,
     },
