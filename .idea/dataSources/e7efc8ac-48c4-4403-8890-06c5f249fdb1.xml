@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="Dev Cluster DB">
-  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.53">
+  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.54">
     <root id="1">
       <DateStyle>mdy</DateStyle>
       <Grants>16384||-9223372036854775808|c|G
@@ -4224,7 +4224,6 @@ false Zulu
     </schema>
     <schema id="263" parent="3" name="public">
       <Current>1</Current>
-      <IntrospectionStateNumber>798</IntrospectionStateNumber>
       <LastIntrospectionLocalTimestamp>2025-07-26.19:51:31</LastIntrospectionLocalTimestamp>
       <ObjectId>16390</ObjectId>
       <StateNumber>743</StateNumber>
