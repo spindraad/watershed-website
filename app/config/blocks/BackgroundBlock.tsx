@@ -1,7 +1,8 @@
-import { ComponentConfig, DropZone } from '@measured/puck';
+import { ComponentConfig, Slot } from '@measured/puck';
 
 export type BackgroundBlockProps = {
   color?: 'light-yellow' | 'bright-yellow' | 'pink';
+  content: Slot;
 };
 
 export const BackgroundBlock: ComponentConfig<BackgroundBlockProps> = {
@@ -15,13 +16,17 @@ export const BackgroundBlock: ComponentConfig<BackgroundBlockProps> = {
         { label: 'Roze', value: 'pink' },
       ],
     },
+    content: {
+      type: 'slot',
+    },
   },
   defaultProps: {
     color: 'light-yellow',
+    content: [],
   },
-  render(props) {
+  render({ color, content: Content }) {
     let backgroundColor;
-    switch (props.color) {
+    switch (color) {
       case 'light-yellow':
         backgroundColor = '#FFF9E5';
         break;
@@ -37,7 +42,7 @@ export const BackgroundBlock: ComponentConfig<BackgroundBlockProps> = {
 
     return (
       <div style={{ backgroundColor: backgroundColor, padding: '1rem' }}>
-        <DropZone zone="background" />
+        <Content />
       </div>
     );
   },

@@ -23,7 +23,7 @@ import {
   BackgroundBlockProps,
 } from '~/config/blocks/BackgroundBlock';
 
-type Props = {
+export type Props = {
   HeadingBlock: HeadingBlockProps;
   RichTextBlock: RichTextBlockProps;
   ButtonBlock: ButtonBlockProps;
@@ -33,7 +33,7 @@ type Props = {
   BackgroundBlock: BackgroundBlockProps;
 };
 
-type RootProps = {
+export type RootProps = {
   title: {
     text: string;
     hidden: boolean;
