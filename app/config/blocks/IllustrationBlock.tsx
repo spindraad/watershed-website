@@ -1,5 +1,5 @@
 import { CSSProperties } from 'react';
-import { ComponentConfig } from '@measured/puck';
+import { ComponentConfig } from '@puckeditor/core';
 
 const illustrations = {
   'Figuur met popbeker': 'figuur met popbeker kopie.png',

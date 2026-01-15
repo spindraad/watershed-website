@@ -1,4 +1,4 @@
-import { ComponentConfig } from '@measured/puck';
+import { ComponentConfig } from '@puckeditor/core';
 import { SlButton } from '@shoelace-style/shoelace/dist/shoelace.js';
 import { useContext } from 'react';
 import { ShoelaceContext } from '~/components/shoelace';

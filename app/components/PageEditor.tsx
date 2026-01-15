@@ -5,9 +5,11 @@ import {
   useEffect,
   useState,
 } from 'react';
-import { Overrides, Puck, usePuck } from '@measured/puck';
+import { Overrides, Puck, createUsePuck } from '@puckeditor/core';
+import headingAnalyzer from '@puckeditor/plugin-heading-analyzer';
 
-import '@measured/puck/puck.css';
+import '@puckeditor/plugin-heading-analyzer/dist/index.css';
+import '@puckeditor/core/puck.css';
 
 import {
   config,
@@ -65,6 +67,7 @@ export default function PageEditor({
       config={config}
       data={data}
       onPublish={onPublish}
+      plugins={[headingAnalyzer]}
     >
       <div className="w-full h-full flex flex-col gap-4 px-4">
         <SlDrawer
@@ -130,7 +133,8 @@ function EditorHeader({
   isSaving,
   title,
 }: EditorHeaderProps) {
-  const { appState } = usePuck<WatershedPageConfig>();
+  const usePuck = createUsePuck<WatershedPageConfig>();
+  const appState = usePuck((s) => s.appState);
   const { SlButton, SlIconButton, SlIcon } = useContext(ShoelaceContext);
 
   const publish = () => {

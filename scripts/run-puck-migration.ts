@@ -1,6 +1,6 @@
 import fs from 'fs/promises';
-import type { Data } from '@measured/puck';
-import { migrate } from '@measured/puck';
+import type { Data } from '@puckeditor/core';
+import { migrate } from '@puckeditor/core';
 import { program } from 'commander';
 import { config, type Props, type RootProps } from '../app/config/puck.config';
 

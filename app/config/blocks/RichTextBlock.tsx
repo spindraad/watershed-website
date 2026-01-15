@@ -1,4 +1,4 @@
-import { ComponentConfig } from '@measured/puck';
+import { ComponentConfig } from '@puckeditor/core';
 import RichTextEditor from '~/components/RichTextEditor';
 import { useSelectedPuckBlock } from '~/hooks/useSelectedPuckBlock';
 

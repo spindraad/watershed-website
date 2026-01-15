@@ -1,4 +1,6 @@
-import { usePuck } from '@measured/puck';
+import { createUsePuck } from '@puckeditor/core';
+
+const usePuck = createUsePuck();
 
 export const useSelectedPuckBlock = (componentId: string) => {
   const {

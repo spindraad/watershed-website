@@ -4,8 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a371227e-1556-4281-bf9d-e84dc3a6719d" name="WAT-50 Content summaries" comment="ide">
-      <change beforePath="$PROJECT_DIR$/.nvmrc" beforeDir="false" afterPath="$PROJECT_DIR$/.nvmrc" afterDir="false" />
+    <list default="true" id="a371227e-1556-4281-bf9d-e84dc3a6719d" name="WAT-50 Content summaries" comment="Updated node version and updated all dependencies that have no major version update. Then update Puck to 0.20 in preparation for 0.21">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/PageEditor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PageEditor.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/PageMutationForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PageMutationForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/PageRenderer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PageRenderer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/blocks/BackgroundBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/blocks/BackgroundBlock.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/blocks/ButtonBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/blocks/ButtonBlock.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/blocks/GridBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/blocks/GridBlock.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/blocks/HeadingBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/blocks/HeadingBlock.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/blocks/IllustrationBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/blocks/IllustrationBlock.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/blocks/RichTextBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/blocks/RichTextBlock.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/blocks/UpcomingEventsBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/blocks/UpcomingEventsBlock.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/puck.config.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/puck.config.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/hooks/useSelectedPuckBlock.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/hooks/useSelectedPuckBlock.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/run-puck-migration.ts" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/run-puck-migration.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.ts" afterDir="false" />
     </list>
     <list id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Added box and line illustrations, and created the hand drawn box component" />
     <list id="beb23f38-d23a-47e7-ba80-27679dd64e74" name="WAT-54 CLI" comment="WAT-54 CLI" />
@@ -516,14 +532,6 @@
       <workItem from="1757113103308" duration="35000" />
       <workItem from="1760341367186" duration="338000" />
     </task>
-    <task id="LOCAL-00122" summary="Reworked the Puck editor to support for page/SEO metadata.">
-      <option name="closed" value="true" />
-      <created>1744195214320</created>
-      <option name="number" value="00122" />
-      <option name="presentableId" value="LOCAL-00122" />
-      <option name="project" value="LOCAL" />
-      <updated>1744195214321</updated>
-    </task>
     <task id="LOCAL-00123" summary="Created &quot;new&quot; flow for generic pages.">
       <option name="closed" value="true" />
       <created>1744293214432</created>
@@ -928,7 +936,15 @@
       <option name="project" value="LOCAL" />
       <updated>1768502150413</updated>
     </task>
-    <option name="localTasksCounter" value="169" />
+    <task id="LOCAL-00169" summary="Updated node version and updated all dependencies that have no major version update. Then update Puck to 0.20 in preparation for 0.21">
+      <option name="closed" value="true" />
+      <created>1768503782506</created>
+      <option name="number" value="00169" />
+      <option name="presentableId" value="LOCAL-00169" />
+      <option name="project" value="LOCAL" />
+      <updated>1768503782506</updated>
+    </task>
+    <option name="localTasksCounter" value="170" />
     <servers>
       <YouTrack url="https://youtrack.spindraad.dev">
         <option name="defaultSearch" value="Board Watershed Sprint Board: {Current sprint}" />
@@ -991,7 +1007,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added Prisma migrations script for prod and dev database deploys, in preparation for when we switch over to managed databases." />
     <MESSAGE value="Created a Nav menu component that lists a navigation menu, and created the route for the menu manager" />
     <MESSAGE value="Extended Plop generator to allow the selection of tags and categories" />
     <MESSAGE value="Created base component for the MenuEditor" />
@@ -1016,7 +1031,8 @@
     <MESSAGE value="Add Upcoming Events translations and fixed UpcomingEventsBlock component suspense error" />
     <MESSAGE value="Add BackgroundBlock component and update title structure in page configuration" />
     <MESSAGE value="ide" />
-    <option name="LAST_COMMIT_MESSAGE" value="ide" />
+    <MESSAGE value="Updated node version and updated all dependencies that have no major version update. Then update Puck to 0.20 in preparation for 0.21" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated node version and updated all dependencies that have no major version update. Then update Puck to 0.20 in preparation for 0.21" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -1,5 +1,5 @@
 import { lazy, Suspense, useEffect, useState } from 'react';
-import { ComponentConfig } from '@measured/puck';
+import { ComponentConfig } from '@puckeditor/core';
 import { QueryKey, useQuery } from '@tanstack/react-query';
 import { SerializedEvent as Event } from '~/models/events.server';
 import UpcomingEvents from '~/components/UpcomingEvents';

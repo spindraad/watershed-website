@@ -1,4 +1,4 @@
-import { Render } from '@measured/puck';
+import { Render } from '@puckeditor/core';
 import { config, WatershedPageData } from '~/config/puck.config';
 
 type Props = {
