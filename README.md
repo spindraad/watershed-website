@@ -14,13 +14,16 @@ $ docker run -p 8080:80 watershed-website
 Then, you can access the website at [http://localhost:8080](http://localhost:8080).
 
 ### Migrating Puck data
+
 When we update Puck, we might need to migrate the data stored in the database. To do this, we have a migration script that can be run:
 
 1. First, dump the `Page` table from the database to a JSON file.
 2. Run the migration script:
-  ```shell
-  $ npm run migrate-puck-data -- --input path/to/input.json --output path/to/output.json
-  ```
+
+```shell
+$ npm run migrate-puck-data -- --input path/to/input.json --output path/to/output.json
+```
+
 3. Finally, import the migrated data back into the table (you need to empty the table first).
 
 ## Deployment
