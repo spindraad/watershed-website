@@ -75,7 +75,11 @@ export async function uploadImagesIfNeeded() {
         const request = createUploadRequest(event.image, imagePath);
 
         await parseFormData(request, async (handler) => {
-          await fileStorage.set(event.image, handler);
+          const bytes = await handler.bytes();
+          const file = new File([bytes.buffer as ArrayBuffer], handler.name, {
+            type: handler.type,
+          });
+          await fileStorage.set(event.image, file);
         });
       } else {
         console.log(`[200] Image already exists: ${event.image}`);

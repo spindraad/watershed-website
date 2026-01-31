@@ -1,8 +1,9 @@
-import { Render } from '@puckeditor/core';
-import { config, WatershedPageData } from '~/config/puck.config';
+import { Data, Render } from '@puckeditor/core';
+import { config } from '~/config/puck.config';
 
 type Props = {
-  data: Partial<WatershedPageData>;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  data: Partial<Data<any, any>>;
 };
 
 export default function PageRenderer({ data }: Props) {

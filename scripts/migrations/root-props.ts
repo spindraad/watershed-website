@@ -38,8 +38,8 @@ export const ROOT_PROP_MIGRATIONS: RootPropMigration[] = [
   MIGRATION_V1_TITLE_FLATTEN,
 ];
 
-export function migrateRootProps(
+export function migrateRootProps<T extends Record<string, unknown>>(
   props: Record<string, unknown>,
-): Record<string, unknown> {
-  return ROOT_PROP_MIGRATIONS.reduce((acc, m) => m.migrate(acc), props);
+): T {
+  return ROOT_PROP_MIGRATIONS.reduce((acc, m) => m.migrate(acc), props) as T;
 }

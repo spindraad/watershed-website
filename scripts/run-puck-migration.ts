@@ -66,9 +66,11 @@ async function migrateData(pages: Page[]) {
         ...structurallyMigrated,
         root: {
           ...structurallyMigrated.root,
-          props: migrateRootProps(structurallyMigrated.root.props || {}),
+          props: migrateRootProps<RootProps>(
+            structurallyMigrated.root.props || {},
+          ),
         },
-      };
+      } as PuckData;
     }
     return {
       ...page,

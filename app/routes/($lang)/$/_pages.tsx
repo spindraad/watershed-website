@@ -15,7 +15,7 @@ export async function loader({ params }: Route.LoaderArgs) {
 
     const data = pageData.content[
       locale as SupportedLanguages
-    ] as WatershedPageData;
+    ] as unknown as WatershedPageData;
 
     return {
       title: data.root.props?.title,

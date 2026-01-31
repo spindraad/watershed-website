@@ -2,7 +2,7 @@ import { ComponentConfig } from '@puckeditor/core';
 import { ReactElement } from 'react';
 
 export type RichTextBlockProps = {
-  content: ReactElement;
+  content: ReactElement | string;
 };
 
 export const RichTextBlock: ComponentConfig<RichTextBlockProps> = {
@@ -18,5 +18,10 @@ export const RichTextBlock: ComponentConfig<RichTextBlockProps> = {
       },
     },
   },
-  render: ({ content }) => content,
+  render: ({ content }) => {
+    if (typeof content === 'string') {
+      return <div dangerouslySetInnerHTML={{ __html: content }} />;
+    }
+    return content;
+  },
 };

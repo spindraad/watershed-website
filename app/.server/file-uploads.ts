@@ -18,8 +18,12 @@ async function uploadHandler(fieldName: string, fileUpload: FileUpload) {
     fileUpload.type.startsWith('image/')
   ) {
     const fileName = fileUpload.name;
+    const bytes = await fileUpload.bytes();
+    const file = new File([bytes.buffer as ArrayBuffer], fileName, {
+      type: fileUpload.type,
+    });
 
-    await fileStorage.set(fileName, fileUpload);
+    await fileStorage.set(fileName, file);
 
     return fileStorage.get(fileName);
   }
