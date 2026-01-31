@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { faker } from '@faker-js/faker';
-import ArtistProfileSummary from './ArtistProfileSummary';
+import MakerProfileSummary from 'app/components/MakerProfileSummary';
 
 export default {
   title: 'Organisms/Artist Profile Summary',
-  component: ArtistProfileSummary,
+  component: MakerProfileSummary,
   tags: ['components', 'artists', 'makers'],
   parameters: {
     backgrounds: { default: 'Surface' },
@@ -18,9 +18,9 @@ export default {
       </div>
     );
   },
-} satisfies Meta<typeof ArtistProfileSummary>;
+} satisfies Meta<typeof MakerProfileSummary>;
 
-type Story = StoryObj<typeof ArtistProfileSummary>;
+type Story = StoryObj<typeof MakerProfileSummary>;
 
 export const Default: Story = {
   args: {
