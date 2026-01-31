@@ -4,19 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a371227e-1556-4281-bf9d-e84dc3a6719d" name="WAT-50 Content summaries" comment="WAT-50 Created Maker summary profile blocks">
-      <change afterPath="$PROJECT_DIR$/.claude/plans/add-makers.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6f310b5d-d6a9-4068-9954-4933694bcfe2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6f310b5d-d6a9-4068-9954-4933694bcfe2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6f310b5d-d6a9-4068-9954-4933694bcfe2/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6f310b5d-d6a9-4068-9954-4933694bcfe2/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
+    <list default="true" id="a371227e-1556-4281-bf9d-e84dc3a6719d" name="WAT-50 Content summaries" comment="WAT-50 Created components for the maker overview, as well as new database models and an endpoint">
+      <change afterPath="$PROJECT_DIR$/public/iconen/heart.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/iconen/left-caret-color-filled.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/iconen/right-caret-color-filled.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/components/Icon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Icon.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/MakerProfileSummary.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/MakerProfileSummary.stories.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/MakerProfileSummary.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/MakerProfileSummary.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/blocks/UpcomingEventsBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/blocks/UpcomingEventsBlock.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/puck.config.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/puck.config.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/seed/_content.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/seed/_content.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/seed/_pageContent.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/seed/_pageContent.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/MakersOverview.translations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/MakersOverview.translations.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/MakersOverview.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/MakersOverview.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/locales/en.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/en.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/locales/nl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/nl.ts" afterDir="false" />
     </list>
     <list id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Added box and line illustrations, and created the hand drawn box component" />
     <list id="beb23f38-d23a-47e7-ba80-27679dd64e74" name="WAT-54 CLI" comment="WAT-54 CLI" />
@@ -784,7 +781,7 @@
       <option name="number" value="50" />
       <option name="presentableId" value="WAT-50" />
       <option name="project" value="WAT" />
-      <updated>1769889406780</updated>
+      <updated>1769895624863</updated>
       <workItem from="1760341706290" duration="17131000" />
       <workItem from="1760359568103" />
       <workItem from="1760434553239" duration="6105000" />
@@ -1032,7 +1029,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Swapped navigation menu out for the actual header (in demo mode), which also meant we can load the dynamic header on the site itself. Also swapped orientation on the manage menu page" />
     <MESSAGE value="Extracted save action and implemented it on the page level, just like Cancel." />
     <MESSAGE value="Semantically fixed db migrations workflow" />
     <MESSAGE value="Smaller changes and improvements so that we can work with illustrations in Puck" />
@@ -1057,7 +1053,8 @@
     <MESSAGE value="Fixed lint errors and returned editor header in Puck overrides so that we could have our functionality back" />
     <MESSAGE value="Ran lint" />
     <MESSAGE value="WAT-50 Created Maker summary profile blocks" />
-    <option name="LAST_COMMIT_MESSAGE" value="WAT-50 Created Maker summary profile blocks" />
+    <MESSAGE value="WAT-50 Created components for the maker overview, as well as new database models and an endpoint" />
+    <option name="LAST_COMMIT_MESSAGE" value="WAT-50 Created components for the maker overview, as well as new database models and an endpoint" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -1,6 +1,6 @@
 export const en = {
   MakersOverview: {
-    heading: 'Makers',
+    heading: 'MAKERS',
     scrollLeft: 'Scroll left',
     scrollRight: 'Scroll right',
   },
@@ -8,7 +8,7 @@ export const en = {
 
 export const nl = {
   MakersOverview: {
-    heading: 'Makers',
+    heading: 'MAKERS',
     scrollLeft: 'Scroll naar links',
     scrollRight: 'Scroll naar rechts',
   },
@@ -16,7 +16,7 @@ export const nl = {
 
 export const pap = {
   MakersOverview: {
-    heading: 'Makers',
+    heading: 'MAKERS',
     scrollLeft: 'Skrol na robes',
     scrollRight: 'Skrol na drechi',
   },

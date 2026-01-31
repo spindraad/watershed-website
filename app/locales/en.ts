@@ -32,6 +32,8 @@ import { en as MenuEditorTranslations } from '~/components/MenuEditor.translatio
 export const { MenuEditor } = MenuEditorTranslations;
 import { en as UpcomingEventsTranslations } from '~/components/UpcomingEvents.translations';
 export const { UpcomingEvents } = UpcomingEventsTranslations;
+import { en as MakerOverviewTranslations } from '~/components/MakersOverview.translations';
+export const { MakersOverview } = MakerOverviewTranslations;
 
 export const common = {
   title: 'Hello World!',
