@@ -1,7 +1,8 @@
-import { useContext } from 'react';
 import { useTranslation } from 'react-i18next';
-import { ShoelaceContext } from '~/components/shoelace';
+import { Link } from 'react-router';
 import { SupportedLanguages } from '~/config/i18n';
+import HandDrawnBox from '~/components/HandDrawnBox';
+import MarkedUpText from '~/components/MarkedUpText';
 
 export type Props = {
   /**
@@ -37,34 +38,25 @@ export default function ArtistProfileSummary({
   summary,
   slug,
 }: Props) {
-  const { t, i18n } = useTranslation('ArtistProfileSummary');
-  const { SlButton } = useContext(ShoelaceContext);
+  const { i18n } = useTranslation('ArtistProfileSummary');
 
   const locale = i18n.language as SupportedLanguages;
 
   return (
-    <div className="flex flex-row gap-6">
-      <div className="w-64">
+    <Link to={slug} className="flex flex-col gap-6">
+      <HandDrawnBox drawStyle="solid" classes="bg-white">
         <img
           className="aspect-square w-full h-full object-contain"
           src={imageUrl}
           alt={name}
         />
-      </div>
-      <div className="flex flex-col gap-4">
-        <h3 className="text-2xl">{name}</h3>
-        <p className="font-bold">{profession}</p>
+      </HandDrawnBox>
+      <div className="flex flex-col gap-0">
+        <MarkedUpText>{name}</MarkedUpText>
 
+        <p>{profession}</p>
         <p>{summary[locale]}</p>
-
-        <SlButton
-          className="mt-auto w-24"
-          href={`/talent/${slug}`}
-          size="small"
-        >
-          {t('LinkButton')}
-        </SlButton>
       </div>
-    </div>
+    </Link>
   );
 }
