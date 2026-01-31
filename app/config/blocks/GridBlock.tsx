@@ -1,8 +1,9 @@
-import { ComponentConfig, DropZone } from '@measured/puck';
+import { ComponentConfig, Slot } from '@puckeditor/core';
 
 export type GribBlockProps = {
   columns: number;
   gap: number;
+  grid: Slot;
 };
 
 export const GridBlock: ComponentConfig<GribBlockProps> = {
@@ -18,18 +19,22 @@ export const GridBlock: ComponentConfig<GribBlockProps> = {
       min: 0,
       max: 12,
     },
+    grid: {
+      type: 'slot',
+    },
   },
   defaultProps: {
     columns: 3,
     gap: 4,
+    grid: [],
   },
-  render: ({ columns, gap }) => {
+  render: ({ columns, gap, grid: Grid }) => {
     const columnsClass = mapColumnsToGridClass(columns);
     const gapClass = mapGapToGridClass(gap);
 
     return (
       <section>
-        <DropZone zone="grid" className={`grid ${columnsClass} ${gapClass}`} />
+        <Grid className={`grid ${columnsClass} ${gapClass}`} />
       </section>
     );
   },

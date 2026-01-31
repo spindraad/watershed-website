@@ -13,6 +13,45 @@ $ docker run -p 8080:80 watershed-website
 
 Then, you can access the website at [http://localhost:8080](http://localhost:8080).
 
+### Migrating Puck data
+
+When we update Puck or change the structure of root/component props, we need to migrate the data stored in the database. The migration script handles two types of migrations:
+
+1. **Puck structural migrations** - Automatically applied when updating Puck versions (handled by Puck's `migrate()` function)
+2. **Prop migrations** - Custom migrations for changes to root or component prop structures (defined in `scripts/migrations/`)
+
+To run the migration:
+
+1. First, dump the `Page` table from the database to a JSON file.
+2. Run the migration script:
+
+```shell
+$ npm run migrate-puck-data -- --input path/to/input.json --output path/to/output.json
+```
+
+3. Finally, import the migrated data back into the table (you need to empty the table first).
+
+#### Adding new prop migrations
+
+When changing the structure of root props (in `app/config/puck.config.tsx`), add a new migration to `scripts/migrations/root-props.ts`:
+
+```typescript
+export const MIGRATION_V2_EXAMPLE: RootPropMigration = {
+  version: 2,
+  description: 'Description of what this migration does',
+  migrate: (props) => {
+    // Transform old props structure to new structure
+    return { ...props, newField: 'default' };
+  },
+};
+
+// Add to the migrations array
+export const ROOT_PROP_MIGRATIONS: RootPropMigration[] = [
+  MIGRATION_V1_TITLE_FLATTEN,
+  MIGRATION_V2_EXAMPLE, // Add new migrations here
+];
+```
+
 ## Deployment
 
 The website is deployed using GitHub Actions. The deployment process is triggered by tagging a release with `npm run release <release-name|version>`.

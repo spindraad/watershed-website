@@ -1,4 +1,5 @@
-import { ComponentConfig } from '@measured/puck';
+import { lazy, Suspense, useEffect, useState } from 'react';
+import { ComponentConfig } from '@puckeditor/core';
 import { QueryKey, useQuery } from '@tanstack/react-query';
 import { SerializedEvent as Event } from '~/models/events.server';
 import UpcomingEvents from '~/components/UpcomingEvents';
@@ -21,7 +22,33 @@ export const UpcomingEventsBlock: ComponentConfig<UpcomingEventsBlockProps> = {
   },
 };
 
-function UpcomingEventsBlockComponent({ maxEvents }: UpcomingEventsBlockProps) {
+function UpcomingEventsBlockComponent(props: UpcomingEventsBlockProps) {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) {
+    return <Loader />;
+  }
+
+  return (
+    <Suspense fallback={<Loader />}>
+      <ClientOnlyUpcomingEvents {...props} />
+    </Suspense>
+  );
+}
+
+const ClientOnlyUpcomingEvents = lazy(() =>
+  Promise.resolve({
+    default: ClientOnlyEventsBlockComponent,
+  }),
+);
+
+function ClientOnlyEventsBlockComponent({
+  maxEvents,
+}: UpcomingEventsBlockProps) {
   const {
     data: events,
     isPending,
@@ -30,7 +57,7 @@ function UpcomingEventsBlockComponent({ maxEvents }: UpcomingEventsBlockProps) {
   } = useQuery({
     queryKey: ['upcoming-events', maxEvents],
     queryFn: _fetchEvents,
-    staleTime: 1000 * 60 * 5, // 5 minutes
+    staleTime: 1000 * 60 * 5,
   });
 
   if (isPending) {
@@ -46,7 +73,9 @@ function UpcomingEventsBlockComponent({ maxEvents }: UpcomingEventsBlockProps) {
 
 async function _fetchEvents({ queryKey }: { queryKey: QueryKey }) {
   const [, maxEvents] = queryKey;
-  const response = await fetch(`/api/events?max=${maxEvents ?? 5}`);
+  const response = await fetch(
+    `http://localhost:5173/api/events?max=${maxEvents ?? 5}`,
+  );
   if (!response.ok) {
     throw new Error('Failed to fetch events');
   }

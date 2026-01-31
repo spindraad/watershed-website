@@ -1,6 +1,6 @@
 import { useFetcher } from 'react-router';
 import { useTranslation } from 'react-i18next';
-import { Puck } from '@measured/puck';
+import { Puck } from '@puckeditor/core';
 import { ComponentProps, useContext } from 'react';
 import { DeepPartial } from '~/types/DeepPartial';
 import { PageErrors, PageValidator } from '~/validations/models/page';

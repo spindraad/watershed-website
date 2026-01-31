@@ -15,6 +15,7 @@ export const Default: Story = {
       root: {
         props: {
           title: '',
+          titleIsHidden: false,
           summary: '',
           slug: '',
           meta: { title: '', description: '' },

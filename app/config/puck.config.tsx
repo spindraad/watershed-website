@@ -1,4 +1,4 @@
-import type { Config, Data } from '@measured/puck';
+import { Config, Data } from '@puckeditor/core';
 import {
   HeadingBlock,
   Props as HeadingBlockProps,
@@ -18,18 +18,24 @@ import {
   UpcomingEventsBlock,
   UpcomingEventsBlockProps,
 } from '~/config/blocks/UpcomingEventsBlock';
+import {
+  BackgroundBlock,
+  BackgroundBlockProps,
+} from '~/config/blocks/BackgroundBlock';
 
-type Props = {
+export type Props = {
   HeadingBlock: HeadingBlockProps;
   RichTextBlock: RichTextBlockProps;
   ButtonBlock: ButtonBlockProps;
   GridBlock: GribBlockProps;
   IllustrationBlock: IllustrationBlockProps;
   UpcomingEventsBlock: UpcomingEventsBlockProps;
+  BackgroundBlock: BackgroundBlockProps;
 };
 
-type RootProps = {
+export type RootProps = {
   title: string;
+  titleIsHidden: boolean;
   summary: string;
   slug: string;
   meta: {
@@ -53,7 +59,12 @@ export const config: Config<Props, RootProps> = {
     },
     ui: {
       title: 'UI',
-      components: ['ButtonBlock', 'IllustrationBlock', 'UpcomingEventsBlock'],
+      components: [
+        'ButtonBlock',
+        'IllustrationBlock',
+        'UpcomingEventsBlock',
+        'BackgroundBlock',
+      ],
     },
   },
   components: {
@@ -63,12 +74,21 @@ export const config: Config<Props, RootProps> = {
     GridBlock,
     IllustrationBlock,
     UpcomingEventsBlock,
+    BackgroundBlock,
   },
   root: {
     fields: {
       title: {
         label: 'Pagina titel',
         type: 'text',
+      },
+      titleIsHidden: {
+        label: 'Verberg titel op pagina',
+        type: 'radio',
+        options: [
+          { label: 'Ja', value: true },
+          { label: 'Nee', value: false },
+        ],
       },
       summary: {
         label: 'Pagina omschrijving',
@@ -93,10 +113,20 @@ export const config: Config<Props, RootProps> = {
         },
       },
     },
-    render({ children, title }) {
+    defaultProps: {
+      title: 'Nieuwe pagina',
+      titleIsHidden: false,
+      summary: '',
+      slug: '',
+      meta: {
+        title: 'Nieuwe pagina',
+        description: '',
+      },
+    },
+    render({ children, title, titleIsHidden }) {
       return (
         <div className="flex flex-col gap-4">
-          {title ?
+          {!titleIsHidden && title ?
             <Heading level={1}>{title}</Heading>
           : null}
           {children}

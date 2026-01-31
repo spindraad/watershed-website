@@ -1,13 +1,9 @@
-import {
-  ComponentProps,
-  ReactNode,
-  useContext,
-  useEffect,
-  useState,
-} from 'react';
-import { Overrides, Puck, usePuck } from '@measured/puck';
+import { ComponentProps, ReactNode, useContext, useEffect } from 'react';
+import { Overrides, Puck, createUsePuck } from '@puckeditor/core';
+import headingAnalyzer from '@puckeditor/plugin-heading-analyzer';
 
-import '@measured/puck/puck.css';
+import '@puckeditor/plugin-heading-analyzer/dist/index.css';
+import '@puckeditor/core/puck.css';
 
 import {
   config,
@@ -15,7 +11,6 @@ import {
   WatershedPageData,
 } from '~/config/puck.config';
 import { ShoelaceContext } from '~/components/shoelace';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 type PuckProps = ComponentProps<typeof Puck<WatershedPageConfig>>;
 type Props = {
@@ -25,19 +20,7 @@ type Props = {
   title: string;
 };
 
-type EditorHeaderProps = Pick<Props, 'onPublish' | 'isSaving' | 'title'> & {
-  handleDrawerOpen: (orientation: 'left' | 'right') => void;
-};
-
-const overrides: Partial<Overrides> = {
-  iframe: ({ children, document }) => {
-    return (
-      <MockShoelaceProvider document={document}>
-        {children}
-      </MockShoelaceProvider>
-    );
-  },
-};
+type EditorHeaderProps = Pick<Props, 'onPublish' | 'isSaving' | 'title'>;
 
 export default function PageEditor({
   data = {},
@@ -45,60 +28,31 @@ export default function PageEditor({
   isSaving = false,
   title,
 }: Props) {
-  const queryClient = new QueryClient();
-  const { SlDrawer } = useContext(ShoelaceContext);
-
-  const [leftDrawerOpen, setLeftDrawerOpen] = useState(false);
-  const [rightDrawerOpen, setRightDrawerOpen] = useState(false);
-
-  const handleDrawerOpen = (orientation: 'left' | 'right') => {
-    if (orientation === 'left') {
-      setLeftDrawerOpen(true);
-    }
-
-    if (orientation === 'right') {
-      setRightDrawerOpen(true);
-    }
+  const overrides: Partial<Overrides> = {
+    header: (props) => (
+      <EditorHeader
+        {...props}
+        title={title}
+        onPublish={onPublish}
+        isSaving={isSaving}
+      />
+    ),
+    iframe: ({ children, document }) => {
+      return (
+        <MockShoelaceProvider document={document}>
+          {children}
+        </MockShoelaceProvider>
+      );
+    },
   };
 
   return (
-    <QueryClientProvider client={queryClient}>
-      <Puck
-        overrides={overrides}
-        config={config}
-        data={data}
-        onPublish={onPublish}
-      >
-        <div className="w-full h-full flex flex-col gap-4 px-4">
-          <SlDrawer
-            open={leftDrawerOpen}
-            placement="start"
-            onSlAfterHide={() => setLeftDrawerOpen(false)}
-            label="Componenten"
-          >
-            <Puck.Components />
-          </SlDrawer>
-
-          <EditorHeader
-            onPublish={onPublish}
-            handleDrawerOpen={handleDrawerOpen}
-            isSaving={isSaving}
-            title={title}
-          />
-
-          <SlDrawer
-            open={rightDrawerOpen}
-            placement="end"
-            onSlAfterHide={() => setRightDrawerOpen(false)}
-            label="Velden"
-          >
-            <Puck.Fields />
-          </SlDrawer>
-
-          <Puck.Preview />
-        </div>
-      </Puck>
-    </QueryClientProvider>
+    <Puck
+      overrides={overrides}
+      config={config}
+      data={data}
+      plugins={[headingAnalyzer]}
+    />
   );
 }
 
@@ -126,14 +80,10 @@ function MockShoelaceProvider({
   return <>{children}</>;
 }
 
-function EditorHeader({
-  onPublish,
-  handleDrawerOpen,
-  isSaving,
-  title,
-}: EditorHeaderProps) {
-  const { appState } = usePuck<WatershedPageConfig>();
-  const { SlButton, SlIconButton, SlIcon } = useContext(ShoelaceContext);
+function EditorHeader({ onPublish, isSaving, title }: EditorHeaderProps) {
+  const usePuck = createUsePuck<WatershedPageConfig>();
+  const appState = usePuck((s) => s.appState);
+  const { SlButton, SlIcon } = useContext(ShoelaceContext);
 
   const publish = () => {
     if (onPublish) {
@@ -142,43 +92,28 @@ function EditorHeader({
   };
 
   return (
-    <header className="flex flex-col gap-2 w-full h-24 justify-center">
-      <div className="w-auto">
+    <header className="flex flex-row justify-between items-center mx-auto w-full h-20 px-4 border-b border-gray-200">
+      <div className="flex flex-row gap-2 justify-center items-center">
         <SlButton href="/beheer/paginas" variant="neutral" size="small" outline>
           <SlIcon name="arrow-left" slot="prefix" />
           Terug
         </SlButton>
       </div>
 
-      <div className="flex flex-row justify-between items-center mx-auto w-full">
-        <div className="flex flex-row gap-2 justify-center items-center">
-          <SlIconButton
-            name="layout-sidebar-inset"
-            label="Toon componenten"
-            onClick={() => handleDrawerOpen('left')}
-            className="text-xl"
-          />
-          <h1 className="text-xl font-bold">{title}</h1>
-        </div>
+      <div className="flex flex-row gap-2 justify-center items-center">
+        <h1 className="text-xl font-bold">{title}</h1>
+      </div>
 
-        <div className="flex flex-row gap-2 justify-center items-center">
-          <SlButton
-            variant="primary"
-            disabled={isSaving}
-            loading={isSaving}
-            onClick={publish}
-          >
-            <SlIcon name="cloud-upload" slot="prefix" />
-            Publiceren
-          </SlButton>
-
-          <SlIconButton
-            name="layout-sidebar-inset-reverse"
-            label="Veld"
-            onClick={() => handleDrawerOpen('right')}
-            className="text-xl"
-          />
-        </div>
+      <div className="flex flex-row gap-2 justify-center items-center">
+        <SlButton
+          variant="primary"
+          disabled={isSaving}
+          loading={isSaving}
+          onClick={publish}
+        >
+          <SlIcon name="cloud-upload" slot="prefix" />
+          Publiceren
+        </SlButton>
       </div>
     </header>
   );

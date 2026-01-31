@@ -11,6 +11,7 @@ export const home: SeedContent = {
     root: {
       props: {
         title: 'Welcome to our website',
+        titleIsHidden: false,
         summary: 'The homepage of the website',
         slug: 'home',
         meta: {
@@ -35,6 +36,7 @@ export const home: SeedContent = {
     root: {
       props: {
         title: 'Welkom op onze website',
+        titleIsHidden: false,
         summary: 'De hoofdpagina van de website',
         slug: 'home',
         meta: {
@@ -59,6 +61,7 @@ export const home: SeedContent = {
     root: {
       props: {
         title: 'Welcome na nos website',
+        titleIsHidden: false,
         summary: 'Homepage di nos website',
         slug: 'home',
         meta: {
@@ -86,6 +89,7 @@ export const about: SeedContent = {
     root: {
       props: {
         title: 'About Our Organization',
+        titleIsHidden: false,
         summary: 'This is the about us page',
         slug: 'about',
         meta: {
@@ -127,6 +131,7 @@ export const about: SeedContent = {
     root: {
       props: {
         title: 'Over Ons',
+        titleIsHidden: false,
         summary: 'Dit is de over ons pagina',
         slug: 'over-ons',
         meta: {
@@ -168,6 +173,7 @@ export const about: SeedContent = {
     root: {
       props: {
         title: 'Tokante Nos',
+        titleIsHidden: false,
         summary: 'Welcome to our website',
         slug: 'tokante-nos',
         meta: {
@@ -204,6 +210,7 @@ export const contact: SeedContent = {
     root: {
       props: {
         title: 'Contact Us',
+        titleIsHidden: false,
         summary: 'This is the contact us page',
         slug: 'contact',
         meta: {
@@ -228,6 +235,7 @@ export const contact: SeedContent = {
     root: {
       props: {
         title: 'Neem contact op',
+        titleIsHidden: false,
         summary: 'Dit is de contactpagina',
         slug: 'contact',
         meta: {
@@ -252,6 +260,7 @@ export const contact: SeedContent = {
     root: {
       props: {
         title: 'Kontakto Ku Nos',
+        titleIsHidden: false,
         summary: 'Welcome to our website',
         slug: 'kontakto-ku-nos',
         meta: {

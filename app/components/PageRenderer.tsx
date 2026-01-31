@@ -1,19 +1,15 @@
-import { Render } from '@measured/puck';
-import { config, WatershedPageData } from '~/config/puck.config';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { Data, Render } from '@puckeditor/core';
+import { config } from '~/config/puck.config';
 
 type Props = {
-  data: Partial<WatershedPageData>;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  data: Partial<Data<any, any>>;
 };
 
 export default function PageRenderer({ data }: Props) {
-  const queryClient = new QueryClient();
-
   return (
-    <QueryClientProvider client={queryClient}>
-      <div className="prose prose-lg max-w-full">
-        <Render config={config} data={data} />
-      </div>
-    </QueryClientProvider>
+    <div className="prose prose-lg max-w-full">
+      <Render config={config} data={data} />
+    </div>
   );
 }

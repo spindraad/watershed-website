@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a371227e-1556-4281-bf9d-e84dc3a6719d" name="WAT-50 Content summaries" comment="Created a Puck block of the upcoming events component, which also needed React Query, an api endpoint and a loader">
+    <list default="true" id="a371227e-1556-4281-bf9d-e84dc3a6719d" name="WAT-50 Content summaries" comment="Refactor root props structure and add migration support for title visibility">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.storybook/preview.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/.storybook/preview.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/EventMutationForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/EventMutationForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/UpcomingEvents.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/UpcomingEvents.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/PageEditor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PageEditor.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/migrations/root-props.ts" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/migrations/root-props.ts" afterDir="false" />
     </list>
     <list id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Added box and line illustrations, and created the hand drawn box component" />
+    <list id="beb23f38-d23a-47e7-ba80-27679dd64e74" name="WAT-54 CLI" comment="WAT-54 CLI" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,6 +18,11 @@
   </component>
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_/Users/lody/dev/projects/watershed-website" value="2nVocK95qGbCivqpSCPMQGibeKV" />
+    </persistenceIdMap>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -57,8 +62,20 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
+                    <option name="branchName" value="feature/WAT-153_content_summaries_for_homepage" />
+                    <option name="lastUsedInstant" value="1760957971" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="feature/WAT-54-Create-CLI" />
+                    <option name="lastUsedInstant" value="1760451925" />
+                  </RecentBranch>
+                  <RecentBranch>
                     <option name="branchName" value="dev" />
-                    <option name="lastUsedInstant" value="1747225347" />
+                    <option name="lastUsedInstant" value="1760451842" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1760451806" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="feature/wsh-43-nieuws" />
@@ -130,93 +147,99 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Attach to Node.js/Chrome.Debug in Chrome.executor": "Debug",
-    "JavaScript Debug.Debug in Chrome.executor": "Debug",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.OpenDatabaseViewOnStart": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "Vitest.All Tests.executor": "Run",
-    "Vitest.Content utilities.Parse a localised form data object into a localised value object.executor": "Run",
-    "Vitest.Content utilities.Retrieve the number of errors for each localised field.executor": "Run",
-    "Vitest.Content utilities.executor": "Run",
-    "Vitest.Validating page requests.executor": "Debug",
-    "Vitest.Validating the page.executor": "Debug",
-    "Vitest.convertDateToLocaleString.converts a date to a human readable format with shortened weekday.executor": "Run",
-    "Vitest.convertDateToLocaleString.executor": "Run",
-    "Vitest.parseURL.Return the correct url for \"/over-ons/team\".executor": "Debug",
-    "Vitest.parseURL.Return the correct urls for \"/contact\".executor": "Debug",
-    "Vitest.validateLogin.executor": "Run",
-    "Vitest.validateLogin.should return success: false when emailaddress is invalid.executor": "Run",
-    "Vitest.validateLogin.should return success: false when emailaddress is missing.executor": "Run",
-    "git-widget-placeholder": "feature/WAT-153__content__summaries__for__homepage",
-    "javascript.nodejs.core.library.configured.version": "22.11.0",
-    "javascript.nodejs.core.library.typings.version": "22.18.1",
-    "last_opened_file_path": "/Users/lody/dev/projects/watershed-website/app/routes/_index",
-    "node.js.detected.package.standard": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "node",
-    "nodejs_package_manager_path": "npm",
-    "npm.Dev.executor": "Run",
-    "npm.Develop.executor": "Run",
-    "npm.Storybook.executor": "Run",
-    "npm.db:generate.executor": "Run",
-    "npm.db:push.executor": "Run",
-    "npm.db:push:reset:seed.executor": "Run",
-    "npm.db:push:seed.executor": "Run",
-    "npm.dev:app.executor": "Debug",
-    "npm.dev:remix.executor": "Debug",
-    "npm.dev:storybook.executor": "Debug",
-    "npm.docker:start.executor": "Run",
-    "npm.typecheck.executor": "Run",
-    "prettierjs.PrettierConfiguration.Package": "/Users/lody/dev/projects/watershed-website/node_modules/prettier",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "tasks.servers",
-    "timeTracker.activityTracker": "null",
-    "timeTracker.comment": "",
-    "timeTracker.inactivityPeriodInMills": "600000",
-    "timeTracker.isAutoTrackingEnable": "false",
-    "timeTracker.isAutoTrackingTemporaryDisabled": "false",
-    "timeTracker.isManualTrackingEnable": "true",
-    "timeTracker.isPaused": "false",
-    "timeTracker.isPostAfterCommitEnabled": "false",
-    "timeTracker.isPostedScheduled": "true",
-    "timeTracker.isRunning": "false",
-    "timeTracker.isScheduledEnabled": "false",
-    "timeTracker.isWhenProjectClosedEnabled": "false",
-    "timeTracker.issueId": "WAT-50",
-    "timeTracker.issueIdReadable": "WAT-50",
-    "timeTracker.pausedTime": "0",
-    "timeTracker.query": "",
-    "timeTracker.recordedTime": "0",
-    "timeTracker.scheduledPeriod": "19:00:0",
-    "timeTracker.startTime": "1760434586916",
-    "timeTracker.timeInMills": "0",
-    "timeTracker.type": "Development",
-    "ts.external.directory.path": "/Users/lody/dev/projects/watershed-website/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Attach to Node.js/Chrome.Debug in Chrome.executor&quot;: &quot;Debug&quot;,
+    &quot;JavaScript Debug.Debug in Chrome.executor&quot;: &quot;Debug&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Node.js.run-puck-migration.js.executor&quot;: &quot;Debug&quot;,
+    &quot;Node.js.run-puck-migration.ts.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.OpenDatabaseViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;Vitest.All Tests.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.Content utilities.Parse a localised form data object into a localised value object.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.Content utilities.Retrieve the number of errors for each localised field.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.Content utilities.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.Validating page requests.executor&quot;: &quot;Debug&quot;,
+    &quot;Vitest.Validating the page.executor&quot;: &quot;Debug&quot;,
+    &quot;Vitest.convertDateToLocaleString.converts a date to a human readable format with shortened weekday.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.convertDateToLocaleString.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.parseURL.Return the correct url for \&quot;/over-ons/team\&quot;.executor&quot;: &quot;Debug&quot;,
+    &quot;Vitest.parseURL.Return the correct urls for \&quot;/contact\&quot;.executor&quot;: &quot;Debug&quot;,
+    &quot;Vitest.validateLogin.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.validateLogin.should return success: false when emailaddress is invalid.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.validateLogin.should return success: false when emailaddress is missing.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/WAT-153__content__summaries__for__homepage&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;24.11.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;24.10.9&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/lody/dev/projects/watershed-website/app/routes/_index&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.Dev.executor&quot;: &quot;Debug&quot;,
+    &quot;npm.Develop.executor&quot;: &quot;Run&quot;,
+    &quot;npm.Storybook.executor&quot;: &quot;Debug&quot;,
+    &quot;npm.db:generate.executor&quot;: &quot;Run&quot;,
+    &quot;npm.db:push.executor&quot;: &quot;Run&quot;,
+    &quot;npm.db:push:reset:seed.executor&quot;: &quot;Run&quot;,
+    &quot;npm.db:push:seed.executor&quot;: &quot;Run&quot;,
+    &quot;npm.dev:app.executor&quot;: &quot;Debug&quot;,
+    &quot;npm.dev:remix.executor&quot;: &quot;Debug&quot;,
+    &quot;npm.dev:storybook.executor&quot;: &quot;Debug&quot;,
+    &quot;npm.docker:start.executor&quot;: &quot;Run&quot;,
+    &quot;npm.migrate-puck-data -- --input tmp/db-dumps/pre-title-obj-migration.json --output tmp/db-migrations/post-title-obj-migration.json.executor&quot;: &quot;Debug&quot;,
+    &quot;npm.migrate-puck-data --input tmp/db-dumps/pre-title-obj-migration.json --output tmp/db-migrations/post-title-obj-migration.json.executor&quot;: &quot;Debug&quot;,
+    &quot;npm.typecheck.executor&quot;: &quot;Run&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/lody/dev/projects/watershed-website/node_modules/prettier&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;tasks.servers&quot;,
+    &quot;tasks.open.task.update.state.enabled&quot;: &quot;true&quot;,
+    &quot;timeTracker.activityTracker&quot;: &quot;null&quot;,
+    &quot;timeTracker.comment&quot;: &quot;&quot;,
+    &quot;timeTracker.inactivityPeriodInMills&quot;: &quot;600000&quot;,
+    &quot;timeTracker.isAutoTrackingEnable&quot;: &quot;false&quot;,
+    &quot;timeTracker.isAutoTrackingTemporaryDisabled&quot;: &quot;false&quot;,
+    &quot;timeTracker.isManualTrackingEnable&quot;: &quot;true&quot;,
+    &quot;timeTracker.isPaused&quot;: &quot;false&quot;,
+    &quot;timeTracker.isPostAfterCommitEnabled&quot;: &quot;false&quot;,
+    &quot;timeTracker.isPostedScheduled&quot;: &quot;true&quot;,
+    &quot;timeTracker.isRunning&quot;: &quot;false&quot;,
+    &quot;timeTracker.isScheduledEnabled&quot;: &quot;false&quot;,
+    &quot;timeTracker.isWhenProjectClosedEnabled&quot;: &quot;false&quot;,
+    &quot;timeTracker.issueId&quot;: &quot;WAT-50&quot;,
+    &quot;timeTracker.issueIdReadable&quot;: &quot;WAT-50&quot;,
+    &quot;timeTracker.pausedTime&quot;: &quot;0&quot;,
+    &quot;timeTracker.query&quot;: &quot;&quot;,
+    &quot;timeTracker.recordedTime&quot;: &quot;0&quot;,
+    &quot;timeTracker.scheduledPeriod&quot;: &quot;19:00:0&quot;,
+    &quot;timeTracker.startTime&quot;: &quot;1760434586916&quot;,
+    &quot;timeTracker.timeInMills&quot;: &quot;0&quot;,
+    &quot;timeTracker.type&quot;: &quot;Development&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/lody/dev/projects/watershed-website/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ],
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "CSS",
-      "Markdown",
-      "TEXT",
-      "XML"
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;JSON&quot;,
+      &quot;CSS&quot;,
+      &quot;Markdown&quot;,
+      &quot;TEXT&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/routes/_index" />
@@ -249,7 +272,7 @@
       <command value="npm run db:push" />
     </option>
   </component>
-  <component name="RunManager" selected="Vitest.convertDateToLocaleString">
+  <component name="RunManager" selected="npm.migrate-puck-data -- --input tmp/db-dumps/pre-title-obj-migration.json --output tmp/db-migrations/post-title-obj-migration.json">
     <configuration name="Develop" type="CompoundRunConfigurationType">
       <toRun name="Dev" type="js.build_tools.npm" />
       <toRun name="Storybook" type="js.build_tools.npm" />
@@ -344,12 +367,17 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="Debug in Chrome" type="JavascriptDebugType" uri="http://localhost:5173">
-      <mapping url="http://localhost:5173" local-file="$PROJECT_DIR$" />
+    <configuration name="Debug in Chrome" type="JavascriptDebugType" engineId="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" uri="http://localhost:5173">
       <method v="2" />
     </configuration>
     <configuration name="Debug in Chrome" type="JavascriptDebugType" uri="http://localhost:5173">
       <mapping url="http://localhost:5173" local-file="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="run-puck-migration.ts" type="NodeJSConfigurationType" temporary="true" application-parameters="-i ../tmp/db-dumps/dump.json -o ../tmp/db-dumps/migrated-dump.json" nameIsGenerated="true" path-to-js-file="run-puck-migration.ts" typescript-loader="bundled" working-dir="$PROJECT_DIR$/scripts">
+      <EXTENSION ID="com.intellij.javascript.debugger.execution.StartBrowserRunConfigurationExtension">
+        <browser with-js-debugger="true" />
+      </EXTENSION>
       <method v="2" />
     </configuration>
     <configuration name="Dev" type="js.build_tools.npm">
@@ -392,50 +420,39 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="db:push:seed" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="migrate-puck-data -- --input tmp/db-dumps/pre-title-obj-migration.json --output tmp/db-migrations/post-title-obj-migration.json" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="db:push:seed" />
+        <script value="migrate-puck-data" />
       </scripts>
+      <arguments value="-- --input tmp/db-dumps/pre-title-obj-migration.json --output tmp/db-migrations/post-title-obj-migration.json" />
       <node-interpreter value="project" />
       <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="typecheck" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="typecheck" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
+      <EXTENSION ID="com.intellij.javascript.debugger.execution.StartBrowserRunConfigurationExtension">
+        <browser with-js-debugger="true" />
+      </EXTENSION>
       <method v="2" />
     </configuration>
     <list>
       <item itemvalue="Compound.Develop" />
       <item itemvalue="JavaScript Debug.Debug in Chrome" />
+      <item itemvalue="Node.js.run-puck-migration.ts" />
+      <item itemvalue="npm.migrate-puck-data -- --input tmp/db-dumps/pre-title-obj-migration.json --output tmp/db-migrations/post-title-obj-migration.json" />
       <item itemvalue="npm.Dev" />
       <item itemvalue="npm.Storybook" />
-      <item itemvalue="npm.typecheck" />
       <item itemvalue="Vitest.All Tests" />
-      <item itemvalue="Vitest.convertDateToLocaleString" />
-      <item itemvalue="Vitest.convertDateToLocaleString.converts a date to a human readable format with shortened weekday" />
       <item itemvalue="Vitest.Validating page requests" />
       <item itemvalue="Vitest.Validating the page" />
+      <item itemvalue="Vitest.convertDateToLocaleString" />
+      <item itemvalue="Vitest.convertDateToLocaleString.converts a date to a human readable format with shortened weekday" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Vitest.convertDateToLocaleString" />
-        <item itemvalue="Vitest.convertDateToLocaleString.converts a date to a human readable format with shortened weekday" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-PS-252.26830.95" />
-        <option value="bundled-php-predefined-a98d8de5180a-9b563d34894c-com.jetbrains.php.sharedIndexes-PS-252.26830.95" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-PS-253.29346.257" />
+        <option value="bundled-php-predefined-a98d8de5180a-0e0d91225499-com.jetbrains.php.sharedIndexes-PS-253.29346.257" />
       </set>
     </attachedChunks>
   </component>
@@ -522,78 +539,6 @@
       <workItem from="1751983260331" duration="154000" />
       <workItem from="1757113103308" duration="35000" />
       <workItem from="1760341367186" duration="338000" />
-    </task>
-    <task id="LOCAL-00117" summary="Added meta for eventsd ad projects">
-      <option name="closed" value="true" />
-      <created>1743539422157</created>
-      <option name="number" value="00117" />
-      <option name="presentableId" value="LOCAL-00117" />
-      <option name="project" value="LOCAL" />
-      <updated>1743539422157</updated>
-    </task>
-    <task id="LOCAL-00118" summary="Added link to user account in header">
-      <option name="closed" value="true" />
-      <created>1743540189385</created>
-      <option name="number" value="00118" />
-      <option name="presentableId" value="LOCAL-00118" />
-      <option name="project" value="LOCAL" />
-      <updated>1743540189385</updated>
-    </task>
-    <task id="LOCAL-00119" summary="Fixed color declarations across Tailwind, Shoelace and the app">
-      <option name="closed" value="true" />
-      <created>1743543475860</created>
-      <option name="number" value="00119" />
-      <option name="presentableId" value="LOCAL-00119" />
-      <option name="project" value="LOCAL" />
-      <updated>1743543475860</updated>
-    </task>
-    <task id="LOCAL-00120" summary="Improvements to the header and anchor">
-      <option name="closed" value="true" />
-      <created>1743544618451</created>
-      <option name="number" value="00120" />
-      <option name="presentableId" value="LOCAL-00120" />
-      <option name="project" value="LOCAL" />
-      <updated>1743544618451</updated>
-    </task>
-    <task id="LOCAL-00121" summary="Pages are now served from the content overview route as well, and can be accessed from the admin menu. A &quot;qa&quot; script is added to run a small and full qa control locally.">
-      <option name="closed" value="true" />
-      <created>1744184819879</created>
-      <option name="number" value="00121" />
-      <option name="presentableId" value="LOCAL-00121" />
-      <option name="project" value="LOCAL" />
-      <updated>1744184819879</updated>
-    </task>
-    <task id="LOCAL-00122" summary="Reworked the Puck editor to support for page/SEO metadata.">
-      <option name="closed" value="true" />
-      <created>1744195214320</created>
-      <option name="number" value="00122" />
-      <option name="presentableId" value="LOCAL-00122" />
-      <option name="project" value="LOCAL" />
-      <updated>1744195214321</updated>
-    </task>
-    <task id="LOCAL-00123" summary="Created &quot;new&quot; flow for generic pages.">
-      <option name="closed" value="true" />
-      <created>1744293214432</created>
-      <option name="number" value="00123" />
-      <option name="presentableId" value="LOCAL-00123" />
-      <option name="project" value="LOCAL" />
-      <updated>1744293214433</updated>
-    </task>
-    <task id="LOCAL-00124" summary="Created &quot;new&quot; flow for generic pages.">
-      <option name="closed" value="true" />
-      <created>1744293439309</created>
-      <option name="number" value="00124" />
-      <option name="presentableId" value="LOCAL-00124" />
-      <option name="project" value="LOCAL" />
-      <updated>1744293439309</updated>
-    </task>
-    <task id="LOCAL-00125" summary="PageMutationForm now also shows errors, and made slug unique in prisma">
-      <option name="closed" value="true" />
-      <created>1744296682184</created>
-      <option name="number" value="00125" />
-      <option name="presentableId" value="LOCAL-00125" />
-      <option name="project" value="LOCAL" />
-      <updated>1744296682184</updated>
     </task>
     <task id="LOCAL-00126" summary="Rearranged all the components in Storybook. They are now categorised according to Atomic Design, and have been tagged.">
       <option name="closed" value="true" />
@@ -841,15 +786,24 @@
       <created>1760305693143</created>
       <option name="issue" value="true" />
       <url>https://youtrack.spindraad.dev/issue/WAT-50</url>
-      <lastPost>1760448510191</lastPost>
+      <lastPost>1760973446663</lastPost>
       <option name="number" value="50" />
       <option name="presentableId" value="WAT-50" />
       <option name="project" value="WAT" />
-      <updated>1760448510077</updated>
+      <updated>1769859122939</updated>
       <workItem from="1760341706290" duration="17131000" />
       <workItem from="1760359568103" />
       <workItem from="1760434553239" duration="6105000" />
       <workItem from="1760448510191" />
+      <workItem from="1760957990186" duration="10692000" />
+      <workItem from="1760973446663" />
+      <workItem from="1764948031117" />
+      <workItem from="1767958184662" />
+      <workItem from="1768249823862" />
+      <workItem from="1768501115582" />
+      <workItem from="1768516092395" />
+      <workItem from="1769028734104" />
+      <workItem from="1769852295523" />
     </task>
     <task id="LOCAL-00156" summary="Opened project in a new editor with lots of catching up from PHPStorm. Also configured Storybook with more devices and a proxy">
       <option name="closed" value="true" />
@@ -923,13 +877,91 @@
       <option name="project" value="LOCAL" />
       <updated>1760448379403</updated>
     </task>
-    <option name="localTasksCounter" value="165" />
-    <option name="clearContext" value="false" />
-    <option name="createBranch" value="false" />
-    <option name="useBranch" value="true" />
+    <task id="WAT-54" summary="CLI">
+      <branch name="dev" repository="$PROJECT_DIR$" original="true" />
+      <branch name="feature/WAT-54-Create-CLI" repository="$PROJECT_DIR$" />
+      <changelist id="beb23f38-d23a-47e7-ba80-27679dd64e74" name="WAT-54 CLI" comment="" />
+      <created>1760340494584</created>
+      <option name="issue" value="true" />
+      <url>https://youtrack.spindraad.dev/issue/WAT-54</url>
+      <option name="number" value="54" />
+      <option name="presentableId" value="WAT-54" />
+      <option name="project" value="WAT" />
+      <updated>1760957989938</updated>
+      <workItem from="1760451925232" />
+      <workItem from="1760957832911" />
+    </task>
+    <task id="LOCAL-00165" summary="Add Upcoming Events translations and fixed UpcomingEventsBlock component suspense error">
+      <option name="closed" value="true" />
+      <created>1760971061228</created>
+      <option name="number" value="00165" />
+      <option name="presentableId" value="LOCAL-00165" />
+      <option name="project" value="LOCAL" />
+      <updated>1760971061228</updated>
+    </task>
+    <task id="LOCAL-00166" summary="Add BackgroundBlock component and update title structure in page configuration">
+      <option name="closed" value="true" />
+      <created>1760971139228</created>
+      <option name="number" value="00166" />
+      <option name="presentableId" value="LOCAL-00166" />
+      <option name="project" value="LOCAL" />
+      <updated>1760971139228</updated>
+    </task>
+    <task id="LOCAL-00167" summary="ide">
+      <option name="closed" value="true" />
+      <created>1768252723452</created>
+      <option name="number" value="00167" />
+      <option name="presentableId" value="LOCAL-00167" />
+      <option name="project" value="LOCAL" />
+      <updated>1768252723452</updated>
+    </task>
+    <task id="LOCAL-00168" summary="ide">
+      <option name="closed" value="true" />
+      <created>1768502150413</created>
+      <option name="number" value="00168" />
+      <option name="presentableId" value="LOCAL-00168" />
+      <option name="project" value="LOCAL" />
+      <updated>1768502150413</updated>
+    </task>
+    <task id="LOCAL-00169" summary="Updated node version and updated all dependencies that have no major version update. Then update Puck to 0.20 in preparation for 0.21">
+      <option name="closed" value="true" />
+      <created>1768503782506</created>
+      <option name="number" value="00169" />
+      <option name="presentableId" value="LOCAL-00169" />
+      <option name="project" value="LOCAL" />
+      <updated>1768503782506</updated>
+    </task>
+    <task id="LOCAL-00170" summary="Updated Puck to 0.21 and refactored all imports and usePuck calls">
+      <option name="closed" value="true" />
+      <created>1768506863718</created>
+      <option name="number" value="00170" />
+      <option name="presentableId" value="LOCAL-00170" />
+      <option name="project" value="LOCAL" />
+      <updated>1768506863718</updated>
+    </task>
+    <task id="LOCAL-00171" summary="Started refactoring the rich text editor component by dropping tinymce and picking Puck's own shipped editor">
+      <option name="closed" value="true" />
+      <created>1768508117084</created>
+      <option name="number" value="00171" />
+      <option name="presentableId" value="LOCAL-00171" />
+      <option name="project" value="LOCAL" />
+      <updated>1768508117085</updated>
+    </task>
+    <task id="LOCAL-00172" summary="Refactor root props structure and add migration support for title visibility">
+      <option name="closed" value="true" />
+      <created>1769859086888</created>
+      <option name="number" value="00172" />
+      <option name="presentableId" value="LOCAL-00172" />
+      <option name="project" value="LOCAL" />
+      <updated>1769859086888</updated>
+    </task>
+    <option name="localTasksCounter" value="173" />
     <servers>
       <YouTrack url="https://youtrack.spindraad.dev">
-        <option name="defaultSearch" value="Board Watershed Sprint Board: {Current sprint} #WAT-50 " />
+        <option name="defaultSearch" value="Board Watershed Sprint Board: {Current sprint}" />
+        <option name="preferredOpenTaskState">
+          <CustomTaskState id="In Progress" name="In Progress" />
+        </option>
         <username>random</username>
       </YouTrack>
     </servers>
@@ -986,13 +1018,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fixed typo" />
-    <MESSAGE value="Configured Kubernetes templates with the correct bucket name and credentials based on the deployment environment" />
-    <MESSAGE value="Added missing LoginFormComponent translations to login route" />
-    <MESSAGE value="Added Prisma migrations script for prod and dev database deploys, in preparation for when we switch over to managed databases." />
-    <MESSAGE value="Created a Nav menu component that lists a navigation menu, and created the route for the menu manager" />
-    <MESSAGE value="Extended Plop generator to allow the selection of tags and categories" />
-    <MESSAGE value="Created base component for the MenuEditor" />
     <MESSAGE value="We now have a very rudimentary draggable menu editor interface" />
     <MESSAGE value="MenuEditor now works as component that can be previewed." />
     <MESSAGE value="We now have a basic workflow for editing the menu" />
@@ -1011,10 +1036,25 @@
     <MESSAGE value="Installed and configured the container query plugin for Tailwind" />
     <MESSAGE value="Some layout improvements to the upcoming events block" />
     <MESSAGE value="Created a Puck block of the upcoming events component, which also needed React Query, an api endpoint and a loader" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created a Puck block of the upcoming events component, which also needed React Query, an api endpoint and a loader" />
+    <MESSAGE value="Add Upcoming Events translations and fixed UpcomingEventsBlock component suspense error" />
+    <MESSAGE value="Add BackgroundBlock component and update title structure in page configuration" />
+    <MESSAGE value="ide" />
+    <MESSAGE value="Updated node version and updated all dependencies that have no major version update. Then update Puck to 0.20 in preparation for 0.21" />
+    <MESSAGE value="Updated Puck to 0.21 and refactored all imports and usePuck calls" />
+    <MESSAGE value="Started refactoring the rich text editor component by dropping tinymce and picking Puck's own shipped editor" />
+    <MESSAGE value="Refactor root props structure and add migration support for title visibility" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor root props structure and add migration support for title visibility" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
   </component>
 </project>

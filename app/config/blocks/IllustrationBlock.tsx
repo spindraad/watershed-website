@@ -1,5 +1,5 @@
 import { CSSProperties } from 'react';
-import { ComponentConfig } from '@measured/puck';
+import { ComponentConfig } from '@puckeditor/core';
 
 const illustrations = {
   'Figuur met popbeker': 'figuur met popbeker kopie.png',
@@ -9,6 +9,7 @@ const illustrations = {
   'Oor in hand': 'oor in hand.png',
   'Potlood door hart': 'potlood door hart.png',
   'Vogel met potlood en nest': 'vogel met potlood en nest.png',
+  Schreeuw: 'schreeuw.png',
 } as const;
 
 // Extract the keys as a union type

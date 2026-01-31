@@ -32,6 +32,8 @@ import { nl as PageMutationFormTranslations } from '~/components/PageMutationFor
 export const { PageMutationForm } = PageMutationFormTranslations;
 import { nl as MenuEditorTranslations } from '~/components/MenuEditor.translations';
 export const { MenuEditor } = MenuEditorTranslations;
+import { nl as UpcomingEventsTranslations } from '~/components/UpcomingEvents.translations';
+export const { UpcomingEvents } = UpcomingEventsTranslations;
 
 export const common = {
   title: 'Hallo Wereld!',

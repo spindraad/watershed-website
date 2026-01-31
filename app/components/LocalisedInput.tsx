@@ -1,18 +1,17 @@
 import { ComponentProps, useContext, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ShoelaceContext } from '~/components/shoelace';
-import { ReactWebComponent } from '@lit/react';
-import {
-  SlChangeEvent,
-  SlInput as SlInputComponent,
-} from '@shoelace-style/shoelace';
+import { SlInput } from '@shoelace-style/shoelace/dist/react';
+import { SlChangeEvent } from '@shoelace-style/shoelace';
 import { SlInputEventHandlers } from '~/types/Input';
 import { SupportedLanguages } from '~/config/i18n';
 import LocaleSelector from '~/components/LocaleSelector';
 import { ZodFormattedError } from 'zod';
 
+type SlInputComponentProps = ComponentProps<typeof SlInput>;
+
 type Props = Omit<
-  ComponentProps<ReactWebComponent<SlInputComponent>>,
+  SlInputComponentProps,
   | 'onSlBlur'
   | 'onSlChange'
   | 'onSlClear'

@@ -303,12 +303,12 @@
     --sl-color-danger-950: rgb(var(--danger-950));
 
     /* Fonts */
-    --font-family-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-      Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-      'Segoe UI Symbol';
+    --font-family-sans:
+      -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial,
+      sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
     --font-family-gt-haptik: 'GT Haptik', var(--font-family-sans);
-    --font-family-gt-haptik-rotalic: 'GT Haptik Rotalic',
-      var(--font-family-sans);
+    --font-family-gt-haptik-rotalic:
+      'GT Haptik Rotalic', var(--font-family-sans);
 
     --sl-font-sans: var(--font-family-gt-haptik);
   }

@@ -64,7 +64,7 @@ export class S3FileStorageClass implements FileStorage {
         return null;
       }
       const bytes = await response.Body.transformToByteArray();
-      return new File([bytes], key, {
+      return new File([bytes.buffer as ArrayBuffer], key, {
         type: response.ContentType,
         lastModified: response.LastModified?.getTime(),
       });

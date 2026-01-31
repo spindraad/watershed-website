@@ -30,8 +30,10 @@ import { en as LocalisedInputTranslations } from '~/components/LocalisedInput.tr
 export const { LocalisedInput } = LocalisedInputTranslations;
 import { en as PageMutationFormTranslations } from '~/components/PageMutationForm.translations';
 export const { PageMutationForm } = PageMutationFormTranslations;
-import { nl as MenuEditorTranslations } from '~/components/MenuEditor.translations';
+import { en as MenuEditorTranslations } from '~/components/MenuEditor.translations';
 export const { MenuEditor } = MenuEditorTranslations;
+import { en as UpcomingEventsTranslations } from '~/components/UpcomingEvents.translations';
+export const { UpcomingEvents } = UpcomingEventsTranslations;
 
 export const common = {
   title: 'Hello World!',

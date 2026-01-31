@@ -12,7 +12,7 @@ export async function loader() {
 
     const data = pageData.content[
       fallbackLanguage as SupportedLanguages
-    ] as WatershedPageData;
+    ] as unknown as WatershedPageData;
 
     return {
       title: data.root.props?.title,

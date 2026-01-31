@@ -1,12 +1,13 @@
 import { ComponentProps, useContext, useState } from 'react';
-import { SlInput as SlInputComponent } from '@shoelace-style/shoelace';
-import { ReactWebComponent } from '@lit/react';
+import { SlInput } from '@shoelace-style/shoelace/dist/react';
 import { format, isDate, parseISO } from 'date-fns';
 import { ShoelaceContext } from '~/components/shoelace';
 import { SlInputEventHandlers } from '~/types/Input';
 
+type SlInputComponentProps = ComponentProps<typeof SlInput>;
+
 type Props = Omit<
-  ComponentProps<ReactWebComponent<SlInputComponent>>,
+  SlInputComponentProps,
   | 'onSlBlur'
   | 'onSlChange'
   | 'onSlClear'
