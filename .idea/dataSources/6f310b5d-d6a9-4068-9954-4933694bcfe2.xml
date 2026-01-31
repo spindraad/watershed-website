@@ -11,9 +11,9 @@
 4||10|c|G
 4||10|C|G
 4||10|T|G</Grants>
-      <IntrospectionStateNumber>4594</IntrospectionStateNumber>
+      <IntrospectionStateNumber>4634</IntrospectionStateNumber>
       <ServerVersion>17.0</ServerVersion>
-      <StartupTime>1768250044</StartupTime>
+      <StartupTime>1769852170</StartupTime>
       <TimeZones>true ACDT
 true ACSST
 false ACST
@@ -1405,7 +1405,7 @@ false posixrules
 13219||10|C|G
 13219||-9223372036854775808|U|G
 13219||10|U|G</Grants>
-      <IntrospectionStateNumber>4594</IntrospectionStateNumber>
+      <IntrospectionStateNumber>4634</IntrospectionStateNumber>
       <ObjectId>5</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4827,11 +4827,11 @@ false posixrules
     <schema id="264" parent="2" name="public">
       <AutoIntrospectionLevel>3</AutoIntrospectionLevel>
       <Current>1</Current>
-      <LastIntrospectionL1Xid>4594</LastIntrospectionL1Xid>
-      <LastIntrospectionL2Xid>4594</LastIntrospectionL2Xid>
-      <LastIntrospectionL3Xid>4594</LastIntrospectionL3Xid>
+      <LastIntrospectionL1Xid>4634</LastIntrospectionL1Xid>
+      <LastIntrospectionL2Xid>4634</LastIntrospectionL2Xid>
+      <LastIntrospectionL3Xid>4634</LastIntrospectionL3Xid>
       <LastIntrospectionLevel>3</LastIntrospectionLevel>
-      <LastIntrospectionLocalTimestamp>2026-01-12.22:29:59</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2026-01-31.21:18:27</LastIntrospectionLocalTimestamp>
       <ObjectId>71210</ObjectId>
       <StateNumber>4534</StateNumber>
       <OwnerName>postgres</OwnerName>
@@ -4853,104 +4853,111 @@ RESET</Labels>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="267" parent="264" name="MenuItem">
+    <table id="267" parent="264" name="Maker">
+      <DetailsLevel>2</DetailsLevel>
+      <ObjectId>71439</ObjectId>
+      <StateNumber>4630</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <table id="268" parent="264" name="MenuItem">
       <DetailsLevel>2</DetailsLevel>
       <ObjectId>71264</ObjectId>
       <StateNumber>4542</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="268" parent="264" name="Page">
+    <table id="269" parent="264" name="Page">
       <DetailsLevel>2</DetailsLevel>
       <ObjectId>71256</ObjectId>
       <StateNumber>4541</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="269" parent="264" name="Password">
+    <table id="270" parent="264" name="Password">
       <DetailsLevel>2</DetailsLevel>
       <ObjectId>71225</ObjectId>
       <StateNumber>4548</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="270" parent="264" name="PasswordReset">
+    <table id="271" parent="264" name="PasswordReset">
       <DetailsLevel>2</DetailsLevel>
       <ObjectId>71217</ObjectId>
       <StateNumber>4536</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="271" parent="264" name="Project">
+    <table id="272" parent="264" name="Project">
       <DetailsLevel>2</DetailsLevel>
       <ObjectId>71240</ObjectId>
       <StateNumber>4539</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="272" parent="264" name="User">
+    <table id="273" parent="264" name="User">
       <DetailsLevel>2</DetailsLevel>
       <ObjectId>71232</ObjectId>
       <StateNumber>4548</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <column id="273" parent="266" name="id">
+    <column id="274" parent="266" name="id">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>4540</StateNumber>
       <StoredType>text|0s</StoredType>
       <TypeId>25</TypeId>
     </column>
-    <column id="274" parent="266" name="title">
+    <column id="275" parent="266" name="title">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>4540</StateNumber>
       <StoredType>jsonb|0s</StoredType>
       <TypeId>3802</TypeId>
     </column>
-    <column id="275" parent="266" name="description">
+    <column id="276" parent="266" name="description">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>4540</StateNumber>
       <StoredType>jsonb|0s</StoredType>
       <TypeId>3802</TypeId>
     </column>
-    <column id="276" parent="266" name="organiser">
+    <column id="277" parent="266" name="organiser">
       <Position>4</Position>
       <StateNumber>4540</StateNumber>
       <StoredType>text|0s</StoredType>
       <TypeId>25</TypeId>
     </column>
-    <column id="277" parent="266" name="image">
+    <column id="278" parent="266" name="image">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StateNumber>4540</StateNumber>
       <StoredType>text|0s</StoredType>
       <TypeId>25</TypeId>
     </column>
-    <column id="278" parent="266" name="link">
+    <column id="279" parent="266" name="link">
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StateNumber>4540</StateNumber>
       <StoredType>text|0s</StoredType>
       <TypeId>25</TypeId>
     </column>
-    <column id="279" parent="266" name="eventDate">
+    <column id="280" parent="266" name="eventDate">
       <NotNull>1</NotNull>
       <Position>7</Position>
       <StateNumber>4540</StateNumber>
       <StoredType>timestamp(3)|0s</StoredType>
       <TypeId>1114</TypeId>
     </column>
-    <column id="280" parent="266" name="address">
+    <column id="281" parent="266" name="address">
       <NotNull>1</NotNull>
       <Position>8</Position>
       <StateNumber>4540</StateNumber>
       <StoredType>text|0s</StoredType>
       <TypeId>25</TypeId>
     </column>
-    <column id="281" parent="266" name="createdAt">
+    <column id="282" parent="266" name="createdAt">
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>9</Position>
@@ -4958,14 +4965,14 @@ RESET</Labels>
       <StoredType>timestamp(3)|0s</StoredType>
       <TypeId>1114</TypeId>
     </column>
-    <column id="282" parent="266" name="updatedAt">
+    <column id="283" parent="266" name="updatedAt">
       <NotNull>1</NotNull>
       <Position>10</Position>
       <StateNumber>4540</StateNumber>
       <StoredType>timestamp(3)|0s</StoredType>
       <TypeId>1114</TypeId>
     </column>
-    <index id="283" parent="266" name="Event_pkey">
+    <index id="284" parent="266" name="Event_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>71254</ObjectId>
@@ -4977,48 +4984,134 @@ RESET</Labels>
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="284" parent="266" name="Event_pkey">
+    <key id="285" parent="266" name="Event_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>71255</ObjectId>
       <Primary>1</Primary>
       <StateNumber>4540</StateNumber>
       <UnderlyingIndexId>71254</UnderlyingIndexId>
     </key>
-    <column id="285" parent="267" name="id">
+    <column id="286" parent="267" name="id">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>4630</StateNumber>
+      <StoredType>text|0s</StoredType>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="287" parent="267" name="name">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StateNumber>4630</StateNumber>
+      <StoredType>text|0s</StoredType>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="288" parent="267" name="profession">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StateNumber>4630</StateNumber>
+      <StoredType>jsonb|0s</StoredType>
+      <TypeId>3802</TypeId>
+    </column>
+    <column id="289" parent="267" name="summary">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StateNumber>4630</StateNumber>
+      <StoredType>jsonb|0s</StoredType>
+      <TypeId>3802</TypeId>
+    </column>
+    <column id="290" parent="267" name="slug">
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StateNumber>4630</StateNumber>
+      <StoredType>text|0s</StoredType>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="291" parent="267" name="imageUrl">
+      <Position>6</Position>
+      <StateNumber>4630</StateNumber>
+      <StoredType>text|0s</StoredType>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="292" parent="267" name="createdAt">
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+      <StateNumber>4630</StateNumber>
+      <StoredType>timestamp(3)|0s</StoredType>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="293" parent="267" name="updatedAt">
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+      <StateNumber>4630</StateNumber>
+      <StoredType>timestamp(3)|0s</StoredType>
+      <TypeId>1114</TypeId>
+    </column>
+    <index id="294" parent="267" name="Maker_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>71445</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>4630</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+      <CollationNames>default</CollationNames>
+      <CollationIds>100</CollationIds>
+      <CollationParentNames>pg_catalog</CollationParentNames>
+    </index>
+    <index id="295" parent="267" name="Maker_slug_key">
+      <ColNames>slug</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>71447</ObjectId>
+      <StateNumber>4631</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+      <CollationNames>default</CollationNames>
+      <CollationIds>100</CollationIds>
+      <CollationParentNames>pg_catalog</CollationParentNames>
+    </index>
+    <key id="296" parent="267" name="Maker_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>71446</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>4630</StateNumber>
+      <UnderlyingIndexId>71445</UnderlyingIndexId>
+    </key>
+    <column id="297" parent="268" name="id">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>4542</StateNumber>
       <StoredType>text|0s</StoredType>
       <TypeId>25</TypeId>
     </column>
-    <column id="286" parent="267" name="title">
+    <column id="298" parent="268" name="title">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>4542</StateNumber>
       <StoredType>jsonb|0s</StoredType>
       <TypeId>3802</TypeId>
     </column>
-    <column id="287" parent="267" name="slug">
+    <column id="299" parent="268" name="slug">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>4542</StateNumber>
       <StoredType>text|0s</StoredType>
       <TypeId>25</TypeId>
     </column>
-    <column id="288" parent="267" name="order">
+    <column id="300" parent="268" name="order">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StateNumber>4542</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <column id="289" parent="267" name="parentId">
+    <column id="301" parent="268" name="parentId">
       <Position>5</Position>
       <StateNumber>4542</StateNumber>
       <StoredType>text|0s</StoredType>
       <TypeId>25</TypeId>
     </column>
-    <column id="290" parent="267" name="createdAt">
+    <column id="302" parent="268" name="createdAt">
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>6</Position>
@@ -5026,14 +5119,14 @@ RESET</Labels>
       <StoredType>timestamp(3)|0s</StoredType>
       <TypeId>1114</TypeId>
     </column>
-    <column id="291" parent="267" name="updatedAt">
+    <column id="303" parent="268" name="updatedAt">
       <NotNull>1</NotNull>
       <Position>7</Position>
       <StateNumber>4542</StateNumber>
       <StoredType>timestamp(3)|0s</StoredType>
       <TypeId>1114</TypeId>
     </column>
-    <index id="292" parent="267" name="MenuItem_pkey">
+    <index id="304" parent="268" name="MenuItem_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>71270</ObjectId>
@@ -5045,7 +5138,7 @@ RESET</Labels>
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <index id="293" parent="267" name="MenuItem_slug_key">
+    <index id="305" parent="268" name="MenuItem_slug_key">
       <ColNames>slug</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>71276</ObjectId>
@@ -5056,35 +5149,35 @@ RESET</Labels>
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="294" parent="267" name="MenuItem_pkey">
+    <key id="306" parent="268" name="MenuItem_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>71271</ObjectId>
       <Primary>1</Primary>
       <StateNumber>4542</StateNumber>
       <UnderlyingIndexId>71270</UnderlyingIndexId>
     </key>
-    <column id="295" parent="268" name="id">
+    <column id="307" parent="269" name="id">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>4541</StateNumber>
       <StoredType>text|0s</StoredType>
       <TypeId>25</TypeId>
     </column>
-    <column id="296" parent="268" name="content">
+    <column id="308" parent="269" name="content">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>4541</StateNumber>
       <StoredType>jsonb|0s</StoredType>
       <TypeId>3802</TypeId>
     </column>
-    <column id="297" parent="268" name="slug">
+    <column id="309" parent="269" name="slug">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>4541</StateNumber>
       <StoredType>text|0s</StoredType>
       <TypeId>25</TypeId>
     </column>
-    <column id="298" parent="268" name="createdAt">
+    <column id="310" parent="269" name="createdAt">
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>4</Position>
@@ -5092,14 +5185,14 @@ RESET</Labels>
       <StoredType>timestamp(3)|0s</StoredType>
       <TypeId>1114</TypeId>
     </column>
-    <column id="299" parent="268" name="updatedAt">
+    <column id="311" parent="269" name="updatedAt">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StateNumber>4541</StateNumber>
       <StoredType>timestamp(3)|0s</StoredType>
       <TypeId>1114</TypeId>
     </column>
-    <index id="300" parent="268" name="Page_pkey">
+    <index id="312" parent="269" name="Page_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>71262</ObjectId>
@@ -5111,7 +5204,7 @@ RESET</Labels>
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <index id="301" parent="268" name="Page_slug_key">
+    <index id="313" parent="269" name="Page_slug_key">
       <ColNames>slug</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>71275</ObjectId>
@@ -5122,21 +5215,21 @@ RESET</Labels>
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="302" parent="268" name="Page_pkey">
+    <key id="314" parent="269" name="Page_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>71263</ObjectId>
       <Primary>1</Primary>
       <StateNumber>4541</StateNumber>
       <UnderlyingIndexId>71262</UnderlyingIndexId>
     </key>
-    <column id="303" parent="269" name="hash">
+    <column id="315" parent="270" name="hash">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>4537</StateNumber>
       <StoredType>text|0s</StoredType>
       <TypeId>25</TypeId>
     </column>
-    <column id="304" parent="269" name="type">
+    <column id="316" parent="270" name="type">
       <DefaultExpression>&apos;ACTIVE&apos;::&quot;PasswordType&quot;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>2</Position>
@@ -5144,14 +5237,14 @@ RESET</Labels>
       <StoredType>&quot;PasswordType&quot;|0s</StoredType>
       <TypeId>71212</TypeId>
     </column>
-    <column id="305" parent="269" name="userId">
+    <column id="317" parent="270" name="userId">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>4537</StateNumber>
       <StoredType>text|0s</StoredType>
       <TypeId>25</TypeId>
     </column>
-    <column id="306" parent="269" name="createdAt">
+    <column id="318" parent="270" name="createdAt">
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>4</Position>
@@ -5159,14 +5252,14 @@ RESET</Labels>
       <StoredType>timestamp(3)|0s</StoredType>
       <TypeId>1114</TypeId>
     </column>
-    <column id="307" parent="269" name="updatedAt">
+    <column id="319" parent="270" name="updatedAt">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StateNumber>4537</StateNumber>
       <StoredType>timestamp(3)|0s</StoredType>
       <TypeId>1114</TypeId>
     </column>
-    <foreign-key id="308" parent="269" name="Password_userId_fkey">
+    <foreign-key id="320" parent="270" name="Password_userId_fkey">
       <ColNames>userId</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>71277</ObjectId>
@@ -5176,7 +5269,7 @@ RESET</Labels>
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>71232</RefTableId>
     </foreign-key>
-    <index id="309" parent="269" name="Password_userId_key">
+    <index id="321" parent="270" name="Password_userId_key">
       <ColNames>userId</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>71273</ObjectId>
@@ -5187,35 +5280,35 @@ RESET</Labels>
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <column id="310" parent="270" name="id">
+    <column id="322" parent="271" name="id">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>4536</StateNumber>
       <StoredType>text|0s</StoredType>
       <TypeId>25</TypeId>
     </column>
-    <column id="311" parent="270" name="email">
+    <column id="323" parent="271" name="email">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>4536</StateNumber>
       <StoredType>text|0s</StoredType>
       <TypeId>25</TypeId>
     </column>
-    <column id="312" parent="270" name="token">
+    <column id="324" parent="271" name="token">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>4536</StateNumber>
       <StoredType>text|0s</StoredType>
       <TypeId>25</TypeId>
     </column>
-    <column id="313" parent="270" name="expiresAt">
+    <column id="325" parent="271" name="expiresAt">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StateNumber>4536</StateNumber>
       <StoredType>timestamp(3)|0s</StoredType>
       <TypeId>1114</TypeId>
     </column>
-    <column id="314" parent="270" name="createdAt">
+    <column id="326" parent="271" name="createdAt">
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>5</Position>
@@ -5223,7 +5316,7 @@ RESET</Labels>
       <StoredType>timestamp(3)|0s</StoredType>
       <TypeId>1114</TypeId>
     </column>
-    <index id="315" parent="270" name="PasswordReset_pkey">
+    <index id="327" parent="271" name="PasswordReset_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>71223</ObjectId>
@@ -5235,7 +5328,7 @@ RESET</Labels>
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <index id="316" parent="270" name="PasswordReset_token_key">
+    <index id="328" parent="271" name="PasswordReset_token_key">
       <ColNames>token</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>71272</ObjectId>
@@ -5246,49 +5339,49 @@ RESET</Labels>
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="317" parent="270" name="PasswordReset_pkey">
+    <key id="329" parent="271" name="PasswordReset_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>71224</ObjectId>
       <Primary>1</Primary>
       <StateNumber>4536</StateNumber>
       <UnderlyingIndexId>71223</UnderlyingIndexId>
     </key>
-    <column id="318" parent="271" name="id">
+    <column id="330" parent="272" name="id">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>4539</StateNumber>
       <StoredType>text|0s</StoredType>
       <TypeId>25</TypeId>
     </column>
-    <column id="319" parent="271" name="title">
+    <column id="331" parent="272" name="title">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>4539</StateNumber>
       <StoredType>jsonb|0s</StoredType>
       <TypeId>3802</TypeId>
     </column>
-    <column id="320" parent="271" name="description">
+    <column id="332" parent="272" name="description">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>4539</StateNumber>
       <StoredType>jsonb|0s</StoredType>
       <TypeId>3802</TypeId>
     </column>
-    <column id="321" parent="271" name="summary">
+    <column id="333" parent="272" name="summary">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StateNumber>4539</StateNumber>
       <StoredType>jsonb|0s</StoredType>
       <TypeId>3802</TypeId>
     </column>
-    <column id="322" parent="271" name="slug">
+    <column id="334" parent="272" name="slug">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StateNumber>4539</StateNumber>
       <StoredType>text|0s</StoredType>
       <TypeId>25</TypeId>
     </column>
-    <column id="323" parent="271" name="createdAt">
+    <column id="335" parent="272" name="createdAt">
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>6</Position>
@@ -5296,14 +5389,14 @@ RESET</Labels>
       <StoredType>timestamp(3)|0s</StoredType>
       <TypeId>1114</TypeId>
     </column>
-    <column id="324" parent="271" name="updatedAt">
+    <column id="336" parent="272" name="updatedAt">
       <NotNull>1</NotNull>
       <Position>7</Position>
       <StateNumber>4539</StateNumber>
       <StoredType>timestamp(3)|0s</StoredType>
       <TypeId>1114</TypeId>
     </column>
-    <index id="325" parent="271" name="Project_pkey">
+    <index id="337" parent="272" name="Project_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>71246</ObjectId>
@@ -5315,35 +5408,35 @@ RESET</Labels>
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="326" parent="271" name="Project_pkey">
+    <key id="338" parent="272" name="Project_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>71247</ObjectId>
       <Primary>1</Primary>
       <StateNumber>4539</StateNumber>
       <UnderlyingIndexId>71246</UnderlyingIndexId>
     </key>
-    <column id="327" parent="272" name="id">
+    <column id="339" parent="273" name="id">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>4538</StateNumber>
       <StoredType>text|0s</StoredType>
       <TypeId>25</TypeId>
     </column>
-    <column id="328" parent="272" name="email">
+    <column id="340" parent="273" name="email">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>4538</StateNumber>
       <StoredType>text|0s</StoredType>
       <TypeId>25</TypeId>
     </column>
-    <column id="329" parent="272" name="name">
+    <column id="341" parent="273" name="name">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>4538</StateNumber>
       <StoredType>text|0s</StoredType>
       <TypeId>25</TypeId>
     </column>
-    <column id="330" parent="272" name="createdAt">
+    <column id="342" parent="273" name="createdAt">
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>4</Position>
@@ -5351,14 +5444,14 @@ RESET</Labels>
       <StoredType>timestamp(3)|0s</StoredType>
       <TypeId>1114</TypeId>
     </column>
-    <column id="331" parent="272" name="updatedAt">
+    <column id="343" parent="273" name="updatedAt">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StateNumber>4538</StateNumber>
       <StoredType>timestamp(3)|0s</StoredType>
       <TypeId>1114</TypeId>
     </column>
-    <index id="332" parent="272" name="User_pkey">
+    <index id="344" parent="273" name="User_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>71238</ObjectId>
@@ -5370,7 +5463,7 @@ RESET</Labels>
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <index id="333" parent="272" name="User_email_key">
+    <index id="345" parent="273" name="User_email_key">
       <ColNames>email</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>71274</ObjectId>
@@ -5381,7 +5474,7 @@ RESET</Labels>
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="334" parent="272" name="User_pkey">
+    <key id="346" parent="273" name="User_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>71239</ObjectId>
       <Primary>1</Primary>

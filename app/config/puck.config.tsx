@@ -22,6 +22,10 @@ import {
   BackgroundBlock,
   BackgroundBlockProps,
 } from '~/config/blocks/BackgroundBlock';
+import {
+  MakersOverviewBlock,
+  MakersOverviewBlockProps,
+} from '~/config/blocks/MakersOverviewBlock';
 
 export type Props = {
   HeadingBlock: HeadingBlockProps;
@@ -31,6 +35,7 @@ export type Props = {
   IllustrationBlock: IllustrationBlockProps;
   UpcomingEventsBlock: UpcomingEventsBlockProps;
   BackgroundBlock: BackgroundBlockProps;
+  MakersOverviewBlock: MakersOverviewBlockProps;
 };
 
 export type RootProps = {
@@ -63,6 +68,7 @@ export const config: Config<Props, RootProps> = {
         'ButtonBlock',
         'IllustrationBlock',
         'UpcomingEventsBlock',
+        'MakersOverviewBlock',
         'BackgroundBlock',
       ],
     },
@@ -74,6 +80,7 @@ export const config: Config<Props, RootProps> = {
     GridBlock,
     IllustrationBlock,
     UpcomingEventsBlock,
+    MakersOverviewBlock,
     BackgroundBlock,
   },
   root: {

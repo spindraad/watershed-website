@@ -5,14 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a371227e-1556-4281-bf9d-e84dc3a6719d" name="WAT-50 Content summaries" comment="WAT-50 Created Maker summary profile blocks">
+      <change afterPath="$PROJECT_DIR$/.claude/plans/add-makers.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6f310b5d-d6a9-4068-9954-4933694bcfe2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6f310b5d-d6a9-4068-9954-4933694bcfe2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6f310b5d-d6a9-4068-9954-4933694bcfe2/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6f310b5d-d6a9-4068-9954-4933694bcfe2/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/ArtistProfileSummary.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/MakerProfileSummary.stories.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/ArtistProfileSummary.translations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/MakerProfileSummary.translations.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/ArtistProfileSummary.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/MakerProfileSummary.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/ArtistsSummary.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ArtistsSummary.stories.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/ArtistsSummary.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ArtistsSummary.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/locales/en.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/en.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/locales/nl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/nl.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/Icon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Icon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/MakerProfileSummary.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/MakerProfileSummary.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/MakerProfileSummary.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/MakerProfileSummary.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/blocks/UpcomingEventsBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/blocks/UpcomingEventsBlock.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/puck.config.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/puck.config.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/seed/_content.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/seed/_content.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/seed/_pageContent.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/seed/_pageContent.ts" afterDir="false" />
     </list>
     <list id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Added box and line illustrations, and created the hand drawn box component" />
     <list id="beb23f38-d23a-47e7-ba80-27679dd64e74" name="WAT-54 CLI" comment="WAT-54 CLI" />
@@ -180,7 +184,7 @@
     "Vitest.validateLogin.executor": "Run",
     "Vitest.validateLogin.should return success: false when emailaddress is invalid.executor": "Run",
     "Vitest.validateLogin.should return success: false when emailaddress is missing.executor": "Run",
-    "git-widget-placeholder": "feature/WAT-50__Content-summaries",
+    "git-widget-placeholder": "release/WAT-49__Homepage",
     "javascript.nodejs.core.library.configured.version": "24.11.0",
     "javascript.nodejs.core.library.typings.version": "24.10.9",
     "last_opened_file_path": "/Users/lody/dev/projects/watershed-website/app/routes/_index",
@@ -219,16 +223,16 @@
     "timeTracker.isPaused": "false",
     "timeTracker.isPostAfterCommitEnabled": "false",
     "timeTracker.isPostedScheduled": "true",
-    "timeTracker.isRunning": "false",
+    "timeTracker.isRunning": "true",
     "timeTracker.isScheduledEnabled": "false",
     "timeTracker.isWhenProjectClosedEnabled": "false",
     "timeTracker.issueId": "WAT-50",
     "timeTracker.issueIdReadable": "WAT-50",
-    "timeTracker.pausedTime": "0",
+    "timeTracker.pausedTime": "1",
     "timeTracker.query": "",
-    "timeTracker.recordedTime": "90",
+    "timeTracker.recordedTime": "0",
     "timeTracker.scheduledPeriod": "19:00:0",
-    "timeTracker.startTime": "36666207",
+    "timeTracker.startTime": "38800057",
     "timeTracker.timeInMills": "0",
     "timeTracker.type": "Development",
     "ts.external.directory.path": "/Users/lody/dev/projects/watershed-website/node_modules/typescript/lib",
@@ -780,7 +784,7 @@
       <option name="number" value="50" />
       <option name="presentableId" value="WAT-50" />
       <option name="project" value="WAT" />
-      <updated>1769888939370</updated>
+      <updated>1769889406780</updated>
       <workItem from="1760341706290" duration="17131000" />
       <workItem from="1760359568103" />
       <workItem from="1760434553239" duration="6105000" />

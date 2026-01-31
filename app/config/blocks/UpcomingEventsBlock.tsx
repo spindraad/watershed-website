@@ -74,6 +74,7 @@ function ClientOnlyEventsBlockComponent({
 async function _fetchEvents({ queryKey }: { queryKey: QueryKey }) {
   const [, maxEvents] = queryKey;
   const response = await fetch(
+    // TODO: Replace with environment variable or relative path
     `http://localhost:5173/api/events?max=${maxEvents ?? 5}`,
   );
   if (!response.ok) {

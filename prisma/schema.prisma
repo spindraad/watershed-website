@@ -123,3 +123,21 @@ model MenuItem {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
+
+model Maker {
+  id String @id @default(cuid())
+
+  name String
+
+  /// [Localised]
+  profession Json
+
+  /// [Localised]
+  summary Json
+
+  slug     String  @unique
+  imageUrl String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

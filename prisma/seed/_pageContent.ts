@@ -10,33 +10,8 @@ export const home: SeedContent = {
   en: {
     root: {
       props: {
-        title: 'Welcome to our website',
-        titleIsHidden: false,
-        summary: 'The homepage of the website',
-        slug: 'home',
-        meta: {
-          title: 'Home | Stichting Watershed',
-          description: 'Welcome to Stichting Watershed',
-        },
-      },
-    },
-    zones: {},
-    content: [
-      {
-        type: 'RichTextBlock',
-        props: {
-          id: 'RichText-c8a0073a-9d67-4b30-8f31-281a76dedaa3',
-          content:
-            '<p>This is the home page with some example content. We are dedicated to providing the best service for our customers.</p>',
-        },
-      },
-    ],
-  },
-  nl: {
-    root: {
-      props: {
-        title: 'Welkom op onze website',
-        titleIsHidden: false,
+        title: 'Hoofdpagina',
+        titleIsHidden: true,
         summary: 'De hoofdpagina van de website',
         slug: 'home',
         meta: {
@@ -45,14 +20,67 @@ export const home: SeedContent = {
         },
       },
     },
-    zones: {},
     content: [
       {
         type: 'RichTextBlock',
         props: {
-          id: 'RichText-c8a0073a-9d67-4b30-8f31-281a76dedaa3',
+          id: 'RichTextBlock-1e26219b-ab6f-4eb8-8190-411079bf5f3f',
           content:
-            '<p>Dit is de startpagina met voorbeeldinhoud. Wij zijn toegewijd aan het bieden van de beste service voor onze klanten.</p>',
+            '<p style="text-align: center;"><em>Pfffkrrt— ... plop! ...&nbsp;</em><br><em>schhhhhh ...</em><br><br><em>Ja? Hallo?</em></p><p style="text-align: center;"><em>Staat dit ding aan?</em></p><p style="text-align: center;"><em>ss</em></p>',
+        },
+      },
+      {
+        type: 'BackgroundBlock',
+        props: {
+          id: 'BackgroundBlock-a9b9303e-ca1b-4c71-b524-16a6016d78e9',
+          color: 'pink',
+          content: [
+            {
+              type: 'UpcomingEventsBlock',
+              props: {
+                id: 'UpcomingEventsBlock-c43602a2-74b6-47c8-a9c3-431f18cfd99a',
+              },
+            },
+          ],
+        },
+      },
+    ],
+  },
+  nl: {
+    root: {
+      props: {
+        title: 'Hoofdpagina',
+        titleIsHidden: true,
+        summary: 'De hoofdpagina van de website',
+        slug: 'home',
+        meta: {
+          title: 'Hoofdpagina | Stichting Watershed',
+          description: 'Welkom bij Stichting Watershed',
+        },
+      },
+    },
+    content: [
+      {
+        type: 'RichTextBlock',
+        props: {
+          id: 'RichTextBlock-1e26219b-ab6f-4eb8-8190-411079bf5f3f',
+          content:
+            '<p style="text-align: center;"><em>Pfffkrrt— ... plop! ...&nbsp;</em><br><em>schhhhhh ...</em><br><br><em>Ja? Hallo?</em></p><p style="text-align: center;"><em>Staat dit ding aan?</em></p><p style="text-align: center;"><em>ss</em></p>',
+        },
+      },
+      {
+        type: 'BackgroundBlock',
+        props: {
+          id: 'BackgroundBlock-a9b9303e-ca1b-4c71-b524-16a6016d78e9',
+          color: 'pink',
+          content: [
+            {
+              type: 'UpcomingEventsBlock',
+              props: {
+                id: 'UpcomingEventsBlock-c43602a2-74b6-47c8-a9c3-431f18cfd99a',
+              },
+            },
+          ],
         },
       },
     ],
@@ -60,24 +88,38 @@ export const home: SeedContent = {
   pap: {
     root: {
       props: {
-        title: 'Welcome na nos website',
-        titleIsHidden: false,
-        summary: 'Homepage di nos website',
+        title: 'Hoofdpagina',
+        titleIsHidden: true,
+        summary: 'De hoofdpagina van de website',
         slug: 'home',
         meta: {
-          title: 'Home | Stichting Watershed',
-          description: 'Welcome na Stichting Watershed',
+          title: 'Hoofdpagina | Stichting Watershed',
+          description: 'Welkom bij Stichting Watershed',
         },
       },
     },
-    zones: {},
     content: [
       {
         type: 'RichTextBlock',
         props: {
-          id: 'RichText-c8a0073a-9d67-4b30-8f31-281a76dedaa3',
+          id: 'RichTextBlock-1e26219b-ab6f-4eb8-8190-411079bf5f3f',
           content:
-            '<p>Esaki ta e pagina di inicio ku algun kontenido di ejemplo. Nos ta dediká pa ofresé e mejor servisio pa nos kliente.</p>',
+            '<p style="text-align: center;"><em>Pfffkrrt— ... plop! ...&nbsp;</em><br><em>schhhhhh ...</em><br><br><em>Ja? Hallo?</em></p><p style="text-align: center;"><em>Staat dit ding aan?</em></p><p style="text-align: center;"><em>ss</em></p>',
+        },
+      },
+      {
+        type: 'BackgroundBlock',
+        props: {
+          id: 'BackgroundBlock-a9b9303e-ca1b-4c71-b524-16a6016d78e9',
+          color: 'pink',
+          content: [
+            {
+              type: 'UpcomingEventsBlock',
+              props: {
+                id: 'UpcomingEventsBlock-c43602a2-74b6-47c8-a9c3-431f18cfd99a',
+              },
+            },
+          ],
         },
       },
     ],
@@ -98,7 +140,6 @@ export const about: SeedContent = {
         },
       },
     },
-    zones: {},
     content: [
       {
         type: 'RichTextBlock',
@@ -140,7 +181,6 @@ export const about: SeedContent = {
         },
       },
     },
-    zones: {},
     content: [
       {
         type: 'RichTextBlock',
@@ -182,7 +222,6 @@ export const about: SeedContent = {
         },
       },
     },
-    zones: {},
     content: [
       {
         type: 'HeadingBlock',
@@ -219,7 +258,6 @@ export const contact: SeedContent = {
         },
       },
     },
-    zones: {},
     content: [
       {
         type: 'RichTextBlock',
@@ -244,7 +282,6 @@ export const contact: SeedContent = {
         },
       },
     },
-    zones: {},
     content: [
       {
         type: 'RichTextBlock',
@@ -269,7 +306,6 @@ export const contact: SeedContent = {
         },
       },
     },
-    zones: {},
     content: [
       {
         type: 'HeadingBlock',
