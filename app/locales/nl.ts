@@ -32,6 +32,8 @@ import { nl as MenuEditorTranslations } from '~/components/MenuEditor.translatio
 export const { MenuEditor } = MenuEditorTranslations;
 import { nl as UpcomingEventsTranslations } from '~/components/UpcomingEvents.translations';
 export const { UpcomingEvents } = UpcomingEventsTranslations;
+import { nl as MakerOverviewTranslations } from '~/components/MakersOverview.translations';
+export const { MakersOverview } = MakerOverviewTranslations;
 
 export const common = {
   title: 'Hallo Wereld!',
