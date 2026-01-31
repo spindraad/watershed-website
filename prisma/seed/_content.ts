@@ -2,6 +2,7 @@ import { PrismaClient, Project } from '@prisma/client';
 import { fakerEN, fakerNL, fakerEO } from '@faker-js/faker';
 import { home, contact, about } from './_pageContent';
 import { events, uploadImagesIfNeeded } from './_events';
+import { createMakers, uploadMakerImagesIfNeeded } from './_makerContent';
 
 const createProjects = (client: PrismaClient) => {
   const projects = Array.from({ length: 10 }).map<
@@ -122,6 +123,10 @@ export async function createContent(client: PrismaClient) {
   const events = createEvents(client);
   const pages = createPages(client);
   const menuItems = createNavigationMenu(client);
+  const makers = Promise.all([
+    createMakers(client),
+    uploadMakerImagesIfNeeded(),
+  ]);
 
-  return Promise.all([projects, events, pages, menuItems]);
+  return Promise.all([projects, events, pages, menuItems, makers]);
 }

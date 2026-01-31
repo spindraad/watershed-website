@@ -46,7 +46,7 @@ export default function MakerProfileSummary({
     <Link to={slug} className="flex flex-col gap-6">
       <HandDrawnBox drawStyle="solid" classes="bg-white">
         <img
-          className="aspect-square w-full h-full object-contain"
+          className="aspect-square w-full h-full object-cover"
           src={imageUrl}
           alt={name}
         />

@@ -3,7 +3,7 @@ import { faker } from '@faker-js/faker';
 import MakerProfileSummary from 'app/components/MakerProfileSummary';
 
 export default {
-  title: 'Organisms/Artist Profile Summary',
+  title: 'Organisms/Maker Profile Summary',
   component: MakerProfileSummary,
   tags: ['components', 'artists', 'makers'],
   parameters: {

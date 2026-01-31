@@ -1,5 +1,5 @@
 type Props = {
-  name: 'heading-arrow';
+  name: 'heading-arrow' | 'left-caret' | 'right-caret';
 };
 
 export default function Icon({ name }: Props) {
