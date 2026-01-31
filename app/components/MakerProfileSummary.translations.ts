@@ -1,19 +1,19 @@
 export const en = {
-  ArtistProfileSummary: {
+  MakerProfileSummary: {
     Title: '',
     LinkButton: 'More',
   },
 };
 
 export const nl = {
-  ArtistProfileSummary: {
+  MakerProfileSummary: {
     Title: '',
     LinkButton: 'Meer',
   },
 };
 
 export const pap = {
-  ArtistProfileSummary: {
+  MakerProfileSummary: {
     Title: '',
     LinkButton: 'More',
   },
