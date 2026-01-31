@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a371227e-1556-4281-bf9d-e84dc3a6719d" name="WAT-50 Content summaries" comment="Refactor root props structure and add migration support for title visibility">
+    <list default="true" id="a371227e-1556-4281-bf9d-e84dc3a6719d" name="WAT-50 Content summaries" comment="Ran lint">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/PageEditor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PageEditor.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/migrations/root-props.ts" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/migrations/root-props.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/ArtistProfileSummary.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ArtistProfileSummary.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/ArtistProfileSummary.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ArtistProfileSummary.tsx" afterDir="false" />
     </list>
     <list id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Added box and line illustrations, and created the hand drawn box component" />
     <list id="beb23f38-d23a-47e7-ba80-27679dd64e74" name="WAT-54 CLI" comment="WAT-54 CLI" />
@@ -62,24 +62,24 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="feature/WAT-153_content_summaries_for_homepage" />
-                    <option name="lastUsedInstant" value="1760957971" />
+                    <option name="branchName" value="feature/WAT-50_Content-summaries" />
+                    <option name="lastUsedInstant" value="1769882303" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="release/WAT-49_Homepage" />
+                    <option name="lastUsedInstant" value="1769882262" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="dev" />
+                    <option name="lastUsedInstant" value="1769871699" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="feature/WAT-54-Create-CLI" />
                     <option name="lastUsedInstant" value="1760451925" />
                   </RecentBranch>
                   <RecentBranch>
-                    <option name="branchName" value="dev" />
-                    <option name="lastUsedInstant" value="1760451842" />
-                  </RecentBranch>
-                  <RecentBranch>
                     <option name="branchName" value="main" />
                     <option name="lastUsedInstant" value="1760451806" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="feature/wsh-43-nieuws" />
-                    <option name="lastUsedInstant" value="1732628545" />
                   </RecentBranch>
                 </list>
               </option>
@@ -147,99 +147,99 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Attach to Node.js/Chrome.Debug in Chrome.executor&quot;: &quot;Debug&quot;,
-    &quot;JavaScript Debug.Debug in Chrome.executor&quot;: &quot;Debug&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Node.js.run-puck-migration.js.executor&quot;: &quot;Debug&quot;,
-    &quot;Node.js.run-puck-migration.ts.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.OpenDatabaseViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;Vitest.All Tests.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.Content utilities.Parse a localised form data object into a localised value object.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.Content utilities.Retrieve the number of errors for each localised field.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.Content utilities.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.Validating page requests.executor&quot;: &quot;Debug&quot;,
-    &quot;Vitest.Validating the page.executor&quot;: &quot;Debug&quot;,
-    &quot;Vitest.convertDateToLocaleString.converts a date to a human readable format with shortened weekday.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.convertDateToLocaleString.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.parseURL.Return the correct url for \&quot;/over-ons/team\&quot;.executor&quot;: &quot;Debug&quot;,
-    &quot;Vitest.parseURL.Return the correct urls for \&quot;/contact\&quot;.executor&quot;: &quot;Debug&quot;,
-    &quot;Vitest.validateLogin.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.validateLogin.should return success: false when emailaddress is invalid.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.validateLogin.should return success: false when emailaddress is missing.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/WAT-153__content__summaries__for__homepage&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;24.11.0&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;24.10.9&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/lody/dev/projects/watershed-website/app/routes/_index&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.Dev.executor&quot;: &quot;Debug&quot;,
-    &quot;npm.Develop.executor&quot;: &quot;Run&quot;,
-    &quot;npm.Storybook.executor&quot;: &quot;Debug&quot;,
-    &quot;npm.db:generate.executor&quot;: &quot;Run&quot;,
-    &quot;npm.db:push.executor&quot;: &quot;Run&quot;,
-    &quot;npm.db:push:reset:seed.executor&quot;: &quot;Run&quot;,
-    &quot;npm.db:push:seed.executor&quot;: &quot;Run&quot;,
-    &quot;npm.dev:app.executor&quot;: &quot;Debug&quot;,
-    &quot;npm.dev:remix.executor&quot;: &quot;Debug&quot;,
-    &quot;npm.dev:storybook.executor&quot;: &quot;Debug&quot;,
-    &quot;npm.docker:start.executor&quot;: &quot;Run&quot;,
-    &quot;npm.migrate-puck-data -- --input tmp/db-dumps/pre-title-obj-migration.json --output tmp/db-migrations/post-title-obj-migration.json.executor&quot;: &quot;Debug&quot;,
-    &quot;npm.migrate-puck-data --input tmp/db-dumps/pre-title-obj-migration.json --output tmp/db-migrations/post-title-obj-migration.json.executor&quot;: &quot;Debug&quot;,
-    &quot;npm.typecheck.executor&quot;: &quot;Run&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/lody/dev/projects/watershed-website/node_modules/prettier&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;tasks.servers&quot;,
-    &quot;tasks.open.task.update.state.enabled&quot;: &quot;true&quot;,
-    &quot;timeTracker.activityTracker&quot;: &quot;null&quot;,
-    &quot;timeTracker.comment&quot;: &quot;&quot;,
-    &quot;timeTracker.inactivityPeriodInMills&quot;: &quot;600000&quot;,
-    &quot;timeTracker.isAutoTrackingEnable&quot;: &quot;false&quot;,
-    &quot;timeTracker.isAutoTrackingTemporaryDisabled&quot;: &quot;false&quot;,
-    &quot;timeTracker.isManualTrackingEnable&quot;: &quot;true&quot;,
-    &quot;timeTracker.isPaused&quot;: &quot;false&quot;,
-    &quot;timeTracker.isPostAfterCommitEnabled&quot;: &quot;false&quot;,
-    &quot;timeTracker.isPostedScheduled&quot;: &quot;true&quot;,
-    &quot;timeTracker.isRunning&quot;: &quot;false&quot;,
-    &quot;timeTracker.isScheduledEnabled&quot;: &quot;false&quot;,
-    &quot;timeTracker.isWhenProjectClosedEnabled&quot;: &quot;false&quot;,
-    &quot;timeTracker.issueId&quot;: &quot;WAT-50&quot;,
-    &quot;timeTracker.issueIdReadable&quot;: &quot;WAT-50&quot;,
-    &quot;timeTracker.pausedTime&quot;: &quot;0&quot;,
-    &quot;timeTracker.query&quot;: &quot;&quot;,
-    &quot;timeTracker.recordedTime&quot;: &quot;0&quot;,
-    &quot;timeTracker.scheduledPeriod&quot;: &quot;19:00:0&quot;,
-    &quot;timeTracker.startTime&quot;: &quot;1760434586916&quot;,
-    &quot;timeTracker.timeInMills&quot;: &quot;0&quot;,
-    &quot;timeTracker.type&quot;: &quot;Development&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/lody/dev/projects/watershed-website/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Attach to Node.js/Chrome.Debug in Chrome.executor": "Debug",
+    "JavaScript Debug.Debug in Chrome.executor": "Debug",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Node.js.run-puck-migration.js.executor": "Debug",
+    "Node.js.run-puck-migration.ts.executor": "Debug",
+    "RunOnceActivity.OpenDatabaseViewOnStart": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Vitest.All Tests.executor": "Run",
+    "Vitest.Content utilities.Parse a localised form data object into a localised value object.executor": "Run",
+    "Vitest.Content utilities.Retrieve the number of errors for each localised field.executor": "Run",
+    "Vitest.Content utilities.executor": "Run",
+    "Vitest.Validating page requests.executor": "Debug",
+    "Vitest.Validating the page.executor": "Debug",
+    "Vitest.convertDateToLocaleString.converts a date to a human readable format with shortened weekday.executor": "Run",
+    "Vitest.convertDateToLocaleString.executor": "Run",
+    "Vitest.parseURL.Return the correct url for \"/over-ons/team\".executor": "Debug",
+    "Vitest.parseURL.Return the correct urls for \"/contact\".executor": "Debug",
+    "Vitest.validateLogin.executor": "Run",
+    "Vitest.validateLogin.should return success: false when emailaddress is invalid.executor": "Run",
+    "Vitest.validateLogin.should return success: false when emailaddress is missing.executor": "Run",
+    "git-widget-placeholder": "feature/WAT-50__Content-summaries",
+    "javascript.nodejs.core.library.configured.version": "24.11.0",
+    "javascript.nodejs.core.library.typings.version": "24.10.9",
+    "last_opened_file_path": "/Users/lody/dev/projects/watershed-website/app/routes/_index",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "npm",
+    "npm.Dev.executor": "Debug",
+    "npm.Develop.executor": "Run",
+    "npm.Storybook.executor": "Debug",
+    "npm.db:generate.executor": "Run",
+    "npm.db:push.executor": "Run",
+    "npm.db:push:reset:seed.executor": "Run",
+    "npm.db:push:seed.executor": "Run",
+    "npm.dev:app.executor": "Debug",
+    "npm.dev:remix.executor": "Debug",
+    "npm.dev:storybook.executor": "Debug",
+    "npm.docker:start.executor": "Run",
+    "npm.migrate-puck-data -- --input tmp/db-dumps/pre-title-obj-migration.json --output tmp/db-migrations/post-title-obj-migration.json.executor": "Debug",
+    "npm.migrate-puck-data --input tmp/db-dumps/pre-title-obj-migration.json --output tmp/db-migrations/post-title-obj-migration.json.executor": "Debug",
+    "npm.typecheck.executor": "Run",
+    "prettierjs.PrettierConfiguration.Package": "/Users/lody/dev/projects/watershed-website/node_modules/prettier",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "tasks.servers",
+    "tasks.open.task.update.state.enabled": "true",
+    "timeTracker.activityTracker": "null",
+    "timeTracker.comment": "",
+    "timeTracker.inactivityPeriodInMills": "600000",
+    "timeTracker.isAutoTrackingEnable": "false",
+    "timeTracker.isAutoTrackingTemporaryDisabled": "false",
+    "timeTracker.isManualTrackingEnable": "true",
+    "timeTracker.isPaused": "false",
+    "timeTracker.isPostAfterCommitEnabled": "false",
+    "timeTracker.isPostedScheduled": "true",
+    "timeTracker.isRunning": "true",
+    "timeTracker.isScheduledEnabled": "false",
+    "timeTracker.isWhenProjectClosedEnabled": "false",
+    "timeTracker.issueId": "WAT-50",
+    "timeTracker.issueIdReadable": "WAT-50",
+    "timeTracker.pausedTime": "1283226",
+    "timeTracker.query": "",
+    "timeTracker.recordedTime": "23",
+    "timeTracker.scheduledPeriod": "19:00:0",
+    "timeTracker.startTime": "29979710",
+    "timeTracker.timeInMills": "1417594",
+    "timeTracker.type": "Development",
+    "ts.external.directory.path": "/Users/lody/dev/projects/watershed-website/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ],
-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
-      &quot;JSON&quot;,
-      &quot;CSS&quot;,
-      &quot;Markdown&quot;,
-      &quot;TEXT&quot;
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "JSON",
+      "CSS",
+      "Markdown",
+      "TEXT"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/routes/_index" />
@@ -540,22 +540,6 @@
       <workItem from="1757113103308" duration="35000" />
       <workItem from="1760341367186" duration="338000" />
     </task>
-    <task id="LOCAL-00126" summary="Rearranged all the components in Storybook. They are now categorised according to Atomic Design, and have been tagged.">
-      <option name="closed" value="true" />
-      <created>1744358709945</created>
-      <option name="number" value="00126" />
-      <option name="presentableId" value="LOCAL-00126" />
-      <option name="project" value="LOCAL" />
-      <updated>1744358709945</updated>
-    </task>
-    <task id="LOCAL-00127" summary="The slug can now also be set in Puck">
-      <option name="closed" value="true" />
-      <created>1744362418411</created>
-      <option name="number" value="00127" />
-      <option name="presentableId" value="LOCAL-00127" />
-      <option name="project" value="LOCAL" />
-      <updated>1744362418411</updated>
-    </task>
     <task id="LOCAL-00128" summary="DB diff script is runnable from npm and fixed the wrong port check method.">
       <option name="closed" value="true" />
       <created>1744362859461</created>
@@ -790,7 +774,7 @@
       <option name="number" value="50" />
       <option name="presentableId" value="WAT-50" />
       <option name="project" value="WAT" />
-      <updated>1769859122939</updated>
+      <updated>1769881004040</updated>
       <workItem from="1760341706290" duration="17131000" />
       <workItem from="1760359568103" />
       <workItem from="1760434553239" duration="6105000" />
@@ -955,7 +939,24 @@
       <option name="project" value="LOCAL" />
       <updated>1769859086888</updated>
     </task>
-    <option name="localTasksCounter" value="173" />
+    <task id="LOCAL-00173" summary="Fixed lint errors and returned editor header in Puck overrides so that we could have our functionality back">
+      <option name="closed" value="true" />
+      <created>1769868657244</created>
+      <option name="number" value="00173" />
+      <option name="presentableId" value="LOCAL-00173" />
+      <option name="project" value="LOCAL" />
+      <updated>1769868657244</updated>
+    </task>
+    <task id="LOCAL-00174" summary="Ran lint">
+      <option name="closed" value="true" />
+      <created>1769869685736</created>
+      <option name="number" value="00174" />
+      <option name="presentableId" value="LOCAL-00174" />
+      <option name="project" value="LOCAL" />
+      <updated>1769869685736</updated>
+    </task>
+    <option name="localTasksCounter" value="175" />
+    <option name="commitChanges" value="false" />
     <servers>
       <YouTrack url="https://youtrack.spindraad.dev">
         <option name="defaultSearch" value="Board Watershed Sprint Board: {Current sprint}" />
@@ -995,31 +996,32 @@
     </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="HEAD" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="dev" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="We now have a very rudimentary draggable menu editor interface" />
-    <MESSAGE value="MenuEditor now works as component that can be previewed." />
     <MESSAGE value="We now have a basic workflow for editing the menu" />
     <MESSAGE value="Swapped navigation menu out for the actual header (in demo mode), which also meant we can load the dynamic header on the site itself. Also swapped orientation on the manage menu page" />
     <MESSAGE value="Extracted save action and implemented it on the page level, just like Cancel." />
@@ -1043,7 +1045,9 @@
     <MESSAGE value="Updated Puck to 0.21 and refactored all imports and usePuck calls" />
     <MESSAGE value="Started refactoring the rich text editor component by dropping tinymce and picking Puck's own shipped editor" />
     <MESSAGE value="Refactor root props structure and add migration support for title visibility" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor root props structure and add migration support for title visibility" />
+    <MESSAGE value="Fixed lint errors and returned editor header in Puck overrides so that we could have our functionality back" />
+    <MESSAGE value="Ran lint" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ran lint" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
