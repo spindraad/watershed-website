@@ -4,10 +4,8 @@ import { nl as ProjectSummaryTranslations } from '~/components/ProjectSummary.tr
 export const { ProjectSummary } = ProjectSummaryTranslations;
 import { nl as EventSummaryTranslations } from '~/components/EventSummary.translations';
 export const { EventSummary } = EventSummaryTranslations;
-import { nl as ArtistProfileSummaryTranslations } from '~/components/ArtistProfileSummary.translations';
-export const { ArtistProfileSummary } = ArtistProfileSummaryTranslations;
-import { nl as ArtistsSummaryTranslations } from '~/components/ArtistsSummary.translations';
-export const { ArtistsSummary } = ArtistsSummaryTranslations;
+import { nl as MakerProfileSummaryTranslations } from '~/components/MakerProfileSummary.translations';
+export const { MakerProfileSummary } = MakerProfileSummaryTranslations;
 import { nl as ProductSummaryTranslations } from '~/components/ProductSummary.translations';
 export const { ProductSummary } = ProductSummaryTranslations;
 import { nl as AccountMenuTranslations } from '~/routes/($lang)/account/AccountMenu.translations';

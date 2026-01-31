@@ -31,14 +31,14 @@ export type Props = {
   slug: string;
 };
 
-export default function ArtistProfileSummary({
+export default function MakerProfileSummary({
   imageUrl,
   name,
   profession,
   summary,
   slug,
 }: Props) {
-  const { i18n } = useTranslation('ArtistProfileSummary');
+  const { i18n } = useTranslation('MakerProfileSummary');
 
   const locale = i18n.language as SupportedLanguages;
 
