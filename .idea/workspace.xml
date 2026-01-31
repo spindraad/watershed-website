@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a371227e-1556-4281-bf9d-e84dc3a6719d" name="WAT-50 Content summaries" comment="WAT-50 Created components for the maker overview, as well as new database models and an endpoint">
-      <change afterPath="$PROJECT_DIR$/public/iconen/heart.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/iconen/left-caret-color-filled.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/iconen/right-caret-color-filled.svg" afterDir="false" />
+    <list default="true" id="a371227e-1556-4281-bf9d-e84dc3a6719d" name="WAT-50 Content summaries" comment="WAT-50 Made the header, subtitle and title border more like the design, and started bringing the buttons more into the design as well">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/Icon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Icon.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/MakersOverview.translations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/MakersOverview.translations.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/components/MakersOverview.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/MakersOverview.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/locales/en.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/en.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/locales/nl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/nl.ts" afterDir="false" />
     </list>
     <list id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Added box and line illustrations, and created the hand drawn box component" />
     <list id="beb23f38-d23a-47e7-ba80-27679dd64e74" name="WAT-54 CLI" comment="WAT-54 CLI" />
@@ -781,7 +774,7 @@
       <option name="number" value="50" />
       <option name="presentableId" value="WAT-50" />
       <option name="project" value="WAT" />
-      <updated>1769895624863</updated>
+      <updated>1769898291758</updated>
       <workItem from="1760341706290" duration="17131000" />
       <workItem from="1760359568103" />
       <workItem from="1760434553239" duration="6105000" />
@@ -1029,7 +1022,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Extracted save action and implemented it on the page level, just like Cancel." />
     <MESSAGE value="Semantically fixed db migrations workflow" />
     <MESSAGE value="Smaller changes and improvements so that we can work with illustrations in Puck" />
     <MESSAGE value="Event model is amended with organiser and image fields which are seeded and shown in UI." />
@@ -1054,7 +1046,8 @@
     <MESSAGE value="Ran lint" />
     <MESSAGE value="WAT-50 Created Maker summary profile blocks" />
     <MESSAGE value="WAT-50 Created components for the maker overview, as well as new database models and an endpoint" />
-    <option name="LAST_COMMIT_MESSAGE" value="WAT-50 Created components for the maker overview, as well as new database models and an endpoint" />
+    <MESSAGE value="WAT-50 Made the header, subtitle and title border more like the design, and started bringing the buttons more into the design as well" />
+    <option name="LAST_COMMIT_MESSAGE" value="WAT-50 Made the header, subtitle and title border more like the design, and started bringing the buttons more into the design as well" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, useState, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import Heading from '~/components/Heading';
 import Icon from '~/components/Icon';
@@ -17,8 +17,13 @@ type Props = {
 
 export default function MakersOverview({ makers }: Props) {
   const { t, i18n } = useTranslation('MakersOverview');
-  const scrollContainerRef = useRef<HTMLUListElement>(null);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
   const locale = i18n.language as SupportedLanguages;
+
+  // Drag state
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
 
   const scroll = (direction: 'left' | 'right') => {
     if (!scrollContainerRef.current) return;
@@ -29,58 +34,119 @@ export default function MakersOverview({ makers }: Props) {
     });
   };
 
+  const handleMouseDown = useCallback((e: React.MouseEvent) => {
+    if (!scrollContainerRef.current) return;
+    setIsDragging(true);
+    setStartX(e.pageX - scrollContainerRef.current.offsetLeft);
+    setScrollLeft(scrollContainerRef.current.scrollLeft);
+  }, []);
+
+  const handleMouseMove = useCallback(
+    (e: React.MouseEvent) => {
+      if (!isDragging || !scrollContainerRef.current) return;
+      e.preventDefault();
+      const x = e.pageX - scrollContainerRef.current.offsetLeft;
+      const walk = (x - startX) * 1.5;
+      scrollContainerRef.current.scrollLeft = scrollLeft - walk;
+    },
+    [isDragging, startX, scrollLeft],
+  );
+
+  const handleMouseUp = useCallback(() => {
+    setIsDragging(false);
+  }, []);
+
+  const handleTouchStart = useCallback((e: React.TouchEvent) => {
+    if (!scrollContainerRef.current) return;
+    setIsDragging(true);
+    setStartX(e.touches[0].pageX - scrollContainerRef.current.offsetLeft);
+    setScrollLeft(scrollContainerRef.current.scrollLeft);
+  }, []);
+
+  const handleTouchMove = useCallback(
+    (e: React.TouchEvent) => {
+      if (!isDragging || !scrollContainerRef.current) return;
+      const x = e.touches[0].pageX - scrollContainerRef.current.offsetLeft;
+      const walk = (x - startX) * 1.5;
+      scrollContainerRef.current.scrollLeft = scrollLeft - walk;
+    },
+    [isDragging, startX, scrollLeft],
+  );
+
+  const handleTouchEnd = useCallback(() => {
+    setIsDragging(false);
+  }, []);
+
   return (
     <div className="@container relative">
-      <div className="flex flex-row justify-between items-center">
-        <div className="flex flex-col gap-1">
-          <div className="flex flex-row gap-2 items-center relative">
-            <Heading level={3}>{t('heading')}</Heading>
-            <Icon name="heart" />
-          </div>
-
-          <WigglyLine />
-
-          <p>Waarmee we samenwerken en die we tof vinden</p>
+      <div className="flex flex-col gap-1">
+        <div className="flex flex-row gap-2 items-center relative">
+          <Heading level={3}>{t('heading')}</Heading>
+          <Icon name="heart" />
         </div>
 
-        <div className="flex gap-2">
-          <button
-            onClick={() => scroll('left')}
-            className="p-2 rounded-full hover:bg-gray-100 transition-colors"
-            aria-label={t('scrollLeft')}
-          >
-            <Icon name="left-caret-color-filled" />
-          </button>
-          <button
-            onClick={() => scroll('right')}
-            className="p-2 rounded-full hover:bg-gray-100 transition-colors"
-            aria-label={t('scrollRight')}
-          >
-            <Icon name="right-caret-color-filled" />
-          </button>
-        </div>
+        <WigglyLine />
+
+        <p>Waarmee we samenwerken en die we tof vinden</p>
       </div>
 
-      <ul
-        ref={scrollContainerRef}
-        className="flex flex-row gap-8 mt-8 overflow-x-auto scrollbar-hide pb-4"
-      >
-        {makers.map((maker) => (
-          <li key={maker.id} className="w-48 flex-shrink-0">
-            <MakerProfileSummary
-              imageUrl={
-                maker.imageUrl ?
-                  `/afbeelding/${maker.imageUrl}`
-                : '/illustraties/placeholder-profile.png'
-              }
-              name={maker.name}
-              profession={maker.profession[locale]}
-              summary={maker.summary}
-              slug={`/makers/${maker.slug}`}
-            />
-          </li>
-        ))}
-      </ul>
+      <div className="relative mt-8">
+        {/* Left navigation button */}
+        <button
+          onClick={() => scroll('left')}
+          className="absolute left-0 top-1/2 -translate-y-1/2 z-10 p-2"
+          aria-label={t('scrollLeft')}
+        >
+          <Icon name="left-caret-color-filled" />
+        </button>
+
+        {/* Scrollable container wrapper for drag handling */}
+        {/* eslint-disable-next-line jsx-a11y/no-static-element-interactions */}
+        <div
+          ref={scrollContainerRef}
+          className={`overflow-x-auto scrollbar-hide ${
+            isDragging ? 'cursor-grabbing select-none' : 'cursor-grab'
+          }`}
+          onMouseDown={handleMouseDown}
+          onMouseMove={handleMouseMove}
+          onMouseUp={handleMouseUp}
+          onMouseLeave={handleMouseUp}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+        >
+          <ul className="flex flex-row gap-8 pb-4 px-16">
+            {makers.map((maker) => (
+              <li
+                key={maker.id}
+                className="w-48 flex-shrink-0"
+                style={{ pointerEvents: isDragging ? 'none' : 'auto' }}
+              >
+                <MakerProfileSummary
+                  imageUrl={
+                    maker.imageUrl ?
+                      `/afbeelding/${maker.imageUrl}`
+                    : '/illustraties/placeholder-profile.png'
+                  }
+                  name={maker.name}
+                  profession={maker.profession[locale]}
+                  summary={maker.summary}
+                  slug={`/makers/${maker.slug}`}
+                />
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Right navigation button */}
+        <button
+          onClick={() => scroll('right')}
+          className="absolute right-0 top-1/2 -translate-y-1/2 z-10 p-2"
+          aria-label={t('scrollRight')}
+        >
+          <Icon name="right-caret-color-filled" />
+        </button>
+      </div>
     </div>
   );
 }
@@ -88,7 +154,7 @@ export default function MakersOverview({ makers }: Props) {
 function WigglyLine() {
   return (
     <svg
-      className="w-2/4"
+      className="w-1/5"
       viewBox="0 0 114 6"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
