@@ -63,42 +63,13 @@ export default function PageEditor({
 
   return (
     <Puck
-      overrides={overrides}
+      // overrides={overrides}
       config={config}
       data={data}
       onPublish={onPublish}
       plugins={[headingAnalyzer]}
     >
-      <div className="w-full h-full flex flex-col gap-4 px-4">
-        <SlDrawer
-          open={leftDrawerOpen}
-          placement="start"
-          onSlAfterHide={() => setLeftDrawerOpen(false)}
-          label="Componenten"
-        >
-          <Puck.Components />
-        </SlDrawer>
 
-        <EditorHeader
-          onPublish={onPublish}
-          handleDrawerOpen={handleDrawerOpen}
-          isSaving={isSaving}
-          title={title}
-        />
-
-        <SlDrawer
-          open={rightDrawerOpen}
-          placement="end"
-          onSlAfterHide={() => setRightDrawerOpen(false)}
-          label="Velden"
-        >
-          <Puck.Fields />
-          <h2 className="mt-4 mb-2 font-bold">Structuur</h2>
-          <Puck.Outline />
-        </SlDrawer>
-
-        <Puck.Preview />
-      </div>
     </Puck>
   );
 }

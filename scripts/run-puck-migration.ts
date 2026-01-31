@@ -1,8 +1,9 @@
 import fs from 'fs/promises';
-import type { Data } from '@puckeditor/core';
+import type { Data, Config } from '@puckeditor/core';
 import { migrate } from '@puckeditor/core';
 import { program } from 'commander';
 import { config, type Props, type RootProps } from '../app/config/puck.config';
+import { migrateRootProps } from './migrations/root-props';
 
 program
   .requiredOption('-i, --input <path>', 'Path to the database dump file')
@@ -12,10 +13,17 @@ program.parse(process.argv);
 
 const options = program.opts();
 
+type PuckConfig = Config<Props, RootProps>;
 type PuckData = Data<Props, RootProps>;
+type LocalisedPageData = {
+  en: PuckData;
+  nl: PuckData;
+  pap: PuckData;
+};
+
 type Page = {
   id: string;
-  content: PuckData['content'];
+  content: LocalisedPageData;
   slug: string;
   createdAt: string;
   updatedAt: string;
@@ -43,13 +51,28 @@ async function migrateData(pages: Page[]) {
   const migratedData: Page[] = pages.map((page) => {
     // Pages are localized in en, nl, and pap
     // So we need to migrate each localization separately
-    const localizedContents: Record<string, PuckData['content']> = {};
+    const localizedContents: LocalisedPageData = {
+      en: {} as PuckData,
+      nl: {} as PuckData,
+      pap: {} as PuckData,
+    };
+
     for (const [locale, content] of Object.entries(page.content)) {
-      localizedContents[locale] = migrate(content, config);
+      // First run Puck's structural migration
+      const structurallyMigrated = migrate<PuckConfig>(content, config);
+
+      // Then run our custom root prop migrations
+      localizedContents[locale as keyof LocalisedPageData] = {
+        ...structurallyMigrated,
+        root: {
+          ...structurallyMigrated.root,
+          props: migrateRootProps(structurallyMigrated.root.props || {}),
+        },
+      };
     }
     return {
       ...page,
-      contents: localizedContents,
+      content: localizedContents,
     };
   });
 

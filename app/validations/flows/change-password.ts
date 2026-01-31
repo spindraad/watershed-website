@@ -21,14 +21,12 @@ interface ChangePasswordBaseResponse {
   success: boolean;
 }
 
-export interface ChangePasswordErrorResponse
-  extends ChangePasswordBaseResponse {
+export interface ChangePasswordErrorResponse extends ChangePasswordBaseResponse {
   success: false;
   errors: ValidationErrors;
 }
 
-export interface ChangePasswordSuccessResponse
-  extends ChangePasswordBaseResponse {
+export interface ChangePasswordSuccessResponse extends ChangePasswordBaseResponse {
   success: true;
   data: ValidationResult;
 }

@@ -1,4 +1,4 @@
-import type { Config, Data } from '@puckeditor/core';
+import { Config, Data } from '@puckeditor/core';
 import {
   HeadingBlock,
   Props as HeadingBlockProps,
@@ -34,10 +34,8 @@ export type Props = {
 };
 
 export type RootProps = {
-  title: {
-    text: string;
-    hidden: boolean;
-  };
+  title: string;
+  titleIsHidden: boolean;
   summary: string;
   slug: string;
   meta: {
@@ -81,22 +79,16 @@ export const config: Config<Props, RootProps> = {
   root: {
     fields: {
       title: {
-        type: 'object',
         label: 'Pagina titel',
-        objectFields: {
-          text: {
-            label: 'Titel',
-            type: 'text',
-          },
-          hidden: {
-            label: 'Verberg titel op pagina',
-            type: 'radio',
-            options: [
-              { label: 'Ja', value: true },
-              { label: 'Nee', value: false },
-            ],
-          },
-        },
+        type: 'text',
+      },
+      titleIsHidden: {
+        label: 'Verberg titel op pagina',
+        type: 'radio',
+        options: [
+          { label: 'Ja', value: true },
+          { label: 'Nee', value: false },
+        ],
       },
       summary: {
         label: 'Pagina omschrijving',
@@ -122,7 +114,8 @@ export const config: Config<Props, RootProps> = {
       },
     },
     defaultProps: {
-      title: { text: 'Nieuwe pagina', hidden: false },
+      title: 'Nieuwe pagina',
+      titleIsHidden: false,
       summary: '',
       slug: '',
       meta: {
@@ -130,12 +123,10 @@ export const config: Config<Props, RootProps> = {
         description: '',
       },
     },
-    render({ children, title }) {
+    render({ children, title, titleIsHidden }) {
       return (
         <div className="flex flex-col gap-4">
-          {!title.hidden && title.text ?
-            <Heading level={1}>{title.text}</Heading>
-          : null}
+          {!titleIsHidden && title ? <Heading level={1}>{title}</Heading> : null}
           {children}
         </div>
       );
