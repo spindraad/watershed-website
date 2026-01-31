@@ -9,8 +9,16 @@ export const MIGRATION_V1_TITLE_FLATTEN: RootPropMigration = {
   description: 'Flatten title object to title + titleIsHidden',
   migrate: (props) => {
     // Handle old format: title as object
-    const titleObj = props.title as { text: string; hidden?: boolean } | undefined;
-    if (typeof titleObj === 'object' && titleObj !== null && 'text' in titleObj) {
+    const titleObj = props.title as
+      | { text: string; hidden?: boolean }
+      | undefined;
+    if (
+      typeof titleObj === 'object' &&
+      titleObj !== null &&
+      'text' in titleObj
+    ) {
+      // `title` is being extracted from the props, so it is not included in `rest`
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       const { title, ...rest } = props;
       return {
         ...rest,
