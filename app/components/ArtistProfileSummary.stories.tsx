@@ -5,7 +5,19 @@ import ArtistProfileSummary from './ArtistProfileSummary';
 export default {
   title: 'Organisms/Artist Profile Summary',
   component: ArtistProfileSummary,
-  tags: ['components', 'artists'],
+  tags: ['components', 'artists', 'makers'],
+  parameters: {
+    backgrounds: { default: 'Surface' },
+  },
+  decorators(Story) {
+    return (
+      <div className="w-full h-screen bg-surface">
+        <div className="max-w-xs mx-auto">
+          <Story />
+        </div>
+      </div>
+    );
+  },
 } satisfies Meta<typeof ArtistProfileSummary>;
 
 type Story = StoryObj<typeof ArtistProfileSummary>;
