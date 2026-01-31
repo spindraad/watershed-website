@@ -38,42 +38,51 @@ npm run generate:form       # Generate new form with validation
 ## Architecture
 
 ### Routing
+
 - Uses `remix-flat-routes` for file-based routing in `app/routes/`
 - Routes are locale-aware: `app/routes/($lang)/` pattern for i18n
 - React Router v7 with SSR enabled
 
 ### Server-Only Code
+
 - `app/.server/` contains server-only modules (db, session, mail, file uploads)
 - Uses `vite-env-only` for client/server code separation
 
 ### Page Editor (Puck)
+
 - Visual page builder configuration: `app/config/puck.config.tsx`
 - Block components: `app/config/blocks/`
 - Page content stored as JSON in database (`Page.content`)
 - When updating Puck: run `npm run migrate-puck-data` for data migrations
 
 ### Internationalization
+
 - Three locales: `nl` (Dutch), `en` (English), `pap` (Papiamento)
 - Locale files: `app/locales/{nl,en,pap}.ts`
 - Uses `react-i18next` and `remix-i18next`
 - Components have co-located translation files: `ComponentName.translations.ts`
 
 ### Component Structure
+
 Components follow a pattern with three files:
+
 - `ComponentName.tsx` - Component implementation
 - `ComponentName.stories.tsx` - Storybook stories
 - `ComponentName.translations.ts` - i18n translations (exports `en`, `nl`, `pap`)
 
 ### Validation
+
 - Zod schemas in `app/validations/flows/` for form validation
 - Each validation exports types: `ValidationResult`, `ValidationErrors`, response types
 
 ### Database
+
 - PostgreSQL with Prisma ORM
 - Schema: `prisma/schema.prisma`
 - Localised fields use `/// [Localised]` or `/// [LocalisedContent]` JSDoc comments with `prisma-json-types-generator`
 
 ### UI Components
+
 - Shoelace web components (via `@shoelace-style/shoelace`)
 - Tailwind CSS for styling
 - Atomic Design organization in Storybook: Atoms, Molecules, Organisms, Templates
