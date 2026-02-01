@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="732c60cb-adf5-4039-874c-caf0139ad2ee" name="WAT-132 Add content blocks" comment="WAT-132 Added illustration for zinnen van baerwaldt for the homepage">
-      <change afterPath="$PROJECT_DIR$/public/illustraties/waar-ik-het-nog-over-wil-hebben.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/blocks/BackgroundBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/blocks/BackgroundBlock.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/blocks/IllustrationBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/blocks/IllustrationBlock.tsx" afterDir="false" />
+    <list default="true" id="732c60cb-adf5-4039-874c-caf0139ad2ee" name="WAT-132 Add content blocks" comment="WAT-132 Added last bits of content blocks on the homepage">
+      <change beforePath="$PROJECT_DIR$/prisma/seed/_pageContent.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/seed/_pageContent.ts" afterDir="false" />
     </list>
     <list id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Added box and line illustrations, and created the hand drawn box component" />
     <list id="beb23f38-d23a-47e7-ba80-27679dd64e74" name="WAT-54 CLI" comment="WAT-54 CLI" />
@@ -965,7 +962,7 @@
       <option name="number" value="132" />
       <option name="presentableId" value="WAT-132" />
       <option name="project" value="WAT" />
-      <updated>1769953835479</updated>
+      <updated>1769976065911</updated>
       <workItem from="1769951878891" />
     </task>
     <option name="localTasksCounter" value="175" />
@@ -1035,7 +1032,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <confirmRemoveEmptyChangelist value="2" />
-    <MESSAGE value="Improved the upcoming events" />
     <MESSAGE value="Installed and configured the container query plugin for Tailwind" />
     <MESSAGE value="Some layout improvements to the upcoming events block" />
     <MESSAGE value="Created a Puck block of the upcoming events component, which also needed React Query, an api endpoint and a loader" />
@@ -1060,7 +1056,8 @@
     <MESSAGE value="WAT-51 Added prisma generator script for lint" />
     <MESSAGE value="WAT-132 Added and improved the upcoming events block to the homepage" />
     <MESSAGE value="WAT-132 Added illustration for zinnen van baerwaldt for the homepage" />
-    <option name="LAST_COMMIT_MESSAGE" value="WAT-132 Added illustration for zinnen van baerwaldt for the homepage" />
+    <MESSAGE value="WAT-132 Added last bits of content blocks on the homepage" />
+    <option name="LAST_COMMIT_MESSAGE" value="WAT-132 Added last bits of content blocks on the homepage" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
