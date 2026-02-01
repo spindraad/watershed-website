@@ -27,6 +27,7 @@ import {
   MakersOverviewBlockProps,
 } from '~/config/blocks/MakersOverviewBlock';
 import { LogoBlock, LogoBlockProps } from '~/config/blocks/LogoBlock';
+import { BorderBlock, BorderBlockProps } from '~/config/blocks/BorderBlock';
 
 export type Props = {
   HeadingBlock: HeadingBlockProps;
@@ -38,6 +39,7 @@ export type Props = {
   BackgroundBlock: BackgroundBlockProps;
   MakersOverviewBlock: MakersOverviewBlockProps;
   LogoBlock: LogoBlockProps;
+  BorderBlock: BorderBlockProps;
 };
 
 export type RootProps = {
@@ -73,6 +75,7 @@ export const config: Config<Props, RootProps> = {
         'MakersOverviewBlock',
         'BackgroundBlock',
         'LogoBlock',
+        'BorderBlock',
       ],
     },
   },
@@ -86,6 +89,7 @@ export const config: Config<Props, RootProps> = {
     MakersOverviewBlock,
     BackgroundBlock,
     LogoBlock,
+    BorderBlock,
   },
   root: {
     fields: {
