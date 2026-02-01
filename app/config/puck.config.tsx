@@ -28,6 +28,7 @@ import {
 } from '~/config/blocks/MakersOverviewBlock';
 import { LogoBlock, LogoBlockProps } from '~/config/blocks/LogoBlock';
 import { BorderBlock, BorderBlockProps } from '~/config/blocks/BorderBlock';
+import { SpacingBlock, SpacingBlockProps } from '~/config/blocks/SpacingBlock';
 
 export type Props = {
   HeadingBlock: HeadingBlockProps;
@@ -40,6 +41,7 @@ export type Props = {
   MakersOverviewBlock: MakersOverviewBlockProps;
   LogoBlock: LogoBlockProps;
   BorderBlock: BorderBlockProps;
+  SpacingBlock: SpacingBlockProps;
 };
 
 export type RootProps = {
@@ -64,7 +66,7 @@ export const config: Config<Props, RootProps> = {
     },
     layout: {
       title: 'Layout',
-      components: ['GridBlock'],
+      components: ['GridBlock', 'SpacingBlock'],
     },
     ui: {
       title: 'UI',
@@ -90,6 +92,7 @@ export const config: Config<Props, RootProps> = {
     BackgroundBlock,
     LogoBlock,
     BorderBlock,
+    SpacingBlock,
   },
   root: {
     fields: {

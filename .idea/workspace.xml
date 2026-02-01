@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="57e39b81-61ca-4880-af67-57ab36e69afb" name="WAT-51 Create header block" comment="WAT-51 Added extra options for text size and alignment">
-      <change afterPath="$PROJECT_DIR$/public/illustraties/radio-stille-willie.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/illustraties/zigzag-line-vertical.svg" afterDir="false" />
+    <list default="true" id="57e39b81-61ca-4880-af67-57ab36e69afb" name="WAT-51 Create header block" comment="WAT-51 Implemented more of the figma design in the homepage">
+      <change afterPath="$PROJECT_DIR$/app/config/blocks/SpacingBlock.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/blocks/IllustrationBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/blocks/IllustrationBlock.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/config/puck.config.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/puck.config.tsx" afterDir="false" />
     </list>
     <list id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Added box and line illustrations, and created the hand drawn box component" />
@@ -961,7 +959,7 @@
       <option name="number" value="51" />
       <option name="presentableId" value="WAT-51" />
       <option name="project" value="WAT" />
-      <updated>1769943469233</updated>
+      <updated>1769949237354</updated>
       <workItem from="1769900913449" />
     </task>
     <option name="localTasksCounter" value="175" />
@@ -1032,7 +1030,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <confirmRemoveEmptyChangelist value="2" />
-    <MESSAGE value="Opened project in a new editor with lots of catching up from PHPStorm. Also configured Storybook with more devices and a proxy" />
     <MESSAGE value="Updated Heading component with extra props, and improved the italic uppercase logic" />
     <MESSAGE value="Some Storybook/docs improvements" />
     <MESSAGE value="Added props to the hand drawn box component" />
@@ -1057,7 +1054,8 @@
     <MESSAGE value="WAT-51 Started filling the rest of the page" />
     <MESSAGE value="WAT-51 Added some styling functionality to the logo block component" />
     <MESSAGE value="WAT-51 Added extra options for text size and alignment" />
-    <option name="LAST_COMMIT_MESSAGE" value="WAT-51 Added extra options for text size and alignment" />
+    <MESSAGE value="WAT-51 Implemented more of the figma design in the homepage" />
+    <option name="LAST_COMMIT_MESSAGE" value="WAT-51 Implemented more of the figma design in the homepage" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
