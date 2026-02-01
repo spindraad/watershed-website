@@ -13,6 +13,7 @@ const illustrations = {
   'Schreeuw (geanimeerd)': 'mouth-screaming-optimized.gif',
   Kip: 'kip.png',
   'Radio Stille Willie': 'radio-stille-willie.svg',
+  'De Zinnen Van Baerwaldt': 'de-zinnen-van-baerwaldt.svg',
 } as const;
 
 // Extract the keys as a union type
