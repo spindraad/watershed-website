@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a371227e-1556-4281-bf9d-e84dc3a6719d" name="WAT-50 Content summaries" comment="WAT-50 Made the header, subtitle and title border more like the design, and started bringing the buttons more into the design as well">
+    <list default="true" id="57e39b81-61ca-4880-af67-57ab36e69afb" name="WAT-51 Create header block" comment="">
+      <change afterPath="$PROJECT_DIR$/app/config/blocks/LogoBlock.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/MakersOverview.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/MakersOverview.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/blocks/IllustrationBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/blocks/IllustrationBlock.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/puck.config.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/puck.config.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/illustraties/logo met hak.jpg" beforeDir="false" />
     </list>
     <list id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Added box and line illustrations, and created the hand drawn box component" />
     <list id="beb23f38-d23a-47e7-ba80-27679dd64e74" name="WAT-54 CLI" comment="WAT-54 CLI" />
@@ -26,7 +29,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feature/WAT-153_content_summaries_for_homepage" />
+        <entry key="$PROJECT_DIR$" value="release/WAT-49_Homepage" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -61,8 +64,8 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="feature/WAT-50_Content-summaries" />
-                    <option name="lastUsedInstant" value="1769882303" />
+                    <option name="branchName" value="wat-51" />
+                    <option name="lastUsedInstant" value="1769900913" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="release/WAT-49_Homepage" />
@@ -174,7 +177,7 @@
     "Vitest.validateLogin.executor": "Run",
     "Vitest.validateLogin.should return success: false when emailaddress is invalid.executor": "Run",
     "Vitest.validateLogin.should return success: false when emailaddress is missing.executor": "Run",
-    "git-widget-placeholder": "release/WAT-49__Homepage",
+    "git-widget-placeholder": "wat-51",
     "javascript.nodejs.core.library.configured.version": "24.11.0",
     "javascript.nodejs.core.library.typings.version": "24.10.9",
     "last_opened_file_path": "/Users/lody/dev/projects/watershed-website/app/routes/_index",
@@ -203,6 +206,7 @@
     "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "tasks.servers",
     "spentTimePerTaskStorage.store": "{}",
+    "tasks.close.task.update.state.enabled": "true",
     "tasks.open.task.update.state.enabled": "true",
     "timeTracker.activityTracker": "null",
     "timeTracker.comment": "",
@@ -210,20 +214,20 @@
     "timeTracker.isAutoTrackingEnable": "false",
     "timeTracker.isAutoTrackingTemporaryDisabled": "false",
     "timeTracker.isManualTrackingEnable": "true",
-    "timeTracker.isPaused": "false",
+    "timeTracker.isPaused": "true",
     "timeTracker.isPostAfterCommitEnabled": "false",
     "timeTracker.isPostedScheduled": "true",
     "timeTracker.isRunning": "true",
     "timeTracker.isScheduledEnabled": "false",
     "timeTracker.isWhenProjectClosedEnabled": "false",
-    "timeTracker.issueId": "WAT-50",
-    "timeTracker.issueIdReadable": "WAT-50",
+    "timeTracker.issueId": "WAT-51",
+    "timeTracker.issueIdReadable": "WAT-51",
     "timeTracker.pausedTime": "1",
     "timeTracker.query": "",
-    "timeTracker.recordedTime": "0",
+    "timeTracker.recordedTime": "87",
     "timeTracker.scheduledPeriod": "19:00:0",
-    "timeTracker.startTime": "38800057",
-    "timeTracker.timeInMills": "0",
+    "timeTracker.startTime": "48620782",
+    "timeTracker.timeInMills": "5236090",
     "timeTracker.type": "Development",
     "ts.external.directory.path": "/Users/lody/dev/projects/watershed-website/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
@@ -540,14 +544,6 @@
       <workItem from="1757113103308" duration="35000" />
       <workItem from="1760341367186" duration="338000" />
     </task>
-    <task id="LOCAL-00128" summary="DB diff script is runnable from npm and fixed the wrong port check method.">
-      <option name="closed" value="true" />
-      <created>1744362859461</created>
-      <option name="number" value="00128" />
-      <option name="presentableId" value="LOCAL-00128" />
-      <option name="project" value="LOCAL" />
-      <updated>1744362859461</updated>
-    </task>
     <task id="LOCAL-00129" summary="Ran prisma migrate to updated db to new schema">
       <option name="closed" value="true" />
       <created>1744363054265</created>
@@ -766,7 +762,7 @@
     </task>
     <task active="true" id="WAT-50" summary="Content summaries">
       <branch name="feature/WAT-153_content_summaries_for_homepage" repository="$PROJECT_DIR$" />
-      <changelist id="a371227e-1556-4281-bf9d-e84dc3a6719d" name="WAT-50 Content summaries" comment="" />
+      <changelist id="" name="WAT-50 Content summaries" comment="" />
       <created>1760305693143</created>
       <option name="issue" value="true" />
       <url>https://youtrack.spindraad.dev/issue/WAT-50</url>
@@ -774,7 +770,7 @@
       <option name="number" value="50" />
       <option name="presentableId" value="WAT-50" />
       <option name="project" value="WAT" />
-      <updated>1769898291758</updated>
+      <updated>1769898921142</updated>
       <workItem from="1760341706290" duration="17131000" />
       <workItem from="1760359568103" />
       <workItem from="1760434553239" duration="6105000" />
@@ -955,6 +951,19 @@
       <option name="project" value="LOCAL" />
       <updated>1769869685736</updated>
     </task>
+    <task active="true" id="WAT-51" summary="Create header block">
+      <branch name="release/WAT-49_Homepage" repository="$PROJECT_DIR$" original="true" />
+      <branch name="wat-51" repository="$PROJECT_DIR$" />
+      <changelist id="57e39b81-61ca-4880-af67-57ab36e69afb" name="WAT-51 Create header block" comment="" />
+      <created>1760305697378</created>
+      <option name="issue" value="true" />
+      <url>https://youtrack.spindraad.dev/issue/WAT-51</url>
+      <option name="number" value="51" />
+      <option name="presentableId" value="WAT-51" />
+      <option name="project" value="WAT" />
+      <updated>1769900912967</updated>
+      <workItem from="1769900913449" />
+    </task>
     <option name="localTasksCounter" value="175" />
     <option name="commitChanges" value="false" />
     <servers>
@@ -1022,7 +1031,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Semantically fixed db migrations workflow" />
+    <confirmRemoveEmptyChangelist value="2" />
     <MESSAGE value="Smaller changes and improvements so that we can work with illustrations in Puck" />
     <MESSAGE value="Event model is amended with organiser and image fields which are seeded and shown in UI." />
     <MESSAGE value="Added box and line illustrations, and created the hand drawn box component" />
@@ -1047,7 +1056,8 @@
     <MESSAGE value="WAT-50 Created Maker summary profile blocks" />
     <MESSAGE value="WAT-50 Created components for the maker overview, as well as new database models and an endpoint" />
     <MESSAGE value="WAT-50 Made the header, subtitle and title border more like the design, and started bringing the buttons more into the design as well" />
-    <option name="LAST_COMMIT_MESSAGE" value="WAT-50 Made the header, subtitle and title border more like the design, and started bringing the buttons more into the design as well" />
+    <MESSAGE value="WAT-50 Implemented a scroll container and placed the scroll buttons at the side of the component" />
+    <option name="LAST_COMMIT_MESSAGE" value="WAT-50 Implemented a scroll container and placed the scroll buttons at the side of the component" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

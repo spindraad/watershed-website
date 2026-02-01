@@ -10,6 +10,7 @@ const illustrations = {
   'Potlood door hart': 'potlood door hart.png',
   'Vogel met potlood en nest': 'vogel met potlood en nest.png',
   Schreeuw: 'schreeuw.png',
+  Kip: 'kip.png',
 } as const;
 
 // Extract the keys as a union type
