@@ -7,10 +7,6 @@ import Loader from '~/components/Loader';
 
 export type UpcomingEventsBlockProps = {
   maxEvents?: number;
-  alignment: {
-    horizontal: 'left' | 'center' | 'right';
-    vertical: 'top' | 'center' | 'bottom';
-  };
 };
 
 export const UpcomingEventsBlock: ComponentConfig<UpcomingEventsBlockProps> = {
@@ -20,37 +16,9 @@ export const UpcomingEventsBlock: ComponentConfig<UpcomingEventsBlockProps> = {
       label: 'Maximale aantal evenementen',
       type: 'number',
     },
-    alignment: {
-      label: 'Uitlijning',
-      type: 'object',
-      objectFields: {
-        horizontal: {
-          label: 'Horizontaal',
-          type: 'select',
-          options: [
-            { label: 'Links', value: 'left' },
-            { label: 'Midden', value: 'center' },
-            { label: 'Rechts', value: 'right' },
-          ],
-        },
-        vertical: {
-          label: 'Verticaal',
-          type: 'select',
-          options: [
-            { label: 'Boven', value: 'top' },
-            { label: 'Midden', value: 'center' },
-            { label: 'Onder', value: 'bottom' },
-          ],
-        },
-      },
-    },
   },
   defaultProps: {
     maxEvents: 5,
-    alignment: {
-      horizontal: 'center',
-      vertical: 'top',
-    },
   },
   render: (props) => {
     return <UpcomingEventsBlockComponent {...props} />;
@@ -83,7 +51,6 @@ const ClientOnlyUpcomingEvents = lazy(() =>
 
 function ClientOnlyEventsBlockComponent({
   maxEvents,
-  alignment,
 }: UpcomingEventsBlockProps) {
   const {
     data: events,
@@ -104,22 +71,8 @@ function ClientOnlyEventsBlockComponent({
     return <div>Error: {(error as Error).message}</div>;
   }
 
-  const alignmentMap: Record<string, string> = {
-    left: 'flex-start',
-    center: 'center',
-    right: 'flex-end',
-    top: 'flex-start',
-    bottom: 'flex-end',
-  };
-
   return (
-    <div
-      className="w-full h-full flex"
-      style={{
-        justifyContent: alignmentMap[alignment.horizontal],
-        alignItems: alignmentMap[alignment.vertical],
-      }}
-    >
+    <div className="h-full mx-auto w-[50rem]">
       <UpcomingEvents events={events} />
     </div>
   );

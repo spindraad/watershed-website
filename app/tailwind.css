@@ -315,7 +315,8 @@
 }
 
 @layer components {
-  .content {
+  .content,
+  .puck-root-component > div {
     --gap: clamp(1rem, 6vw, 3rem);
     --full: minmax(var(--gap), 1fr);
     --content: min(80ch, 100% - var(--gap) * 2);
@@ -333,16 +334,20 @@
       var(--full) [full-end];
   }
 
-  .content > * {
+  .content > *,
+  .puck-root-component > div > * {
     grid-column: content;
   }
-  .popout {
+  .popout,
+  .puck-root-component > div > .popout {
     grid-column: popout;
   }
-  .feature {
+  .feature,
+  .puck-root-component > div > .feature {
     grid-column: feature;
   }
-  .full {
+  .full,
+  .puck-root-component > div > .full {
     grid-column: full;
   }
 
