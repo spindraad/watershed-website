@@ -68,7 +68,11 @@ function ClientOnlyMakersBlockComponent({
     return <div>Error: {(error as Error).message}</div>;
   }
 
-  return <MakersOverview makers={makers} />;
+  return (
+    <div className="not-prose">
+      <MakersOverview makers={makers} />
+    </div>
+  );
 }
 
 async function _fetchMakers({ queryKey }: { queryKey: QueryKey }) {

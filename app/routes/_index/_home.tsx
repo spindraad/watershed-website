@@ -55,7 +55,7 @@ export default function PageRoute() {
           __html: `body { background-color: ${getColorHex(backgroundColor)} !important; }`,
         }}
       />
-      <div className="content">
+      <div>
         <PageRenderer data={data} />
       </div>
     </>

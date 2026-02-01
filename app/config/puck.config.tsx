@@ -147,7 +147,7 @@ export const config: Config<Props, RootProps> = {
     },
     render({ children, title, titleIsHidden }) {
       return (
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 puck-root-component">
           {!titleIsHidden && title ?
             <Heading level={1}>{title}</Heading>
           : null}
