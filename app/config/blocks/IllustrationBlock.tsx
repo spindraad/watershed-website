@@ -1,5 +1,6 @@
 import { CSSProperties } from 'react';
 import { ComponentConfig } from '@puckeditor/core';
+import { Link } from 'react-router';
 
 const illustrations = {
   'Figuur met popbeker': 'figuur met popbeker kopie.png',
@@ -28,6 +29,18 @@ const objectFitOptions = {
 
 type ObjectFitOption = keyof typeof objectFitOptions;
 
+const alignmentMap = {
+  left: 'flex-start',
+  center: 'center',
+  right: 'flex-end',
+};
+
+const justifyMap = {
+  top: 'flex-start',
+  center: 'center',
+  bottom: 'flex-end',
+};
+
 export type IllustrationBlockProps = {
   illustration?: IllustrationKey;
   image: {
@@ -44,7 +57,10 @@ export type IllustrationBlockProps = {
   wrapper?: {
     width?: string;
     height?: string;
+    alignment?: 'left' | 'center' | 'right';
+    justify?: 'top' | 'center' | 'bottom';
   };
+  link?: string;
 };
 
 export const IllustrationBlock: ComponentConfig<IllustrationBlockProps> = {
@@ -112,7 +128,29 @@ export const IllustrationBlock: ComponentConfig<IllustrationBlockProps> = {
           label: 'Hoogte',
           type: 'text',
         },
+        alignment: {
+          label: 'Horizontale uitlijning',
+          type: 'radio',
+          options: [
+            { label: 'Links', value: 'left' },
+            { label: 'Midden', value: 'center' },
+            { label: 'Rechts', value: 'right' },
+          ],
+        },
+        justify: {
+          label: 'Verticale uitlijning',
+          type: 'radio',
+          options: [
+            { label: 'Boven', value: 'top' },
+            { label: 'Midden', value: 'center' },
+            { label: 'Onder', value: 'bottom' },
+          ],
+        },
       },
+    },
+    link: {
+      label: 'Link (optioneel)',
+      type: 'text',
     },
   },
   defaultProps: {
@@ -131,9 +169,11 @@ export const IllustrationBlock: ComponentConfig<IllustrationBlockProps> = {
     wrapper: {
       width: '100%',
       height: 'auto',
+      alignment: 'center',
+      justify: 'center',
     },
   },
-  render: ({ illustration, image, wrapper }) => {
+  render: ({ illustration, image, wrapper, link }) => {
     const imageSrc = illustrations[illustration as IllustrationKey];
     const width = image?.size?.width || '100%';
     const height = image?.size?.height || 'auto';
@@ -143,26 +183,38 @@ export const IllustrationBlock: ComponentConfig<IllustrationBlockProps> = {
     const objectPosition = `${left} ${top}`;
     const wrapperWidth = wrapper?.width || '100%';
     const wrapperHeight = wrapper?.height || 'auto';
+    const alignment = wrapper?.alignment || 'center';
+    const justify = wrapper?.justify || 'center';
+
+    const imageElement = (
+      <img
+        src={`/illustraties/${imageSrc}`}
+        alt={illustration}
+        style={{
+          width,
+          height,
+          objectFit,
+          objectPosition,
+        }}
+      />
+    );
+
+    const content = link ? <Link to={link}>{imageElement}</Link> : imageElement;
 
     return (
       <div
         style={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: alignmentMap[alignment],
+          justifyContent: justifyMap[justify],
           width: wrapperWidth,
           height: wrapperHeight,
           position: 'relative',
           overflow: 'hidden',
         }}
       >
-        <img
-          src={`/illustraties/${imageSrc}`}
-          alt={illustration}
-          style={{
-            width,
-            height,
-            objectFit,
-            objectPosition,
-          }}
-        />
+        {content}
       </div>
     );
   },
