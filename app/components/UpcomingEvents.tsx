@@ -23,7 +23,7 @@ export default function UpcomingEvents({ events }: Props) {
   };
 
   return (
-    <div className="@container relative">
+    <div className="@container relative w-full">
       <div className="flex flex-row justify-between items-center">
         <div className="flex flex-row gap-2 items-center relative">
           <Icon name="heading-arrow" />
