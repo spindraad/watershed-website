@@ -1,22 +1,15 @@
 import { ComponentConfig, Slot } from '@puckeditor/core';
+import { ColorField, colorField, getColorHex } from '~/config/fields/color';
 
 export type BackgroundBlockProps = {
-  color?: 'light-yellow' | 'bright-yellow' | 'pink' | 'dark-pink';
+  color?: ColorField;
   content: Slot;
 };
 
 export const BackgroundBlock: ComponentConfig<BackgroundBlockProps> = {
   label: 'Achtergrond',
   fields: {
-    color: {
-      type: 'select',
-      options: [
-        { label: 'Lichtgeel', value: 'light-yellow' },
-        { label: 'Fel geel', value: 'bright-yellow' },
-        { label: 'Licht roze', value: 'pink' },
-        { label: 'Donker roze', value: 'dark-pink' },
-      ],
-    },
+    color: colorField,
     content: {
       type: 'slot',
     },
@@ -26,23 +19,7 @@ export const BackgroundBlock: ComponentConfig<BackgroundBlockProps> = {
     content: [],
   },
   render({ color, content: Content }) {
-    let backgroundColor;
-    switch (color) {
-      case 'light-yellow':
-        backgroundColor = '#FFF9E5';
-        break;
-      case 'bright-yellow':
-        backgroundColor = '#FFEB3B';
-        break;
-      case 'pink':
-        backgroundColor = '#FFC0CB';
-        break;
-      case 'dark-pink':
-        backgroundColor = '#FF6767';
-        break;
-      default:
-        backgroundColor = '#FFFFFF';
-    }
+    const backgroundColor = color ? getColorHex(color) : '#FFFFFF';
 
     return (
       <div
