@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="57e39b81-61ca-4880-af67-57ab36e69afb" name="WAT-51 Create header block" comment="">
-      <change afterPath="$PROJECT_DIR$/app/config/blocks/LogoBlock.tsx" afterDir="false" />
+    <list default="true" id="57e39b81-61ca-4880-af67-57ab36e69afb" name="WAT-51 Create header block" comment="WAT-51 Started filling the rest of the page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/blocks/IllustrationBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/blocks/IllustrationBlock.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/puck.config.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/puck.config.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/illustraties/logo met hak.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/blocks/LogoBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/blocks/LogoBlock.tsx" afterDir="false" />
     </list>
     <list id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Added box and line illustrations, and created the hand drawn box component" />
     <list id="beb23f38-d23a-47e7-ba80-27679dd64e74" name="WAT-54 CLI" comment="WAT-54 CLI" />
@@ -214,7 +211,7 @@
     "timeTracker.isAutoTrackingEnable": "false",
     "timeTracker.isAutoTrackingTemporaryDisabled": "false",
     "timeTracker.isManualTrackingEnable": "true",
-    "timeTracker.isPaused": "true",
+    "timeTracker.isPaused": "false",
     "timeTracker.isPostAfterCommitEnabled": "false",
     "timeTracker.isPostedScheduled": "true",
     "timeTracker.isRunning": "true",
@@ -224,10 +221,10 @@
     "timeTracker.issueIdReadable": "WAT-51",
     "timeTracker.pausedTime": "1",
     "timeTracker.query": "",
-    "timeTracker.recordedTime": "87",
+    "timeTracker.recordedTime": "0",
     "timeTracker.scheduledPeriod": "19:00:0",
-    "timeTracker.startTime": "48620782",
-    "timeTracker.timeInMills": "5236090",
+    "timeTracker.startTime": "62141418",
+    "timeTracker.timeInMills": "0",
     "timeTracker.type": "Development",
     "ts.external.directory.path": "/Users/lody/dev/projects/watershed-website/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
@@ -961,7 +958,7 @@
       <option name="number" value="51" />
       <option name="presentableId" value="WAT-51" />
       <option name="project" value="WAT" />
-      <updated>1769900912967</updated>
+      <updated>1769908917216</updated>
       <workItem from="1769900913449" />
     </task>
     <option name="localTasksCounter" value="175" />
@@ -1032,7 +1029,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <confirmRemoveEmptyChangelist value="2" />
-    <MESSAGE value="Smaller changes and improvements so that we can work with illustrations in Puck" />
     <MESSAGE value="Event model is amended with organiser and image fields which are seeded and shown in UI." />
     <MESSAGE value="Added box and line illustrations, and created the hand drawn box component" />
     <MESSAGE value="Opened project in a new editor with lots of catching up from PHPStorm. Also configured Storybook with more devices and a proxy" />
@@ -1057,7 +1053,8 @@
     <MESSAGE value="WAT-50 Created components for the maker overview, as well as new database models and an endpoint" />
     <MESSAGE value="WAT-50 Made the header, subtitle and title border more like the design, and started bringing the buttons more into the design as well" />
     <MESSAGE value="WAT-50 Implemented a scroll container and placed the scroll buttons at the side of the component" />
-    <option name="LAST_COMMIT_MESSAGE" value="WAT-50 Implemented a scroll container and placed the scroll buttons at the side of the component" />
+    <MESSAGE value="WAT-51 Started filling the rest of the page" />
+    <option name="LAST_COMMIT_MESSAGE" value="WAT-51 Started filling the rest of the page" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
