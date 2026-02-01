@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="732c60cb-adf5-4039-874c-caf0139ad2ee" name="WAT-132 Add content blocks" comment="">
-      <change afterPath="$PROJECT_DIR$/public/illustraties/de-zinnen-van-baerwaldt.svg" afterDir="false" />
+    <list default="true" id="732c60cb-adf5-4039-874c-caf0139ad2ee" name="WAT-132 Add content blocks" comment="WAT-132 Added illustration for zinnen van baerwaldt for the homepage">
+      <change afterPath="$PROJECT_DIR$/public/illustraties/waar-ik-het-nog-over-wil-hebben.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/UpcomingEvents.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/UpcomingEvents.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/blocks/BackgroundBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/blocks/BackgroundBlock.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/config/blocks/IllustrationBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/blocks/IllustrationBlock.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/blocks/UpcomingEventsBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/blocks/UpcomingEventsBlock.tsx" afterDir="false" />
     </list>
     <list id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Added box and line illustrations, and created the hand drawn box component" />
     <list id="beb23f38-d23a-47e7-ba80-27679dd64e74" name="WAT-54 CLI" comment="WAT-54 CLI" />
@@ -222,12 +221,12 @@
     &quot;timeTracker.isWhenProjectClosedEnabled&quot;: &quot;false&quot;,
     &quot;timeTracker.issueId&quot;: &quot;WAT-132&quot;,
     &quot;timeTracker.issueIdReadable&quot;: &quot;WAT-132&quot;,
-    &quot;timeTracker.pausedTime&quot;: &quot;1&quot;,
+    &quot;timeTracker.pausedTime&quot;: &quot;1807474&quot;,
     &quot;timeTracker.query&quot;: &quot;&quot;,
-    &quot;timeTracker.recordedTime&quot;: &quot;0&quot;,
+    &quot;timeTracker.recordedTime&quot;: &quot;3&quot;,
     &quot;timeTracker.scheduledPeriod&quot;: &quot;19:00:0&quot;,
-    &quot;timeTracker.startTime&quot;: &quot;72627135&quot;,
-    &quot;timeTracker.timeInMills&quot;: &quot;0&quot;,
+    &quot;timeTracker.startTime&quot;: &quot;80003192&quot;,
+    &quot;timeTracker.timeInMills&quot;: &quot;227635&quot;,
     &quot;timeTracker.type&quot;: &quot;Development&quot;,
     &quot;ts.external.directory.path&quot;: &quot;/Users/lody/dev/projects/watershed-website/node_modules/typescript/lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
@@ -966,7 +965,7 @@
       <option name="number" value="132" />
       <option name="presentableId" value="WAT-132" />
       <option name="project" value="WAT" />
-      <updated>1769951878855</updated>
+      <updated>1769953835479</updated>
       <workItem from="1769951878891" />
     </task>
     <option name="localTasksCounter" value="175" />
@@ -1036,8 +1035,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <confirmRemoveEmptyChangelist value="2" />
-    <MESSAGE value="Added props to the hand drawn box component" />
-    <MESSAGE value="Created a post it note component" />
     <MESSAGE value="Improved the upcoming events" />
     <MESSAGE value="Installed and configured the container query plugin for Tailwind" />
     <MESSAGE value="Some layout improvements to the upcoming events block" />
@@ -1061,7 +1058,9 @@
     <MESSAGE value="WAT-51 Implemented more of the figma design in the homepage" />
     <MESSAGE value="WAT-51 Created spacing block" />
     <MESSAGE value="WAT-51 Added prisma generator script for lint" />
-    <option name="LAST_COMMIT_MESSAGE" value="WAT-51 Added prisma generator script for lint" />
+    <MESSAGE value="WAT-132 Added and improved the upcoming events block to the homepage" />
+    <MESSAGE value="WAT-132 Added illustration for zinnen van baerwaldt for the homepage" />
+    <option name="LAST_COMMIT_MESSAGE" value="WAT-132 Added illustration for zinnen van baerwaldt for the homepage" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

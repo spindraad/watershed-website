@@ -1,7 +1,7 @@
 import { ComponentConfig, Slot } from '@puckeditor/core';
 
 export type BackgroundBlockProps = {
-  color?: 'light-yellow' | 'bright-yellow' | 'pink';
+  color?: 'light-yellow' | 'bright-yellow' | 'pink' | 'dark-pink';
   content: Slot;
 };
 
@@ -13,7 +13,8 @@ export const BackgroundBlock: ComponentConfig<BackgroundBlockProps> = {
       options: [
         { label: 'Lichtgeel', value: 'light-yellow' },
         { label: 'Fel geel', value: 'bright-yellow' },
-        { label: 'Roze', value: 'pink' },
+        { label: 'Licht roze', value: 'pink' },
+        { label: 'Donker roze', value: 'dark-pink' },
       ],
     },
     content: {
@@ -36,12 +37,18 @@ export const BackgroundBlock: ComponentConfig<BackgroundBlockProps> = {
       case 'pink':
         backgroundColor = '#FFC0CB';
         break;
+      case 'dark-pink':
+        backgroundColor = '#FF6767';
+        break;
       default:
         backgroundColor = '#FFFFFF';
     }
 
     return (
-      <div style={{ backgroundColor: backgroundColor, padding: '1rem' }}>
+      <div
+        className="relative"
+        style={{ backgroundColor: backgroundColor, padding: '1rem' }}
+      >
         <Content />
       </div>
     );

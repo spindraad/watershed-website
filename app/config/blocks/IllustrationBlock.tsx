@@ -14,6 +14,7 @@ const illustrations = {
   Kip: 'kip.png',
   'Radio Stille Willie': 'radio-stille-willie.svg',
   'De Zinnen Van Baerwaldt': 'de-zinnen-van-baerwaldt.svg',
+  'Waar ik het nog ... over wil hebben': 'waar-ik-het-nog-over-wil-hebben.svg',
 } as const;
 
 // Extract the keys as a union type
