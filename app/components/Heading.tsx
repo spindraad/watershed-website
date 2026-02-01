@@ -18,6 +18,11 @@ export type Props = {
    * Whether the font should be bold
    */
   bold?: boolean;
+
+  /**
+   * Custom color class for the heading
+   */
+  colorClass?: string;
 };
 
 export default function Heading({
@@ -25,6 +30,7 @@ export default function Heading({
   children,
   bold = true,
   textSizeClass = '',
+  colorClass = 'text-primary-700',
 }: Props) {
   const Tag = `h${level}` as 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 
@@ -53,12 +59,14 @@ export default function Heading({
     }
   }
 
-  const classes = `${bold ? 'font-bold' : ''} ${textSize} text-primary-700`;
+  const classes = `${bold ? 'font-bold' : ''} ${textSize} ${colorClass}`;
 
-  return <Tag className={classes}>{wrapUppercaseLetters(children)}</Tag>;
+  return (
+    <Tag className={classes}>{wrapUppercaseLetters(children, colorClass)}</Tag>
+  );
 }
 
-function wrapUppercaseLetters(text: string | string[]) {
+function wrapUppercaseLetters(text: string | string[], colorClass: string) {
   if (Array.isArray(text)) {
     text = text.join(' ');
   }
@@ -71,7 +79,7 @@ function wrapUppercaseLetters(text: string | string[]) {
         return (
           <span
             key={index}
-            className="italic text-primary-700 font-gt-haptik-rotalic"
+            className={`italic ${colorClass} font-gt-haptik-rotalic`}
           >
             {part}
           </span>
