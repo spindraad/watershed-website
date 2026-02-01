@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="732c60cb-adf5-4039-874c-caf0139ad2ee" name="WAT-132 Add content blocks" comment="WAT-132 Added last bits of content blocks on the homepage">
+    <list default="true" id="16d283c5-8d57-4037-a336-a492889998a1" name="WAT-66 Pagina's moeten zelf een achtergrondkleur kunnen zetten" comment="WAT-66">
+      <change afterPath="$PROJECT_DIR$/app/config/fields/color.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/blocks/BackgroundBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/blocks/BackgroundBlock.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/puck.config.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/puck.config.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/$/_pages.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/$/_pages.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/_index/_home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/_index/_home.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/prisma/seed/_pageContent.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/seed/_pageContent.ts" afterDir="false" />
     </list>
     <list id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Added box and line illustrations, and created the hand drawn box component" />
@@ -60,8 +66,8 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="wat-132_add_content_blocks" />
-                    <option name="lastUsedInstant" value="1769951879" />
+                    <option name="branchName" value="wat-66_background-color-pages" />
+                    <option name="lastUsedInstant" value="1769978696" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="release/WAT-49_Homepage" />
@@ -173,7 +179,7 @@
     &quot;Vitest.validateLogin.executor&quot;: &quot;Run&quot;,
     &quot;Vitest.validateLogin.should return success: false when emailaddress is invalid.executor&quot;: &quot;Run&quot;,
     &quot;Vitest.validateLogin.should return success: false when emailaddress is missing.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;wat-132__add__content__blocks&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;wat-66__background-color-pages&quot;,
     &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;24.11.0&quot;,
     &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;24.10.9&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/lody/dev/projects/watershed-website/app/routes/_index&quot;,
@@ -216,14 +222,14 @@
     &quot;timeTracker.isRunning&quot;: &quot;true&quot;,
     &quot;timeTracker.isScheduledEnabled&quot;: &quot;false&quot;,
     &quot;timeTracker.isWhenProjectClosedEnabled&quot;: &quot;false&quot;,
-    &quot;timeTracker.issueId&quot;: &quot;WAT-132&quot;,
-    &quot;timeTracker.issueIdReadable&quot;: &quot;WAT-132&quot;,
-    &quot;timeTracker.pausedTime&quot;: &quot;1807474&quot;,
+    &quot;timeTracker.issueId&quot;: &quot;WAT-66&quot;,
+    &quot;timeTracker.issueIdReadable&quot;: &quot;WAT-66&quot;,
+    &quot;timeTracker.pausedTime&quot;: &quot;1&quot;,
     &quot;timeTracker.query&quot;: &quot;&quot;,
-    &quot;timeTracker.recordedTime&quot;: &quot;3&quot;,
+    &quot;timeTracker.recordedTime&quot;: &quot;0&quot;,
     &quot;timeTracker.scheduledPeriod&quot;: &quot;19:00:0&quot;,
-    &quot;timeTracker.startTime&quot;: &quot;80003192&quot;,
-    &quot;timeTracker.timeInMills&quot;: &quot;227635&quot;,
+    &quot;timeTracker.startTime&quot;: &quot;85038599&quot;,
+    &quot;timeTracker.timeInMills&quot;: &quot;0&quot;,
     &quot;timeTracker.type&quot;: &quot;Development&quot;,
     &quot;ts.external.directory.path&quot;: &quot;/Users/lody/dev/projects/watershed-website/node_modules/typescript/lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
@@ -539,14 +545,6 @@
       <workItem from="1751983260331" duration="154000" />
       <workItem from="1757113103308" duration="35000" />
       <workItem from="1760341367186" duration="338000" />
-    </task>
-    <task id="LOCAL-00130" summary="Pages can now be edited and saved  Also added slugs to seeding scripts">
-      <option name="closed" value="true" />
-      <created>1744364119344</created>
-      <option name="number" value="00130" />
-      <option name="presentableId" value="LOCAL-00130" />
-      <option name="project" value="LOCAL" />
-      <updated>1744364119344</updated>
     </task>
     <task id="LOCAL-00131" summary="Changed some of the navigation labels">
       <option name="closed" value="true" />
@@ -955,15 +953,28 @@
     <task active="true" id="WAT-132" summary="Add content blocks">
       <branch name="release/WAT-49_Homepage" repository="$PROJECT_DIR$" original="true" />
       <branch name="wat-132_add_content_blocks" repository="$PROJECT_DIR$" />
-      <changelist id="732c60cb-adf5-4039-874c-caf0139ad2ee" name="WAT-132 Add content blocks" comment="" />
+      <changelist id="" name="WAT-132 Add content blocks" comment="" />
       <created>1769951567383</created>
       <option name="issue" value="true" />
       <url>https://youtrack.spindraad.dev/issue/WAT-132</url>
       <option name="number" value="132" />
       <option name="presentableId" value="WAT-132" />
       <option name="project" value="WAT" />
-      <updated>1769976065911</updated>
+      <updated>1769976617572</updated>
       <workItem from="1769951878891" />
+    </task>
+    <task active="true" id="WAT-66" summary="Pagina's moeten zelf een achtergrondkleur kunnen zetten">
+      <branch name="release/WAT-49_Homepage" repository="$PROJECT_DIR$" original="true" />
+      <branch name="wat-66_background-color-pages" repository="$PROJECT_DIR$" />
+      <changelist id="16d283c5-8d57-4037-a336-a492889998a1" name="WAT-66 Pagina's moeten zelf een achtergrondkleur kunnen zetten" comment="WAT-66" />
+      <created>1760449089170</created>
+      <option name="issue" value="true" />
+      <url>https://youtrack.spindraad.dev/issue/WAT-66</url>
+      <option name="number" value="66" />
+      <option name="presentableId" value="WAT-66" />
+      <option name="project" value="WAT" />
+      <updated>1769978695912</updated>
+      <workItem from="1769978695990" />
     </task>
     <option name="localTasksCounter" value="175" />
     <option name="commitChanges" value="false" />

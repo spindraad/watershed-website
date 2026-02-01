@@ -14,6 +14,7 @@ export const home: SeedContent = {
         titleIsHidden: true,
         summary: 'De hoofdpagina van de website',
         slug: 'home',
+        backgroundColor: 'light-yellow',
         meta: {
           title: 'Hoofdpagina | Stichting Watershed',
           description: 'Welkom bij Stichting Watershed',
@@ -57,6 +58,7 @@ export const home: SeedContent = {
         titleIsHidden: true,
         summary: 'De hoofdpagina van de website',
         slug: 'home',
+        backgroundColor: 'light-yellow',
         meta: {
           title: 'Hoofdpagina | Stichting Watershed',
           description: 'Welkom bij Stichting Watershed',
@@ -100,6 +102,7 @@ export const home: SeedContent = {
         titleIsHidden: true,
         summary: 'De hoofdpagina van de website',
         slug: 'home',
+        backgroundColor: 'light-yellow',
         meta: {
           title: 'Hoofdpagina | Stichting Watershed',
           description: 'Welkom bij Stichting Watershed',
@@ -146,6 +149,7 @@ export const about: SeedContent = {
         titleIsHidden: false,
         summary: 'This is the about us page',
         slug: 'about',
+        backgroundColor: 'light-yellow',
         meta: {
           title: 'About Our Organization | Stichting Watershed',
           description: 'Learn more about our organization',
@@ -187,6 +191,7 @@ export const about: SeedContent = {
         titleIsHidden: false,
         summary: 'Dit is de over ons pagina',
         slug: 'over-ons',
+        backgroundColor: 'light-yellow',
         meta: {
           title: 'Over ons | Stichting Watershed',
           description: 'Leer meer over onze organisatie',
@@ -228,6 +233,7 @@ export const about: SeedContent = {
         titleIsHidden: false,
         summary: 'Welcome to our website',
         slug: 'tokante-nos',
+        backgroundColor: 'light-yellow',
         meta: {
           title: 'Home | Stichting Watershed',
           description: 'This is our homepage.',
@@ -264,6 +270,7 @@ export const contact: SeedContent = {
         titleIsHidden: false,
         summary: 'This is the contact us page',
         slug: 'contact',
+        backgroundColor: 'light-yellow',
         meta: {
           title: 'Contact us | Stichting Watershed',
           description: 'Get in touch with us',
@@ -288,6 +295,7 @@ export const contact: SeedContent = {
         titleIsHidden: false,
         summary: 'Dit is de contactpagina',
         slug: 'contact',
+        backgroundColor: 'light-yellow',
         meta: {
           title: 'Neem contact op | Stichting Watershed',
           description: 'Neem contact met ons op',
@@ -312,6 +320,7 @@ export const contact: SeedContent = {
         titleIsHidden: false,
         summary: 'Welcome to our website',
         slug: 'kontakto-ku-nos',
+        backgroundColor: 'light-yellow',
         meta: {
           title: 'Home | Stichting Watershed',
           description: 'This is our homepage.',
