@@ -29,6 +29,7 @@ import {
 import { LogoBlock, LogoBlockProps } from '~/config/blocks/LogoBlock';
 import { BorderBlock, BorderBlockProps } from '~/config/blocks/BorderBlock';
 import { SpacingBlock, SpacingBlockProps } from '~/config/blocks/SpacingBlock';
+import { colorField, ColorField } from '~/config/fields/color';
 
 export type Props = {
   HeadingBlock: HeadingBlockProps;
@@ -49,6 +50,7 @@ export type RootProps = {
   titleIsHidden: boolean;
   summary: string;
   slug: string;
+  backgroundColor: ColorField;
   meta: {
     title: string;
     description: string;
@@ -116,6 +118,7 @@ export const config: Config<Props, RootProps> = {
         label: 'Slug',
         type: 'text',
       },
+      backgroundColor: colorField,
       meta: {
         type: 'object',
         label: 'SEO',
@@ -136,6 +139,7 @@ export const config: Config<Props, RootProps> = {
       titleIsHidden: false,
       summary: '',
       slug: '',
+      backgroundColor: 'light-yellow',
       meta: {
         title: 'Nieuwe pagina',
         description: '',

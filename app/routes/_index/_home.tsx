@@ -5,6 +5,7 @@ import PageRenderer from '~/components/PageRenderer';
 import { Prisma } from '@prisma/client';
 import { fallbackLanguage, SupportedLanguages } from '~/config/i18n';
 import { WatershedPageData } from '~/config/puck.config';
+import { getColorHex, type ColorField } from '~/config/fields/color';
 
 export async function loader() {
   try {
@@ -45,10 +46,18 @@ export const meta: Route.MetaFunction = ({
 
 export default function PageRoute() {
   const { data } = useLoaderData<typeof loader>();
+  const backgroundColor = data.root.props?.backgroundColor as ColorField;
 
   return (
-    <div className="content">
-      <PageRenderer data={data} />
-    </div>
+    <>
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `body { background-color: ${getColorHex(backgroundColor)} !important; }`,
+        }}
+      />
+      <div className="content">
+        <PageRenderer data={data} />
+      </div>
+    </>
   );
 }
