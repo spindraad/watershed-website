@@ -10,8 +10,9 @@ const illustrations = {
   'Oor in hand': 'oor in hand.png',
   'Potlood door hart': 'potlood door hart.png',
   'Vogel met potlood en nest': 'vogel met potlood en nest.png',
-  Schreeuw: 'schreeuw.png',
+  'Schreeuw (geanimeerd)': 'mouth-screaming-optimized.gif',
   Kip: 'kip.png',
+  'Radio Stille Willie': 'radio-stille-willie.svg',
 } as const;
 
 // Extract the keys as a union type
@@ -53,6 +54,9 @@ export type IllustrationBlockProps = {
       left?: string;
       top?: string;
     };
+    rotation?: '0' | '90' | '180' | '270';
+    flipHorizontal?: boolean;
+    flipVertical?: boolean;
   };
   wrapper?: {
     width?: string;
@@ -114,6 +118,32 @@ export const IllustrationBlock: ComponentConfig<IllustrationBlockProps> = {
             },
           },
         },
+        rotation: {
+          label: 'Rotatie',
+          type: 'radio',
+          options: [
+            { label: '0°', value: '0' },
+            { label: '90°', value: '90' },
+            { label: '180°', value: '180' },
+            { label: '270°', value: '270' },
+          ],
+        },
+        flipHorizontal: {
+          label: 'Horizontaal spiegelen',
+          type: 'radio',
+          options: [
+            { label: 'Nee', value: false },
+            { label: 'Ja', value: true },
+          ],
+        },
+        flipVertical: {
+          label: 'Verticaal spiegelen',
+          type: 'radio',
+          options: [
+            { label: 'Nee', value: false },
+            { label: 'Ja', value: true },
+          ],
+        },
       },
     },
     wrapper: {
@@ -165,6 +195,9 @@ export const IllustrationBlock: ComponentConfig<IllustrationBlockProps> = {
         left: '50%',
         top: '50%',
       },
+      rotation: '0',
+      flipHorizontal: false,
+      flipVertical: false,
     },
     wrapper: {
       width: '100%',
@@ -181,10 +214,26 @@ export const IllustrationBlock: ComponentConfig<IllustrationBlockProps> = {
     const top = image?.position?.top || '50%';
     const objectFit = image?.fit || 'cover';
     const objectPosition = `${left} ${top}`;
+    const rotation = image?.rotation || '0';
+    const flipHorizontal = image?.flipHorizontal || false;
+    const flipVertical = image?.flipVertical || false;
     const wrapperWidth = wrapper?.width || '100%';
     const wrapperHeight = wrapper?.height || 'auto';
     const alignment = wrapper?.alignment || 'center';
     const justify = wrapper?.justify || 'center';
+
+    // Build transform string
+    const transforms: string[] = [];
+    if (rotation !== '0') {
+      transforms.push(`rotate(${rotation}deg)`);
+    }
+    if (flipHorizontal) {
+      transforms.push('scaleX(-1)');
+    }
+    if (flipVertical) {
+      transforms.push('scaleY(-1)');
+    }
+    const transform = transforms.length > 0 ? transforms.join(' ') : undefined;
 
     const imageElement = (
       <img
@@ -195,6 +244,7 @@ export const IllustrationBlock: ComponentConfig<IllustrationBlockProps> = {
           height,
           objectFit,
           objectPosition,
+          transform,
         }}
       />
     );
