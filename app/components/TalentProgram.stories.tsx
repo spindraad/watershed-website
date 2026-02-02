@@ -7,7 +7,7 @@ export default {
   tags: ['components', 'artists', 'content'],
   decorators: [
     (Story) => (
-      <div className="p-4 max-w-md">
+      <div className="p-4 max-w-screen-xl">
         <Story />
       </div>
     ),

@@ -51,6 +51,7 @@ const config: StorybookConfig = {
       server: {
         ...config.server,
         proxy: {
+          '/illustraties': 'http://localhost:5173',
           '/afbeelding': 'http://localhost:5173',
           '/api': 'http://localhost:5173',
         },
