@@ -5,14 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e764ea00-2466-4ba5-bf75-ded13fd6e096" name="WAT-53 Talent" comment="WAT-53">
-      <change afterPath="$PROJECT_DIR$/app/config/blocks/TalentProgramBlock.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/iconen/pointer.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/Icon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Icon.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/locales/en.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/en.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/locales/nl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/nl.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/root.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/root.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.storybook/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/.storybook/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/TalentProgram.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/TalentProgram.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/TalentProgram.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/TalentProgram.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/blocks/TalentProgramBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/blocks/TalentProgramBlock.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/puck.config.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/puck.config.tsx" afterDir="false" />
     </list>
     <list id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Added box and line illustrations, and created the hand drawn box component" />
     <list id="beb23f38-d23a-47e7-ba80-27679dd64e74" name="WAT-54 CLI" comment="WAT-54 CLI" />
@@ -225,12 +223,12 @@
     &quot;timeTracker.isWhenProjectClosedEnabled&quot;: &quot;false&quot;,
     &quot;timeTracker.issueId&quot;: &quot;WAT-53&quot;,
     &quot;timeTracker.issueIdReadable&quot;: &quot;WAT-53&quot;,
-    &quot;timeTracker.pausedTime&quot;: &quot;0&quot;,
+    &quot;timeTracker.pausedTime&quot;: &quot;6586760&quot;,
     &quot;timeTracker.query&quot;: &quot;&quot;,
-    &quot;timeTracker.recordedTime&quot;: &quot;0&quot;,
+    &quot;timeTracker.recordedTime&quot;: &quot;13&quot;,
     &quot;timeTracker.scheduledPeriod&quot;: &quot;19:00:0&quot;,
-    &quot;timeTracker.startTime&quot;: &quot;96966003&quot;,
-    &quot;timeTracker.timeInMills&quot;: &quot;0&quot;,
+    &quot;timeTracker.startTime&quot;: &quot;145849685&quot;,
+    &quot;timeTracker.timeInMills&quot;: &quot;800193&quot;,
     &quot;timeTracker.type&quot;: &quot;Development&quot;,
     &quot;ts.external.directory.path&quot;: &quot;/Users/lody/dev/projects/watershed-website/node_modules/typescript/lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
@@ -279,7 +277,7 @@
       <command value="npm run db:push" />
     </option>
   </component>
-  <component name="RunManager" selected="npm.migrate-puck-data -- --input tmp/db-dumps/pre-title-obj-migration.json --output tmp/db-migrations/post-title-obj-migration.json">
+  <component name="RunManager" selected="Compound.Develop">
     <configuration name="Develop" type="CompoundRunConfigurationType">
       <toRun name="Dev" type="js.build_tools.npm" />
       <toRun name="Storybook" type="js.build_tools.npm" />
@@ -445,24 +443,15 @@
       <item itemvalue="Compound.Develop" />
       <item itemvalue="JavaScript Debug.Debug in Chrome" />
       <item itemvalue="Node.js.run-puck-migration.ts" />
-      <item itemvalue="npm.migrate-puck-data -- --input tmp/db-dumps/pre-title-obj-migration.json --output tmp/db-migrations/post-title-obj-migration.json" />
       <item itemvalue="npm.Dev" />
       <item itemvalue="npm.Storybook" />
+      <item itemvalue="npm.migrate-puck-data -- --input tmp/db-dumps/pre-title-obj-migration.json --output tmp/db-migrations/post-title-obj-migration.json" />
       <item itemvalue="Vitest.All Tests" />
       <item itemvalue="Vitest.Validating page requests" />
       <item itemvalue="Vitest.Validating the page" />
       <item itemvalue="Vitest.convertDateToLocaleString" />
       <item itemvalue="Vitest.convertDateToLocaleString.converts a date to a human readable format with shortened weekday" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Vitest.convertDateToLocaleString.converts a date to a human readable format with shortened weekday" />
-        <item itemvalue="Vitest.convertDateToLocaleString" />
-        <item itemvalue="Vitest.Validating the page" />
-        <item itemvalue="Vitest.Validating page requests" />
-        <item itemvalue="Node.js.run-puck-migration.ts" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -993,7 +982,7 @@
       <option name="number" value="53" />
       <option name="presentableId" value="WAT-53" />
       <option name="project" value="WAT" />
-      <updated>1769987345174</updated>
+      <updated>1769992167876</updated>
       <workItem from="1769985953869" />
     </task>
     <option name="localTasksCounter" value="175" />
@@ -1018,12 +1007,17 @@
   </component>
   <component name="UnknownFeatures">
     <option featureType="dependencySupport" implementationName="javascript:npm:react" />
+    <option featureType="dependencySupport" implementationName="javascript:npm:tailwindcss" />
+    <option featureType="dependencySupport" implementationName="javascript:npm:vite" />
+    <option featureType="com.intellij.configurationType" implementationName="JavascriptDebugType" />
+    <option featureType="dependencySupport" implementationName="executable:kubectl" />
+    <option featureType="com.intellij.configurationType" implementationName="NodeJSConfigurationType" />
+    <option featureType="dependencySupport" implementationName="executable:terraform" />
     <option featureType="dependencySupport" implementationName="javascript:npm:prettier" />
     <option featureType="dependencySupport" implementationName="executable:docker" />
-    <option featureType="dependencySupport" implementationName="javascript:npm:tailwindcss" />
     <option featureType="dependencySupport" implementationName="javascript:npm:prisma" />
-    <option featureType="dependencySupport" implementationName="javascript:npm:vite" />
-    <option featureType="dependencySupport" implementationName="executable:kubectl" />
+    <option featureType="com.intellij.configurationType" implementationName="js.build_tools.npm" />
+    <option featureType="com.intellij.configurationType" implementationName="JavaScriptTestRunnerVitest" />
     <option featureType="dependencySupport" implementationName="javascript:npm:postcss" />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -1066,7 +1060,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <confirmRemoveEmptyChangelist value="2" />
-    <MESSAGE value="Some layout improvements to the upcoming events block" />
     <MESSAGE value="Created a Puck block of the upcoming events component, which also needed React Query, an api endpoint and a loader" />
     <MESSAGE value="Add Upcoming Events translations and fixed UpcomingEventsBlock component suspense error" />
     <MESSAGE value="Add BackgroundBlock component and update title structure in page configuration" />
@@ -1091,7 +1084,8 @@
     <MESSAGE value="WAT-132 Added illustration for zinnen van baerwaldt for the homepage" />
     <MESSAGE value="WAT-132 Added last bits of content blocks on the homepage" />
     <MESSAGE value="WAT-66 Added page background color setting in root props" />
-    <option name="LAST_COMMIT_MESSAGE" value="WAT-66 Added page background color setting in root props" />
+    <MESSAGE value="WAT-53 Started working on talent program component" />
+    <option name="LAST_COMMIT_MESSAGE" value="WAT-53 Started working on talent program component" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

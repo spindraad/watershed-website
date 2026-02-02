@@ -30,6 +30,10 @@ import { LogoBlock, LogoBlockProps } from '~/config/blocks/LogoBlock';
 import { BorderBlock, BorderBlockProps } from '~/config/blocks/BorderBlock';
 import { SpacingBlock, SpacingBlockProps } from '~/config/blocks/SpacingBlock';
 import { colorField, ColorField } from '~/config/fields/color';
+import {
+  TalentProgramBlock,
+  TalentProgramBlockProps,
+} from '~/config/blocks/TalentProgramBlock';
 
 export type Props = {
   HeadingBlock: HeadingBlockProps;
@@ -43,6 +47,7 @@ export type Props = {
   LogoBlock: LogoBlockProps;
   BorderBlock: BorderBlockProps;
   SpacingBlock: SpacingBlockProps;
+  TalentProgramBlock: TalentProgramBlockProps;
 };
 
 export type RootProps = {
@@ -80,6 +85,7 @@ export const config: Config<Props, RootProps> = {
         'BackgroundBlock',
         'LogoBlock',
         'BorderBlock',
+        'TalentProgramBlock',
       ],
     },
   },
@@ -95,6 +101,7 @@ export const config: Config<Props, RootProps> = {
     LogoBlock,
     BorderBlock,
     SpacingBlock,
+    TalentProgramBlock,
   },
   root: {
     fields: {
