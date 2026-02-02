@@ -34,6 +34,8 @@ import { en as UpcomingEventsTranslations } from '~/components/UpcomingEvents.tr
 export const { UpcomingEvents } = UpcomingEventsTranslations;
 import { en as MakerOverviewTranslations } from '~/components/MakersOverview.translations';
 export const { MakersOverview } = MakerOverviewTranslations;
+import { en as TalentProgramTranslations } from '~/components/TalentProgram.translations';
+export const { TalentProgram } = TalentProgramTranslations;
 
 export const common = {
   title: 'Hello World!',

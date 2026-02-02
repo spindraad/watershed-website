@@ -4,15 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9615c3b2-4b3f-4e08-b49f-74c090e54932" name="WAT-133 Page width" comment="WAT-133">
-      <change afterPath="$PROJECT_DIR$/app/config/fields/column.ts" afterDir="false" />
+    <list default="true" id="e764ea00-2466-4ba5-bf75-ded13fd6e096" name="WAT-53 Talent" comment="WAT-53">
+      <change afterPath="$PROJECT_DIR$/app/config/blocks/TalentProgramBlock.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/iconen/pointer.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/blocks/BackgroundBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/blocks/BackgroundBlock.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/blocks/MakersOverviewBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/blocks/MakersOverviewBlock.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/blocks/UpcomingEventsBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/blocks/UpcomingEventsBlock.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/puck.config.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/puck.config.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/_index/_home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/_index/_home.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/tailwind.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/tailwind.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/Icon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Icon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/locales/en.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/en.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/locales/nl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/nl.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/root.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/root.tsx" afterDir="false" />
     </list>
     <list id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Added box and line illustrations, and created the hand drawn box component" />
     <list id="beb23f38-d23a-47e7-ba80-27679dd64e74" name="WAT-54 CLI" comment="WAT-54 CLI" />
@@ -67,8 +67,8 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="wat-133_page-width" />
-                    <option name="lastUsedInstant" value="1769980862" />
+                    <option name="branchName" value="wat-53_talent" />
+                    <option name="lastUsedInstant" value="1769985954" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="release/WAT-49_Homepage" />
@@ -180,7 +180,7 @@
     &quot;Vitest.validateLogin.executor&quot;: &quot;Run&quot;,
     &quot;Vitest.validateLogin.should return success: false when emailaddress is invalid.executor&quot;: &quot;Run&quot;,
     &quot;Vitest.validateLogin.should return success: false when emailaddress is missing.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;wat-133__page-width&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;wat-53__talent&quot;,
     &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;24.11.0&quot;,
     &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;24.10.9&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/lody/dev/projects/watershed-website/app/routes/_index&quot;,
@@ -223,13 +223,13 @@
     &quot;timeTracker.isRunning&quot;: &quot;true&quot;,
     &quot;timeTracker.isScheduledEnabled&quot;: &quot;false&quot;,
     &quot;timeTracker.isWhenProjectClosedEnabled&quot;: &quot;false&quot;,
-    &quot;timeTracker.issueId&quot;: &quot;WAT-133&quot;,
-    &quot;timeTracker.issueIdReadable&quot;: &quot;WAT-133&quot;,
+    &quot;timeTracker.issueId&quot;: &quot;WAT-53&quot;,
+    &quot;timeTracker.issueIdReadable&quot;: &quot;WAT-53&quot;,
     &quot;timeTracker.pausedTime&quot;: &quot;0&quot;,
     &quot;timeTracker.query&quot;: &quot;&quot;,
     &quot;timeTracker.recordedTime&quot;: &quot;0&quot;,
     &quot;timeTracker.scheduledPeriod&quot;: &quot;19:00:0&quot;,
-    &quot;timeTracker.startTime&quot;: &quot;87208928&quot;,
+    &quot;timeTracker.startTime&quot;: &quot;96966003&quot;,
     &quot;timeTracker.timeInMills&quot;: &quot;0&quot;,
     &quot;timeTracker.type&quot;: &quot;Development&quot;,
     &quot;ts.external.directory.path&quot;: &quot;/Users/lody/dev/projects/watershed-website/node_modules/typescript/lib&quot;,
@@ -556,14 +556,6 @@
       <workItem from="1757113103308" duration="35000" />
       <workItem from="1760341367186" duration="338000" />
     </task>
-    <task id="LOCAL-00132" summary="Created delete route">
-      <option name="closed" value="true" />
-      <created>1744378023049</created>
-      <option name="number" value="00132" />
-      <option name="presentableId" value="LOCAL-00132" />
-      <option name="project" value="LOCAL" />
-      <updated>1744378023049</updated>
-    </task>
     <task id="LOCAL-00133" summary="The page content is now more strictly validated, because we now transform the slug on multiple levels.">
       <option name="closed" value="true" />
       <created>1744797230848</created>
@@ -855,7 +847,7 @@
       <option name="number" value="54" />
       <option name="presentableId" value="WAT-54" />
       <option name="project" value="WAT" />
-      <updated>1760957989938</updated>
+      <updated>1769990622351</updated>
       <workItem from="1760451925232" />
       <workItem from="1760957832911" />
     </task>
@@ -981,15 +973,28 @@
     <task active="true" id="WAT-133" summary="Page width">
       <branch name="release/WAT-49_Homepage" repository="$PROJECT_DIR$" original="true" />
       <branch name="wat-133_page-width" repository="$PROJECT_DIR$" />
-      <changelist id="9615c3b2-4b3f-4e08-b49f-74c090e54932" name="WAT-133 Page width" comment="WAT-133" />
+      <changelist id="" name="WAT-133 Page width" comment="WAT-133" />
       <created>1769976140988</created>
       <option name="issue" value="true" />
       <url>https://youtrack.spindraad.dev/issue/WAT-133</url>
       <option name="number" value="133" />
       <option name="presentableId" value="WAT-133" />
       <option name="project" value="WAT" />
-      <updated>1769980861994</updated>
+      <updated>1769984634881</updated>
       <workItem from="1769980862009" />
+    </task>
+    <task active="true" id="WAT-53" summary="Talent">
+      <branch name="release/WAT-49_Homepage" repository="$PROJECT_DIR$" original="true" />
+      <branch name="wat-53_talent" repository="$PROJECT_DIR$" />
+      <changelist id="e764ea00-2466-4ba5-bf75-ded13fd6e096" name="WAT-53 Talent" comment="WAT-53" />
+      <created>1760305703455</created>
+      <option name="issue" value="true" />
+      <url>https://youtrack.spindraad.dev/issue/WAT-53</url>
+      <option name="number" value="53" />
+      <option name="presentableId" value="WAT-53" />
+      <option name="project" value="WAT" />
+      <updated>1769987345174</updated>
+      <workItem from="1769985953869" />
     </task>
     <option name="localTasksCounter" value="175" />
     <option name="commitChanges" value="false" />
@@ -997,6 +1002,9 @@
       <YouTrack url="https://youtrack.spindraad.dev">
         <commitMessageFormat>{id}</commitMessageFormat>
         <option name="defaultSearch" value="Board Watershed Sprint Board: {Current sprint}" />
+        <option name="preferredOpenTaskState">
+          <CustomTaskState id="Done" name="Done" />
+        </option>
         <option name="shouldFormatCommitMessage" value="true" />
         <username>random</username>
       </YouTrack>
