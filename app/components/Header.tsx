@@ -10,7 +10,7 @@ import NavigationMenu, {
 
 type Props = {
   user?: User;
-  menuItems: NavigationMenuItem[];
+  menuItems?: NavigationMenuItem[];
   demoMode?: boolean;
 };
 
@@ -29,7 +29,9 @@ export default function Header({ user, menuItems, demoMode = false }: Props) {
           </a>
         </div>
         <div className="flex gap-2 items-center">
-          <NavigationMenu items={menuItems} />
+          {menuItems ?
+            <NavigationMenu items={menuItems} />
+          : null}
 
           {user ?
             <div className="ml-5 flex flex-row gap-4 items-center">
