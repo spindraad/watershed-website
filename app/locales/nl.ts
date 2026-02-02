@@ -34,6 +34,8 @@ import { nl as UpcomingEventsTranslations } from '~/components/UpcomingEvents.tr
 export const { UpcomingEvents } = UpcomingEventsTranslations;
 import { nl as MakerOverviewTranslations } from '~/components/MakersOverview.translations';
 export const { MakersOverview } = MakerOverviewTranslations;
+import { nl as TalentProgramTranslations } from '~/components/TalentProgram.translations';
+export const { TalentProgram } = TalentProgramTranslations;
 
 export const common = {
   title: 'Hallo Wereld!',
