@@ -4,19 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5ac89870-b2f7-4580-bee0-4f8b2fb58e8f" name="WAT-1 Contact pagina" comment="WAT-1 Added a little bit of bottom margin to the footer to make it visually a bit cleaner.">
-      <change afterPath="$PROJECT_DIR$/app/config/blocks/PageHeaderBlock.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/config/fields/illustration.ts" afterDir="false" />
+    <list default="true" id="5ac89870-b2f7-4580-bee0-4f8b2fb58e8f" name="WAT-1 Contact pagina" comment="WAT-1 Refactor grid and illustration components for improved responsiveness and structure. Also added a PageHeader block for most of the regular pages">
+      <change afterPath="$PROJECT_DIR$/app/config/fields/icon.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/iconen/location.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/iconen/mail.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/iconen/phone.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/blocks/GridBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/blocks/GridBlock.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/Icon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Icon.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/config/blocks/HeadingBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/blocks/HeadingBlock.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/blocks/IllustrationBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/blocks/IllustrationBlock.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/blocks/RichTextBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/blocks/RichTextBlock.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/config/puck.config.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/puck.config.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/$/_pages.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/$/_pages.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/tailwind.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/tailwind.css" afterDir="false" />
     </list>
     <list id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Added box and line illustrations, and created the hand drawn box component" />
-    <list id="917fffe3-5cb4-4a76-8c51-7b47e6690107" name="WAT-135 Footer" comment="WAT-135" />
-    <list id="beb23f38-d23a-47e7-ba80-27679dd64e74" name="WAT-54 CLI" comment="WAT-54 CLI" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -811,7 +811,7 @@
     <task id="WAT-54" summary="CLI">
       <branch name="dev" repository="$PROJECT_DIR$" original="true" />
       <branch name="feature/WAT-54-Create-CLI" repository="$PROJECT_DIR$" />
-      <changelist id="beb23f38-d23a-47e7-ba80-27679dd64e74" name="WAT-54 CLI" comment="" />
+      <changelist id="" name="WAT-54 CLI" comment="" />
       <created>1760340494584</created>
       <option name="issue" value="true" />
       <url>https://youtrack.spindraad.dev/issue/WAT-54</url>
@@ -966,7 +966,7 @@
     <task id="WAT-135" summary="Footer">
       <branch name="dev" repository="$PROJECT_DIR$" original="true" />
       <branch name="wat-135_footer" repository="$PROJECT_DIR$" />
-      <changelist id="917fffe3-5cb4-4a76-8c51-7b47e6690107" name="WAT-135 Footer" comment="WAT-135" />
+      <changelist id="" name="WAT-135 Footer" comment="WAT-135" />
       <created>1769984739649</created>
       <option name="issue" value="true" />
       <url>https://youtrack.spindraad.dev/issue/WAT-135</url>
@@ -987,7 +987,7 @@
       <option name="number" value="1" />
       <option name="presentableId" value="WAT-1" />
       <option name="project" value="WAT" />
-      <updated>1770148362800</updated>
+      <updated>1770152459276</updated>
       <workItem from="1770148102089" />
     </task>
     <option name="localTasksCounter" value="175" />
@@ -1066,7 +1066,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <confirmRemoveEmptyChangelist value="2" />
-    <MESSAGE value="Started refactoring the rich text editor component by dropping tinymce and picking Puck's own shipped editor" />
     <MESSAGE value="Refactor root props structure and add migration support for title visibility" />
     <MESSAGE value="Fixed lint errors and returned editor header in Puck overrides so that we could have our functionality back" />
     <MESSAGE value="Ran lint" />
@@ -1091,7 +1090,8 @@
     <MESSAGE value="WAT-53 BorderBlock is now purely for vertical lines" />
     <MESSAGE value="WAT-135 Added footer to the site" />
     <MESSAGE value="WAT-1 Added a little bit of bottom margin to the footer to make it visually a bit cleaner." />
-    <option name="LAST_COMMIT_MESSAGE" value="WAT-1 Added a little bit of bottom margin to the footer to make it visually a bit cleaner." />
+    <MESSAGE value="WAT-1 Refactor grid and illustration components for improved responsiveness and structure. Also added a PageHeader block for most of the regular pages" />
+    <option name="LAST_COMMIT_MESSAGE" value="WAT-1 Refactor grid and illustration components for improved responsiveness and structure. Also added a PageHeader block for most of the regular pages" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

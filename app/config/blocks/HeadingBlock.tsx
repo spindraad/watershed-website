@@ -6,6 +6,7 @@ import Icon, { Props as IconComponentProps } from '~/components/Icon';
 import HandDrawnLine, {
   Props as HandDrawnLineComponentProps,
 } from '~/components/HandDrawnLine';
+import { iconField, IconKey } from '~/config/fields/icon';
 
 const alignmentMap = {
   left: 'flex-start',
@@ -21,17 +22,6 @@ const textColorOptions = [
   { label: 'Donkergrijs', value: 'text-neutral-800' },
   { label: 'Zwart', value: 'text-neutral-1000' },
   { label: 'Wit', value: 'text-white' },
-];
-
-const iconOptions: { label: string; value: IconComponentProps['name'] }[] = [
-  { label: 'Pijl', value: 'heading-arrow' },
-  { label: 'Hart', value: 'heart' },
-  { label: 'Linker pijltje', value: 'left-caret' },
-  { label: 'Rechter pijltje', value: 'right-caret' },
-  { label: 'Linker pijltje gekleurd', value: 'left-caret-color-filled' },
-  { label: 'Rechter pijltje gekleurd', value: 'right-caret-color-filled' },
-  { label: 'Wijzer', value: 'pointer' },
-  { label: 'Ster', value: 'star' },
 ];
 
 const lineOptions: {
@@ -57,7 +47,7 @@ export type Props = {
   level?: HeadingComponentProps['level'];
   padding?: string;
   textColor?: string;
-  icon?: string;
+  icon?: IconKey;
   underline?: string;
 };
 
@@ -103,11 +93,7 @@ export const HeadingBlock: ComponentConfig<Props> = {
       type: 'select',
       options: textColorOptions,
     },
-    icon: {
-      label: 'Icon (optioneel)',
-      type: 'select',
-      options: [{ label: 'Geen', value: '' }, ...iconOptions],
-    },
+    icon: iconField,
     underline: {
       label: 'Onderstreping (optioneel)',
       type: 'select',

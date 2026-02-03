@@ -7,7 +7,10 @@ export type Props = {
     | 'left-caret-color-filled'
     | 'right-caret-color-filled'
     | 'pointer'
-    | 'star';
+    | 'star'
+    | 'location'
+    | 'mail'
+    | 'phone';
   size?: 'small' | 'normal';
 };
 

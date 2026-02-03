@@ -181,7 +181,7 @@ export const config: Config<Props, RootProps> = {
               __html: `body { background-color: ${getColorHex(backgroundColor)} !important; }`,
             }}
           />
-          <div className="flex flex-col gap-4 puck-root-component">
+          <div className="flex flex-col gap-4 puck-root-component prose prose-lg max-w-full">
             {!titleIsHidden && title ?
               <Heading level={1}>{title}</Heading>
             : null}

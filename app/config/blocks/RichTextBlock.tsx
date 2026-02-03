@@ -1,5 +1,7 @@
 import { ComponentConfig } from '@puckeditor/core';
 import { ReactElement } from 'react';
+import { iconField, IconKey } from '~/config/fields/icon';
+import Icon from '~/components/Icon';
 
 const alignmentMap = {
   left: 'flex-start',
@@ -37,6 +39,7 @@ export type RichTextBlockProps = {
   justify?: 'top' | 'center' | 'bottom';
   textColor?: string;
   textSize?: 'sm' | 'base' | 'lg' | 'xl' | '2xl';
+  icon?: IconKey;
 };
 
 export const RichTextBlock: ComponentConfig<RichTextBlockProps> = {
@@ -85,6 +88,7 @@ export const RichTextBlock: ComponentConfig<RichTextBlockProps> = {
         { label: 'Zeer groot', value: '2xl' },
       ],
     },
+    icon: iconField,
   },
   defaultProps: {
     content: '',
@@ -99,6 +103,7 @@ export const RichTextBlock: ComponentConfig<RichTextBlockProps> = {
     justify = 'top',
     textColor,
     textSize = 'base',
+    icon,
   }) => {
     const wrapperStyle: React.CSSProperties = {
       display: 'flex',
@@ -113,14 +118,25 @@ export const RichTextBlock: ComponentConfig<RichTextBlockProps> = {
       wrapperStyle.color = `rgb(var(--${textColor.replace('text-', '')}))`;
     }
 
+    let TextBlockContent: ReactElement;
     if (typeof content === 'string') {
-      return (
+      TextBlockContent = (
         <div
           style={wrapperStyle}
           dangerouslySetInnerHTML={{ __html: content }}
         />
       );
+    } else {
+      TextBlockContent = <div style={wrapperStyle}>{content}</div>;
     }
-    return <div style={wrapperStyle}>{content}</div>;
+
+    return (
+      <div className="flex flex-row gap-2 items-start">
+        {icon ?
+          <Icon name={icon} size="small" />
+        : null}
+        {TextBlockContent}
+      </div>
+    );
   },
 };
