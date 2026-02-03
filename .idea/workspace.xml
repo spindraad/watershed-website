@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="917fffe3-5cb4-4a76-8c51-7b47e6690107" name="WAT-135 Footer" comment="WAT-135">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/HandDrawnLine.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/HandDrawnLine.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/locales/en.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/en.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/locales/nl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/nl.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/root.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/root.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="917fffe3-5cb4-4a76-8c51-7b47e6690107" name="WAT-135 Footer" comment="WAT-135" />
     <list id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Added box and line illustrations, and created the hand drawn box component" />
     <list id="beb23f38-d23a-47e7-ba80-27679dd64e74" name="WAT-54 CLI" comment="WAT-54 CLI" />
     <option name="SHOW_DIALOG" value="false" />
@@ -173,7 +167,7 @@
     "Vitest.validateLogin.executor": "Run",
     "Vitest.validateLogin.should return success: false when emailaddress is invalid.executor": "Run",
     "Vitest.validateLogin.should return success: false when emailaddress is missing.executor": "Run",
-    "git-widget-placeholder": "wat-135__footer",
+    "git-widget-placeholder": "dev",
     "javascript.nodejs.core.library.configured.version": "24.11.0",
     "javascript.nodejs.core.library.typings.version": "24.10.9",
     "last_opened_file_path": "/Users/lody/dev/projects/watershed-website/app/routes/_index",
@@ -1056,7 +1050,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <confirmRemoveEmptyChangelist value="2" />
-    <MESSAGE value="Updated node version and updated all dependencies that have no major version update. Then update Puck to 0.20 in preparation for 0.21" />
     <MESSAGE value="Updated Puck to 0.21 and refactored all imports and usePuck calls" />
     <MESSAGE value="Started refactoring the rich text editor component by dropping tinymce and picking Puck's own shipped editor" />
     <MESSAGE value="Refactor root props structure and add migration support for title visibility" />
@@ -1081,7 +1074,8 @@
     <MESSAGE value="WAT-53 Add LineBlock component and integrate HandDrawnLine and Icon in HeadingBlock" />
     <MESSAGE value="WAT-53 Add ContainerBlock component and extend GridBlock with rows configuration" />
     <MESSAGE value="WAT-53 BorderBlock is now purely for vertical lines" />
-    <option name="LAST_COMMIT_MESSAGE" value="WAT-53 BorderBlock is now purely for vertical lines" />
+    <MESSAGE value="WAT-135 Added footer to the site" />
+    <option name="LAST_COMMIT_MESSAGE" value="WAT-135 Added footer to the site" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
