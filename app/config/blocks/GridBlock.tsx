@@ -2,6 +2,7 @@ import { ComponentConfig, Slot } from '@puckeditor/core';
 
 export type GribBlockProps = {
   columns: number;
+  rows: number;
   gap: number;
   grid: Slot;
 };
@@ -10,6 +11,11 @@ export const GridBlock: ComponentConfig<GribBlockProps> = {
   label: 'Grid',
   fields: {
     columns: {
+      type: 'number',
+      min: 1,
+      max: 12,
+    },
+    rows: {
       type: 'number',
       min: 1,
       max: 12,
@@ -25,24 +31,24 @@ export const GridBlock: ComponentConfig<GribBlockProps> = {
   },
   defaultProps: {
     columns: 3,
+    rows: 1,
     gap: 4,
     grid: [],
   },
-  render: ({ columns, gap, grid: Grid }) => {
+  render: ({ columns, rows, gap, grid: Grid }) => {
     const columnsClass = mapColumnsToGridClass(columns);
+    const rowsClass = mapRowsToGridClass(rows);
     const gapClass = mapGapToGridClass(gap);
 
     return (
       <section>
-        <Grid className={`grid ${columnsClass} ${gapClass}`} />
+        <Grid className={`grid ${columnsClass} ${rowsClass} ${gapClass}`} />
       </section>
     );
   },
 };
 
 function mapColumnsToGridClass(columns: number) {
-  // We need to map this to explicit Tailwind classes in order for the Tailwind JIT compiler to pick it up
-
   let columnsClass = 'grid-cols-3';
 
   switch (columns) {
@@ -85,6 +91,51 @@ function mapColumnsToGridClass(columns: number) {
   }
 
   return columnsClass;
+}
+
+function mapRowsToGridClass(rows: number) {
+  let rowsClass = 'grid-rows-1';
+
+  switch (rows) {
+    case 1:
+      rowsClass = 'grid-rows-1';
+      break;
+    case 2:
+      rowsClass = 'grid-rows-2';
+      break;
+    case 3:
+      rowsClass = 'grid-rows-3';
+      break;
+    case 4:
+      rowsClass = 'grid-rows-4';
+      break;
+    case 5:
+      rowsClass = 'grid-rows-5';
+      break;
+    case 6:
+      rowsClass = 'grid-rows-6';
+      break;
+    case 7:
+      rowsClass = 'grid-rows-7';
+      break;
+    case 8:
+      rowsClass = 'grid-rows-8';
+      break;
+    case 9:
+      rowsClass = 'grid-rows-9';
+      break;
+    case 10:
+      rowsClass = 'grid-rows-10';
+      break;
+    case 11:
+      rowsClass = 'grid-rows-11';
+      break;
+    case 12:
+      rowsClass = 'grid-rows-12';
+      break;
+  }
+
+  return rowsClass;
 }
 
 function mapGapToGridClass(gap: number) {
