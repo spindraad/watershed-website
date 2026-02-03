@@ -1,4 +1,4 @@
-type Props = {
+export type Props = {
   name:
     | 'heading-arrow'
     | 'heart'
@@ -6,7 +6,8 @@ type Props = {
     | 'right-caret'
     | 'left-caret-color-filled'
     | 'right-caret-color-filled'
-    | 'pointer';
+    | 'pointer'
+    | 'star';
   size?: 'small' | 'normal';
 };
 

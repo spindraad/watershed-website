@@ -2,6 +2,10 @@ import { type ComponentConfig } from '@puckeditor/core';
 import HeadingComponent, {
   Props as HeadingComponentProps,
 } from '~/components/Heading';
+import Icon, { Props as IconComponentProps } from '~/components/Icon';
+import HandDrawnLine, {
+  Props as HandDrawnLineComponentProps,
+} from '~/components/HandDrawnLine';
 
 const alignmentMap = {
   left: 'flex-start',
@@ -19,6 +23,33 @@ const textColorOptions = [
   { label: 'Wit', value: 'text-white' },
 ];
 
+const iconOptions: { label: string; value: IconComponentProps['name'] }[] = [
+  { label: 'Pijl', value: 'heading-arrow' },
+  { label: 'Hart', value: 'heart' },
+  { label: 'Linker pijltje', value: 'left-caret' },
+  { label: 'Rechter pijltje', value: 'right-caret' },
+  { label: 'Linker pijltje gekleurd', value: 'left-caret-color-filled' },
+  { label: 'Rechter pijltje gekleurd', value: 'right-caret-color-filled' },
+  { label: 'Wijzer', value: 'pointer' },
+  { label: 'Ster', value: 'star' },
+];
+
+const lineOptions: {
+  label: string;
+  value: HandDrawnLineComponentProps['drawStyle'];
+}[] = [
+  { label: 'Solid Thick 1', value: 'solid-thick-1' },
+  { label: 'Solid Thick 2', value: 'solid-thick-2' },
+  { label: 'Solid Thick 3', value: 'solid-thick-3' },
+  { label: 'Solid Thin 1', value: 'solid-thin-1' },
+  { label: 'Solid Thin 2', value: 'solid-thin-2' },
+  { label: 'Twirly Small', value: 'twirly-small' },
+  { label: 'Twirly Large', value: 'twirly-large' },
+  { label: 'Wonky', value: 'wonky' },
+  { label: 'Zigzag Thin', value: 'zigzag-thin' },
+  { label: 'Zigzag Thick', value: 'zigzag-thick' },
+];
+
 export type Props = {
   align: 'left' | 'center' | 'right';
   justify?: 'top' | 'center' | 'bottom';
@@ -26,6 +57,8 @@ export type Props = {
   level?: HeadingComponentProps['level'];
   padding?: string;
   textColor?: string;
+  icon?: string;
+  underline?: string;
 };
 
 // Since the page title is always level 1, we start at level 2.
@@ -70,6 +103,16 @@ export const HeadingBlock: ComponentConfig<Props> = {
       type: 'select',
       options: textColorOptions,
     },
+    icon: {
+      label: 'Icon (optioneel)',
+      type: 'select',
+      options: [{ label: 'Geen', value: '' }, ...iconOptions],
+    },
+    underline: {
+      label: 'Onderstreping (optioneel)',
+      type: 'select',
+      options: [{ label: 'Geen', value: '' }, ...lineOptions],
+    },
   },
   defaultProps: {
     align: 'left',
@@ -84,6 +127,8 @@ export const HeadingBlock: ComponentConfig<Props> = {
     align = 'left',
     justify = 'top',
     textColor = 'text-primary-700',
+    icon,
+    underline,
   }) {
     return (
       <div
@@ -95,9 +140,21 @@ export const HeadingBlock: ComponentConfig<Props> = {
           height: '100%',
         }}
       >
-        <HeadingComponent level={level} colorClass={textColor}>
-          {text}
-        </HeadingComponent>
+        <div className="flex items-center gap-2 mb-2">
+          <HeadingComponent level={level} colorClass={textColor}>
+            {text}
+          </HeadingComponent>
+          {icon ?
+            <Icon name={icon as IconComponentProps['name']} />
+          : null}
+        </div>
+        <div className="w-48">
+          {underline ?
+            <HandDrawnLine
+              drawStyle={underline as HandDrawnLineComponentProps['drawStyle']}
+            />
+          : null}
+        </div>
       </div>
     );
   },

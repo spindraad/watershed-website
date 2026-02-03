@@ -34,6 +34,7 @@ import {
   TalentProgramBlock,
   TalentProgramBlockProps,
 } from '~/config/blocks/TalentProgramBlock';
+import { LineBlock, LineBlockProps } from '~/config/blocks/LineBlock';
 
 export type Props = {
   HeadingBlock: HeadingBlockProps;
@@ -48,6 +49,7 @@ export type Props = {
   BorderBlock: BorderBlockProps;
   SpacingBlock: SpacingBlockProps;
   TalentProgramBlock: TalentProgramBlockProps;
+  LineBlock: LineBlockProps;
 };
 
 export type RootProps = {
@@ -86,6 +88,7 @@ export const config: Config<Props, RootProps> = {
         'LogoBlock',
         'BorderBlock',
         'TalentProgramBlock',
+        'LineBlock',
       ],
     },
   },
@@ -102,6 +105,7 @@ export const config: Config<Props, RootProps> = {
     BorderBlock,
     SpacingBlock,
     TalentProgramBlock,
+    LineBlock,
   },
   root: {
     fields: {
