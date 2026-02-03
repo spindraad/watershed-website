@@ -19,11 +19,15 @@ const lineStyleOptions: { label: string; value: DrawStyles }[] = [
 ];
 
 export const LineBlock: ComponentConfig<LineBlockProps> = {
+  label: 'Lijn',
   fields: {
     style: {
       type: 'select',
       options: lineStyleOptions,
     },
+  },
+  defaultProps: {
+    style: 'solid-thick-1',
   },
   render({ style }) {
     return <HandDrawnLine drawStyle={style} />;

@@ -35,6 +35,10 @@ import {
   TalentProgramBlockProps,
 } from '~/config/blocks/TalentProgramBlock';
 import { LineBlock, LineBlockProps } from '~/config/blocks/LineBlock';
+import {
+  ContainerBlock,
+  ContainerBlockProps,
+} from '~/config/blocks/ContainerBlock';
 
 export type Props = {
   HeadingBlock: HeadingBlockProps;
@@ -50,6 +54,7 @@ export type Props = {
   SpacingBlock: SpacingBlockProps;
   TalentProgramBlock: TalentProgramBlockProps;
   LineBlock: LineBlockProps;
+  ContainerBlock: ContainerBlockProps;
 };
 
 export type RootProps = {
@@ -75,7 +80,12 @@ export const config: Config<Props, RootProps> = {
     },
     layout: {
       title: 'Layout',
-      components: ['GridBlock', 'SpacingBlock'],
+      components: [
+        'GridBlock',
+        'SpacingBlock',
+        'ContainerBlock',
+        'BackgroundBlock',
+      ],
     },
     ui: {
       title: 'UI',
@@ -84,7 +94,6 @@ export const config: Config<Props, RootProps> = {
         'IllustrationBlock',
         'UpcomingEventsBlock',
         'MakersOverviewBlock',
-        'BackgroundBlock',
         'LogoBlock',
         'BorderBlock',
         'TalentProgramBlock',
@@ -106,6 +115,7 @@ export const config: Config<Props, RootProps> = {
     SpacingBlock,
     TalentProgramBlock,
     LineBlock,
+    ContainerBlock,
   },
   root: {
     fields: {

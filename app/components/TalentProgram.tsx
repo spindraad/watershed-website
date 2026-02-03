@@ -14,7 +14,7 @@ export default function TalentProgram({
   programLogoUrl,
   description,
   moreInfoUrl,
-  programLogoAltText,
+  programLogoAltText = 'Stichting Watershed talent programma',
 }: Props) {
   const { t } = useTranslation('TalentProgram');
 
@@ -22,11 +22,13 @@ export default function TalentProgram({
     <div className="@container">
       <div className="flex flex-col gap-6 @md:flex-row @md:gap-12 items-center">
         <div className="flex flex-col gap-4 items-start">
-          <img
-            className="mx-auto h-48 w-full object-contain"
-            src={`/afbeelding/${programLogoUrl}`}
-            alt={programLogoAltText || 'Talent Program Logo'}
-          />
+          {programLogoUrl ?
+            <img
+              className="mx-auto h-48 w-full object-contain"
+              src={`/afbeelding/${programLogoUrl}`}
+              alt={programLogoAltText}
+            />
+          : null}
 
           <div
             className="
