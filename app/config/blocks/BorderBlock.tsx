@@ -1,13 +1,8 @@
 import { ComponentConfig } from '@puckeditor/core';
 
 const borderImages = {
-  'ZigZag Horizontaal': {
-    src: 'zigzag-line-thin.svg',
-    orientation: 'horizontal',
-  },
   'ZigZag Verticaal': {
     src: 'zigzag-line-vertical.svg',
-    orientation: 'vertical',
   },
 } as const;
 
@@ -42,7 +37,7 @@ export type BorderBlockProps = {
 };
 
 export const BorderBlock: ComponentConfig<BorderBlockProps> = {
-  label: 'Rand / Lijn',
+  label: 'Verticale Lijn',
   fields: {
     image: {
       label: 'Patroon',
@@ -85,7 +80,7 @@ export const BorderBlock: ComponentConfig<BorderBlockProps> = {
     },
   },
   defaultProps: {
-    image: 'ZigZag Horizontaal',
+    image: 'ZigZag Verticaal',
     size: '100%',
     thickness: '16',
     repeat: 'round',
@@ -93,7 +88,7 @@ export const BorderBlock: ComponentConfig<BorderBlockProps> = {
     justify: 'center',
   },
   render: ({
-    image = 'ZigZag Horizontaal',
+    image = 'ZigZag Verticaal',
     size = '100%',
     thickness = '16',
     repeat = 'round',
@@ -105,10 +100,6 @@ export const BorderBlock: ComponentConfig<BorderBlockProps> = {
     }
 
     const imageConfig = borderImages[image as BorderImageKey];
-    const isHorizontal =
-      imageConfig?.orientation ?
-        imageConfig.orientation === 'horizontal'
-      : true;
 
     return (
       <div
@@ -123,11 +114,11 @@ export const BorderBlock: ComponentConfig<BorderBlockProps> = {
       >
         <div
           style={{
-            width: isHorizontal ? size : `${thickness}px`,
-            height: isHorizontal ? `${thickness}px` : size,
+            width: `${thickness}px`,
+            height: size,
             backgroundImage: `url(/illustraties/${imageConfig.src})`,
             backgroundRepeat: repeat,
-            backgroundSize: isHorizontal ? `auto 100%` : `100% auto`,
+            backgroundSize: `100% auto`,
           }}
         />
       </div>
