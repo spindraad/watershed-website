@@ -4,17 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5ac89870-b2f7-4580-bee0-4f8b2fb58e8f" name="WAT-1 Contact pagina" comment="WAT-1 Refactor grid and illustration components for improved responsiveness and structure. Also added a PageHeader block for most of the regular pages">
-      <change afterPath="$PROJECT_DIR$/app/config/fields/icon.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/iconen/location.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/iconen/mail.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/iconen/phone.svg" afterDir="false" />
+    <list default="true" id="5ac89870-b2f7-4580-bee0-4f8b2fb58e8f" name="WAT-1 Contact pagina" comment="Add new icons for location, mail, and phone; update icon selection in Heading and RichText blocks">
+      <change afterPath="$PROJECT_DIR$/app/config/blocks/ContactDetailsBlock.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/config/blocks/MapBlock.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/Icon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Icon.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/blocks/HeadingBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/blocks/HeadingBlock.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/blocks/RichTextBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/blocks/RichTextBlock.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/shoelace.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/shoelace.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/config/puck.config.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/puck.config.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/tailwind.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/tailwind.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <list id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Added box and line illustrations, and created the hand drawn box component" />
     <option name="SHOW_DIALOG" value="false" />
@@ -544,14 +541,6 @@
       <workItem from="1757113103308" duration="35000" />
       <workItem from="1760341367186" duration="338000" />
     </task>
-    <task id="LOCAL-00135" summary="The admin sidebar is now hidden for the page mutation routes.">
-      <option name="closed" value="true" />
-      <created>1744803292824</created>
-      <option name="number" value="00135" />
-      <option name="presentableId" value="LOCAL-00135" />
-      <option name="project" value="LOCAL" />
-      <updated>1744803292825</updated>
-    </task>
     <task id="LOCAL-00136" summary="Added new logo and favicon">
       <option name="closed" value="true" />
       <created>1744811941293</created>
@@ -990,7 +979,15 @@
       <updated>1770152459276</updated>
       <workItem from="1770148102089" />
     </task>
-    <option name="localTasksCounter" value="175" />
+    <task id="LOCAL-00175" summary="Add new icons for location, mail, and phone; update icon selection in Heading and RichText blocks">
+      <option name="closed" value="true" />
+      <created>1770155349946</created>
+      <option name="number" value="00175" />
+      <option name="presentableId" value="LOCAL-00175" />
+      <option name="project" value="LOCAL" />
+      <updated>1770155349946</updated>
+    </task>
+    <option name="localTasksCounter" value="176" />
     <option name="commitChanges" value="false" />
     <option name="branchNameFormat" value="${id}_${summary}" />
     <servers>
@@ -1066,7 +1063,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <confirmRemoveEmptyChangelist value="2" />
-    <MESSAGE value="Refactor root props structure and add migration support for title visibility" />
     <MESSAGE value="Fixed lint errors and returned editor header in Puck overrides so that we could have our functionality back" />
     <MESSAGE value="Ran lint" />
     <MESSAGE value="WAT-50 Created Maker summary profile blocks" />
@@ -1091,7 +1087,8 @@
     <MESSAGE value="WAT-135 Added footer to the site" />
     <MESSAGE value="WAT-1 Added a little bit of bottom margin to the footer to make it visually a bit cleaner." />
     <MESSAGE value="WAT-1 Refactor grid and illustration components for improved responsiveness and structure. Also added a PageHeader block for most of the regular pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="WAT-1 Refactor grid and illustration components for improved responsiveness and structure. Also added a PageHeader block for most of the regular pages" />
+    <MESSAGE value="Add new icons for location, mail, and phone; update icon selection in Heading and RichText blocks" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add new icons for location, mail, and phone; update icon selection in Heading and RichText blocks" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

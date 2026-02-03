@@ -43,6 +43,11 @@ import {
   PageHeaderBlockProps,
   PageHeaderBlock,
 } from '~/config/blocks/PageHeaderBlock';
+import {
+  ContactDetailsBlockProps,
+  ContactDetailsBlock,
+} from '~/config/blocks/ContactDetailsBlock';
+import { MapBlockProps, MapBlock } from '~/config/blocks/MapBlock';
 
 export type Props = {
   HeadingBlock: HeadingBlockProps;
@@ -60,6 +65,8 @@ export type Props = {
   LineBlock: LineBlockProps;
   ContainerBlock: ContainerBlockProps;
   PageHeaderBlock: PageHeaderBlockProps;
+  ContactDetailsBlock: ContactDetailsBlockProps;
+  MapBlock: MapBlockProps;
 };
 
 export type RootProps = {
@@ -104,6 +111,8 @@ export const config: Config<Props, RootProps> = {
         'TalentProgramBlock',
         'LineBlock',
         'PageHeaderBlock',
+        'ContactDetailsBlock',
+        'MapBlock',
       ],
     },
   },
@@ -123,6 +132,8 @@ export const config: Config<Props, RootProps> = {
     LineBlock,
     ContainerBlock,
     PageHeaderBlock,
+    ContactDetailsBlock,
+    MapBlock,
   },
   root: {
     fields: {
