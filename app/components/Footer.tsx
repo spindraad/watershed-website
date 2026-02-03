@@ -6,7 +6,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="w-full max-w-screen-xl mx-auto px-8 flex flex-col gap-12">
+    <footer className="w-full max-w-screen-xl mx-auto px-8 mb-4 flex flex-col gap-12">
       <div className="self-end w-36">
         <HandDrawnLine drawStyle="twirly-small" />
       </div>

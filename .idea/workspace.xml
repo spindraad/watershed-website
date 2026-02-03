@@ -4,8 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="917fffe3-5cb4-4a76-8c51-7b47e6690107" name="WAT-135 Footer" comment="WAT-135" />
+    <list default="true" id="5ac89870-b2f7-4580-bee0-4f8b2fb58e8f" name="WAT-1 Contact pagina" comment="WAT-1">
+      <change beforePath="$PROJECT_DIR$/app/components/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Footer.tsx" afterDir="false" />
+    </list>
     <list id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Added box and line illustrations, and created the hand drawn box component" />
+    <list id="917fffe3-5cb4-4a76-8c51-7b47e6690107" name="WAT-135 Footer" comment="WAT-135">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <list id="beb23f38-d23a-47e7-ba80-27679dd64e74" name="WAT-54 CLI" comment="WAT-54 CLI" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,8 +64,8 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="wat-135_footer" />
-                    <option name="lastUsedInstant" value="1770096233" />
+                    <option name="branchName" value="wat-1_contact-pagina" />
+                    <option name="lastUsedInstant" value="1770148102" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="dev" />
@@ -167,7 +173,7 @@
     "Vitest.validateLogin.executor": "Run",
     "Vitest.validateLogin.should return success: false when emailaddress is invalid.executor": "Run",
     "Vitest.validateLogin.should return success: false when emailaddress is missing.executor": "Run",
-    "git-widget-placeholder": "dev",
+    "git-widget-placeholder": "wat-1__contact-pagina",
     "javascript.nodejs.core.library.configured.version": "24.11.0",
     "javascript.nodejs.core.library.typings.version": "24.10.9",
     "last_opened_file_path": "/Users/lody/dev/projects/watershed-website/app/routes/_index",
@@ -194,7 +200,7 @@
     "npm.typecheck.executor": "Run",
     "prettierjs.PrettierConfiguration.Package": "/Users/lody/dev/projects/watershed-website/node_modules/prettier",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "tasks.servers",
+    "settings.editor.selected.configurable": "tasks",
     "spentTimePerTaskStorage.store": "{}",
     "tasks.close.task.update.state.enabled": "true",
     "tasks.open.task.update.state.enabled": "true",
@@ -210,13 +216,13 @@
     "timeTracker.isRunning": "true",
     "timeTracker.isScheduledEnabled": "false",
     "timeTracker.isWhenProjectClosedEnabled": "false",
-    "timeTracker.issueId": "WAT-135",
-    "timeTracker.issueIdReadable": "WAT-135",
-    "timeTracker.pausedTime": "1",
+    "timeTracker.issueId": "WAT-1",
+    "timeTracker.issueIdReadable": "WAT-1",
+    "timeTracker.pausedTime": "2",
     "timeTracker.query": "",
     "timeTracker.recordedTime": "0",
     "timeTracker.scheduledPeriod": "19:00:0",
-    "timeTracker.startTime": "9543053",
+    "timeTracker.startTime": "179032",
     "timeTracker.timeInMills": "0",
     "timeTracker.type": "Development",
     "ts.external.directory.path": "/Users/lody/dev/projects/watershed-website/node_modules/typescript/lib",
@@ -266,7 +272,7 @@
       <command value="npm run db:push" />
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.Debug in Chrome">
+  <component name="RunManager" selected="Compound.Develop">
     <configuration name="Develop" type="CompoundRunConfigurationType">
       <toRun name="Dev" type="js.build_tools.npm" />
       <toRun name="Storybook" type="js.build_tools.npm" />
@@ -445,8 +451,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-PS-253.29346.257" />
-        <option value="bundled-php-predefined-a98d8de5180a-0e0d91225499-com.jetbrains.php.sharedIndexes-PS-253.29346.257" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-PS-253.30387.85" />
+        <option value="bundled-php-predefined-a98d8de5180a-0e0d91225499-com.jetbrains.php.sharedIndexes-PS-253.30387.85" />
       </set>
     </attachedChunks>
   </component>
@@ -533,14 +539,6 @@
       <workItem from="1751983260331" duration="154000" />
       <workItem from="1757113103308" duration="35000" />
       <workItem from="1760341367186" duration="338000" />
-    </task>
-    <task id="LOCAL-00134" summary="Puck editor is now full height for pages">
-      <option name="closed" value="true" />
-      <created>1744797771323</created>
-      <option name="number" value="00134" />
-      <option name="presentableId" value="LOCAL-00134" />
-      <option name="project" value="LOCAL" />
-      <updated>1744797771323</updated>
     </task>
     <task id="LOCAL-00135" summary="The admin sidebar is now hidden for the page mutation routes.">
       <option name="closed" value="true" />
@@ -948,10 +946,9 @@
       <updated>1769984634881</updated>
       <workItem from="1769980862009" />
     </task>
-    <task active="true" id="WAT-53" summary="Talent">
+    <task id="WAT-53" summary="Talent">
       <branch name="release/WAT-49_Homepage" repository="$PROJECT_DIR$" original="true" />
       <branch name="wat-53_talent" repository="$PROJECT_DIR$" />
-      <changelist id="" name="WAT-53 Talent" comment="WAT-53" />
       <created>1760305703455</created>
       <option name="issue" value="true" />
       <url>https://youtrack.spindraad.dev/issue/WAT-53</url>
@@ -962,7 +959,7 @@
       <workItem from="1769985953869" />
       <workItem from="1770086706523" />
     </task>
-    <task active="true" id="WAT-135" summary="Footer">
+    <task id="WAT-135" summary="Footer">
       <branch name="dev" repository="$PROJECT_DIR$" original="true" />
       <branch name="wat-135_footer" repository="$PROJECT_DIR$" />
       <changelist id="917fffe3-5cb4-4a76-8c51-7b47e6690107" name="WAT-135 Footer" comment="WAT-135" />
@@ -972,11 +969,26 @@
       <option name="number" value="135" />
       <option name="presentableId" value="WAT-135" />
       <option name="project" value="WAT" />
-      <updated>1770096233452</updated>
+      <updated>1770148102073</updated>
       <workItem from="1770096233890" />
+      <workItem from="1770147943493" />
+    </task>
+    <task active="true" id="WAT-1" summary="Contact pagina">
+      <branch name="dev" repository="$PROJECT_DIR$" original="true" />
+      <branch name="wat-1_contact-pagina" repository="$PROJECT_DIR$" />
+      <changelist id="5ac89870-b2f7-4580-bee0-4f8b2fb58e8f" name="WAT-1 Contact pagina" comment="WAT-1" />
+      <created>1760299922086</created>
+      <option name="issue" value="true" />
+      <url>https://youtrack.spindraad.dev/issue/WAT-1</url>
+      <option name="number" value="1" />
+      <option name="presentableId" value="WAT-1" />
+      <option name="project" value="WAT" />
+      <updated>1770148102073</updated>
+      <workItem from="1770148102089" />
     </task>
     <option name="localTasksCounter" value="175" />
     <option name="commitChanges" value="false" />
+    <option name="branchNameFormat" value="${id}_${summary}" />
     <servers>
       <YouTrack url="https://youtrack.spindraad.dev">
         <commitMessageFormat>{id}</commitMessageFormat>
