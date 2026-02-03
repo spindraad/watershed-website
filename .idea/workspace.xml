@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e764ea00-2466-4ba5-bf75-ded13fd6e096" name="WAT-53 Talent" comment="WAT-53 Add LineBlock component and integrate HandDrawnLine and Icon in HeadingBlock">
-      <change afterPath="$PROJECT_DIR$/app/config/blocks/ContainerBlock.tsx" afterDir="false" />
+    <list default="true" id="e764ea00-2466-4ba5-bf75-ded13fd6e096" name="WAT-53 Talent" comment="WAT-53 Add ContainerBlock component and extend GridBlock with rows configuration">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/TalentProgram.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/TalentProgram.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/blocks/GridBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/blocks/GridBlock.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/blocks/LineBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/blocks/LineBlock.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/blocks/SpacingBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/blocks/SpacingBlock.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/blocks/TalentProgramBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/blocks/TalentProgramBlock.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/puck.config.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/puck.config.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/blocks/BorderBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/blocks/BorderBlock.tsx" afterDir="false" />
     </list>
     <list id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Added box and line illustrations, and created the hand drawn box component" />
     <list id="beb23f38-d23a-47e7-ba80-27679dd64e74" name="WAT-54 CLI" comment="WAT-54 CLI" />
@@ -979,7 +973,7 @@
       <option name="number" value="53" />
       <option name="presentableId" value="WAT-53" />
       <option name="project" value="WAT" />
-      <updated>1770091596299</updated>
+      <updated>1770093648071</updated>
       <workItem from="1769985953869" />
       <workItem from="1770086706523" />
     </task>
@@ -1058,7 +1052,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <confirmRemoveEmptyChangelist value="2" />
-    <MESSAGE value="Add BackgroundBlock component and update title structure in page configuration" />
     <MESSAGE value="ide" />
     <MESSAGE value="Updated node version and updated all dependencies that have no major version update. Then update Puck to 0.20 in preparation for 0.21" />
     <MESSAGE value="Updated Puck to 0.21 and refactored all imports and usePuck calls" />
@@ -1083,7 +1076,8 @@
     <MESSAGE value="WAT-53 Started working on talent program component" />
     <MESSAGE value="WAT-53 Created component and block for the talent program details" />
     <MESSAGE value="WAT-53 Add LineBlock component and integrate HandDrawnLine and Icon in HeadingBlock" />
-    <option name="LAST_COMMIT_MESSAGE" value="WAT-53 Add LineBlock component and integrate HandDrawnLine and Icon in HeadingBlock" />
+    <MESSAGE value="WAT-53 Add ContainerBlock component and extend GridBlock with rows configuration" />
+    <option name="LAST_COMMIT_MESSAGE" value="WAT-53 Add ContainerBlock component and extend GridBlock with rows configuration" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
