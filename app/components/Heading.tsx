@@ -59,7 +59,7 @@ export default function Heading({
     }
   }
 
-  const classes = `${bold ? 'font-bold' : ''} ${textSize} ${colorClass}`;
+  const classes = `m-0 ${bold ? 'font-bold' : ''} ${textSize} ${colorClass}`;
 
   return (
     <Tag className={classes}>{wrapUppercaseLetters(children, colorClass)}</Tag>
