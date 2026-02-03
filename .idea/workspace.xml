@@ -4,14 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5ac89870-b2f7-4580-bee0-4f8b2fb58e8f" name="WAT-1 Contact pagina" comment="WAT-1">
-      <change beforePath="$PROJECT_DIR$/app/components/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Footer.tsx" afterDir="false" />
+    <list default="true" id="5ac89870-b2f7-4580-bee0-4f8b2fb58e8f" name="WAT-1 Contact pagina" comment="WAT-1 Added a little bit of bottom margin to the footer to make it visually a bit cleaner.">
+      <change afterPath="$PROJECT_DIR$/app/config/blocks/PageHeaderBlock.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/config/fields/illustration.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/blocks/GridBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/blocks/GridBlock.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/blocks/HeadingBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/blocks/HeadingBlock.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/blocks/IllustrationBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/blocks/IllustrationBlock.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/puck.config.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/puck.config.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/$/_pages.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/$/_pages.tsx" afterDir="false" />
     </list>
     <list id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Added box and line illustrations, and created the hand drawn box component" />
-    <list id="917fffe3-5cb4-4a76-8c51-7b47e6690107" name="WAT-135 Footer" comment="WAT-135">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list id="917fffe3-5cb4-4a76-8c51-7b47e6690107" name="WAT-135 Footer" comment="WAT-135" />
     <list id="beb23f38-d23a-47e7-ba80-27679dd64e74" name="WAT-54 CLI" comment="WAT-54 CLI" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -254,11 +258,11 @@
       <recent name="$PROJECT_DIR$/app/routes/api_" />
     </key>
     <key name="es6.move.members.recent.items">
+      <recent name="$PROJECT_DIR$/app/config/fields/illustration.ts" />
       <recent name="$PROJECT_DIR$/app/types/Input.ts" />
       <recent name="$PROJECT_DIR$/app/types/Content.ts" />
       <recent name="$PROJECT_DIR$/app/config/blocks/RichTextBlock.tsx" />
       <recent name="$PROJECT_DIR$/prisma/seed/_content.ts" />
-      <recent name="$PROJECT_DIR$/prisma/seed/_users.ts" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -983,7 +987,7 @@
       <option name="number" value="1" />
       <option name="presentableId" value="WAT-1" />
       <option name="project" value="WAT" />
-      <updated>1770148102073</updated>
+      <updated>1770148362800</updated>
       <workItem from="1770148102089" />
     </task>
     <option name="localTasksCounter" value="175" />
@@ -1062,7 +1066,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <confirmRemoveEmptyChangelist value="2" />
-    <MESSAGE value="Updated Puck to 0.21 and refactored all imports and usePuck calls" />
     <MESSAGE value="Started refactoring the rich text editor component by dropping tinymce and picking Puck's own shipped editor" />
     <MESSAGE value="Refactor root props structure and add migration support for title visibility" />
     <MESSAGE value="Fixed lint errors and returned editor header in Puck overrides so that we could have our functionality back" />
@@ -1087,7 +1090,8 @@
     <MESSAGE value="WAT-53 Add ContainerBlock component and extend GridBlock with rows configuration" />
     <MESSAGE value="WAT-53 BorderBlock is now purely for vertical lines" />
     <MESSAGE value="WAT-135 Added footer to the site" />
-    <option name="LAST_COMMIT_MESSAGE" value="WAT-135 Added footer to the site" />
+    <MESSAGE value="WAT-1 Added a little bit of bottom margin to the footer to make it visually a bit cleaner." />
+    <option name="LAST_COMMIT_MESSAGE" value="WAT-1 Added a little bit of bottom margin to the footer to make it visually a bit cleaner." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

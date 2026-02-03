@@ -42,51 +42,53 @@ export const GridBlock: ComponentConfig<GribBlockProps> = {
 
     return (
       <section>
-        <Grid className={`grid ${columnsClass} ${rowsClass} ${gapClass}`} />
+        <Grid
+          className={`grid grid-cols-1 ${columnsClass} ${rowsClass} ${gapClass}`}
+        />
       </section>
     );
   },
 };
 
 function mapColumnsToGridClass(columns: number) {
-  let columnsClass = 'grid-cols-3';
+  let columnsClass = 'sm:grid-cols-3';
 
   switch (columns) {
     case 1:
-      columnsClass = 'grid-cols-1';
+      columnsClass = 'sm:grid-cols-1';
       break;
     case 2:
-      columnsClass = 'grid-cols-2';
+      columnsClass = 'sm:grid-cols-2';
       break;
     case 3:
-      columnsClass = 'grid-cols-3';
+      columnsClass = 'sm:grid-cols-3';
       break;
     case 4:
-      columnsClass = 'grid-cols-4';
+      columnsClass = 'sm:grid-cols-4';
       break;
     case 5:
-      columnsClass = 'grid-cols-5';
+      columnsClass = 'sm:grid-cols-5';
       break;
     case 6:
-      columnsClass = 'grid-cols-6';
+      columnsClass = 'sm:grid-cols-6';
       break;
     case 7:
-      columnsClass = 'grid-cols-7';
+      columnsClass = 'sm:grid-cols-7';
       break;
     case 8:
-      columnsClass = 'grid-cols-8';
+      columnsClass = 'sm:grid-cols-8';
       break;
     case 9:
-      columnsClass = 'grid-cols-9';
+      columnsClass = 'sm:grid-cols-9';
       break;
     case 10:
-      columnsClass = 'grid-cols-10';
+      columnsClass = 'sm:grid-cols-10';
       break;
     case 11:
-      columnsClass = 'grid-cols-11';
+      columnsClass = 'sm:grid-cols-11';
       break;
     case 12:
-      columnsClass = 'grid-cols-12';
+      columnsClass = 'sm:grid-cols-12';
       break;
   }
 

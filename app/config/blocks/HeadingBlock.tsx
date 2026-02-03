@@ -132,12 +132,10 @@ export const HeadingBlock: ComponentConfig<Props> = {
   }) {
     return (
       <div
+        className="flex flex-col h-full"
         style={{
-          display: 'flex',
-          flexDirection: 'column',
           alignItems: alignmentMap[align],
           justifyContent: justifyMap[justify],
-          height: '100%',
         }}
       >
         <div className="flex items-center gap-2 mb-2">

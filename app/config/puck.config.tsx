@@ -29,7 +29,7 @@ import {
 import { LogoBlock, LogoBlockProps } from '~/config/blocks/LogoBlock';
 import { BorderBlock, BorderBlockProps } from '~/config/blocks/BorderBlock';
 import { SpacingBlock, SpacingBlockProps } from '~/config/blocks/SpacingBlock';
-import { colorField, ColorField } from '~/config/fields/color';
+import { colorField, ColorField, getColorHex } from '~/config/fields/color';
 import {
   TalentProgramBlock,
   TalentProgramBlockProps,
@@ -39,6 +39,10 @@ import {
   ContainerBlock,
   ContainerBlockProps,
 } from '~/config/blocks/ContainerBlock';
+import {
+  PageHeaderBlockProps,
+  PageHeaderBlock,
+} from '~/config/blocks/PageHeaderBlock';
 
 export type Props = {
   HeadingBlock: HeadingBlockProps;
@@ -55,6 +59,7 @@ export type Props = {
   TalentProgramBlock: TalentProgramBlockProps;
   LineBlock: LineBlockProps;
   ContainerBlock: ContainerBlockProps;
+  PageHeaderBlock: PageHeaderBlockProps;
 };
 
 export type RootProps = {
@@ -98,6 +103,7 @@ export const config: Config<Props, RootProps> = {
         'BorderBlock',
         'TalentProgramBlock',
         'LineBlock',
+        'PageHeaderBlock',
       ],
     },
   },
@@ -116,6 +122,7 @@ export const config: Config<Props, RootProps> = {
     TalentProgramBlock,
     LineBlock,
     ContainerBlock,
+    PageHeaderBlock,
   },
   root: {
     fields: {
@@ -166,14 +173,21 @@ export const config: Config<Props, RootProps> = {
         description: '',
       },
     },
-    render({ children, title, titleIsHidden }) {
+    render({ children, title, titleIsHidden, backgroundColor }) {
       return (
-        <div className="flex flex-col gap-4 puck-root-component">
-          {!titleIsHidden && title ?
-            <Heading level={1}>{title}</Heading>
-          : null}
-          {children}
-        </div>
+        <>
+          <style
+            dangerouslySetInnerHTML={{
+              __html: `body { background-color: ${getColorHex(backgroundColor)} !important; }`,
+            }}
+          />
+          <div className="flex flex-col gap-4 puck-root-component">
+            {!titleIsHidden && title ?
+              <Heading level={1}>{title}</Heading>
+            : null}
+            {children}
+          </div>
+        </>
       );
     },
   },

@@ -1,24 +1,12 @@
 import { CSSProperties } from 'react';
 import { ComponentConfig } from '@puckeditor/core';
 import { Link } from 'react-router';
-
-const illustrations = {
-  'Figuur met popbeker': 'figuur met popbeker kopie.png',
-  Ganzeveer: 'ganzeveer kopie.png',
-  'Hak met kauwgum': 'hak met kauwgum kopie.png',
-  'Mond met potlood': 'mond met potlood.png',
-  'Oor in hand': 'oor in hand.png',
-  'Potlood door hart': 'potlood door hart.png',
-  'Vogel met potlood en nest': 'vogel met potlood en nest.png',
-  'Schreeuw (geanimeerd)': 'mouth-screaming-optimized.gif',
-  Kip: 'kip.png',
-  'Radio Stille Willie': 'radio-stille-willie.svg',
-  'De Zinnen Van Baerwaldt': 'de-zinnen-van-baerwaldt.svg',
-  'Waar ik het nog ... over wil hebben': 'waar-ik-het-nog-over-wil-hebben.svg',
-} as const;
-
-// Extract the keys as a union type
-type IllustrationKey = keyof typeof illustrations;
+import {
+  IllustrationKey,
+  illustrations,
+  illustrationField,
+  illustrationAltTextField,
+} from '~/config/fields/illustration';
 
 const objectFitOptions = {
   cover:
@@ -45,7 +33,8 @@ const justifyMap = {
 };
 
 export type IllustrationBlockProps = {
-  illustration?: IllustrationKey;
+  illustration: IllustrationKey;
+  illustrationAltText: string;
   image: {
     size?: {
       width?: string;
@@ -72,14 +61,8 @@ export type IllustrationBlockProps = {
 export const IllustrationBlock: ComponentConfig<IllustrationBlockProps> = {
   label: 'Illustraties',
   fields: {
-    illustration: {
-      label: 'Illustratie',
-      type: 'select',
-      options: Object.keys(illustrations).map((key) => ({
-        label: key,
-        value: key,
-      })),
-    },
+    illustration: illustrationField,
+    illustrationAltText: illustrationAltTextField,
     image: {
       label: 'Afbeelding',
       type: 'object',
@@ -187,6 +170,7 @@ export const IllustrationBlock: ComponentConfig<IllustrationBlockProps> = {
   },
   defaultProps: {
     illustration: 'Figuur met popbeker',
+    illustrationAltText: 'Illustratie',
     image: {
       size: {
         width: '100%',
@@ -208,7 +192,7 @@ export const IllustrationBlock: ComponentConfig<IllustrationBlockProps> = {
       justify: 'center',
     },
   },
-  render: ({ illustration, image, wrapper, link }) => {
+  render: ({ illustration, illustrationAltText, image, wrapper, link }) => {
     const imageSrc = illustrations[illustration as IllustrationKey];
     const width = image?.size?.width || '100%';
     const height = image?.size?.height || 'auto';
@@ -240,7 +224,7 @@ export const IllustrationBlock: ComponentConfig<IllustrationBlockProps> = {
     const imageElement = (
       <img
         src={`/illustraties/${imageSrc}`}
-        alt={illustration}
+        alt={illustrationAltText}
         style={{
           width,
           height,
