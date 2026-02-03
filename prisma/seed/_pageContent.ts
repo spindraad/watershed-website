@@ -40,10 +40,6 @@ export const home: SeedContent = {
               type: 'UpcomingEventsBlock',
               props: {
                 id: 'UpcomingEventsBlock-c43602a2-74b6-47c8-a9c3-431f18cfd99a',
-                alignment: {
-                  horizontal: 'center',
-                  vertical: 'center',
-                },
               },
             },
           ],
@@ -84,10 +80,6 @@ export const home: SeedContent = {
               type: 'UpcomingEventsBlock',
               props: {
                 id: 'UpcomingEventsBlock-c43602a2-74b6-47c8-a9c3-431f18cfd99a',
-                alignment: {
-                  horizontal: 'center',
-                  vertical: 'center',
-                },
               },
             },
           ],
@@ -128,10 +120,6 @@ export const home: SeedContent = {
               type: 'UpcomingEventsBlock',
               props: {
                 id: 'UpcomingEventsBlock-c43602a2-74b6-47c8-a9c3-431f18cfd99a',
-                alignment: {
-                  horizontal: 'center',
-                  vertical: 'center',
-                },
               },
             },
           ],
