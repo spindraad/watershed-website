@@ -8,7 +8,7 @@ export const TalentProgramBlock: ComponentConfig<TalentProgramBlockProps> = {
   fields: {
     programLogoUrl: { type: 'text', label: 'Programma Logo URL' },
     programLogoAltText: { type: 'text', label: 'Alt-tekst voor het logo' },
-    description: { type: 'text', label: 'Beschrijving' },
+    description: { type: 'textarea', label: 'Beschrijving' },
     moreInfoUrl: { type: 'text', label: 'Meer Informatie URL' },
   },
   render(props) {

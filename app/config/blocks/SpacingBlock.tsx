@@ -12,11 +12,12 @@ export const SpacingBlock: ComponentConfig<SpacingBlockProps> = {
       type: 'text',
     },
   },
+  defaultProps: {
+    height: '5rem',
+  },
   render({ height, editMode }) {
-    const classes = `
-      w-full
-      ${editMode ? 'border-8 border-dashed border-gray-400 grid place-content-center' : ''}
-    `;
+    const classes = `w-full ${editMode ? 'border-8 border-dashed border-gray-400 grid place-content-center' : ''}`;
+
     return (
       <div className={classes} style={{ height }}>
         {editMode ? 'Pas mijn hoogte aan' : null}
