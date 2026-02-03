@@ -24,6 +24,7 @@ import Heading from '~/components/Heading';
 import { getMenuItems } from '~/models/menu.server';
 import { NavigationMenuItem } from '~/components/NavigationMenu';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import Footer from '~/components/Footer';
 
 export const links: LinksFunction = () => [
   {
@@ -81,6 +82,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           <ShoelaceContext.Provider value={shoelace}>
             <Header user={user} menuItems={data?.menuItems} />
             {children}
+            <Footer />
           </ShoelaceContext.Provider>
         </QueryClientProvider>
         <ScrollRestoration />

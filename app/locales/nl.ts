@@ -36,6 +36,8 @@ import { nl as MakerOverviewTranslations } from '~/components/MakersOverview.tra
 export const { MakersOverview } = MakerOverviewTranslations;
 import { nl as TalentProgramTranslations } from '~/components/TalentProgram.translations';
 export const { TalentProgram } = TalentProgramTranslations;
+import { nl as FooterTranslations } from '~/components/Footer.translations';
+export const { Footer } = FooterTranslations;
 
 export const common = {
   title: 'Hallo Wereld!',

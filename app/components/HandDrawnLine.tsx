@@ -106,12 +106,13 @@ const drawStyles: DrawProperties = {
 
 export type Props = {
   drawStyle: DrawStyles;
+  classes?: string;
 };
 
-export default function HandDrawnLine({ drawStyle }: Props) {
+export default function HandDrawnLine({ drawStyle, classes = '' }: Props) {
   return (
     <div
-      className="w-full h-4 border-t"
+      className={`w-full h-4 border-t ${classes}`}
       style={{
         borderImageSource: drawStyles[drawStyle].borderImage,
         borderImageSlice: drawStyles[drawStyle].imageSlice,

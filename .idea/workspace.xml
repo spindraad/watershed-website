@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e764ea00-2466-4ba5-bf75-ded13fd6e096" name="WAT-53 Talent" comment="WAT-53 BorderBlock is now purely for vertical lines">
-      <change beforePath="$PROJECT_DIR$/prisma/seed/_pageContent.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/seed/_pageContent.ts" afterDir="false" />
+    <list default="true" id="917fffe3-5cb4-4a76-8c51-7b47e6690107" name="WAT-135 Footer" comment="WAT-135">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/HandDrawnLine.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/HandDrawnLine.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/locales/en.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/en.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/locales/nl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/nl.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/root.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/root.tsx" afterDir="false" />
     </list>
     <list id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Added box and line illustrations, and created the hand drawn box component" />
     <list id="beb23f38-d23a-47e7-ba80-27679dd64e74" name="WAT-54 CLI" comment="WAT-54 CLI" />
@@ -25,7 +29,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="release/WAT-49_Homepage" />
+        <entry key="$PROJECT_DIR$" value="dev" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -60,16 +64,12 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="wat-53_talent" />
-                    <option name="lastUsedInstant" value="1769985954" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="release/WAT-49_Homepage" />
-                    <option name="lastUsedInstant" value="1769951816" />
+                    <option name="branchName" value="wat-135_footer" />
+                    <option name="lastUsedInstant" value="1770096233" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="dev" />
-                    <option name="lastUsedInstant" value="1769951809" />
+                    <option name="lastUsedInstant" value="1770096159" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="main" />
@@ -173,7 +173,7 @@
     "Vitest.validateLogin.executor": "Run",
     "Vitest.validateLogin.should return success: false when emailaddress is invalid.executor": "Run",
     "Vitest.validateLogin.should return success: false when emailaddress is missing.executor": "Run",
-    "git-widget-placeholder": "wat-53__talent",
+    "git-widget-placeholder": "wat-135__footer",
     "javascript.nodejs.core.library.configured.version": "24.11.0",
     "javascript.nodejs.core.library.typings.version": "24.10.9",
     "last_opened_file_path": "/Users/lody/dev/projects/watershed-website/app/routes/_index",
@@ -216,14 +216,14 @@
     "timeTracker.isRunning": "true",
     "timeTracker.isScheduledEnabled": "false",
     "timeTracker.isWhenProjectClosedEnabled": "false",
-    "timeTracker.issueId": "WAT-53",
-    "timeTracker.issueIdReadable": "WAT-53",
-    "timeTracker.pausedTime": "475529",
+    "timeTracker.issueId": "WAT-135",
+    "timeTracker.issueIdReadable": "WAT-135",
+    "timeTracker.pausedTime": "1",
     "timeTracker.query": "",
-    "timeTracker.recordedTime": "1",
+    "timeTracker.recordedTime": "0",
     "timeTracker.scheduledPeriod": "19:00:0",
-    "timeTracker.startTime": "33358",
-    "timeTracker.timeInMills": "87925",
+    "timeTracker.startTime": "9543053",
+    "timeTracker.timeInMills": "0",
     "timeTracker.type": "Development",
     "ts.external.directory.path": "/Users/lody/dev/projects/watershed-website/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
@@ -539,14 +539,6 @@
       <workItem from="1751983260331" duration="154000" />
       <workItem from="1757113103308" duration="35000" />
       <workItem from="1760341367186" duration="338000" />
-    </task>
-    <task id="LOCAL-00133" summary="The page content is now more strictly validated, because we now transform the slug on multiple levels.">
-      <option name="closed" value="true" />
-      <created>1744797230848</created>
-      <option name="number" value="00133" />
-      <option name="presentableId" value="LOCAL-00133" />
-      <option name="project" value="LOCAL" />
-      <updated>1744797230848</updated>
     </task>
     <task id="LOCAL-00134" summary="Puck editor is now full height for pages">
       <option name="closed" value="true" />
@@ -923,7 +915,7 @@
       <option name="number" value="51" />
       <option name="presentableId" value="WAT-51" />
       <option name="project" value="WAT" />
-      <updated>1769951878855</updated>
+      <updated>1770094115605</updated>
       <workItem from="1769900913449" />
     </task>
     <task id="WAT-132" summary="Add content blocks">
@@ -965,16 +957,29 @@
     <task active="true" id="WAT-53" summary="Talent">
       <branch name="release/WAT-49_Homepage" repository="$PROJECT_DIR$" original="true" />
       <branch name="wat-53_talent" repository="$PROJECT_DIR$" />
-      <changelist id="e764ea00-2466-4ba5-bf75-ded13fd6e096" name="WAT-53 Talent" comment="WAT-53" />
+      <changelist id="" name="WAT-53 Talent" comment="WAT-53" />
       <created>1760305703455</created>
       <option name="issue" value="true" />
       <url>https://youtrack.spindraad.dev/issue/WAT-53</url>
       <option name="number" value="53" />
       <option name="presentableId" value="WAT-53" />
       <option name="project" value="WAT" />
-      <updated>1770093796769</updated>
+      <updated>1770094155698</updated>
       <workItem from="1769985953869" />
       <workItem from="1770086706523" />
+    </task>
+    <task active="true" id="WAT-135" summary="Footer">
+      <branch name="dev" repository="$PROJECT_DIR$" original="true" />
+      <branch name="wat-135_footer" repository="$PROJECT_DIR$" />
+      <changelist id="917fffe3-5cb4-4a76-8c51-7b47e6690107" name="WAT-135 Footer" comment="WAT-135" />
+      <created>1769984739649</created>
+      <option name="issue" value="true" />
+      <url>https://youtrack.spindraad.dev/issue/WAT-135</url>
+      <option name="number" value="135" />
+      <option name="presentableId" value="WAT-135" />
+      <option name="project" value="WAT" />
+      <updated>1770096233452</updated>
+      <workItem from="1770096233890" />
     </task>
     <option name="localTasksCounter" value="175" />
     <option name="commitChanges" value="false" />
@@ -983,7 +988,7 @@
         <commitMessageFormat>{id}</commitMessageFormat>
         <option name="defaultSearch" value="Board Watershed Sprint Board: {Current sprint}" />
         <option name="preferredOpenTaskState">
-          <CustomTaskState id="Done" name="Done" />
+          <CustomTaskState id="In Progress" name="In Progress" />
         </option>
         <option name="shouldFormatCommitMessage" value="true" />
         <username>random</username>
