@@ -4,7 +4,7 @@ import HandDrawnBox from './HandDrawnBox';
 export default {
   title: 'Atoms/Hand Drawn Box',
   component: HandDrawnBox,
-  tags: ['components', 'ui'],
+  tags: ['components', 'ui-styling'],
   argTypes: {
     drawStyle: {
       control: {

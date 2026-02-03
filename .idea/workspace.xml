@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e764ea00-2466-4ba5-bf75-ded13fd6e096" name="WAT-53 Talent" comment="WAT-53">
+    <list default="true" id="e764ea00-2466-4ba5-bf75-ded13fd6e096" name="WAT-53 Talent" comment="WAT-53 Created component and block for the talent program details">
+      <change afterPath="$PROJECT_DIR$/app/config/blocks/LineBlock.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/iconen/star.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.storybook/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/.storybook/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/TalentProgram.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/TalentProgram.stories.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/TalentProgram.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/TalentProgram.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/blocks/TalentProgramBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/blocks/TalentProgramBlock.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/HandDrawnBox.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/HandDrawnBox.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/Heading.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Heading.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/Icon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Icon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/blocks/HeadingBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/blocks/HeadingBlock.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/config/puck.config.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/puck.config.tsx" afterDir="false" />
     </list>
     <list id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Added box and line illustrations, and created the hand drawn box component" />
@@ -150,101 +152,101 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Attach to Node.js/Chrome.Debug in Chrome.executor&quot;: &quot;Debug&quot;,
-    &quot;JavaScript Debug.Debug in Chrome.executor&quot;: &quot;Debug&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Node.js.run-puck-migration.js.executor&quot;: &quot;Debug&quot;,
-    &quot;Node.js.run-puck-migration.ts.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.OpenDatabaseViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;Vitest.All Tests.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.Content utilities.Parse a localised form data object into a localised value object.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.Content utilities.Retrieve the number of errors for each localised field.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.Content utilities.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.Validating page requests.executor&quot;: &quot;Debug&quot;,
-    &quot;Vitest.Validating the page.executor&quot;: &quot;Debug&quot;,
-    &quot;Vitest.convertDateToLocaleString.converts a date to a human readable format with shortened weekday.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.convertDateToLocaleString.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.parseURL.Return the correct url for \&quot;/over-ons/team\&quot;.executor&quot;: &quot;Debug&quot;,
-    &quot;Vitest.parseURL.Return the correct urls for \&quot;/contact\&quot;.executor&quot;: &quot;Debug&quot;,
-    &quot;Vitest.validateLogin.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.validateLogin.should return success: false when emailaddress is invalid.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.validateLogin.should return success: false when emailaddress is missing.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;wat-53__talent&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;24.11.0&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;24.10.9&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/lody/dev/projects/watershed-website/app/routes/_index&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.Dev.executor&quot;: &quot;Debug&quot;,
-    &quot;npm.Develop.executor&quot;: &quot;Run&quot;,
-    &quot;npm.Storybook.executor&quot;: &quot;Debug&quot;,
-    &quot;npm.db:generate.executor&quot;: &quot;Run&quot;,
-    &quot;npm.db:push.executor&quot;: &quot;Run&quot;,
-    &quot;npm.db:push:reset:seed.executor&quot;: &quot;Run&quot;,
-    &quot;npm.db:push:seed.executor&quot;: &quot;Run&quot;,
-    &quot;npm.dev:app.executor&quot;: &quot;Debug&quot;,
-    &quot;npm.dev:remix.executor&quot;: &quot;Debug&quot;,
-    &quot;npm.dev:storybook.executor&quot;: &quot;Debug&quot;,
-    &quot;npm.docker:start.executor&quot;: &quot;Run&quot;,
-    &quot;npm.migrate-puck-data -- --input tmp/db-dumps/pre-title-obj-migration.json --output tmp/db-migrations/post-title-obj-migration.json.executor&quot;: &quot;Debug&quot;,
-    &quot;npm.migrate-puck-data --input tmp/db-dumps/pre-title-obj-migration.json --output tmp/db-migrations/post-title-obj-migration.json.executor&quot;: &quot;Debug&quot;,
-    &quot;npm.typecheck.executor&quot;: &quot;Run&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/lody/dev/projects/watershed-website/node_modules/prettier&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;tasks.servers&quot;,
-    &quot;spentTimePerTaskStorage.store&quot;: &quot;{}&quot;,
-    &quot;tasks.close.task.update.state.enabled&quot;: &quot;true&quot;,
-    &quot;tasks.open.task.update.state.enabled&quot;: &quot;true&quot;,
-    &quot;timeTracker.activityTracker&quot;: &quot;null&quot;,
-    &quot;timeTracker.comment&quot;: &quot;&quot;,
-    &quot;timeTracker.inactivityPeriodInMills&quot;: &quot;600000&quot;,
-    &quot;timeTracker.isAutoTrackingEnable&quot;: &quot;false&quot;,
-    &quot;timeTracker.isAutoTrackingTemporaryDisabled&quot;: &quot;false&quot;,
-    &quot;timeTracker.isManualTrackingEnable&quot;: &quot;true&quot;,
-    &quot;timeTracker.isPaused&quot;: &quot;false&quot;,
-    &quot;timeTracker.isPostAfterCommitEnabled&quot;: &quot;false&quot;,
-    &quot;timeTracker.isPostedScheduled&quot;: &quot;true&quot;,
-    &quot;timeTracker.isRunning&quot;: &quot;true&quot;,
-    &quot;timeTracker.isScheduledEnabled&quot;: &quot;false&quot;,
-    &quot;timeTracker.isWhenProjectClosedEnabled&quot;: &quot;false&quot;,
-    &quot;timeTracker.issueId&quot;: &quot;WAT-53&quot;,
-    &quot;timeTracker.issueIdReadable&quot;: &quot;WAT-53&quot;,
-    &quot;timeTracker.pausedTime&quot;: &quot;6586760&quot;,
-    &quot;timeTracker.query&quot;: &quot;&quot;,
-    &quot;timeTracker.recordedTime&quot;: &quot;13&quot;,
-    &quot;timeTracker.scheduledPeriod&quot;: &quot;19:00:0&quot;,
-    &quot;timeTracker.startTime&quot;: &quot;145849685&quot;,
-    &quot;timeTracker.timeInMills&quot;: &quot;800193&quot;,
-    &quot;timeTracker.type&quot;: &quot;Development&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/lody/dev/projects/watershed-website/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Attach to Node.js/Chrome.Debug in Chrome.executor": "Debug",
+    "JavaScript Debug.Debug in Chrome.executor": "Debug",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Node.js.run-puck-migration.js.executor": "Debug",
+    "Node.js.run-puck-migration.ts.executor": "Debug",
+    "RunOnceActivity.OpenDatabaseViewOnStart": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Vitest.All Tests.executor": "Run",
+    "Vitest.Content utilities.Parse a localised form data object into a localised value object.executor": "Run",
+    "Vitest.Content utilities.Retrieve the number of errors for each localised field.executor": "Run",
+    "Vitest.Content utilities.executor": "Run",
+    "Vitest.Validating page requests.executor": "Debug",
+    "Vitest.Validating the page.executor": "Debug",
+    "Vitest.convertDateToLocaleString.converts a date to a human readable format with shortened weekday.executor": "Run",
+    "Vitest.convertDateToLocaleString.executor": "Run",
+    "Vitest.parseURL.Return the correct url for \"/over-ons/team\".executor": "Debug",
+    "Vitest.parseURL.Return the correct urls for \"/contact\".executor": "Debug",
+    "Vitest.validateLogin.executor": "Run",
+    "Vitest.validateLogin.should return success: false when emailaddress is invalid.executor": "Run",
+    "Vitest.validateLogin.should return success: false when emailaddress is missing.executor": "Run",
+    "git-widget-placeholder": "wat-53__talent",
+    "javascript.nodejs.core.library.configured.version": "24.11.0",
+    "javascript.nodejs.core.library.typings.version": "24.10.9",
+    "last_opened_file_path": "/Users/lody/dev/projects/watershed-website/app/routes/_index",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "npm",
+    "npm.Dev.executor": "Debug",
+    "npm.Develop.executor": "Run",
+    "npm.Storybook.executor": "Debug",
+    "npm.db:generate.executor": "Run",
+    "npm.db:push.executor": "Run",
+    "npm.db:push:reset:seed.executor": "Run",
+    "npm.db:push:seed.executor": "Run",
+    "npm.dev:app.executor": "Debug",
+    "npm.dev:remix.executor": "Debug",
+    "npm.dev:storybook.executor": "Debug",
+    "npm.docker:start.executor": "Run",
+    "npm.migrate-puck-data -- --input tmp/db-dumps/pre-title-obj-migration.json --output tmp/db-migrations/post-title-obj-migration.json.executor": "Debug",
+    "npm.migrate-puck-data --input tmp/db-dumps/pre-title-obj-migration.json --output tmp/db-migrations/post-title-obj-migration.json.executor": "Debug",
+    "npm.typecheck.executor": "Run",
+    "prettierjs.PrettierConfiguration.Package": "/Users/lody/dev/projects/watershed-website/node_modules/prettier",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "tasks.servers",
+    "spentTimePerTaskStorage.store": "{}",
+    "tasks.close.task.update.state.enabled": "true",
+    "tasks.open.task.update.state.enabled": "true",
+    "timeTracker.activityTracker": "null",
+    "timeTracker.comment": "",
+    "timeTracker.inactivityPeriodInMills": "600000",
+    "timeTracker.isAutoTrackingEnable": "false",
+    "timeTracker.isAutoTrackingTemporaryDisabled": "false",
+    "timeTracker.isManualTrackingEnable": "true",
+    "timeTracker.isPaused": "false",
+    "timeTracker.isPostAfterCommitEnabled": "false",
+    "timeTracker.isPostedScheduled": "true",
+    "timeTracker.isRunning": "true",
+    "timeTracker.isScheduledEnabled": "false",
+    "timeTracker.isWhenProjectClosedEnabled": "false",
+    "timeTracker.issueId": "WAT-53",
+    "timeTracker.issueIdReadable": "WAT-53",
+    "timeTracker.pausedTime": "475529",
+    "timeTracker.query": "",
+    "timeTracker.recordedTime": "1",
+    "timeTracker.scheduledPeriod": "19:00:0",
+    "timeTracker.startTime": "33358",
+    "timeTracker.timeInMills": "87925",
+    "timeTracker.type": "Development",
+    "ts.external.directory.path": "/Users/lody/dev/projects/watershed-website/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ],
-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
-      &quot;JSON&quot;,
-      &quot;CSS&quot;,
-      &quot;Markdown&quot;,
-      &quot;TEXT&quot;
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "JSON",
+      "CSS",
+      "Markdown",
+      "TEXT"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/routes/_index" />
@@ -277,7 +279,7 @@
       <command value="npm run db:push" />
     </option>
   </component>
-  <component name="RunManager" selected="Compound.Develop">
+  <component name="RunManager" selected="JavaScript Debug.Debug in Chrome">
     <configuration name="Develop" type="CompoundRunConfigurationType">
       <toRun name="Dev" type="js.build_tools.npm" />
       <toRun name="Storybook" type="js.build_tools.npm" />
@@ -729,9 +731,8 @@
       <option name="project" value="LOCAL" />
       <updated>1747828048930</updated>
     </task>
-    <task active="true" id="WAT-50" summary="Content summaries">
+    <task id="WAT-50" summary="Content summaries">
       <branch name="feature/WAT-153_content_summaries_for_homepage" repository="$PROJECT_DIR$" />
-      <changelist id="" name="WAT-50 Content summaries" comment="" />
       <created>1760305693143</created>
       <option name="issue" value="true" />
       <url>https://youtrack.spindraad.dev/issue/WAT-50</url>
@@ -923,7 +924,6 @@
     <task id="WAT-51" summary="Create header block">
       <branch name="release/WAT-49_Homepage" repository="$PROJECT_DIR$" original="true" />
       <branch name="wat-51" repository="$PROJECT_DIR$" />
-      <changelist id="" name="WAT-51 Create header block" comment="" />
       <created>1760305697378</created>
       <option name="issue" value="true" />
       <url>https://youtrack.spindraad.dev/issue/WAT-51</url>
@@ -933,10 +933,9 @@
       <updated>1769951878855</updated>
       <workItem from="1769900913449" />
     </task>
-    <task active="true" id="WAT-132" summary="Add content blocks">
+    <task id="WAT-132" summary="Add content blocks">
       <branch name="release/WAT-49_Homepage" repository="$PROJECT_DIR$" original="true" />
       <branch name="wat-132_add_content_blocks" repository="$PROJECT_DIR$" />
-      <changelist id="" name="WAT-132 Add content blocks" comment="" />
       <created>1769951567383</created>
       <option name="issue" value="true" />
       <url>https://youtrack.spindraad.dev/issue/WAT-132</url>
@@ -946,10 +945,9 @@
       <updated>1769976617572</updated>
       <workItem from="1769951878891" />
     </task>
-    <task active="true" id="WAT-66" summary="Pagina's moeten zelf een achtergrondkleur kunnen zetten">
+    <task id="WAT-66" summary="Pagina's moeten zelf een achtergrondkleur kunnen zetten">
       <branch name="release/WAT-49_Homepage" repository="$PROJECT_DIR$" original="true" />
       <branch name="wat-66_background-color-pages" repository="$PROJECT_DIR$" />
-      <changelist id="" name="WAT-66 Pagina's moeten zelf een achtergrondkleur kunnen zetten" comment="WAT-66" />
       <created>1760449089170</created>
       <option name="issue" value="true" />
       <url>https://youtrack.spindraad.dev/issue/WAT-66</url>
@@ -959,10 +957,9 @@
       <updated>1769980821485</updated>
       <workItem from="1769978695990" />
     </task>
-    <task active="true" id="WAT-133" summary="Page width">
+    <task id="WAT-133" summary="Page width">
       <branch name="release/WAT-49_Homepage" repository="$PROJECT_DIR$" original="true" />
       <branch name="wat-133_page-width" repository="$PROJECT_DIR$" />
-      <changelist id="" name="WAT-133 Page width" comment="WAT-133" />
       <created>1769976140988</created>
       <option name="issue" value="true" />
       <url>https://youtrack.spindraad.dev/issue/WAT-133</url>
@@ -982,8 +979,9 @@
       <option name="number" value="53" />
       <option name="presentableId" value="WAT-53" />
       <option name="project" value="WAT" />
-      <updated>1769992167876</updated>
+      <updated>1770050097683</updated>
       <workItem from="1769985953869" />
+      <workItem from="1770086706523" />
     </task>
     <option name="localTasksCounter" value="175" />
     <option name="commitChanges" value="false" />
@@ -1060,7 +1058,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <confirmRemoveEmptyChangelist value="2" />
-    <MESSAGE value="Created a Puck block of the upcoming events component, which also needed React Query, an api endpoint and a loader" />
     <MESSAGE value="Add Upcoming Events translations and fixed UpcomingEventsBlock component suspense error" />
     <MESSAGE value="Add BackgroundBlock component and update title structure in page configuration" />
     <MESSAGE value="ide" />
@@ -1085,7 +1082,8 @@
     <MESSAGE value="WAT-132 Added last bits of content blocks on the homepage" />
     <MESSAGE value="WAT-66 Added page background color setting in root props" />
     <MESSAGE value="WAT-53 Started working on talent program component" />
-    <option name="LAST_COMMIT_MESSAGE" value="WAT-53 Started working on talent program component" />
+    <MESSAGE value="WAT-53 Created component and block for the talent program details" />
+    <option name="LAST_COMMIT_MESSAGE" value="WAT-53 Created component and block for the talent program details" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
