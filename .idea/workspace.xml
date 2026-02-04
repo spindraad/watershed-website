@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5ac89870-b2f7-4580-bee0-4f8b2fb58e8f" name="WAT-1 Contact pagina" comment="Add new icons for location, mail, and phone; update icon selection in Heading and RichText blocks">
-      <change beforePath="$PROJECT_DIR$/app/config/fields/illustration.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/fields/illustration.ts" afterDir="false" />
+    <list default="true" id="5ac89870-b2f7-4580-bee0-4f8b2fb58e8f" name="WAT-1 Contact pagina" comment="Added new illustration for the demo tomorrow">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Footer.tsx" afterDir="false" />
     </list>
     <list id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Added box and line illustrations, and created the hand drawn box component" />
     <option name="SHOW_DIALOG" value="false" />
@@ -208,16 +209,16 @@
     "timeTracker.isPaused": "false",
     "timeTracker.isPostAfterCommitEnabled": "false",
     "timeTracker.isPostedScheduled": "true",
-    "timeTracker.isRunning": "true",
+    "timeTracker.isRunning": "false",
     "timeTracker.isScheduledEnabled": "false",
     "timeTracker.isWhenProjectClosedEnabled": "false",
     "timeTracker.issueId": "WAT-1",
     "timeTracker.issueIdReadable": "WAT-1",
-    "timeTracker.pausedTime": "2",
+    "timeTracker.pausedTime": "0",
     "timeTracker.query": "",
     "timeTracker.recordedTime": "0",
     "timeTracker.scheduledPeriod": "19:00:0",
-    "timeTracker.startTime": "179032",
+    "timeTracker.startTime": "5",
     "timeTracker.timeInMills": "0",
     "timeTracker.type": "Development",
     "ts.external.directory.path": "/Users/lody/dev/projects/watershed-website/node_modules/typescript/lib",
@@ -267,7 +268,7 @@
       <command value="npm run db:push" />
     </option>
   </component>
-  <component name="RunManager" selected="Compound.Develop">
+  <component name="RunManager" selected="JavaScript Debug.Debug in Chrome">
     <configuration name="Develop" type="CompoundRunConfigurationType">
       <toRun name="Dev" type="js.build_tools.npm" />
       <toRun name="Storybook" type="js.build_tools.npm" />
@@ -535,22 +536,6 @@
       <workItem from="1757113103308" duration="35000" />
       <workItem from="1760341367186" duration="338000" />
     </task>
-    <task id="LOCAL-00136" summary="Added new logo and favicon">
-      <option name="closed" value="true" />
-      <created>1744811941293</created>
-      <option name="number" value="00136" />
-      <option name="presentableId" value="LOCAL-00136" />
-      <option name="project" value="LOCAL" />
-      <updated>1744811941293</updated>
-    </task>
-    <task id="LOCAL-00137" summary="Double checked and fixed the meta tags where applicable, so now regular pages have their custom meta tags back.">
-      <option name="closed" value="true" />
-      <created>1744881036902</created>
-      <option name="number" value="00137" />
-      <option name="presentableId" value="LOCAL-00137" />
-      <option name="project" value="LOCAL" />
-      <updated>1744881036902</updated>
-    </task>
     <task id="LOCAL-00138" summary="Implemented a basic upload handler for images">
       <option name="closed" value="true" />
       <created>1744892763555</created>
@@ -794,7 +779,6 @@
     <task id="WAT-54" summary="CLI">
       <branch name="dev" repository="$PROJECT_DIR$" original="true" />
       <branch name="feature/WAT-54-Create-CLI" repository="$PROJECT_DIR$" />
-      <changelist id="" name="WAT-54 CLI" comment="" />
       <created>1760340494584</created>
       <option name="issue" value="true" />
       <url>https://youtrack.spindraad.dev/issue/WAT-54</url>
@@ -949,7 +933,6 @@
     <task id="WAT-135" summary="Footer">
       <branch name="dev" repository="$PROJECT_DIR$" original="true" />
       <branch name="wat-135_footer" repository="$PROJECT_DIR$" />
-      <changelist id="" name="WAT-135 Footer" comment="WAT-135" />
       <created>1769984739649</created>
       <option name="issue" value="true" />
       <url>https://youtrack.spindraad.dev/issue/WAT-135</url>
@@ -970,8 +953,9 @@
       <option name="number" value="1" />
       <option name="presentableId" value="WAT-1" />
       <option name="project" value="WAT" />
-      <updated>1770152459276</updated>
+      <updated>1770159997444</updated>
       <workItem from="1770148102089" />
+      <workItem from="1770213388163" />
     </task>
     <task id="LOCAL-00175" summary="Add new icons for location, mail, and phone; update icon selection in Heading and RichText blocks">
       <option name="closed" value="true" />
@@ -981,7 +965,23 @@
       <option name="project" value="LOCAL" />
       <updated>1770155349946</updated>
     </task>
-    <option name="localTasksCounter" value="176" />
+    <task id="LOCAL-00176" summary="Added new illustration for the demo tomorrow">
+      <option name="closed" value="true" />
+      <created>1770160536659</created>
+      <option name="number" value="00176" />
+      <option name="presentableId" value="LOCAL-00176" />
+      <option name="project" value="LOCAL" />
+      <updated>1770160536659</updated>
+    </task>
+    <task id="LOCAL-00177" summary="Added new illustration for the demo tomorrow">
+      <option name="closed" value="true" />
+      <created>1770160553992</created>
+      <option name="number" value="00177" />
+      <option name="presentableId" value="LOCAL-00177" />
+      <option name="project" value="LOCAL" />
+      <updated>1770160553992</updated>
+    </task>
+    <option name="localTasksCounter" value="178" />
     <option name="commitChanges" value="false" />
     <option name="branchNameFormat" value="${id}_${summary}" />
     <servers>
@@ -1057,7 +1057,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <confirmRemoveEmptyChangelist value="2" />
-    <MESSAGE value="Fixed lint errors and returned editor header in Puck overrides so that we could have our functionality back" />
     <MESSAGE value="Ran lint" />
     <MESSAGE value="WAT-50 Created Maker summary profile blocks" />
     <MESSAGE value="WAT-50 Created components for the maker overview, as well as new database models and an endpoint" />
@@ -1082,7 +1081,8 @@
     <MESSAGE value="WAT-1 Added a little bit of bottom margin to the footer to make it visually a bit cleaner." />
     <MESSAGE value="WAT-1 Refactor grid and illustration components for improved responsiveness and structure. Also added a PageHeader block for most of the regular pages" />
     <MESSAGE value="Add new icons for location, mail, and phone; update icon selection in Heading and RichText blocks" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add new icons for location, mail, and phone; update icon selection in Heading and RichText blocks" />
+    <MESSAGE value="Added new illustration for the demo tomorrow" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added new illustration for the demo tomorrow" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
