@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5ac89870-b2f7-4580-bee0-4f8b2fb58e8f" name="WAT-1 Contact pagina" comment="Added new illustration for the demo tomorrow">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Footer.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="5ac89870-b2f7-4580-bee0-4f8b2fb58e8f" name="WAT-1 Contact pagina" comment="Added auto margin to footer" />
     <list id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Added box and line illustrations, and created the hand drawn box component" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -536,14 +533,6 @@
       <workItem from="1757113103308" duration="35000" />
       <workItem from="1760341367186" duration="338000" />
     </task>
-    <task id="LOCAL-00138" summary="Implemented a basic upload handler for images">
-      <option name="closed" value="true" />
-      <created>1744892763555</created>
-      <option name="number" value="00138" />
-      <option name="presentableId" value="LOCAL-00138" />
-      <option name="project" value="LOCAL" />
-      <updated>1744892763555</updated>
-    </task>
     <task id="LOCAL-00139" summary="Added some test routes for checking the image upload. Also improved it so the DX is a bit better.">
       <option name="closed" value="true" />
       <created>1744895409097</created>
@@ -981,7 +970,15 @@
       <option name="project" value="LOCAL" />
       <updated>1770160553992</updated>
     </task>
-    <option name="localTasksCounter" value="178" />
+    <task id="LOCAL-00178" summary="Added auto margin to footer">
+      <option name="closed" value="true" />
+      <created>1770222480076</created>
+      <option name="number" value="00178" />
+      <option name="presentableId" value="LOCAL-00178" />
+      <option name="project" value="LOCAL" />
+      <updated>1770222480077</updated>
+    </task>
+    <option name="localTasksCounter" value="179" />
     <option name="commitChanges" value="false" />
     <option name="branchNameFormat" value="${id}_${summary}" />
     <servers>
@@ -1057,7 +1054,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <confirmRemoveEmptyChangelist value="2" />
-    <MESSAGE value="Ran lint" />
     <MESSAGE value="WAT-50 Created Maker summary profile blocks" />
     <MESSAGE value="WAT-50 Created components for the maker overview, as well as new database models and an endpoint" />
     <MESSAGE value="WAT-50 Made the header, subtitle and title border more like the design, and started bringing the buttons more into the design as well" />
@@ -1082,7 +1078,8 @@
     <MESSAGE value="WAT-1 Refactor grid and illustration components for improved responsiveness and structure. Also added a PageHeader block for most of the regular pages" />
     <MESSAGE value="Add new icons for location, mail, and phone; update icon selection in Heading and RichText blocks" />
     <MESSAGE value="Added new illustration for the demo tomorrow" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added new illustration for the demo tomorrow" />
+    <MESSAGE value="Added auto margin to footer" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added auto margin to footer" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
