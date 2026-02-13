@@ -16,6 +16,9 @@ import {
   SlBadge,
   SlSpinner,
   SlCopyButton,
+  SlTab,
+  SlTabGroup,
+  SlTabPanel,
 } from '@shoelace-style/shoelace/dist/react';
 import { useEffect, useState, useRef, createContext, forwardRef } from 'react';
 
@@ -40,6 +43,9 @@ type Components = {
   SlBadge: typeof nullComponent | typeof SlBadge;
   SlSpinner: typeof nullComponent | typeof SlSpinner;
   SlCopyButton: typeof nullComponent | typeof SlCopyButton;
+  SlTab: typeof nullComponent | typeof SlTab;
+  SlTabGroup: typeof nullComponent | typeof SlTabGroup;
+  SlTabPanel: typeof nullComponent | typeof SlTabPanel;
 };
 
 const nullComponents: Components = {
@@ -60,6 +66,9 @@ const nullComponents: Components = {
   SlBadge: nullComponent,
   SlSpinner: nullComponent,
   SlCopyButton: nullComponent,
+  SlTab: nullComponent,
+  SlTabGroup: nullComponent,
+  SlTabPanel: nullComponent,
 };
 
 export const ShoelaceContext = createContext<Components>(nullComponents);
@@ -97,6 +106,9 @@ export function useShoelace({ URL }: { URL: string }) {
             SlBadge: components.SlBadge,
             SlSpinner: components.SlSpinner,
             SlCopyButton: components.SlCopyButton,
+            SlTab: components.SlTab,
+            SlTabGroup: components.SlTabGroup,
+            SlTabPanel: components.SlTabPanel,
           });
         });
       },

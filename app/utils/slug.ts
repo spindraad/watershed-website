@@ -19,13 +19,13 @@ export function parseParamsToSlug(
   if (lang === 'en' || lang === 'pap') {
     return {
       locale: lang,
-      slug: parts,
+      slug: parts ?? '',
       path: `${lang}/${parts}`,
     };
   } else if (lang === 'nl') {
     return {
       locale: lang,
-      slug: parts,
+      slug: parts ?? '',
       path: `${lang}/${parts}`,
     };
   }
