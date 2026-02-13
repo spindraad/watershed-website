@@ -10,7 +10,9 @@ export type Props = {
     | 'star'
     | 'location'
     | 'mail'
-    | 'phone';
+    | 'phone'
+    | 'arrow-left'
+    | 'arrow-right';
   size?: 'small' | 'normal';
 };
 

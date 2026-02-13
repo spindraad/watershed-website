@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5ac89870-b2f7-4580-bee0-4f8b2fb58e8f" name="WAT-1 Contact pagina" comment="Added auto margin to footer" />
+    <list default="true" id="d43ddddd-e4aa-452f-a41b-a6342360528b" name="WAT-144 Content tabbladen" comment="WAT-144">
+      <change afterPath="$PROJECT_DIR$/public/iconen/arrow-left.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/iconen/arrow-right.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/Icon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Icon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/shoelace.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/shoelace.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/utils/slug.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/slug.ts" afterDir="false" />
+    </list>
     <list id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Added box and line illustrations, and created the hand drawn box component" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,10 +26,17 @@
       <entry key="_/Users/lody/dev/projects/watershed-website" value="2nVocK95qGbCivqpSCPMQGibeKV" />
     </persistenceIdMap>
   </component>
+  <component name="CopilotUserSelectedModel">
+    <selectedModels>
+      <entry key="chat-panel" value="GPT-5 mini" />
+      <entry key="agent-panel" value="GPT-5 mini" />
+      <entry key="edit-panel" value="GPT-5 mini" />
+    </selectedModels>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="wat-1_contact-pagina" />
+        <entry key="$PROJECT_DIR$" value="feature/WAT-2_About-pagina" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -57,8 +71,12 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="wat-1_contact-pagina" />
-                    <option name="lastUsedInstant" value="1770148102" />
+                    <option name="branchName" value="wat-144_content-tabbladen" />
+                    <option name="lastUsedInstant" value="1770969978" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="feature/WAT-2_About-pagina" />
+                    <option name="lastUsedInstant" value="1770969383" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="dev" />
@@ -166,7 +184,7 @@
     "Vitest.validateLogin.executor": "Run",
     "Vitest.validateLogin.should return success: false when emailaddress is invalid.executor": "Run",
     "Vitest.validateLogin.should return success: false when emailaddress is missing.executor": "Run",
-    "git-widget-placeholder": "dev",
+    "git-widget-placeholder": "wat-144__content-tabbladen",
     "javascript.nodejs.core.library.configured.version": "24.11.0",
     "javascript.nodejs.core.library.typings.version": "24.10.9",
     "last_opened_file_path": "/Users/lody/dev/projects/watershed-website/app/routes/_index",
@@ -265,7 +283,7 @@
       <command value="npm run db:push" />
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.Debug in Chrome">
+  <component name="RunManager" selected="Compound.Develop">
     <configuration name="Develop" type="CompoundRunConfigurationType">
       <toRun name="Dev" type="js.build_tools.npm" />
       <toRun name="Storybook" type="js.build_tools.npm" />
@@ -532,14 +550,6 @@
       <workItem from="1751983260331" duration="154000" />
       <workItem from="1757113103308" duration="35000" />
       <workItem from="1760341367186" duration="338000" />
-    </task>
-    <task id="LOCAL-00139" summary="Added some test routes for checking the image upload. Also improved it so the DX is a bit better.">
-      <option name="closed" value="true" />
-      <created>1744895409097</created>
-      <option name="number" value="00139" />
-      <option name="presentableId" value="LOCAL-00139" />
-      <option name="project" value="LOCAL" />
-      <updated>1744895409097</updated>
     </task>
     <task id="LOCAL-00140" summary="Fixed typo">
       <option name="closed" value="true" />
@@ -932,19 +942,20 @@
       <workItem from="1770096233890" />
       <workItem from="1770147943493" />
     </task>
-    <task active="true" id="WAT-1" summary="Contact pagina">
+    <task id="WAT-1" summary="Contact pagina">
       <branch name="dev" repository="$PROJECT_DIR$" original="true" />
       <branch name="wat-1_contact-pagina" repository="$PROJECT_DIR$" />
-      <changelist id="5ac89870-b2f7-4580-bee0-4f8b2fb58e8f" name="WAT-1 Contact pagina" comment="WAT-1" />
+      <changelist id="" name="WAT-1 Contact pagina" comment="WAT-1" />
       <created>1760299922086</created>
       <option name="issue" value="true" />
       <url>https://youtrack.spindraad.dev/issue/WAT-1</url>
       <option name="number" value="1" />
       <option name="presentableId" value="WAT-1" />
       <option name="project" value="WAT" />
-      <updated>1770159997444</updated>
+      <updated>1770969978252</updated>
       <workItem from="1770148102089" />
       <workItem from="1770213388163" />
+      <workItem from="1770969075897" />
     </task>
     <task id="LOCAL-00175" summary="Add new icons for location, mail, and phone; update icon selection in Heading and RichText blocks">
       <option name="closed" value="true" />
@@ -977,6 +988,19 @@
       <option name="presentableId" value="LOCAL-00178" />
       <option name="project" value="LOCAL" />
       <updated>1770222480077</updated>
+    </task>
+    <task active="true" id="WAT-144" summary="Content tabbladen">
+      <branch name="feature/WAT-2_About-pagina" repository="$PROJECT_DIR$" original="true" />
+      <branch name="wat-144_content-tabbladen" repository="$PROJECT_DIR$" />
+      <changelist id="d43ddddd-e4aa-452f-a41b-a6342360528b" name="WAT-144 Content tabbladen" comment="WAT-144" />
+      <created>1770969336151</created>
+      <option name="issue" value="true" />
+      <url>https://youtrack.spindraad.dev/issue/WAT-144</url>
+      <option name="number" value="144" />
+      <option name="presentableId" value="WAT-144" />
+      <option name="project" value="WAT" />
+      <updated>1770969978252</updated>
+      <workItem from="1770969978296" />
     </task>
     <option name="localTasksCounter" value="179" />
     <option name="commitChanges" value="false" />
