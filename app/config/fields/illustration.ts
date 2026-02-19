@@ -14,6 +14,7 @@ export const illustrations = {
   'Waar ik het nog ... over wil hebben': 'waar-ik-het-nog-over-wil-hebben.svg',
   'Potlood Ploeg-E (zwart-wit)': 'potlood Ploeg-E ZW.png',
   'Mok met gereedschap (zwart-wit)': 'mok met gereedschap ZW.png',
+  'Over ons (header afbeelding)': 'headers_ over ons.png',
 } as const;
 
 // Extract the keys as a union type

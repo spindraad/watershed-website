@@ -13,7 +13,7 @@ export type TabItem = {
   };
 };
 
-type Props = {
+export type Props = {
   tabs: TabItem[];
   defaultActiveTab?: string;
 };
@@ -123,12 +123,12 @@ export default function TabComponent({ tabs, defaultActiveTab }: Props) {
           return (
             <button
               key={item.tab.slug}
-              id={`tab-${item.tab.slug}`}
+              id={`tab-${item?.tab.slug}`}
               className={`tab-component__tab ${isActive ? 'tab-component__tab--active' : ''}`}
-              onClick={() => setActiveTab(item.tab.slug)}
+              onClick={() => setActiveTab(item?.tab.slug)}
               onKeyDown={handleKeyDown}
               aria-selected={isActive}
-              aria-controls={`tabpanel-${item.tab.slug}`}
+              aria-controls={`tabpanel-${item?.tab.slug}`}
               role="tab"
               tabIndex={isActive ? 0 : -1}
             >

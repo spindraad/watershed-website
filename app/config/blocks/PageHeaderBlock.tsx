@@ -12,6 +12,7 @@ export type PageHeaderBlockProps = {
   backgroundColor: ColorField;
   illustration: IllustrationKey;
   illustrationAltText: string;
+  illustrationSize?: 'm' | 'l' | 'xl';
 };
 
 export const PageHeaderBlock: ComponentConfig<PageHeaderBlockProps> = {
@@ -27,15 +28,37 @@ export const PageHeaderBlock: ComponentConfig<PageHeaderBlockProps> = {
       label: 'Alt-tekst voor illustratie',
       type: 'text',
     },
+    illustrationSize: {
+      type: 'select',
+      label: 'Grootte van de illustratie',
+      options: [
+        { label: 'Medium', value: 'm' },
+        { label: 'Groot', value: 'l' },
+        { label: 'Extra groot', value: 'xl' },
+      ],
+    },
   },
   defaultProps: {
     title: 'Welkom',
     backgroundColor: 'light-yellow',
     illustration: 'Potlood Ploeg-E (zwart-wit)',
     illustrationAltText: 'Illustratie bij paginatitel',
+    illustrationSize: 'm',
   },
-  render({ title, backgroundColor, illustration, illustrationAltText }) {
+  render({
+    title,
+    backgroundColor,
+    illustration,
+    illustrationAltText,
+    illustrationSize = 'm',
+  }) {
     const imageSrc = illustrations[illustration as IllustrationKey];
+
+    const sizeClasses = {
+      m: 'sm:max-w-96',
+      l: 'sm:max-w-4xl',
+      xl: 'sm:max-w-full',
+    };
 
     return (
       <header
@@ -53,7 +76,7 @@ export const PageHeaderBlock: ComponentConfig<PageHeaderBlockProps> = {
         </div>
 
         <img
-          className="max-w-64 sm:max-w-96 sm:mt-6"
+          className={`max-w-64 ${sizeClasses[illustrationSize]} sm:mt-6`}
           src={`/illustraties/${imageSrc}`}
           alt={illustrationAltText}
         />
