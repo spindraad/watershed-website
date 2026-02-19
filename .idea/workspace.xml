@@ -4,13 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d43ddddd-e4aa-452f-a41b-a6342360528b" name="WAT-144 Content tabbladen" comment="WAT-144">
-      <change afterPath="$PROJECT_DIR$/public/iconen/arrow-left.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/iconen/arrow-right.svg" afterDir="false" />
+    <list default="true" id="d43ddddd-e4aa-452f-a41b-a6342360528b" name="WAT-144 Content tabbladen" comment="WAT-144 Started building the content tab component">
+      <change afterPath="$PROJECT_DIR$/public/illustraties/drawn-box-2.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/Icon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Icon.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/shoelace.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/shoelace.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/utils/slug.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/slug.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/ContentTable.stories.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/ContentTable.translations.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/ContentTable.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/ContentTabs.stories.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/ContentTabs.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/locales/en.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/en.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/locales/nl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/nl.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/tailwind.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/tailwind.css" afterDir="false" />
     </list>
     <list id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Added box and line illustrations, and created the hand drawn box component" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,9 +32,9 @@
   </component>
   <component name="CopilotUserSelectedModel">
     <selectedModels>
+      <entry key="edit-panel" value="GPT-5 mini" />
       <entry key="chat-panel" value="GPT-5 mini" />
       <entry key="agent-panel" value="GPT-5 mini" />
-      <entry key="edit-panel" value="GPT-5 mini" />
     </selectedModels>
   </component>
   <component name="Git.Settings">
@@ -224,16 +228,16 @@
     "timeTracker.isPaused": "false",
     "timeTracker.isPostAfterCommitEnabled": "false",
     "timeTracker.isPostedScheduled": "true",
-    "timeTracker.isRunning": "false",
+    "timeTracker.isRunning": "true",
     "timeTracker.isScheduledEnabled": "false",
     "timeTracker.isWhenProjectClosedEnabled": "false",
-    "timeTracker.issueId": "WAT-1",
-    "timeTracker.issueIdReadable": "WAT-1",
-    "timeTracker.pausedTime": "0",
+    "timeTracker.issueId": "WAT-144",
+    "timeTracker.issueIdReadable": "WAT-144",
+    "timeTracker.pausedTime": "2",
     "timeTracker.query": "",
     "timeTracker.recordedTime": "0",
     "timeTracker.scheduledPeriod": "19:00:0",
-    "timeTracker.startTime": "5",
+    "timeTracker.startTime": "623186",
     "timeTracker.timeInMills": "0",
     "timeTracker.type": "Development",
     "ts.external.directory.path": "/Users/lody/dev/projects/watershed-website/node_modules/typescript/lib",
@@ -283,7 +287,7 @@
       <command value="npm run db:push" />
     </option>
   </component>
-  <component name="RunManager" selected="Compound.Develop">
+  <component name="RunManager" selected="JavaScript Debug.Debug in Chrome">
     <configuration name="Develop" type="CompoundRunConfigurationType">
       <toRun name="Dev" type="js.build_tools.npm" />
       <toRun name="Storybook" type="js.build_tools.npm" />
@@ -945,7 +949,6 @@
     <task id="WAT-1" summary="Contact pagina">
       <branch name="dev" repository="$PROJECT_DIR$" original="true" />
       <branch name="wat-1_contact-pagina" repository="$PROJECT_DIR$" />
-      <changelist id="" name="WAT-1 Contact pagina" comment="WAT-1" />
       <created>1760299922086</created>
       <option name="issue" value="true" />
       <url>https://youtrack.spindraad.dev/issue/WAT-1</url>
@@ -999,8 +1002,11 @@
       <option name="number" value="144" />
       <option name="presentableId" value="WAT-144" />
       <option name="project" value="WAT" />
-      <updated>1770969978252</updated>
+      <updated>1771047452430</updated>
       <workItem from="1770969978296" />
+      <workItem from="1771043768379" />
+      <workItem from="1771429501018" />
+      <workItem from="1771502957096" />
     </task>
     <option name="localTasksCounter" value="179" />
     <option name="commitChanges" value="false" />
@@ -1078,7 +1084,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <confirmRemoveEmptyChangelist value="2" />
-    <MESSAGE value="WAT-50 Created Maker summary profile blocks" />
     <MESSAGE value="WAT-50 Created components for the maker overview, as well as new database models and an endpoint" />
     <MESSAGE value="WAT-50 Made the header, subtitle and title border more like the design, and started bringing the buttons more into the design as well" />
     <MESSAGE value="WAT-50 Implemented a scroll container and placed the scroll buttons at the side of the component" />
@@ -1103,7 +1108,8 @@
     <MESSAGE value="Add new icons for location, mail, and phone; update icon selection in Heading and RichText blocks" />
     <MESSAGE value="Added new illustration for the demo tomorrow" />
     <MESSAGE value="Added auto margin to footer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added auto margin to footer" />
+    <MESSAGE value="WAT-144 Started building the content tab component" />
+    <option name="LAST_COMMIT_MESSAGE" value="WAT-144 Started building the content tab component" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
