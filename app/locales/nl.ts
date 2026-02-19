@@ -12,6 +12,8 @@ import { nl as AccountMenuTranslations } from '~/routes/($lang)/account/AccountM
 export const { AccountMenu } = AccountMenuTranslations;
 import { nl as AdminMenuTranslations } from '~/routes/($lang)/beheer/AdminMenu.translations';
 export const { AdminMenu } = AdminMenuTranslations;
+import { nl as ContentTableTranslations } from '~/components/ContentTable.translations';
+export const { ContentTable } = ContentTableTranslations;
 import { nl as ConfirmDeleteDialogTranslations } from '~/routes/($lang)/beheer/$content/_index/ConfirmDeleteDialog.translations';
 export const { ConfirmDeleteDialog } = ConfirmDeleteDialogTranslations;
 import { nl as DeletionNotificationTranslations } from '~/routes/($lang)/beheer/$content/_index/DeletionNotification.translations';
