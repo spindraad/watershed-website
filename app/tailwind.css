@@ -397,13 +397,13 @@
   /* TabComponent styles */
   .tab-component {
     border: 1px solid #000;
-    border-image: url("/illustraties/drawn-box-2.svg") 15% / 30px round;
+    border-image: url('/illustraties/drawn-box-2.svg') 15% / 30px round;
   }
 
   .tab-component__nav {
     display: flex;
     border-bottom: 1px solid #000;
-    border-image: url("/illustraties/drawn-box-2.svg") 15% / 25px round;
+    border-image: url('/illustraties/drawn-box-2.svg') 15% / 25px round;
   }
 
   .tab-component__tab {
@@ -451,7 +451,8 @@
   }
 
   /* Show slant on hover for non-active tabs */
-  .tab-component__tab:hover .tab-component__slant:not(.tab-component__slant--active) {
+  .tab-component__tab:hover
+    .tab-component__slant:not(.tab-component__slant--active) {
     opacity: 0.5;
   }
 
@@ -467,7 +468,7 @@
     top: 6px;
     bottom: 6px;
     width: 6px;
-    background-image: url("/illustraties/zigzag-line-vertical.svg");
+    background-image: url('/illustraties/zigzag-line-vertical.svg');
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -478,7 +479,7 @@
   .tab-component__tab--active {
     position: relative;
     z-index: 1;
-    color: #FFFFFF;
+    color: #ffffff;
   }
 
   .tab-component__body {
