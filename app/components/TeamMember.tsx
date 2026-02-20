@@ -1,8 +1,8 @@
 import Heading from '~/components/Heading';
 import Icon from '~/components/Icon';
 
-type Props = {
-  avatarUrl?: string;
+export type Props = {
+  avatarUrl: string;
   avatarAlt?: string;
   name: string;
   role: string;
@@ -26,19 +26,12 @@ export default function TeamMember({
 }: Props) {
   return (
     <div className="flex flex-col items-center gap-8">
-      <div className="flex flex-col items-center sm:flex-row gap-4">
-        {avatarUrl ?
-          <img
-            src={avatarUrl}
-            alt={avatarAlt ?? name}
-            className="w-32 h-32 object-cover"
-          />
-        : <img
-            src="/illustraties/team-member-red.svg"
-            alt={avatarAlt ?? name}
-            className="w-32 h-32 object-cover"
-          />
-        }
+      <div className="flex flex-col items-start sm:items-center sm:flex-row gap-4">
+        <img
+          src={avatarUrl}
+          alt={avatarAlt ?? name}
+          className="w-32 h-32 object-cover"
+        />
 
         <div className="text-center sm:text-left flex flex-col gap-1">
           <Heading level={3} colorClass="text-black" textSizeClass="text-lg">
