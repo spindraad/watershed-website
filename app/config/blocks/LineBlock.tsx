@@ -3,6 +3,11 @@ import HandDrawnLine, { DrawStyles } from '~/components/HandDrawnLine';
 
 export type LineBlockProps = {
   style: DrawStyles;
+  width?: {
+    value: number;
+    unit: 'px' | '%' | 'rem';
+  };
+  position?: 'center' | 'left' | 'right';
 };
 
 const lineStyleOptions: { label: string; value: DrawStyles }[] = [
@@ -25,11 +30,55 @@ export const LineBlock: ComponentConfig<LineBlockProps> = {
       type: 'select',
       options: lineStyleOptions,
     },
+    width: {
+      type: 'object',
+      label: 'Breedte',
+      objectFields: {
+        value: {
+          type: 'number',
+          label: 'Waarde',
+        },
+        unit: {
+          type: 'select',
+          label: 'Eenheid',
+          options: [
+            { label: 'Rem', value: 'rem' },
+            { label: 'Procenten (%)', value: '%' },
+            { label: 'Pixels (px)', value: 'px' },
+          ],
+        },
+      },
+    },
+    position: {
+      type: 'select',
+      label: 'Positie',
+      options: [
+        { label: 'Gecentreerd', value: 'center' },
+        { label: 'Links', value: 'left' },
+        { label: 'Rechts', value: 'right' },
+      ],
+    },
   },
   defaultProps: {
     style: 'solid-thick-1',
   },
-  render({ style }) {
-    return <HandDrawnLine drawStyle={style} />;
+  render({ style, width, position }) {
+    return (
+      <div
+        style={{
+          display: 'flex',
+          justifyContent:
+            position === 'center' ? 'center'
+            : position === 'left' ? 'flex-start'
+            : 'flex-end',
+          width: '100%',
+        }}
+      >
+        <HandDrawnLine
+          drawStyle={style}
+          width={width ? `${width.value}${width.unit}` : '100%'}
+        />
+      </div>
+    );
   },
 };

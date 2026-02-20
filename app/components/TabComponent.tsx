@@ -175,7 +175,7 @@ export default function TabComponent({ tabs, defaultActiveTab }: Props) {
               />
             </div>
 
-            <div className="tab-component__content prose">
+            <div className="tab-component__content prose max-w-full">
               {typeof activeContent.body === 'string' ?
                 <div dangerouslySetInnerHTML={{ __html: activeContent.body }} />
               : activeContent.body}
