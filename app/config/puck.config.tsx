@@ -56,6 +56,10 @@ import {
   TeamOverviewBlock,
   TeamOverviewBlockProps,
 } from '~/config/blocks/TeamOverviewBlock';
+import {
+  ContentBlockBlock,
+  ContentBlockBlockProps,
+} from '~/config/blocks/ContentBlockBlock';
 
 export type Props = {
   HeadingBlock: HeadingBlockProps;
@@ -77,6 +81,7 @@ export type Props = {
   MapBlock: MapBlockProps;
   TabComponentBlock: TabComponentBlockProps;
   TeamOverviewBlock: TeamOverviewBlockProps;
+  ContentBlockBlock: ContentBlockBlockProps;
 };
 
 export type RootProps = {
@@ -125,6 +130,7 @@ export const config: Config<Props, RootProps> = {
         'MapBlock',
         'TabComponentBlock',
         'TeamOverviewBlock',
+        'ContentBlockBlock',
       ],
     },
   },
@@ -148,6 +154,7 @@ export const config: Config<Props, RootProps> = {
     MapBlock,
     TabComponentBlock,
     TeamOverviewBlock,
+    ContentBlockBlock,
   },
   root: {
     fields: {
