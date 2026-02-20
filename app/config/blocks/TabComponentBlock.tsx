@@ -41,6 +41,7 @@ export const TabComponentBlock: ComponentConfig<TabComponentBlockProps> = {
           },
         },
       },
+      getItemSummary: (item) => item?.tab?.title ?? 'Tabblad',
     },
     defaultActiveTab: {
       type: 'text',
