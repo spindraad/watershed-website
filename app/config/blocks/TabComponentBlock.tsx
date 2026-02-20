@@ -1,7 +1,6 @@
 import { ComponentConfig } from '@puckeditor/core';
 import TabComponent, {
   Props as TabComponentProps,
-  TabItem,
 } from '~/components/TabComponent';
 
 export type TabComponentBlockProps = TabComponentProps;
@@ -61,7 +60,10 @@ function retrieveValidTabs(tabs: unknown): TabComponentProps['tabs'] {
     return [];
   }
 
-  return tabs.filter((tab: TabItem) => {
+  // We perform a runtime check to ensure that each tab item has the expected structure.
+  // Since we don't have type information at runtime, 'any' is used to access properties without TypeScript errors.
+  /* eslint-disable @typescript-eslint/no-explicit-any */
+  return tabs.filter((tab: any) => {
     return (
       tab.tab &&
       typeof tab.tab.title === 'string' &&
