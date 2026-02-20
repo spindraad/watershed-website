@@ -19,5 +19,10 @@ export const iconField: Field<IconKey | undefined> = {
     { label: 'Locatie', value: 'location' },
     { label: 'E-mail', value: 'mail' },
     { label: 'Telefoon', value: 'phone' },
+    { label: 'Pijl naar links', value: 'arrow-left' },
+    { label: 'Pijl naar rechts', value: 'arrow-right' },
+    { label: 'Instagram', value: 'instagram' },
+    { label: 'Wolk met uitgaande hoek', value: 'cloud-outward-corner' },
+    { label: 'Gloeilamp', value: 'light-bulb' },
   ],
 };

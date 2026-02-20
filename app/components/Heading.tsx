@@ -1,3 +1,6 @@
+import Icon, { Props as IconProps } from '~/components/Icon';
+import HandDrawnLine, { DrawStyles } from '~/components/HandDrawnLine';
+
 export type Props = {
   /**
    * The level of the heading.
@@ -23,6 +26,21 @@ export type Props = {
    * Custom color class for the heading
    */
   colorClass?: string;
+
+  /**
+   * Optional icon names to display before and after the heading text. These should correspond to the names defined in the Icon component.
+   */
+  preIconName?: IconProps['name'] | '';
+
+  /**
+   * Optional icon names to display before and after the heading text. These should correspond to the names defined in the Icon component.
+   */
+  postIconName?: Omit<IconProps['name'], 'cloud-outward-corner'> | '';
+
+  /**
+   * Optional hand-drawn underline style to apply to the heading. This should correspond to the styles defined in the HandDrawnLine component.
+   */
+  underline?: DrawStyles;
 };
 
 export default function Heading({
@@ -31,6 +49,9 @@ export default function Heading({
   bold = true,
   textSizeClass = '',
   colorClass = 'text-primary-700',
+  preIconName,
+  postIconName,
+  underline,
 }: Props) {
   const Tag = `h${level}` as 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 
@@ -62,7 +83,32 @@ export default function Heading({
   const classes = `m-0 ${bold ? 'font-bold' : ''} ${textSize} ${colorClass}`;
 
   return (
-    <Tag className={classes}>{wrapUppercaseLetters(children, colorClass)}</Tag>
+    <div>
+      <div className="flex items-center gap-2 relative">
+        {preIconName ?
+          preIconName === 'cloud-outward-corner' ?
+            <>
+              <Icon
+                name={preIconName}
+                size="w-24 h-16"
+                classes="absolute top-1/2 -translate-y-[70%] rotate-90"
+              />
+              <span className="w-12" />
+            </>
+          : <Icon name={preIconName} size="small" />
+        : null}
+        <Tag className={classes}>
+          {wrapUppercaseLetters(children, colorClass)}
+        </Tag>
+        {postIconName ?
+          <Icon name={postIconName as IconProps['name']} />
+        : null}
+      </div>
+
+      {underline ?
+        <HandDrawnLine drawStyle={underline} classes="mt-1" />
+      : null}
+    </div>
   );
 }
 
