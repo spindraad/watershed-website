@@ -12,7 +12,8 @@ export type Props = {
     | 'mail'
     | 'phone'
     | 'arrow-left'
-    | 'arrow-right';
+    | 'arrow-right'
+    | 'instagram';
   size?: 'small' | 'normal';
 };
 
