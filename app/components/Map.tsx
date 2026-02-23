@@ -1,5 +1,6 @@
 import { useRef, useEffect } from 'react';
 import 'leaflet/dist/leaflet.css';
+import HandDrawnBox from '~/components/HandDrawnBox';
 
 export type Props = {
   coordinates: [number, number];
@@ -31,8 +32,12 @@ export default function Map({ coordinates }: Props) {
   }, [coordinates]);
 
   return (
-    <div className="w-full aspect-video bg-gray-200">
+    <HandDrawnBox
+      drawStyle="solid"
+      classes="w-full aspect-video"
+      padding="p-0.5"
+    >
       <div ref={mapRef} id="map" className="w-full h-full"></div>
-    </div>
+    </HandDrawnBox>
   );
 }
