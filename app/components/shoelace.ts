@@ -19,6 +19,7 @@ import {
   SlTab,
   SlTabGroup,
   SlTabPanel,
+  SlTooltip,
 } from '@shoelace-style/shoelace/dist/react';
 import { useEffect, useState, useRef, createContext, forwardRef } from 'react';
 
@@ -46,6 +47,7 @@ type Components = {
   SlTab: typeof nullComponent | typeof SlTab;
   SlTabGroup: typeof nullComponent | typeof SlTabGroup;
   SlTabPanel: typeof nullComponent | typeof SlTabPanel;
+  SlTooltip: typeof nullComponent | typeof SlTooltip;
 };
 
 const nullComponents: Components = {
@@ -69,6 +71,7 @@ const nullComponents: Components = {
   SlTab: nullComponent,
   SlTabGroup: nullComponent,
   SlTabPanel: nullComponent,
+  SlTooltip: nullComponent,
 };
 
 export const ShoelaceContext = createContext<Components>(nullComponents);
@@ -109,6 +112,7 @@ export function useShoelace({ URL }: { URL: string }) {
             SlTab: components.SlTab,
             SlTabGroup: components.SlTabGroup,
             SlTabPanel: components.SlTabPanel,
+            SlTooltip: components.SlTooltip,
           });
         });
       },

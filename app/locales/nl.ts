@@ -38,6 +38,30 @@ import { nl as TalentProgramTranslations } from '~/components/TalentProgram.tran
 export const { TalentProgram } = TalentProgramTranslations;
 import { nl as FooterTranslations } from '~/components/Footer.translations';
 export const { Footer } = FooterTranslations;
+import { nl as LocalisedRichTextEditorTranslations } from '~/components/LocalisedRichTextEditor.translations';
+export const { LocalisedRichTextEditor } = LocalisedRichTextEditorTranslations;
+import { nl as MediaLibraryDialogTranslations } from '~/components/MediaLibraryDialog.translations';
+export const { MediaLibraryDialog } = MediaLibraryDialogTranslations;
+import { nl as ImageSelectionFieldTranslations } from '~/components/ImageSelectionField.translations';
+export const { ImageSelectionField } = ImageSelectionFieldTranslations;
+import { nl as ContentSelectionFieldTranslations } from '~/components/ContentSelectionField.translations';
+export const { ContentSelectionField } = ContentSelectionFieldTranslations;
+import { nl as MakerMutationFormTranslations } from '~/components/MakerMutationForm.translations';
+export const { MakerMutationForm } = MakerMutationFormTranslations;
+import { nl as TalentProgramMutationFormTranslations } from '~/components/TalentProgramMutationForm.translations';
+export const { TalentProgramMutationForm } =
+  TalentProgramMutationFormTranslations;
+import { nl as CandyShopCategoryMutationFormTranslations } from '~/components/CandyShopCategoryMutationForm.translations';
+export const { CandyShopCategoryMutationForm } =
+  CandyShopCategoryMutationFormTranslations;
+import { nl as CandyShopItemMutationFormTranslations } from '~/components/CandyShopItemMutationForm.translations';
+export const { CandyShopItemMutationForm } =
+  CandyShopItemMutationFormTranslations;
+import { nl as RubriekCategoryMutationFormTranslations } from '~/components/RubriekCategoryMutationForm.translations';
+export const { RubriekCategoryMutationForm } =
+  RubriekCategoryMutationFormTranslations;
+import { nl as RubriekMutationFormTranslations } from '~/components/RubriekMutationForm.translations';
+export const { RubriekMutationForm } = RubriekMutationFormTranslations;
 
 export const common = {
   title: 'Hallo Wereld!',
@@ -174,6 +198,18 @@ export const ContentTypes = {
   projecten_other: 'Projecten',
   paginas_one: 'Pagina',
   paginas_other: "Pagina's",
+  makers_one: 'Maker',
+  makers_other: 'Makers',
+  talentprogrammas_one: 'Talentprogramma',
+  talentprogrammas_other: "Talentprogramma's",
+  'snoepwinkel-categorieen_one': 'Snoepwinkel Categorie',
+  'snoepwinkel-categorieen_other': 'Snoepwinkel Categorieën',
+  'snoepwinkel-items_one': 'Snoepwinkel Item',
+  'snoepwinkel-items_other': 'Snoepwinkel Items',
+  'rubriek-categorieen_one': 'Rubriek Categorie',
+  'rubriek-categorieen_other': 'Rubriek Categorieën',
+  rubrieken_one: 'Rubriek',
+  rubrieken_other: 'Rubrieken',
 };
 
 export const ContentOverviewRoute = {
@@ -186,6 +222,12 @@ export const ContentOverviewRoute = {
   NewButtonCaption: {
     Common: 'Nieuwe $t(ContentTypes:{{content}}, {"count": {{count}} })',
     Neuter: 'Nieuw $t(ContentTypes:{{content}}, {"count": {{count}} })',
+  },
+  EmptyState: {
+    Message:
+      'Er zijn nog geen $t(ContentTypes:{{content}}, lowercase). Maak de eerste aan!',
+    CreateButton:
+      'Maak eerste $t(ContentTypes:{{content}}, {"count": {{count}} }) aan',
   },
 };
 

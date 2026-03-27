@@ -1,8 +1,8 @@
 import type { Route } from './+types/_media-upload';
 import { useContext } from 'react';
 import { ShoelaceContext } from '~/components/shoelace';
-import { uploadFileFromRequest } from '~/.server/file-uploads';
-import { redirect } from 'react-router';
+import { uploadFileFromRequest, fileStorage } from '~/.server/file-uploads';
+import { redirect, data } from 'react-router';
 import Heading from '~/components/Heading';
 
 export async function action({ request }: Route.ActionArgs) {
@@ -15,6 +15,24 @@ export async function action({ request }: Route.ActionArgs) {
   }
 
   console.log('Uploaded image:', image.name);
+
+  // Check if this is a fetch request (background upload)
+  const acceptHeader = request.headers.get('Accept') || '';
+  const isJsonRequest = acceptHeader.includes('application/json');
+
+  if (isJsonRequest) {
+    // Return JSON with file info for background uploads
+    const fileInfo = await fileStorage.get(image.name);
+    return data({
+      file: {
+        key: image.name,
+        name: image.name,
+        url: `/afbeelding/${image.name}`,
+        type: image.type,
+        size: fileInfo?.size || image.size,
+      },
+    });
+  }
 
   return redirect('/beheer/media');
 }

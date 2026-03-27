@@ -5,9 +5,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="29e278a9-ef9e-4850-a096-4600af23bfce" name="WAT-3 Teamlid component" comment="ide">
+      <change afterPath="$PROJECT_DIR$/.claude/plans/implement-backend-features.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/Map.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Map.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/ContentTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ContentTable.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/EventMutationForm.translations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/EventMutationForm.translations.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/EventMutationForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/EventMutationForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/ProjectMutationForm.translations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ProjectMutationForm.translations.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/ProjectMutationForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ProjectMutationForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/RichTextEditor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/RichTextEditor.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/UpcomingEvents.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/UpcomingEvents.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/UpcomingEvents.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/UpcomingEvents.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/shoelace.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/shoelace.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/locales/en.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/en.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/locales/nl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/nl.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/locales/pap.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/pap.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/events.server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/events.server.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/makers.server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/makers.server.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/projects.server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/projects.server.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/account/AccountMenu.translations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/account/AccountMenu.translations.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/account/AccountMenu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/account/AccountMenu.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/_index/_overview.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/_index/_overview.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/bewerken/$id/_bewerken.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/bewerken/$id/_bewerken.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/nieuw/_nieuw.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/nieuw/_nieuw.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/verwijderen/$id/_verwijderen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/$content/verwijderen/$id/_verwijderen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/AdminMenu.translations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/AdminMenu.translations.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/AdminMenu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/AdminMenu.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/_beheer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/_beheer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/beheer/media/uploaden/_media-upload.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/beheer/media/uploaden/_media-upload.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/($lang)/evenementen/_index/_events.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/($lang)/evenementen/_index/_events.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/types/Content.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/types/Content.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/utils/content.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/content.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/validations/models/event.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/validations/models/event.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/validations/models/project.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/validations/models/project.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postinstall.js" beforeDir="false" afterPath="$PROJECT_DIR$/postinstall.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/seed/_content.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/seed/_content.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/seed/_events.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/seed/_events.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/seed/_makerContent.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/seed/_makerContent.ts" afterDir="false" />
     </list>
     <list id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Added box and line illustrations, and created the hand drawn box component" />
     <option name="SHOW_DIALOG" value="false" />
@@ -68,12 +105,8 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="wat-3_teamlid-component" />
-                    <option name="lastUsedInstant" value="1771562169" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="feature/WAT-2_About-pagina" />
-                    <option name="lastUsedInstant" value="1770969383" />
+                    <option name="branchName" value="feature/experiment-backend-implementations" />
+                    <option name="lastUsedInstant" value="1774038894" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="dev" />
@@ -181,7 +214,7 @@
     "Vitest.validateLogin.executor": "Run",
     "Vitest.validateLogin.should return success: false when emailaddress is invalid.executor": "Run",
     "Vitest.validateLogin.should return success: false when emailaddress is missing.executor": "Run",
-    "git-widget-placeholder": "feature/WAT-2__About-pagina",
+    "git-widget-placeholder": "feature/experiment-backend-implementations",
     "javascript.nodejs.core.library.configured.version": "24.11.0",
     "javascript.nodejs.core.library.typings.version": "24.10.9",
     "last_opened_file_path": "/Users/lody/dev/projects/watershed-website/app/routes/_index",

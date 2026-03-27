@@ -15,9 +15,72 @@ import {
 import { getPage, updatePage } from '~/models/pages.server';
 import { PageValidator, validatePage } from '~/validations/models/page';
 import PageMutationForm from '~/components/PageMutationForm';
+import { getMakerById, updateMaker, getMakers } from '~/models/makers.server';
+import { MakerValidator, validateMaker } from '~/validations/models/maker';
+import MakerMutationForm from '~/components/MakerMutationForm';
+import {
+  getTalentPrograms,
+  getTalentProgram,
+  updateTalentProgram,
+} from '~/models/talentPrograms.server';
+import {
+  TalentProgramValidator,
+  validateTalentProgram,
+} from '~/validations/models/talentProgram';
+import TalentProgramMutationForm from '~/components/TalentProgramMutationForm';
+import {
+  getCandyShopCategory,
+  updateCandyShopCategory,
+  getCandyShopCategories,
+} from '~/models/candyShopCategories.server';
+import {
+  CandyShopCategoryValidator,
+  validateCandyShopCategory,
+} from '~/validations/models/candyShopCategory';
+import CandyShopCategoryMutationForm from '~/components/CandyShopCategoryMutationForm';
+import {
+  getCandyShopItem,
+  updateCandyShopItem,
+} from '~/models/candyShopItems.server';
+import {
+  CandyShopItemValidator,
+  validateCandyShopItem,
+} from '~/validations/models/candyShopItem';
+import CandyShopItemMutationForm from '~/components/CandyShopItemMutationForm';
+import {
+  getRubriekCategory,
+  updateRubriekCategory,
+  getRubriekCategories,
+} from '~/models/rubriekCategories.server';
+import {
+  RubriekCategoryValidator,
+  validateRubriekCategory,
+} from '~/validations/models/rubriekCategory';
+import RubriekCategoryMutationForm from '~/components/RubriekCategoryMutationForm';
+import { getRubriek, updateRubriek } from '~/models/rubrieken.server';
+import {
+  RubriekValidator,
+  validateRubriek,
+} from '~/validations/models/rubriek';
+import RubriekMutationForm from '~/components/RubriekMutationForm';
 
 export const handle = {
-  i18n: 'EditContentRoute',
+  i18n: [
+    'EditContentRoute',
+    'ProjectMutationForm',
+    'EventMutationForm',
+    'PageMutationForm',
+    'MakerMutationForm',
+    'TalentProgramMutationForm',
+    'CandyShopCategoryMutationForm',
+    'CandyShopItemMutationForm',
+    'RubriekCategoryMutationForm',
+    'RubriekMutationForm',
+    'ImageSelectionField',
+    'ContentSelectionField',
+    'LocalisedRichTextEditor',
+    'MediaLibraryDialog',
+  ],
   crud: {
     state: 'update',
   },
@@ -42,22 +105,59 @@ export async function loader({ params, request }: Route.LoaderArgs) {
   };
 
   let payload;
+  let relatedData: Record<string, unknown> = {};
+
   switch (content) {
     case 'paginas':
       payload = await getPage(id);
       break;
-    case 'evenementen':
+    case 'evenementen': {
       payload = await getEvent(id);
+      const makers = await getMakers();
+      relatedData = { makers };
       break;
-
-    case 'projecten':
+    }
+    case 'projecten': {
       payload = await getProject(id);
+      const makers = await getMakers();
+      relatedData = { makers };
       break;
+    }
+    case 'makers': {
+      payload = await getMakerById(id);
+      const talentPrograms = await getTalentPrograms();
+      relatedData = { talentPrograms };
+      break;
+    }
+    case 'talentprogrammas': {
+      payload = await getTalentProgram(id);
+      const makers = await getMakers();
+      relatedData = { makers };
+      break;
+    }
+    case 'snoepwinkel-categorieen':
+      payload = await getCandyShopCategory(id);
+      break;
+    case 'snoepwinkel-items': {
+      payload = await getCandyShopItem(id);
+      const categories = await getCandyShopCategories();
+      relatedData = { categories };
+      break;
+    }
+    case 'rubriek-categorieen':
+      payload = await getRubriekCategory(id);
+      break;
+    case 'rubrieken': {
+      payload = await getRubriek(id);
+      const categories = await getRubriekCategories();
+      relatedData = { categories };
+      break;
+    }
     default:
       throw new Error(`Content type "${content}" not found`);
   }
 
-  return data({ payload, metaTranslations });
+  return data({ payload, metaTranslations, ...relatedData });
 }
 
 export async function action({ params, request }: Route.ActionArgs) {
@@ -74,6 +174,24 @@ export async function action({ params, request }: Route.ActionArgs) {
       break;
     case 'projecten':
       validatorFn = validateProject;
+      break;
+    case 'makers':
+      validatorFn = validateMaker;
+      break;
+    case 'talentprogrammas':
+      validatorFn = validateTalentProgram;
+      break;
+    case 'snoepwinkel-categorieen':
+      validatorFn = validateCandyShopCategory;
+      break;
+    case 'snoepwinkel-items':
+      validatorFn = validateCandyShopItem;
+      break;
+    case 'rubriek-categorieen':
+      validatorFn = validateRubriekCategory;
+      break;
+    case 'rubrieken':
+      validatorFn = validateRubriek;
       break;
     default:
       throw new Error(`Content type "${content}" not found`);
@@ -94,13 +212,35 @@ export async function action({ params, request }: Route.ActionArgs) {
         case 'projecten':
           await updateProject(id, result.data as ProjectValidator);
           break;
+        case 'makers':
+          await updateMaker(id, result.data as MakerValidator);
+          break;
+        case 'talentprogrammas':
+          await updateTalentProgram(id, result.data as TalentProgramValidator);
+          break;
+        case 'snoepwinkel-categorieen':
+          await updateCandyShopCategory(
+            id,
+            result.data as CandyShopCategoryValidator,
+          );
+          break;
+        case 'snoepwinkel-items':
+          await updateCandyShopItem(id, result.data as CandyShopItemValidator);
+          break;
+        case 'rubriek-categorieen':
+          await updateRubriekCategory(
+            id,
+            result.data as RubriekCategoryValidator,
+          );
+          break;
+        case 'rubrieken':
+          await updateRubriek(id, result.data as RubriekValidator);
+          break;
       }
 
-      console.log('Data is validated and ready to be saved...');
       return redirect(`/beheer/${content}`);
     }
 
-    console.error('Data is invalid and cannot be saved...', result.error);
     return data(result, { status: 400 });
   } catch (err) {
     if (!(err instanceof ZodError)) {
@@ -108,7 +248,6 @@ export async function action({ params, request }: Route.ActionArgs) {
     }
 
     const errors = (err as ZodError).format();
-    console.error('Data is invalid and cannot be saved...');
     return data({ errors }, { status: 400 });
   }
 }
@@ -125,16 +264,68 @@ export default function AdminEditContentRoute({
   params,
 }: Route.ComponentProps) {
   const type = params.content as ContentURLParams;
-  const { payload } = useLoaderData<typeof loader>();
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const loaderData = useLoaderData<typeof loader>() as any;
+  const { payload } = loaderData;
 
   function getForm() {
     switch (type) {
       case 'paginas':
         return <PageMutationForm {...payload} />;
       case 'projecten':
-        return <ProjectMutationForm {...payload} />;
+        return (
+          <ProjectMutationForm
+            {...payload}
+            image={{ url: payload.imageUrl || '', alt: payload.imageAlt || '' }}
+            makers={loaderData.makers || []}
+            selectedMakerIds={
+              payload.makers?.map((m: { id: string }) => m.id) || []
+            }
+          />
+        );
       case 'evenementen':
-        return <EventMutationForm {...payload} />;
+        return (
+          <EventMutationForm
+            {...payload}
+            image={{ url: payload.imageUrl || '', alt: payload.imageAlt || '' }}
+            makers={loaderData.makers || []}
+            selectedMakerIds={
+              payload.makers?.map((m: { id: string }) => m.id) || []
+            }
+          />
+        );
+      case 'makers':
+        return (
+          <MakerMutationForm
+            {...payload}
+            talentPrograms={loaderData.talentPrograms || []}
+          />
+        );
+      case 'talentprogrammas':
+        return (
+          <TalentProgramMutationForm
+            {...payload}
+            makers={loaderData.makers || []}
+          />
+        );
+      case 'snoepwinkel-categorieen':
+        return <CandyShopCategoryMutationForm {...payload} />;
+      case 'snoepwinkel-items':
+        return (
+          <CandyShopItemMutationForm
+            {...payload}
+            categories={loaderData.categories || []}
+          />
+        );
+      case 'rubriek-categorieen':
+        return <RubriekCategoryMutationForm {...payload} />;
+      case 'rubrieken':
+        return (
+          <RubriekMutationForm
+            {...payload}
+            categories={loaderData.categories || []}
+          />
+        );
     }
   }
 

@@ -35,6 +35,18 @@ export default function AccountMenu({ user }: Props) {
         <SubMenuItem to="/beheer/projecten" icon="kanban">
           {t('AdminMenuLinks.Projects')}
         </SubMenuItem>
+        <SubMenuItem to="/beheer/makers" icon="people">
+          {t('AdminMenuLinks.Makers')}
+        </SubMenuItem>
+        <SubMenuItem to="/beheer/talentprogrammas" icon="mortarboard">
+          {t('AdminMenuLinks.TalentPrograms')}
+        </SubMenuItem>
+        <SubMenuItem to="/beheer/snoepwinkel-items" icon="shop">
+          {t('AdminMenuLinks.CandyShop')}
+        </SubMenuItem>
+        <SubMenuItem to="/beheer/rubrieken" icon="bookmark">
+          {t('AdminMenuLinks.Rubrieken')}
+        </SubMenuItem>
       </SubMenu>
     </div>
   );

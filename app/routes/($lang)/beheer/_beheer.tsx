@@ -44,14 +44,14 @@ export default function AdminRoute({ params }: Route.ComponentProps) {
   }
 
   return (
-    <div className="flex gap-4 px-4 h-full">
+    <div className="flex gap-4 px-4">
       {!hideMenu ?
         <div className="w-80">
           <AdminMenu />
         </div>
       : null}
 
-      <div className="w-full h-full">
+      <div className="w-full">
         <Outlet />
       </div>
     </div>

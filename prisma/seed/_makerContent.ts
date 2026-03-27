@@ -3,14 +3,14 @@ import fs from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { Blob } from 'node:buffer';
 import mime from 'mime';
-import { PrismaClient, Maker } from '@prisma/client';
+import { PrismaClient, Prisma } from '@prisma/client';
 import { parseFormData } from '@mjackson/form-data-parser';
 import { fileStorage } from '~/.server/file-uploads';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const makers: Array<Omit<Maker, 'id' | 'createdAt' | 'updatedAt'>> = [
+const makers: Prisma.MakerCreateManyInput[] = [
   {
     name: 'Monique Hendriks',
     profession: {

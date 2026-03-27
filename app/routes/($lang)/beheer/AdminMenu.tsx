@@ -40,6 +40,42 @@ export default function AdminMenu() {
         </SubMenuItem>
       </SubMenu>
 
+      <SubMenu title={t('Makers.Title')}>
+        <SubMenuItem icon="card-list" to="makers">
+          {t('Makers.List')}
+        </SubMenuItem>
+        <SubMenuItem icon="plus-square" to="makers/nieuw">
+          {t('Makers.Create')}
+        </SubMenuItem>
+      </SubMenu>
+
+      <SubMenu title={t('TalentPrograms.Title')}>
+        <SubMenuItem icon="card-list" to="talentprogrammas">
+          {t('TalentPrograms.List')}
+        </SubMenuItem>
+        <SubMenuItem icon="plus-square" to="talentprogrammas/nieuw">
+          {t('TalentPrograms.Create')}
+        </SubMenuItem>
+      </SubMenu>
+
+      <SubMenu title={t('CandyShop.Title')}>
+        <SubMenuItem icon="card-list" to="snoepwinkel-categorieen">
+          {t('CandyShop.Categories')}
+        </SubMenuItem>
+        <SubMenuItem icon="card-list" to="snoepwinkel-items">
+          {t('CandyShop.Items')}
+        </SubMenuItem>
+      </SubMenu>
+
+      <SubMenu title={t('Rubrieken.Title')}>
+        <SubMenuItem icon="card-list" to="rubriek-categorieen">
+          {t('Rubrieken.Categories')}
+        </SubMenuItem>
+        <SubMenuItem icon="card-list" to="rubrieken">
+          {t('Rubrieken.Items')}
+        </SubMenuItem>
+      </SubMenu>
+
       <SubMenu title={t('Media.Title')}>
         <SubMenuItem icon="images" to="media">
           {t('Media.List')}

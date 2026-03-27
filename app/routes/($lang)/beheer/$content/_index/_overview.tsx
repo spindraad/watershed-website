@@ -17,6 +17,27 @@ import i18nServer from '~/modules/i18n.server';
 import { ShoelaceContext } from '~/components/shoelace';
 import { convertPagesToTableData, getPages } from '~/models/pages.server';
 import { SupportedLanguages } from '~/config/i18n';
+import { convertMakersToTableData, getMakers } from '~/models/makers.server';
+import {
+  convertTalentProgramsToTableData,
+  getTalentPrograms,
+} from '~/models/talentPrograms.server';
+import {
+  convertCandyShopCategoriesToTableData,
+  getCandyShopCategories,
+} from '~/models/candyShopCategories.server';
+import {
+  convertCandyShopItemsToTableData,
+  getCandyShopItems,
+} from '~/models/candyShopItems.server';
+import {
+  convertRubriekCategoriesToTableData,
+  getRubriekCategories,
+} from '~/models/rubriekCategories.server';
+import {
+  convertRubriekenToTableData,
+  getRubrieken,
+} from '~/models/rubrieken.server';
 
 export const handle = {
   i18n: [
@@ -54,6 +75,42 @@ export async function loader({ params, request }: Route.LoaderArgs) {
     case 'projecten': {
       const projects = await getProjects();
       data = convertProjectsToTableData(projects);
+      break;
+    }
+
+    case 'makers': {
+      const makers = await getMakers();
+      data = convertMakersToTableData(makers);
+      break;
+    }
+
+    case 'talentprogrammas': {
+      const programs = await getTalentPrograms();
+      data = convertTalentProgramsToTableData(programs);
+      break;
+    }
+
+    case 'snoepwinkel-categorieen': {
+      const categories = await getCandyShopCategories();
+      data = convertCandyShopCategoriesToTableData(categories);
+      break;
+    }
+
+    case 'snoepwinkel-items': {
+      const items = await getCandyShopItems();
+      data = convertCandyShopItemsToTableData(items);
+      break;
+    }
+
+    case 'rubriek-categorieen': {
+      const categories = await getRubriekCategories();
+      data = convertRubriekCategoriesToTableData(categories);
+      break;
+    }
+
+    case 'rubrieken': {
+      const rubrieken = await getRubrieken();
+      data = convertRubriekenToTableData(rubrieken);
       break;
     }
   }
@@ -125,17 +182,44 @@ export default function AdminContentOverviewRoute({
     newButtonTranslationKey = 'NewButtonCaption.Common';
   }
 
+  const isEmpty = data.length === 0;
+
   return (
     <div className="space-y-4">
       <div className="flex flex-row justify-between items-center">
         <Heading level={1}>{t('Title', { content, count: 2 })}</Heading>
-        <SlButton href={`/beheer/${content}/nieuw`} variant="primary">
-          <SlIcon slot="prefix" name="plus-circle-dotted"></SlIcon>
-          {t(newButtonTranslationKey, { content, count: 1 })}
-        </SlButton>
+        {!isEmpty && (
+          <SlButton href={`/beheer/${content}/nieuw`} variant="primary">
+            <SlIcon slot="prefix" name="plus-circle-dotted"></SlIcon>
+            {t(newButtonTranslationKey, { content, count: 1 })}
+          </SlButton>
+        )}
       </div>
 
-      <ContentTable items={data} triggerDelete={triggerDelete} />
+      {isEmpty ?
+        <div className="flex flex-col items-center justify-center py-16 px-4 border-2 border-dashed border-gray-300 rounded-lg bg-gray-50">
+          <SlIcon
+            name="inbox"
+            style={
+              {
+                fontSize: '3rem',
+                color: 'var(--sl-color-gray-400)',
+              } as React.CSSProperties
+            }
+          />
+          <p className="mt-4 text-gray-600 text-center">
+            {t('EmptyState.Message', { content, count: 2 })}
+          </p>
+          <SlButton
+            href={`/beheer/${content}/nieuw`}
+            variant="primary"
+            className="mt-4"
+          >
+            <SlIcon slot="prefix" name="plus-circle-dotted"></SlIcon>
+            {t('EmptyState.CreateButton', { content, count: 1 })}
+          </SlButton>
+        </div>
+      : <ContentTable items={data} triggerDelete={triggerDelete} />}
 
       <ConfirmDeleteDialog
         open={openDialog}

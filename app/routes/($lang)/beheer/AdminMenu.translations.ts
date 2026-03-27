@@ -17,6 +17,26 @@ export const en = {
       List: 'Overview',
       Create: 'Create new project',
     },
+    Makers: {
+      Title: 'Makers',
+      List: 'Overview',
+      Create: 'Create new maker',
+    },
+    TalentPrograms: {
+      Title: 'Talent Programs',
+      List: 'Overview',
+      Create: 'Create new program',
+    },
+    CandyShop: {
+      Title: 'Candy Shop',
+      Categories: 'Categories',
+      Items: 'Items',
+    },
+    Rubrieken: {
+      Title: 'Rubrieken',
+      Categories: 'Categories',
+      Items: 'Rubrieken',
+    },
     Media: {
       Title: 'Media',
       List: 'Manage media',
@@ -40,9 +60,29 @@ export const nl = {
       Create: 'Nieuw evenement aanmaken',
     },
     Projects: {
-      Title: 'Projects',
+      Title: 'Projecten',
       List: 'Overzicht',
       Create: 'Nieuw project aanmaken',
+    },
+    Makers: {
+      Title: 'Makers',
+      List: 'Overzicht',
+      Create: 'Nieuwe maker aanmaken',
+    },
+    TalentPrograms: {
+      Title: "Talentprogramma's",
+      List: 'Overzicht',
+      Create: 'Nieuw programma aanmaken',
+    },
+    CandyShop: {
+      Title: 'Snoepwinkel',
+      Categories: 'Categorieën',
+      Items: 'Items',
+    },
+    Rubrieken: {
+      Title: 'Rubrieken',
+      Categories: 'Categorieën',
+      Items: 'Rubrieken',
     },
     Media: {
       Title: 'Media',
@@ -54,16 +94,47 @@ export const nl = {
 
 export const pap = {
   AdminMenu: {
-    Title: 'Administration',
+    Title: 'Administrashon',
+    Pages: {
+      Title: 'Páginanan',
+      List: 'Lista',
+      Create: 'Krea página nobo',
+      Menu: 'Maneha menu prinsipal',
+    },
     Events: {
-      Title: 'Events',
-      List: 'Overview',
-      Create: 'Create new event',
+      Title: 'Eventos',
+      List: 'Lista',
+      Create: 'Krea evento nobo',
     },
     Projects: {
-      Title: 'Projects',
-      List: 'Overview',
-      Create: 'Create new project',
+      Title: 'Proyektonan',
+      List: 'Lista',
+      Create: 'Krea proyekto nobo',
+    },
+    Makers: {
+      Title: 'Kreadornan',
+      List: 'Lista',
+      Create: 'Krea kreador nobo',
+    },
+    TalentPrograms: {
+      Title: 'Programanan di Talento',
+      List: 'Lista',
+      Create: 'Krea programa nobo',
+    },
+    CandyShop: {
+      Title: 'Snoepwinkel',
+      Categories: 'Kategorianan',
+      Items: 'Items',
+    },
+    Rubrieken: {
+      Title: 'Rubrieken',
+      Categories: 'Kategorianan',
+      Items: 'Rubrieken',
+    },
+    Media: {
+      Title: 'Media',
+      List: 'Maneha media',
+      Create: 'Upload media nobo',
     },
   },
 };

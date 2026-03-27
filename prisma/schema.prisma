@@ -70,6 +70,14 @@ model Project {
 
   slug String
 
+  imageUrl String?
+  imageAlt String?
+
+  /// [LocalisedContent]
+  content Json?
+
+  makers Maker[] @relation("ProjectMakers")
+
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
@@ -85,13 +93,19 @@ model Event {
 
   organiser String?
 
-  image String
+  imageUrl String?
+  imageAlt String?
 
   link String
 
   eventDate DateTime
 
   address String
+
+  /// [LocalisedContent]
+  content Json?
+
+  makers Maker[] @relation("EventMakers")
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -137,6 +151,111 @@ model Maker {
 
   slug     String  @unique
   imageUrl String?
+  imageAlt String?
+
+  /// [LocalisedContent]
+  content Json?
+
+  talentPrograms TalentProgram[] @relation("TalentProgramMakers")
+  events         Event[]         @relation("EventMakers")
+  projects       Project[]       @relation("ProjectMakers")
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model TalentProgram {
+  id String @id @default(cuid())
+
+  /// [Localised]
+  title Json
+
+  duration String?
+
+  /// [Localised]
+  description Json
+
+  imageUrl String?
+  imageAlt String?
+
+  /// [LocalisedContent]
+  content Json?
+
+  makers Maker[] @relation("TalentProgramMakers")
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model CandyShopCategory {
+  id String @id @default(cuid())
+
+  /// [Localised]
+  title Json
+
+  /// [Localised]
+  description Json
+
+  items CandyShopItem[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model CandyShopItem {
+  id String @id @default(cuid())
+
+  /// [Localised]
+  title Json
+
+  /// [Localised]
+  description Json
+
+  imageUrl String?
+  imageAlt String?
+
+  /// [LocalisedContent]
+  content Json?
+
+  category   CandyShopCategory @relation(fields: [categoryId], references: [id])
+  categoryId String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model RubriekCategory {
+  id String @id @default(cuid())
+
+  /// [Localised]
+  title Json
+
+  /// [Localised]
+  description Json
+
+  rubrieken Rubriek[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Rubriek {
+  id String @id @default(cuid())
+
+  /// [Localised]
+  title Json
+
+  /// [Localised]
+  description Json
+
+  imageUrl String?
+  imageAlt String?
+
+  /// [LocalisedContent]
+  content Json?
+
+  category   RubriekCategory @relation(fields: [categoryId], references: [id])
+  categoryId String
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt

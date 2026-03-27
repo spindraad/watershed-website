@@ -10,7 +10,11 @@ export const en = {
       Address: 'Address',
       Link: 'Link',
       EventDate: 'Date',
+      Image: 'Image',
+      Content: 'Content',
+      Makers: 'Related makers',
     },
+    Save: 'Save',
   },
 };
 
@@ -26,12 +30,30 @@ export const nl = {
       Address: 'Adres',
       Link: 'Link',
       EventDate: 'Datum',
+      Image: 'Afbeelding',
+      Content: 'Inhoud',
+      Makers: 'Gerelateerde makers',
     },
+    Save: 'Opslaan',
   },
 };
 
 export const pap = {
   EventMutationForm: {
-    Title: '',
+    Title: {
+      New: 'Evento nobo',
+      Edit: 'Edita evento',
+    },
+    Labels: {
+      Title: 'Titulo',
+      Description: 'Deskripshon',
+      Address: 'Adres',
+      Link: 'Link',
+      EventDate: 'Fecha',
+      Image: 'Imáhen',
+      Content: 'Kontenido',
+      Makers: 'Kreadornan relashoná',
+    },
+    Save: 'Warda',
   },
 };

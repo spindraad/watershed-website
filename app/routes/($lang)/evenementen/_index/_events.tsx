@@ -61,8 +61,12 @@ export default function EventsRoute() {
                 to={`/evenementen/${event.id}`}
               >
                 <img
-                  src={`/afbeelding/${event.image}`}
-                  alt={event.title.nl}
+                  src={
+                    event.imageUrl ?
+                      `/afbeelding/${event.imageUrl}`
+                    : '/illustraties/placeholder.png'
+                  }
+                  alt={event.imageAlt || event.title.nl}
                   className="w-[10rem] h-[10rem] object-cover"
                 />
 

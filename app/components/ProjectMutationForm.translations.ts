@@ -9,7 +9,11 @@ export const en = {
       Description: 'Description',
       Summary: 'Summary',
       Slug: 'Slug',
+      Image: 'Image',
+      Content: 'Content',
+      Makers: 'Related makers',
     },
+    Save: 'Save',
   },
 };
 
@@ -24,7 +28,11 @@ export const nl = {
       Description: 'Beschrijving',
       Summary: 'Samenvatting',
       Slug: 'Slug',
+      Image: 'Afbeelding',
+      Content: 'Inhoud',
+      Makers: 'Gerelateerde makers',
     },
+    Save: 'Opslaan',
   },
 };
 
@@ -39,6 +47,10 @@ export const pap = {
       Description: 'Deskripshon',
       Summary: 'Resumen',
       Slug: 'Slug',
+      Image: 'Imáhen',
+      Content: 'Kontenido',
+      Makers: 'Kreadornan relashoná',
     },
+    Save: 'Warda',
   },
 };

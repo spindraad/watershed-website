@@ -4,6 +4,12 @@ import { ContentURLParams } from '~/types/Content';
 import { deleteEvent } from '~/models/events.server';
 import { deleteProject } from '~/models/projects.server';
 import { deletePage } from '~/models/pages.server';
+import { deleteMaker } from '~/models/makers.server';
+import { deleteTalentProgram } from '~/models/talentPrograms.server';
+import { deleteCandyShopCategory } from '~/models/candyShopCategories.server';
+import { deleteCandyShopItem } from '~/models/candyShopItems.server';
+import { deleteRubriekCategory } from '~/models/rubriekCategories.server';
+import { deleteRubriek } from '~/models/rubrieken.server';
 
 export const handle = {
   crud: {
@@ -42,6 +48,30 @@ export async function action({ params, request }: Route.ActionArgs) {
     }
     case 'projecten': {
       deleteFn = deleteProject;
+      break;
+    }
+    case 'makers': {
+      deleteFn = deleteMaker;
+      break;
+    }
+    case 'talentprogrammas': {
+      deleteFn = deleteTalentProgram;
+      break;
+    }
+    case 'snoepwinkel-categorieen': {
+      deleteFn = deleteCandyShopCategory;
+      break;
+    }
+    case 'snoepwinkel-items': {
+      deleteFn = deleteCandyShopItem;
+      break;
+    }
+    case 'rubriek-categorieen': {
+      deleteFn = deleteRubriekCategory;
+      break;
+    }
+    case 'rubrieken': {
+      deleteFn = deleteRubriek;
       break;
     }
     default: {

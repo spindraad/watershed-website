@@ -1,6 +1,15 @@
 import { supportedLanguages, SupportedLanguages } from '~/config/i18n';
 
-export type ContentURLParams = 'paginas' | 'evenementen' | 'projecten';
+export type ContentURLParams =
+  | 'paginas'
+  | 'evenementen'
+  | 'projecten'
+  | 'makers'
+  | 'talentprogrammas'
+  | 'snoepwinkel-categorieen'
+  | 'snoepwinkel-items'
+  | 'rubriek-categorieen'
+  | 'rubrieken';
 
 export type LocalisedValue = Record<SupportedLanguages, string>;
 

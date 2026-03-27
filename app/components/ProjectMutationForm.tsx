@@ -7,14 +7,22 @@ import Heading from '~/components/Heading';
 import Input from '~/components/Input';
 import { ErrorResponse } from '~/types/Validations';
 import LocalisedInput from '~/components/LocalisedInput';
+import LocalisedRichTextEditor from '~/components/LocalisedRichTextEditor';
+import ImageSelectionField from '~/components/ImageSelectionField';
+import ContentSelectionField from '~/components/ContentSelectionField';
 import { DeepPartial } from '~/types/DeepPartial';
+import type { Maker } from '~/models/makers.server';
 
 type Props = DeepPartial<ProjectValidator> & {
   id?: string;
+  makers?: Maker[];
+  selectedMakerIds?: string[];
 };
 
 export default function ProjectMutationForm({
   id = '',
+  makers = [],
+  selectedMakerIds = [],
   ...initialValues
 }: Props) {
   const { t } = useTranslation('ProjectMutationForm');
@@ -23,7 +31,7 @@ export default function ProjectMutationForm({
 
   const isSubmitting = fetcher.state !== 'idle';
   const errors = fetcher.data?.errors;
-  const content = fetcher.data?.data || initialValues;
+  const formContent = fetcher.data?.data || initialValues;
 
   let titleTranslationKey = 'Title.New';
   if (id) {
@@ -44,7 +52,7 @@ export default function ProjectMutationForm({
         label={t('Labels.Title')}
         name="title"
         id="title"
-        value={content?.title}
+        value={formContent?.title}
         errors={errors?.title}
       />
 
@@ -52,7 +60,7 @@ export default function ProjectMutationForm({
         label={t('Labels.Description')}
         name="description"
         id="description"
-        value={content?.description}
+        value={formContent?.description}
         errors={errors?.description}
       />
 
@@ -60,7 +68,7 @@ export default function ProjectMutationForm({
         label={t('Labels.Summary')}
         name="summary"
         id="summary"
-        value={content?.summary}
+        value={formContent?.summary}
         errors={errors?.summary}
       />
 
@@ -69,8 +77,35 @@ export default function ProjectMutationForm({
         name="slug"
         id="slug"
         type="text"
-        value={content?.slug || ''}
+        value={formContent?.slug || ''}
         error={errors?.slug?._errors}
+      />
+
+      <ImageSelectionField
+        id="image"
+        name="image"
+        label={t('Labels.Image')}
+        value={formContent?.image}
+        errors={errors?.image}
+      />
+
+      <LocalisedRichTextEditor
+        id="content"
+        name="content"
+        label={t('Labels.Content')}
+        value={formContent?.content}
+        errors={errors?.content}
+      />
+
+      <ContentSelectionField
+        id="makerIds"
+        name="makerIds"
+        label={t('Labels.Makers')}
+        contentLibrary={makers}
+        selectedIds={selectedMakerIds}
+        displayField="name"
+        searchFields={['name']}
+        multiSelect={true}
       />
 
       <div className="flex justify-end">

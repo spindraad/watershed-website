@@ -7,17 +7,25 @@ import Input from '~/components/Input';
 import { ErrorResponse } from '~/types/Validations';
 import { EventErrors, EventValidator } from '~/validations/models/event';
 import LocalisedInput from '~/components/LocalisedInput';
+import LocalisedRichTextEditor from '~/components/LocalisedRichTextEditor';
+import ImageSelectionField from '~/components/ImageSelectionField';
+import ContentSelectionField from '~/components/ContentSelectionField';
 import { DeepPartial } from '~/types/DeepPartial';
 import DateInput from '~/components/DateInput';
+import type { Maker } from '~/models/makers.server';
 
 type Props = DeepPartial<Omit<EventValidator, 'eventDate' | 'organiser'>> & {
   id?: string;
   eventDate?: Date;
   organiser?: string | null;
+  makers?: Maker[];
+  selectedMakerIds?: string[];
 };
 
 export default function EventMutationForm({
   id = '',
+  makers = [],
+  selectedMakerIds = [],
   ...initialValues
 }: Props) {
   const { t } = useTranslation('EventMutationForm');
@@ -26,7 +34,7 @@ export default function EventMutationForm({
 
   const isSubmitting = fetcher.state !== 'idle';
   const errors = fetcher.data?.errors;
-  const content = fetcher.data?.data || initialValues;
+  const formContent = fetcher.data?.data || initialValues;
 
   let titleTranslationKey = 'Title.New';
   if (id) {
@@ -47,7 +55,7 @@ export default function EventMutationForm({
         label={t('Labels.Title')}
         name="title"
         id="title"
-        value={content?.title}
+        value={formContent?.title}
         errors={errors?.title}
       />
 
@@ -55,8 +63,16 @@ export default function EventMutationForm({
         label={t('Labels.Description')}
         name="description"
         id="description"
-        value={content?.description}
+        value={formContent?.description}
         errors={errors?.description}
+      />
+
+      <ImageSelectionField
+        id="image"
+        name="image"
+        label={t('Labels.Image')}
+        value={formContent?.image}
+        errors={errors?.image}
       />
 
       <Input
@@ -64,7 +80,7 @@ export default function EventMutationForm({
         name="address"
         id="address"
         type="text"
-        value={content?.address || ''}
+        value={formContent?.address || ''}
         error={errors?.address?._errors}
       />
 
@@ -73,7 +89,7 @@ export default function EventMutationForm({
         id="link"
         name="link"
         type="url"
-        value={content?.link || ''}
+        value={formContent?.link || ''}
         error={errors?.link?._errors}
       />
 
@@ -81,8 +97,27 @@ export default function EventMutationForm({
         label={t('Labels.EventDate')}
         name="eventDate"
         id="eventDate"
-        value={content?.eventDate || ''}
+        value={formContent?.eventDate || ''}
         error={errors?.eventDate?._errors}
+      />
+
+      <LocalisedRichTextEditor
+        id="content"
+        name="content"
+        label={t('Labels.Content')}
+        value={formContent?.content}
+        errors={errors?.content}
+      />
+
+      <ContentSelectionField
+        id="makerIds"
+        name="makerIds"
+        label={t('Labels.Makers')}
+        contentLibrary={makers}
+        selectedIds={selectedMakerIds}
+        displayField="name"
+        searchFields={['name']}
+        multiSelect={true}
       />
 
       <div className="flex justify-end">

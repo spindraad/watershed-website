@@ -15,11 +15,3 @@ fse.copySync(
   path.join(topDir, 'public', 'shoelace-assets', 'assets'),
   { overwrite: true },
 );
-
-// Copy TinyMCE code to public directory
-fse.emptyDirSync(path.join(topDir, 'public', 'tinymce'));
-fse.copySync(
-  path.join(topDir, 'node_modules', 'tinymce'),
-  path.join(topDir, 'public', 'tinymce'),
-  { overwrite: true },
-);

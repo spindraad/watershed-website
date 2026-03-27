@@ -6,7 +6,7 @@ import { Event } from '@prisma/client';
 import { parseFormData } from '@mjackson/form-data-parser';
 import { fileStorage } from '~/.server/file-uploads';
 
-type SeedEvent = Omit<Event, 'id' | 'createdAt' | 'updatedAt'>;
+type SeedEvent = Omit<Event, 'id' | 'createdAt' | 'updatedAt' | 'content'>;
 const __dirname = import.meta.dirname;
 
 export const events: SeedEvent[] = [
@@ -21,7 +21,8 @@ export const events: SeedEvent[] = [
       en: 'A cozy afternoon with music and poetry.',
       pap: 'Un atardi di biba ku musik i poesia.',
     },
-    image: 'buskeda-milouska.png',
+    imageUrl: 'buskeda-milouska.png',
+    imageAlt: null,
     organiser: 'Milouska Meulens',
     eventDate: new Date('2025-09-11T15:00:00Z'),
     address: 'De Witte Dame, Eindhoven',
@@ -38,7 +39,8 @@ export const events: SeedEvent[] = [
       en: 'An evening full of true stories from the participants.',
       pap: 'Un atardi ku ta biba di e participanten.',
     },
-    image: 'echte-verhalen.png',
+    imageUrl: 'echte-verhalen.png',
+    imageAlt: null,
     organiser: null,
     eventDate: new Date('2025-09-11T17:00:00Z'),
     address: 'De Witte Dame, Eindhoven',
@@ -55,7 +57,8 @@ export const events: SeedEvent[] = [
       en: 'An evening full of true stories from the participants.',
       pap: 'Un atardi ku ta biba di e participanten.',
     },
-    image: 'ik-weet-zeker.png',
+    imageUrl: 'ik-weet-zeker.png',
+    imageAlt: null,
     organiser: 'Monique Hendriks',
     eventDate: new Date('2025-09-11T19:00:00Z'),
     address: 'De Witte Dame, Eindhoven',
@@ -67,22 +70,27 @@ export async function uploadImagesIfNeeded() {
   console.log('Checking uploaded images for events...');
 
   for (const event of events) {
-    if (event.image) {
-      const file = await fileStorage.has(event.image);
+    if (event.imageUrl) {
+      const file = await fileStorage.has(event.imageUrl);
       if (!file) {
-        console.warn(`[404] Image not found: ${event.image}, uploading...`);
-        const imagePath = path.join(__dirname, 'images', 'events', event.image);
-        const request = createUploadRequest(event.image, imagePath);
+        console.warn(`[404] Image not found: ${event.imageUrl}, uploading...`);
+        const imagePath = path.join(
+          __dirname,
+          'images',
+          'events',
+          event.imageUrl,
+        );
+        const request = createUploadRequest(event.imageUrl, imagePath);
 
         await parseFormData(request, async (handler) => {
           const bytes = await handler.bytes();
           const file = new File([bytes.buffer as ArrayBuffer], handler.name, {
             type: handler.type,
           });
-          await fileStorage.set(event.image, file);
+          await fileStorage.set(event.imageUrl!, file);
         });
       } else {
-        console.log(`[200] Image already exists: ${event.image}`);
+        console.log(`[200] Image already exists: ${event.imageUrl}`);
       }
     }
   }

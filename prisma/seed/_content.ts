@@ -1,13 +1,11 @@
-import { PrismaClient, Project } from '@prisma/client';
+import { PrismaClient } from '@prisma/client';
 import { fakerEN, fakerNL, fakerEO } from '@faker-js/faker';
 import { home, contact, about } from './_pageContent';
 import { events, uploadImagesIfNeeded } from './_events';
 import { createMakers, uploadMakerImagesIfNeeded } from './_makerContent';
 
 const createProjects = (client: PrismaClient) => {
-  const projects = Array.from({ length: 10 }).map<
-    Omit<Project, 'id'> & { id?: string }
-  >(() => ({
+  const projects = Array.from({ length: 10 }).map(() => ({
     title: {
       en: fakerEN.lorem.sentence(),
       nl: fakerNL.lorem.sentence(),

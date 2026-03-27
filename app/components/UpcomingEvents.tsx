@@ -8,7 +8,7 @@ import { convertDateToLocaleStringWithShortWeekday } from '~/utils/date';
 
 export type UpcomingEventDetails = Pick<
   Event,
-  'id' | 'title' | 'organiser' | 'eventDate' | 'image'
+  'id' | 'title' | 'organiser' | 'eventDate' | 'imageUrl' | 'imageAlt'
 >;
 
 type Props = {
@@ -47,8 +47,12 @@ export default function UpcomingEvents({ events }: Props) {
           <li key={event.id} className="w-36 h-auto flex flex-col gap-2">
             <HandDrawnBox drawStyle="dotted" padding="p-3" classes="relative">
               <img
-                src={`/afbeelding/${event.image}`}
-                alt={event.title.en}
+                src={
+                  event.imageUrl ?
+                    `/afbeelding/${event.imageUrl}`
+                  : '/illustraties/placeholder.png'
+                }
+                alt={event.imageAlt || event.title.en}
                 className="w-36 h-36 object-cover"
               />
               <PostItNote classes="absolute bottom-4 -right-4 text-xs">

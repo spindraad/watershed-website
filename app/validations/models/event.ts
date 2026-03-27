@@ -8,14 +8,27 @@ const localisedStringValidations = z.object({
   pap: z.string().min(1),
 });
 
+const localisedHtmlValidations = z.object({
+  nl: z.string().optional(),
+  en: z.string().optional(),
+  pap: z.string().optional(),
+});
+
+const imageValidations = z.object({
+  url: z.string().min(1),
+  alt: z.string().optional(),
+});
+
 export const eventValidator = z.object({
   title: localisedStringValidations,
   description: localisedStringValidations,
-  image: z.string().min(1),
+  image: imageValidations,
   organiser: z.string().optional(),
   eventDate: z.string().datetime(),
   address: z.string().min(1),
   link: z.string().min(1),
+  content: localisedHtmlValidations.optional(),
+  makerIds: z.string().optional(),
 });
 
 export type EventValidator = z.infer<typeof eventValidator>;

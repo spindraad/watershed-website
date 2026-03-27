@@ -5,45 +5,52 @@ interface RawFormData {
   [key: string]: string | File;
 }
 
-interface LocalizedField {
-  [locale: string]: string;
+interface NestedField {
+  [key: string]: string | NestedField;
 }
 
 interface TransformedFormData {
-  [key: string]: string | LocalizedField; // For any additional fields
+  [key: string]: string | NestedField;
 }
 
 /**
  * Transforms a form data object with nested keys into a properly structured object
+ * Supports both locale keys (title.nl, title.en) and nested object keys (image.url, image.alt)
  * @param formData
  */
 export function transformFormData(formData: FormData): TransformedFormData {
-  const result: Partial<TransformedFormData> = {};
+  const result: TransformedFormData = {};
   const data: RawFormData = Object.fromEntries(formData);
 
   Object.keys(data).forEach((key) => {
+    // Skip file fields
+    if (data[key] instanceof File) {
+      return;
+    }
+
     if (key.includes('.')) {
-      const [fieldName, locale] = key.split('.');
+      const parts = key.split('.');
+      let current: TransformedFormData | NestedField = result;
 
-      // Initialize the object for this field if it doesn't exist yet
-      if (!result[fieldName]) {
-        result[fieldName] = {} as LocalizedField;
+      // Traverse/create the nested structure
+      for (let i = 0; i < parts.length - 1; i++) {
+        const part = parts[i];
+        if (!current[part]) {
+          current[part] = {};
+        }
+        current = current[part] as NestedField;
       }
 
-      // Check if the field is not a file
-      if (data[key] instanceof File) {
-        return;
-      }
-
-      // Add the localized value
-      (result[fieldName] as LocalizedField)[locale] = data[key];
-    } else if (!(data[key] instanceof File)) {
-      // For regular fields (not files), just copy them directly
-      result[key] = data[key];
+      // Set the final value
+      const lastPart = parts[parts.length - 1];
+      current[lastPart] = data[key] as string;
+    } else {
+      // For regular fields (not nested), just copy them directly
+      result[key] = data[key] as string;
     }
   });
 
-  return result as TransformedFormData;
+  return result;
 }
 
 export function countErrorsForLocalisedFields<D extends ZodTypeAny>(

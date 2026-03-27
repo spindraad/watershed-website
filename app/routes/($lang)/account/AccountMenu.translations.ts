@@ -9,8 +9,12 @@ export const en = {
     AdminMenuLinks: {
       Title: 'Administration',
       Events: 'Events',
-      Projects: 'Events',
+      Projects: 'Projects',
       Pages: 'Pages',
+      Makers: 'Makers',
+      TalentPrograms: 'Talent Programs',
+      CandyShop: 'Candy Shop',
+      Rubrieken: 'Rubrieken',
     },
   },
 };
@@ -28,6 +32,10 @@ export const nl = {
       Events: 'Evenementen',
       Projects: 'Projecten',
       Pages: "Pagina's",
+      Makers: 'Makers',
+      TalentPrograms: "Talentprogramma's",
+      CandyShop: 'Snoepwinkel',
+      Rubrieken: 'Rubrieken',
     },
   },
 };
@@ -43,8 +51,12 @@ export const pap = {
     AdminMenuLinks: {
       Title: 'Admin',
       Events: 'Events',
-      Projects: 'Events',
+      Projects: 'Projects',
       Pages: 'Pages',
+      Makers: 'Makers',
+      TalentPrograms: 'Talent Programs',
+      CandyShop: 'Candy Shop',
+      Rubrieken: 'Rubrieken',
     },
   },
 };

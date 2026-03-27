@@ -42,8 +42,11 @@ export default function ContentTable({ items, triggerDelete }: Props) {
   } = useTranslation('ContentTable');
   const { SlIconButton } = useContext(ShoelaceContext);
 
-  const headers = Object.keys(items[0]).filter((header) => header !== 'id');
-  headers.push('actions');
+  let headers: string[] = [];
+  if (items && items[0]) {
+    headers = Object.keys(items[0]).filter((header) => header !== 'id');
+    headers.push('actions');
+  }
 
   function parseItemValue(item: ContentTableItem, header: string) {
     let value: ItemValue;
