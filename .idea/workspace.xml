@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29e278a9-ef9e-4850-a096-4600af23bfce" name="WAT-3 Teamlid component" comment="Deployment changes: we don't reset the db every time on test deploy but we can do it manually via script." />
+    <list default="true" id="29e278a9-ef9e-4850-a096-4600af23bfce" name="WAT-3 Teamlid component" comment="Deployment changes: we don't reset the db every time on test deploy but we can do it manually via script.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.ts" afterDir="false" />
+    </list>
     <list id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Added box and line illustrations, and created the hand drawn box component" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -1049,6 +1052,11 @@
     </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="0c915517-ea9d-4938-88af-63b24bb9d581" value="TOOL_WINDOW" />
+      </map>
+    </option>
     <option name="RECENT_FILTERS">
       <map>
         <entry key="Branch">
@@ -1066,6 +1074,11 @@
     </option>
     <option name="TAB_STATES">
       <map>
+        <entry key="0c915517-ea9d-4938-88af-63b24bb9d581">
+          <value>
+            <State />
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State />

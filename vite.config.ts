@@ -13,7 +13,7 @@ export default defineConfig(({ isSsrBuild }) => ({
     isStorybook ? react() : reactRouter(),
     tsconfigPaths(),
     // Only include node polyfills for client builds - Node.js already has these natively
-    !isSsrBuild &&
+    !isSsrBuild ?
       nodePolyfills({
         include: ['crypto'],
         globals: {
@@ -21,6 +21,7 @@ export default defineConfig(({ isSsrBuild }) => ({
           global: true,
           process: true,
         },
-      }),
-  ].filter(Boolean),
+      })
+    : null,
+  ],
 }));
