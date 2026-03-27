@@ -53,6 +53,15 @@ if [[ -z "$APP_NAME" || -z "$NAMESPACE" || -z "$DB_USER" || -z "$DB_NAME" ]]; th
   exit 1
 fi
 
+# Get database password from Kubernetes secret
+log "Fetching database password from Kubernetes secret..."
+DB_PASSWORD=$(kubectl get secret "${APP_NAME}-postgresql-secret" -n "$NAMESPACE" -o jsonpath='{.data.POSTGRES_PASSWORD}' | base64 --decode)
+
+if [[ -z "$DB_PASSWORD" ]]; then
+  echo "ERROR: Could not retrieve database password from Kubernetes secret"
+  exit 1
+fi
+
 DB_LABEL="app=${APP_NAME}-postgresql"
 
 log "Configuration:"
@@ -78,7 +87,7 @@ echo ""
 echo "This will import the dump file into the database."
 echo "Existing data may be overwritten depending on the dump contents."
 echo ""
-read -q "REPLY?Do you want to proceed? (y/n) "
+read -rq "REPLY?Do you want to proceed? (y/n) "
 echo ""
 
 if [[ ! $REPLY =~ ^[Yy]$ ]]; then
@@ -91,6 +100,6 @@ log "┌────────────────────────
 log "│ IMPORTING DATABASE                                     │"
 log "└────────────────────────────────────────────────────────┘"
 
-kubectl exec -i "$DB_POD" -n "$NAMESPACE" -- psql -U "$DB_USER" -d "$DB_NAME" < "$DUMP_FILE"
+kubectl exec -i "$DB_POD" -n "$NAMESPACE" -- env PGPASSWORD="$DB_PASSWORD" psql -U "$DB_USER" -d "$DB_NAME" < "$DUMP_FILE"
 
 log "Database import completed successfully"
