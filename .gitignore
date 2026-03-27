@@ -15,3 +15,4 @@ public/tinymce
 .react-router/
 tmp
 prisma/seed/images
+.claude/plans
