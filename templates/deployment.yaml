@@ -20,9 +20,9 @@ spec:
       nodeSelector:
         app-node: "true"
       initContainers:
-        - name: db-seed
+        - name: db-migrate
           image: {{ .Values.app.image.repository }}:{{ .Values.app.image.tag }}
-          command: ["sh", "-c", "npm run db:deploy:dev"]
+          command: ["sh", "-c", "npm run db:deploy"]
           env:
             - name: DATABASE_PASSWORD
               valueFrom:
