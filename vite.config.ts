@@ -7,18 +7,20 @@ import { nodePolyfills } from 'vite-plugin-node-polyfills';
 
 const isStorybook = process.argv[1]?.includes('storybook');
 
-export default defineConfig({
+export default defineConfig(({ isSsrBuild }) => ({
   plugins: [
     envOnlyMacros(),
     isStorybook ? react() : reactRouter(),
     tsconfigPaths(),
-    nodePolyfills({
-      include: ['crypto'],
-      globals: {
-        Buffer: true,
-        global: true,
-        process: true,
-      },
-    }),
-  ],
-});
+    // Only include node polyfills for client builds - Node.js already has these natively
+    !isSsrBuild &&
+      nodePolyfills({
+        include: ['crypto'],
+        globals: {
+          Buffer: true,
+          global: true,
+          process: true,
+        },
+      }),
+  ].filter(Boolean),
+}));

@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29e278a9-ef9e-4850-a096-4600af23bfce" name="WAT-3 Teamlid component" comment="ide">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/deploy.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/deploy.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/templates/deployment.yaml" afterDir="false" />
-    </list>
+    <list default="true" id="29e278a9-ef9e-4850-a096-4600af23bfce" name="WAT-3 Teamlid component" comment="Deployment changes: we don't reset the db every time on test deploy but we can do it manually via script." />
     <list id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Added box and line illustrations, and created the hand drawn box component" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -546,14 +541,6 @@
       <workItem from="1757113103308" duration="35000" />
       <workItem from="1760341367186" duration="338000" />
     </task>
-    <task id="LOCAL-00142" summary="Added missing LoginFormComponent translations to login route">
-      <option name="closed" value="true" />
-      <created>1745581050466</created>
-      <option name="number" value="00142" />
-      <option name="presentableId" value="LOCAL-00142" />
-      <option name="project" value="LOCAL" />
-      <updated>1745581050467</updated>
-    </task>
     <task id="LOCAL-00143" summary="Added Prisma migrations script for prod and dev database deploys, in preparation for when we switch over to managed databases.">
       <option name="closed" value="true" />
       <created>1745581278552</created>
@@ -1005,7 +992,15 @@
       <option name="project" value="LOCAL" />
       <updated>1771602885326</updated>
     </task>
-    <option name="localTasksCounter" value="180" />
+    <task id="LOCAL-00180" summary="Deployment changes: we don't reset the db every time on test deploy but we can do it manually via script.">
+      <option name="closed" value="true" />
+      <created>1774624873474</created>
+      <option name="number" value="00180" />
+      <option name="presentableId" value="LOCAL-00180" />
+      <option name="project" value="LOCAL" />
+      <updated>1774624873475</updated>
+    </task>
+    <option name="localTasksCounter" value="181" />
     <option name="commitChanges" value="false" />
     <option name="branchNameFormat" value="${id}_${summary}" />
     <servers>
@@ -1081,7 +1076,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <confirmRemoveEmptyChangelist value="2" />
-    <MESSAGE value="WAT-51 Added prisma generator script for lint" />
     <MESSAGE value="WAT-132 Added and improved the upcoming events block to the homepage" />
     <MESSAGE value="WAT-132 Added illustration for zinnen van baerwaldt for the homepage" />
     <MESSAGE value="WAT-132 Added last bits of content blocks on the homepage" />
@@ -1106,7 +1100,8 @@
     <MESSAGE value="WAT-3 Created the team member component" />
     <MESSAGE value="WAT-3 Team member component now also has a Puck block" />
     <MESSAGE value="ide" />
-    <option name="LAST_COMMIT_MESSAGE" value="ide" />
+    <MESSAGE value="Deployment changes: we don't reset the db every time on test deploy but we can do it manually via script." />
+    <option name="LAST_COMMIT_MESSAGE" value="Deployment changes: we don't reset the db every time on test deploy but we can do it manually via script." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
