@@ -7,5 +7,6 @@ declare namespace NodeJS {
     BUCKET_NAME: string;
     BUCKET_KEY_ID: string;
     BUCKET_SECRET_KEY: string;
+    HOSTNAME: string;
   }
 }

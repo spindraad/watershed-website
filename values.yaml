@@ -5,6 +5,7 @@ app:
     production: watershed-website.spindraad.app
     external: stichting-watershed.nl
     development: watershed-website.spindraad.dev
+  hostname: watershed-website.spindraad.dev
   image:
     repository: registry.digitalocean.com/lodybo-registry/watershed-website
     tag: latest

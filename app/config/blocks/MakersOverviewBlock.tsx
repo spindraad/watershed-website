@@ -77,10 +77,7 @@ function ClientOnlyMakersBlockComponent({
 
 async function _fetchMakers({ queryKey }: { queryKey: QueryKey }) {
   const [, maxMakers] = queryKey;
-  const response = await fetch(
-    // TODO: Replace with environment variable or relative path
-    `http://localhost:5173/api/makers?max=${maxMakers ?? 5}`,
-  );
+  const response = await fetch(`/api/makers?max=${maxMakers ?? 5}`);
   if (!response.ok) {
     throw new Error('Failed to fetch makers');
   }

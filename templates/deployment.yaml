@@ -66,6 +66,8 @@ spec:
                 secretKeyRef:
                   name: {{ .Values.app.name }}-bucket-secret
                   key: BUCKET_SECRET_KEY
+            - name: HOSTNAME
+              value: {{ .Values.app.hostname }}
           resources:
             requests:
               cpu: {{ .Values.resources.requests.cpu | default "100m" }}

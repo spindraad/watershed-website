@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29e278a9-ef9e-4850-a096-4600af23bfce" name="WAT-3 Teamlid component" comment="Database password is now passed in the import script">
+    <list default="true" id="29e278a9-ef9e-4850-a096-4600af23bfce" name="WAT-3 Teamlid component" comment="Images are now correctly retrieved from S3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.server/S3FileStorageClass.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/.server/S3FileStorageClass.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.server/mail.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/.server/mail.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/blocks/MakersOverviewBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/blocks/MakersOverviewBlock.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/blocks/UpcomingEventsBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/blocks/UpcomingEventsBlock.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/environment.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/templates/deployment.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/values.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/values.yaml" afterDir="false" />
     </list>
     <list id="7f955583-8571-46fe-bf73-823af2e4bb22" name="Changes" comment="Added box and line illustrations, and created the hand drawn box component" />
     <option name="SHOW_DIALOG" value="false" />
@@ -544,14 +549,6 @@
       <workItem from="1757113103308" duration="35000" />
       <workItem from="1760341367186" duration="338000" />
     </task>
-    <task id="LOCAL-00144" summary="Created a Nav menu component that lists a navigation menu, and created the route for the menu manager">
-      <option name="closed" value="true" />
-      <created>1745593659021</created>
-      <option name="number" value="00144" />
-      <option name="presentableId" value="LOCAL-00144" />
-      <option name="project" value="LOCAL" />
-      <updated>1745593659021</updated>
-    </task>
     <task id="LOCAL-00145" summary="Extended Plop generator to allow the selection of tags and categories">
       <option name="closed" value="true" />
       <created>1745913292888</created>
@@ -1003,7 +1000,15 @@
       <option name="project" value="LOCAL" />
       <updated>1774648851221</updated>
     </task>
-    <option name="localTasksCounter" value="182" />
+    <task id="LOCAL-00182" summary="Images are now correctly retrieved from S3">
+      <option name="closed" value="true" />
+      <created>1774651890151</created>
+      <option name="number" value="00182" />
+      <option name="presentableId" value="LOCAL-00182" />
+      <option name="project" value="LOCAL" />
+      <updated>1774651890151</updated>
+    </task>
+    <option name="localTasksCounter" value="183" />
     <option name="commitChanges" value="false" />
     <option name="branchNameFormat" value="${id}_${summary}" />
     <servers>
@@ -1089,7 +1094,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <confirmRemoveEmptyChangelist value="2" />
-    <MESSAGE value="WAT-132 Added illustration for zinnen van baerwaldt for the homepage" />
     <MESSAGE value="WAT-132 Added last bits of content blocks on the homepage" />
     <MESSAGE value="WAT-66 Added page background color setting in root props" />
     <MESSAGE value="WAT-53 Started working on talent program component" />
@@ -1114,7 +1118,8 @@
     <MESSAGE value="ide" />
     <MESSAGE value="Deployment changes: we don't reset the db every time on test deploy but we can do it manually via script." />
     <MESSAGE value="Database password is now passed in the import script" />
-    <option name="LAST_COMMIT_MESSAGE" value="Database password is now passed in the import script" />
+    <MESSAGE value="Images are now correctly retrieved from S3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Images are now correctly retrieved from S3" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

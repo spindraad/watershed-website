@@ -34,7 +34,7 @@ export async function sendPasswordResetMail(email: string, token: string) {
   const subject = 'Reset your password';
   const html = `
     <p>Click the link below to reset your password</p>
-    <a href="http://localhost:3000/wachtwoord-reset?token=${token}&email=${email}">Reset password</a>
+    <a href="${process.env.HOSTNAME}/wachtwoord-reset?token=${token}&email=${email}">Reset password</a>
   `;
   return sendMail({ email, subject, html });
 }
